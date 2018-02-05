@@ -1,23 +1,22 @@
 <div class="container bg-g">
     <div class="t-tab">
-        <div class="day-choose" id="jadwal-yest">
-            <a href="" onclick="return false;">Kemarin
+        <div id='boxtab'>
+            <a class="day-choose" id="jadwal-yest" onclick="tabmenu(this.id, 'day-choose', 't-active')">
+                Kemarin
                 <span><?= date('d F',strtotime($kemarin["tanggalnya"])); ?></span>
             </a>
-        </div>
-        <div class="day-choose t-active" id="jadwal-today">
-            <a href="" onclick="return false;">Hari ini
+            <a class="day-choose t-active" id="jadwal-today" onclick="tabmenu(this.id, 'day-choose', 't-active')" active="true">
+                Hari ini
                 <span><?= date('d F',strtotime($hari_ini["tanggalnya"])); ?></span>
             </a>
-        </div>
-        <div class="day-choose" id="jadwal-tmrw">
-            <a href="" onclick="return false;">Besok
+            <a class="day-choose" id="jadwal-tmrw" onclick="tabmenu(this.id, 'day-choose', 't-active')">
+                Besok
                 <span><?= date('d F',strtotime($besok["tanggalnya"])); ?></span>
             </a>
-        </div>                        
+        </div>
     </div>
 </div>
-<table class="table border-b" id="tbl-hari-ini">
+<table class="table border-b" id="jadwal-today">
     <tbody>
         <?php 
             if ($match_today)
@@ -28,27 +27,27 @@
                 {
         ?>
                     <tr>
-                        <a href="<?= $value->url_team_a; ?>">
-                            <td class="tx-r"><?= $value->team_a; ?> 
+                        <td class="tx-r"><?= $value->team_a; ?> 
+                            <a href="<?= $value->url_team_a; ?>">
                                 <span class="i-l">
                                     <img src="<?= $value->url_logo_a; ?>" alt="<?= $value->team_a; ?>">
                                 </span> 
-                            </td>
-                        </a>
+                            </a>
+                        </td>
                         <td class="tx-c"> 
                             <?= $value->event; ?>
                             <br>
                             <?= $value->match_schedule; ?> 
                             <span class="t-live"><?= $value->match_live; ?></span> 
                         </td>
-                        <a href="<?= $value->url_team_a; ?>">
-                            <td class="tx-l"> 
+                        <td class="tx-l"> 
+                            <a href="<?= $value->url_team_a; ?>">
                                 <span class="i-r">
                                     <img src="<?= $value->url_logo_b; ?>" alt="<?= $value->team_b; ?>">
                                 </span> 
                                 <?= $value->team_b; ?> 
-                            </td>
-                        </a>
+                            </a>
+                        </td>
                     </tr>
         <?php
                 }
@@ -57,7 +56,7 @@
         ?>
     </tbody>
 </table>
-<table class="table border-b" id="tbl-besok">
+<table class="table border-b" id="jadwal-tmrw" style="display: none;">
     <tbody>
         <?php 
             if ($match_tomorrow)
@@ -68,27 +67,27 @@
                 {
         ?>
                     <tr>
-                        <a href="<?= $value->url_team_a; ?>">
-                            <td class="tx-r"><?= $value->team_a; ?> 
+                        <td class="tx-r"><?= $value->team_a; ?> 
+                            <a href="<?= $value->url_team_a; ?>">
                                 <span class="i-l">
                                     <img src="<?= $value->url_logo_a; ?>" alt="<?= $value->team_a; ?>">
                                 </span> 
-                            </td>
-                        </a>
+                            </a>
+                        </td>
                         <td class="tx-c"> 
                             <?= $value->event; ?>
                             <br>
                             <?= $value->match_schedule; ?> 
                             <span class="t-live"><?= $value->match_live; ?></span> 
                         </td>
-                        <a href="<?= $value->url_team_a; ?>">
-                            <td class="tx-l"> 
+                        <td class="tx-l"> 
+                            <a href="<?= $value->url_team_a; ?>">
                                 <span class="i-r">
                                     <img src="<?= $value->url_logo_b; ?>" alt="<?= $value->team_b; ?>">
                                 </span> 
                                 <?= $value->team_b; ?> 
-                            </td>
-                        </a>
+                            </a>
+                        </td>
                     </tr>
         <?php
                 }
