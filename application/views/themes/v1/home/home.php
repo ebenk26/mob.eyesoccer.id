@@ -118,7 +118,7 @@
 </div>
 <!-- EYETUBE -->
 <div class="container eyetube">
-    <div id="reqtube" class='loadtube' action="home" loading="off" clean="clstube">
+    <div id="reqtube" class='loadtube' action="eyetube" loading="off" clean="clstube">
         <div id='clstube'>
             <script>
                 $(document).ready(function(){
@@ -194,22 +194,29 @@
 </div>
 <!-- EYENEWS -->
 <div class="p-container tab2">
-    <!--<span href="" id="xtab" data-target="#tab2" data-slide-to="0" class="orange-active disable-orange-active">terpopuler</span>
-    <span href="" id="xtab" data-target="#tab2" data-slide-to="1" class="disable-orange-active">rekomendasi</span>
-    <span href="" id="xtab" data-target="#tab2" data-slide-to="2" class="disable-orange-active">usia muda</span>-->
-    <div id='boxtab'>
-        <span onclick="tabmenu('tab-populer', 'orange-active')" class="disable-orange-active">terpopuler</span>
-        <span onclick="tabmenu('tab-rekomendasi', 'orange-active')" class="disable-orange-active">rekomendasi</span>
-        <span onclick="tabmenu('tab-usiamuda', 'orange-active')" class="disable-orange-active">usia muda</span>
-    </div>
-    <hr>
-    <div id="tab2" class="carousel slide">
+    <div id="reqtabnews" class='loadtabnews' action="eyenews" loading="off" clean="clstabnews">
+        <div id='clstabnews'>
+            <script>
+                $(document).ready(function(){
+                    $(window).on('load',function(){
+                        ajaxOnLoad('loadtabnews');
+                    });
+                });
+            </script>
+        </div>
+        <input type='hidden' name='fn' value='tabnews' class='cinput'>
+        <div id='boxtab'>
+            <span id='tab-populer' onclick="tabmenu(this.id, 'orange-active')" class="orange-active" active="true">terpopuler</span>
+            <span id='tab-rekomendasi' onclick="tabmenu(this.id, 'orange-active')">rekomendasi</span>
+            <span id='tab-usiamuda' onclick="tabmenu(this.id, 'orange-active')">usia muda</span>
+        </div>
+        <hr>
         <div role="listbox" class="carousel-inner">                    
-            <div class="box item active">
+            <div id='tab-populer' class="box item active">
                 <div class="container rek-ber">
                     <div class="rek-ber-c">
                         <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
-                        <span>17 Okt 2017 - 12.45</span>
+                        <span>17 Okt 2017 - 12.451</span>
                         <h1>lorem ipsum dolor sit amet lorem ipsum dolor sit amet </h1>
                         <p>lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet </p>
                     </div>
@@ -227,11 +234,11 @@
                     </div>
                 </div>
             </div>
-            <div class="box item">
+            <div id='tab-rekomendasi' class="box item">
                 <div class="container rek-ber">
                     <div class="rek-ber-c">
                         <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
-                        <span>17 Okt 2017 - 12.45</span>
+                        <span>17 Okt 2017 - 12.452</span>
                         <h1>lorem ipsum dolor sit amet lorem ipsum dolor sit amet </h1>
                         <p>lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet </p>
                     </div>
@@ -249,11 +256,11 @@
                     </div>
                 </div>
             </div>
-            <div class="box item">
+            <div id='tab-usiamuda' class="box item">
                 <div class="container rek-ber">
                     <div class="rek-ber-c">
                         <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
-                        <span>17 Okt 2017 - 12.45</span>
+                        <span>17 Okt 2017 - 12.453</span>
                         <h1>lorem ipsum dolor sit amet lorem ipsum dolor sit amet </h1>
                         <p>lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet </p>
                     </div>
@@ -370,54 +377,66 @@
 <div class="container tx-c">
     <span class="jp green">JADWAL PERTANDINGAN</span>
     <div class="border-box">
-        <div class="container bg-g">
-            <div class="t-tab">
-                <div class="day-choose">
-                    <a href="">Senin
-                        <span>16 Oktober</span>
-                    </a>
-                </div>
-                <div class="day-choose t-active">
-                    <a href="">Hari ini
-                        <span>17 Oktober</span>
-                    </a>
-                </div>
-                <div class="day-choose">
-                    <a href="">Besok
-                        <span>18 Oktober</span>
-                    </a>
-                </div>                        
+        <div id="reqmatch" class='loadmatch' action="home" loading="off" clean="clsmatch">
+            <div id='clsmatch'>
+                <script>
+                    $(document).ready(function(){
+                        $(window).on('load',function(){
+                            ajaxOnLoad('loadmatch');
+                        });
+                    });
+                </script>
             </div>
+            <input type='hidden' name='fn' value='match_schedule' class='cinput'>
+            <div class="container bg-g">
+                <div class="t-tab">
+                    <div class="day-choose">
+                        <a href="">Senin
+                            <span>16 Oktober</span>
+                        </a>
+                    </div>
+                    <div class="day-choose t-active">
+                        <a href="">Hari ini
+                            <span>17 Oktober</span>
+                        </a>
+                    </div>
+                    <div class="day-choose">
+                        <a href="">Besok
+                            <span>18 Oktober</span>
+                        </a>
+                    </div>                        
+                </div>
+            </div>
+            <table class="table border-b">
+                <tbody>
+                    <tr>
+                        <td class="tx-r">Arsenal<span class="i-l"><img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt=""></span></td>
+                        <td class="tx-c">01:45<span class="t-live"></span></td>
+                        <td class="tx-l"><span class="i-r"><img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt=""></span>Arsenal</td>
+                    </tr>
+                    <tr>
+                        <td class="tx-r">Arsenal<span class="i-l"><img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt=""></span></td>
+                        <td class="tx-c">01:45<span class="t-live">Live di SCTV</span></td>
+                        <td class="tx-l"><span class="i-r"><img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt=""></span>Arsenal</td>
+                    </tr>
+                    <tr>
+                        <td class="tx-r">Arsenal<span class="i-l"><img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt=""></span></td>
+                        <td class="tx-c">01:45<span class="t-live"></span></td>
+                        <td class="tx-l"><span class="i-r"><img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt=""></span>Arsenal</td>
+                    </tr>
+                    <tr>
+                        <td class="tx-r">Arsenal<span class="i-l"><img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt=""></span></td>
+                        <td class="tx-c">01:45<span class="t-live"></span></td>
+                        <td class="tx-l"><span class="i-r"><img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt=""></span>Arsenal</td>
+                    </tr>
+                    <tr>
+                        <td class="tx-r">Arsenal<span class="i-l"><img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt=""></span></td>
+                        <td class="tx-c">01:45<span class="t-live">Live di SCTV</span></td>
+                        <td class="tx-l"><span class="i-r"><img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt=""></span>Arsenal</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-        <table class="table border-b">
-            <tbody>
-                <tr>
-                    <td class="tx-r">Arsenal<span class="i-l"><img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt=""></span></td>
-                    <td class="tx-c">01:45<span class="t-live"></span></td>
-                    <td class="tx-l"><span class="i-r"><img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt=""></span>Arsenal</td>
-                </tr>
-                <tr>
-                    <td class="tx-r">Arsenal<span class="i-l"><img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt=""></span></td>
-                    <td class="tx-c">01:45<span class="t-live">Live di SCTV</span></td>
-                    <td class="tx-l"><span class="i-r"><img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt=""></span>Arsenal</td>
-                </tr>
-                <tr>
-                    <td class="tx-r">Arsenal<span class="i-l"><img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt=""></span></td>
-                    <td class="tx-c">01:45<span class="t-live"></span></td>
-                    <td class="tx-l"><span class="i-r"><img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt=""></span>Arsenal</td>
-                </tr>
-                <tr>
-                    <td class="tx-r">Arsenal<span class="i-l"><img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt=""></span></td>
-                    <td class="tx-c">01:45<span class="t-live"></span></td>
-                    <td class="tx-l"><span class="i-r"><img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt=""></span>Arsenal</td>
-                </tr>
-                <tr>
-                    <td class="tx-r">Arsenal<span class="i-l"><img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt=""></span></td>
-                    <td class="tx-c">01:45<span class="t-live">Live di SCTV</span></td>
-                    <td class="tx-l"><span class="i-r"><img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt=""></span>Arsenal</td>
-                </tr>
-            </tbody>
-        </table>
         <div class="t-c-b">
             <button type="" class="btn-green">Lihat Jadwal Lainnya</button>
         </div>

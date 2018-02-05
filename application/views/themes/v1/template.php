@@ -69,14 +69,14 @@
     
     <script src="<?php echo SUBCDN."assets/$folder/js/home.js"; ?>"></script>
     <script>
-        var orangeActive = document.getElementsByClassName("orange-active")[0];
-        var disableOrangeActive = document.getElementsByClassName("disable-orange-active")[0];
-        disableOrangeActive.onclick = function() {
-            orangeActive.style.color = "unset !important";
-            orangeActive.style.borderBottom = "unset !important";
-            disableOrangeActive.style.color = "#FF5722";
-            disableOrangeActive.style.border = "#FF5722";
-        }
+        //var orangeActive = document.getElementsByClassName("orange-active")[0];
+        //var disableOrangeActive = document.getElementsByClassName("disable-orange-active")[0];
+        //disableOrangeActive.onclick = function() {
+        //    orangeActive.style.color = "unset !important";
+        //    orangeActive.style.borderBottom = "unset !important";
+        //    disableOrangeActive.style.color = "#FF5722";
+        //    disableOrangeActive.style.border = "#FF5722";
+        //}
         //orangeActive.onclick = function() {
         //    orangeActive.style.color = "unset";
         //    orangeActive.style.borderBottom = "unset";
