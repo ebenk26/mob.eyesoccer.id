@@ -106,7 +106,7 @@
 </div>
 <!-- EYETUBE -->
 <div class="container eyetube">
-    <div id="reqtube" class='loadtube' action="home" loading="off" clean="clstube">
+    <div id="reqtube" class='loadtube' action="eyetube" loading="off" clean="clstube">
         <div id='clstube'>
             <script>
                 $(document).ready(function(){
@@ -182,7 +182,7 @@
 </div>
 <!-- EYENEWS -->
 <div class="p-container tab2">
-    <div id="reqtabnews" class='loadtabnews' action="home" loading="off" clean="clstabnews">
+    <div id="reqtabnews" class='loadtabnews' action="eyenews" loading="off" clean="clstabnews">
         <div id='clstabnews'>
             <script>
                 $(document).ready(function(){

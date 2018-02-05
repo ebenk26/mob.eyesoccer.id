@@ -472,7 +472,7 @@ function responseData(msg)
     }
     
     if (msg.xHtml != undefined) {
-        $('#'+msg.xClass).html(msg.xHtml);
+        $('#'+msg.xClass).hide().fadeIn('medium').html(msg.xHtml);
     }
     
     if (msg.xSplit != undefined) {
