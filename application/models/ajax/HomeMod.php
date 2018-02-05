@@ -23,34 +23,6 @@ class HomeMod extends CI_Model {
 	$data = array('xClass' => 'reqtrend', 'xHtml' => $html);
 	$this->tools->__flashMessage($data);
     }
-    
-    function __vidtube()
-    {
-	$query = array('page' => 1, 'limit' => 4);
-	$data['video'] = $this->excurl->remoteCall($this->__xurl().'video', $this->__xkey(), $query);
-	
-	$html = $this->load->view($this->__theme().'home/ajax/vidtube', $data, true);
-	
-	$data = array('xClass' => 'reqtube', 'xHtml' => $html);
-	$this->tools->__flashMessage($data);
-    }
-    
-    function __tabnews()
-    {
-	$query = array('page' => 1, 'limit' => 3, 'description' => 'true', 'sortby' => 'mostview');
-	$data['popular'] = $this->excurl->remoteCall($this->__xurl().'news', $this->__xkey(), $query);
-	
-	$query = array('page' => 1, 'limit' => 3, 'description' => 'true', 'recommended' => true);
-	$data['recommended'] = $this->excurl->remoteCall($this->__xurl().'news', $this->__xkey(), $query);
-	
-	$query = array('page' => 1, 'limit' => 3, 'description' => 'true', 'youngage' => true);
-	$data['youngage'] = $this->excurl->remoteCall($this->__xurl().'news', $this->__xkey(), $query);
-	
-	$html = $this->load->view($this->__theme().'home/ajax/tabnews', $data, true);
-	
-	$data = array('xClass' => 'reqtabnews', 'xHtml' => $html);
-	$this->tools->__flashMessage($data);
-    }
 
     function __match_schedule()
     {
