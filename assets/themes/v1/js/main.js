@@ -616,6 +616,7 @@ function tabmenu(id, beforeClick, afterClick)
         }
     });
     
+    afterClick = (afterClick != undefined) ? afterClick : beforeClick;
     $('#'+id).attr('active', 'true');
     $('#'+id).addClass(afterClick);
 
