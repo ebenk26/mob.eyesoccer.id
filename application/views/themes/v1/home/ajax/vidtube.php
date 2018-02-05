@@ -12,7 +12,7 @@
                 ?>
                     <a href="<?php echo $this->library->urltomob($dt->share_url); ?>" title="<?php echo $dt->title; ?>">
                         <div class="v-eyetube">
-                            <img src="<?php echo $dt->url_thumb; ?>" alt="<?php echo $dt->title; ?>">
+                            <img src="<?php echo $dt->url_thumb.'/medium'; ?>" alt="<?php echo $dt->title; ?>">
                         </div>
                         <span><?php echo relative_time($this->library->datenormal($dt->createon)); ?> lalu</span>
                         <h1><?php echo $dt->title; ?></h1>
@@ -25,7 +25,7 @@
                     <div class="etube-content pd-t-10">
                         <a href="<?php echo $this->library->urltomob($dt->share_url); ?>" title="<?php echo $dt->title; ?>">
                             <div class="v-etube">
-                                <img src="<?php echo $dt->url_thumb; ?>" alt="<?php echo $dt->title; ?>">
+                                <img src="<?php echo $dt->url_thumb.'/small'; ?>" alt="<?php echo $dt->title; ?>">
                                 <div class="btn-play">
                                     <img src="<?php echo SUBCDN."assets/$folder"; ?>img/btn-play.png" alt="">
                                 </div>                    

@@ -16,7 +16,7 @@
                         ?>
                             <a href="<?php echo $this->library->urltomob($dt->url); ?>" title="<?php echo $dt->title; ?>">
                                 <div class="rek-ber-c">
-                                    <img src="<?php echo $dt->url_pic; ?>" alt="<?php echo $dt->title; ?>">
+                                    <img src="<?php echo $dt->url_pic.'/small'; ?>" alt="<?php echo $dt->title; ?>">
                                     <span><?php echo date('d M Y H:i:s', strtotime($dt->publish_on)); ?></span>
                                     <h1><?php echo $dt->title; ?></h1>
                                     <?php echo word_limiter($dt->description, 10); ?>
@@ -39,7 +39,7 @@
                         ?>
                             <a href="<?php echo $this->library->urltomob($dt->url); ?>" title="<?php echo $dt->title; ?>">
                                 <div class="rek-ber-c">
-                                    <img src="<?php echo $dt->url_pic; ?>" alt="<?php echo $dt->title; ?>">
+                                    <img src="<?php echo $dt->url_pic.'/small'; ?>" alt="<?php echo $dt->title; ?>">
                                     <span><?php echo date('d M Y H:i:s', strtotime($dt->publish_on)); ?></span>
                                     <h1><?php echo $dt->title; ?></h1>
                                     <?php echo word_limiter($dt->description, 10); ?>
@@ -62,7 +62,7 @@
                         ?>
                             <a href="<?php echo $this->library->urltomob($dt->url); ?>" title="<?php echo $dt->title; ?>">
                                 <div class="rek-ber-c">
-                                    <img src="<?php echo $dt->url_pic; ?>" alt="<?php echo $dt->title; ?>">
+                                    <img src="<?php echo $dt->url_pic.'/small'; ?>" alt="<?php echo $dt->title; ?>">
                                     <span><?php echo date('d M Y H:i:s', strtotime($dt->publish_on)); ?></span>
                                     <h1><?php echo $dt->title; ?></h1>
                                     <?php echo word_limiter($dt->description, 10); ?>
