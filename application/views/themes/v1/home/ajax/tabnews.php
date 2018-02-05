@@ -14,12 +14,14 @@
                     foreach($popular->data as $dt)
                     {
                         ?>
-                            <div class="rek-ber-c">
-                                <img src="<?php echo $dt->url_pic; ?>" alt="<?php echo $dt->title; ?>">
-                                <span><?php echo date('d M Y H:i:s', strtotime($dt->publish_on)); ?></span>
-                                <h1><?php echo $dt->title; ?></h1>
-                                <?php echo word_limiter($dt->description, 10); ?>
-                            </div>
+                            <a href="<?php echo $this->library->urltomob($dt->url); ?>" title="<?php echo $dt->title; ?>">
+                                <div class="rek-ber-c">
+                                    <img src="<?php echo $dt->url_pic; ?>" alt="<?php echo $dt->title; ?>">
+                                    <span><?php echo date('d M Y H:i:s', strtotime($dt->publish_on)); ?></span>
+                                    <h1><?php echo $dt->title; ?></h1>
+                                    <?php echo word_limiter($dt->description, 10); ?>
+                                </div>
+                            </a>
                         <?php
                     }
                 }
@@ -35,12 +37,14 @@
                     foreach($recommended->data as $dt)
                     {
                         ?>
-                            <div class="rek-ber-c">
-                                <img src="<?php echo $dt->url_pic; ?>" alt="<?php echo $dt->title; ?>">
-                                <span><?php echo date('d M Y H:i:s', strtotime($dt->publish_on)); ?></span>
-                                <h1><?php echo $dt->title; ?></h1>
-                                <?php echo word_limiter($dt->description, 10); ?>
-                            </div>
+                            <a href="<?php echo $this->library->urltomob($dt->url); ?>" title="<?php echo $dt->title; ?>">
+                                <div class="rek-ber-c">
+                                    <img src="<?php echo $dt->url_pic; ?>" alt="<?php echo $dt->title; ?>">
+                                    <span><?php echo date('d M Y H:i:s', strtotime($dt->publish_on)); ?></span>
+                                    <h1><?php echo $dt->title; ?></h1>
+                                    <?php echo word_limiter($dt->description, 10); ?>
+                                </div>
+                            </a>
                         <?php
                     }
                 }
@@ -56,12 +60,14 @@
                     foreach($youngage->data as $dt)
                     {
                         ?>
-                            <div class="rek-ber-c">
-                                <img src="<?php echo $dt->url_pic; ?>" alt="<?php echo $dt->title; ?>">
-                                <span><?php echo date('d M Y H:i:s', strtotime($dt->publish_on)); ?></span>
-                                <h1><?php echo $dt->title; ?></h1>
-                                <?php echo word_limiter($dt->description, 10); ?>
-                            </div>
+                            <a href="<?php echo $this->library->urltomob($dt->url); ?>" title="<?php echo $dt->title; ?>">
+                                <div class="rek-ber-c">
+                                    <img src="<?php echo $dt->url_pic; ?>" alt="<?php echo $dt->title; ?>">
+                                    <span><?php echo date('d M Y H:i:s', strtotime($dt->publish_on)); ?></span>
+                                    <h1><?php echo $dt->title; ?></h1>
+                                    <?php echo word_limiter($dt->description, 10); ?>
+                                </div>
+                            </a>
                         <?php
                     }
                 }
