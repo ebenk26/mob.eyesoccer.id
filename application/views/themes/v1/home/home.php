@@ -358,54 +358,66 @@
 <div class="container tx-c">
     <span class="jp green">JADWAL PERTANDINGAN</span>
     <div class="border-box">
-        <div class="container bg-g">
-            <div class="t-tab">
-                <div class="day-choose">
-                    <a href="">Senin
-                        <span>16 Oktober</span>
-                    </a>
-                </div>
-                <div class="day-choose t-active">
-                    <a href="">Hari ini
-                        <span>17 Oktober</span>
-                    </a>
-                </div>
-                <div class="day-choose">
-                    <a href="">Besok
-                        <span>18 Oktober</span>
-                    </a>
-                </div>                        
+        <div id="reqmatch" class='loadmatch' action="home" loading="off" clean="clsmatch">
+            <div id='clsmatch'>
+                <script>
+                    $(document).ready(function(){
+                        $(window).on('load',function(){
+                            ajaxOnLoad('loadmatch');
+                        });
+                    });
+                </script>
             </div>
+            <input type='hidden' name='fn' value='match_schedule' class='cinput'>
+            <div class="container bg-g">
+                <div class="t-tab">
+                    <div class="day-choose">
+                        <a href="">Senin
+                            <span>16 Oktober</span>
+                        </a>
+                    </div>
+                    <div class="day-choose t-active">
+                        <a href="">Hari ini
+                            <span>17 Oktober</span>
+                        </a>
+                    </div>
+                    <div class="day-choose">
+                        <a href="">Besok
+                            <span>18 Oktober</span>
+                        </a>
+                    </div>                        
+                </div>
+            </div>
+            <table class="table border-b">
+                <tbody>
+                    <tr>
+                        <td class="tx-r">Arsenal<span class="i-l"><img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt=""></span></td>
+                        <td class="tx-c">01:45<span class="t-live"></span></td>
+                        <td class="tx-l"><span class="i-r"><img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt=""></span>Arsenal</td>
+                    </tr>
+                    <tr>
+                        <td class="tx-r">Arsenal<span class="i-l"><img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt=""></span></td>
+                        <td class="tx-c">01:45<span class="t-live">Live di SCTV</span></td>
+                        <td class="tx-l"><span class="i-r"><img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt=""></span>Arsenal</td>
+                    </tr>
+                    <tr>
+                        <td class="tx-r">Arsenal<span class="i-l"><img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt=""></span></td>
+                        <td class="tx-c">01:45<span class="t-live"></span></td>
+                        <td class="tx-l"><span class="i-r"><img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt=""></span>Arsenal</td>
+                    </tr>
+                    <tr>
+                        <td class="tx-r">Arsenal<span class="i-l"><img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt=""></span></td>
+                        <td class="tx-c">01:45<span class="t-live"></span></td>
+                        <td class="tx-l"><span class="i-r"><img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt=""></span>Arsenal</td>
+                    </tr>
+                    <tr>
+                        <td class="tx-r">Arsenal<span class="i-l"><img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt=""></span></td>
+                        <td class="tx-c">01:45<span class="t-live">Live di SCTV</span></td>
+                        <td class="tx-l"><span class="i-r"><img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt=""></span>Arsenal</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-        <table class="table border-b">
-            <tbody>
-                <tr>
-                    <td class="tx-r">Arsenal<span class="i-l"><img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt=""></span></td>
-                    <td class="tx-c">01:45<span class="t-live"></span></td>
-                    <td class="tx-l"><span class="i-r"><img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt=""></span>Arsenal</td>
-                </tr>
-                <tr>
-                    <td class="tx-r">Arsenal<span class="i-l"><img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt=""></span></td>
-                    <td class="tx-c">01:45<span class="t-live">Live di SCTV</span></td>
-                    <td class="tx-l"><span class="i-r"><img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt=""></span>Arsenal</td>
-                </tr>
-                <tr>
-                    <td class="tx-r">Arsenal<span class="i-l"><img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt=""></span></td>
-                    <td class="tx-c">01:45<span class="t-live"></span></td>
-                    <td class="tx-l"><span class="i-r"><img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt=""></span>Arsenal</td>
-                </tr>
-                <tr>
-                    <td class="tx-r">Arsenal<span class="i-l"><img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt=""></span></td>
-                    <td class="tx-c">01:45<span class="t-live"></span></td>
-                    <td class="tx-l"><span class="i-r"><img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt=""></span>Arsenal</td>
-                </tr>
-                <tr>
-                    <td class="tx-r">Arsenal<span class="i-l"><img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt=""></span></td>
-                    <td class="tx-c">01:45<span class="t-live">Live di SCTV</span></td>
-                    <td class="tx-l"><span class="i-r"><img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt=""></span>Arsenal</td>
-                </tr>
-            </tbody>
-        </table>
         <div class="t-c-b">
             <button type="" class="btn-green">Lihat Jadwal Lainnya</button>
         </div>
