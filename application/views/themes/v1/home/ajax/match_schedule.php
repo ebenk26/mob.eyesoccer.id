@@ -16,6 +16,46 @@
         </div>
     </div>
 </div>
+<table class="table border-b" id="jadwal-yest" style="display: none;">
+    <tbody>
+        <?php 
+            if ($match_yest)
+            {
+                $match_yest  = json_decode($match_yest);
+
+                foreach ($match_yest->data as $value)
+                {
+        ?>
+                    <tr>
+                        <td class="tx-r"><?= $value->team_a; ?> 
+                            <!-- <a href="<?= $value->url_team_a; ?>"> -->
+                                <span class="i-l">
+                                    <img src="<?= $value->url_logo_a; ?>" alt="<?= $value->team_a; ?>">
+                                </span> 
+                            <!-- </a> -->
+                        </td>
+                        <td class="tx-c"> 
+                            <?= $value->event; ?>
+                            <br>
+                            <?= $value->match_schedule; ?> 
+                            <span class="t-live"><?= $value->match_live; ?></span> 
+                        </td>
+                        <td class="tx-l"> 
+                            <!-- <a href="<?= $value->url_team_a; ?>"> -->
+                                <span class="i-r">
+                                    <img src="<?= $value->url_logo_b; ?>" alt="<?= $value->team_b; ?>">
+                                </span> 
+                                <?= $value->team_b; ?> 
+                            <!-- </a> -->
+                        </td>
+                    </tr>
+        <?php
+                }
+            }
+            
+        ?>
+    </tbody>
+</table>
 <table class="table border-b" id="jadwal-today">
     <tbody>
         <?php 
@@ -28,11 +68,11 @@
         ?>
                     <tr>
                         <td class="tx-r"><?= $value->team_a; ?> 
-                            <a href="<?= $value->url_team_a; ?>">
+                            <!-- <a href="<?= $value->url_team_a; ?>"> -->
                                 <span class="i-l">
                                     <img src="<?= $value->url_logo_a; ?>" alt="<?= $value->team_a; ?>">
                                 </span> 
-                            </a>
+                            <!-- </a> -->
                         </td>
                         <td class="tx-c"> 
                             <?= $value->event; ?>
@@ -41,12 +81,12 @@
                             <span class="t-live"><?= $value->match_live; ?></span> 
                         </td>
                         <td class="tx-l"> 
-                            <a href="<?= $value->url_team_a; ?>">
+                            <!-- <a href="<?= $value->url_team_a; ?>"> -->
                                 <span class="i-r">
                                     <img src="<?= $value->url_logo_b; ?>" alt="<?= $value->team_b; ?>">
                                 </span> 
                                 <?= $value->team_b; ?> 
-                            </a>
+                            <!-- </a> -->
                         </td>
                     </tr>
         <?php
@@ -68,11 +108,11 @@
         ?>
                     <tr>
                         <td class="tx-r"><?= $value->team_a; ?> 
-                            <a href="<?= $value->url_team_a; ?>">
+                            <!-- <a href="<?= $value->url_team_a; ?>"> -->
                                 <span class="i-l">
                                     <img src="<?= $value->url_logo_a; ?>" alt="<?= $value->team_a; ?>">
                                 </span> 
-                            </a>
+                            <!-- </a> -->
                         </td>
                         <td class="tx-c"> 
                             <?= $value->event; ?>
@@ -81,12 +121,12 @@
                             <span class="t-live"><?= $value->match_live; ?></span> 
                         </td>
                         <td class="tx-l"> 
-                            <a href="<?= $value->url_team_a; ?>">
+                            <!-- <a href="<?= $value->url_team_a; ?>"> -->
                                 <span class="i-r">
                                     <img src="<?= $value->url_logo_b; ?>" alt="<?= $value->team_b; ?>">
                                 </span> 
                                 <?= $value->team_b; ?> 
-                            </a>
+                            <!-- </a> -->
                         </td>
                     </tr>
         <?php
