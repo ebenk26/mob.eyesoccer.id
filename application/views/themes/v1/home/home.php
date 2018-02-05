@@ -182,22 +182,29 @@
 </div>
 <!-- EYENEWS -->
 <div class="p-container tab2">
-    <!--<span href="" id="xtab" data-target="#tab2" data-slide-to="0" class="orange-active disable-orange-active">terpopuler</span>
-    <span href="" id="xtab" data-target="#tab2" data-slide-to="1" class="disable-orange-active">rekomendasi</span>
-    <span href="" id="xtab" data-target="#tab2" data-slide-to="2" class="disable-orange-active">usia muda</span>-->
-    <div id='boxtab'>
-        <span onclick="tabmenu('tab-populer', 'orange-active')" class="disable-orange-active">terpopuler</span>
-        <span onclick="tabmenu('tab-rekomendasi', 'orange-active')" class="disable-orange-active">rekomendasi</span>
-        <span onclick="tabmenu('tab-usiamuda', 'orange-active')" class="disable-orange-active">usia muda</span>
-    </div>
-    <hr>
-    <div id="tab2" class="carousel slide">
+    <div id="reqtabnews" class='loadtabnews' action="home" loading="off" clean="clstabnews">
+        <div id='clstabnews'>
+            <script>
+                $(document).ready(function(){
+                    $(window).on('load',function(){
+                        ajaxOnLoad('loadtabnews');
+                    });
+                });
+            </script>
+        </div>
+        <input type='hidden' name='fn' value='tabnews' class='cinput'>
+        <div id='boxtab'>
+            <span id='tab-populer' onclick="tabmenu(this.id, 'orange-active')" class="orange-active">terpopuler</span>
+            <span id='tab-rekomendasi' onclick="tabmenu(this.id, 'orange-active')">rekomendasi</span>
+            <span id='tab-usiamuda' onclick="tabmenu(this.id, 'orange-active')">usia muda</span>
+        </div>
+        <hr>
         <div role="listbox" class="carousel-inner">                    
-            <div class="box item active">
+            <div id='tab-populer' class="box item active">
                 <div class="container rek-ber">
                     <div class="rek-ber-c">
                         <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
-                        <span>17 Okt 2017 - 12.45</span>
+                        <span>17 Okt 2017 - 12.451</span>
                         <h1>lorem ipsum dolor sit amet lorem ipsum dolor sit amet </h1>
                         <p>lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet </p>
                     </div>
@@ -215,11 +222,11 @@
                     </div>
                 </div>
             </div>
-            <div class="box item">
+            <div id='tab-rekomendasi' class="box item">
                 <div class="container rek-ber">
                     <div class="rek-ber-c">
                         <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
-                        <span>17 Okt 2017 - 12.45</span>
+                        <span>17 Okt 2017 - 12.452</span>
                         <h1>lorem ipsum dolor sit amet lorem ipsum dolor sit amet </h1>
                         <p>lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet </p>
                     </div>
@@ -237,11 +244,11 @@
                     </div>
                 </div>
             </div>
-            <div class="box item">
+            <div id='tab-usiamuda' class="box item">
                 <div class="container rek-ber">
                     <div class="rek-ber-c">
                         <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
-                        <span>17 Okt 2017 - 12.45</span>
+                        <span>17 Okt 2017 - 12.453</span>
                         <h1>lorem ipsum dolor sit amet lorem ipsum dolor sit amet </h1>
                         <p>lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet </p>
                     </div>
