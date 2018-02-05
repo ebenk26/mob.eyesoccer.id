@@ -591,21 +591,44 @@ function rmdata(val)
     }
 }
 
-function tabmenu(id, active)
+function tabmenu(id, beforeClick, afterClick)
 {    
-    $('#boxtab span').each(function() {
-        if ($(this).attr('class') == active) {
+    $('#boxtab span, #boxtab a').each(function() {
+        if ($(this).attr('active') == 'true') {
             var idx = $(this).attr('id');
             
+            $('#'+idx).removeAttr('active');
             $('#'+idx).removeAttr('class');
-            $('div#'+idx).fadeOut(0);
+            $('#'+idx).addClass(beforeClick);
+
+            if($('div#'+idx).html() != undefined)
+            {
+                $('div#'+idx).fadeOut(0);
+            }
+
+
+            if($('table#'+idx).html() != undefined)
+            {
+                $('table#'+idx).fadeOut(0);
+            }
             
             var fltab = idx;
         }
     });
     
-    $('#'+id).attr('class', active);
-    $('div#'+id).fadeIn('fast');
+    afterClick = (afterClick != undefined) ? afterClick : beforeClick;
+    $('#'+id).attr('active', 'true');
+    $('#'+id).addClass(afterClick);
+
+    if($('div#'+id).html() != undefined)
+    {
+        $('div#'+id).fadeIn('fast');
+    }
+    
+    if($('table#'+id).html() != undefined)
+    {
+        $('table#'+id).fadeIn('fast');
+    }
 }
 
 function tabflag(id)
