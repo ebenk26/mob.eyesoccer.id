@@ -5,14 +5,16 @@
 </nav>
 <!-- TRENDING --> 
 <div class="trending">
-    <div id="reqtrend" class='loadtrend' action="home" loading="off">
-        <script>
-            $(document).ready(function(){
-                $(window).on('load',function(){
-                    ajaxOnLoad('loadtrend');
+    <div id="reqtrend" class='loadtrend' action="home" loading="off" clean="clstrend">
+        <div id='clstrend'>
+            <script>
+                $(document).ready(function(){
+                    $(window).on('load',function(){
+                        ajaxOnLoad('loadtrend');
+                    });
                 });
-            });
-        </script>
+            </script>
+        </div>
         <input type='hidden' name='fn' value='trending' class='cinput'>
         <span class="x-c">
             <span>Trending</span>
@@ -104,14 +106,16 @@
 </div>
 <!-- EYETUBE -->
 <div class="container eyetube">
-    <div id="reqtube" class='loadtube' action="home" loading="off">
-        <script>
-            $(document).ready(function(){
-                $(window).on('load',function(){
-                    ajaxOnLoad('loadtube');
+    <div id="reqtube" class='loadtube' action="home" loading="off" clean="clstube">
+        <div id='clstube'>
+            <script>
+                $(document).ready(function(){
+                    $(window).on('load',function(){
+                        ajaxOnLoad('loadtube');
+                    });
                 });
-            });
-        </script>
+            </script>
+        </div>
         <input type='hidden' name='fn' value='vidtube' class='cinput'>
         <div class="v-eyetube">
             <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">

@@ -112,7 +112,9 @@ $(document).ready(function() {
                         $(this).removeClass(vp)
                     }
                 })
-            }    
+            }
+            
+            $('#'+cls).remove();
         }
         
         // Input Set
@@ -251,7 +253,9 @@ function ajaxOnLoad(ax)
                     $(this).removeClass(vp)
                 }
             })
-        }    
+        }
+        
+        $('#'+cls).remove();
     }
     
     // Input Set
