@@ -604,7 +604,6 @@ function tabmenu(id, active)
         }
     });
     
-    console.log(active);
     $('#'+id).attr('class', active);
     $('div#'+id).fadeIn('fast');
 }
