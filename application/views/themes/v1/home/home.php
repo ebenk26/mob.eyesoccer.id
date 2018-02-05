@@ -35,6 +35,17 @@
     <div class="carousel slide t-30">
         <div role="listbox" class="carousel-inner w-max">
             <div class="box item active">
+                <div id="reqprofile" class="loadprofile" action="home" loading="off" clean="clsprof">
+                    <div id="clsprof">
+                       <script>
+                            $(document).ready(function(){
+                                $(window).on('load',function(){
+                                    ajaxOnLoad('loadprofile');
+                                });
+                            });
+                        </script>
+                    </div>
+                <input type="hidden" name="fn" value="eyeprofile" class="cinput">
                 <a href="">
                     <div class="ep-box-content">
                         <div class="img">
@@ -100,6 +111,7 @@
                         </div>
                     </div>
                 </a>
+                </div>
             </div>
         </div>
     </div>
