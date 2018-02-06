@@ -20,7 +20,6 @@ class EyeprofileMod extends CI_Model {
 		$data =array('xClass'=>'reqprofile','xHtml'=> $html);
 		$this->tools->__flashMessage($data);
 
-
 	}
 
 }

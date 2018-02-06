@@ -1,14 +1,14 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Eyeme extends CI_Controller {
+class Eyemarket extends CI_Controller {
 
     private function __theme() { return $this->config->item('themes'); }
     
     function __construct()
     {
 	parent::__construct();
-	$this->load->model('ajax/EyemeMod');
+	$this->load->model('ajax/EyemarketMod');
     }
 
     function index()
@@ -24,10 +24,10 @@ class Eyeme extends CI_Controller {
 		$fn();
 	    } else {
 		$fn = "__".$fn;
-		$this->EyemeMod->$fn();
+		$this->EyemarketMod->$fn();
 	    }
 	} else {
-	    $data['content'] = 'Eyeme/home';
+	    $data['content'] = 'Eyemarket/home';
 	    
 	    $data['title'] = $this->config->item('meta_title');
 	    $data['meta_desc'] = $this->config->item('meta_desc');
@@ -36,5 +36,6 @@ class Eyeme extends CI_Controller {
 	    $this->load->view($this->__theme().'template', $data);
 	}
     }
+    
 
 }

@@ -130,8 +130,8 @@ function p($arr){
 
 }
 
-function imgCache($url,$size="medium"){
-    return 'http://static.eyesoccer.id/v1/cache/images/'.$url.'/'.$size;
+function imgCache($imgName,$size="medium"){
+    return 'http://static.eyesoccer.id/v1/cache/images/'.$imgName.'/'.$size;
 }
 
 function cryptPass($str){
