@@ -1,0 +1,280 @@
+<div class="crumb" style="margin-bottom: 0px;">
+	<ul>
+		<li>Home</li>
+		<li>EyeNews</li>
+	</ul>
+</div>
+<div class="container enews-detail">
+	<h1>Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet</h1>
+	<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="" width="100%">
+	<div class="container profile-writer b-b-1">
+		<div class="container">
+			<div class="img-radius">
+				<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+			</div>
+			<h3>Aditya Gilang</h3>
+			<span>09 nov 2017, 21.40 WIB</span>                
+		</div>
+		<div class="container tx-c share">
+			<i class="fa fa-facebook" aria-hidden="true"></i>
+			<i class="fa fa-twitter" aria-hidden="true"></i>
+			<i class="fa fa-google-plus-official" aria-hidden="true"></i>
+			<i class="fa fa-envelope-o" aria-hidden="true"></i>
+			<i class="fa fa-comment openComment" aria-hidden="false"><div class="openComment">16</div></i>
+		</div>
+	</div>
+	<div class="container-94">
+		<p style="margin-bottom: 50px;font-size: .9em;">
+			Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet
+		</p>
+	</div>
+	</div>
+	<!-- EMOTICON -->
+	<div class="container-94" style="background-color: white;padding: 10px 0px 20px;">
+		<div class="col-3 col-emoji">
+			<a href="">
+				<div class="img-box">
+					<img src="<?php echo SUBCDN."assets/$folder/" ?>img/emoji/bangga.png" alt="">
+				</div>
+				<span>10%</span>
+				<span>bangga</span>
+			</a>
+		</div>
+		<div class="col-3 col-emoji">
+			<a href="">
+				<div class="img-box">
+					<img src="<?php echo SUBCDN."assets/$folder/" ?>img/emoji/bingung.png" alt="">
+				</div>
+				<span>10%</span>
+				<span>bingung</span>
+			</a>
+		</div>
+		<div class="col-3 col-emoji">
+			<a href="">
+				<div class="img-box box-img-90">
+					<img src="<?php echo SUBCDN."assets/$folder/" ?>img/emoji/gembira.png" alt="">
+				</div>
+				<span>10%</span>
+				<span>gembira</span>
+			</a>
+		</div>
+		<div class="col-3 col-emoji">
+			<a href="">
+				<div class="img-box">
+					<img src="<?php echo SUBCDN."assets/$folder/" ?>img/emoji/sedih.png" alt="">
+				</div>
+				<span>10%</span>
+				<span>sedih</span>
+			</a>
+		</div>
+		<div class="col-3 col-emoji">
+			<a href="">
+				<div class="img-box">
+					<img src="<?php echo SUBCDN."assets/$folder/" ?>img/emoji/suka.png" alt="">
+				</div>
+				<span>10%</span>
+				<span>suka</span>
+			</a>
+		</div>
+		<div class="col-3 col-emoji">
+			<a href="">
+				<div class="img-box">
+					<img src="<?php echo SUBCDN."assets/$folder/" ?>img/emoji/takut.png" alt="">
+				</div>
+				<span>10%</span>
+				<span>takut</span>
+			</a>
+		</div>
+		<div class="col-3 col-emoji">
+			<a href="">
+				<div class="img-box">
+					<img src="<?php echo SUBCDN."assets/$folder/" ?>img/emoji/terhibur.png" alt="">
+				</div>
+				<span>10%</span>
+				<span>terhibur</span>
+			</a>
+		</div>
+		<div class="col-3 col-emoji">
+			<a href="">
+				<div class="img-box">
+					<img src="<?php echo SUBCDN."assets/$folder/" ?>img/emoji/terkejut.png" alt="">
+				</div>
+				<span>10%</span>
+				<span>terkejut</span>
+			</a>
+		</div>
+	</div>
+	<!-- IKLAN -->
+	<div class="container">
+		<div class="box-flyad">
+			<div class="flyad">
+				<div class="m-0">
+					<span style="font-size: 7em;font-weight: 100;position: fixed;text-align: center;top: 20%;color: white;">ini iklan yaa</span>
+					<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container enews-detail">
+	<div class="container m-b-15" style="margin-top: -35px !important; background-color: #fafafa;">
+	<h3 class="h3-red">VIDEO</h3>
+	<div class="carousel slide t-30 over-x">
+		<div role="listbox" class="carousel-inner w-max">
+			<div class="box item active no-decoration">
+				<a href="">
+					<div class="video-thumb">
+						<div class="v-thumb-img">
+							<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+						</div>
+						<h2>Lorem Ipsum Dolor Sit Amet</h2>
+						<span>2 jam lalu</span>
+					</div>
+				</a>
+				<a href="">
+					<div class="video-thumb">
+						<div class="v-thumb-img">
+							<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+						</div>
+						<h2>Lorem Ipsum Dolor Sit AmetLorem Ipsum Dolor Sit AmetLorem Ipsum Dolor Sit Amet</h2>
+						<span>2 jam lalu</span>
+					</div>
+				</a>
+				<a href="">
+					<div class="video-thumb">
+						<div class="v-thumb-img">
+							<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+						</div>
+						<h2>Lorem Ipsum Dolor Sit Amet</h2>
+						<span>2 jam lalu</span>
+					</div>
+				</a>
+				<a href="">
+					<div class="video-thumb">
+						<div class="v-thumb-img">
+							<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+						</div>
+						<h2>Lorem Ipsum Dolor Sit Amet</h2>
+						<span>2 jam lalu</span>
+					</div>
+				</a>
+				<a href="">
+					<div class="video-thumb">
+						<div class="v-thumb-img">
+							<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+						</div>
+						<h2>Lorem Ipsum Dolor Sit Amet</h2>
+						<span>2 jam lalu</span>
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container-94 m-b-20 unset">
+	<span class="up-next-etube" style="margin-top: 23px;">Berita Terkait</span>
+	<div class="etube-content etube-content-detail pd-t-10">
+		<div class="v-etube v-etube-detail">
+			<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+		</div>
+		<h1>Lorem Ipsum Dolor Sit amet</h1>
+		<span>30 menit lalu</span>
+		<span>2000 view - 100 suka</span>
+	</div>
+	<div class="etube-content etube-content-detail">
+		<div class="v-etube v-etube-detail">
+			<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+		</div>
+		<h1>Lorem Ipsum Dolor Sit amet Lorem Ipsum Dolor Sit amet</h1>
+		<span>30 menit lalu</span>
+		<span>2000 view - 100 suka</span>
+	</div>
+	<div class="etube-content etube-content-detail">
+		<div class="v-etube v-etube-detail">
+			<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+		</div>
+		<h1>Lorem Ipsum Dolor Sit amet</h1>
+		<span>30 menit lalu</span>
+		<span>2000 view - 100 suka</span>
+	</div>
+	<div class="etube-content etube-content-detail">
+		<div class="v-etube v-etube-detail">
+			<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+		</div>
+		<h1>Lorem Ipsum Dolor Sit amet</h1>
+		<span>30 menit lalu</span>
+		<span>2000 view - 100 suka</span>
+	</div>
+	<div class="etube-content etube-content-detail">
+		<div class="v-etube v-etube-detail">
+			<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+		</div>
+		<h1>Lorem Ipsum Dolor Sit amet</h1>
+		<span>30 menit lalu</span>
+		<span>2000 view - 100 suka</span>
+	</div>
+	<div class="etube-content etube-content-detail">
+		<div class="v-etube v-etube-detail">
+			<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+		</div>
+		<h1>Lorem Ipsum Dolor Sit amet</h1>
+		<span>30 menit lalu</span>
+		<span>2000 view - 100 suka</span>
+	</div>
+</div>
+</div>
+<!-- FOOTER -->
+<footer>
+	<p>Copyright 2017 eyesoccer.com. All Rights Reserved.</p>
+</footer>
+<!-- KOMENTAR -->
+<div class="container-comment">
+	<span class="up-next-etube" style="padding-left: 10px;">Komentar</span> <span id="close" class="up-next-etube" style="float:right; padding-right: 10px;"><i class="material-icons">close</i></span>
+	<div class="box-komentar">
+		<div class="img-radius">
+			<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="" width="100%">
+		</div>
+		<div class="input-komentar">
+			<input type="text" placeholder="Tambahkan Komentar ...">
+		</div>
+	</div>
+	<div class="item-komentar">
+		<div class="img-radius">
+			<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="" width="100%">
+		</div>
+		<div class="text-komentar">
+			<p>Ini komentar komentar para nitijen</p>
+			<h3>ini nama yg komentar</h3>
+			<span>30 menit lalu</span>
+		</div>
+	</div>
+	<div class="item-komentar">
+		<div class="img-radius">
+			<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="" width="100%">
+		</div>
+		<div class="text-komentar">
+			<p>Ini komentar komentar para nitijen Ini komentar komentar para nitijen Ini komentar komentar para nitijen Ini komentar komentar para nitijen</p>
+			<h3>ini nama yg komentar</h3>
+			<span>30 menit lalu</span>
+		</div>
+	</div>
+	<div class="item-komentar">
+		<div class="img-radius">
+			<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="" width="100%">
+		</div>
+		<div class="text-komentar">
+			<p>Ini komentar komentar para nitijen Ini komentar komentar para nitijen</p>
+			<h3>ini nama yg komentar</h3>
+			<span>30 menit lalu</span>
+		</div>
+	</div>
+	<div class="item-komentar">
+		<div class="img-radius">
+			<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="" width="100%">
+		</div>
+		<div class="text-komentar">
+			<p>Ini komentar komentar para nitijen</p>
+			<h3>ini nama yg komentar</h3>
+			<span>30 menit lalu</span>
+		</div>
+	</div>
+</div>

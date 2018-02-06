@@ -45,8 +45,10 @@
 <body>
     <?php
         $data['folder'] = $folder;
+		$this->load->view($folder.'widget/navigator', $data);
         $this->load->view($folder.$content, $data);
         $this->load->view($folder.'widget/sidebar', $data);
+        $this->load->view($folder.'widget/footer', $data);
     ?>
     
     <div class='baseurl' val='<?php echo base_url(); ?>'></div>

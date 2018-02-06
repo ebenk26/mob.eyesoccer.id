@@ -1,8 +1,3 @@
-<nav>
-    <i id="menu" class="material-icons f-l">menu</i>
-    <img src="https://www.eyesoccer.id/img/logo2.png" alt="">
-    <i id="src" class="material-icons f-r">search</i>
-</nav>
     <!-- TRENDING --> 
     <div class="trending">
         <div id="reqtrend" class='loadtrend' action="eyenews" loading="off" clean="clstrend">
@@ -207,28 +202,3 @@
             </div>
         </div>
     </div>
-    <!-- FOOTER -->
-    <footer>
-        <p>Copyright 2017 eyesoccer.com. All Rights Reserved.</p>
-    </footer>
-    <script src="assets/js/home.js"></script>
-    <script>
-    var orangeActive = document.getElementsByClassName("orange-active")[0];
-    var disableOrangeActive = document.getElementsByClassName("disable-orange-active")[0];
-    disableOrangeActive.onclick = function() {
-        orangeActive.style.color = "unset !important";
-        orangeActive.style.borderBottom = "unset !important";
-        disableOrangeActive.style.color = "#FF5722";
-        disableOrangeActive.style.border = "#FF5722";
-    }
-    orangeActive.onclick = function() {
-        orangeActive.style.color = "unset";
-        orangeActive.style.borderBottom = "unset";
-    }
-    window.onload = function(){
-        orangeActive.style.color = "#FF5722";
-        orangeActive.style.borderBottom = "4px solid #FF5722";
-    }
-    </script>
-    </body>
-</html>
