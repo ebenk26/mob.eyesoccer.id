@@ -7,26 +7,26 @@ class Ajax extends CI_Controller {
     
     function __construct()
     {
-		parent::__construct();
-		$this->load->model('ajax/AjaxMod');
+	parent::__construct();
+	$this->load->model('ajax/AjaxMod');
     }
 
     function index()
     {
-		if($_POST)
-		{
-		    $this->load->view($this->__theme().'function');
-		    $fn = $_POST['fn'];
-		    
-		    $data = [];
-		    if(function_exists($fn))
-		    {
-				$fn();
-		    } else {
-				$fn = "__".$fn;
-				$this->AjaxMod->$fn();
-		    }
-		}
+	if($_POST)
+	{
+	    $this->load->view($this->__theme().'function');
+	    $fn = $_POST['fn'];
+	    
+	    $data = [];
+	    if(function_exists($fn))
+	    {
+		$fn();
+	    } else {
+		$fn = "__".$fn;
+		$this->AjaxMod->$fn();
+	    }
+	}
     }
 
 }
