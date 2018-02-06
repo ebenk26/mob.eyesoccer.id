@@ -24,6 +24,7 @@ class HomeMod extends CI_Model {
 	$this->tools->__flashMessage($data);
     }
 
+
     function __match_schedule()
     {
     	$data["kemarin"] = get_date("-1");
