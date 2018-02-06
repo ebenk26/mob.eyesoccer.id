@@ -1,16 +1,16 @@
 <?php
-if ($list){
-	$list = json_decode($list);
-	foreach($list->data as $dt)
+if ($tube){
+	$tube = json_decode($tube);
+	foreach($tube->data as $dt)
 	{
 ?>
-		<a href="enews-detail.html">
+		<a href="<?php echo base_url();?>eyetube/detail/<?= $dt->slug; ?>">
 			<div class="video-thumb">
 				<div class="v-thumb-img">
-					<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+					<img src="<?= $dt->url_thumb; ?>" alt="<?= $dt->title; ?>">
 				</div>
-				<h2>Lorem Ipsum Dolor Sit Amet</h2>
-				<span>2 jam lalu</span>
+				<h2><?php echo $dt->title;?></h2>
+				<span><?php echo relative_time($this->library->datenormal($dt->createon)); ?> lalu - <?= $dt->tube_view; ?> view</span>
 			</div>
 		</a>
 <?php

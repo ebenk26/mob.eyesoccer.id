@@ -27,6 +27,7 @@ class Eyevent extends CI_Controller {
 		$this->EyeventMod->$fn();
 	    }
 	} else {
+		$data['kanal'] = 'eyevent';
 	    $data['content'] = 'eyevent/home';
 	    
 	    $data['title'] = $this->config->item('meta_title');

@@ -586,23 +586,3 @@
 <footer>
     <p>Copyright 2017 eyesoccer.com. All Rights Reserved.</p>
 </footer>
-<!-- SEARCHBOX -->
-<div id="srcbox" class="searchbox">
-    <input type="text" placeholder="cari apa hari ini?"><button id="srcSub" type="submit">Cari</button>
-    <div class="close">
-    </div>
-</div>
-<!-- MENU -->
-<div id="xMenu" class="menu">
-    <div class="m-top">
-        <span class="m-log" href=""><i class="material-icons xClose">clear</i></span>
-        <a class="m-reg" href=""><i class="material-icons">input</i>Login</a>
-    </div>
-    <span>kanal</span>
-    <a href="eprofile.html"><img src="<?php echo SUBCDN."assets/$folder"; ?>img/ic_eyeprofile.png" alt="">Eye Profile</a>
-    <a href="<?= base_url(); ?>eyetube"><img src="<?php echo SUBCDN."assets/$folder"; ?>img/ic_eyetube.png" alt="">Eye Tube</a>
-    <a href="enews.html"><img src="<?php echo SUBCDN."assets/$folder"; ?>img/ic_eyenews.png" alt="">Eye News</a>
-    <a href="eyeme.html"><img src="<?php echo SUBCDN."assets/$folder"; ?>img/ic-eyeme.png" alt="">Eye Me</a>
-    <a href=""><img src="<?php echo SUBCDN."assets/$folder"; ?>img/ic_eyemarket.png" alt="">Eye Market</a>
-    <a href=""><img src="<?php echo SUBCDN."assets/$folder"; ?>img/ic_eyevent.png" alt="">Eye Vent</a>
-</div>
