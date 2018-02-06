@@ -46,6 +46,7 @@
     <?php
         $data['folder'] = $folder;
         $this->load->view($folder.$content, $data);
+        $this->load->view($folder.'widget/sidebar', $data);
     ?>
     
     <div class='baseurl' val='<?php echo base_url(); ?>'></div>

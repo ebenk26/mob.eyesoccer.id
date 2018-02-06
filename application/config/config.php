@@ -30,8 +30,8 @@ $config['meta_keyword'] = 'jadwal bola, berita bola, sepak bola, jadwal siaran b
  * Static CDN URL
  *
  */
-$config['base_cdn'] = 'http://localhost:8081/project/aplikasi/eyesoccer/mobeye/'; //'http://cdn.eyesoccer.id/';
-$config['base_static'] = 'http://localhost:8081/project/aplikasi/eyesoccer/mobeye/'; //'http://static.eyesoccer.id/';
+$config['base_cdn'] = 'http://localhost/mobeye/'; //'http://cdn.eyesoccer.id/';
+$config['base_static'] = 'http://localhost/mobeye/'; //'http://static.eyesoccer.id/';
 
 /*
 |--------------------------------------------------------------------------

@@ -52,7 +52,7 @@
 		</div>
 		</a>
 	</div>
-    <div class="p-container tab2">
+    <div class="p-container tab2" style="padding-top: 0px;">
 		<div id="reqtabnews" class='loadtabnews' action="eyenews" loading="off" clean="clstabnews">
 			<div id='clstabnews'>
 				<script>
@@ -141,56 +141,68 @@
 		</div>
     </div>
 	<!-- EYENEWS VIDEO -->
-    <div class="container" style="margin-top: -35px !important; background-color: #fafafa;">
+    <div class="container" style="margin-top: 0px !important; background-color: #fafafa;">
         <h3 class="h3-red">VIDEO</h3>
         <div class="carousel slide t-30 over-x">
             <div role="listbox" class="carousel-inner w-max">
                 <div class="box item active no-decoration">
-                    <a href="enews-detail.html">
-                        <div class="video-thumb">
-                            <div class="v-thumb-img">
-                                <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
-                            </div>
-                            <h2>Lorem Ipsum Dolor Sit Amet</h2>
-                            <span>2 jam lalu</span>
-                        </div>
-                    </a>
-                    <a href="enews-detail.html">
-                        <div class="video-thumb">
-                            <div class="v-thumb-img">
-                                <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
-                            </div>
-                            <h2>Lorem Ipsum Dolor Sit AmetLorem Ipsum Dolor Sit AmetLorem Ipsum Dolor Sit Amet</h2>
-                            <span>2 jam lalu</span>
-                        </div>
-                    </a>
-                    <a href="enews-detail.html">
-                        <div class="video-thumb">
-                            <div class="v-thumb-img">
-                                <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
-                            </div>
-                            <h2>Lorem Ipsum Dolor Sit Amet</h2>
-                            <span>2 jam lalu</span>
-                        </div>
-                    </a>
-                    <a href="enews-detail.html">
-                        <div class="video-thumb">
-                            <div class="v-thumb-img">
-                                <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
-                            </div>
-                            <h2>Lorem Ipsum Dolor Sit Amet</h2>
-                            <span>2 jam lalu</span>
-                        </div>
-                    </a>
-                    <a href="enews-detail.html">
-                        <div class="video-thumb">
-                            <div class="v-thumb-img">
-                                <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
-                            </div>
-                            <h2>Lorem Ipsum Dolor Sit Amet</h2>
-                            <span>2 jam lalu</span>
-                        </div>
-                    </a>
+					<div id="reqtube" class='loadtube' action="eyetube" loading="off" clean="clstube">
+						<div id='clstube'>
+							<script>
+								$(document).ready(function(){
+									$(window).on('load',function(){
+										ajaxOnLoad('loadtube');
+									});
+								});
+							</script>
+						</div>
+						<input type='hidden' name='fn' value='list_tube_eyenews' class='cinput'>
+						<a href="enews-detail.html">
+							<div class="video-thumb">
+								<div class="v-thumb-img">
+									<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+								</div>
+								<h2>Lorem Ipsum Dolor Sit Amet</h2>
+								<span>2 jam lalu</span>
+							</div>
+						</a>
+						<a href="enews-detail.html">
+							<div class="video-thumb">
+								<div class="v-thumb-img">
+									<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+								</div>
+								<h2>Lorem Ipsum Dolor Sit AmetLorem Ipsum Dolor Sit AmetLorem Ipsum Dolor Sit Amet</h2>
+								<span>2 jam lalu</span>
+							</div>
+						</a>
+						<a href="enews-detail.html">
+							<div class="video-thumb">
+								<div class="v-thumb-img">
+									<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+								</div>
+								<h2>Lorem Ipsum Dolor Sit Amet</h2>
+								<span>2 jam lalu</span>
+							</div>
+						</a>
+						<a href="enews-detail.html">
+							<div class="video-thumb">
+								<div class="v-thumb-img">
+									<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+								</div>
+								<h2>Lorem Ipsum Dolor Sit Amet</h2>
+								<span>2 jam lalu</span>
+							</div>
+						</a>
+						<a href="enews-detail.html">
+							<div class="video-thumb">
+								<div class="v-thumb-img">
+									<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+								</div>
+								<h2>Lorem Ipsum Dolor Sit Amet</h2>
+								<span>2 jam lalu</span>
+							</div>
+						</a>
+					</div>
                 </div>
             </div>
         </div>
@@ -199,36 +211,6 @@
     <footer>
         <p>Copyright 2017 eyesoccer.com. All Rights Reserved.</p>
     </footer>
-    <!-- SEARCHBOX -->
-    <div id="srcbox" class="searchbox">
-        <input type="text" placeholder="cari apa hari ini?"><button id="srcSub" type="submit">Cari</button>
-        <div class="close">
-        </div>
-    </div>
-    <!-- MENU -->
-    <div id="xMenu" class="menu menu-ketegori">
-        <div class="m-top">
-            <span class="m-log" href=""><i class="material-icons xClose">clear</i></span>
-            <a class="m-reg" href=""><i class="material-icons">input</i>Login</a>
-        </div>
-        <span>kanal</span>
-        <a href="eprofile.html"><img src="../assets/img/ic_eyeprofile.png" alt="">Eye Profile</a>
-        <a href="etube.html"><img src="../assets/img/ic_eyetube.png" alt="">Eye Tube</a>
-        <a href="enews.html"><img src="../assets/img/ic_eyenews.png" alt="">Eye News</a>
-        <a href="eyeme.html"><img src="../assets/img/ic-eyeme.png" alt="">Eye Me</a>
-        <a href=""><img src="../assets/img/ic_eyemarket.png" alt="">Eye Market</a>
-        <a href=""><img src="../assets/img/ic_eyevent.png" alt="">Eye Vent</a>
-        <span>kategori</span>
-        <a href="enews-kategori.html">LIGA</a>
-        <a href="enews-kategori.html">PEMBINAAN</a>
-        <a href="enews-kategori.html">UMPAN LAMBUNG</a>
-        <a href="enews-kategori.html">PREDIKSI</a>
-        <a href="enews-kategori.html">PERISTIWA</a>
-        <a href="enews-kategori.html">SOCCER SAINS</a>
-        <a href="enews-kategori.html">ULAS TUNTAS</a>
-        <a href="enews-kategori.html">SOCCER SERI</a>
-        <a href="enews-kategori.html">PINGGIR LAPANGAN</a>
-    </div>
     <script src="assets/js/home.js"></script>
     <script>
     var orangeActive = document.getElementsByClassName("orange-active")[0];
