@@ -19,86 +19,50 @@
         <input type='hidden' name='slug' value='<?= $slug; ?>' class='cinput'>
         <video width="100%" height="" controls></video>
         <div class="etube-v-title-mobile">
-            <h1>Lorrem Ipsum solor sit amet</h1><i class="heightControl2 material-icons arrow-right-etube">arrow_drop_up</i><i class="material-icons arrow-right-etube heightControl">arrow_drop_down</i>
-            <span>30 menit lalu - oleh Rendy - 300 kali diputar</span>
+            <h1 style="visibility: hidden;">Lorrem Ipsum solor sit amet</h1><i class="heightControl2 material-icons arrow-right-etube" style="visibility: hidden;">arrow_drop_up</i><i class="material-icons arrow-right-etube heightControl" style="visibility: hidden;">arrow_drop_down</i>
+            <span style="visibility: hidden;">30 menit lalu - oleh Rendy - 300 kali diputar</span>
             <div class="container deskripsi">
-                <p>Deskripsi Lorrem Ipsum solor sit amet Lorrem Ipsum solor sit amet Lorrem Ipsum solor sit amet</p>
+                <p style="visibility: hidden;">Deskripsi Lorrem Ipsum solor sit amet Lorrem Ipsum solor sit amet Lorrem Ipsum solor sit amet</p>
             </div>
             <div class="container ">
                 
             </div>
             <div class="tx-c etube-share">
                 <!-- <i class="fa fa-heart-o heart-first" aria-hidden="true"> 23</i> -->
-                <i class="fas fa-heart heart-first" aria-hidden="true"><span>3</span></i>
-                <i class="far fa-comment openComment" aria-hidden="true"><span>333</span></i>
-                <i class="far fa-paper-plane" aria-hidden="true"><span>33</span></i>
+                <i class="fas fa-heart heart-first" aria-hidden="true" style="visibility: hidden;"><span>3</span></i>
+                <i class="far fa-comment openComment" aria-hidden="true" style="visibility: hidden;"><span>333</span></i>
+                <i class="far fa-paper-plane" aria-hidden="true" style="visibility: hidden;"><span>33</span></i>
                 <!-- <i class="material-icons more display-box-notif">more_horiz</i> -->
             </div>
         </div>
-    </div>
     
-    <div class="container-94 m-b-20 unset">
-        <span class="up-next-etube">Next</span>
-        <a href="/">
-        <div class="etube-content etube-content-detail pd-t-10">
-            <div class="v-etube v-etube-detail">
-                <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+        <div class="container-94 m-b-20 unset">
+            <span class="up-next-etube"></span>
+            <div class="etube-content etube-content-detail pd-t-10" style="background-color: #f2f2f2;">
+                <div class="v-etube v-etube-detail">
+                    <img src="" alt="">
+                </div>
+                <h1 style="visibility: hidden;">Lorem Ipsum Dolor Sit amet</h1>
+                <span style="visibility: hidden;">30 menit lalu</span>
+                <span style="visibility: hidden;">2000 view - 100 suka</span>
             </div>
-            <h1>Lorem Ipsum Dolor Sit amet</h1>
-            <span>30 menit lalu</span>
-            <span>2000 view - 100 suka</span>
-        </div>
-        </a>
-        <a href="/">
-        <div class="etube-content etube-content-detail">
-            <div class="v-etube v-etube-detail">
-                <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+            <div class="etube-content etube-content-detail pd-t-10" style="background-color: #f2f2f2;">
+                <div class="v-etube v-etube-detail">
+                    <img src="" alt="">
+                </div>
+                <h1 style="visibility: hidden;">Lorem Ipsum Dolor Sit amet</h1>
+                <span style="visibility: hidden;">30 menit lalu</span>
+                <span style="visibility: hidden;">2000 view - 100 suka</span>
             </div>
-            <h1>Lorem Ipsum Dolor Sit amet Lorem Ipsum Dolor Sit amet</h1>
-            <span>30 menit lalu</span>
-            <span>2000 view - 100 suka</span>
-        </div>
-        </a>
-        <a href="/">
-        <div class="etube-content etube-content-detail">
-            <div class="v-etube v-etube-detail">
-                <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+            <div class="etube-content etube-content-detail pd-t-10" style="background-color: #f2f2f2;">
+                <div class="v-etube v-etube-detail">
+                    <img src="" alt="">
+                </div>
+                <h1 style="visibility: hidden;">Lorem Ipsum Dolor Sit amet</h1>
+                <span style="visibility: hidden;">30 menit lalu</span>
+                <span style="visibility: hidden;">2000 view - 100 suka</span>
             </div>
-            <h1>Lorem Ipsum Dolor Sit amet</h1>
-            <span>30 menit lalu</span>
-            <span>2000 view - 100 suka</span>
         </div>
-        </a>
-        <a href="/">
-        <div class="etube-content etube-content-detail">
-            <div class="v-etube v-etube-detail">
-                <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
-            </div>
-            <h1>Lorem Ipsum Dolor Sit amet</h1>
-            <span>30 menit lalu</span>
-            <span>2000 view - 100 suka</span>
-        </div>
-        </a>
-        <a href="/">
-        <div class="etube-content etube-content-detail">
-            <div class="v-etube v-etube-detail">
-                <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
-            </div>
-            <h1>Lorem Ipsum Dolor Sit amet</h1>
-            <span>30 menit lalu</span>
-            <span>2000 view - 100 suka</span>
-        </div>
-        </a>
-        <a href="/">
-        <div class="etube-content etube-content-detail">
-            <div class="v-etube v-etube-detail">
-                <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
-            </div>
-            <h1>Lorem Ipsum Dolor Sit amet</h1>
-            <span>30 menit lalu</span>
-            <span>2000 view - 100 suka</span>
-        </div>
-        </a>
     </div>
 </div>
 <!-- KOMENTAR -->
@@ -152,11 +116,8 @@
             <h3>ini nama yg komentar</h3>
             <span>30 menit lalu</span>
         </div>
-    </div> -->
-</div>
-<footer>
-    <p>Copyright 2017 eyesoccer.com. All Rights Reserved.</p>
-</footer>
+    </div> 
+</div>-->
 <!-- MENU BOTTOM EYETUBE -->
 <!-- <div class="menu-bottom-etube">
     <i class="material-icons">home</i>
