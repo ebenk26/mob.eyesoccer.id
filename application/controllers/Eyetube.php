@@ -27,6 +27,7 @@ class Eyetube extends CI_Controller {
 		$this->EyetubeMod->$fn();
 	    }
 	} else {
+	    $data['kanal'] = 'eyetube';
 	    $data['content'] = 'eyetube/home';
 	    
 	    $data['title'] = $this->config->item('meta_title');
@@ -35,6 +36,19 @@ class Eyetube extends CI_Controller {
 	    
 	    $this->load->view($this->__theme().'template', $data);
 	}
+    }
+
+    function detail($slug)
+    {
+		$data['slug'] = $slug;
+		$data['kanal'] = 'eyetube';
+		$data['content'] = 'eyetube/detail';
+
+		$data['title'] = $this->config->item('meta_title');
+		$data['meta_desc'] = $this->config->item('meta_desc');
+		$data['meta_keyword'] = $this->config->item('meta_keyword');
+
+		$this->load->view($this->__theme().'template', $data);
     }
 
 }
