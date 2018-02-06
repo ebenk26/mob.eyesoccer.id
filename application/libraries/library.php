@@ -373,4 +373,14 @@ class Library {
 	return str_replace('www.eyesoccer.id', 'm.eyesoccer.id', $url);
     }
     
+    function urltobetame($url)
+    {
+	return str_replace('https://beta.eyesoccer.id/upload/eyeme', 'http://static.eyesoccer.id/v1/cache/images', $url);
+    }
+    
+    function urltobetamarket($url)
+    {
+	return str_replace('https://beta.eyesoccer.id/img/eyemarket/product', 'http://static.eyesoccer.id/v1/cache/images', $url);
+    }
+    
 }
