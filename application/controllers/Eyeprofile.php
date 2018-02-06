@@ -27,6 +27,7 @@ class Eyeprofile extends CI_Controller {
 		$this->EyeprofileMod->$fn();
 	    }
 	} else {
+	    $data['kanal'] = 'eyeprofile';
 	    $data['content'] = 'eyeprofile/home';
 	    
 	    $data['title'] = $this->config->item('meta_title');

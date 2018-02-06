@@ -27,6 +27,7 @@ class Eyetube extends CI_Controller {
 		$this->EyetubeMod->$fn();
 	    }
 	} else {
+	    $data['kanal'] = 'eyetube';
 	    $data['content'] = 'eyetube/home';
 	    
 	    $data['title'] = $this->config->item('meta_title');

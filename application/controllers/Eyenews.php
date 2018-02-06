@@ -27,6 +27,7 @@ class Eyenews extends CI_Controller {
 		$this->EyenewsMod->$fn();
 	    }
 	} else {
+	    $data['kanal'] = 'eyenews';
 	    $data['content'] = 'eyenews/home';
 	    
 	    $data['title'] = $this->config->item('meta_title');
@@ -35,6 +36,18 @@ class Eyenews extends CI_Controller {
 	    
 	    $this->load->view($this->__theme().'template', $data);
 	}
+    }
+    
+    function kategori()
+    {
+	$data['kanal'] = 'eyenews';
+	$data['content'] = 'eyenews/category';
+	
+	$data['title'] = $this->config->item('meta_title');
+	$data['meta_desc'] = $this->config->item('meta_desc');
+	$data['meta_keyword'] = $this->config->item('meta_keyword');
+	
+	$this->load->view($this->__theme().'template', $data);
     }
 
 }
