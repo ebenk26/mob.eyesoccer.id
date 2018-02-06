@@ -24,6 +24,7 @@ class HomeMod extends CI_Model {
 	$this->tools->__flashMessage($data);
     }
 
+
     function __match_schedule()
     {
     	$data["kemarin"] = get_date("-1");
@@ -47,6 +48,8 @@ class HomeMod extends CI_Model {
     	$data = array('xClass' => 'reqmatch', 'xHtml' => $html);
     	$this->tools->__flashMessage($data);
     }
+   
+
 
     function __klasemen()
     {
