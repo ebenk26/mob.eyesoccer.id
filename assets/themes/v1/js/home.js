@@ -85,12 +85,21 @@ window.onload = function(){
     //    heighControl.style.display = "block";
     //    heighControl2.style.display = "none";
     //}
-    //openComment.onclick = function() {
+    $(document).on('click', '.display-box-notif', function(){
+        $('.box-notif').fadeIn('fast');
+    })
+    $(document).on('click', '.openComment', function(){
+        $('.container-comment').fadeIn('fast');
+    })
+    $(document).on('click', '#close', function(){
+        $('.container-comment').fadeOut('fast');
+    })
+    // openComment.onclick = function() {
     //    containerComment.style.display = "block";
-    //}
-    //xClose2.onclick = function() {
+    // }
+    // xClose2.onclick = function() {
     //    containerComment.style.display = "none";
-    //}
+    // }
     function onhover(id) {
         var e = document.getElementById(id);
         if(e.style.display == 'block')
