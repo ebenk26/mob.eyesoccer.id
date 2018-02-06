@@ -7,8 +7,8 @@ class Eyetube extends CI_Controller {
     
     function __construct()
     {
-	parent::__construct();
-	$this->load->model('ajax/EyetubeMod');
+		parent::__construct();
+		$this->load->model('ajax/EyetubeMod');
     }
 
     function index()
