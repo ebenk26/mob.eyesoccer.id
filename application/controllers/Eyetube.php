@@ -35,6 +35,7 @@ class Eyetube extends CI_Controller {
 	    $data['meta_keyword'] = $this->config->item('meta_keyword');
 	    
 	    $this->load->view($this->__theme().'template', $data);
+	}
     }
 
     function detail($slug = '')
