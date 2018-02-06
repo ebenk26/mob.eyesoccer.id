@@ -27,6 +27,7 @@ class Eyenews extends CI_Controller {
 		$this->EyenewsMod->$fn();
 	    }
 	} else {
+		$data['kanal'] = 'eyenews';
 	    $data['content'] = 'eyenews/home';
 	    
 	    $data['title'] = $this->config->item('meta_title');

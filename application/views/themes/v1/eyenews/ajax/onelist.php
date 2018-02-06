@@ -4,7 +4,7 @@ if ($list){
 	foreach($list->data as $dt)
 	{
 ?>
-		<a href="<?php echo $this->library->urltomob($dt->url);?>">
+		<a href="<?php echo base_url()."eyenews/detail/".$dt->slug;?>">
 			<div class="container eyetube">
 				<div class="v-eyetube">
 					<img src="<?php echo $dt->url_pic;?>" alt="">

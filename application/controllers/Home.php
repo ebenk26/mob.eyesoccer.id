@@ -27,8 +27,12 @@ class Home extends CI_Controller {
 		$this->HomeMod->$fn();
 	    }
 	} else {
+
 	    $data['content']   = 'home/home';
 	    $data['title']     = $this->config->item('meta_title');
+
+		$data['kanal'] = 'home';
+
 	    $data['meta_desc'] = $this->config->item('meta_desc');
 	    $data['meta_keyword'] = $this->config->item('meta_keyword');
 	    

@@ -1,18 +1,24 @@
 <div class="container bg-g">
     <div class="t-tab">
         <div id='boxtab'>
+			<div class="day-choose">
             <a class="day-choose" id="jadwal-yest" onclick="tabmenu(this.id, 'day-choose', 't-active')">
                 Kemarin
                 <span><?= date('d F',strtotime($kemarin["tanggalnya"])); ?></span>
             </a>
+			</div>
+			<div class="day-choose">
             <a class="day-choose t-active" id="jadwal-today" onclick="tabmenu(this.id, 'day-choose', 't-active')" active="true">
                 Hari ini
                 <span><?= date('d F',strtotime($hari_ini["tanggalnya"])); ?></span>
             </a>
+			</div>
+			<div class="day-choose">
             <a class="day-choose" id="jadwal-tmrw" onclick="tabmenu(this.id, 'day-choose', 't-active')">
                 Besok
                 <span><?= date('d F',strtotime($besok["tanggalnya"])); ?></span>
             </a>
+			</div>
         </div>
     </div>
 </div>
