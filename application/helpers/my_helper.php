@@ -122,6 +122,7 @@ define('sIMGSTORE','http://eyesoccer.id/systems/eyenews_storage/');
 
 define('DEFAULTIMG',base_url().'assets/home/img/eyeme-photo%20thumbnail.png');
 define('NEWSDETAIL',base_url().'eyenews/detail/');
+define('MARKETIMG','http://beta.eyesoccer.id/img/eyemarket/produk/');
 
 function p($arr){
     echo '<pre>';
@@ -130,8 +131,8 @@ function p($arr){
 
 }
 
-function imgCache($url,$size="medium"){
-    return 'http://static.eyesoccer.id/v1/cache/images/'.$url.'/'.$size;
+function imgCache($imgName,$size="medium"){
+    return 'http://static.eyesoccer.id/v1/cache/images/'.$imgName.'/'.$size;
 }
 
 function cryptPass($str){
@@ -636,4 +637,10 @@ function send_mail($to,$subject,$msg)
     curl_close($ch);
 
     return $result;
+}
+function urltobetame($url){
+  
+    return str_replace('http://static.eyesoccer.id/v1/cache/images','http://beta.eyesoccer.id/upload/eyeme',$url);
+    
+
 }

@@ -1,14 +1,14 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Eyetube extends CI_Controller {
+class Eyemarket extends CI_Controller {
 
     private function __theme() { return $this->config->item('themes'); }
     
     function __construct()
     {
 	parent::__construct();
-	$this->load->model('ajax/EyetubeMod');
+	$this->load->model('ajax/EyemarketMod');
     }
 
     function index()
@@ -24,11 +24,11 @@ class Eyetube extends CI_Controller {
 		$fn();
 	    } else {
 		$fn = "__".$fn;
-		$this->EyetubeMod->$fn();
+		$this->EyemarketMod->$fn();
 	    }
 	} else {
-	    $data['kanal'] = 'eyetube';
-	    $data['content'] = 'eyetube/home';
+	    $data['kanal'] = 'eyemarket';
+	    $data['content'] = 'Eyemarket/home';
 	    
 	    $data['title'] = $this->config->item('meta_title');
 	    $data['meta_desc'] = $this->config->item('meta_desc');
@@ -37,18 +37,6 @@ class Eyetube extends CI_Controller {
 	    $this->load->view($this->__theme().'template', $data);
 	}
     }
-
-    function detail($slug = '')
-    {
-	$data['slug'] = $slug;
-	$data['kanal'] = 'eyetube';
-	$data['content'] = 'eyetube/detail';
-	
-	$data['title'] = $this->config->item('meta_title');
-	$data['meta_desc'] = $this->config->item('meta_desc');
-	$data['meta_keyword'] = $this->config->item('meta_keyword');
-	
-	$this->load->view($this->__theme().'template', $data);
-    }
+    
 
 }

@@ -50,17 +50,17 @@ class EyenewsMod extends CI_Model {
 	$data = array('xClass' => 'reqtabnews', 'xHtml' => $html);
 	$this->tools->__flashMessage($data);
     }
-	
-	function __newscat()
+    
+    function __newscat()
     {
-		$query = array();
-		$data['newscat'] = $this->excurl->remoteCall($this->__xurl().'news-category',$this->__xkey(),$query);
-		$html = $this->load->view($this->__theme().'eyenews/ajax/category', $data, true);
-		
-		$data = array('xClass' => 'reqcat', 'xHtml' => $html);
-		$this->tools->__flashMessage($data);
-    }
+	$data['newscat'] = $this->excurl->remoteCall($this->__xurl().'news-category', $this->__xkey(), []);
 	
+	$html = $this->load->view($this->__theme().'eyenews/ajax/category', $data, true);
+	
+	$data = array('xClass' => 'reqcat', 'xHtml' => $html);
+	$this->tools->__flashMessage($data);
+    }
+    
 	function __detail_news()
     {
 		$slug = $this->input->post("slug");
@@ -73,6 +73,17 @@ class EyenewsMod extends CI_Model {
 		$data = array('xClass' => 'reqdetail', 'xHtml' => $html, 
 					  'xSplit' => true, 'xData' => ['reqterkait' => $related]);
 		$this->tools->__flashMessage($data);
+    }
+    
+    function __categorylist()
+    {
+	$query = array('page' => 1, 'limit' => 12, 'category' => $this->input->post('slug'));
+	$data['catlist'] = $this->excurl->remoteCall($this->__xurl().'news', $this->__xkey(), $query);
+	
+	$html = $this->load->view($this->__theme().'eyenews/ajax/categorylist', $data, true);
+	
+	$data = array('xClass' => 'reqcatlist', 'xHtml' => $html);
+	$this->tools->__flashMessage($data);
     }
 
 }

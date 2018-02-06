@@ -11,7 +11,6 @@ class EyeventMod extends CI_Model {
     {
 	parent::__construct();
     }
-	
 
     function __match_schedule()
     {
@@ -48,7 +47,6 @@ class EyeventMod extends CI_Model {
     function __event_list()
     {
     	$query = array('page' => 1, 'limit' => 3, 'sortby' => 'mostview', 'category' => '');
-
     	$data['event_list'] = $this->excurl->remoteCall($this->__xurl().'event', $this->__xkey(), $query);
 
     	$html = $this->load->view($this->__theme().'eyevent/ajax/event_list', $data, true);
