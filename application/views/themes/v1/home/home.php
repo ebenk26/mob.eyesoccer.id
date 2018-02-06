@@ -329,27 +329,39 @@
 <!-- EYEVENT -->
 <div class="container over-x">
     <div id="evSlide" class="carousel slide t-30">
-        <div role="listbox" class="carousel-inner w-max">                    
-            <div class="box item active">
-                <div class="ev-box-content">
-                    
-                </div>
-                <div class="ev-box-content">
-                    
-                </div>
-                <div class="ev-box-content">
-                    
-                </div>
+        <div id="reqevent" class='loadevent' action="eyevent" loading="off" clean="clsevent">
+            <div id='clsevent'>
+                <script>
+                    $(document).ready(function(){
+                        $(window).on('load',function(){
+                            ajaxOnLoad('loadevent');
+                        });
+                    });
+                </script>
             </div>
-            <div class="box item">
-                <div class="ev-box-content">
-                    
+            <input type='hidden' name='fn' value='event_list' class='cinput'>
+            <div role="listbox" class="carousel-inner w-max">                    
+                <div class="box item active">
+                    <div class="ev-box-content">
+                        
+                    </div>
+                    <div class="ev-box-content">
+                        
+                    </div>
+                    <div class="ev-box-content">
+                        
+                    </div>
                 </div>
-                <div class="ev-box-content">
-                    
-                </div>
-                <div class="ev-box-content">
-                    
+                <div class="box item">
+                    <div class="ev-box-content">
+                        
+                    </div>
+                    <div class="ev-box-content">
+                        
+                    </div>
+                    <div class="ev-box-content">
+                        
+                    </div>
                 </div>
             </div>
         </div>
@@ -365,7 +377,7 @@
 <div class="container tx-c">
     <span class="jp green">JADWAL PERTANDINGAN</span>
     <div class="border-box">
-        <div id="reqmatch" class='loadmatch' action="home" loading="off" clean="clsmatch">
+        <div id="reqmatch" class='loadmatch' action="eyevent" loading="off" clean="clsmatch">
             <div id='clsmatch'>
                 <script>
                     $(document).ready(function(){
@@ -439,7 +451,7 @@
     </div>
 </div>
 <!-- KLASEMEN -->
-<div id="reqklasemen" class='loadklasemen' action="home" loading="off" clean="clsklasemen">
+<div id="reqklasemen" class='loadklasemen' action="eyevent" loading="off" clean="clsklasemen">
     <div id='clsklasemen'>
         <script>
             $(document).ready(function(){
@@ -476,7 +488,7 @@
                     <tr>
                         <td>1</td>
                         <td>
-                            <img src="" alt="" width="15px"> PSM Makasar</td>
+                            <img src="" alt="" width="15px"> Nama Klub</td>
                         <td>10</td>
                         <td>1</td>
                         <td>1</td>
@@ -486,7 +498,7 @@
                     <tr>
                         <td>1</td>
                         <td>
-                            <img src="" alt="" width="15px"> PSM Makasar</td>
+                            <img src="" alt="" width="15px"> Nama Klub</td>
                         <td>10</td>
                         <td>1</td>
                         <td>1</td>
@@ -496,7 +508,7 @@
                     <tr>
                         <td>1</td>
                         <td>
-                            <img src="" alt="" width="15px"> PSM Makasar</td>
+                            <img src="" alt="" width="15px"> Nama Klub</td>
                         <td>10</td>
                         <td>1</td>
                         <td>1</td>
@@ -506,7 +518,7 @@
                     <tr>
                         <td>1</td>
                         <td>
-                            <img src="" alt="" width="15px"> PSM Makasar</td>
+                            <img src="" alt="" width="15px"> Nama Klub</td>
                         <td>10</td>
                         <td>1</td>
                         <td>1</td>
@@ -516,7 +528,7 @@
                     <tr>
                         <td>1</td>
                         <td>
-                            <img src="" alt="" width="15px"> PSM Makasar</td>
+                            <img src="" alt="" width="15px"> Nama Klub</td>
                         <td>10</td>
                         <td>1</td>
                         <td>1</td>
@@ -526,7 +538,7 @@
                     <tr>
                         <td>1</td>
                         <td>
-                            <img src="" alt="" width="15px"> PSM Makasar</td>
+                            <img src="" alt="" width="15px"> Nama Klub</td>
                         <td>10</td>
                         <td>1</td>
                         <td>1</td>
@@ -536,7 +548,7 @@
                     <tr>
                         <td>1</td>
                         <td>
-                            <img src="" alt="" width="15px"> PSM Makasar</td>
+                            <img src="" alt="" width="15px"> Nama Klub</td>
                         <td>10</td>
                         <td>1</td>
                         <td>1</td>
@@ -546,7 +558,7 @@
                     <tr>
                         <td>1</td>
                         <td>
-                            <img src="" alt="" width="15px"> PSM Makasar</td>
+                            <img src="" alt="" width="15px"> Nama Klub</td>
                         <td>10</td>
                         <td>1</td>
                         <td>1</td>
@@ -556,7 +568,7 @@
                     <tr>
                         <td>1</td>
                         <td>
-                            <img src="" alt="" width="15px"> PSM Makasar</td>
+                            <img src="" alt="" width="15px"> Nama Klub</td>
                         <td>10</td>
                         <td>1</td>
                         <td>1</td>
@@ -566,7 +578,7 @@
                     <tr>
                         <td>1</td>
                         <td>
-                            <img src="" alt="" width="15px"> PSM Makasar</td>
+                            <img src="" alt="" width="15px"> Nama Klub</td>
                         <td>10</td>
                         <td>1</td>
                         <td>1</td>
