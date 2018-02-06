@@ -76,4 +76,22 @@ class HomeMod extends CI_Model {
     	$this->tools->__flashMessage($data);
     }
 
+    function __klasemen()
+    {
+    	$html = $this->load->view($this->__theme().'home/ajax/klasemen', '', true);
+    	
+    	$data = array('xClass' => 'reqklasemen', 'xHtml' => $html);
+    	$this->tools->__flashMessage($data);
+    }
+
+    function __list_event()
+    {
+    	$data['oke'] = 'oke';
+
+    	$html = $this->load->view($this->__theme().'home/ajax/klasemen', $data, true);
+    	
+    	$data = array('xClass' => 'reqklasemen', 'xHtml' => $html);
+    	$this->tools->__flashMessage($data);
+    }
+
 }
