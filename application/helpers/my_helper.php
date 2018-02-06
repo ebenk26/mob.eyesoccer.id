@@ -638,3 +638,9 @@ function send_mail($to,$subject,$msg)
 
     return $result;
 }
+function urltobetame($url){
+  
+    return str_replace('http://static.eyesoccer.id/v1/cache/images','http://beta.eyesoccer.id/upload/eyeme',$url);
+    
+
+}

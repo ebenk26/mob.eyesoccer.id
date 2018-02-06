@@ -44,6 +44,7 @@ class EyemarketMod extends CI_Model {
                                         status_publish = 1
                                     ORDER BY 
                                         A.id_product DESC
+                                    LIMIT 5
                                         ")->result_array();
             return $query; 
     }
