@@ -23,5 +23,4 @@ class EyemeMod extends CI_Model {
 	$this->tools->__flashMessage($data);
     }
    
-
 }
