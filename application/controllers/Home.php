@@ -28,6 +28,7 @@ class Home extends CI_Controller {
 	    }
 	} else {
 
+
 	    $data['content']   = 'home/home';
 	    $data['title']     = $this->config->item('meta_title');
 

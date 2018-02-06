@@ -60,5 +60,15 @@ class EyenewsMod extends CI_Model {
 		$data = array('xClass' => 'reqcat', 'xHtml' => $html);
 		$this->tools->__flashMessage($data);
     }
+	
+	function __detail()
+    {
+		$query = array();
+		$data['newscat'] = $this->excurl->remoteCall($this->__xurl().'news',$this->__xkey(),$query);
+		$html = $this->load->view($this->__theme().'eyenews/ajax/category', $data, true);
+		
+		$data = array('xClass' => 'reqcat', 'xHtml' => $html);
+		$this->tools->__flashMessage($data);
+    }
 
 }

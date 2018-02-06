@@ -27,6 +27,7 @@ class Eyeme extends CI_Controller {
 		$this->EyemeMod->$fn();
 	    }
 	} else {
+	    $data['kanal'] = 'eyeme';
 	    $data['content'] = 'Eyeme/home';
 	    
 	    $data['title'] = $this->config->item('meta_title');

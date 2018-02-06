@@ -1,8 +1,3 @@
-<nav>
-    <i id="menu" class="material-icons f-l">menu</i>
-    <img src="https://www.eyesoccer.id/img/logo2.png" alt="">
-    <i id="src" class="material-icons f-r">search</i>
-</nav>
 <!-- TRENDING --> 
 <div class="trending">
     <div id="reqtrend" class='loadtrend' action="home" loading="off" clean="clstrend">
@@ -564,7 +559,3 @@
         </div>
     </div>
 </div>
-<!-- FOOTER -->
-<footer>
-    <p>Copyright 2017 eyesoccer.com. All Rights Reserved.</p>
-</footer>
