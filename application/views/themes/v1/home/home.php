@@ -35,7 +35,7 @@
     <div class="carousel slide t-30">
         <div role="listbox" class="carousel-inner w-max">
             <div class="box item active">
-                <div id="reqprofile" class="loadprofile" action="home" loading="off" clean="clsprof">
+                <div id="reqprofile" class="loadprofile" action="eyeprofile" loading="off" clean="clsprof">
                     <div id="clsprof">
                        <script>
                             $(document).ready(function(){
@@ -85,32 +85,8 @@
                         </div>
                     </div>
                 </a>
-                <a href="">
-                    <div class="ep-box-content">
-                        <div class="img">
-                            <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">                                    
-                        </div>
-                        <div class="ep-detail">
-                            <h1>Egy Maulana Vikry</h1>
-                            <p>Posisi: Sayap Kanan<br>
-                            Klub: -<br>
-                            Tanggal Lahir: 7 Juli 2000</p>                              
-                        </div>
-                    </div>
-                </a>
-                <a href="">
-                    <div class="ep-box-content">
-                        <div class="img">
-                            <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">                                    
-                        </div>
-                        <div class="ep-detail">
-                            <h1>Egy Maulana Vikry</h1>
-                            <p>Posisi: Sayap Kanan<br>
-                            Klub: -<br>
-                            Tanggal Lahir: 7 Juli 2000</p>                                       
-                        </div>
-                    </div>
-                </a>
+                
+                
                 </div>
             </div>
         </div>
@@ -173,18 +149,7 @@
 </div>
 <!-- EYEME -->
 <div class="border-box over-no pd-l-4 m-b-20">
-   <div id="reqme" class='loadme' action="eyeme" loading="off" clean="clsme">
-        <div id='clsme'>
-            <script>
-                $(document).ready(function(){
-                    $(window).on('load',function(){
-                        ajaxOnLoad('loadme');
-                    });
-                });
-            </script>
-        </div>
-        <input type='hidden' name='fn' value='eyeme' class='cinput'>
-   </div>
+   
     <div class="eme-box">
         <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
     </div>
