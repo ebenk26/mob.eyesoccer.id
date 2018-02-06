@@ -47,20 +47,7 @@ class HomeMod extends CI_Model {
     	$data = array('xClass' => 'reqmatch', 'xHtml' => $html);
     	$this->tools->__flashMessage($data);
     }
-    function __eyeprofile(){
-
-    	$query = array(
-		    		'page'  => 1,  
-		    		'limit' => 5);
-    	$data['profile']  = $this->excurl->remoteCall($this->__xurl().'profile',$this->__xkey(),$query);
-    	
-    	$html = $this->load->view($this->__theme().'home/ajax/eyeprofile',$data,true);
-    	$data =array('xClass'=>'reqprofile','xHtml'=> $html);
-    	$this->tools->__flashMessage($data);
-
-
-
-    }
+   
 
 
 }
