@@ -52,7 +52,7 @@
 		</div>
 		</a>
 	</div>
-    <div class="p-container tab2">
+    <div class="p-container tab2" style="padding-top: 0px;">
 		<div id="reqtabnews" class='loadtabnews' action="eyenews" loading="off" clean="clstabnews">
 			<div id='clstabnews'>
 				<script>
@@ -141,56 +141,68 @@
 		</div>
     </div>
 	<!-- EYENEWS VIDEO -->
-    <div class="container" style="margin-top: -35px !important; background-color: #fafafa;">
+    <div class="container" style="margin-top: 0px !important; background-color: #fafafa;">
         <h3 class="h3-red">VIDEO</h3>
         <div class="carousel slide t-30 over-x">
             <div role="listbox" class="carousel-inner w-max">
                 <div class="box item active no-decoration">
-                    <a href="enews-detail.html">
-                        <div class="video-thumb">
-                            <div class="v-thumb-img">
-                                <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
-                            </div>
-                            <h2>Lorem Ipsum Dolor Sit Amet</h2>
-                            <span>2 jam lalu</span>
-                        </div>
-                    </a>
-                    <a href="enews-detail.html">
-                        <div class="video-thumb">
-                            <div class="v-thumb-img">
-                                <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
-                            </div>
-                            <h2>Lorem Ipsum Dolor Sit AmetLorem Ipsum Dolor Sit AmetLorem Ipsum Dolor Sit Amet</h2>
-                            <span>2 jam lalu</span>
-                        </div>
-                    </a>
-                    <a href="enews-detail.html">
-                        <div class="video-thumb">
-                            <div class="v-thumb-img">
-                                <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
-                            </div>
-                            <h2>Lorem Ipsum Dolor Sit Amet</h2>
-                            <span>2 jam lalu</span>
-                        </div>
-                    </a>
-                    <a href="enews-detail.html">
-                        <div class="video-thumb">
-                            <div class="v-thumb-img">
-                                <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
-                            </div>
-                            <h2>Lorem Ipsum Dolor Sit Amet</h2>
-                            <span>2 jam lalu</span>
-                        </div>
-                    </a>
-                    <a href="enews-detail.html">
-                        <div class="video-thumb">
-                            <div class="v-thumb-img">
-                                <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
-                            </div>
-                            <h2>Lorem Ipsum Dolor Sit Amet</h2>
-                            <span>2 jam lalu</span>
-                        </div>
-                    </a>
+					<div id="reqvideolist" class='loadvideolist' action="eyetube" loading="off" clean="clsvideolist">
+						<div id='clsvideolist'>
+							<script>
+								$(document).ready(function(){
+									$(window).on('load',function(){
+										ajaxOnLoad('loadvideolist');
+									});
+								});
+							</script>
+						</div>
+						<input type='hidden' name='fn' value='videolist' class='cinput'>
+						<a href="enews-detail.html">
+							<div class="video-thumb">
+								<div class="v-thumb-img">
+									<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+								</div>
+								<h2>Lorem Ipsum Dolor Sit Amet</h2>
+								<span>2 jam lalu</span>
+							</div>
+						</a>
+						<a href="enews-detail.html">
+							<div class="video-thumb">
+								<div class="v-thumb-img">
+									<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+								</div>
+								<h2>Lorem Ipsum Dolor Sit AmetLorem Ipsum Dolor Sit AmetLorem Ipsum Dolor Sit Amet</h2>
+								<span>2 jam lalu</span>
+							</div>
+						</a>
+						<a href="enews-detail.html">
+							<div class="video-thumb">
+								<div class="v-thumb-img">
+									<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+								</div>
+								<h2>Lorem Ipsum Dolor Sit Amet</h2>
+								<span>2 jam lalu</span>
+							</div>
+						</a>
+						<a href="enews-detail.html">
+							<div class="video-thumb">
+								<div class="v-thumb-img">
+									<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+								</div>
+								<h2>Lorem Ipsum Dolor Sit Amet</h2>
+								<span>2 jam lalu</span>
+							</div>
+						</a>
+						<a href="enews-detail.html">
+							<div class="video-thumb">
+								<div class="v-thumb-img">
+									<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+								</div>
+								<h2>Lorem Ipsum Dolor Sit Amet</h2>
+								<span>2 jam lalu</span>
+							</div>
+						</a>
+					</div>
                 </div>
             </div>
         </div>
