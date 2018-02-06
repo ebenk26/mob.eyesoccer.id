@@ -9,10 +9,10 @@ class EyemarketMod extends CI_Model {
 
     function __construct()
     {
-    parent::__construct();
+        parent::__construct();
     }
  
-     public function get_all_product()
+    function get_all_product()
     {
         $query = $this->db->query(" SELECT
                                         A.id_product,
@@ -46,17 +46,20 @@ class EyemarketMod extends CI_Model {
                                         A.id_product DESC
                                     LIMIT 5
                                         ")->result_array();
-            return $query; 
+        
+        return $query; 
     }
-    function __market(){
-     # p($this->get_all_product());
-      $data['prodlist'] = $this->get_all_product();
-      $html = $this->load->view($this->__theme().'eyemarket/ajax/prodlist',$data,true);
-      $data = array('xClass'=> 'reqmarket','xHtml' => $html);
-      $this->tools->__flashMessage($data);
-
+    
+    function __market()
+    {
+        # p($this->get_all_product());
+        $data['prodlist'] = $this->get_all_product();
+        
+        $html = $this->load->view($this->__theme().'eyemarket/ajax/prodlist', $data, true);
+        
+        $data = array('xClass' => 'reqmarket', 'xHtml' => $html);
+        $this->tools->__flashMessage($data);
     }
-
 
 }
 
