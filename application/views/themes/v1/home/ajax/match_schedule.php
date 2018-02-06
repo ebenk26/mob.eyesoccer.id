@@ -30,7 +30,7 @@
                         <td class="tx-r"><?= $value->team_a; ?> 
                             <!-- <a href="<?= $value->url_team_a; ?>"> -->
                                 <span class="i-l">
-                                    <img src="<?= $value->url_logo_a; ?>" alt="<?= $value->team_a; ?>">
+                                    <img src="<?= $value->url_logo_a; ?>/small" alt="<?= $value->team_a; ?>">
                                 </span> 
                             <!-- </a> -->
                         </td>
@@ -43,7 +43,7 @@
                         <td class="tx-l"> 
                             <!-- <a href="<?= $value->url_team_a; ?>"> -->
                                 <span class="i-r">
-                                    <img src="<?= $value->url_logo_b; ?>" alt="<?= $value->team_b; ?>">
+                                    <img src="<?= $value->url_logo_b; ?>/small" alt="<?= $value->team_b; ?>">
                                 </span> 
                                 <?= $value->team_b; ?> 
                             <!-- </a> -->
@@ -70,7 +70,7 @@
                         <td class="tx-r"><?= $value->team_a; ?> 
                             <!-- <a href="<?= $value->url_team_a; ?>"> -->
                                 <span class="i-l">
-                                    <img src="<?= $value->url_logo_a; ?>" alt="<?= $value->team_a; ?>">
+                                    <img src="<?= $value->url_logo_a; ?>/small" alt="<?= $value->team_a; ?>">
                                 </span> 
                             <!-- </a> -->
                         </td>
@@ -83,7 +83,7 @@
                         <td class="tx-l"> 
                             <!-- <a href="<?= $value->url_team_a; ?>"> -->
                                 <span class="i-r">
-                                    <img src="<?= $value->url_logo_b; ?>" alt="<?= $value->team_b; ?>">
+                                    <img src="<?= $value->url_logo_b; ?>/small" alt="<?= $value->team_b; ?>">
                                 </span> 
                                 <?= $value->team_b; ?> 
                             <!-- </a> -->
@@ -110,7 +110,7 @@
                         <td class="tx-r"><?= $value->team_a; ?> 
                             <!-- <a href="<?= $value->url_team_a; ?>"> -->
                                 <span class="i-l">
-                                    <img src="<?= $value->url_logo_a; ?>" alt="<?= $value->team_a; ?>">
+                                    <img src="<?= $value->url_logo_a; ?>/small" alt="<?= $value->team_a; ?>">
                                 </span> 
                             <!-- </a> -->
                         </td>
@@ -123,7 +123,7 @@
                         <td class="tx-l"> 
                             <!-- <a href="<?= $value->url_team_a; ?>"> -->
                                 <span class="i-r">
-                                    <img src="<?= $value->url_logo_b; ?>" alt="<?= $value->team_b; ?>">
+                                    <img src="<?= $value->url_logo_b; ?>/small" alt="<?= $value->team_b; ?>">
                                 </span> 
                                 <?= $value->team_b; ?> 
                             <!-- </a> -->

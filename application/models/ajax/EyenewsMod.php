@@ -26,9 +26,9 @@ class EyenewsMod extends CI_Model {
     function __onelist()
     {
 	$query = array('page' => 1, 'limit' => 1, 'sortby' => 'newest');
-	$data['news'] = $this->excurl->remoteCall($this->__xurl().'news', $this->__xkey(), $query);
+	$data['list'] = $this->excurl->remoteCall($this->__xurl().'news', $this->__xkey(), $query);
 	
-	$html = $this->load->view($this->__theme().'eyenews/ajax/trending', $data, true);
+	$html = $this->load->view($this->__theme().'eyenews/ajax/onelist', $data, true);
 	
 	$data = array('xClass' => 'reqonelist', 'xHtml' => $html);
 	$this->tools->__flashMessage($data);

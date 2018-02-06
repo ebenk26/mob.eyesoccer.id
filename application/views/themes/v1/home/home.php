@@ -450,7 +450,9 @@
             </table>
         </div>
         <div class="t-c-b">
-            <button type="" class="btn-green">Lihat Jadwal Lainnya</button>
+            <a href="<?= base_url(); ?>eyevent/jadwal">
+                <button type="" class="btn-green">Lihat Jadwal Lainnya</button>
+            </a>
         </div>
     </div>
 </div>
@@ -461,133 +463,146 @@
     </div>
 </div>
 <!-- KLASEMEN -->
-<div class="border-box">
-    <span class="jp-k">KLASEMEN</span>
-    <select id="" name="" selected="true" class="slct-lg">
-        <option value="">Liga 1 Indonesia</option>
-        <option value="">Liga 2 Indonesia</option>
-        <option value="">Liga 3 Indonesia</option>
-        <option value="">Liga 4 Indonesia</option>
-    </select>
-    <div class="border-box pd-l-0">
-        <table class="table table-striped m-b-20">
-            <thead>
-                <tr>
-                    <th>#</th>
-                    <th>Klub</th>
-                    <th>Main</th>
-                    <th>M</th>
-                    <th>S</th>
-                    <th>K</th>
-                    <th>Poin</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>
-                        <img src="" alt="" width="15px"> PSM Makasar</td>
-                    <td>10</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>10</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>
-                        <img src="" alt="" width="15px"> PSM Makasar</td>
-                    <td>10</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>10</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>
-                        <img src="" alt="" width="15px"> PSM Makasar</td>
-                    <td>10</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>10</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>
-                        <img src="" alt="" width="15px"> PSM Makasar</td>
-                    <td>10</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>10</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>
-                        <img src="" alt="" width="15px"> PSM Makasar</td>
-                    <td>10</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>10</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>
-                        <img src="" alt="" width="15px"> PSM Makasar</td>
-                    <td>10</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>10</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>
-                        <img src="" alt="" width="15px"> PSM Makasar</td>
-                    <td>10</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>10</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>
-                        <img src="" alt="" width="15px"> PSM Makasar</td>
-                    <td>10</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>10</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>
-                        <img src="" alt="" width="15px"> PSM Makasar</td>
-                    <td>10</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>10</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>
-                        <img src="" alt="" width="15px"> PSM Makasar</td>
-                    <td>10</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>10</td>
-                </tr>
-            </tbody>
-        </table>
+<div id="reqklasemen" class='loadklasemen' action="home" loading="off" clean="clsklasemen">
+    <div id='clsklasemen'>
+        <script>
+            $(document).ready(function(){
+                $(window).on('load',function(){
+                    ajaxOnLoad('loadklasemen');
+                });
+            });
+        </script>
     </div>
-    <div class="t-c-b w-165">
-        <button type="" class="btn-green">Lihat Selengkapnya</button>
+    <input type='hidden' name='fn' value='klasemen' class='cinput'>
+
+    <div class="border-box">
+        <span class="jp-k">KLASEMEN</span>
+        <select id="list-liga" name="liganya" selected="true" class="slct-lg">
+            <option value="">Liga 1 Indonesia</option>
+            <option value="">Liga Inggris</option>
+            <option value="">Liga Spanyol</option>
+            <option value="">Liga Italia</option>
+        </select>
+        <div class="border-box pd-l-0">
+            <table class="table table-striped m-b-20">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Klub</th>
+                        <th>Main</th>
+                        <th>M</th>
+                        <th>S</th>
+                        <th>K</th>
+                        <th>Poin</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>
+                            <img src="" alt="" width="15px"> PSM Makasar</td>
+                        <td>10</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>
+                            <img src="" alt="" width="15px"> PSM Makasar</td>
+                        <td>10</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>
+                            <img src="" alt="" width="15px"> PSM Makasar</td>
+                        <td>10</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>
+                            <img src="" alt="" width="15px"> PSM Makasar</td>
+                        <td>10</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>
+                            <img src="" alt="" width="15px"> PSM Makasar</td>
+                        <td>10</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>
+                            <img src="" alt="" width="15px"> PSM Makasar</td>
+                        <td>10</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>
+                            <img src="" alt="" width="15px"> PSM Makasar</td>
+                        <td>10</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>
+                            <img src="" alt="" width="15px"> PSM Makasar</td>
+                        <td>10</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>
+                            <img src="" alt="" width="15px"> PSM Makasar</td>
+                        <td>10</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>
+                            <img src="" alt="" width="15px"> PSM Makasar</td>
+                        <td>10</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>10</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="t-c-b w-165">
+            <button type="" class="btn-green">Lihat Selengkapnya</button>
+        </div>
     </div>
 </div>
 <!-- FOOTER -->
