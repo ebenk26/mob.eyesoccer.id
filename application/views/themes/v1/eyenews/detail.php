@@ -4,6 +4,18 @@
 		<li>EyeNews</li>
 	</ul>
 </div>
+<div id="reqdetail" class='loaddetail' action="eyenews" loading="off" clean="clsdetail">
+		<div id='clsdetail'>
+			<script>
+				$(document).ready(function(){
+					$(window).on('load',function(){
+						ajaxOnLoad('loaddetail');
+					});
+				});
+			</script>
+		</div>
+		<input type='hidden' name='fn' value='detail_news' class='cinput'>
+		<input type='hidden' name='slug' value='<?php echo $slug; ?>' class='cinput'>
 <div class="container enews-detail">
 	<h1>Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet</h1>
 	<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="" width="100%">
@@ -104,6 +116,7 @@
 			</a>
 		</div>
 	</div>
+</div>
 	<!-- IKLAN -->
 	<div class="container">
 		<div class="box-flyad">
@@ -121,104 +134,118 @@
 	<div class="carousel slide t-30 over-x">
 		<div role="listbox" class="carousel-inner w-max">
 			<div class="box item active no-decoration">
-				<a href="">
-					<div class="video-thumb">
-						<div class="v-thumb-img">
-							<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
-						</div>
-						<h2>Lorem Ipsum Dolor Sit Amet</h2>
-						<span>2 jam lalu</span>
+				<div id="reqtube" class='loadtube' action="eyetube" loading="on" clean="clstube">
+					<div id='clstube'>
+						<script>
+							$(document).ready(function(){
+								$(window).on('load',function(){
+									ajaxOnLoad('loadtube');
+								});
+							});
+						</script>
 					</div>
-				</a>
-				<a href="">
-					<div class="video-thumb">
-						<div class="v-thumb-img">
-							<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+					<input type='hidden' name='fn' value='list_tube_eyenews' class='cinput'>
+					<a href="">
+						<div class="video-thumb">
+							<div class="v-thumb-img">
+								<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+							</div>
+							<h2>Lorem Ipsum Dolor Sit Amet</h2>
+							<span>2 jam lalu</span>
 						</div>
-						<h2>Lorem Ipsum Dolor Sit AmetLorem Ipsum Dolor Sit AmetLorem Ipsum Dolor Sit Amet</h2>
-						<span>2 jam lalu</span>
-					</div>
-				</a>
-				<a href="">
-					<div class="video-thumb">
-						<div class="v-thumb-img">
-							<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+					</a>
+					<a href="">
+						<div class="video-thumb">
+							<div class="v-thumb-img">
+								<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+							</div>
+							<h2>Lorem Ipsum Dolor Sit AmetLorem Ipsum Dolor Sit AmetLorem Ipsum Dolor Sit Amet</h2>
+							<span>2 jam lalu</span>
 						</div>
-						<h2>Lorem Ipsum Dolor Sit Amet</h2>
-						<span>2 jam lalu</span>
-					</div>
-				</a>
-				<a href="">
-					<div class="video-thumb">
-						<div class="v-thumb-img">
-							<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+					</a>
+					<a href="">
+						<div class="video-thumb">
+							<div class="v-thumb-img">
+								<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+							</div>
+							<h2>Lorem Ipsum Dolor Sit Amet</h2>
+							<span>2 jam lalu</span>
 						</div>
-						<h2>Lorem Ipsum Dolor Sit Amet</h2>
-						<span>2 jam lalu</span>
-					</div>
-				</a>
-				<a href="">
-					<div class="video-thumb">
-						<div class="v-thumb-img">
-							<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+					</a>
+					<a href="">
+						<div class="video-thumb">
+							<div class="v-thumb-img">
+								<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+							</div>
+							<h2>Lorem Ipsum Dolor Sit Amet</h2>
+							<span>2 jam lalu</span>
 						</div>
-						<h2>Lorem Ipsum Dolor Sit Amet</h2>
-						<span>2 jam lalu</span>
-					</div>
-				</a>
+					</a>
+					<a href="">
+						<div class="video-thumb">
+							<div class="v-thumb-img">
+								<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+							</div>
+							<h2>Lorem Ipsum Dolor Sit Amet</h2>
+							<span>2 jam lalu</span>
+						</div>
+					</a>
+				</div>
 			</div>
 		</div>
 	</div>
 </div>
 <div class="container-94 m-b-20 unset">
 	<span class="up-next-etube" style="margin-top: 23px;">Berita Terkait</span>
-	<div class="etube-content etube-content-detail pd-t-10">
-		<div class="v-etube v-etube-detail">
-			<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+	<div class="reqterkait">
+		<div class="etube-content etube-content-detail pd-t-10">
+			<div class="v-etube v-etube-detail">
+				<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+			</div>
+			<h1>Lorem Ipsum Dolor Sit amet</h1>
+			<span>30 menit lalu</span>
+			<span>2000 view - 100 suka</span>
 		</div>
-		<h1>Lorem Ipsum Dolor Sit amet</h1>
-		<span>30 menit lalu</span>
-		<span>2000 view - 100 suka</span>
-	</div>
-	<div class="etube-content etube-content-detail">
-		<div class="v-etube v-etube-detail">
-			<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+		<div class="etube-content etube-content-detail">
+			<div class="v-etube v-etube-detail">
+				<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+			</div>
+			<h1>Lorem Ipsum Dolor Sit amet Lorem Ipsum Dolor Sit amet</h1>
+			<span>30 menit lalu</span>
+			<span>2000 view - 100 suka</span>
 		</div>
-		<h1>Lorem Ipsum Dolor Sit amet Lorem Ipsum Dolor Sit amet</h1>
-		<span>30 menit lalu</span>
-		<span>2000 view - 100 suka</span>
-	</div>
-	<div class="etube-content etube-content-detail">
-		<div class="v-etube v-etube-detail">
-			<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+		<div class="etube-content etube-content-detail">
+			<div class="v-etube v-etube-detail">
+				<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+			</div>
+			<h1>Lorem Ipsum Dolor Sit amet</h1>
+			<span>30 menit lalu</span>
+			<span>2000 view - 100 suka</span>
 		</div>
-		<h1>Lorem Ipsum Dolor Sit amet</h1>
-		<span>30 menit lalu</span>
-		<span>2000 view - 100 suka</span>
-	</div>
-	<div class="etube-content etube-content-detail">
-		<div class="v-etube v-etube-detail">
-			<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+		<div class="etube-content etube-content-detail">
+			<div class="v-etube v-etube-detail">
+				<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+			</div>
+			<h1>Lorem Ipsum Dolor Sit amet</h1>
+			<span>30 menit lalu</span>
+			<span>2000 view - 100 suka</span>
 		</div>
-		<h1>Lorem Ipsum Dolor Sit amet</h1>
-		<span>30 menit lalu</span>
-		<span>2000 view - 100 suka</span>
-	</div>
-	<div class="etube-content etube-content-detail">
-		<div class="v-etube v-etube-detail">
-			<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+		<div class="etube-content etube-content-detail">
+			<div class="v-etube v-etube-detail">
+				<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+			</div>
+			<h1>Lorem Ipsum Dolor Sit amet</h1>
+			<span>30 menit lalu</span>
+			<span>2000 view - 100 suka</span>
 		</div>
-		<h1>Lorem Ipsum Dolor Sit amet</h1>
-		<span>30 menit lalu</span>
-		<span>2000 view - 100 suka</span>
-	</div>
-	<div class="etube-content etube-content-detail">
-		<div class="v-etube v-etube-detail">
-			<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+		<div class="etube-content etube-content-detail">
+			<div class="v-etube v-etube-detail">
+				<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+			</div>
+			<h1>Lorem Ipsum Dolor Sit amet</h1>
+			<span>30 menit lalu</span>
+			<span>2000 view - 100 suka</span>
 		</div>
-		<h1>Lorem Ipsum Dolor Sit amet</h1>
-		<span>30 menit lalu</span>
-		<span>2000 view - 100 suka</span>
 	</div>
 </div>
 </div>
