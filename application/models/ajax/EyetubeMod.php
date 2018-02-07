@@ -57,5 +57,18 @@ class EyetubeMod extends CI_Model {
     	$data = array('xClass' => 'reqtube', 'xHtml' => $html);
     	$this->tools->__flashMessage($data);
     }
+
+    function __category_tube()
+    {
+        $data['category'] = $this->input->post("category");
+
+        $query = array('page' => 1, 'limit' => 10, 'sortby' => 'newest', 'category' => $data['category']);
+        $data['tube'] = $this->excurl->remoteCall($this->__xurl().'video', $this->__xkey(), $query);
+        
+        $html = $this->load->view($this->__theme().'eyetube/ajax/tube_category', $data, true);
+        
+        $data = array('xClass' => 'reqtube', 'xHtml' => $html);
+        $this->tools->__flashMessage($data);
+    }
     
 }

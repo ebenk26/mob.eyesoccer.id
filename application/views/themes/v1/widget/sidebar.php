@@ -54,7 +54,7 @@
 		?>
 			<div class="menu-ketegori">
 		    <span>kategori</span>
-		    <a href="<?= base_url(); ?>eyetube/kategori/Eye-Soccer-Fact">EYESOCCER FACT</a>
+		    <a href="<?= base_url(); ?>eyetube/kategori/EyeSoccer-Fact">EYESOCCER FACT</a>
 		    <a href="<?= base_url(); ?>eyetube/kategori/Eye-Soccer-Flash">EYESOCCER FLASH</a>
 		    <a href="<?= base_url(); ?>eyetube/kategori/Eyesoccerpedia">EYESOCCER PEDIA</a>
 		    <a href="<?= base_url(); ?>eyetube/kategori/Match-Preview">MATCH PREVIEW</a>

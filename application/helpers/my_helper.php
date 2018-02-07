@@ -644,3 +644,29 @@ function urltobetame($url){
     
 
 }
+
+function set_breadcrumb($kanal,$page)
+{
+    if ($page != "")
+    {
+        $html   = " <div class='crumb'>
+                        <ul>
+                        <li><a href='".base_url()."' style='display: unset'>Home</a></li>
+                        <li><a href='".base_url()."".$kanal."' style='display: unset'>".$kanal."</a></li>
+                        <li style='cursor:default;'>".$page."</li>
+                        </ul>
+                    </div>";
+    }
+    else
+    {
+        $html   = " <div class='crumb'>
+                        <ul>
+                        <li><a href='".base_url()."' style='display: unset'>Home</a></li>
+                        <li><a href='".base_url()."".$kanal."' style='display: unset'>".$kanal."</a></li>
+                        </ul>
+                    </div>";
+    }
+    
+    
+    return $html;
+}
