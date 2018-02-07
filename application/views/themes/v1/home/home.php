@@ -559,8 +559,5 @@
                 </tbody>
             </table>
         </div>
-        <div class="t-c-b w-165">
-            <button type="" class="btn-green">Lihat Selengkapnya</button>
-        </div>
     </div>
 </div>
