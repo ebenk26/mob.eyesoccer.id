@@ -25,7 +25,6 @@
         </span>
     </div>
 </div>
-<?php echo ($this->library->lastext('http://www.desktopimages.org/pictures/2014/0118.asd', '.')) ? '123' : '456'; ?>
 <!-- EYEPROFILE -->
 <div class="container over-x">
     <div class="carousel slide t-30">
