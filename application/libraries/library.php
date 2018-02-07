@@ -364,7 +364,8 @@ class Library {
     
     function lastext($dt = '', $del = '')
     {
-	return strtolower(substr(strrchr($dt, $del), 1));  
+	$url = strtolower(substr(strrchr($dt, '/'), 1));
+	return strtolower(substr(strrchr(($url) ? $url : $dt, $del), 1));  
     }
     
     function datenormal($date)
