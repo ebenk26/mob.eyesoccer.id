@@ -36,13 +36,13 @@ class EyenewsMod extends CI_Model {
     
     function __tabnews()
     {
-	$query = array('page' => 1, 'limit' => 3, 'description' => 'true', 'sortby' => 'mostview');
+	$query = array('page' => 1, 'limit' => 6, 'description' => 'true', 'sortby' => 'mostview');
 	$data['popular'] = $this->excurl->remoteCall($this->__xurl().'news', $this->__xkey(), $query);
 	
-	$query = array('page' => 1, 'limit' => 3, 'description' => 'true', 'recommended' => true);
+	$query = array('page' => 1, 'limit' => 6, 'description' => 'true', 'recommended' => true);
 	$data['recommended'] = $this->excurl->remoteCall($this->__xurl().'news', $this->__xkey(), $query);
 	
-	$query = array('page' => 1, 'limit' => 3, 'description' => 'true', 'youngage' => true);
+	$query = array('page' => 1, 'limit' => 6, 'description' => 'true', 'youngage' => true);
 	$data['youngage'] = $this->excurl->remoteCall($this->__xurl().'news', $this->__xkey(), $query);
 	
 	$html = $this->load->view($this->__theme().'eyenews/ajax/tabnews', $data, true);
