@@ -5,7 +5,7 @@
 ?>
 	<div class="klub-content">
 		<div class="img-klub-content">
-			<img src="<?php echo $this->library->lastext($dt->url_logo,'.') ? $dt->url_logo : $default;?>/small" alt="<?php echo $dt->name;?>" srcset="">
+			<img src="<?php echo $this->library->lastext($dt->url_logo,'.') ? $dt->url_logo : $default;?>/medium" alt="<?php echo $dt->name;?>" srcset="">
 		</div>
 		<h3 class="nama-klub"><?php echo $dt->name;?></h3>
 	</div>
