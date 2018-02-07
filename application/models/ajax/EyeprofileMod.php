@@ -23,4 +23,7 @@ class EyeprofileMod extends CI_Model {
 	$this->tools->__flashMessage($data);
     }
 
+    function __listclub(){
+        #$query = array('page'=> 1,'limit' => 5)
+    }
 }
