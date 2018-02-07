@@ -23,7 +23,26 @@ class EyeprofileMod extends CI_Model {
 	$this->tools->__flashMessage($data);
     }
 
-    function __listclub(){
-        #$query = array('page'=> 1,'limit' => 5)
+    function __klublist(){
+		$competition = urldecode($this->input->post('slug'));
+		if($competition == 'Non Liga'){
+			$competition = 'SSB / Akademi Sepakbola';
+		}
+        $query = array('page'  => 1, 'limit' => 8, 'league' => '', 'competition' => $competition);
+		$data['klublist'] = $this->excurl->remoteCall($this->__xurl().'profile-club', $this->__xkey(), $query);
+		$html = $this->load->view($this->__theme().'eyeprofile/ajax/klublist', $data, true);
+	
+		$data =array('xClass'=>'reqklublist','xHtml'=> $html);
+		$this->tools->__flashMessage($data);
+    }
+	
+	function __competition(){
+		$competition = $this->input->post('slug');
+        $query = array('page'  => 1, 'limit' => 8);
+		$data['competitionlist'] = $this->excurl->remoteCall($this->__xurl().'competition', $this->__xkey(), $query);
+		$html = $this->load->view($this->__theme().'eyeprofile/ajax/competitionlist', $data, true);
+	
+		$data =array('xClass'=>'reqcompetition','xHtml'=> $html);
+		$this->tools->__flashMessage($data);
     }
 }

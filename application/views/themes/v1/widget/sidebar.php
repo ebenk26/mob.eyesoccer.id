@@ -11,7 +11,7 @@
         <a class="m-reg" href=""><i class="material-icons">input</i>Login</a>
     </div>
     <span>kanal</span>
-    <a href="<?= base_url(); ?>eyeprofile"><img src="<?php echo SUBCDN."assets/$folder"; ?>img/ic_eyeprofile.png" alt="">Eye Profile</a>
+    <a href="<?= base_url(); ?>eyeprofile/klub"><img src="<?php echo SUBCDN."assets/$folder"; ?>img/ic_eyeprofile.png" alt="">Eye Profile</a>
     <a href="<?= base_url(); ?>eyetube"><img src="<?php echo SUBCDN."assets/$folder"; ?>img/ic_eyetube.png" alt="">Eye Tube</a>
     <a href="<?= base_url(); ?>eyenews"><img src="<?php echo SUBCDN."assets/$folder"; ?>img/ic_eyenews.png" alt="">Eye News</a>
     <a href="<?= base_url(); ?>eyeme"><img src="<?php echo SUBCDN."assets/$folder"; ?>img/ic-eyeme.png" alt="">Eye Me</a>
