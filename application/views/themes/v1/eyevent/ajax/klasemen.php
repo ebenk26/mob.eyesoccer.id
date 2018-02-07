@@ -45,8 +45,10 @@
                                                     if($n != 8){
                                                         if($n != 9){
                                                             if($n != 11){
-                                                                $nodeValue = "<td>".$type->nodeValue.'</td>';
-                                                                echo $nodeValue;
+                                                                if ($n != 12) {
+                                                                    $nodeValue = "<td>".$type->nodeValue.'</td>';
+                                                                    echo $nodeValue;
+                                                                }
                                                             }
                                                         }
                                                     }
@@ -102,8 +104,10 @@
                                                     if($n != 8){
                                                         if($n != 9){
                                                             if($n != 11){
-                                                                $nodeValue = "<td>".$type->nodeValue.'</td>';
-                                                                echo $nodeValue;
+                                                                if ($n != 12) {
+                                                                    $nodeValue = "<td>".$type->nodeValue.'</td>';
+                                                                    echo $nodeValue;
+                                                                }
                                                             }
                                                         }
                                                     }
@@ -159,8 +163,10 @@
                                                     if($n != 8){
                                                         if($n != 9){
                                                             if($n != 11){
-                                                                $nodeValue = "<td>".$type->nodeValue.'</td>';
-                                                                echo $nodeValue;
+                                                                if ($n != 12) {
+                                                                    $nodeValue = "<td>".$type->nodeValue.'</td>';
+                                                                    echo $nodeValue;
+                                                                }
                                                             }
                                                         }
                                                     }
@@ -216,8 +222,10 @@
                                                     if($n != 8){
                                                         if($n != 9){
                                                             if($n != 11){
-                                                                $nodeValue = "<td>".$type->nodeValue.'</td>';
-                                                                echo $nodeValue;
+                                                                if ($n != 12) {
+                                                                    $nodeValue = "<td>".$type->nodeValue.'</td>';
+                                                                    echo $nodeValue;
+                                                                }
                                                             }
                                                         }
                                                     }
