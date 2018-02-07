@@ -362,6 +362,13 @@ class Library {
 	return $angle * $earthRadius;
     }
     
+    function lastext($url = '', $del = '')
+    {
+	$url = substr($url, 0, strlen($url) - 1);
+	$urlnew = strtolower(substr(strrchr($url, '/'), 1));
+	return strtolower(substr(strrchr(($urlnew) ? $urlnew : $url, $del), 1));  
+    }
+    
     function datenormal($date)
     {
 	$normal = new DateTime($date);

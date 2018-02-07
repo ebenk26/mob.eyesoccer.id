@@ -1,10 +1,4 @@
-<div class="crumb">
-    <ul>
-        <li>Home</li>
-        <li><a href='<?php echo base_url('eyenews'); ?>'>EyeNews</a></li>
-        <li><a href='<?php echo base_url('eyenews/kategori'); ?>'>Kategori</a></li>
-    </ul>
-</div>
+<?php echo set_breadcrumb("eyenews",$slug); ?>
 
 <!-- EYENEWS -->
 <div class="etube-home enews">

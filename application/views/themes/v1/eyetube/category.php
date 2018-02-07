@@ -1,8 +1,5 @@
-<?php 
-    $kanal  = "eyetube";
-    $page   = $slug;
-    echo set_breadcrumb($kanal,$page);
-?>
+<?php echo set_breadcrumb("eyetube",$slug); ?>
+
 <!-- EYENEWS -->
 <div id="reqtube" class='loadtube' action="eyetube" loading="off" clean="clstube">
     <div id='clstube'>
