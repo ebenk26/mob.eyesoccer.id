@@ -244,11 +244,11 @@
             </tbody>
         </table>
     </div>
-    <div class="t-c-b w-165">
+    <!-- <div class="t-c-b w-165">
         <a href="<?= base_url(); ?>eyevent/klasemen">
             <button type="" class="btn-green">Lihat Selengkapnya</button>
         </a>
-    </div>
+    </div> -->
 </div>
 
 <script>

@@ -261,38 +261,45 @@ nav>img{
     margin: 5px 0px;
     overflow: hidden;
 }
-.rek-ber-c>img{
+.rek-ber-c img{
     padding-right: 10px;
     width: 142px;
     margin: 7px 0px;
     display: block;
 }
-.rek-ber-c>span{
+.rek-ber-c span{
     font-size: .65em;
     color: gray;
     font-weight: 500;
 }
-.rek-ber-c>h1{
+.rek-ber-c h1{
     line-height: 1em;
     font-size: .9em;
     font-weight: 400;
     margin-top: 1px;
 }
-.rek-ber-c>p{
+.rek-ber-c p{
     font-size: .7em;
     color: #9E9E9E;
 }
-.rek-ber-c>.img-res-height{
-    padding-right: 10px;
+.rek-ber-c .img-res-height{
+    border-right: 10px solid white;
     width: 150px;
     height: 90px;
     margin: 7px 0px;
     display: inline-block;
     overflow: hidden;
     float: left;
+    background-color: #FAFAFA;
 }
-.rek-ber-c>.img-res-height>img{
+.rek-ber-c .img-res-height img{
     width: 100%;
+}
+.rek-ber-c .img-res-height img::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: gainsboro;
 }
 .ev-box-content{
     width: 330px;
@@ -627,7 +634,7 @@ nav>.f-r:hover{
     width: 150px;
     min-height: 85px;
     margin: 3px;
-    border: 1px solid #d8d8d8;
+    border: 1px solid #d8d8d840;
     animation: move 10s infinite;
     -webkit-animation: move 10s infinite;
 }
@@ -654,24 +661,39 @@ nav>.f-r:hover{
 .em-box-content:hover{
     box-shadow: 0 0 4px 1px rgba(204,204,204,.48);
 }
-.em-box-content>img{
-    width: 150px;
-    height: auto;
+.em-box-content .img-prod{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 120px;
 }
-.em-box-content>p{
-    font-size: .7em;
+.em-box-content img{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+.em-box-content p::before{
+    content: 'Rp ';
+}
+.em-box-content p{
+    font-size: 0.6em;
     font-weight: 500;
-    color: #FFD600;
+    color: #ff0909;
     padding: 0px 5px;
 }
-.em-box-content>h1{
-    font-size: .85em;
+.em-box-content h1{
+    font-size: .7em;
     color: #616161;
     padding: 0px 5px;
-    line-height: 1em;
     font-weight: 500;
+    height: 29px;
+    overflow: hidden;
 }
-.em-box-content>button{
+.em-box-content button{
     padding: 5px;
     width: 140px;
     background-color: transparent;
@@ -772,15 +794,23 @@ nav>.f-r:hover{
     float: left;
     border: 2px solid white;
     overflow: hidden;
-    position: relative;
+    /* position: relative; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .eme-box>img{
-    height: 100%;
+    /* height: 100%;
     position: absolute;
     top: 50%;
     left: 50%;
     margin-right: -50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); */
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%;
+    max-width: 150%;
+    max-height: 150%;
 }
 .over-no{
     overflow: hidden;
@@ -1013,17 +1043,28 @@ nav>.f-r:hover{
     border-radius: 5px;
     box-shadow: 0 0 15px -7px #383737bd;
 }
-.menu-ketegori>a:nth-of-type(n+7){
+.menu-ketegori{
+    background-color: #FAFAFA;
+}
+.menu-ketegori a{
     padding: 15px 49px;
     font-size: .8em;
-    background-color: #FAFAFA;
     text-transform: uppercase;
+    float: left;
+    display: block;
+    width: 100%;
+    background-color: #fafafa;
+    font-weight: 300;
+    color: #4a4a4a;
 }
-.menu-ketegori>span:nth-last-of-type(1){
+.menu-ketegori span{
     padding-top: 25px;
     display: block;
-    background-color: #FAFAFA;
     border-top: 1px solid gainsboro;
+    font-size: .75em;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding-left: 15px;
 }
 .menu-eme, .menu-bottom-etube{
     width: 100%;
@@ -1148,15 +1189,16 @@ nav>.f-r:hover{
     height: 220px;
     float: left;
 }
-.video-thumb>.v-thumb-img{
+.video-thumb .v-thumb-img{
     width: 100%;
     height: 150px;
     overflow: hidden;
+    background-color: #eeeeee;
 }
-.video-thumb>.v-thumb-img>img{
+.video-thumb .v-thumb-img img{
     width: 100%;
 }
-.video-thumb>h2{
+.video-thumb h2{
     color: #212121;
     font-size: .9em;
     width: 95%;
@@ -1165,7 +1207,7 @@ nav>.f-r:hover{
     max-height: 2.7em;
     overflow: hidden;
 }
-.video-thumb>span{
+.video-thumb span{
     color: gray;
     font-size: .7em;
     margin: 0px;
@@ -2578,4 +2620,11 @@ ul, li {
     border-bottom: 2px solid #EEEEEE;
     display: inline-block;
     padding-bottom: 5px;
+}
+.fafa span, .fafa h1, .fafa p, .fafa h2, .fafa h3{
+    background-color: #fafafa;
+    color: #fafafa;
+}
+.loadklasemen tr td:nth-last-of-type(1){
+    display: none;
 }

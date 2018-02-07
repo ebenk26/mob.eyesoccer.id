@@ -40,7 +40,7 @@
 		<a href="enews-detail.html">
 		<div class="container eyetube">
 			<div class="v-eyetube">
-				<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+				<img src="" alt="">
 			</div>
 			<span>30 menit lalu</span>
 			<h1>Lorrem Ipsum solor sit ametLorem Ipsum Dolor Sit Amet</h1>
@@ -67,21 +67,27 @@
 			<hr>
 			<div role="listbox" class="carousel-inner">                    
 				<div id='tab-populer' class="box item active">
-					<div class="container rek-ber">
+					<div class="container rek-ber fafa">
 						<div class="rek-ber-c">
-							<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+							<div class="img-res-height">
+                                <img src="" alt="">                                
+                            </div>
 							<span>17 Okt 2017 - 12.451</span>
 							<h1>lorem ipsum dolor sit amet lorem ipsum dolor sit amet </h1>
 							<p>lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet </p>
 						</div>
 						<div class="rek-ber-c">
-							<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+							<div class="img-res-height">
+                                <img src="" alt="">                                
+                            </div>
 							<span>17 Okt 2017 - 12.45</span>
 							<h1>lorem ipsum dolor sit amet lorem ipsum dolor sit amet </h1>
 							<p>lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet </p>
 						</div>
 						<div class="rek-ber-c">
-							<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+							<div class="img-res-height">
+                                <img src="" alt="">                                
+                            </div>
 							<span>17 Okt 2017 - 12.45</span>
 							<h1>lorem ipsum dolor sit amet lorem ipsum dolor sit amet </h1>
 							<p>lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet </p>
@@ -89,21 +95,27 @@
 					</div>
 				</div>
 				<div id='tab-rekomendasi' class="box item">
-					<div class="container rek-ber">
+					<div class="container rek-ber fafa">
 						<div class="rek-ber-c">
-							<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+							<div class="img-res-height">
+                                <img src="" alt="">                                
+                            </div>
 							<span>17 Okt 2017 - 12.452</span>
 							<h1>lorem ipsum dolor sit amet lorem ipsum dolor sit amet </h1>
 							<p>lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet </p>
 						</div>
 						<div class="rek-ber-c">
-							<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+							<div class="img-res-height">
+                                <img src="" alt="">                                
+                            </div>
 							<span>17 Okt 2017 - 12.45</span>
 							<h1>lorem ipsum dolor sit amet lorem ipsum dolor sit amet </h1>
 							<p>lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet </p>
 						</div>
 						<div class="rek-ber-c">
-							<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+							<div class="img-res-height">
+                                <img src="" alt="">                                
+                            </div>
 							<span>17 Okt 2017 - 12.45</span>
 							<h1>lorem ipsum dolor sit amet lorem ipsum dolor sit amet </h1>
 							<p>lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet </p>
@@ -111,21 +123,27 @@
 					</div>
 				</div>
 				<div id='tab-usiamuda' class="box item">
-					<div class="container rek-ber">
+					<div class="container rek-ber fafa">
 						<div class="rek-ber-c">
-							<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+							<div class="img-res-height">
+                                <img src="" alt="">                                
+                            </div>
 							<span>17 Okt 2017 - 12.453</span>
 							<h1>lorem ipsum dolor sit amet lorem ipsum dolor sit amet </h1>
 							<p>lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet </p>
 						</div>
 						<div class="rek-ber-c">
-							<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+							<div class="img-res-height">
+                                <img src="" alt="">                                
+                            </div>
 							<span>17 Okt 2017 - 12.45</span>
 							<h1>lorem ipsum dolor sit amet lorem ipsum dolor sit amet </h1>
 							<p>lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet </p>
 						</div>
 						<div class="rek-ber-c">
-							<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+							<div class="img-res-height">
+                                <img src="" alt="">                                
+                            </div>
 							<span>17 Okt 2017 - 12.45</span>
 							<h1>lorem ipsum dolor sit amet lorem ipsum dolor sit amet </h1>
 							<p>lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet </p>
@@ -155,7 +173,7 @@
 						<a href="enews-detail.html">
 							<div class="video-thumb">
 								<div class="v-thumb-img">
-									<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+									<img src="" alt="">
 								</div>
 								<h2>Lorem Ipsum Dolor Sit Amet</h2>
 								<span>2 jam lalu</span>
@@ -164,7 +182,7 @@
 						<a href="enews-detail.html">
 							<div class="video-thumb">
 								<div class="v-thumb-img">
-									<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+									<img src="" alt="">
 								</div>
 								<h2>Lorem Ipsum Dolor Sit AmetLorem Ipsum Dolor Sit AmetLorem Ipsum Dolor Sit Amet</h2>
 								<span>2 jam lalu</span>
@@ -173,7 +191,7 @@
 						<a href="enews-detail.html">
 							<div class="video-thumb">
 								<div class="v-thumb-img">
-									<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+									<img src="" alt="">
 								</div>
 								<h2>Lorem Ipsum Dolor Sit Amet</h2>
 								<span>2 jam lalu</span>
@@ -182,7 +200,7 @@
 						<a href="enews-detail.html">
 							<div class="video-thumb">
 								<div class="v-thumb-img">
-									<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+									<img src="" alt="">
 								</div>
 								<h2>Lorem Ipsum Dolor Sit Amet</h2>
 								<span>2 jam lalu</span>
@@ -191,7 +209,7 @@
 						<a href="enews-detail.html">
 							<div class="video-thumb">
 								<div class="v-thumb-img">
-									<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+									<img src="" alt="">
 								</div>
 								<h2>Lorem Ipsum Dolor Sit Amet</h2>
 								<span>2 jam lalu</span>
