@@ -362,6 +362,11 @@ class Library {
 	return $angle * $earthRadius;
     }
     
+    function lastext($dt = '', $del = '')
+    {
+	return strtolower(substr(strrchr($dt, $del), 1));  
+    }
+    
     function datenormal($date)
     {
 	$normal = new DateTime($date);
