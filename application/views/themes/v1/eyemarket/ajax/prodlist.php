@@ -4,10 +4,12 @@
 
  	echo "<a href=\"".base_url()."detail/{$v['toko']}/{$v['title_slug']}\">
                     <div class=\"em-box-content\">
-                        <img src=\"".MARKETIMG.$v['image1']."\" alt=\"{$v['nama']}\">
+                        <div class=\"img-prod\">
+                            <img src=\"".MARKETIMG.$v['image1']."\" alt=\"{$v['nama']}\">
+                        </div>
                         <h1>{$v['nama']}</h1>
-                        <p class=\"prices\"> ".number_format($v['harga'],0,',','.')."</p>
-                        <button type=\"text\" class=\"beli\">Beli</button>
+                        <p class=\"prices\" style=\"visibility:hidden;\"> ".number_format($v['harga'],0,',','.')."</p>
+                        <button type=\"text\" class=\"beli\">Available Soon</button>
                     </div>
                 </a>";
 

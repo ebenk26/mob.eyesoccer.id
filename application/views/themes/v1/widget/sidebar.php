@@ -23,7 +23,8 @@
 	{
 	    case 'eyenews':
 		?>
-		    <span>kategori</span>
+			<div class="menu-ketegori">
+			<span>kategori</span>
 		    <div id="reqcat" class='loadcat' action="eyenews" loading="off" clean="clscat">
 			<div id='clscat'>
 			    <script>
@@ -44,12 +45,14 @@
 			<a href="enews-kategori.html">ULAS TUNTAS</a>
 			<a href="enews-kategori.html">SOCCER SERI</a>
 			<a href="enews-kategori.html">PINGGIR LAPANGAN</a>
-		    </div>
+			</div>
+			</div>
 		<?php
 	    break;
 	    
 	    case 'eyetube':
 		?>
+			<div class="menu-ketegori">
 		    <span>kategori</span>
 		    <a href="<?= base_url(); ?>eyetube/kategori/EyeSoccer-Fact">EYESOCCER FACT</a>
 		    <a href="<?= base_url(); ?>eyetube/kategori/Eye-Soccer-Flash">EYESOCCER FLASH</a>
@@ -59,9 +62,9 @@
 		    <a href="<?= base_url(); ?>eyetube/kategori/Profile-SSB">PROFILE SSB</a>
 		    <a href="<?= base_url(); ?>eyetube/kategori/Eyesoccer-Star">EYESOCCER STAR</a>
 		    <a href="<?= base_url(); ?>eyetube/kategori/Eye-Soccer-Funny">EYESOCCER FUNNY</a>
-		    <a href="<?= base_url(); ?>eyetube/kategori/SSB-/-Akademi">SSB AKADEMI</a>
 		    <a href="<?= base_url(); ?>eyetube/kategori/VIDEO-KAMU">VIDEO KAMU</a>
-		    <a href="<?= base_url(); ?>eyetube/kategori/Highlight">HIGHLIGHT</a>
+			<a href="<?= base_url(); ?>eyetube/kategori/Highlight">HIGHLIGHT</a>
+			</div>
 		<?php
 	    break;
 	}

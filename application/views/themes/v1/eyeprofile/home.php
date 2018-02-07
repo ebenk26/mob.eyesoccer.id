@@ -4,6 +4,7 @@
                 <li>Home</li>
                 <li>Eyeprofile</li>
                 <li>Klub</li>
+                <li><?php echo urldecode($slug);?></li>
             </ul>
         </div>
     <div class="eprofile">
@@ -17,62 +18,64 @@
             </div>
         </div>
         <div class="container" style="font-size: .8em;">
-            <select id="" name="" selected="true" class="slc-musim">
-                <option value="">Liga 1 Indonesia</option>
-                <option value="">Liga 1 Indonesia</option>
-                <option value="">Liga 1 Indonesia</option>
-                <option value="">Liga 1 Indonesia</option>
-            </select>
+			<div id="reqcompetition" class='loadcompetition' action="eyeprofile" loading="off" clean="clscompetition">
+				<div id='clscompetition'>
+					<script>
+						$(document).ready(function(){
+							$(window).on('load',function(){
+								ajaxOnLoad('loadcompetition');
+							});
+						});
+					</script>
+				</div>
+				<input type='hidden' name='fn' value='competition' class='cinput'>
+				<input type='hidden' name='slug' value='<?php echo $slug;?>' class='cinput'>
+				<select id="" name="" selected="true" class="slc-musim">
+					<option value>--Pilih Liga--</option>
+					<option value="">Liga 1 Indonesia</option>
+					<option value="">Liga 1 Indonesia</option>
+					<option value="">Liga 1 Indonesia</option>
+				</select>
+			</div>
         </div>
         <div class="container eprofile-klub-home">
-            <div class="klub-content">
-                <div class="img-klub-content">
-                    <img src="https://www.eyesoccer.id/systems/club_logo/2034LOGO UNTUK APLIKASI.jpg" alt="" srcset="">
-                </div>
-                <h3 class="nama-klub">Nama Klub</h3>
-            </div>
-            <div class="klub-content">
-                <div class="img-klub-content">
-                    <img src="https://www.eyesoccer.id/systems/club_logo/2034LOGO UNTUK APLIKASI.jpg" alt="" srcset="">
-                </div>
-                <h3 class="nama-klub">Nama Klub</h3>
-            </div>
-            <div class="klub-content">
-                <div class="img-klub-content">
-                    <img src="https://www.eyesoccer.id/systems/club_logo/2034LOGO UNTUK APLIKASI.jpg" alt="" srcset="">
-                </div>
-                <h3 class="nama-klub">Nama Klub</h3>
-            </div>
-            <div class="klub-content">
-                <div class="img-klub-content">
-                    <img src="https://www.eyesoccer.id/systems/club_logo/2034LOGO UNTUK APLIKASI.jpg" alt="" srcset="">
-                </div>
-                <h3 class="nama-klub">Nama Klub</h3>
-            </div>
-            <div class="klub-content">
-                <div class="img-klub-content">
-                    <img src="https://www.eyesoccer.id/systems/club_logo/2034LOGO UNTUK APLIKASI.jpg" alt="" srcset="">
-                </div>
-                <h3 class="nama-klub">Nama Klub</h3>
-            </div>
-            <div class="klub-content">
-                <div class="img-klub-content">
-                    <img src="https://www.eyesoccer.id/systems/club_logo/2034LOGO UNTUK APLIKASI.jpg" alt="" srcset="">
-                </div>
-                <h3 class="nama-klub">Nama Klub</h3>
-            </div>
-            <div class="klub-content">
-                <div class="img-klub-content">
-                    <img src="https://www.eyesoccer.id/systems/club_logo/2034LOGO UNTUK APLIKASI.jpg" alt="" srcset="">
-                </div>
-                <h3 class="nama-klub">Nama Klub</h3>
-            </div>
-            <div class="klub-content">
-                <div class="img-klub-content">
-                    <img src="https://www.eyesoccer.id//systems/club_logo/2034LOGO UNTUK APLIKASI.jpg" alt="" srcset="">
-                </div>
-                <h3 class="nama-klub">Nama Klub</h3>
-            </div>
+			<div id="reqklublist" class='loadklublist' action="eyeprofile" loading="off" clean="clsklublist">
+					<div id='clsklublist'>
+						<script>
+							$(document).ready(function(){
+								$(window).on('load',function(){
+									ajaxOnLoad('loadklublist');
+								});
+							});
+						</script>
+					</div>
+					<input type='hidden' name='fn' value='klublist' class='cinput'>
+					<input type='hidden' name='slug' value='<?php echo $slug;?>' class='cinput'>
+				<div class="klub-content">
+					<div class="img-klub-content">
+						<img src="https://www.eyesoccer.id/systems/club_logo/2034LOGO UNTUK APLIKASI.jpg" alt="" srcset="">
+					</div>
+					<h3 class="nama-klub">Nama Klub</h3>
+				</div>
+				<div class="klub-content">
+					<div class="img-klub-content">
+						<img src="https://www.eyesoccer.id/systems/club_logo/2034LOGO UNTUK APLIKASI.jpg" alt="" srcset="">
+					</div>
+					<h3 class="nama-klub">Nama Klub</h3>
+				</div>
+				<div class="klub-content">
+					<div class="img-klub-content">
+						<img src="https://www.eyesoccer.id/systems/club_logo/2034LOGO UNTUK APLIKASI.jpg" alt="" srcset="">
+					</div>
+					<h3 class="nama-klub">Nama Klub</h3>
+				</div>
+				<div class="klub-content">
+					<div class="img-klub-content">
+						<img src="https://www.eyesoccer.id/systems/club_logo/2034LOGO UNTUK APLIKASI.jpg" alt="" srcset="">
+					</div>
+					<h3 class="nama-klub">Nama Klub</h3>
+				</div>
+			</div>
         </div>
         <div class="container box-jadwal" style="position: relative;">
             <h3 class="h3-orange">Jadwal pertandingan liga 1 indonesia</h3>
