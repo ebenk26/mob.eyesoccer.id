@@ -28,7 +28,7 @@ class Eyeme extends CI_Controller {
 	    }
 	} else {
 	    $data['kanal'] = 'eyeme';
-	    $data['content'] = 'Eyeme/home';
+	    $data['content'] = 'eyeme/home';
 	    
 	    $data['title'] = $this->config->item('meta_title');
 	    $data['meta_desc'] = $this->config->item('meta_desc');
