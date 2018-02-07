@@ -63,7 +63,7 @@
 	<?php //$cap = $google->gcaptcha; ?>
 	/*var CaptchaCallback = function(){
 	    $('.g-recaptcha').each(function(index, el) {
-		grecaptcha.render(el, {'sitekey' : '<?php echo $cap->site; ?>'});
+		grecaptcha.render(el, {'sitekey' : '<?php #echo $cap->site; ?>'});
 	    });
 	};*/
     </script>
