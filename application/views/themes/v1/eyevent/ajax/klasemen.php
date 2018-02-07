@@ -45,8 +45,10 @@
                                                     if($n != 8){
                                                         if($n != 9){
                                                             if($n != 11){
-                                                                $nodeValue = "<td>".$type->nodeValue.'</td>';
-                                                                echo $nodeValue;
+                                                                if ($n != 12) {
+                                                                    $nodeValue = "<td>".$type->nodeValue.'</td>';
+                                                                    echo $nodeValue;
+                                                                }
                                                             }
                                                         }
                                                     }
@@ -102,8 +104,10 @@
                                                     if($n != 8){
                                                         if($n != 9){
                                                             if($n != 11){
-                                                                $nodeValue = "<td>".$type->nodeValue.'</td>';
-                                                                echo $nodeValue;
+                                                                if ($n != 12) {
+                                                                    $nodeValue = "<td>".$type->nodeValue.'</td>';
+                                                                    echo $nodeValue;
+                                                                }
                                                             }
                                                         }
                                                     }
@@ -159,8 +163,10 @@
                                                     if($n != 8){
                                                         if($n != 9){
                                                             if($n != 11){
-                                                                $nodeValue = "<td>".$type->nodeValue.'</td>';
-                                                                echo $nodeValue;
+                                                                if ($n != 12) {
+                                                                    $nodeValue = "<td>".$type->nodeValue.'</td>';
+                                                                    echo $nodeValue;
+                                                                }
                                                             }
                                                         }
                                                     }
@@ -216,8 +222,10 @@
                                                     if($n != 8){
                                                         if($n != 9){
                                                             if($n != 11){
-                                                                $nodeValue = "<td>".$type->nodeValue.'</td>';
-                                                                echo $nodeValue;
+                                                                if ($n != 12) {
+                                                                    $nodeValue = "<td>".$type->nodeValue.'</td>';
+                                                                    echo $nodeValue;
+                                                                }
                                                             }
                                                         }
                                                     }
@@ -236,11 +244,11 @@
             </tbody>
         </table>
     </div>
-    <div class="t-c-b w-165">
+    <!-- <div class="t-c-b w-165">
         <a href="<?= base_url(); ?>eyevent/klasemen">
             <button type="" class="btn-green">Lihat Selengkapnya</button>
         </a>
-    </div>
+    </div> -->
 </div>
 
 <script>

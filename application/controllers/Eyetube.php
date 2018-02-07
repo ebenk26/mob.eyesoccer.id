@@ -51,4 +51,28 @@ class Eyetube extends CI_Controller {
 	$this->load->view($this->__theme().'template', $data);
     }
 
+    function kategori($slug = '')
+    {
+		$data['slug'] = $slug;
+		$data['kanal'] = 'eyetube';
+		$data['content'] = 'eyetube/category';
+
+		$data['category_name'] = "";
+		if ($slug != "SSBAkademi")
+		{
+			$data['category_name'] = str_replace('-', ' ', $slug);
+		}
+		else
+		{
+			$data['category_name'] = "SSB / Akademi";
+		}
+		// var_dump($data['category_name']);exit();
+		
+		$data['title'] = $this->config->item('meta_title');
+		$data['meta_desc'] = $this->config->item('meta_desc');
+		$data['meta_keyword'] = $this->config->item('meta_keyword');
+		
+		$this->load->view($this->__theme().'template', $data);
+    }
+
 }
