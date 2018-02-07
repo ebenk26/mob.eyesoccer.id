@@ -59,7 +59,6 @@
 		    <a href="<?= base_url(); ?>eyetube/kategori/Profile-SSB">PROFILE SSB</a>
 		    <a href="<?= base_url(); ?>eyetube/kategori/Eyesoccer-Star">EYESOCCER STAR</a>
 		    <a href="<?= base_url(); ?>eyetube/kategori/Eye-Soccer-Funny">EYESOCCER FUNNY</a>
-		    <a href="<?= base_url(); ?>eyetube/kategori/SSB-/-Akademi">SSB AKADEMI</a>
 		    <a href="<?= base_url(); ?>eyetube/kategori/VIDEO-KAMU">VIDEO KAMU</a>
 		    <a href="<?= base_url(); ?>eyetube/kategori/Highlight">HIGHLIGHT</a>
 		<?php
