@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class MarketQueryMod extends CI_Model {
 
- public function get_all_product()
+ public function get_all_product($limit)
     {
         $query = $this->db->query(" SELECT
                                         A.id_product,
@@ -35,7 +35,7 @@ class MarketQueryMod extends CI_Model {
                                         status_publish = 1
                                     ORDER BY 
                                         A.id_product DESC
-                                    LIMIT 5
+                                    LIMIT $limit
                                         ")->result_array();
             return $query; 
     }
