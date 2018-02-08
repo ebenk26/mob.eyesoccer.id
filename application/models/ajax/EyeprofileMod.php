@@ -53,7 +53,7 @@ class EyeprofileMod extends CI_Model {
 		
 		$html = $this->load->view($this->__theme().'eyeprofile/ajax/klublist', $data, true);
 	
-		$data =array('xClass'=>'reqklublist','xHtml'=> $html, 'page' => $this->session->userdata('pageklub'), 'pagetotal' => $this->session->userdata('pagetotalklub'));
+		$data =array('xClass'=>'reqklublist','xHtml'=> $html, 'xUrlhash' => base_url().'eyeprofile/klub/'.$competition.'/'.$page);
 		$this->tools->__flashMessage($data);
     }
 	

@@ -1,4 +1,16 @@
-<!-- CONTENT BODY -->
+	<style>
+	.coba-btn{
+		padding: 5px;
+	    width: 140px;
+	    background-color: transparent;
+	    border: 1px solid #8ec429;
+	    color: #91c500;
+	    font-weight: 500;
+	    margin: 5px;
+	    margin-left: 34%;
+	}
+	</style>
+	<!-- CONTENT BODY -->
     <div class="crumb">
             <ul>
                 <li><a href="<?php echo base_url();?>" style="display:unset;">Home</a></li>
