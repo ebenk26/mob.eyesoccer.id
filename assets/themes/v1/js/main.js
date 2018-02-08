@@ -486,6 +486,10 @@ function responseData(msg)
             }
         })
     }
+    
+    if (msg.xPaging != undefined) {
+        urlUpdate(urlSplit(msg.xPaging));
+    }
 }
 
 function ajaxMsgPopup(request)
@@ -498,6 +502,28 @@ function ajaxMsgPopup(request)
         $('.loading').hide();
         box_popup();
     });
+}
+
+function urlSplit(urlx) {
+    var split = urlx.split("/");
+    var urlNew = '';
+    var ux = 0;
+    split.map(function(uri){
+	if (ux > 0) {
+		urlNew = urlNew+'/'+uri;
+	} else {
+		urlNew = uri;
+	}
+	ux++;
+    })
+    
+    return urlNew;
+}
+
+var urlHistory = '';
+function urlUpdate(urlPath) {
+    urlHistory = (history.state != null) ? history.state.url : '';
+    history.pushState({url: "" + urlPath + ""}, "", urlPath);
 }
 
 function actChain(urlx, valx, showx, cleanx) {
