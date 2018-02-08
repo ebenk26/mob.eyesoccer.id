@@ -10,7 +10,7 @@
                 <a href="<?php echo base_url();?>eyetube/detail/<?= $value->slug; ?>">
                     <div class="etube-mobile-thumb">
                         <div class="img">
-                            <img src="<?= $value->url_thumb; ?>" alt="<?= $value->title; ?>">
+                            <img src="<?= $value->url_thumb; ?>/medium" alt="<?= $value->title; ?>">
                         </div>
                         <span class="kategori">
                             <?= $value->category_name; ?>
