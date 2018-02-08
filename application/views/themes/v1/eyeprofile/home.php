@@ -49,7 +49,7 @@
             <div class="container sub-menu w-max">
                 <a href="<?php echo base_url();?>eyeprofile/klub" class="active">klub</a>
                 <a href="<?php echo base_url();?>eyeprofile/pemain">pemain</a>
-                <a href="<?php echo base_url();?>eyeprofile/official">ofisial</a>
+                <a href="<?php echo base_url();?>eyeprofile/official/<?= $slug; ?>">ofisial</a>
                 <a href="">perangkat pertandingan</a>
                 <a href="">supporter</a>
             </div>
@@ -88,6 +88,7 @@
 					</div>
 					<input type='hidden' name='fn' value='klublist' class='cinput'>
 					<input type='hidden' name='slug' value='<?php echo $slug;?>' class='cinput'>
+					<input type='hidden' name='submenu' value='klub' class='cinput'>
 				<div class="klub-content">
 					<div class="img-klub-content">
 						<img src="https://www.eyesoccer.id/systems/club_logo/2034LOGO UNTUK APLIKASI.jpg" alt="" srcset="">
