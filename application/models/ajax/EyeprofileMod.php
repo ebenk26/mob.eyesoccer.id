@@ -45,4 +45,25 @@ class EyeprofileMod extends CI_Model {
 		$data =array('xClass'=>'reqcompetition','xHtml'=> $html);
 		$this->tools->__flashMessage($data);
     }
+	
+	function __matchlist(){
+		$competition = $this->input->post('slug');
+		$date = date('Y-m-d');
+		$newdate = strtotime ( '-5 month' , strtotime ( $date ) ) ;
+		$startdate = date ( 'Y-m-d' , $newdate );
+		$event = 'non liga';
+		if($competition == 'Liga Indonesia 1'){
+			$event = 'Go-Jek Traveloka Liga 1 - 2017';
+		}else if($competition == 'Liga Indonesia 2'){
+			$event = 'Liga 2 Go-Jek Traveloka - Play Off';
+		}else if($competition == 'Liga Indonesia 3'){
+			$event = 'Liga Indonesia 3 Wilayah Jawa Barat';
+		}
+        $query = array('page'  => 1, 'limit' => 2, 'sortby' => 'newest', 'event' => $event, 'startdate' => '', 'enddate' => '');
+		$data['matchlist'] = $this->excurl->remoteCall($this->__xurl().'event-match', $this->__xkey(), $query);
+		$html = $this->load->view($this->__theme().'eyeprofile/ajax/matchlist', $data, true);
+	
+		$data =array('xClass'=>'reqmatchlist','xHtml'=> $html);
+		$this->tools->__flashMessage($data);
+    }
 }

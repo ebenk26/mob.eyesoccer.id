@@ -38,7 +38,7 @@ class Eyeprofile extends CI_Controller {
 	}
     }
 	
-	function klub($slug='Liga%20Indonesia%201')
+	function klub($slug='Liga Indonesia 1')
     {
 	    $data['kanal'] = 'eyeprofile';
 	    $data['content'] = 'eyeprofile/home';
