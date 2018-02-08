@@ -1,13 +1,3 @@
-	<style>
-	.coba-btn{
-		padding: 5px;
-	    background-color: transparent;
-	    border: 1px solid #8ec429;
-	    color: #91c500;
-	    font-weight: 500;
-	    margin: 5px;
-	}
-	</style>
 	<!-- CONTENT BODY -->
     <div class="crumb">
             <ul>

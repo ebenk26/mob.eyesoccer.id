@@ -47,6 +47,9 @@ hr{
 .m-0{
     margin: 0 auto;
 }
+.block{
+    display: block;
+}
 video{
     background-color: #d8d8d8;
 }
@@ -208,6 +211,8 @@ nav>img{
     bottom: unset;
     text-shadow: unset;
     max-width: 53%;
+    height: 33px;
+    margin-top: 0px;
 }
 .etube-content span{
     float: left;
@@ -800,7 +805,7 @@ nav>.f-r:hover{
     padding: 0px 5px;
     float: left;
     overflow: hidden;
-    height: 49px;
+    height: 51px;
     margin-top: 0px;
 }
 .ep-detail>table{
@@ -916,8 +921,11 @@ nav>.f-r:hover{
 .v-etube-detail{
     width: 130px;
     height: 78px;
-    overflow-y: hidden;
+    overflow: hidden;
     float: left;
+}
+.v-etube-detail img{
+    height: 100%;
 }
 .v-etube-detail>h1{
     margin-top: 0px;
@@ -2808,4 +2816,46 @@ ul, li {
 }
 .loadmatchlist .jadwal-content tr td:nth-of-type(2){
     float: right;
+}
+.box-img{
+    padding-top: 49px;
+}
+.emarket-product-img{
+    max-width: 260px; 
+    /*padding-top: 49px; */
+    margin-left: 51px;
+}
+.box-img h1{
+    font-size: .9em;
+    font-weight: 500;
+    height: 38px;
+    overflow: hidden;
+    width: 300px;
+    text-align: center;
+}
+.pagination-green-btn{
+    padding: 5px;
+    width: 140px;
+    background-color: transparent;
+    border: 1px solid #8ec429;
+    color: #91c500;
+    font-weight: 500;
+    margin: 5px;
+}
+.ribbon{
+    position: absolute;
+    padding-top: 50px;
+    padding-left: 56px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+}
+.theribbon{
+    background-color: #5bc0de;
+    text-shadow: 0px 1px 2px #bbb;
+    position: relative;
+    width: 80px;
+    padding: 6px 20px 6px 20px;
+    margin: 30px 10px 10px -71px;
+    color: #fff;
+    font-family: "Roboto", Helvetica, Arial, 
 }
