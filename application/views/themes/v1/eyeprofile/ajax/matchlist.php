@@ -1,6 +1,7 @@
 <?php if($matchlist){
 	$matchlist = json_decode($matchlist);
-	foreach($matchlist->data as $dt){
+	if(!empty($matchlist->data)){
+		foreach($matchlist->data as $dt){
 ?>
 	<div class="jadwal-content">
 		<table>
@@ -19,5 +20,13 @@
 		</table>
 	</div>
 <?php 
+		}
+	}else{
+?>
+	<div class="jadwal-content">
+		Belum ada hasil pertandingan.
+	</div>
+<?php
 	}
-}?>
+}
+?>

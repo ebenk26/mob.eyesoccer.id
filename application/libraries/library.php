@@ -379,7 +379,7 @@ class Library {
     {
 	$http = str_replace(['http://', 'https://'], '', $this->ci->config->item('base_url'));
 	$dom = ($_SERVER['SERVER_NAME'] == 'localhost') ? substr($http, 0, strlen($http) - 1) : 'm.eyesoccer.id';
-	$url = ($_SERVER['SERVER_NAME'] == 'localhost') ? str_replace('https', $_SERVER['REQUEST_SCHEME'], $url) : $url;
+	$url = str_replace(['http', 'https'], $_SERVER['REQUEST_SCHEME'], $url);
 	
 	return str_replace('www.eyesoccer.id', $dom, $url);
     }
