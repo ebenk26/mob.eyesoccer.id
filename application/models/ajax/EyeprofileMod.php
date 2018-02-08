@@ -25,6 +25,7 @@ class EyeprofileMod extends CI_Model {
 
     function __klublist(){
 		$competition = urldecode($this->input->post('slug'));
+
 		if($competition == 'Non Liga'){
 			$competition = 'SSB / Akademi Sepakbola';
 		}
@@ -38,20 +39,24 @@ class EyeprofileMod extends CI_Model {
 	
 	function __clubcount(){
 		$competition = urldecode($this->input->post('slug'));
+		$data['submenu'] = urldecode($this->input->post('submenu'));
+
 		if($competition == 'Non Liga'){
 			$competition = 'SSB / Akademi Sepakbola';
 		}
-        $query = array('page'  => 1, 'limit' => 10000, 'league' => '', 'competition' => $competition);
+        $query = array('page'  => 1, 'limit' => 9, 'league' => '', 'competition' => $competition, 'count' => true);
 		$data['klublist'] = $this->excurl->remoteCall($this->__xurl().'profile-club', $this->__xkey(), $query);
 		$clubcount = $this->load->view($this->__theme().'eyeprofile/ajax/clubcount', $data, true);
+		$html = $this->load->view($this->__theme().'eyeprofile/ajax/clubcount', $data, true);
 	
-		$data =array('xClass'=>'reqklublist','xHtml'=> $html, 
-					  'xSplit' => true, 'xData' => ['reqclubcount' => $clubcount]);
+		$data =array('xClass'=>'reqklublist','xHtml'=> $html);
 		$this->tools->__flashMessage($data);
     }
 	
 	function __competition(){
 		$competition = $this->input->post('slug');
+		$data['submenu'] = $this->input->post('submenu');
+
         $query = array('page'  => 1, 'limit' => 8);
 		$data['competitionlist'] = $this->excurl->remoteCall($this->__xurl().'competition', $this->__xkey(), $query);
 		$html = $this->load->view($this->__theme().'eyeprofile/ajax/competitionlist', $data, true);
