@@ -18,11 +18,20 @@ class EyemarketMod extends MarketQueryMod {
  
     function __market(){
  
-      $data['prodlist'] = $this->get_all_product();
-      $html = $this->load->view($this->__theme().'eyemarket/ajax/prodlist',$data,true);
-      $data = array('xClass'=> 'reqmarket','xHtml' => $html);
-      $this->tools->__flashMessage($data);
+        $data['prodlist'] = $this->get_all_product('5');
+        $html = $this->load->view($this->__theme().'eyemarket/ajax/prodlist',$data,true);
+        $data = array('xClass'=> 'reqmarket','xHtml' => $html);
+        $this->tools->__flashMessage($data);
       
+
+    }
+
+    function __market_home(){
+ 
+        $data['prodlist'] = $this->get_all_product('40');
+        $html = $this->load->view($this->__theme().'eyemarket/ajax/market_home',$data,true);
+        $data = array('xClass'=> 'reqmarket','xHtml' => $html);
+        $this->tools->__flashMessage($data);
 
     }
 
