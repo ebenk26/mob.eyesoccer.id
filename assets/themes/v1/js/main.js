@@ -487,8 +487,8 @@ function responseData(msg)
         })
     }
     
-    if (msg.xPaging != undefined) {
-        urlUpdate(urlSplit(msg.xPaging));
+    if (msg.xUrlhash != undefined) {
+        urlUpdate(urlSplit(msg.xUrlhash));
     }
 }
 
