@@ -42,7 +42,7 @@ if ($newsdetail){
 			<div class="col-3 col-emoji">
 				<a href="">
 					<div class="img-box">
-						<img src="<?php echo SUBCDN."assets/$folder/" ?>img/emoji/bingung.png" alt="">
+						<img style="margin-top:  -6px;" src="<?php echo SUBCDN."assets/$folder/" ?>img/emoji/bingung.png" alt="">
 					</div>
 					<span><?php echo $dt->data->news_inspired;?></span>
 					<span>terinspirasi</span>
@@ -69,7 +69,7 @@ if ($newsdetail){
 			<div class="col-3 col-emoji">
 				<a href="">
 					<div class="img-box">
-						<img src="<?php echo SUBCDN."assets/$folder/" ?>img/emoji/suka.png" alt="">
+						<img style="margin-top:  -6px;" src="<?php echo SUBCDN."assets/$folder/" ?>img/emoji/suka.png" alt="">
 					</div>
 					<span><?php echo $dt->data->news_angry;?></span>
 					<span>marah</span>

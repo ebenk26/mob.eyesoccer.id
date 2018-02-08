@@ -35,22 +35,18 @@
                     <tr>
                         <td class="tx-r"><?= $value->team_a; ?> 
                             <!-- <a href="<?= $value->url_team_a; ?>"> -->
-                                <span class="i-l">
-                                    <img src="<?= $value->url_logo_a; ?>/small" alt="<?= $value->team_a; ?>">
-                                </span> 
                             <!-- </a> -->
                         </td>
+                        <td style="width: 25px;"><img style="width: 100%" src="<?= $value->url_logo_a; ?>/small" alt="<?= $value->team_a; ?>"></td>
                         <td class="tx-c"> 
                             <?= $value->event; ?>
                             <br>
                             <?= $value->match_schedule; ?> 
                             <span class="t-live"><?= $value->match_live; ?></span> 
                         </td>
+                        <td style="width: 25px;"><img style="width: 100%" src="<?= $value->url_logo_b; ?>/small" alt="<?= $value->team_b; ?>"></td>
                         <td class="tx-l"> 
                             <!-- <a href="<?= $value->url_team_a; ?>"> -->
-                                <span class="i-r">
-                                    <img src="<?= $value->url_logo_b; ?>/small" alt="<?= $value->team_b; ?>">
-                                </span> 
                                 <?= $value->team_b; ?> 
                             <!-- </a> -->
                         </td>
@@ -75,22 +71,18 @@
                     <tr>
                         <td class="tx-r"><?= $value->team_a; ?> 
                             <!-- <a href="<?= $value->url_team_a; ?>"> -->
-                                <span class="i-l">
-                                    <img src="<?= $value->url_logo_a; ?>/small" alt="<?= $value->team_a; ?>">
-                                </span> 
                             <!-- </a> -->
                         </td>
+                        <td style="width: 25px;"><img style="width: 100%" src="<?= $value->url_logo_a; ?>/small" alt="<?= $value->team_a; ?>"></td>
                         <td class="tx-c"> 
                             <?= $value->event; ?>
                             <br>
                             <?= $value->match_schedule; ?> 
                             <span class="t-live"><?= $value->match_live; ?></span> 
                         </td>
+                        <td style="width: 25px;"><img style="width: 100%" src="<?= $value->url_logo_b; ?>/small" alt="<?= $value->team_b; ?>"></td>
                         <td class="tx-l"> 
                             <!-- <a href="<?= $value->url_team_a; ?>"> -->
-                                <span class="i-r">
-                                    <img src="<?= $value->url_logo_b; ?>/small" alt="<?= $value->team_b; ?>">
-                                </span> 
                                 <?= $value->team_b; ?> 
                             <!-- </a> -->
                         </td>
@@ -115,22 +107,18 @@
                     <tr>
                         <td class="tx-r"><?= $value->team_a; ?> 
                             <!-- <a href="<?= $value->url_team_a; ?>"> -->
-                                <span class="i-l">
-                                    <img src="<?= $value->url_logo_a; ?>/small" alt="<?= $value->team_a; ?>">
-                                </span> 
                             <!-- </a> -->
                         </td>
+                        <td style="width: 25px;"><img style="width: 100%" src="<?= $value->url_logo_a; ?>/small" alt="<?= $value->team_a; ?>"></td>
                         <td class="tx-c"> 
                             <?= $value->event; ?>
                             <br>
                             <?= $value->match_schedule; ?> 
                             <span class="t-live"><?= $value->match_live; ?></span> 
                         </td>
+                        <td style="width: 25px;"><img style="width: 100%" src="<?= $value->url_logo_b; ?>/small" alt="<?= $value->team_b; ?>"></td>
                         <td class="tx-l"> 
                             <!-- <a href="<?= $value->url_team_a; ?>"> -->
-                                <span class="i-r">
-                                    <img src="<?= $value->url_logo_b; ?>/small" alt="<?= $value->team_b; ?>">
-                                </span> 
                                 <?= $value->team_b; ?> 
                             <!-- </a> -->
                         </td>

@@ -55,7 +55,7 @@
 		<div class="col-3 col-emoji">
 			<a href="">
 				<div class="img-box">
-					<img src="<?php echo SUBCDN."assets/$folder/" ?>img/emoji/bingung.png" alt="">
+					<img style="margin-top:  -6px;" src="<?php echo SUBCDN."assets/$folder/" ?>img/emoji/bingung.png" alt="">
 				</div>
 				<span>10%</span>
 				<span>bingung</span>
@@ -82,7 +82,7 @@
 		<div class="col-3 col-emoji">
 			<a href="">
 				<div class="img-box">
-					<img src="<?php echo SUBCDN."assets/$folder/" ?>img/emoji/suka.png" alt="">
+					<img style="margin-top:  -6px;" src="<?php echo SUBCDN."assets/$folder/" ?>img/emoji/suka.png" alt="">
 				</div>
 				<span>10%</span>
 				<span>suka</span>
@@ -249,10 +249,6 @@
 	</div>
 </div>
 </div>
-<!-- FOOTER -->
-<footer>
-	<p>Copyright 2017 eyesoccer.com. All Rights Reserved.</p>
-</footer>
 <!-- KOMENTAR -->
 <div class="container-comment">
 	<span class="up-next-etube" style="padding-left: 10px;">Komentar</span> <span id="close" class="up-next-etube" style="float:right; padding-right: 10px;"><i class="material-icons">close</i></span>
