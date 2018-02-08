@@ -1,13 +1,11 @@
 	<style>
 	.coba-btn{
 		padding: 5px;
-	    width: 140px;
 	    background-color: transparent;
 	    border: 1px solid #8ec429;
 	    color: #91c500;
 	    font-weight: 500;
 	    margin: 5px;
-	    margin-left: 34%;
 	}
 	</style>
 	<!-- CONTENT BODY -->
@@ -78,6 +76,7 @@
 					</script>
 				</div>
 				<input type='hidden' name='fn' value='competition' class='cinput'>
+				<input type='hidden' name='submenu' value='klub' class='cinput'>
 				<input type='hidden' name='slug' value='<?php echo $slug;?>' class='cinput'>
 				<select id="" name="" selected="true" class="slc-musim">
 					<option value>--Pilih Liga--</option>

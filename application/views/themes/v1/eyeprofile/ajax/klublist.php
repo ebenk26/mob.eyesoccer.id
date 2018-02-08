@@ -27,7 +27,7 @@
 						<input type='hidden' name='fn' value='klublist' class='cinput'>
 						<input type='hidden' name='slug' value='<?php echo $slug; ?>' class='cinput'>
 						<input type='hidden' name='paging' value='back' class='cinput'>
-						<span>Sebelumnya</span>
+						<span><button class="coba-btn" style="float:left;">< Sebelumnya</button></span>
 					</a>
 				<?php
 			}
@@ -38,7 +38,7 @@
 						<input type='hidden' name='fn' value='klublist' class='cinput'>
 						<input type='hidden' name='slug' value='<?php echo $slug; ?>' class='cinput'>
 						<input type='hidden' name='paging' value='next' class='cinput'>
-						<span>Selanjutnya</span>
+						<span><button class="coba-btn" style="float:right;">Selanjutnya ></button></span>
 					</a>
 				<?php
 			}

@@ -36,7 +36,7 @@ class EyeprofileMod extends CI_Model {
 				$page += 1;
 			}
 		} else {
-			if($this->session->userdata('pageklub') < 2){
+			if($this->session->userdata('pageklub') >= 2){
 				$page -= 1;
 			}
 		}
@@ -52,8 +52,9 @@ class EyeprofileMod extends CI_Model {
 							 array_merge($query, ['count' => true]));
 		
 		$html = $this->load->view($this->__theme().'eyeprofile/ajax/klublist', $data, true);
-	
-		$data =array('xClass'=>'reqklublist','xHtml'=> $html, 'xUrlhash' => base_url().'eyeprofile/klub/'.$competition.'/'.$page);
+		
+		$data =array('xClass'=>'reqklublist','xHtml'=> $html, 
+					 'xUrlhash' => base_url().'eyeprofile/klub/'.$competition.'/'.$page);
 		$this->tools->__flashMessage($data);
     }
 	

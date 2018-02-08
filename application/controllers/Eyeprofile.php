@@ -44,7 +44,7 @@ class Eyeprofile extends CI_Controller {
 	    $data['kanal'] = 'eyeprofile';
 	    $data['content'] = 'eyeprofile/home';
 	    
-		$this->session->set_userdata(array('pageklub' => $page - 1));
+		$this->session->set_userdata(array('pageklub' => $page));
 		
 	    $data['title'] = $this->config->item('meta_title');
 	    $data['meta_desc'] = $this->config->item('meta_desc');
