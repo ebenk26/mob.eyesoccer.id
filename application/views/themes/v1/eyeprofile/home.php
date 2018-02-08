@@ -1,13 +1,50 @@
 <!-- CONTENT BODY -->
     <div class="crumb">
             <ul>
-                <li>Home</li>
-                <li>Eyeprofile</li>
-                <li>Klub</li>
+                <li><a href="<?php echo base_url();?>" style="display:unset;">Home</a></li>
+                <li><a href="<?php echo base_url();?>eyeprofile/klub" style="display:unset;">Eyeprofile</a></li>
+                <li><a href="<?php echo base_url();?>eyeprofile/klub" style="display:unset;">Klub</a></li>
                 <li><?php echo urldecode($slug);?></li>
             </ul>
         </div>
     <div class="eprofile">
+		<div class="head">
+            <div class="img-radius">
+                <img src="https://www.eyesoccer.id/systems/club_logo/2034LOGO UNTUK APLIKASI.jpg"
+                    alt="">
+            </div>
+            <h2 class="h2-text-bottom"><?php echo urldecode($slug);?></h2>
+            <div class="container tab-eprofile">
+                <a class="active" href="#content1">Info</a>
+            </div>
+            <div class="table-scroll">
+				<div id="reqclubcount" class='loadclubcount' action="eyeprofile" loading="off" clean="clsclubcount">
+					<div id='clsclubcount'>
+						<script>
+							$(document).ready(function(){
+								$(window).on('load',function(){
+									ajaxOnLoad('loadclubcount');
+								});
+							});
+						</script>
+					</div>
+					<table class="content-tab-eprofile">
+						<tr>
+							<td>Jumlah Klub</td>
+							<td>: 0</td>
+						</tr>
+						<tr>
+							<td>Jumlah Pemain</td>
+							<td>: 0</td>
+						</tr>
+						<tr>
+							<td>Pemain Asing</td>
+							<td>: 0</td>
+						</tr>
+					</table>
+				</div>
+            </div>
+        </div>
         <div class="container over-x">
             <div class="container sub-menu w-max">
                 <a href="<?php echo base_url();?>eyeprofile/klub" class="active">klub</a>
