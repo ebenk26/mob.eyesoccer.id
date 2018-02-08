@@ -18,7 +18,7 @@
                 <a class="active" href="#content1">Info</a>
             </div>
             <div class="table-scroll">
-				<div id="reqclubcount" class='loadclubcount' action="eyeprofile" loading="off" clean="clsclubcount">
+				<!--<div id="reqclubcount" class='loadclubcount' action="eyeprofile" loading="off" clean="clsclubcount">
 					<div id='clsclubcount'>
 						<script>
 							$(document).ready(function(){
@@ -27,7 +27,7 @@
 								});
 							});
 						</script>
-					</div>
+					</div>-->
 					<table class="content-tab-eprofile">
 						<tr>
 							<td>Jumlah Klub</td>
@@ -42,7 +42,7 @@
 							<td>: 0</td>
 						</tr>
 					</table>
-				</div>
+				<!--</div>-->
             </div>
         </div>
         <div class="container over-x">

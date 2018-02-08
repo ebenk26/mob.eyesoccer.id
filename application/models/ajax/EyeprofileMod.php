@@ -28,11 +28,31 @@ class EyeprofileMod extends CI_Model {
 		if($competition == 'Non Liga'){
 			$competition = 'SSB / Akademi Sepakbola';
 		}
-        $query = array('page'  => 1, 'limit' => 9, 'league' => '', 'competition' => $competition);
+		
+		$page = ($this->session->userdata('pageklub')) ? $this->session->userdata('pageklub') : 1;
+		if($this->input->post('paging') == 'next'){
+			if($this->session->userdata('pagetotalklub') > $this->session->userdata('pageklub')){
+				$page += 1;
+			}
+		} else {
+			if($this->session->userdata('pageklub') < 2){
+				$page -= 1;
+			}
+		}
+		
+		$this->session->set_userdata(array('pageklub' => $page));
+		
+        $query = array('page'  => $this->session->userdata('pageklub'), 'limit' => 24, 
+					   'league' => '', 'competition' => $competition);
+		
+		$data['slug'] = $competition;
 		$data['klublist'] = $this->excurl->remoteCall($this->__xurl().'profile-club', $this->__xkey(), $query);
+		$data['klubcount'] = $this->excurl->remoteCall($this->__xurl().'profile-club', $this->__xkey(), 
+							 array_merge($query, ['count' => true]));
+		
 		$html = $this->load->view($this->__theme().'eyeprofile/ajax/klublist', $data, true);
 	
-		$data =array('xClass'=>'reqklublist','xHtml'=> $html);
+		$data =array('xClass'=>'reqklublist','xHtml'=> $html, 'page' => $this->session->userdata('pageklub'), 'pagetotal' => $this->session->userdata('pagetotalklub'));
 		$this->tools->__flashMessage($data);
     }
 	
@@ -79,5 +99,7 @@ class EyeprofileMod extends CI_Model {
 	
 		$data =array('xClass'=>'reqmatchlist','xHtml'=> $html);
 		$this->tools->__flashMessage($data);
+		
+		$_SESSION['klublistpage'] = 1;
     }
 }
