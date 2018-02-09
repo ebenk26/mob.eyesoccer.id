@@ -85,4 +85,30 @@ class EyeprofileMod extends CI_Model {
 		$data =array('xClass'=>'reqmatchlist','xHtml'=> $html);
 		$this->tools->__flashMessage($data);
     }
+
+    function __tbl_official()
+    {
+		$competition = urldecode($this->input->post('slug'));
+
+		if($competition == 'Non Liga'){
+			$competition = 'SSB / Akademi Sepakbola';
+		}
+
+		// jumlah klub
+	    $count_club = array('page'  => 1, 'limit' => 8, 'competition' => $competition, 'count' => true);
+		$data['count_club'] = $this->excurl->remoteCall($this->__xurl().'profile-club', $this->__xkey(), $count_club);
+
+		// jumlah pemain
+	    $count_player = array('page'  => 1, 'limit' => 8, 'competition' => $competition, 'count' => true);
+		$data['count_player'] = $this->excurl->remoteCall($this->__xurl().'profile', $this->__xkey(), $count_player);
+
+		// jumlah pemain asing
+	    $count_player_foreign = array('page'  => 1, 'limit' => 8, 'competition' => $competition, 'playercount' => true);
+		$data['count_player_foreign'] = $this->excurl->remoteCall($this->__xurl().'profile', $this->__xkey(), $count_player_foreign);
+		
+		$html = $this->load->view($this->__theme().'eyeprofile/ajax/desc_league', $data, true);
+
+		$data =array('xClass'=>'reqtbloff','xHtml'=> $html);
+		$this->tools->__flashMessage($data);
+    }
 }
