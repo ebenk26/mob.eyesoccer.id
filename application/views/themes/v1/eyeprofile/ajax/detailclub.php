@@ -39,7 +39,7 @@
 			</div>
 		</div>
 		<div class="container">
-			<div class="container sub-menu boxtab">
+			<div id="boxtab" class="container sub-menu">
 				<a id="tab-pemain" href="javascript:void(0)" class="active" onclick="tabmenu(this.id, 'a', 'div', 'active')" active="true">Pemain</a>
 				<a id="tab-ofisial" href="javascript:void(0)" onclick="tabmenu(this.id, 'a', 'div', 'active')">Ofisial</a>
 				<a id="tab-suporter" href="javascript:void(0)" onclick="tabmenu(this.id, 'a', 'div', 'active')">suporter</a>
@@ -70,56 +70,41 @@
 				</table>
 				<a href="<?php echo base_url();?>eyeprofile/pemain_detail/<?php echo $players->slug;?>">lihat detail pemain</a>
 			</div>
-		</div>
 <?php
-			}
+			}?>
+		</div>
+		<div id="tab-ofisial" class="container" style="display:none;">
+			<?php
+				foreach($dt->official as $officials){
 			?>
-			<div id="tab-ofisial" class="container">
 			<div class="user-data">
 				<div class="subhead">
 					<div class="img-radius">
-						<img src="<?php echo $players->url_pic;?>" alt="<?php echo $players->name;?>">
+						<img src="<?php echo $officials->url_pic;?>" alt="<?php echo $officials->name;?>">
 					</div>
-					<b># <?php echo $players->number;?></b>
-					<h3><?php echo $players->name;?></h3>
-					<span><?php echo $players->club;?></span>
+					<b><?php echo $officials->position;?></b>
+					<h3><?php echo $officials->club;?></h3>
 				</div>
 				<table>
 					<tr>
-						<td>bbbbb</td>
-						<td><?php echo $players->position_a;?></td>
+						<td>Tanggal Lahir</td>
+						<td><?php echo $officials->birth_date;?></td>
 					</tr>
 					<tr>
-						<td>Posisi 2</td>
-						<td><?php echo $players->position_b;?></td>
+						<td>Lisensi</td>
+						<td><?php echo $officials->license;?></td>
 					</tr>
 				</table>
-				<a href="<?php echo base_url();?>eyeprofile/pemain_detail/<?php echo $players->slug;?>">lihat detail pemain</a>
+				<a href="<?php echo base_url();?>eyeprofile/official_detail/<?php echo $officials->slug;?>">lihat detail ofisial</a>
 			</div>
+			<?php
+				}
+			?>
 		</div>
 		
-		<div id="tab-suporter" class="container">
+		<div id="tab-suporter" class="container" style="display:none;">
 			<div class="user-data">
-				<div class="subhead">
-					<div class="img-radius">
-						<img src="<?php echo $players->url_pic;?>" alt="<?php echo $players->name;?>">
-					</div>
-					<b># <?php echo $players->number;?></b>
-					<h3><?php echo $players->name;?></h3>
-					<span><?php echo $players->club;?></span>
-				</div>
-				<table>
-					<tr>
-						<td>ccccc</td>
-						<td><?php echo $players->position_a;?></td>
-					</tr>
-					<tr>
-						<td>Posisi 2</td>
-						<td><?php echo $players->position_b;?></td>
-					</tr>
-				</table>
-				<a href="<?php echo base_url();?>eyeprofile/pemain_detail/<?php echo $players->slug;?>">lihat detail pemain</a>
-			</div>
+				coming soon
 		</div>
 			<?php
 	}

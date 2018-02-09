@@ -2,7 +2,7 @@
 	if($klublist)
 	{
 		$klublist = json_decode($klublist);
-		$klubcount = json_decode($klubcount);
+		$klubcount = json_decode($playercount);
 
 		if ($submenu == 'klub')
 		{
