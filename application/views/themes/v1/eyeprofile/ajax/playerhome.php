@@ -5,20 +5,20 @@ $profile = json_decode($profile);
 
 foreach ($profile->data as $k => $v) {
     ?>
-    <a href='<?php echo $v->share_url; ?>'>
-        <div class='ep-box-content'>
-            <div class='img'>
-                <img src='<?php echo(($this->library->lastext($v->url_pic, ' .')) ? $v->url_pic : $default); ?>' alt='<?php echo $v->name; ?>'>
+        <a href='<?php echo $v->share_url; ?>'>
+            <div class='ep-box-content'>
+                <div class='img'>
+                    <img src='<?php echo(($this->library->lastext($v->url_pic, ' .')) ? $v->url_pic : $default); ?>' alt='<?php echo $v->name; ?>'>
+                </div>
+                <div class='ep-detail'>
+                    <h1><?php echo $v->name; ?></h1>
+                    <p>
+                        Posisi: <?php echo $v->position_a; ?><br>
+                        Klub: <?php echo $v->club; ?><br>
+                    </p>
+                </div>
             </div>
-            <div class='ep-detail'>
-                <h1><?php echo $v->name; ?></h1>
-                <p>
-                    Posisi: <?php echo $v->position_a; ?><br>
-                    Klub: <?php echo $v->club; ?><br>
-                </p>
-            </div>
-        </div>
-    </a>"
+        </a>
     <?php
 }
 
