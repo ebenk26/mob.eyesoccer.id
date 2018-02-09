@@ -11,9 +11,11 @@ foreach ($profile->data as $k => $v) {
                 <img src='<?php echo(($this->library->lastext($v->url_pic, ' .')) ? $v->url_pic : $default); ?>' alt='<?php echo $v->name; ?>'>
             </div>
             <div class='ep-detail'>
-                <h1>$v->name</h1>
-                <p>Posisi: <?php echo $v->position_a; ?><br>
+                <h1><?php echo $v->name; ?></h1>
+                <p>
+                    Posisi: <?php echo $v->position_a; ?><br>
                     Klub: <?php echo $v->club; ?><br>
+                </p>
             </div>
         </div>
     </a>"
