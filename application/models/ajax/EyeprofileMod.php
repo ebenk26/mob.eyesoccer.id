@@ -36,7 +36,7 @@ class EyeprofileMod extends CI_Model {
 				$page += 1;
 			}
 		} else {
-			if($this->session->userdata('pageklub') >= 2){
+			if($this->input->post('paging') == 'back' && $this->session->userdata('pageklub') >= 2){
 				$page -= 1;
 			}
 		}
@@ -65,12 +65,15 @@ class EyeprofileMod extends CI_Model {
 		if($competition == 'Non Liga'){
 			$competition = 'SSB / Akademi Sepakbola';
 		}
-        $query = array('page'  => 1, 'limit' => 9, 'league' => '', 'competition' => $competition, 'count' => true);
+        $query = array('page'  => '', 'limit' => '', 'league' => '', 'competition' => $competition, 'count' => true);
 		$data['klublist'] = $this->excurl->remoteCall($this->__xurl().'profile-club', $this->__xkey(), $query);
-		$clubcount = $this->load->view($this->__theme().'eyeprofile/ajax/clubcount', $data, true);
+		
+		$queryplayer = array('page'  => 1, 'limit' => 10, 'league' => '', 'club' => '', 'competition' => $competition, 'playercount' => true);
+		$data['klubcount'] = $this->excurl->remoteCall($this->__xurl().'profile', $this->__xkey(), $queryplayer);
+		
 		$html = $this->load->view($this->__theme().'eyeprofile/ajax/clubcount', $data, true);
 	
-		$data =array('xClass'=>'reqklublist','xHtml'=> $html);
+		$data =array('xClass'=>'reqclubcount','xHtml'=> $html);
 		$this->tools->__flashMessage($data);
     }
 	
@@ -107,5 +110,15 @@ class EyeprofileMod extends CI_Model {
 		$this->tools->__flashMessage($data);
 		
 		$_SESSION['klublistpage'] = 1;
+    }
+	
+	function __detailclub(){
+		$slug = $this->input->post('slug');
+        $query = array();
+		$data['detailclub'] = $this->excurl->remoteCall($this->__xurl().'profile-club/'.$slug, $this->__xkey(), $query);
+		$html = $this->load->view($this->__theme().'eyeprofile/ajax/detailclub', $data, true);
+	
+		$data =array('xClass'=>'reqdetailclub','xHtml'=> $html);
+		$this->tools->__flashMessage($data);
     }
 }

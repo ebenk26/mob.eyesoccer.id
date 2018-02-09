@@ -73,4 +73,17 @@ class Eyeprofile extends CI_Controller {
     	
     	$this->load->view($this->__theme().'template', $data);
     }
+	
+	function klub_detail($slug='')
+    {
+		$data['slug'] = $slug;
+	    $data['kanal'] = 'eyeprofile';
+	    $data['content'] = 'eyeprofile/klub_detail';
+		
+	    $data['title'] = $this->config->item('meta_title');
+	    $data['meta_desc'] = $this->config->item('meta_desc');
+	    $data['meta_keyword'] = $this->config->item('meta_keyword');
+	    
+	    $this->load->view($this->__theme().'template', $data);
+    }
 }
