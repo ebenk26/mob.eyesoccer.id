@@ -35,47 +35,60 @@
             </select>
         </div>
     </div>
-    <div class="container eprofile-liga-box">
-        <div class="img-medium">
-            <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+    <div id="reqtbloff" class='loadtbloff' action="eyeprofile" loading="off" clean="clstbloff">
+        <div id='clstbloff'>
+            <script>
+                $(document).ready(function(){
+                    $(window).on('load',function(){
+                        ajaxOnLoad('loadtbloff');
+                    });
+                });
+            </script>
         </div>
-        <table class="table-justify">
-            <tr>
-                <td>level liga</td>
-                <td>:</td>
-                <td>tingkat pertama</td>
-            </tr>
-            <tr>
-                <td>jumlah klub</td>
-                <td>:</td>
-                <td>18 klub</td>
-            </tr>
-            <tr>
-                <td>jumlah pemain</td>
-                <td>:</td>
-                <td>531 pemain</td>
-            </tr>
-            <tr>
-                <td>pemain asing</td>
-                <td>:</td>
-                <td>70 pemain</td>
-            </tr>
-            <tr>
-                <td>rekor juara</td>
-                <td>:</td>
-                <td>persib (10 kali)</td>
-            </tr>
-            <tr>
-                <td>umur rata-rata</td>
-                <td>:</td>
-                <td>27 tahun</td>
-            </tr>
-            <tr>
-                <td>juara bertahan</td>
-                <td>:</td>
-                <td>persipura jayapura</td>
-            </tr>
-        </table>
+        <input type='hidden' name='fn' value='tbl_official' class='cinput'>
+        <input type='hidden' name='slug' value='<?php echo $slug;?>' class='cinput'>
+        <div class="container eprofile-liga-box">
+            <div class="img-medium">
+                <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+            </div>
+            <table class="table-justify" style="visibility: hidden;">
+                <tr>
+                    <td>level liga</td>
+                    <td>:</td>
+                    <td>tingkat pertama</td>
+                </tr>
+                <tr>
+                    <td>jumlah klub</td>
+                    <td>:</td>
+                    <td>18 klub</td>
+                </tr>
+                <tr>
+                    <td>jumlah pemain</td>
+                    <td>:</td>
+                    <td>531 pemain</td>
+                </tr>
+                <tr>
+                    <td>pemain asing</td>
+                    <td>:</td>
+                    <td>70 pemain</td>
+                </tr>
+                <tr>
+                    <td>rekor juara</td>
+                    <td>:</td>
+                    <td>persib (10 kali)</td>
+                </tr>
+                <tr>
+                    <td>umur rata-rata</td>
+                    <td>:</td>
+                    <td>27 tahun</td>
+                </tr>
+                <tr>
+                    <td>juara bertahan</td>
+                    <td>:</td>
+                    <td>persipura jayapura</td>
+                </tr>
+            </table>
+        </div>
     </div>
     <div class="eprofile-src">
         <input type="text" placeholder="Cari ...">
