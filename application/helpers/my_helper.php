@@ -93,12 +93,19 @@ if( ! function_exists('relative_time'))
 /* DEFINE LINK */
 define('CSSPATH',base_url().'assets/eyeme/css/');
 define('JSPATH',base_url().'assets/eyeme/js/');
-define('sIMGPATH',base_url().'assets/eyeme/img/');
+define('sIMGPATH',base_url().'assets/img/eyeme/');
 define('MEURL',base_url().'eyeme/');
 define('MEIMG',base_url().'upload/eyeme/');
+define('MEMENU',base_url().'assets/img/eyeme/menu/');
+define('MEHOME',base_url().'eyeme');
+define('MEEXPLORE',base_url().'eyeme/explore');
+define('MEUPLOAD',base_url().'eyeme/upload');
+define('MEPROFILE',base_url().'eyeme/profile/');
+define('MEIMGUSR',base_url().'eyeme/img/');
+define('MENOTIF',base_url().'eyeme/notif');
 define('IMGPATH','./upload/eyeme/');
 define('EYEMEPATH',base_url().'eyeme/');
-define('MEPROFILE',base_url().'eyeme/profile/');
+
 define('DPIC',sIMGPATH.'user-discover.png');
 define('NOW',date('Y-m-d G:i:s'));
 define('LOGIN',base_url().'home/login');
@@ -123,7 +130,8 @@ define('sIMGSTORE','http://eyesoccer.id/systems/eyenews_storage/');
 define('DEFAULTIMG',base_url().'assets/home/img/eyeme-photo%20thumbnail.png');
 define('NEWSDETAIL',base_url().'eyenews/detail/');
 define('MARKETIMG','http://beta.eyesoccer.id/img/eyemarket/produk/');
-define('MENUIMG',base_url().'assets/menu/');
+
+
 
 function p($arr){
     echo '<pre>';

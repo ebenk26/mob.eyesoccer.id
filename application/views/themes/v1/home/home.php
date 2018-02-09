@@ -128,17 +128,7 @@
                 <span>30 menit lalu</span>
                 <span>2000 view - 100 suka</span>
             </div>
-            <div class="etube-content">
-                <div class="v-etube">
-                    <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
-                    <div class="btn-play">
-                        <img src="<?php echo SUBCDN."assets/$folder"; ?>img/btn-play.png" alt="">
-                    </div>                    
-                </div>
-                <h1>Lorem Ipsum Dolor Sit amet</h1>
-                <span>30 menit lalu</span>
-                <span>2000 view - 100 suka</span>
-            </div>
+           
         </div>
     </div>
 </div>

@@ -47,8 +47,13 @@
         $data['folder'] = $folder;
 		$this->load->view($folder.'widget/navigator', $data);
         $this->load->view($folder.$content, $data);
+        //eyeme menu 
+        (@$me_menu == 1 ? $this->load->view($folder.'eyeme/me_menu',$data) : '');
+
         $this->load->view($folder.'widget/sidebar', $data);
-        $this->load->view($folder.'widget/footer', $data);
+
+        (@$me_menu == 0 ? $this->load->view($folder.'widget/footer',$data) : '');
+
     ?>
     
     <div class='baseurl' val='<?php echo base_url(); ?>'></div>

@@ -9,6 +9,19 @@ class Eyeme extends CI_Controller {
     {
 	parent::__construct();
 	$this->load->model('ajax/EyemeMod');
+
+	$this->session->username    = 'sofyanwaldy';
+	//temporary session 
+    }
+    protected function getdata(){
+    	$data = array(
+    			'kanal'  => 'eyeme',
+				'me_menu'=> ($this->session->username ? 1 : 0 ),
+				'title'  => $this->config->item('meta_title'),
+				'meta_desc'=> $this->config->item('meta_desc'),
+				'meta_keyword'=> $this->config->item('meta_keyword'));
+
+    	return $data; 
     }
 
     function index()
@@ -17,6 +30,7 @@ class Eyeme extends CI_Controller {
 	{
 	    $this->load->view($this->__theme().'function');
 	    $fn = $_POST['fn'];
+	    $param = $_POST['param'];
 	    
 	    $data = [];
 	    if(function_exists($fn))
@@ -24,18 +38,24 @@ class Eyeme extends CI_Controller {
 		$fn();
 	    } else {
 		$fn = "__".$fn;
-		$this->EyemeMod->$fn();
+		$this->EyemeMod->$fn($param);
 	    }
 	} else {
-	    $data['kanal'] = 'eyeme';
-	    $data['content'] = 'eyeme/home';
-	    
-	    $data['title'] = $this->config->item('meta_title');
-	    $data['meta_desc'] = $this->config->item('meta_desc');
-	    $data['meta_keyword'] = $this->config->item('meta_keyword');
-	    
+	    $data = $this->getdata();
+	    $data['content'] = ($this->session->username ? 'eyeme/me_home' : 'eyeme/me_explore');
+	  
 	    $this->load->view($this->__theme().'template', $data);
+
 	}
+    }
+    function explore(){
+    	$data   = $this->getdata();
+    	$data['content'] = 'eyeme/me_explore';
+    	$this->load->view($this->__theme().'template',$data);
+    }
+    function sess_destroy(){
+    	$this->session->sess_destroy();
+    	$this->index();
     }
 
 }
