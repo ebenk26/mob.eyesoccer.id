@@ -22,8 +22,16 @@
             {
 ?>
                 <tr>
-                    <td><a href="<?= base_url(); ?>official_detail/<?= $value->slug; ?>"><img src="<?= $value->url_pic; ?>/small" alt=""></a></td>
-                    <td><a href="<?= base_url(); ?>official_detail/<?= $value->slug; ?>"><?= $value->name; ?></a></td>
+                    <td> 
+                        <a href="<?= base_url(); ?>eyeprofile/official_detail/<?= $value->slug; ?>">
+                            <img src="<?= $value->url_pic; ?>/small" alt=""> 
+                        </a> 
+                    </td>
+                    <td> 
+                        <a href="<?= base_url(); ?>eyeprofile/official_detail/<?= $value->slug; ?>">
+                            <?= $value->name; ?> 
+                        </a> 
+                    </td>
                     <td><img src="<?= $value->url_logo; ?>/small" alt=""></td>
                     <td><?= $value->birth_date; ?></td>
                     <td><?= ($value->position) ? $value->position : '-'; ?></td>
