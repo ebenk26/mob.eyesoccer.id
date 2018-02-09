@@ -1,6 +1,6 @@
 <nav>
         <i id="menu" class="material-icons f-l">menu</i>
-        <img src="https://www.eyesoccer.id/img/logo2.png" alt="">
+        <img src="<?= base_url(); ?>assets/img/logo.png" alt="">
         <i id="src" class="material-icons f-r">search</i>
     </nav>
     <!-- EYEME -->
@@ -9,79 +9,61 @@
             <div class="container emepost">
                 <a href="eyeme-profile.html">
                 <div class="img-usr">
-                    <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/d/df/Persija_Jakarta.svg/1200px-Persija_Jakarta.svg.png" alt="">
                 </div>
-                <span>username</span>
+                <span>persija</span>
                 </a>
                 <i class="material-icons more display-box-notif">more_horiz</i>
             </div>
             <div class="eme-img-content">
-                <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+                <img src="http://cdn2.tstatic.net/tribunnews/foto/bank/images/persija-jakarta-sandi-darma-suthe-bambang-pamungkas-marko-simic_20180207_204434.jpg" alt="">
             </div>
             <div class="container-eme-like">
                 <ul>
-                    <li><i class="fa fa-heart heart-first" aria-hidden="true"></i><span class="openComment"><i class="fa fa-comment-o" aria-hidden="true"></i></span></li>
+                    <li><img src="<?php echo base_url()?>assets/img/menu/eyeme/love.svg" alt=""><span class="openComment"><img src="<?php echo base_url()?>assets/img/menu/eyeme/comment.svg" alt=""></span><span class="eme-time-post">30 menit lalu</span></li>
                     <li><span><a href="">username</a> dan <a href="">234</a> menyukai ini</span></li>
                 </ul>
             </div>
-            <ul class="comment-eme">
-                <!-- <li><a href="">username</a> lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet</li>
-                <li><a href="">username</a> lorem ipsum dolor sit amet lorem ipsum dolor sit amet</li>
-                <li><span class="openComment">Lihat komentar lainnya</span></li> -->
-                <li><span class="eme-time-post">30 menit lalu</span></li>
-            </ul>
         </div>
         <div class="container">
             <div class="container emepost">
                 <a href="eyeme-profile.html">
                 <div class="img-usr">
-                    <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/d/df/Persija_Jakarta.svg/1200px-Persija_Jakarta.svg.png" alt="">
                 </div>
-                <span>username</span>
+                <span>persija</span>
                 </a>
                 <i class="material-icons more display-box-notif">more_horiz</i>
             </div>
             <div class="eme-img-content">
-                <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+                <img src="https://persija.id/wp-content/uploads/2018/02/addison-alves.jpg" alt="">
             </div>
             <div class="container-eme-like">
                 <ul>
-                    <li><i class="fa fa-heart heart-first" aria-hidden="true"></i><span class="openComment"><i class="fa fa-comment-o" aria-hidden="true"></i></span></li>
+                    <li><img src="<?php echo base_url()?>assets/img/menu/eyeme/love-active.svg" alt=""><span class="openComment"><img src="<?php echo base_url()?>assets/img/menu/eyeme/comment.svg" alt=""></span><span class="eme-time-post">30 menit lalu</span></li>
                     <li><span><a href="">username</a> dan <a href="">234</a> menyukai ini</span></li>
                 </ul>
             </div>
-            <ul class="comment-eme">
-                <!-- <li><a href="">username</a> lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet</li>
-                <li><a href="">username</a> lorem ipsum dolor sit amet lorem ipsum dolor sit amet</li>
-                <li><span class="openComment">Lihat komentar lainnya</span></li> -->
-                <li><span class="eme-time-post">30 menit lalu</span></li>
-            </ul>
         </div>
         <div class="container">
             <div class="container emepost">
                 <a href="eyeme-profile.html">
                 <div class="img-usr">
-                    <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/d/df/Persija_Jakarta.svg/1200px-Persija_Jakarta.svg.png" alt="">
                 </div>
-                <span>username</span>
+                <span>persija</span>
                 </a>
                 <i class="material-icons more display-box-notif">more_horiz</i>
             </div>
             <div class="eme-img-content">
-                <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+                <img src="https://www.jawapos.com/thumbs/l/news/2018/01/23/marko-simic-harapan-besar-bagi-persija-jakarta_c_1516705059_183400.jpeg" alt="">
             </div>
             <div class="container-eme-like">
                 <ul>
-                    <li><i class="fa fa-heart heart-first" aria-hidden="true"></i><span class="openComment"><i class="fa fa-comment-o" aria-hidden="true"></i></span></li>
+                    <li><img src="<?php echo base_url()?>assets/img/menu/eyeme/love.svg" alt=""><span class="openComment"><img src="<?php echo base_url()?>assets/img/menu/eyeme/comment.svg" alt=""></span><span class="eme-time-post">30 menit lalu</span></li>
                     <li><span><a href="">username</a> dan <a href="">234</a> menyukai ini</span></li>
                 </ul>
             </div>
-            <ul class="comment-eme">
-                <!-- <li><a href="">username</a> lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet</li>
-                <li><a href="">username</a> lorem ipsum dolor sit amet lorem ipsum dolor sit amet</li>
-                <li><span class="openComment">Lihat komentar lainnya</span></li> -->
-                <li><span class="eme-time-post">30 menit lalu</span></li>
-            </ul>
         </div>
     </div>
     <!-- KOMENTAR -->
@@ -89,7 +71,7 @@
         <span class="up-next-etube" style="padding-left: 10px;">Komentar</span> <span id="close" class="up-next-etube" style="float:right; padding-right: 10px;"><i class="material-icons">close</i></span>
         <div class="box-komentar">
             <div class="img-radius">
-                <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="" width="100%">
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/d/df/Persija_Jakarta.svg/1200px-Persija_Jakarta.svg.png" alt="">
             </div>
             <div class="input-komentar">
                 <input type="text" placeholder="Tambahkan Komentar ...">
@@ -97,41 +79,21 @@
         </div>
         <div class="item-komentar">
             <div class="img-radius">
-                <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="" width="100%">
+                <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
             </div>
             <div class="text-komentar">
-                <p>Ini komentar komentar para nitijen</p>
-                <h3>ini nama yg komentar</h3>
+                <p>Lorem ipsum dolor sit amet</p>
+                <h3>persipura</h3>
                 <span>30 menit lalu</span>
             </div>
         </div>
         <div class="item-komentar">
             <div class="img-radius">
-                <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="" width="100%">
+                <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
             </div>
             <div class="text-komentar">
-                <p>Ini komentar komentar para nitijen Ini komentar komentar para nitijen Ini komentar komentar para nitijen Ini komentar komentar para nitijen</p>
-                <h3>ini nama yg komentar</h3>
-                <span>30 menit lalu</span>
-            </div>
-        </div>
-        <div class="item-komentar">
-            <div class="img-radius">
-                <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="" width="100%">
-            </div>
-            <div class="text-komentar">
-                <p>Ini komentar komentar para nitijen Ini komentar komentar para nitijen</p>
-                <h3>ini nama yg komentar</h3>
-                <span>30 menit lalu</span>
-            </div>
-        </div>
-        <div class="item-komentar">
-            <div class="img-radius">
-                <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="" width="100%">
-            </div>
-            <div class="text-komentar">
-                <p>Ini komentar komentar para nitijen</p>
-                <h3>ini nama yg komentar</h3>
+                <p>Lorem ipsum dolor sit amet</p>
+                <h3>pstni</h3>
                 <span>30 menit lalu</span>
             </div>
         </div>
@@ -166,16 +128,16 @@
         echo ul($list)?> -->
         <ul>
             <li>
-                <img src="<?php echo base_url()?>assets/img/menu/home.svg" alt="Home">
+                <img src="<?php echo base_url()?>assets/img/menu/eyeme/home-active.svg" alt="Home">
             </li>
             <li>
-                <img src="<?php echo base_url()?>assets/img/menu/search.svg" alt="explore">
+                <img src="<?php echo base_url()?>assets/img/menu/eyeme/explore.svg" alt="explore">
             </li>
             <li>
-                <img src="<?php echo base_url()?>assets/img/menu/add.png" alt="upload Photo">
+                <img src="<?php echo base_url()?>assets/img/menu/eyeme/eyeme.svg" alt="upload Photo">
             </li>
             <li>
-                <img src="<?php echo base_url()?>assets/img/menu/notification.svg" alt="Notification">
+                <img src="<?php echo base_url()?>assets/img/menu/eyeme/notification.svg" alt="Notification">
             </li>
             <li>
                 <div class="img-radius">

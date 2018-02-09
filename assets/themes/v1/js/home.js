@@ -70,9 +70,9 @@ window.onload = function(){
     //boxNotif.onclick = function() {
     //    displayNotif.style.display = "block";
     //}
-    //displayNotif.onclick = function() {
-    //    displayNotif.style.display = "none";
-    //}
+    displayNotif.onclick = function() {
+       displayNotif.style.display = "none";
+    }
     //heighControl.onclick = function() {
     //    heighMax.style.height = "auto";
     //    heighControl.style.display = "none";
