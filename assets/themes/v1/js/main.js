@@ -611,8 +611,8 @@ function rmdata(val) {
     }
 }
 
-function tabmenu(id, beforeClick, afterClick) {
-    $('#boxtab span, #boxtab a').each(function () {
+function tabmenu(id, tagClick, tagShow, beforeClick, afterClick) {
+    $('#boxtab ' + tagClick).each(function () {
         if ($(this).attr('active') === 'true') {
             var idx = $(this).attr('id');
 
@@ -620,15 +620,7 @@ function tabmenu(id, beforeClick, afterClick) {
             $('#' + idx).removeAttr('class');
 
             if (afterClick != undefined) $('#' + idx).addClass(beforeClick);
-
-            if ($('div#' + idx).html() != undefined) {
-                $('div#' + idx).fadeOut(0);
-            }
-
-
-            if ($('table#' + idx).html() != undefined) {
-                $('table#' + idx).fadeOut(0);
-            }
+            $(tagShow + '#' + idx).fadeOut(0);
 
             var fltab = idx;
         }
@@ -638,13 +630,7 @@ function tabmenu(id, beforeClick, afterClick) {
     $('#' + id).attr('active', 'true');
     $('#' + id).addClass(afterClick);
 
-    if ($('div#' + id).html() != undefined) {
-        $('div#' + id).fadeIn('fast');
-    }
-
-    if ($('table#' + id).html() != undefined) {
-        $('table#' + id).fadeIn('fast');
-    }
+    $(tagShow + '#' + id).fadeIn('fast');
 }
 
 function tabflag(id) {
