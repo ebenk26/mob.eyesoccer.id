@@ -33,9 +33,9 @@ class EyemeMod extends CI_Model {
         $this->tools->__flashMessage($data);
 
     }
-    function __explorelist($page='1'){
+    function __explorelist(){
 
-        $query = array('page' => $page,'limit' => '17', 'sortby'=> 'last_online');
+        $query = array('page' => '1','limit' => '17', 'sortby'=> 'last_online');
         $data['explore'] = $this->excurl->remoteCall($this->__xurl().'me-images',$this->__xkey(),$query);
         $html            = $this->load->view($this->__theme().'eyeme/ajax/me_explorelist',$data,true);
         $data            = array('xClass' => 'reqexplorelist','xHtml' => $html);

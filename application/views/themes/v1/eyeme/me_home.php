@@ -13,7 +13,7 @@
              
                 </script>
             </div>
-        <input type="hidden" name="fn" value="imgfollowedlist/1" class="cinput">
+        <input type="hidden" name="fn" value="imgfollowedlist" class="cinput">
         
         <div class="container">
             <div class="container emepost">

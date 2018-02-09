@@ -30,7 +30,7 @@ class Eyeme extends CI_Controller {
 	{
 	    $this->load->view($this->__theme().'function');
 	    $fn = $_POST['fn'];
-	    $param = $_POST['param'];
+	   
 	    
 	    $data = [];
 	    if(function_exists($fn))
@@ -38,7 +38,7 @@ class Eyeme extends CI_Controller {
 		$fn();
 	    } else {
 		$fn = "__".$fn;
-		$this->EyemeMod->$fn($param);
+		$this->EyemeMod->$fn();
 	    }
 	} else {
 	    $data = $this->getdata();

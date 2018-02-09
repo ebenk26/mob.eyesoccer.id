@@ -1,18 +1,55 @@
-<!-- CONTENT BODY -->
+	<!-- CONTENT BODY -->
     <div class="crumb">
             <ul>
-                <li>Home</li>
-                <li>Eyeprofile</li>
-                <li>Klub</li>
+                <li><a href="<?php echo base_url();?>" style="display:unset;">Home</a></li>
+                <li><a href="<?php echo base_url();?>eyeprofile/klub" style="display:unset;">Eyeprofile</a></li>
+                <li><a href="<?php echo base_url();?>eyeprofile/klub" style="display:unset;">Klub</a></li>
                 <li><?php echo urldecode($slug);?></li>
             </ul>
         </div>
     <div class="eprofile">
+		<div class="head">
+            <div class="img-radius">
+                <img src="https://www.eyesoccer.id/systems/club_logo/2034LOGO UNTUK APLIKASI.jpg"
+                    alt="">
+            </div>
+            <h2 class="h2-text-bottom"><?php echo urldecode($slug);?></h2>
+            <div class="container tab-eprofile">
+                <a class="active" href="#content1">Info</a>
+            </div>
+            <div class="table-scroll">
+				<!--<div id="reqclubcount" class='loadclubcount' action="eyeprofile" loading="off" clean="clsclubcount">
+					<div id='clsclubcount'>
+						<script>
+							$(document).ready(function(){
+								$(window).on('load',function(){
+									ajaxOnLoad('loadclubcount');
+								});
+							});
+						</script>
+					</div>-->
+					<table class="content-tab-eprofile">
+						<tr>
+							<td>Jumlah Klub</td>
+							<td>: 0</td>
+						</tr>
+						<tr>
+							<td>Jumlah Pemain</td>
+							<td>: 0</td>
+						</tr>
+						<tr>
+							<td>Pemain Asing</td>
+							<td>: 0</td>
+						</tr>
+					</table>
+				<!--</div>-->
+            </div>
+        </div>
         <div class="container over-x">
             <div class="container sub-menu w-max">
                 <a href="<?php echo base_url();?>eyeprofile/klub" class="active">klub</a>
                 <a href="<?php echo base_url();?>eyeprofile/pemain">pemain</a>
-                <a href="<?php echo base_url();?>eyeprofile/official">ofisial</a>
+                <a href="<?php echo base_url();?>eyeprofile/official/<?= $slug; ?>">ofisial</a>
                 <a href="">perangkat pertandingan</a>
                 <a href="">supporter</a>
             </div>
@@ -29,6 +66,7 @@
 					</script>
 				</div>
 				<input type='hidden' name='fn' value='competition' class='cinput'>
+				<input type='hidden' name='submenu' value='klub' class='cinput'>
 				<input type='hidden' name='slug' value='<?php echo $slug;?>' class='cinput'>
 				<select id="" name="" selected="true" class="slc-musim">
 					<option value>--Pilih Liga--</option>
@@ -51,6 +89,7 @@
 					</div>
 					<input type='hidden' name='fn' value='klublist' class='cinput'>
 					<input type='hidden' name='slug' value='<?php echo $slug;?>' class='cinput'>
+					<input type='hidden' name='submenu' value='klub' class='cinput'>
 				<div class="klub-content">
 					<div class="img-klub-content">
 						<img src="https://www.eyesoccer.id/systems/club_logo/2034LOGO UNTUK APLIKASI.jpg" alt="" srcset="">
@@ -78,45 +117,58 @@
 			</div>
         </div>
         <div class="container box-jadwal" style="position: relative;">
-            <h3 class="h3-orange">Jadwal pertandingan liga 1 indonesia</h3>
+            <h3 class="h3-orange">Jadwal pertandingan <?php echo urldecode($slug);?></h3>
             <i class="material-icons">keyboard_arrow_left</i>
             <i class="material-icons">keyboard_arrow_right</i>
             <div class="jadwal">
-                <div class="jadwal-content">
-                    <table>
-                        <tr>
-                            <td>22 Okt</td>
-                            <td>08:45</td>
-                        </tr>
-                        <tr>
-                            <td>Perseru Serui</td>
-                            <td>2</td>
-                        </tr>
-                        <tr>
-                            <td>Persipura</td>
-                            <td>2</td>
-                        </tr>
-                    </table>
-                </div>
-                <div class="jadwal-content">
-                    <table>
-                        <tr>
-                            <td class="red">22 Okt</td>
-                            <td>08:45</td>
-                        </tr>
-                        <tr>
-                            <td>Perseru Serui</td>
-                            <td>2</td>
-                        </tr>
-                        <tr>
-                            <td>Persipura</td>
-                            <td>2</td>
-                        </tr>
-                    </table>
+				<div id="reqmatchlist" class='loadmatchlist' action="eyeprofile" loading="off" clean="clsmatchlist">
+					<div id='clsmatchlist'>
+						<script>
+							$(document).ready(function(){
+								$(window).on('load',function(){
+									ajaxOnLoad('loadmatchlist');
+								});
+							});
+						</script>
+					</div>
+					<input type='hidden' name='fn' value='matchlist' class='cinput'>
+					<input type='hidden' name='slug' value='<?php echo urldecode($slug);?>' class='cinput'>
+					<div class="jadwal-content">
+						<table>
+								<tr>
+									<td>22 Okt</td>
+									<td>08:45</td>
+								</tr>
+								<tr>
+									<td>Perseru Serui</td>
+									<td>2</td>
+								</tr>
+								<tr>
+									<td>Persipura</td>
+									<td>2</td>
+								</tr>
+						</table>
+					</div>
+					<div class="jadwal-content">
+						<table>
+							<tr>
+								<td class="red">22 Okt</td>
+								<td>08:45</td>
+							</tr>
+							<tr>
+								<td>Perseru Serui</td>
+								<td>2</td>
+							</tr>
+							<tr>
+								<td>Persipura</td>
+								<td>2</td>
+							</tr>
+						</table>
+					</div>
                 </div>
             </div>
         </div>
-        <div class="container">
+        <div class="container" style="display:none;">
                 <div class="container sub-menu-tab">
                     <div class="w-max">
                         <h3 class="h3-orange this-h3-orange" style="color: #FF9800">
@@ -237,55 +289,67 @@
             <div class="container over-x" style="margin: 30px 0px">
                 <div id="emSlide" class="carousel slide">
                     <div role="listbox" class="carousel-inner w-max">
-                        <div class="box item active">
-                            <a href="">
-                                <div class="em-box-content">
-                                    <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
-                                    <h1>lorem ipsum dolor sit</h1>
-                                    <p class="prices">Rp. 500.000</p>
-                                    <button type="text" class="beli">Beli</button>
-                                </div>
-                            </a>
-                            <a href="">
-                                <div class="em-box-content">
-                                    <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
-                                    <h1>lorem ipsum dolor sit</h1>
-                                    <p class="prices">Rp. 500.000</p>
-                                    <button type="text" class="beli">Beli</button>
-                                </div>
-                            </a>
-                            <a href="">
-                                <div class="em-box-content">
-                                    <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
-                                    <h1>lorem ipsum dolor sit</h1>
-                                    <p class="prices">Rp. 500.000</p>
-                                    <button type="text" class="beli">Beli</button>
-                                </div>
-                            </a>
-                            <a href="">
-                                <div class="em-box-content">
-                                    <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
-                                    <h1>lorem ipsum dolor sit</h1>
-                                    <p class="prices">Rp. 500.000</p>
-                                    <button type="text" class="beli">Beli</button>
-                                </div>
-                            </a>
-                            <a href="">
-                                <div class="em-box-content">
-                                    <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
-                                    <h1>lorem ipsum dolor sit</h1>
-                                    <p class="prices">Rp. 500.000</p>
-                                    <button type="text" class="beli">Beli</button>
-                                </div>
-                            </a>
-                            <a href="">
-                                <div class="em-box-content">
-                                    <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
-                                    <h1>lorem ipsum dolor sit</h1>
-                                    <p class="prices">Rp. 500.000</p>
-                                    <button type="text" class="beli">Beli</button>
-                                </div>
-                            </a>
+						<div id="reqmarket" class='loadmarket' action="eyemarket" loading="off" clean="clstube">
+							<div id="clsmarket">
+								   <script>
+										$(document).ready(function(){
+											$(window).on('load',function(){
+												ajaxOnLoad('loadmarket');
+											});
+										});
+									</script>
+							 </div>
+							  <input type='hidden' name='fn' value='market' class='cinput'>
+							<div class="box item active">
+								<a href="">
+									<div class="em-box-content">
+										<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+										<h1>lorem ipsum dolor sit</h1>
+										<p class="prices">Rp. 500.000</p>
+										<button type="text" class="beli">Beli</button>
+									</div>
+								</a>
+								<a href="">
+									<div class="em-box-content">
+										<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+										<h1>lorem ipsum dolor sit</h1>
+										<p class="prices">Rp. 500.000</p>
+										<button type="text" class="beli">Beli</button>
+									</div>
+								</a>
+								<a href="">
+									<div class="em-box-content">
+										<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+										<h1>lorem ipsum dolor sit</h1>
+										<p class="prices">Rp. 500.000</p>
+										<button type="text" class="beli">Beli</button>
+									</div>
+								</a>
+								<a href="">
+									<div class="em-box-content">
+										<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+										<h1>lorem ipsum dolor sit</h1>
+										<p class="prices">Rp. 500.000</p>
+										<button type="text" class="beli">Beli</button>
+									</div>
+								</a>
+								<a href="">
+									<div class="em-box-content">
+										<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+										<h1>lorem ipsum dolor sit</h1>
+										<p class="prices">Rp. 500.000</p>
+										<button type="text" class="beli">Beli</button>
+									</div>
+								</a>
+								<a href="">
+									<div class="em-box-content">
+										<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+										<h1>lorem ipsum dolor sit</h1>
+										<p class="prices">Rp. 500.000</p>
+										<button type="text" class="beli">Beli</button>
+									</div>
+								</a>
+							</div>
                         </div>
                     </div>
                 </div>
