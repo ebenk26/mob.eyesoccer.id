@@ -84,10 +84,6 @@
             </ul>
         </div>
     </div>
-    <!-- FOOTER -->
-    <footer>
-        <p>Copyright 2017 eyesoccer.com. All Rights Reserved.</p>
-    </footer>
     <!-- KOMENTAR -->
     <div class="container-comment">
         <span class="up-next-etube" style="padding-left: 10px;">Komentar</span> <span id="close" class="up-next-etube" style="float:right; padding-right: 10px;"><i class="material-icons">close</i></span>
@@ -162,12 +158,12 @@
     </div>
     <!-- MENU BOTTOM EYEME -->
     <div class="menu-eme">
-        <?php 
+        <!-- <?php 
         $list  = array(img(array('src'=> MENUIMG.'home.svg','alt'=> 'home')));
 
 
 
-        echo ul($list)?>
+        echo ul($list)?> -->
         <ul>
             <li>
                 <img src="<?php echo base_url()?>assets/img/menu/home.svg" alt="Home">
@@ -176,7 +172,7 @@
                 <img src="<?php echo base_url()?>assets/img/menu/search.svg" alt="explore">
             </li>
             <li>
-                <img src="<?php echo base_url()?>assets/img/menu/add.svg" alt="upload Photo">
+                <img src="<?php echo base_url()?>assets/img/menu/add.png" alt="upload Photo">
             </li>
             <li>
                 <img src="<?php echo base_url()?>assets/img/menu/notification.svg" alt="Notification">
