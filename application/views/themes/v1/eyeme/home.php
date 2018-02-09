@@ -1,9 +1,3 @@
-<nav>
-        <i id="menu" class="material-icons f-l">menu</i>
-        <img src="<?= base_url(); ?>assets/img/logo.png" alt="">
-        <i id="src" class="material-icons f-r">search</i>
-    </nav>
-    <!-- EYEME -->
     <div class="container" style="margin-top: 50px;margin-bottom: 50px;">
         <div class="container">
             <div class="container emepost">
