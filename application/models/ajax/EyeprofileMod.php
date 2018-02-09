@@ -109,7 +109,7 @@ class EyeprofileMod extends CI_Model {
 		$_SESSION['klublistpage'] = 1;
     }
 
-    function __tbl_official()
+    function __desc_league()
     {
 		$competition = urldecode($this->input->post('slug'));
 
@@ -132,6 +132,48 @@ class EyeprofileMod extends CI_Model {
 		$html = $this->load->view($this->__theme().'eyeprofile/ajax/desc_league', $data, true);
 
 		$data =array('xClass'=>'reqtbloff','xHtml'=> $html);
+		$this->tools->__flashMessage($data);
+    }
+
+    function __officiallist()
+    {
+    	$competition = urldecode($this->input->post('slug'));
+
+		if($competition == 'Non Liga'){
+			$competition = 'SSB / Akademi Sepakbola';
+		}
+
+		$page = ($this->session->userdata('pageoffc')) ? $this->session->userdata('pageoffc') : 1;
+
+		if($this->input->post('paging') == 'next')
+		{
+			if($this->session->userdata('pagetotaloffc') > $this->session->userdata('pageoffc'))
+			{
+				$page += 1;
+			}
+		}
+		else
+		{
+			if($this->input->post('paging') == 'back' && $this->session->userdata('pageoffc') >= 2)
+			{
+				$page -= 1;
+			}
+		}
+
+		$this->session->set_userdata(array('pageoffc' => $page));
+
+        $query = array('page'  => $this->session->userdata('pageoffc'), 'limit' => 10,
+					   'league' => '', 'competition' => $competition);
+
+		$data['slug'] = $competition;
+		$data['offclist'] = $this->excurl->remoteCall($this->__xurl().'profile-official', $this->__xkey(), $query);
+		$data['offccount'] = $this->excurl->remoteCall($this->__xurl().'profile-official', $this->__xkey(),
+							 array_merge($query, ['count' => true]));
+
+		$html = $this->load->view($this->__theme().'eyeprofile/ajax/officiallist', $data, true);
+
+		$data =array('xClass'=>'reqoffclist','xHtml'=> $html,
+					 'xUrlhash' => base_url().'eyeprofile/official/'.$competition.'/'.$page);
 		$this->tools->__flashMessage($data);
     }
 }
