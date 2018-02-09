@@ -1,10 +1,10 @@
-<!-- TRENDING --> 
+<!-- TRENDING -->
 <div class="trending">
     <div id="reqtrend" class='loadtrend' action="home" loading="off" clean="clstrend">
         <div id='clstrend'>
             <script>
-                $(document).ready(function(){
-                    $(window).on('load',function(){
+                $(document).ready(function () {
+                    $(window).on('load', function () {
                         ajaxOnLoad('loadtrend');
                     });
                 });
@@ -32,56 +32,56 @@
             <div class="box item active">
                 <div id="reqprofile" class="loadprofile" action="eyeprofile" loading="off" clean="clsprof">
                     <div id="clsprof">
-                       <script>
-                            $(document).ready(function(){
-                                $(window).on('load',function(){
+                        <script>
+                            $(document).ready(function () {
+                                $(window).on('load', function () {
                                     ajaxOnLoad('loadprofile');
                                 });
                             });
                         </script>
                     </div>
-                <input type="hidden" name="fn" value="eyeprofile" class="cinput">
-                <a href="">
-                    <div class="ep-box-content">
-                        <div class="img">
-                            <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">                                    
+                    <input type="hidden" name="fn" value="playerhome" class="cinput">
+                    <a href="">
+                        <div class="ep-box-content">
+                            <div class="img">
+                                <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+                            </div>
+                            <div class="ep-detail">
+                                <h1>Egy Maulana Vikry</h1>
+                                <p>Posisi: Sayap Kanan<br>
+                                    Klub: -<br>
+                                    Tanggal Lahir: 7 Juli 2000</p>
+                            </div>
                         </div>
-                        <div class="ep-detail">
-                            <h1>Egy Maulana Vikry</h1>
-                            <p>Posisi: Sayap Kanan<br>
-                            Klub: -<br>
-                            Tanggal Lahir: 7 Juli 2000</p> 
+                    </a>
+                    <a href="">
+                        <div class="ep-box-content">
+                            <div class="img">
+                                <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+                            </div>
+                            <div class="ep-detail">
+                                <h1>Egy Maulana Vikry</h1>
+                                <p>Posisi: Sayap Kanan<br>
+                                    Klub: -<br>
+                                    Tanggal Lahir: 7 Juli 2000</p>
+                            </div>
                         </div>
-                    </div>
-                </a>
-                <a href="">
-                    <div class="ep-box-content">
-                        <div class="img">
-                            <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">                                    
+                    </a>
+                    <a href="">
+                        <div class="ep-box-content">
+                            <div class="img">
+                                <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+                            </div>
+                            <div class="ep-detail">
+                                <h1>Egy Maulana Vikry</h1>
+                                <p>Posisi: Sayap Kanan<br>
+                                    Klub: -<br>
+                                    Tanggal Lahir: 7 Juli 2000</p>
+                            </div>
                         </div>
-                        <div class="ep-detail">
-                            <h1>Egy Maulana Vikry</h1>
-                            <p>Posisi: Sayap Kanan<br>
-                            Klub: -<br>
-                            Tanggal Lahir: 7 Juli 2000</p>                                  
-                        </div>
-                    </div>
-                </a>
-                <a href="">
-                    <div class="ep-box-content">
-                        <div class="img">
-                            <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">                                    
-                        </div>
-                        <div class="ep-detail">
-                            <h1>Egy Maulana Vikry</h1>
-                            <p>Posisi: Sayap Kanan<br>
-                            Klub: -<br>
-                            Tanggal Lahir: 7 Juli 2000</p>                                   
-                        </div>
-                    </div>
-                </a>
-                
-                
+                    </a>
+
+
                 </div>
             </div>
         </div>
@@ -92,8 +92,8 @@
     <div id="reqtube" class='loadtube' action="eyetube" loading="off" clean="clstube">
         <div id='clstube'>
             <script>
-                $(document).ready(function(){
-                    $(window).on('load',function(){
+                $(document).ready(function () {
+                    $(window).on('load', function () {
                         ajaxOnLoad('loadtube');
                     });
                 });
@@ -110,8 +110,8 @@
                 <div class="v-etube">
                     <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
                     <div class="btn-play">
-                        <img src="<?php echo SUBCDN."assets/$folder"; ?>img/btn-play.png" alt="">
-                    </div>                    
+                        <img src="<?php echo SUBCDN . "assets/$folder"; ?>img/btn-play.png" alt="">
+                    </div>
                 </div>
                 <h1>Lorem Ipsum Dolor Sit amet</h1>
                 <span>30 menit lalu</span>
@@ -121,8 +121,8 @@
                 <div class="v-etube">
                     <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
                     <div class="btn-play">
-                        <img src="<?php echo SUBCDN."assets/$folder"; ?>img/btn-play.png" alt="">
-                    </div>                    
+                        <img src="<?php echo SUBCDN . "assets/$folder"; ?>img/btn-play.png" alt="">
+                    </div>
                 </div>
                 <h1>Lorem Ipsum Dolor Sit amet</h1>
                 <span>30 menit lalu</span>
@@ -132,8 +132,8 @@
                 <div class="v-etube">
                     <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
                     <div class="btn-play">
-                        <img src="<?php echo SUBCDN."assets/$folder"; ?>img/btn-play.png" alt="">
-                    </div>                    
+                        <img src="<?php echo SUBCDN . "assets/$folder"; ?>img/btn-play.png" alt="">
+                    </div>
                 </div>
                 <h1>Lorem Ipsum Dolor Sit amet</h1>
                 <span>30 menit lalu</span>
@@ -144,29 +144,29 @@
 </div>
 <!-- EYEME -->
 <div class="border-box over-no pd-l-4 m-b-20">
-   <div id="reqme" class='loadme' action="eyeme" loading="off" clean="clsme">
+    <div id="reqme" class='loadme' action="eyeme" loading="off" clean="clsme">
         <div id='clsme'>
             <script>
-                $(document).ready(function(){
-                    $(window).on('load',function(){
+                $(document).ready(function () {
+                    $(window).on('load', function () {
                         ajaxOnLoad('loadme');
                     });
                 });
             </script>
         </div>
         <input type='hidden' name='fn' value='melist' class='cinput'>
-    <div class="eme-box">
-        <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
-    </div>
-    <div class="eme-box">
-        <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
-    </div>
-    <div class="eme-box">
-        <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
-    </div>
-    <div class="eme-box">
-        <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
-    </div>
+        <div class="eme-box">
+            <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+        </div>
+        <div class="eme-box">
+            <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+        </div>
+        <div class="eme-box">
+            <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+        </div>
+        <div class="eme-box">
+            <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+        </div>
     </div>
 </div>
 <!-- EYENEWS -->
@@ -174,8 +174,8 @@
     <div id="reqtabnews" class='loadtabnews' action="eyenews" loading="off" clean="clstabnews">
         <div id='clstabnews'>
             <script>
-                $(document).ready(function(){
-                    $(window).on('load',function(){
+                $(document).ready(function () {
+                    $(window).on('load', function () {
                         ajaxOnLoad('loadtabnews');
                     });
                 });
@@ -188,7 +188,7 @@
             <span id='tab-usiamuda' onclick="tabmenu(this.id, 'orange-active')">usia muda</span>
         </div>
         <hr>
-        <div role="listbox" class="carousel-inner">                    
+        <div role="listbox" class="carousel-inner">
             <div id='tab-populer' class="box item active">
                 <div class="container rek-ber">
                     <div class="rek-ber-c">
@@ -264,18 +264,18 @@
         <div role="listbox" class="carousel-inner w-max">
             <div id="reqmarket" class='loadmarket' action="eyemarket" loading="off" clean="clstube">
                 <div id="clsmarket">
-                       <script>
-                            $(document).ready(function(){
-                                $(window).on('load',function(){
-                                    ajaxOnLoad('loadmarket');
-                                });
+                    <script>
+                        $(document).ready(function () {
+                            $(window).on('load', function () {
+                                ajaxOnLoad('loadmarket');
                             });
-                        </script>
+                        });
+                    </script>
                 </div>
                 <input type='hidden' name='fn' value='market' class='cinput'>
                 <div class="box item active">
-                    
-                 
+
+
                     <a href="">
                         <div class="em-box-content">
                             <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
@@ -303,35 +303,35 @@
         <div id="reqevent" class='loadevent' action="eyevent" loading="off" clean="clsevent">
             <div id='clsevent'>
                 <script>
-                    $(document).ready(function(){
-                        $(window).on('load',function(){
+                    $(document).ready(function () {
+                        $(window).on('load', function () {
                             ajaxOnLoad('loadevent');
                         });
                     });
                 </script>
             </div>
             <input type='hidden' name='fn' value='event_list' class='cinput'>
-            <div role="listbox" class="carousel-inner w-max">                    
+            <div role="listbox" class="carousel-inner w-max">
                 <div class="box item active">
                     <div class="ev-box-content">
-                        
+
                     </div>
                     <div class="ev-box-content">
-                        
+
                     </div>
                     <div class="ev-box-content">
-                        
+
                     </div>
                 </div>
                 <div class="box item">
                     <div class="ev-box-content">
-                        
+
                     </div>
                     <div class="ev-box-content">
-                        
+
                     </div>
                     <div class="ev-box-content">
-                        
+
                     </div>
                 </div>
             </div>
@@ -342,7 +342,7 @@
     <div class="bx-nav">
         <i class="material-icons left i-bx-l" href="#evSlide" role="button">keyboard_arrow_left</i>
         <i class="material-icons right i-bx-r" href="#evSlide" role="button">keyboard_arrow_right</i>
-    </div>            
+    </div>
 </div>
 <!-- JADWAL PERTANDINGAN -->
 <div class="container tx-c">
@@ -351,8 +351,8 @@
         <div id="reqmatch" class='loadmatch' action="eyevent" loading="off" clean="clsmatch">
             <div id='clsmatch'>
                 <script>
-                    $(document).ready(function(){
-                        $(window).on('load',function(){
+                    $(document).ready(function () {
+                        $(window).on('load', function () {
                             ajaxOnLoad('loadmatch');
                         });
                     });
@@ -375,36 +375,36 @@
                         <a href="">Besok
                             <span>18 Oktober</span>
                         </a>
-                    </div>                        
+                    </div>
                 </div>
             </div>
             <table class="table border-b">
                 <tbody>
-                    <tr>
-                        <td class="tx-r">Arsenal<span class="i-l"><img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt=""></span></td>
-                        <td class="tx-c">01:45<span class="t-live"></span></td>
-                        <td class="tx-l"><span class="i-r"><img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt=""></span>Arsenal</td>
-                    </tr>
-                    <tr>
-                        <td class="tx-r">Arsenal<span class="i-l"><img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt=""></span></td>
-                        <td class="tx-c">01:45<span class="t-live">Live di SCTV</span></td>
-                        <td class="tx-l"><span class="i-r"><img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt=""></span>Arsenal</td>
-                    </tr>
-                    <tr>
-                        <td class="tx-r">Arsenal<span class="i-l"><img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt=""></span></td>
-                        <td class="tx-c">01:45<span class="t-live"></span></td>
-                        <td class="tx-l"><span class="i-r"><img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt=""></span>Arsenal</td>
-                    </tr>
-                    <tr>
-                        <td class="tx-r">Arsenal<span class="i-l"><img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt=""></span></td>
-                        <td class="tx-c">01:45<span class="t-live"></span></td>
-                        <td class="tx-l"><span class="i-r"><img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt=""></span>Arsenal</td>
-                    </tr>
-                    <tr>
-                        <td class="tx-r">Arsenal<span class="i-l"><img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt=""></span></td>
-                        <td class="tx-c">01:45<span class="t-live">Live di SCTV</span></td>
-                        <td class="tx-l"><span class="i-r"><img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt=""></span>Arsenal</td>
-                    </tr>
+                <tr>
+                    <td class="tx-r">Arsenal<span class="i-l"><img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt=""></span></td>
+                    <td class="tx-c">01:45<span class="t-live"></span></td>
+                    <td class="tx-l"><span class="i-r"><img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt=""></span>Arsenal</td>
+                </tr>
+                <tr>
+                    <td class="tx-r">Arsenal<span class="i-l"><img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt=""></span></td>
+                    <td class="tx-c">01:45<span class="t-live">Live di SCTV</span></td>
+                    <td class="tx-l"><span class="i-r"><img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt=""></span>Arsenal</td>
+                </tr>
+                <tr>
+                    <td class="tx-r">Arsenal<span class="i-l"><img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt=""></span></td>
+                    <td class="tx-c">01:45<span class="t-live"></span></td>
+                    <td class="tx-l"><span class="i-r"><img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt=""></span>Arsenal</td>
+                </tr>
+                <tr>
+                    <td class="tx-r">Arsenal<span class="i-l"><img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt=""></span></td>
+                    <td class="tx-c">01:45<span class="t-live"></span></td>
+                    <td class="tx-l"><span class="i-r"><img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt=""></span>Arsenal</td>
+                </tr>
+                <tr>
+                    <td class="tx-r">Arsenal<span class="i-l"><img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt=""></span></td>
+                    <td class="tx-c">01:45<span class="t-live">Live di SCTV</span></td>
+                    <td class="tx-l"><span class="i-r"><img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt=""></span>Arsenal</td>
+                </tr>
                 </tbody>
             </table>
         </div>
@@ -425,8 +425,8 @@
 <div id="reqklasemen" class='loadklasemen' action="eyevent" loading="off" clean="clsklasemen">
     <div id='clsklasemen'>
         <script>
-            $(document).ready(function(){
-                $(window).on('load',function(){
+            $(document).ready(function () {
+                $(window).on('load', function () {
                     ajaxOnLoad('loadklasemen');
                 });
             });
@@ -445,117 +445,127 @@
         <div class="border-box pd-l-0">
             <table class="table table-striped m-b-20">
                 <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>Klub</th>
-                        <th>Main</th>
-                        <th>M</th>
-                        <th>S</th>
-                        <th>K</th>
-                        <th>Poin</th>
-                    </tr>
+                <tr>
+                    <th>#</th>
+                    <th>Klub</th>
+                    <th>Main</th>
+                    <th>M</th>
+                    <th>S</th>
+                    <th>K</th>
+                    <th>Poin</th>
+                </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>
-                            <img src="" alt="" width="15px"> Nama Klub</td>
-                        <td>10</td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>10</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>
-                            <img src="" alt="" width="15px"> Nama Klub</td>
-                        <td>10</td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>10</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>
-                            <img src="" alt="" width="15px"> Nama Klub</td>
-                        <td>10</td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>10</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>
-                            <img src="" alt="" width="15px"> Nama Klub</td>
-                        <td>10</td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>10</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>
-                            <img src="" alt="" width="15px"> Nama Klub</td>
-                        <td>10</td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>10</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>
-                            <img src="" alt="" width="15px"> Nama Klub</td>
-                        <td>10</td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>10</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>
-                            <img src="" alt="" width="15px"> Nama Klub</td>
-                        <td>10</td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>10</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>
-                            <img src="" alt="" width="15px"> Nama Klub</td>
-                        <td>10</td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>10</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>
-                            <img src="" alt="" width="15px"> Nama Klub</td>
-                        <td>10</td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>10</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>
-                            <img src="" alt="" width="15px"> Nama Klub</td>
-                        <td>10</td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>10</td>
-                    </tr>
+                <tr>
+                    <td>1</td>
+                    <td>
+                        <img src="" alt="" width="15px"> Nama Klub
+                    </td>
+                    <td>10</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>
+                        <img src="" alt="" width="15px"> Nama Klub
+                    </td>
+                    <td>10</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>
+                        <img src="" alt="" width="15px"> Nama Klub
+                    </td>
+                    <td>10</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>
+                        <img src="" alt="" width="15px"> Nama Klub
+                    </td>
+                    <td>10</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>
+                        <img src="" alt="" width="15px"> Nama Klub
+                    </td>
+                    <td>10</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>
+                        <img src="" alt="" width="15px"> Nama Klub
+                    </td>
+                    <td>10</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>
+                        <img src="" alt="" width="15px"> Nama Klub
+                    </td>
+                    <td>10</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>
+                        <img src="" alt="" width="15px"> Nama Klub
+                    </td>
+                    <td>10</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>
+                        <img src="" alt="" width="15px"> Nama Klub
+                    </td>
+                    <td>10</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>
+                        <img src="" alt="" width="15px"> Nama Klub
+                    </td>
+                    <td>10</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>10</td>
+                </tr>
                 </tbody>
             </table>
         </div>
