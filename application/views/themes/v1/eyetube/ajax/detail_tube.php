@@ -60,6 +60,11 @@
                     }
                 ?>
             </div>
+			<script>
+				$(document).ready(function(){
+					$(".fb-comments").attr("data-href","<?php echo $dt->data->share_url;?>");
+				});
+			</script>
 <?php
     }
 ?>

@@ -102,6 +102,11 @@ if ($newsdetail){
 			</div>
 		</div>
 	</div>
+	<script>
+		$(document).ready(function(){
+			$(".fb-comments").attr("data-href","<?php echo $dt->data->url;?>");
+		});
+	</script>
 <?php
 }
 ?>
