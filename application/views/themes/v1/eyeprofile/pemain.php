@@ -3,33 +3,34 @@
             <ul>
                 <li><a href="<?php echo base_url();?>" style="display:unset;">Home</a></li>
                 <li><a href="<?php echo base_url();?>eyeprofile/klub" style="display:unset;">Eyeprofile</a></li>
-                <li><a href="<?php echo base_url();?>eyeprofile/klub" style="display:unset;">Klub</a></li>
-                <li id="slug_klub_detail"><?php echo urldecode($slug);?></li>
+                <li><a href="<?php echo base_url();?>eyeprofile/pemain" style="display:unset;">Pemain</a></li>
+                <li><?php echo urldecode($slug);?></li>
             </ul>
-	</div>
+        </div>
     <div class="eprofile">
-		<div id="reqdetailclub" class='loaddetailclub' action="eyeprofile" loading="off" clean="clsdetailclub">
-			<div id='clsdetailclub'>
-				<script>
-					$(document).ready(function(){
-						$(window).on('load',function(){
-							ajaxOnLoad('loaddetailclub');
-						});
-					});
-				</script>
-			</div>
-			<input type='hidden' name='fn' value='detailclub' class='cinput'>
-			<input type='hidden' name='slug' value='<?php echo $slug;?>' class='cinput'>
-			<div class="head">
-				<div class="img-radius">
-					<img src="https://www.eyesoccer.id/systems/club_logo/2034LOGO UNTUK APLIKASI.jpg"
-						alt="">
-				</div>
-				<h2 class="h2-text-bottom"><?php echo urldecode($slug);?></h2>
-				<div class="container tab-eprofile">
-					<a class="active" href="#content1">Info</a>
-				</div>
-				<div class="table-scroll">
+		<div class="head">
+            <div class="img-radius" style="display:none;">
+                <img src="https://www.eyesoccer.id/systems/club_logo/2034LOGO UNTUK APLIKASI.jpg"
+                    alt="">
+            </div>
+            <h2 class="h2-text-bottom"><?php echo urldecode($slug);?></h2>
+            <div class="container tab-eprofile">
+                <a class="active" href="#content1">Info</a>
+            </div>
+            <div class="table-scroll">
+				<div id="reqclubcount" class='loadclubcount' action="eyeprofile" loading="off" clean="clsclubcount">
+					<div id='clsclubcount'>
+						<script>
+							$(document).ready(function(){
+								$(window).on('load',function(){
+									ajaxOnLoad('loadclubcount');
+								});
+							});
+						</script>
+					</div>
+					<input type='hidden' name='fn' value='clubcount' class='cinput'>
+					<input type='hidden' name='submenu' value='klub' class='cinput'>
+					<input type='hidden' name='slug' value='<?php echo $slug;?>' class='cinput'>
 					<table class="content-tab-eprofile">
 						<tr>
 							<td>Jumlah Klub</td>
@@ -45,45 +46,69 @@
 						</tr>
 					</table>
 				</div>
-			</div>
-			<div class="container">
-				<div class="container sub-menu">
-					<a href="#" class="active">Pemain</a>
-					<a href="#">Ofisial</a>
-					<a href="#">suporter</a>
+            </div>
+        </div>
+        <div class="container over-x">
+            <div class="container sub-menu w-max">
+                <a href="<?php echo base_url();?>eyeprofile/klub">klub</a>
+                <a href="<?php echo base_url();?>eyeprofile/pemain" class="active">pemain</a>
+                <a href="<?php echo base_url();?>eyeprofile/official/<?= $slug; ?>">ofisial</a>
+                <a href="">perangkat pertandingan</a>
+                <a href="">supporter</a>
+            </div>
+        </div>
+        <div class="container" style="font-size: .8em;">
+			<div id="reqcompetition" class='loadcompetition' action="eyeprofile" loading="off" clean="clscompetition">
+				<div id='clscompetition'>
+					<script>
+						$(document).ready(function(){
+							$(window).on('load',function(){
+								ajaxOnLoad('loadcompetition');
+							});
+						});
+					</script>
 				</div>
+				<input type='hidden' name='fn' value='competition' class='cinput'>
+				<input type='hidden' name='submenu' value='pemain' class='cinput'>
+				<input type='hidden' name='slug' value='<?php echo $slug;?>' class='cinput'>
+				<select id="" name="" selected="true" class="slc-musim">
+					<option value>--Pilih Liga--</option>
+					<option value="">Liga 1 Indonesia</option>
+					<option value="">Liga 1 Indonesia</option>
+					<option value="">Liga 1 Indonesia</option>
+				</select>
 			</div>
-			<div class="container">
-				<div class="user-data">
-					<div class="subhead">
-						<div class="img-radius">
-							<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
-						</div>
-						<b>#1</b>
-						<h3>Umuh Muchtar</h3>
-						<span>manager</span>
+        </div>
+        <div class="eprofile-src" style="display:none;">
+            <input type="text" placeholder="Cari ...">
+        </div>
+        <div class="container list-pemain">
+			<div id="reqplayerlist" class='loadplayerlist' action="eyeprofile" loading="off" clean="clsplayerlist">
+				<div id='clsplayerlist'>
+					<script>
+						$(document).ready(function(){
+							$(window).on('load',function(){
+								ajaxOnLoad('loadplayerlist');
+							});
+						});
+					</script>
+				</div>
+				<input type='hidden' name='fn' value='playerlist' class='cinput'>
+				<input type='hidden' name='slug' value='<?php echo $slug;?>' class='cinput'>
+				<input type='hidden' name='submenu' value='klub' class='cinput'>
+				<div class="user-pemain">
+					<div class="pemain-img">
+						<img src="https://www.striker.id/wp-content/uploads/2017/11/2359488.jpg" alt="" srcset="">
 					</div>
-					<table>
-						<tr>
-							<td>kewarganegaraan</td>
-							<td>indonesia</td>
-						</tr>
-						<tr>
-							<td>tgl lahir/umur</td>
-							<td>lorem ipsum</td>
-						</tr>
-						<tr>
-							<td>lorem ipsum</td>
-							<td>lorem ipsum</td>
-						</tr>
-					</table>
-					<a href="">lihat detail pemain</a>
+					<div class="pemain-data">
+						<h3>Nama Pemain</h3>
+						<span>Klub - posisi</span>
+					</div>
 				</div>
 			</div>
         </div>
-	</div>
         <div class="container box-jadwal" style="position: relative;">
-            <h3 id="next_match_klub" class="h3-orange">Jadwal pertandingan <?php echo urldecode($slug);?></h3>
+            <h3 class="h3-orange">Jadwal pertandingan <?php echo urldecode($slug);?></h3>
             <i class="material-icons">keyboard_arrow_left</i>
             <i class="material-icons">keyboard_arrow_right</i>
             <div class="jadwal">

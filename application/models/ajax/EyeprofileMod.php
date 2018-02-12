@@ -194,4 +194,48 @@ class EyeprofileMod extends CI_Model
 		$data =array('xClass'=>'reqdetailclub','xHtml'=> $html);
 		$this->tools->__flashMessage($data);
     }
+	
+	function __detailplayer(){
+		$slug = $this->input->post('slug');
+        $query = array();
+		$data['detailplayer'] = $this->excurl->remoteCall($this->__xurl().'profile/'.$slug, $this->__xkey(), $query);
+		
+		$html = $this->load->view($this->__theme().'eyeprofile/ajax/detailplayer', $data, true);
+	
+		$data =array('xClass'=>'reqdetailplayer','xHtml'=> $html);
+		$this->tools->__flashMessage($data);
+    }
+	
+	function __playerlist()
+    {
+        $competition = urldecode($this->input->post('slug'));
+
+        if ($competition == 'Non Liga') {
+            $competition = 'SSB / Akademi Sepakbola';
+        }
+
+        $page = ($this->session->userdata('pagepemain')) ? $this->session->userdata('pagepemain') : 1;
+        if ($this->input->post('paging') == 'next') {
+            if ($this->session->userdata('pagetotalpemain') > $this->session->userdata('pagepemain')) {
+                $page += 1;
+            }
+        } else {
+           if($this->input->post('paging') == 'back' && $this->session->userdata('pagepemain') >= 2){
+                $page -= 1;
+            }
+        }
+
+        $this->session->set_userdata(array('pagepemain' => $page));
+
+        $query = array('page' => $this->session->userdata('pagepemain'), 'limit' => 10, 'club' => '', 'league' => '', 'competition' => $competition, 'playercount' => false);
+
+        $data['slug'] = $competition;
+        $data['playerlist'] = $this->excurl->remoteCall($this->__xurl() . 'profile', $this->__xkey(), $query);
+        $data['playercount'] = $this->excurl->remoteCall($this->__xurl() . 'profile', $this->__xkey(), array_merge($query, ['playercount' => true]));
+
+        $html = $this->load->view($this->__theme() . 'eyeprofile/ajax/playerlist', $data, true);
+
+        $data = array('xClass' => 'reqplayerlist', 'xHtml' => $html, 'xUrlhash' => base_url() . 'eyeprofile/pemain/' . $competition . '/' . $page);
+        $this->tools->__flashMessage($data);
+    }
 }

@@ -27,6 +27,14 @@
 				</option>
 <?php				
 			}
+			else if ($submenu == 'pemain')
+			{
+?>
+				<option value="<?php echo base_url()."eyeprofile/pemain/".$comptition?>"> 
+					<?php echo $comptition;?> 
+				</option>
+<?php				
+			}
 			else
 			{
 ?>

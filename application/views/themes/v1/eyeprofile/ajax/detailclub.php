@@ -70,6 +70,12 @@
 				</table>
 				<a href="<?php echo base_url();?>eyeprofile/pemain_detail/<?php echo $players->slug;?>">lihat detail pemain</a>
 			</div>
+			<script>
+				$(document).ready(function(){
+					$("li#slug_klub_detail").html("<?php echo $dt->name;?>");
+					$("h3#next_match_klub").html("Jadwal pertandingan <?php echo $dt->name;?>");
+				});
+			</script>
 <?php
 			}?>
 		</div>
