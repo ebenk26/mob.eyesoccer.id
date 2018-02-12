@@ -1,3 +1,6 @@
+	<?php 
+		$slugnya = urldecode($slug);
+	?>
 	<!-- CONTENT BODY -->
     <div class="crumb">
             <ul>
@@ -18,7 +21,7 @@
                 <a class="active" href="#content1">Info</a>
             </div>
             <div class="table-scroll">
-				<div id="reqclubcount" class='loadclubcount' action="eyeprofile" loading="off" clean="clsclubcount">
+				<div id="reqdescleague" class='loadclubcount' action="eyeprofile" loading="off" clean="clsclubcount">
 					<div id='clsclubcount'>
 						<script>
 							$(document).ready(function(){
@@ -28,9 +31,9 @@
 							});
 						</script>
 					</div>
-					<input type='hidden' name='fn' value='clubcount' class='cinput'>
+					<input type='hidden' name='fn' value='desc_league' class='cinput'>
 					<input type='hidden' name='submenu' value='klub' class='cinput'>
-					<input type='hidden' name='slug' value='<?php echo $slug;?>' class='cinput'>
+					<input type='hidden' name='slug' value='<?php echo $slugnya;?>' class='cinput'>
 					<table class="content-tab-eprofile">
 						<tr>
 							<td>Jumlah Klub</td>

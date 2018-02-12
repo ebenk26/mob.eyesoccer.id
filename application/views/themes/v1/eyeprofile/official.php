@@ -4,13 +4,44 @@
 ?>
 
 <div class="eprofile">
-    <div class="container over-x">
-        <div class="container sub-menu w-max">
-            <a href="<?php echo base_url();?>eyeprofile/klub">klub</a>
-            <a href="<?php echo base_url();?>eyeprofile/pemain">pemain</a>
-            <a href="" class="active">ofisial</a>
-            <a href="">perangkat pertandingan</a>
-            <a href="">supporter</a>
+    <div class="head">
+        <div class="img-radius" style="display:none;">
+            <img src="https://www.eyesoccer.id/systems/club_logo/2034LOGO UNTUK APLIKASI.jpg"
+                alt="">
+        </div>
+        <h2 class="h2-text-bottom"><?php echo urldecode($slug);?></h2>
+        <div class="container tab-eprofile">
+            <a class="active" href="#content1">Info</a>
+        </div>
+        <div class="table-scroll">
+            <div id="reqdescleague" class='loadclubcount' action="eyeprofile" loading="off" clean="clsclubcount">
+                <div id='clsclubcount'>
+                    <script>
+                        $(document).ready(function(){
+                            $(window).on('load',function(){
+                                ajaxOnLoad('loadclubcount');
+                            });
+                        });
+                    </script>
+                </div>
+                <input type='hidden' name='fn' value='desc_league' class='cinput'>
+                <input type='hidden' name='submenu' value='klub' class='cinput'>
+                <input type='hidden' name='slug' value='<?php echo $slug;?>' class='cinput'>
+                <table class="content-tab-eprofile">
+                    <tr>
+                        <td>Jumlah Klub</td>
+                        <td>: 0</td>
+                    </tr>
+                    <tr>
+                        <td>Jumlah Pemain</td>
+                        <td>: 0</td>
+                    </tr>
+                    <tr>
+                        <td>Pemain Asing</td>
+                        <td>: 0</td>
+                    </tr>
+                </table>
+            </div>
         </div>
     </div>
     <div class="container" style="font-size: .8em;">
@@ -33,61 +64,6 @@
                 <option value="">Liga 1 Indonesia</option>
                 <option value="">Liga 1 Indonesia</option>
             </select>
-        </div>
-    </div>
-    <div id="reqtbloff" class='loadtbloff' action="eyeprofile" loading="off" clean="clstbloff">
-        <div id='clstbloff'>
-            <script>
-                $(document).ready(function(){
-                    $(window).on('load',function(){
-                        ajaxOnLoad('loadtbloff');
-                    });
-                });
-            </script>
-        </div>
-        <input type='hidden' name='fn' value='desc_league' class='cinput'>
-        <input type='hidden' name='slug' value='<?php echo $slug;?>' class='cinput'>
-        <div class="container eprofile-liga-box">
-            <div class="img-medium">
-                <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
-            </div>
-            <table class="table-justify" style="visibility: hidden;">
-                <tr>
-                    <td>level liga</td>
-                    <td>:</td>
-                    <td>tingkat pertama</td>
-                </tr>
-                <tr>
-                    <td>jumlah klub</td>
-                    <td>:</td>
-                    <td>18 klub</td>
-                </tr>
-                <tr>
-                    <td>jumlah pemain</td>
-                    <td>:</td>
-                    <td>531 pemain</td>
-                </tr>
-                <tr>
-                    <td>pemain asing</td>
-                    <td>:</td>
-                    <td>70 pemain</td>
-                </tr>
-                <tr>
-                    <td>rekor juara</td>
-                    <td>:</td>
-                    <td>persib (10 kali)</td>
-                </tr>
-                <tr>
-                    <td>umur rata-rata</td>
-                    <td>:</td>
-                    <td>27 tahun</td>
-                </tr>
-                <tr>
-                    <td>juara bertahan</td>
-                    <td>:</td>
-                    <td>persipura jayapura</td>
-                </tr>
-            </table>
         </div>
     </div>
     <div class="eprofile-src">
