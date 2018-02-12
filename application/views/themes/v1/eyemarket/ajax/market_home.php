@@ -7,7 +7,7 @@
 		    <div class="ribbon-background"></div>
 		</div>
 		<div class="box-img">
-	        <img src="<?= MARKETIMG."".$value["image1"]; ?>" alt="<?= $value["nama"]; ?>" class="emarket-product">
+	        <img src="<?= MARKETIMG."".$value["image1"]; ?>" alt="<?= $value["nama"]; ?>" class="emarket-product-img">
 	        <h1><?= $value["nama"]; ?></h1>
 	        <button type="text" class="pagination-green-btn m-0 block">Lihat Detail</button>
 	    </div>

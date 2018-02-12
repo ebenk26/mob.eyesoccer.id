@@ -1,9 +1,27 @@
 <?php 
-    $count_club = json_decode($count_club);
-    $count_player = json_decode($count_player);
-    $count_player_foreign = json_decode($count_player_foreign);
+    if($klublist)
+    {
+        $klublist = json_decode($klublist);
+        $klubcount = json_decode($playercount);
+    }
 ?>
-<div class="container eprofile-liga-box">    
+
+<table class="content-tab-eprofile">
+    <tr>
+        <td>Jumlah Klub</td>
+        <td>: <?= $klublist->data[0]->cc; ?></td>
+    </tr>
+    <tr>
+        <td>Jumlah Pemain</td>
+        <td>: <?= $klubcount->data->player_local; ?></td>
+    </tr>
+    <tr>
+        <td>Pemain Asing</td>
+        <td>: <?= $klubcount->data->player_foreign; ?></td>
+    </tr>
+</table>
+
+<!-- <div class="container eprofile-liga-box">    
     <div class="img-medium">
         <img src="http://static.eyesoccer.id/v1/cache/images/LOGO%20UNTUK%20APLIKASI.jpg/medium" alt="">
     </div>
@@ -44,4 +62,4 @@
             <td>-</td>
         </tr>
     </table>
-</div>
+</div> -->

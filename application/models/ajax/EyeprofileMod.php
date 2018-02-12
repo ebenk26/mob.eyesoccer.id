@@ -118,28 +118,21 @@ class EyeprofileMod extends CI_Model
 
     function __desc_league()
     {
-		$competition = urldecode($this->input->post('slug'));
+        $competition = urldecode($this->input->post('slug'));
+        $data['submenu'] = urldecode($this->input->post('submenu'));
 
-		if($competition == 'Non Liga'){
-			$competition = 'SSB / Akademi Sepakbola';
-		}
+        if ($competition == 'Non Liga') {
+            $competition = 'SSB / Akademi Sepakbola';
+        }
 
-		// jumlah klub
-	    $count_club = array('page'  => 1, 'limit' => 8, 'competition' => $competition, 'count' => true);
-		$data['count_club'] = $this->excurl->remoteCall($this->__xurl().'profile-club', $this->__xkey(), $count_club);
+        $query = array('page' => 1, 'limit' => 9, 'league' => '', 'competition' => $competition, 'count' => true);
+        $data['klublist'] = $this->excurl->remoteCall($this->__xurl() . 'profile-club', $this->__xkey(), $query);
+        $data['playercount'] = $this->excurl->remoteCall($this->__xurl() . 'profile', $this->__xkey(), array_merge($query, ['playercount' => true]));
 
-		// jumlah pemain
-	    $count_player = array('page'  => 1, 'limit' => 8, 'competition' => $competition, 'count' => true);
-		$data['count_player'] = $this->excurl->remoteCall($this->__xurl().'profile', $this->__xkey(), $count_player);
+        $html = $this->load->view($this->__theme() . 'eyeprofile/ajax/desc_league', $data, true);
 
-		// jumlah pemain asing
-	    $count_player_foreign = array('page'  => 1, 'limit' => 8, 'competition' => $competition, 'playercount' => true);
-		$data['count_player_foreign'] = $this->excurl->remoteCall($this->__xurl().'profile', $this->__xkey(), $count_player_foreign);
-		
-		$html = $this->load->view($this->__theme().'eyeprofile/ajax/desc_league', $data, true);
-
-		$data =array('xClass'=>'reqtbloff','xHtml'=> $html);
-		$this->tools->__flashMessage($data);
+        $data = array('xClass' => 'reqdescleague', 'xHtml' => $html);
+        $this->tools->__flashMessage($data);
     }
 
     function __officiallist()
@@ -185,13 +178,25 @@ class EyeprofileMod extends CI_Model
     }
 	
 	function __detailclub(){
-		$slug = $this->input->post('slug');
+        $slug = $this->input->post('slug');
         $query = array();
-		$data['detailclub'] = $this->excurl->remoteCall($this->__xurl().'profile-club/'.$slug, $this->__xkey(), $query);
-		
-		$html = $this->load->view($this->__theme().'eyeprofile/ajax/detailclub', $data, true);
+        $data['detailclub'] = $this->excurl->remoteCall($this->__xurl().'profile-club/'.$slug, $this->__xkey(), $query);
+        
+        $html = $this->load->view($this->__theme().'eyeprofile/ajax/detailclub', $data, true);
+    
+        $data =array('xClass'=>'reqdetailclub','xHtml'=> $html);
+        $this->tools->__flashMessage($data);
+    }
+
+    function __detailofficial()
+    {
+        $slug = urldecode($this->input->post('slug'));
+
+        $query = array();
+        $data['model'] = $this->excurl->remoteCall($this->__xurl().'profile-official/'.$slug, $this->__xkey(), $query);
+		$html = $this->load->view($this->__theme().'eyeprofile/ajax/detailofficial', $data, true);
 	
-		$data =array('xClass'=>'reqdetailclub','xHtml'=> $html);
+		$data =array('xClass'=>'reqoffcdetail','xHtml'=> $html);
 		$this->tools->__flashMessage($data);
     }
 	
