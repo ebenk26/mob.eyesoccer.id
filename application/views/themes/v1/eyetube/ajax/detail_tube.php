@@ -35,10 +35,8 @@
                 </div>
 
                 <div class="kolom-share">
-                    <div class="sharethis-inline-share-buttons" data-image="<?=base_url()?>systems/eyetube_storage/"></div>
-                    <script type='text/javascript'
-                    src="<?=base_url()?>assets/js/sharethis.js#property=596cf64cb69de60011989f08&product=inline-share-buttons"
-                    async='async'></script>
+                    <div class="sharethis-inline-share-buttons"></div>
+					<script type="text/javascript" src="//platform-api.sharethis.com/js/sharethis.js#property=5a81408ae45fbb001342fedf&product=inline-share-buttons"></script>
                 </div>
             </div>
 
