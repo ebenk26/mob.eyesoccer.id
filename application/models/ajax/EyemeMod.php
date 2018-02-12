@@ -17,7 +17,7 @@ class EyemeMod extends CI_Model {
     	$query = array('page'=> '1', 'limit'=> '5', 'sortby'=> 'last_online');
     	$data['eyeme'] = $this->excurl->remoteCall($this->__xurl().'me-images', $this->__xkey(), $query);
 	
-    	$html = $this->load->view($this->__theme().'eyeme/ajax/me_list', $data, true);
+    	$html = $this->load->view($this->__theme().'eyeme/ajax/me_a_list', $data, true);
 	
     	$data = array('xClass' => 'reqme', 'xHtml' => $html);
     	$this->tools->__flashMessage($data);
@@ -27,7 +27,7 @@ class EyemeMod extends CI_Model {
         $query = array('page' => '1', 'limit' => '10','username'=> $this->session->username,'following'=> true);
         $data['imglist'] = $this->excurl->remoteCall($this->__xurl().'me-images',$this->__xkey(),$query);
 
-        $html = $this->load->view($this->__theme().'eyeme/ajax/me_imgfollowedlist',$data,true);
+        $html = $this->load->view($this->__theme().'eyeme/ajax/me_a_imgfollowed',$data,true);
 
         $data = array('xClass' => 'reqimgfollowedlist','xHtml' => $html);
         $this->tools->__flashMessage($data);
@@ -37,9 +37,36 @@ class EyemeMod extends CI_Model {
 
         $query = array('page' => '1','limit' => '17', 'sortby'=> 'last_online');
         $data['explore'] = $this->excurl->remoteCall($this->__xurl().'me-images',$this->__xkey(),$query);
-        $html            = $this->load->view($this->__theme().'eyeme/ajax/me_explorelist',$data,true);
+        $html            = $this->load->view($this->__theme().'eyeme/ajax/me_a_explore',$data,true);
         $data            = array('xClass' => 'reqexplorelist','xHtml' => $html);
         $this->tools->__flashMessage($data);
+    }
+    function __meprofile(){
+        $req = $this->input->post('uname');
+        $req = explode('-',$req);
+        $uname = $req[0];
+        $query =  array('page' => '1', 'limit' => '1' ,'username' => $uname);
+        $res           = $this->excurl->remoteCall($this->__xurl().'me/'.$uname,$this->__xkey(),$query);
+        $data['res']   = json_decode($res);
+
+        if(count($data['res']->data) > 0 ){
+            if($req[1] == 'profile'){
+
+                $html      = $this->load->view($this->__theme().'eyeme/ajax/me_a_profile',$data,true);
+                $data      = array('xClass'=> 'reqprofile','xHtml' => $html);
+            }
+            else{
+                $html       = $this->load->view($this->__theme().'eyeme/ajax/me_a_profileimg',$data,true);
+                $data       = array('xClass'=> 'reqprofileimg','xHtml' => $html);
+            }
+
+        }
+          else{
+            $data = array('xClass' => 'all','xHtml'=> 'User tidak ditemukan');
+        }
+
+        $this->tools->__flashMessage($data);
+        
     }
    
 }

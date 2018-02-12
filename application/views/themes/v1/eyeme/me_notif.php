@@ -1,10 +1,5 @@
-<div class="box-notif">
-        <div class="box-notif-content">
-            <a href="">Laporkan</a>
-            <a href="">Bagikan</a>
-        </div>
-    </div>
-    <div class="info-box-notif">
+
+    <div class="info-box-notif" style="display:block">
         <div class="info-box-notif-content">
             <table>
                 <tr>

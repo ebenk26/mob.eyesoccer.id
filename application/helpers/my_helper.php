@@ -653,6 +653,9 @@ function urltobetame($url){
     
 
 }
+function urltoimgstore($url){
+    return str_replace('http://static.eyesoccer.id/v1/cache/images','http://beta.eyesoccer.id/assets/img_storage',$url);
+}
 
 function set_breadcrumb($kanal,$page)
 {

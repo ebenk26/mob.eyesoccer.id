@@ -29,9 +29,7 @@ class Eyeme extends CI_Controller {
 	if($_POST)
 	{
 	    $this->load->view($this->__theme().'function');
-	    $fn = $_POST['fn'];
-	   
-	    
+	    $fn   = $_POST['fn'];	    
 	    $data = [];
 	    if(function_exists($fn))
 	    {
@@ -52,6 +50,18 @@ class Eyeme extends CI_Controller {
     	$data   = $this->getdata();
     	$data['content'] = 'eyeme/me_explore';
     	$this->load->view($this->__theme().'template',$data);
+
+    }
+    function profile(){
+    	$data  = $this->getdata();
+    	$data['content']   = 'eyeme/me_profile';
+    	$this->load->view($this->__theme().'template',$data);
+    
+    }
+    function notif(){
+        $data = $this->getdata();
+        $data['content']  = 'eyeme/me_notif';
+        $this->load->view($this->__theme().'template',$data);
     }
     function sess_destroy(){
     	$this->session->sess_destroy();

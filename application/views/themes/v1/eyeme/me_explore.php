@@ -48,3 +48,8 @@
         
         </div>
     </div>
+    <!--<script type="text/javascript">
+        var container = $('.container').infiniteScroll({
+            path
+        })
+    </script>-->
