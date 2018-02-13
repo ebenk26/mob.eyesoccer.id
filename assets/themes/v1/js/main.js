@@ -5,7 +5,7 @@ $(document).ready(function () {
         e.preventDefault();
 
         var IDForm = $(this).attr('id');
-        if ($(this).attr('id') === undefined) {
+        if ($(this).attr('id') == undefined) {
             var IDForm = $(this).attr('form');
         }
 
@@ -23,7 +23,7 @@ $(document).ready(function () {
         vb = $(this).attr('vb'); // Back to Normal
         vp = $(this).attr('vp'); // Set to Active
         $('.' + vb).each(function () {
-            if ($(this).attr('active') === 'on') {
+            if ($(this).attr('active') == 'on') {
                 $(this).removeAttr('active');
                 $(this).removeClass(vp)
             }
@@ -36,7 +36,7 @@ $(document).ready(function () {
             df = $(this).attr('df');
             vdf = JSON.parse($(df).attr('val'));
             $.each(vdf, function (v, n) {
-                if (Object.prototype.toString.call(n) === '[object Object]') {
+                if (Object.prototype.toString.call(n) == '[object Object]') {
                     $.each(n, function (v1, n1) {
                         $('.' + v + ' .' + v1).html(n1);
                     })
@@ -47,10 +47,10 @@ $(document).ready(function () {
 
             cls = $(this).attr('clean');
             splitID = cls.split(",");
-            if (Object.prototype.toString.call(splitID) === '[object Array]') {
+            if (Object.prototype.toString.call(splitID) == '[object Array]') {
                 splitID.map(function (v) {
                     $('.' + v).each(function () {
-                        if ($(this).attr('active') === 'on') {
+                        if ($(this).attr('active') == 'on') {
                             $(this).removeAttr('active');
                             $(this).removeClass(vp)
                         }
@@ -58,7 +58,7 @@ $(document).ready(function () {
                 })
             } else {
                 $('.' + cls).each(function () {
-                    if ($(this).attr('active') === 'on') {
+                    if ($(this).attr('active') == 'on') {
                         $(this).removeAttr('active');
                         $(this).removeClass(vp)
                     }
@@ -77,18 +77,17 @@ $(document).ready(function () {
 
         var msgBox = $(this).attr('msg');
         var formURL = $(this).attr('action');
-        var msgRequest = ($('#' + msgBox + '.msg').attr('value') === undefined) ? 'ajaxMessage' : $('#' + msgBox + '.msg').attr('value');
+        var msgRequest = ($('#' + msgBox + '.msg').attr('value') == undefined) ? 'ajaxMessage' : $('#' + msgBox + '.msg').attr('value');
 
         ajaxReqGet(formURL, msgRequest);
     });
-
 
     // Post on Click
     $(document).on("click", ".form_post", function (e) {
         e.preventDefault();
 
         var IDForm = $(this).attr('id');
-        if ($(this).attr('id') === undefined) {
+        if ($(this).attr('id') == undefined) {
             var IDForm = $(this).attr('form');
         }
 
@@ -97,10 +96,10 @@ $(document).ready(function () {
             vp = $(this).attr('vp');
             cls = $(this).attr('clean');
             splitID = cls.split(",");
-            if (Object.prototype.toString.call(splitID) === '[object Array]') {
+            if (Object.prototype.toString.call(splitID) == '[object Array]') {
                 splitID.map(function (v) {
                     $('.' + v).each(function () {
-                        if ($(this).attr('active') === 'on') {
+                        if ($(this).attr('active') == 'on') {
                             $(this).removeAttr('active');
                             $(this).removeClass(vp)
                         }
@@ -108,7 +107,7 @@ $(document).ready(function () {
                 })
             } else {
                 $('.' + cls).each(function () {
-                    if ($(this).attr('active') === 'on') {
+                    if ($(this).attr('active') == 'on') {
                         $(this).removeAttr('active');
                         $(this).removeClass(vp)
                     }
@@ -129,11 +128,11 @@ $(document).ready(function () {
         }
 
         // CSS Select
-        if ($(this).attr('point') === "true") {
+        if ($(this).attr('point') == "true") {
             vb = $(this).attr('vb'); // Back to Normal
             vp = $(this).attr('vp'); // Set to Active
             $('.' + vb).each(function () {
-                if ($(this).attr('active') === 'on') {
+                if ($(this).attr('active') == 'on') {
                     $(this).removeAttr('active');
                     $(this).removeClass(vp)
                 }
@@ -147,7 +146,7 @@ $(document).ready(function () {
         var baseURL = $('.baseurl').attr('val');
 
         $('#boxmessage').fadeOut(200);
-        var loading = ($(this).attr('loading') === 'off') ? 0 : 1;
+        var loading = ($(this).attr('loading') == 'off') ? 0 : 1;
         if (loading > 0) {
             $('.loading').show();
             box_popup();
@@ -160,6 +159,31 @@ $(document).ready(function () {
             var nm = $(this).attr('name')
             val[i] = {name: nm, value: $(this).val()};
         });
+
+        var formURL = baseURL + actURL;
+        var postData = val;
+        var msgRequest = ($('#' + msgBox + '.msg').attr('value') == undefined) ? 'ajaxMessage' : $('#' + msgBox + '.msg').attr('value');
+
+        ajaxReqBasic(formURL, postData, msgRequest);
+    });
+
+    // Post on Keyup
+    $(document).on("keyup", ".form_keyup", function (e) {
+        e.preventDefault();
+
+        var msgBox = $(this).attr('msg');
+        var actURL = $(this).attr('action');
+        var baseURL = $('.baseurl').attr('val');
+
+        $('#boxmessage').fadeOut(200);
+        var loading = ($(this).attr('loading') === 'off') ? 0 : 1;
+        if (loading > 0) {
+            $('.loading').show();
+            box_popup();
+        }
+
+        var nm = $(this).attr('name')
+        var val = [{name: nm, value: $(this).val()}];
 
         var formURL = baseURL + actURL;
         var postData = val;
@@ -182,7 +206,7 @@ $(document).ready(function () {
         var postData = $(this).serializeArray();
 
         var msgBox = $(this).attr('msg');
-        var msgRequest = ($('#' + msgBox + '.msg').attr('value') === undefined) ? 'ajaxMessage' : $('#' + msgBox + '.msg').attr('value');
+        var msgRequest = ($('#' + msgBox + '.msg').attr('value') == undefined) ? 'ajaxMessage' : $('#' + msgBox + '.msg').attr('value');
 
         ajaxReqBasic(formURL, postData, msgRequest);
     });
@@ -201,7 +225,7 @@ $(document).ready(function () {
         var postData = new FormData(this);
 
         var msgBox = $(this).attr('msg');
-        var msgRequest = ($('#' + msgBox + '.msg').attr('value') === undefined) ? 'ajaxMessage' : $('#' + msgBox + '.msg').attr('value');
+        var msgRequest = ($('#' + msgBox + '.msg').attr('value') == undefined) ? 'ajaxMessage' : $('#' + msgBox + '.msg').attr('value');
 
         ajaxReqMulti(formURL, postData, msgRequest);
     });
@@ -230,7 +254,7 @@ function box_popup() {
 
 function ajaxOnLoad(ax) {
     var IDForm = $('.' + ax).attr('id');
-    if ($('.' + ax).attr('id') === undefined) {
+    if ($('.' + ax).attr('id') == undefined) {
         var IDForm = $('.' + ax).attr('form');
     }
 
@@ -239,10 +263,10 @@ function ajaxOnLoad(ax) {
         vp = $('.' + ax).attr('vp');
         cls = $('.' + ax).attr('clean');
         splitID = cls.split(",");
-        if (Object.prototype.toString.call(splitID) === '[object Array]') {
+        if (Object.prototype.toString.call(splitID) == '[object Array]') {
             splitID.map(function (v) {
                 $('.' + v).each(function () {
-                    if ($(this).attr('active') === 'on') {
+                    if ($(this).attr('active') == 'on') {
                         $(this).removeAttr('active');
                         $(this).removeClass(vp)
                     }
@@ -250,7 +274,7 @@ function ajaxOnLoad(ax) {
             })
         } else {
             $('.' + cls).each(function () {
-                if ($(this).attr('active') === 'on') {
+                if ($(this).attr('active') == 'on') {
                     $(this).removeAttr('active');
                     $(this).removeClass(vp)
                 }
@@ -271,11 +295,11 @@ function ajaxOnLoad(ax) {
     }
 
     // CSS Select
-    if ($('.' + ax).attr('point') === "true") {
+    if ($('.' + ax).attr('point') == "true") {
         vb = $('.' + ax).attr('vb'); // Back to Normal
         vp = $('.' + ax).attr('vp'); // Set to Active
         $('.' + vb).each(function () {
-            if ($(this).attr('active') === 'on') {
+            if ($(this).attr('active') == 'on') {
                 $(this).removeAttr('active');
                 $(this).removeClass(vp)
             }
@@ -289,7 +313,7 @@ function ajaxOnLoad(ax) {
     var baseURL = $('.baseurl').attr('val');
 
     $('#boxmessage').fadeOut(200);
-    var loading = ($('.' + ax).attr('loading') === 'off') ? 0 : 1;
+    var loading = ($('.' + ax).attr('loading') == 'off') ? 0 : 1;
     if (loading > 0) {
         $('.loading').show();
         box_popup();
@@ -305,7 +329,7 @@ function ajaxOnLoad(ax) {
 
     var formURL = baseURL + actURL;
     var postData = val;
-    var msgRequest = ($('#' + msgBox + '.msg').attr('value') === undefined) ? 'ajaxMessage' : $('#' + msgBox + '.msg').attr('value');
+    var msgRequest = ($('#' + msgBox + '.msg').attr('value') == undefined) ? 'ajaxMessage' : $('#' + msgBox + '.msg').attr('value');
 
     ajaxReqBasic(formURL, postData, msgRequest);
 }
@@ -365,11 +389,11 @@ function ajaxReqMulti(formURL, postData, msgRequest) {
 
 function ajaxMessage(request) {
     request.done(function (msg) {
-        if (Object.prototype.toString.call(msg) === '[object String]') {
+        if (Object.prototype.toString.call(msg) == '[object String]') {
             msg = JSON.parse(msg);
         }
 
-        if (msg.xClear === undefined && msg.xCss === 'boxsuccess') {
+        if (msg.xClear == undefined && msg.xCss == 'boxsuccess') {
             $('.cinput').val('');
         }
 
@@ -377,7 +401,7 @@ function ajaxMessage(request) {
             $('#mask').remove();
         });
 
-        if (msg.xAlert === undefined && msg.xMsg != undefined) {
+        if (msg.xAlert == undefined && msg.xMsg != undefined) {
             $('#boxmessage').fadeIn(500).html("<div class='" + msg.xCss + "'>" + msg.xMsg + "</div>");
             $('body').animate({
                 scrollTop: eval($('#boxmessage').offset().top - 999)
@@ -392,11 +416,11 @@ function ajaxMessage(request) {
 
 function ajaxMsgForm(request) {
     request.done(function (msg) {
-        if (Object.prototype.toString.call(msg) === '[object String]') {
+        if (Object.prototype.toString.call(msg) == '[object String]') {
             msg = JSON.parse(msg);
         }
 
-        if (msg.xClear === undefined && msg.xCss === 'boxsuccess') {
+        if (msg.xClear == undefined && msg.xCss == 'boxsuccess') {
             $('.cinput').val('');
         }
 
@@ -404,7 +428,7 @@ function ajaxMsgForm(request) {
             $('#mask').remove();
         });
 
-        if (msg.xAlert === undefined && msg.xMsg != undefined) {
+        if (msg.xAlert == undefined && msg.xMsg != undefined) {
             $('#boxmsgform').fadeIn(500).html("<div class='" + msg.xCss + "'>" + msg.xMsg + "</div>");
         }
 
@@ -416,11 +440,11 @@ function ajaxMsgForm(request) {
 
 function ajaxMsgAcc(request) {
     request.done(function (msg) {
-        if (Object.prototype.toString.call(msg) === '[object String]') {
+        if (Object.prototype.toString.call(msg) == '[object String]') {
             msg = JSON.parse(msg);
         }
 
-        if (msg.xClear === undefined && msg.xCss === 'boxsuccess') {
+        if (msg.xClear == undefined && msg.xCss == 'boxsuccess') {
             $('.cinput').val('');
         }
 
@@ -428,7 +452,7 @@ function ajaxMsgAcc(request) {
             $('#mask').remove();
         });
 
-        if (msg.xAlert === undefined && msg.xMsg != undefined) {
+        if (msg.xAlert == undefined && msg.xMsg != undefined) {
             $('#boxmsgacc').fadeIn(500).html("<div class='" + msg.xCss + "'>" + msg.xMsg + "</div>");
             $('body').animate({
                 scrollTop: eval($('#boxmsgacc').offset().top - 999)
@@ -447,13 +471,13 @@ function responseData(msg) {
         $('.rcapthca').html('<img src="' + xurl + 'request/captcha">');
     }
 
-    if (msg.xAlert === undefined && msg.xDirect != undefined) {
+    if (msg.xAlert == undefined && msg.xDirect != undefined) {
         window.location = msg.xDirect;
     }
 
     if (msg.xAlert != undefined) {
-        var sTitle = (msg.xCss === 'boxsuccess') ? 'Success' : 'Error';
-        var sType = (msg.xCss === 'boxsuccess') ? 'success' : 'error';
+        var sTitle = (msg.xCss == 'boxsuccess') ? 'Success' : 'Error';
+        var sType = (msg.xCss == 'boxsuccess') ? 'success' : 'error';
         swal({
                 title: sTitle,
                 text: msg.xMsg,
@@ -474,7 +498,7 @@ function responseData(msg) {
 
     if (msg.xSplit != undefined) {
         $.each(msg.xData, function (v, n) {
-            if (Object.prototype.toString.call(n) === '[object Object]') {
+            if (Object.prototype.toString.call(n) == '[object Object]') {
                 $.each(n, function (v1, n1) {
                     $('.' + v + ' .' + v1).html(n1);
                 })
@@ -528,12 +552,12 @@ function actChain(urlx, valx, showx, cleanx) {
 
     var dataID;
     var splitID = valx.split("/");
-    if (Object.prototype.toString.call(splitID) === '[object Array]') {
+    if (Object.prototype.toString.call(splitID) == '[object Array]') {
         var valData = [];
         splitID.forEach(function (val, i) {
             valData[i] = {name: val, value: $('#' + val).val()};
 
-            if (i === splitID.length - 1) {
+            if (i == splitID.length - 1) {
                 dataID = val;
             }
         });
@@ -544,7 +568,7 @@ function actChain(urlx, valx, showx, cleanx) {
 
     if (cleanx != undefined) {
         var splitClean = cleanx.split("/");
-        if (Object.prototype.toString.call(splitClean) === '[object Array]') {
+        if (Object.prototype.toString.call(splitClean) == '[object Array]') {
             splitClean.forEach(function (val) {
                 var cl = 0;
                 switch ($('#' + val)[0].nodeName) {
@@ -568,11 +592,11 @@ function actChain(urlx, valx, showx, cleanx) {
     }
 
     $('#boxmessage').fadeOut(200);
-    if (urlx === false) {
+    if (urlx == false) {
         return false;
     }
 
-    var loading = ($('#' + dataID).attr('loading') === undefined) ? 0 : 1;
+    var loading = ($('#' + dataID).attr('loading') == undefined) ? 0 : 1;
     if (loading > 0) {
         $('.loading').show();
         box_popup();
@@ -602,7 +626,7 @@ function rmdata(val) {
     if (cl > 0) {
         if ($('#' + val).val() != "") {
             $('#' + val).val("");
-            if (val === 'namafile') {
+            if (val == 'namafile') {
                 $('.' + val).removeAttr('style');
             }
         }
@@ -611,16 +635,23 @@ function rmdata(val) {
     }
 }
 
-function tabmenu(id, tagClick, tagShow, beforeClick, afterClick) {
-    $('#boxtab ' + tagClick).each(function () {
-        if ($(this).attr('active') === 'true') {
+function tabmenu(id, beforeClick, afterClick) {
+    $('#boxtab span, #boxtab a').each(function () {
+        if ($(this).attr('active') == 'true') {
             var idx = $(this).attr('id');
 
             $('#' + idx).removeAttr('active');
             $('#' + idx).removeAttr('class');
+            $('#' + idx).addClass(beforeClick);
 
-            if (afterClick != undefined) $('#' + idx).addClass(beforeClick);
-            $(tagShow + '#' + idx).fadeOut(0);
+            if ($('div#' + idx).html() != undefined) {
+                $('div#' + idx).fadeOut(0);
+            }
+
+
+            if ($('table#' + idx).html() != undefined) {
+                $('table#' + idx).fadeOut(0);
+            }
 
             var fltab = idx;
         }
@@ -630,12 +661,18 @@ function tabmenu(id, tagClick, tagShow, beforeClick, afterClick) {
     $('#' + id).attr('active', 'true');
     $('#' + id).addClass(afterClick);
 
-    $(tagShow + '#' + id).fadeIn('fast');
+    if ($('div#' + id).html() != undefined) {
+        $('div#' + id).fadeIn('fast');
+    }
+
+    if ($('table#' + id).html() != undefined) {
+        $('table#' + id).fadeIn('fast');
+    }
 }
 
 function tabflag(id) {
     $('#boxbutton ul li a').each(function () {
-        if ($(this).attr('class') === 'flag-active') {
+        if ($(this).attr('class') == 'flag-active') {
             var idx = $(this).attr('id');
 
             $('#' + idx).removeAttr('style');
@@ -656,8 +693,8 @@ function readPic(input, val, def) {
         var reader = new FileReader();
 
         reader.onload = function (e) {
-            if (val === undefined) {
-                if (input.files[0].type === 'image/png') {
+            if (val == undefined) {
+                if (input.files[0].type == 'image/png') {
                     $('.ffiles .zbox').append("<a href='javascript:void(0)' class='pos-abs delete' onclick='rmPic()'><i class='fa fa-trash fa-fw'></i></a>");
                     $('.ffiles .namafile').css({'display': 'block', 'background-image': 'url(' + e.target.result + ')'});
                 } else {
@@ -675,19 +712,19 @@ function readPic(input, val, def) {
                 })
 
                 if (i < 5) {
-                    if (def === undefined) {
+                    if (def == undefined) {
                         var imgready = $('.img-pic-' + val).attr('ready');
                         var imgval = val + 1;
                         var imgdef = $('.img-pic-' + val).attr('default');
 
-                        if (imgready === undefined) {
+                        if (imgready == undefined) {
                             $('.img-pic-' + val).attr('ready', true);
                             $('.img-pic-' + val + ' .zbox').append("<a href='javascript:void(0)' class='pos-abs delete' onclick='rmPic(" + val + ")'><i class='fa fa-trash fa-fw'></i></a>");
                             $('.img-pic-' + val + ' .zbox').append("<a href='javascript:void(0)' div class='zbox default' onclick='dfPic(" + val + ")'>Set as Default</a>");
                         }
                         $('.img-pic-' + val + ' .namafile').css({'display': 'block', 'background-image': 'url(' + e.target.result + ')'});
 
-                        if (imgready === undefined) {
+                        if (imgready == undefined) {
                             $('.img .design').append("<label class='col-lg-2 col-md-3 col-sm-3 col-xs-3 cl-pad-lr img-ds img-pic-" + imgval + "' default='" + imgdef + "' for='img-sh-" + imgval + "'>"
                                 + "<div class='mg-lr-4'>"
                                 + "<div class='zbox pos-rel mg-b-10'>"
@@ -705,13 +742,13 @@ function readPic(input, val, def) {
                         var imgval = val + 1;
                         var imgdef = $('.ff-pic-' + val).attr('default');
 
-                        if (imgready === undefined) {
+                        if (imgready == undefined) {
                             $('.ff-pic-' + val).attr('ready', true);
                             $('.ff-pic-' + val + ' .zbox').append("<a href='javascript:void(0)' class='pos-abs delete' onclick='rmPic(" + val + ", true)'><i class='fa fa-trash fa-fw'></i></a>");
                         }
                         $('.ff-pic-' + val + ' .namafile').css({'display': 'block', 'background-image': 'url(' + e.target.result + ')'});
 
-                        if (imgready === undefined) {
+                        if (imgready == undefined) {
                             $('.img .original').append("<label class='col-lg-2 col-md-3 col-sm-3 col-xs-3 cl-pad-lr ff-ds ff-pic-" + imgval + "' default='" + imgdef + "' for='ff-sh-" + imgval + "'>"
                                 + "<div class='mg-lr-4'>"
                                 + "<div class='zbox pos-rel mg-b-10'>"
@@ -745,7 +782,7 @@ function dfPic(val) {
         var ds = $(this).attr('for');
         ds = ds.split('-');
 
-        if (ds[2] === val) {
+        if (ds[2] == val) {
             $('.img-pic-' + ds[2] + ' .default').attr('id', 'active');
             $('#is_default').val(i);
         } else {
@@ -755,12 +792,12 @@ function dfPic(val) {
 }
 
 function rmPic(val, def) {
-    if (val === undefined) {
+    if (val == undefined) {
         var imgdef = $('.ffiles').attr('default');
         $('.ffiles .delete').remove();
         $('.ffiles .namafile').css({'display': 'block', 'background-image': 'url(' + imgdef + ')'});
     } else {
-        if (def === undefined) {
+        if (def == undefined) {
             $('.img-pic-' + val).remove();
         } else {
             $('.ff-pic-' + val).remove();
