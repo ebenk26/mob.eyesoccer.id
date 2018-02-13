@@ -189,7 +189,15 @@ $(document).ready(function () {
         var postData = val;
         var msgRequest = ($('#' + msgBox + '.msg').attr('value') === undefined) ? 'ajaxMessage' : $('#' + msgBox + '.msg').attr('value');
 
-        ajaxReqBasic(formURL, postData, msgRequest);
+        var wait = $(this).data('wait');
+        if (wait) clearTimeout(wait);
+
+        wait = setTimeout(function () {
+            ajaxReqBasic(formURL, postData, msgRequest);
+        }, 500);
+
+        $(this).data('wait', wait);
+        return false;
     });
 
     // Basic
