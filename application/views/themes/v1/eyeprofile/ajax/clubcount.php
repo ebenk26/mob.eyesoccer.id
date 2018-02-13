@@ -2,24 +2,25 @@
 	if($klublist)
 	{
 		$klublist = json_decode($klublist);
+		$klubcount = json_decode($playercount);
 
 		if ($submenu == 'klub')
 		{
-			foreach ($klublist->data as $value)
+			foreach ($klublist->data as $dt)
 			{
 ?>
 				<table class="content-tab-eprofile">
 					<tr>
 						<td>Jumlah Klub</td>
-						<td>: <?php echo $value->cc;?></td>
+						<td>: <?php echo $dt->cc;?> klub</td>
 					</tr>
 					<tr>
-						<td>Lorem Ipsum</td>
-						<td>: Lorem Ipsum</td>
+						<td>Jumlah Pemain</td>
+						<td>: <?php echo $klubcount->data->player_local;?> Pemain</td>
 					</tr>
 					<tr>
-						<td>Lorem Ipsum</td>
-						<td>: Lorem Ipsum</td>
+						<td>Pemain Asing</td>
+						<td>: <?php echo $klubcount->data->player_foreign;?> Pemain</td>
 					</tr>
 				</table>
 <?php				

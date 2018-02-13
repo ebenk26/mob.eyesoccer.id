@@ -37,7 +37,7 @@ class EyeprofileMod extends CI_Model
                 $page += 1;
             }
         } else {
-            if ($this->session->userdata('pageklub') >= 2) {
+           if($this->input->post('paging') == 'back' && $this->session->userdata('pageklub') >= 2){
                 $page -= 1;
             }
         }
@@ -67,10 +67,11 @@ class EyeprofileMod extends CI_Model
 
         $query = array('page' => 1, 'limit' => 9, 'league' => '', 'competition' => $competition, 'count' => true);
         $data['klublist'] = $this->excurl->remoteCall($this->__xurl() . 'profile-club', $this->__xkey(), $query);
+		$data['playercount'] = $this->excurl->remoteCall($this->__xurl() . 'profile', $this->__xkey(), array_merge($query, ['playercount' => true]));
 
         $html = $this->load->view($this->__theme() . 'eyeprofile/ajax/clubcount', $data, true);
 
-        $data = array('xClass' => 'reqklublist', 'xHtml' => $html);
+        $data = array('xClass' => 'reqclubcount', 'xHtml' => $html);
         $this->tools->__flashMessage($data);
     }
 
@@ -117,28 +118,21 @@ class EyeprofileMod extends CI_Model
 
     function __desc_league()
     {
-		$competition = urldecode($this->input->post('slug'));
+        $competition = urldecode($this->input->post('slug'));
+        $data['submenu'] = urldecode($this->input->post('submenu'));
 
-		if($competition == 'Non Liga'){
-			$competition = 'SSB / Akademi Sepakbola';
-		}
+        if ($competition == 'Non Liga') {
+            $competition = 'SSB / Akademi Sepakbola';
+        }
 
-		// jumlah klub
-	    $count_club = array('page'  => 1, 'limit' => 8, 'competition' => $competition, 'count' => true);
-		$data['count_club'] = $this->excurl->remoteCall($this->__xurl().'profile-club', $this->__xkey(), $count_club);
+        $query = array('page' => 1, 'limit' => 9, 'league' => '', 'competition' => $competition, 'count' => true);
+        $data['klublist'] = $this->excurl->remoteCall($this->__xurl() . 'profile-club', $this->__xkey(), $query);
+        $data['playercount'] = $this->excurl->remoteCall($this->__xurl() . 'profile', $this->__xkey(), array_merge($query, ['playercount' => true]));
 
-		// jumlah pemain
-	    $count_player = array('page'  => 1, 'limit' => 8, 'competition' => $competition, 'count' => true);
-		$data['count_player'] = $this->excurl->remoteCall($this->__xurl().'profile', $this->__xkey(), $count_player);
+        $html = $this->load->view($this->__theme() . 'eyeprofile/ajax/desc_league', $data, true);
 
-		// jumlah pemain asing
-	    $count_player_foreign = array('page'  => 1, 'limit' => 8, 'competition' => $competition, 'playercount' => true);
-		$data['count_player_foreign'] = $this->excurl->remoteCall($this->__xurl().'profile', $this->__xkey(), $count_player_foreign);
-		
-		$html = $this->load->view($this->__theme().'eyeprofile/ajax/desc_league', $data, true);
-
-		$data =array('xClass'=>'reqtbloff','xHtml'=> $html);
-		$this->tools->__flashMessage($data);
+        $data = array('xClass' => 'reqdescleague', 'xHtml' => $html);
+        $this->tools->__flashMessage($data);
     }
 
     function __officiallist()
@@ -181,5 +175,72 @@ class EyeprofileMod extends CI_Model
 		$data =array('xClass'=>'reqoffclist','xHtml'=> $html,
 					 'xUrlhash' => base_url().'eyeprofile/official/'.$competition.'/'.$page);
 		$this->tools->__flashMessage($data);
+    }
+	
+	function __detailclub(){
+        $slug = $this->input->post('slug');
+        $query = array();
+        $data['detailclub'] = $this->excurl->remoteCall($this->__xurl().'profile-club/'.$slug, $this->__xkey(), $query);
+        
+        $html = $this->load->view($this->__theme().'eyeprofile/ajax/detailclub', $data, true);
+    
+        $data =array('xClass'=>'reqdetailclub','xHtml'=> $html);
+        $this->tools->__flashMessage($data);
+    }
+
+    function __detailofficial()
+    {
+        $slug = urldecode($this->input->post('slug'));
+
+        $query = array();
+        $data['model'] = $this->excurl->remoteCall($this->__xurl().'profile-official/'.$slug, $this->__xkey(), $query);
+		$html = $this->load->view($this->__theme().'eyeprofile/ajax/detailofficial', $data, true);
+	
+		$data =array('xClass'=>'reqoffcdetail','xHtml'=> $html);
+		$this->tools->__flashMessage($data);
+    }
+	
+	function __detailplayer(){
+		$slug = $this->input->post('slug');
+        $query = array();
+		$data['detailplayer'] = $this->excurl->remoteCall($this->__xurl().'profile/'.$slug, $this->__xkey(), $query);
+		
+		$html = $this->load->view($this->__theme().'eyeprofile/ajax/detailplayer', $data, true);
+	
+		$data =array('xClass'=>'reqdetailplayer','xHtml'=> $html);
+		$this->tools->__flashMessage($data);
+    }
+	
+	function __playerlist()
+    {
+        $competition = urldecode($this->input->post('slug'));
+
+        if ($competition == 'Non Liga') {
+            $competition = 'SSB / Akademi Sepakbola';
+        }
+
+        $page = ($this->session->userdata('pagepemain')) ? $this->session->userdata('pagepemain') : 1;
+        if ($this->input->post('paging') == 'next') {
+            if ($this->session->userdata('pagetotalpemain') > $this->session->userdata('pagepemain')) {
+                $page += 1;
+            }
+        } else {
+           if($this->input->post('paging') == 'back' && $this->session->userdata('pagepemain') >= 2){
+                $page -= 1;
+            }
+        }
+
+        $this->session->set_userdata(array('pagepemain' => $page));
+
+        $query = array('page' => $this->session->userdata('pagepemain'), 'limit' => 10, 'club' => '', 'league' => '', 'competition' => $competition, 'playercount' => false);
+
+        $data['slug'] = $competition;
+        $data['playerlist'] = $this->excurl->remoteCall($this->__xurl() . 'profile', $this->__xkey(), $query);
+        $data['playercount'] = $this->excurl->remoteCall($this->__xurl() . 'profile', $this->__xkey(), array_merge($query, ['playercount' => true]));
+
+        $html = $this->load->view($this->__theme() . 'eyeprofile/ajax/playerlist', $data, true);
+
+        $data = array('xClass' => 'reqplayerlist', 'xHtml' => $html, 'xUrlhash' => base_url() . 'eyeprofile/pemain/' . $competition . '/' . $page);
+        $this->tools->__flashMessage($data);
     }
 }

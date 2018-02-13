@@ -1,12 +1,9 @@
-	<?php 
-		$slugnya = urldecode($slug);
-	?>
 	<!-- CONTENT BODY -->
     <div class="crumb">
             <ul>
                 <li><a href="<?php echo base_url();?>" style="display:unset;">Home</a></li>
                 <li><a href="<?php echo base_url();?>eyeprofile/klub" style="display:unset;">Eyeprofile</a></li>
-                <li><a href="<?php echo base_url();?>eyeprofile/klub" style="display:unset;">Klub</a></li>
+                <li><a href="<?php echo base_url();?>eyeprofile/pemain" style="display:unset;">Pemain</a></li>
                 <li><?php echo urldecode($slug);?></li>
             </ul>
         </div>
@@ -21,7 +18,7 @@
                 <a class="active" href="#content1">Info</a>
             </div>
             <div class="table-scroll">
-				<div id="reqdescleague" class='loadclubcount' action="eyeprofile" loading="off" clean="clsclubcount">
+				<div id="reqclubcount" class='loadclubcount' action="eyeprofile" loading="off" clean="clsclubcount">
 					<div id='clsclubcount'>
 						<script>
 							$(document).ready(function(){
@@ -31,9 +28,9 @@
 							});
 						</script>
 					</div>
-					<input type='hidden' name='fn' value='desc_league' class='cinput'>
+					<input type='hidden' name='fn' value='clubcount' class='cinput'>
 					<input type='hidden' name='submenu' value='klub' class='cinput'>
-					<input type='hidden' name='slug' value='<?php echo $slugnya;?>' class='cinput'>
+					<input type='hidden' name='slug' value='<?php echo $slug;?>' class='cinput'>
 					<table class="content-tab-eprofile">
 						<tr>
 							<td>Jumlah Klub</td>
@@ -53,8 +50,8 @@
         </div>
         <div class="container over-x">
             <div class="container sub-menu w-max">
-                <a href="<?php echo base_url();?>eyeprofile/klub" class="active">klub</a>
-                <a href="<?php echo base_url();?>eyeprofile/pemain">pemain</a>
+                <a href="<?php echo base_url();?>eyeprofile/klub">klub</a>
+                <a href="<?php echo base_url();?>eyeprofile/pemain" class="active">pemain</a>
                 <a href="<?php echo base_url();?>eyeprofile/official/<?= $slug; ?>">ofisial</a>
                 <a href="">perangkat pertandingan</a>
                 <a href="">supporter</a>
@@ -72,7 +69,7 @@
 					</script>
 				</div>
 				<input type='hidden' name='fn' value='competition' class='cinput'>
-				<input type='hidden' name='submenu' value='klub' class='cinput'>
+				<input type='hidden' name='submenu' value='pemain' class='cinput'>
 				<input type='hidden' name='slug' value='<?php echo $slug;?>' class='cinput'>
 				<select id="" name="" selected="true" class="slc-musim">
 					<option value>--Pilih Liga--</option>
@@ -82,43 +79,31 @@
 				</select>
 			</div>
         </div>
-        <div class="container eprofile-klub-home">
-			<div id="reqklublist" class='loadklublist' action="eyeprofile" loading="off" clean="clsklublist">
-					<div id='clsklublist'>
-						<script>
-							$(document).ready(function(){
-								$(window).on('load',function(){
-									ajaxOnLoad('loadklublist');
-								});
+        <div class="eprofile-src" style="display:none;">
+            <input type="text" placeholder="Cari ...">
+        </div>
+        <div class="container list-pemain">
+			<div id="reqplayerlist" class='loadplayerlist' action="eyeprofile" loading="off" clean="clsplayerlist">
+				<div id='clsplayerlist'>
+					<script>
+						$(document).ready(function(){
+							$(window).on('load',function(){
+								ajaxOnLoad('loadplayerlist');
 							});
-						</script>
-					</div>
-					<input type='hidden' name='fn' value='klublist' class='cinput'>
-					<input type='hidden' name='slug' value='<?php echo $slug;?>' class='cinput'>
-					<input type='hidden' name='submenu' value='klub' class='cinput'>
-				<div class="klub-content">
-					<div class="img-klub-content">
-						<img src="https://www.eyesoccer.id/systems/club_logo/2034LOGO UNTUK APLIKASI.jpg" alt="" srcset="">
-					</div>
-					<h3 class="nama-klub">Nama Klub</h3>
+						});
+					</script>
 				</div>
-				<div class="klub-content">
-					<div class="img-klub-content">
-						<img src="https://www.eyesoccer.id/systems/club_logo/2034LOGO UNTUK APLIKASI.jpg" alt="" srcset="">
+				<input type='hidden' name='fn' value='playerlist' class='cinput'>
+				<input type='hidden' name='slug' value='<?php echo $slug;?>' class='cinput'>
+				<input type='hidden' name='submenu' value='klub' class='cinput'>
+				<div class="user-pemain">
+					<div class="pemain-img">
+						<img src="https://www.striker.id/wp-content/uploads/2017/11/2359488.jpg" alt="" srcset="">
 					</div>
-					<h3 class="nama-klub">Nama Klub</h3>
-				</div>
-				<div class="klub-content">
-					<div class="img-klub-content">
-						<img src="https://www.eyesoccer.id/systems/club_logo/2034LOGO UNTUK APLIKASI.jpg" alt="" srcset="">
+					<div class="pemain-data">
+						<h3>Nama Pemain</h3>
+						<span>Klub - posisi</span>
 					</div>
-					<h3 class="nama-klub">Nama Klub</h3>
-				</div>
-				<div class="klub-content">
-					<div class="img-klub-content">
-						<img src="https://www.eyesoccer.id/systems/club_logo/2034LOGO UNTUK APLIKASI.jpg" alt="" srcset="">
-					</div>
-					<h3 class="nama-klub">Nama Klub</h3>
 				</div>
 			</div>
         </div>

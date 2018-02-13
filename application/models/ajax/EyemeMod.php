@@ -34,12 +34,28 @@ class EyemeMod extends CI_Model {
 
     }
     function __explorelist(){
-
-        $query = array('page' => '1','limit' => '17', 'sortby'=> 'last_online');
+        $page  = $this->input->post('pg');
+        $addId = $this->input->post('add');
+        $query = array('page' => $page,'limit' => '18', 'sortby'=> 'last_online');
         $data['explore'] = $this->excurl->remoteCall($this->__xurl().'me-images',$this->__xkey(),$query);
-        $html            = $this->load->view($this->__theme().'eyeme/ajax/me_a_explore',$data,true);
-        $data            = array('xClass' => 'reqexplorelist','xHtml' => $html);
+        $data['added']   = $addId;
+       
+        if($page > 1){
+             $data['first'] = 0;
+             $html          = $this->load->view($this->__theme().'eyeme/ajax/me_a_explore',$data,true);
+             $data          = array('xClass' => $addId,'xHtml' => $html);
+
+        }
+        else{
+
+            $data['first']  = 1;
+            $html           = $this->load->view($this->__theme().'eyeme/ajax/me_a_explore',$data,true);
+            $data           = array('xClass' => 'reqexplorelist','xHtml' => $html);
+        }
         $this->tools->__flashMessage($data);
+    }
+    function __newlist(){
+        $page  = $this->input->post('pg');
     }
     function __meprofile(){
         $req = $this->input->post('uname');

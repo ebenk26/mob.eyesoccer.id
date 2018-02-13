@@ -16,14 +16,14 @@ $imglist = json_decode($imglist);
             <div class="container emepost">
                 <a href="<?php echo $this->library->urltomob($v->url)?>">
                 <div class="img-usr">
-                    <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+                    <img src="<?php echo urltoimgstore($v->url_pic)?>" alt="<?php echo $v->username?>">
                 </div>
                 <span><?php echo $v->username?></span>
                 </a>
                 <i class="material-icons more display-box-notif">more_horiz</i>
             </div>
             <div class="eme-img-content">
-                <img src="<?php echo urltobetame($v->url_pic)?>" alt="<?php echo $v->img_caption?>">
+                <img src="<?php echo urltobetame($v->url_img)?>" alt="<?php echo $v->img_caption?>">
             </div>
             <div class="container-eme-like">
                 <ul>
@@ -40,7 +40,7 @@ $imglist = json_decode($imglist);
                 <!-- <li><a href="">username</a> lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet</li>
                 <li><a href="">username</a> lorem ipsum dolor sit amet lorem ipsum dolor sit amet</li>
                 <li><span class="openComment">Lihat komentar lainnya</span></li> -->
-                <li><span class="eme-time-post">30 menit lalu</span></li>
+                <li><span class="eme-time-post"><?php echo  getTime(getDistance(NOW,$v->last_update))['timeString']?></span></li>
             </ul>
         </div>
 

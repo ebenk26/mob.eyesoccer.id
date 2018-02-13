@@ -2,13 +2,13 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300');
 html, body{
     width: 100%;
-    min-width: 375px;
+    /* min-width: 375px; */
     overflow-x: hidden;
 }
 body{
     margin: 0 auto;
     font-family: 'Montserrat', sans-serif;
-    min-width: 375px;
+    /* min-width: 375px; */
     
 }
 *{
@@ -79,8 +79,8 @@ nav>.f-l, nav>.f-r{
     padding: 10px;
     color: #8ec429;
 }
-nav>img{
-    padding: 4px 0px 3px;
+nav img{
+    padding: 4px 0px 0px;
 }
 .container{
     text-align: left;
@@ -193,10 +193,12 @@ nav>img{
     padding: 5px 0px;
 }
 .v-etube{
-    width: 150px;
+    min-width: 130px;
+    max-width: 150px;
     height: 85px;
     overflow-y: hidden;
     float: left;
+    width: 38%;
 }
 .v-etube img{
     width: 100%;
@@ -231,10 +233,10 @@ nav>img{
     padding-top: 30px;
 }
 .tab2 .left, .tab2 .right, .use-opacity .left, .use-opacity .right{
-    -webkit-animation-name: fade2;
+    /* -webkit-animation-name: fade2;
     -webkit-animation-duration: 1s;
     animation-name: fade2;
-    animation-duration: 1s;
+    animation-duration: 1s; */
 }
 @-webkit-keyframes fade2 {
     0% {opacity: 0;}
@@ -252,7 +254,7 @@ nav>img{
     font-weight: 600;
     /* color: rgb(192, 192, 192); */
     padding-bottom: 6px;
-    margin: 10px;
+    margin: 1%;
 }
 .tab2 span:hover, .orange-active:hover{
     border-bottom: 4px solid #FF5722 !important;
@@ -357,7 +359,7 @@ nav>img{
 .border-box{
     float: left;
     width: 97%;
-    min-width: 365px;
+    /* min-width: 365px; */
     height: 100%;
     padding-left: 5px;
     margin-top: 10px;
@@ -551,10 +553,10 @@ nav>.f-r:hover{
     padding: 10px;
     top: 46px;
     background-color: #00000099;
-    -webkit-animation-name: fade;
+    /* -webkit-animation-name: fade;
     -webkit-animation-duration: .8s;
     animation-name: fade;
-    animation-duration: .8s;
+    animation-duration: .8s; */
     z-index: 2;
 }
 @-webkit-keyframes fade {
@@ -596,10 +598,10 @@ nav>.f-r:hover{
     z-index: 11;
     font-size: 1.35em;
     font-weight: 100;
-    -webkit-animation-name: fade;
+    /* -webkit-animation-name: fade;
     -webkit-animation-duration: .8s;
     animation-name: fade;
-    animation-duration: .8s;
+    animation-duration: .8s; */
     top: 0px;
 }
 @-webkit-keyframes fade {
@@ -657,8 +659,8 @@ nav>.f-r:hover{
     min-height: 85px;
     margin: 3px;
     border: 1px solid #d8d8d840;
-    animation: move 10s infinite;
-    -webkit-animation: move 10s infinite;
+    /* animation: move 10s infinite;
+    -webkit-animation: move 10s infinite; */
 }
 @-webkit-keyframes move {
     10% {right: 0px;}
@@ -729,8 +731,8 @@ nav>.f-r:hover{
     width: 300px;
     height: 110px;
     margin: 3px;
-    animation: epmove 13s;
-    -webkit-animation: epmove 13s;
+    /* animation: epmove 13s;
+    -webkit-animation: epmove 13s; */
     overflow: hidden;
 }
 @-webkit-keyframes epmove {
@@ -959,18 +961,23 @@ nav>.f-r:hover{
     width: 40px;
     overflow: hidden;
     height: 40px;
-    background-color: gainsboro;
+    /* background-color: gainsboro; */
     display: inline-block;
     float: left;
     margin-left: 10px;
+    position: relative;
 }
 .img-radius{
     border-radius: 50%;
     overflow: hidden;
 }
 .item-komentar .img-radius img, .box-komentar .img-radius img{
-    height: 100%;
-    /* margin-left: -30%; */
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
 }
 .input-komentar{
     display: inline-block;
@@ -981,7 +988,7 @@ nav>.f-r:hover{
 .input-komentar input{
     border: unset;
     padding: 10px;
-    font-size: .99em;
+    font-size: .8em;
     font-weight: 300;
     width: 270px;
 }
@@ -1001,12 +1008,13 @@ nav>.f-r:hover{
     float: left;
     width: 100%;
     margin: 0 0 5px 0;
-    font-size: .9em;
+    font-size: .8em;
+    color: #333;
 }
 .text-komentar h3{
-    font-size: .65em;
-    font-weight: 500;
-    color: gray;
+    font-size: .7em;
+    font-weight: 600;
+    color: #444;
     display: inline;
 }
 .text-komentar span{
@@ -1058,20 +1066,24 @@ nav>.f-r:hover{
     z-index: -1;
     color: transparent;
 }
-.heart-first:hover, .heart-first:active, .heart-first:visited,.heart-first.active{
-    color: red;
+
+.heart-first:hover, .heart-first:hover, .heart-first:active, .heart-first:visited,.heart-first.active{
+    color: #ea3030;
+
 }
 .container-comment{
     position: fixed;
     background-color: white;
-    height: 100%;
+    height: max-content;
+    max-height: 80%;
     width: 95.5%;
     margin-left: 2%;
     z-index: 10;
-    top: 60px;
+    bottom: 55px;
     display: none;
     border-radius: 5px;
     box-shadow: 0 0 15px -7px #383737bd;
+    overflow-y: scroll;
 }
 .menu-ketegori{
     background-color: #FAFAFA;
@@ -1406,13 +1418,18 @@ ul, li {
     height: 35px;
     float: left;
     border-radius: 50%;
-    border: 1px solid white;
+    /* border: 1px solid #00000082; */
     overflow: hidden;
     margin: 10px 10px 10px 15px;
+    position: relative;
 }
-.img-usr>img{
-    min-width: 100%;
-    height: 100%;
+.img-usr img{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
 }
 .emepost span{
     position: relative;
@@ -1428,19 +1445,21 @@ ul, li {
     margin: 15px;
 }
 .eme-img-content{
-    width: 100vw;
+    width: 100%;
+    /* width: 100vw;
     height: 100vw;
-    overflow: hidden;
+    overflow: hidden; */
 }
-.eme-img-content>img{
-    height: 100%;
-    min-width: 100%;
+.eme-img-content img{
+    width: 100%;
+    /* height: 100%;
+    min-width: 100%; */
 }
 .container-eme-like{
     padding: 15px 0px 10px;
     width: 90%;
     margin-left: 5%;
-    border-bottom: 1px solid gainsboro;
+    border-bottom: 1px solid #dcdcdc66;
     margin-bottom: 10px;
 }
 .container-eme-like i{
@@ -1452,11 +1471,15 @@ ul, li {
 }
 .container-eme-like li:nth-of-type(2){
     display: block;
+    font-size: 12px;
+}
+.container-eme-like li:nth-of-type(2) span a:nth-of-type(2){
+    font-size: 11px;
 }
 .comment-eme a, .container-eme-like a{
     text-decoration: none;
     color: black;
-    font-weight: 600;
+    font-weight: 500;
 }
 .comment-eme{
     width: 90%;
@@ -1476,6 +1499,7 @@ ul, li {
     color: gray !important;
     font-size: .7em !important;
     font-weight: 500 !important;
+    vertical-align: top;
 }
 .info-box-notif{
     position: fixed;
@@ -1564,10 +1588,15 @@ ul, li {
     overflow: hidden;
     margin-right: .3vw;
     margin-bottom: .2vw;
+    position: relative;
 }
-.content-profile>.content-profile-item>img, .content-explore>.content-explore-item>img{
+.content-profile .content-profile-item>img, .content-explore .content-explore-item>img{
     height: 100%;
-    min-width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
 }
 .content-explore>.content-explore-item:nth-of-type(18n+1){
     width: 65.4vw;
@@ -1584,7 +1613,7 @@ ul, li {
     height: 18vw;
     overflow: hidden;
     border-radius: 50%;
-    border: 2px solid #E53935;
+    /* border: 2px solid #E53935; */
     margin: 0vw 5vw;
     float: left;
 }
@@ -1605,11 +1634,12 @@ ul, li {
     background-color: #42A5F5;
     text-align: center;
     border-radius: 3px;
-    padding: 5px;
+    padding: 3px;
     margin: 13px 0px;
     font-weight: 600;
-    min-width: 100px;
+    min-width: 60px;
     border: 1px solid #42A5F5;
+    font-size: .6em;
 }
 .follow-button:hover{
     color: #42A5F5;
@@ -1621,6 +1651,7 @@ ul, li {
     display: block;
     margin: 10px 5vw;
     padding: 2px;
+    font-size: .8em;
 }
 .tr-1-bold tr td{
     padding: 1px 8px;
@@ -1631,9 +1662,13 @@ ul, li {
 }
 .tr-1-bold tr:nth-of-type(1){
     font-weight: 500;
+    font-size: .9em;
+    line-height: 10px;
 }
 .tr-1-bold tr:nth-of-type(2){
-    color: gray;
+    color: #0000004a;
+    font-weight: 500;
+    font-size: .7em;
 }
 .tr-1-bold tr:nth-last-of-type(1) td{
     padding-bottom: 20px;    
@@ -2858,4 +2893,11 @@ ul, li {
     margin: 30px 10px 10px -71px;
     color: #fff;
     font-family: "Roboto", Helvetica, Arial, 
+}
+.fill-blue{
+    fill:  #03a9f4;
+}
+.container-eme-like li img{
+    height: 22px;
+    margin-right: 10px;
 }
