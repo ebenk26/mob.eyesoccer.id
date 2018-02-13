@@ -13,14 +13,12 @@ if ($newsdetail){
 					<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
 				</div>
 				<h3><?php echo $dt->data->fullname;?></h3>
-				<span><?php echo relative_time($this->library->datenormal($dt->data->publish_on)); ?> lalu - <?php echo $dt->data->news_like; ?> view</span>                
+				<span><?php echo relative_time($this->library->datenormal($dt->data->publish_on)); ?> lalu - <?php echo $dt->data->news_like; ?> view</span>
+				<i class="far fa-comment openComment" aria-hidden="false" style="float: right;margin-top: -35px;margin-right: 15px;font-size: 30px;"><div class="openComment"></div></i>
 			</div>
 			<div class="container tx-c share">
-				<i class="fa fa-facebook" aria-hidden="true"></i>
-				<i class="fa fa-twitter" aria-hidden="true"></i>
-				<i class="fa fa-google-plus-official" aria-hidden="true"></i>
-				<i class="fa fa-envelope-o" aria-hidden="true"></i>
-				<i class="fa fa-comment openComment" aria-hidden="false"><div class="openComment">16</div></i>
+				<div class="sharethis-inline-share-buttons" data-url="<?php echo $dt->data->url;?>"></div>
+				<script type="text/javascript" src="//platform-api.sharethis.com/js/sharethis.js#property=5a81408ae45fbb001342fedf&product=inline-share-buttons"></script>
 			</div>
 		</div>
 		<div class="container-94">
@@ -104,6 +102,11 @@ if ($newsdetail){
 			</div>
 		</div>
 	</div>
+	<script>
+		$(document).ready(function(){
+			$(".fb-comments").attr("data-href","<?php echo $dt->data->url;?>");
+		});
+	</script>
 <?php
 }
 ?>
