@@ -1,18 +1,15 @@
  <div class="container-full">
-        <div class="forgot-form login-form">
-            <h4 style="margin-top:0px">selamat datang eyesoccer.id</h4>
-            <span>semua berita tentang tim favoritmu ada disini</span>
-            <div class="btn-option-log">
-                <a href="#" id="logBtn" class="active">masuk</a>
-                <a href="#" id="regBtn">daftar</a>
-            </div>
-            <div class="login-box">
-                <div ">
-                    <div id='errmsg'>
-                    
-                    </div>
-                 <form  class='form_basic' loading="off" clean="clstrend" id="test">
-
+    <div class="forgot-form login-form">
+        <h4 style="margin-top:0px">selamat datang eyesoccer.id</h4>
+        <span>semua berita tentang tim favoritmu ada disini</span>
+        <div class="btn-option-log">
+            <a href="#" id="logBtn" class="active">masuk</a>
+            <a href="#" id="regBtn">daftar</a>
+        </div>
+        <div id='errmsg'></div>
+        <div class="login-box">
+            <div>                    
+                 <form  class='form_basic' loading="off" action="member">
                     <input type="hidden" name="fn" class="cinput" value="loginact">
                     <span>email</span>
                     <input type="text" name="email" placeholder="ketik alamat email ..." class="cinput">
@@ -38,24 +35,58 @@
                             </div>
                         </a>
                     </div>
-                </div>
                 </form>
-            </div>
-            <div class="register-box">
-                <div 
-                <form>
-                    <span>nama</span>
-                    <input type="text" name="" placeholder="Ketik Nama Lengkap">
-                    <span>email</span>
-                    <input type="email" name=""  placeholder="ketik alamat email ...">
-                    <span>password</span>
-                    <input type="password" name=""  placeholder="password anda">
-                    <div class="container input-checkbox">
-                        <input type="checkbox" name="" id=""><span> saya telah membaca dan menyetujui
-                        <a href="">ketentuan dan kebijakan</a> eyesoccer.id</span>
-                    </div>
-                    <button type="submit">daftar</button>
+            </div>                
+        </div>
+        <div class="register-box" class="form">
+            <div>
+                <form class="form_basic" action="member">
+                    <div id="formreg">
+                        <input type="hidden" name="fn" value="regact" name="cinput">
+                        <span>username</span>
+                        <input type="text" name="username"  placeholder="ketik username ..." class="cinput">
+                        <span class='err msgusername'></span>
+                        <span>nama</span>
+                        <input type="text" name="name" placeholder="Ketik Nama Lengkap" class="cinput">
+                        <span class='err msgname'></span>
+                        
+                        <span>email</span>
+                        <input type="email" name="email"  placeholder="ketik alamat email ..." class="cinput">
+                        <span class='err msgemail'></span>
+                        <span>password</span>
+                        <input type="password" name="password"  placeholder="password anda" id="pass" class="cinput">
+                        <span class='err msgpassword'></span>
+                        <span>Konfirmasi Password</span>
+                        <input type="password" name="passconfirm" placeholder="konfirmasi password" id="cpass" class="cinput">
+                        <span class='err msgpassconfirm'></span>
+                        <div class="container input-checkbox">
+                            <input type="checkbox" name="agree" id="agree" required="required"><span> saya telah membaca dan menyetujui
+                            <a href="">ketentuan dan kebijakan</a> eyesoccer.id</span>
+                        </div>
+                        <button type="submit">daftar</button>
+                     </div>
                 </form>
             </div>
         </div>
     </div>
+
+    <script>
+        //var document.getElementByClassName('')
+        $(function(){
+            //console.log('test');
+           $('#logBtn').click(function(){
+           // alert('test');
+                $('.login-box').css('display','block');
+                $('.register-box').css('display','none');
+                $('#logBtn').addClass('active');
+                $('#regBtn').removeClass('active');
+           });
+           $('#regBtn').click(function(){
+                $('.register-box').css('display','block');
+                $('.login-box').css('display','none');
+                $('#regBtn').addClass('active');
+                $('#logBtn').removeClass('active');
+           });
+
+        })
+    </script>
