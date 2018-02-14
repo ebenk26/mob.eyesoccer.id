@@ -503,7 +503,11 @@ function responseData(msg) {
     }
 
     if (msg.xHtml != undefined) {
-        $('#' + msg.xClass).hide().fadeIn('medium').html(msg.xHtml);
+        if (msg.xAppend != undefined) {
+            $('#' + msg.xClass).hide().fadeIn('medium').append(msg.xHtml);
+        } else {
+            $('#' + msg.xClass).hide().fadeIn('medium').html(msg.xHtml);
+        }
     }
 
     if (msg.xSplit != undefined) {
