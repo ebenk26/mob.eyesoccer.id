@@ -35,7 +35,7 @@
                 </div>
 
                 <div class="kolom-share">
-                    <div class="sharethis-inline-share-buttons"></div>
+                    <div class="sharethis-inline-share-buttons" data-url="<?php echo $tube->data->share_url;?>"></div>
 					<script type="text/javascript" src="//platform-api.sharethis.com/js/sharethis.js#property=5a81408ae45fbb001342fedf&product=inline-share-buttons"></script>
                 </div>
             </div>
@@ -62,7 +62,7 @@
             </div>
 			<script>
 				$(document).ready(function(){
-					$(".fb-comments").attr("data-href","<?php echo $dt->data->share_url;?>");
+					$(".fb-comments").attr("data-href","<?php echo $tube->data->share_url;?>");
 				});
 			</script>
 <?php

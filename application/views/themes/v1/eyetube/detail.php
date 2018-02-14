@@ -64,7 +64,7 @@
 <!-- KOMENTAR -->
 <div class="container-comment">
     <span class="up-next-etube" style="padding-left: 10px;">Komentar</span> <span id="close" class="up-next-etube" style="float:right; padding-right: 10px;"><i class="material-icons">close</i></span>
-    <div class="fb-comments" data-href="<?=base_url();?><?=$_SERVER['REQUEST_URI']?>" data-numposts="5"></div>
+    <div class="fb-comments" data-href="<?="https://www.eyesoccer.id/";?><?=$_SERVER['REQUEST_URI']?>" data-numposts="5"></div>
     <!-- <div class="box-komentar">
         <div class="img-radius">
             <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="" width="100%">

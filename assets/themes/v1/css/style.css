@@ -1066,8 +1066,10 @@ nav>.f-r:hover{
     z-index: -1;
     color: transparent;
 }
-.heart-first, .heart-first:hover, .heart-first:active, .heart-first:visited{
+
+.heart-first:hover, .heart-first:hover, .heart-first:active, .heart-first:visited,.heart-first.active{
     color: #ea3030;
+
 }
 .container-comment{
     position: fixed;
@@ -2304,7 +2306,7 @@ ul, li {
     height: 100vh;
     float: left;
     text-align: center;
-    position: fixed;
+    /*position: fixed;*/
     z-index: 1;
     color: #5f5f5f;
     margin: 0 5%;
