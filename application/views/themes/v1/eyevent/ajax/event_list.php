@@ -1,34 +1,22 @@
+<div class="etube-home enews" style="padding-top: unset;">
+    <?php
+        if ($event_list)
+        {
+            $event_list  = json_decode($event_list);
 
-<div role="listbox" class="carousel-inner w-max">                    
-    <div class="box item active">
-        <?php
-            if ($event_list)
+            foreach ($event_list->data as $value)
             {
-                $event_list  = json_decode($event_list);
-
-                foreach ($event_list->data as $value)
-                {
-        ?>
-                    <a href="<?= base_url(); ?>eyevent/detail/<?= $value->slug; ?>">
-                        <div class="ev-box-content">
-                            <img src="<?= $value->url_pic; ?>" alt="<?= $value->title; ?>">
+    ?>
+                <a href="<?= base_url(); ?>eyevent/detail/<?= $value->slug; ?>">
+                    <div class="etube-mobile-thumb eyevent-thumb" style="background-color: #f2f2f2;">
+                        <img src="<?= $value->url_pic; ?>/medium" alt="">
+                        <div class="enews-title">
+                            <h2><?= $value->title; ?></h2>            
                         </div>
-                    </a>
-        <?php
-                }
+                    </div>
+                </a>
+    <?php
             }
-        ?>
-        
-    </div>
-    <!-- <div class="box item">
-        <div class="ev-box-content">
-            
-        </div>
-        <div class="ev-box-content">
-            
-        </div>
-        <div class="ev-box-content">
-            
-        </div>
-    </div> -->
+        }
+    ?>
 </div>

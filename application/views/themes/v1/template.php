@@ -20,6 +20,16 @@
     <link rel="shortcut icon" href="<?php echo SUBCDN."assets/$folder/img/fav.png" ?>" />
     
     <!-- Default -->
+
+    <?php if ($kanal == "eyemarket")
+        {
+    ?>
+            <link href="<?php echo SUBCDN."assets/css/bootstrap/css/eyemarket/bootstrap3.min.css" ?>" rel="stylesheet" type="text/css">
+            <link href="<?php echo SUBCDN."assets/css/bootstrap/css/eyemarket/style.default.css" ?>" rel="stylesheet" type="text/css">
+    <?php    
+        }
+    ?>
+
     <!--<link href="<?php //echo SUBCDN."assets/css/bootstrap/css/bootstrap.min.css" ?>" rel="stylesheet" type="text/css">-->
     <link href="<?php echo SUBCDN."assets/css/font-awesome/css/fontawesome-all.css" ?>" rel="stylesheet" type="text/css">
     <link href="<?php echo SUBCDN."assets/$folder/css/bs.css" ?>" rel="stylesheet" type="text/css" />
@@ -45,7 +55,12 @@
 <body>
     <?php
         $data['folder'] = $folder;
-		$this->load->view($folder.'widget/navigator', $data);
+        $this->load->view($folder.'widget/navigator', $data);
+        if (isset($kanal) && $kanal == 'eyevent')
+        {
+            echo set_breadcrumb("eyevent","");
+            $this->load->view($folder.'widget/navbar_event', $data);
+        }
         $this->load->view($folder.$content, $data);
         $this->load->view($folder.'widget/sidebar', $data);
         $this->load->view($folder.'widget/footer', $data);

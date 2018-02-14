@@ -311,6 +311,8 @@
                 </script>
             </div>
             <input type='hidden' name='fn' value='event_list' class='cinput'>
+            <input type='hidden' name='page' value='home' class='cinput'>
+            <input type='hidden' name='limit' value='3' class='cinput'>
             <div role="listbox" class="carousel-inner w-max">
                 <div class="box item active">
                     <div class="ev-box-content">
