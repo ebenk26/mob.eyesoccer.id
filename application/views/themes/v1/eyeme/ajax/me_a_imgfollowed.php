@@ -2,14 +2,19 @@
 <?php 
 
 $imglist = json_decode($imglist);
-	
+	#p($imglist);
 	foreach($imglist->data as $k => $v){
 
-		foreach($v->likes as $a => $b){
+		if(count($v->likes) > 0 ){
+            foreach($v->likes as $a => $b){
+            $hasLike = ( $b->username == $this->session->username ? 1 : 0 );
 
-			$hasLike = ( $b->username == $v->username ? 1 : 0 );
+            }
 
-		}
+        }
+        else{
+            $hasLike = 0 ;
+        }
 
 ?>	
         <div class="container">

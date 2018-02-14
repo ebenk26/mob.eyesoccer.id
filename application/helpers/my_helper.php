@@ -126,10 +126,12 @@ define('EYETRANSFER',base_url().'eyetransfer');
 define('EYETIKET',base_url().'eyetiket');
 define('EYEWALLET',base_url().'wallet');
 define('sIMGSTORE','http://eyesoccer.id/systems/eyenews_storage/');
+define('mMEMBERAREA',base_url().'member/home');
 
 define('DEFAULTIMG',base_url().'assets/home/img/eyeme-photo%20thumbnail.png');
 define('NEWSDETAIL',base_url().'eyenews/detail/');
 define('MARKETIMG','http://beta.eyesoccer.id/img/eyemarket/produk/');
+define('LOGINURL',base_url().'member');
 
 
 
