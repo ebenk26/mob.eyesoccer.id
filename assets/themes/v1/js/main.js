@@ -474,6 +474,8 @@ function ajaxMsgAcc(request) {
 }
 
 function responseData(msg) {
+    $('.err').fadeOut('fast').html('');
+
     if (msg.xMsg != undefined) {
         xurl = $('.baseurl').attr('val');
         $('.rcapthca').html('<img src="' + xurl + 'request/captcha">');
@@ -508,10 +510,10 @@ function responseData(msg) {
         $.each(msg.xData, function (v, n) {
             if (Object.prototype.toString.call(n) == '[object Object]') {
                 $.each(n, function (v1, n1) {
-                    $('.' + v + ' .' + v1).html(n1);
+                    $('.' + v + ' .' + v1).fadeIn('medium').html(n1);
                 })
             } else {
-                $('.' + v).html(n);
+                $('.' + v).fadeIn('medium').html(n);
             }
         })
     }
