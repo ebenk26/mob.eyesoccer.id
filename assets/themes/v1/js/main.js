@@ -474,7 +474,7 @@ function ajaxMsgAcc(request) {
 }
 
 function responseData(msg) {
-    $('.err').fadeOut('fast').html('');
+    $('.err').fadeOut('fast').html("");
 
     if (msg.xMsg != undefined) {
         xurl = $('.baseurl').attr('val');
