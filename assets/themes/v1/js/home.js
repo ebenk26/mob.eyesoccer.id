@@ -26,32 +26,32 @@ var close = document.getElementsByClassName("close")[0];
 var menu = document.getElementById('menu');
 var xMenu = document.getElementById("xMenu");
 var xClose = document.getElementsByClassName("xClose")[0];
-var boxNotif = document.getElementsByClassName("display-box-notif")[0];
-var displayNotif = document.getElementsByClassName("box-notif")[0];
+//var boxNotif = document.getElementsByClassName("display-box-notif")[0];
+//var displayNotif = document.getElementsByClassName("box-notif")[0];
 var heighMax = document.getElementsByClassName("deskripsi")[0];
 var heighControl = document.getElementsByClassName("heightControl")[0];
 var heighControl2 = document.getElementsByClassName("heightControl2")[0];
 var xClose2 = document.getElementById("close");
 var containerComment = document.getElementsByClassName("container-comment")[0];
 var openComment = document.getElementsByClassName("openComment")[0];
-var logBtn = document.getElementById('logBtn');
-var regBtn = document.getElementById('regBtn');
-var logBox = document.getElementsByClassName("login-box")[0];
-var regBox = document.getElementsByClassName("register-box")[0];
+// var logBtn = document.getElementById('logBtn');
+// var regBtn = document.getElementById('regBtn');
+// var logBox = document.getElementsByClassName("login-box")[0];
+// var regBox = document.getElementsByClassName("register-box")[0];
 
 window.onload = function(){
-    //logBtn.onclick = function() {
+    // logBtn.onclick = function() {
     //    logBox.style.display = "block";
     //    regBox.style.display = "none";
     //    $('#logBtn').addClass('active');
     //    $('#regBtn').removeClass('active');
-    //}
-    //regBtn.onclick = function() {
+    // }
+    // regBtn.onclick = function() {
     //    regBox.style.display = "block";
     //    logBox.style.display = "none";
     //    $('#regBtn').addClass('active');
     //    $('#logBtn').removeClass('active');
-    //}
+    // }
     src.onclick = function() {
         srcbox.style.display = "block";
     }
@@ -70,9 +70,9 @@ window.onload = function(){
     //boxNotif.onclick = function() {
     //    displayNotif.style.display = "block";
     //}
-    displayNotif.onclick = function() {
-       displayNotif.style.display = "none";
-    }
+    // displayNotif.onclick = function() {
+    //    displayNotif.style.display = "none";
+    // }
     //heighControl.onclick = function() {
     //    heighMax.style.height = "auto";
     //    heighControl.style.display = "none";

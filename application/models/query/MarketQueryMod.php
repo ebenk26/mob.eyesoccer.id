@@ -39,4 +39,86 @@ class MarketQueryMod extends CI_Model {
                                         ")->result_array();
             return $query; 
     }
+
+    public function get_id_product($title_slug)
+    {
+        $this->db->select('id_product');
+        $query = $this->db->get_where('eyemarket_product', array('title_slug' => $title_slug))->row();
+        return $query; 
+    }
+
+    public function get_product($id_product)
+    {
+        $query = $this->db->query(" SELECT
+                                        A.id_product,
+                                        A.id_kategori,
+                                        A.id_toko,
+                                        A.nama,
+                                        A.title_slug,
+                                        A.harga_sebelum,
+                                        A.harga,
+                                        A.diskon,
+                                        A.stok,
+                                        A.berat,
+                                        A.keterangan,
+                                        A.ongkir,
+                                        A.status_publish,
+                                        A.created_date,
+                                        B. nama as toko,
+                                        C. nama as kategori,
+                                        D.id,
+                                        D.S,
+                                        D.M,
+                                        D.L,
+                                        D.XL,
+                                        D.XXL,
+                                        D.XXXL,
+                                        D.custom,
+                                        E.id as id_image,
+                                        E.image1,
+                                        E.image2,
+                                        E.image3,
+                                        E.image4,
+                                        E.image5
+                                    FROM
+                                        eyemarket_product A
+                                    LEFT JOIN 
+                                        eyemarket_toko B        on A.id_toko = B.id
+                                    INNER JOIN
+                                        eyemarket_category C    on A.id_kategori = C.id
+                                    LEFT JOIN
+                                        eyemarket_size D        on A.id_product = D.id_product
+                                    LEFT JOIN
+                                        eyemarket_images E      on A.id_product =  E.id_product
+                                    WHERE
+                                        A.id_product = '$id_product'
+                                        AND
+                                        status_publish != 2
+                                    ORDER BY 
+                                        A.id_product DESC
+                                        ")->result_array();
+            return $query; 
+    }
+
+    public function get_product_lain($id_product)
+    {
+        $query = $this->db->query(" SELECT
+                                        A.*,
+                                        B.image1,
+                                        C.nama as toko
+                                    FROM
+                                        eyemarket_product A
+                                    LEFT JOIN
+                                        eyemarket_images B on B.id_product = A.id_product
+                                    LEFT JOIN
+                                        eyemarket_toko C on C.id = A.id_toko
+                                    WHERE
+                                        A.id_product != '$id_product'
+                                        AND
+                                        A.status_publish = 1
+                                    LIMIT
+                                        4
+                                        ")->result_array();
+        return $query; 
+    }
 }
