@@ -7,35 +7,48 @@ class Eyevent extends CI_Controller {
     
     function __construct()
     {
-	parent::__construct();
-	$this->load->model('ajax/EyeventMod');
+		parent::__construct();
+		$this->load->model('ajax/EyeventMod');
     }
 
     function index()
     {
-	if($_POST)
-	{
-	    $this->load->view($this->__theme().'function');
-	    $fn = $_POST['fn'];
-	    
-	    $data = [];
-	    if(function_exists($fn))
-	    {
-		$fn();
-	    } else {
-		$fn = "__".$fn;
-		$this->EyeventMod->$fn();
-	    }
-	} else {
-	    $data['kanal'] = 'eyevent';
-	    $data['content'] = 'eyevent/home';
+		if($_POST)
+		{
+			$this->load->view($this->__theme().'function');
+			$fn = $_POST['fn'];
+
+			$data = [];
+			if(function_exists($fn))
+			{
+				$fn();
+			} else {
+				$fn = "__".$fn;
+				$this->EyeventMod->$fn();
+			}
+		} else {
+		    $data['kanal'] = 'eyevent';
+		    $data['content'] = 'eyevent/home';
+		    
+		    $data['title'] = $this->config->item('meta_title');
+		    $data['meta_desc'] = $this->config->item('meta_desc');
+		    $data['meta_keyword'] = $this->config->item('meta_keyword');
+		    
+		    $this->load->view($this->__theme().'template', $data);
+		}
+    }
+
+    function detail($slug = '')
+    {
+		$data['slug'] = $slug;
+		$data['kanal'] = 'eyevent';
+	    $data['content'] = 'eyevent/detail';
 	    
 	    $data['title'] = $this->config->item('meta_title');
 	    $data['meta_desc'] = $this->config->item('meta_desc');
 	    $data['meta_keyword'] = $this->config->item('meta_keyword');
 	    
 	    $this->load->view($this->__theme().'template', $data);
-	}
     }
 
 }

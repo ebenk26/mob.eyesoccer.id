@@ -183,7 +183,7 @@ $(document).ready(function () {
         }
 
         var nm = $(this).attr('name')
-        var val = [{name: nm, value: $(this).val()}];
+        var val = [{name: 'fn', value: $(this).attr('fn')},{name: nm, value: $(this).val()}];
 
         var formURL = baseURL + actURL;
         var postData = val;

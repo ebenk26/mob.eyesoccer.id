@@ -35,6 +35,21 @@ class EyemarketMod extends MarketQueryMod {
 
     }
 
+    function __market_detail()
+    {
+        $data["slug"] = $this->input->post('slug');
+        
+        $id_product = $this->get_id_product($data["slug"]);
+        $data["product"] = $this->get_product($id_product->id_product);
+        $data["ex_product"] = $this->get_product_lain($id_product->id_product);
+        $data['username']       = $this->session->userdata('username');
+        $data['id_member']      = $this->session->userdata('id_member');
+
+        $html = $this->load->view($this->__theme().'eyemarket/ajax/market_detail',$data,true);
+        $data = array('xClass'=> 'reqdetail','xHtml' => $html);
+        $this->tools->__flashMessage($data);
+    }
+
 }
 
 
