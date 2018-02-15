@@ -183,7 +183,7 @@ $(document).ready(function () {
         }
 
         var nm = $(this).attr('name')
-        var val = [{name: 'fn', value: $(this).attr('fn')},{name: nm, value: $(this).val()}];
+        var val = [{name: 'fn', value: $(this).attr('fn')}, {name: nm, value: $(this).val()}];
 
         var formURL = baseURL + actURL;
         var postData = val;
@@ -503,7 +503,12 @@ function responseData(msg) {
     }
 
     if (msg.xHtml != undefined) {
-        $('#' + msg.xClass).hide().fadeIn('medium').html(msg.xHtml);
+        if (msg.xAppend != undefined) {
+            $('#' + msg.xClass + '.loading').remove();
+            $('#' + msg.xClass).hide().fadeIn('medium').append(msg.xHtml);
+        } else {
+            $('#' + msg.xClass).hide().fadeIn('medium').html(msg.xHtml);
+        }
     }
 
     if (msg.xSplit != undefined) {
