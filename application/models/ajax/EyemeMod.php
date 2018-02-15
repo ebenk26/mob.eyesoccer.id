@@ -38,19 +38,18 @@ class EyemeMod extends CI_Model {
         $addId = $this->input->post('add');
         $query = array('page' => $page,'limit' => '18', 'sortby'=> 'last_online');
         $data['explore'] = $this->excurl->remoteCall($this->__xurl().'me-images',$this->__xkey(),$query);
-        $data['added']   = $addId;
-       
-        if($page > 1){
-             $data['first'] = 0;
-             $html          = $this->load->view($this->__theme().'eyeme/ajax/me_a_explore',$data,true);
-             $data          = array('xClass' => $addId,'xHtml' => $html);
-
+        $html           = $this->load->view($this->__theme().'eyeme/ajax/me_a_explore',$data,true);
+        if(count(json_decode($data['explore'])->data ) > 0){
+            if($page == '1'){
+                $data  = array('xClass'=> 'reqexplorelist','xHtml' => $html);     
+            }
+            else{
+    
+                $data  = array('xAppend'=> 'reqexplorelist','xHtml' => $html,'xClass'=> 'reqexplorelist');
+            }
         }
         else{
-
-            $data['first']  = 1;
-            $html           = $this->load->view($this->__theme().'eyeme/ajax/me_a_explore',$data,true);
-            $data           = array('xClass' => 'reqexplorelist','xHtml' => $html);
+            $data = array();
         }
         $this->tools->__flashMessage($data);
     }
