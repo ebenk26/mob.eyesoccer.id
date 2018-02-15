@@ -152,13 +152,16 @@ $(document).ready(function () {
             box_popup();
         }
 
-        $('#' + IDForm).append('<input type="hidden" name="val" value="true" class="cinput">');
-
-        var val = [];
+        var val = [{name: 'val', value: true}];
         $('#' + IDForm + ' .cinput').each(function (i) {
             var nm = $(this).attr('name')
-            val[i] = {name: nm, value: $(this).val()};
+            var vl = ($(this).attr('val') !== undefined) ? $(this).attr('val') : $(this).val();
+            val[i] = {name: nm, value: vl};
         });
+
+        if($('#' + IDForm).attr('fn') !== undefined) {
+            val[i+1] = {name: 'fn', value: $('#' + IDForm).attr('fn')};
+        }
 
         var formURL = baseURL + actURL;
         var postData = val;
@@ -327,13 +330,16 @@ function ajaxOnLoad(ax) {
         box_popup();
     }
 
-    $('#' + IDForm).append('<input type="hidden" name="val" value="true" class="cinput">');
-
-    var val = [];
+    var val = [{name: 'val', value: true}];
     $('#' + IDForm + ' .cinput').each(function (i) {
         var nm = $(this).attr('name')
-        val[i] = {name: nm, value: $(this).val()};
+        var vl = ($(this).attr('val') !== undefined) ? $(this).attr('val') : $(this).val();
+        val[i] = {name: nm, value: vl};
     });
+
+    if($('#' + IDForm).attr('fn') !== undefined) {
+        val[i+1] = {name: 'fn', value: $('#' + IDForm).attr('fn')};
+    }
 
     var formURL = baseURL + actURL;
     var postData = val;
