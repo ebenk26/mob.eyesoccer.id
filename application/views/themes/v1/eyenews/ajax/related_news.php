@@ -30,7 +30,7 @@ if ($newsdetail){
 	var pg = 1;
 	var height = '';
 	$(window).scroll(function() {
-		if(($(window).scrollTop() + $(window).height() - 200) == ($(document).height()-200)) {
+		if($(window).scrollTop() + $(window).height() == $(document).height()) {
 			pg = pg+1;
 			$('.loading').show();
 			$('#pg').val(pg);
