@@ -2,6 +2,7 @@
     foreach ($product as $data)
     {
 ?>
+
         <div class="center-desktop">
             <div class="row m-0-30">
 
@@ -121,10 +122,10 @@
                                     </p>
 
                                     <!-- Chart Modal -->
-                                    <div class="modal fade" id="chart-modal" tabindex="-1" role="dialog" aria-labelledby="Login" aria-hidden="true" style="font-size: 14px;">
+                                    <div class="modal fade" id="chart-modal" tabindex="-1" role="dialog" aria-labelledby="Login" aria-hidden="true" style="font-size: 14px;opacity: 1;">
                                         <div class="modal-dialog">
                                             <div class="modal-content">
-                                                <form action="<?= base_url(); ?>eyemarket/keranjang/<?= $id_member."/".$data['id_product']; ?>" method="post">
+                                                <form action="<?= base_url(); ?>eyemarket" class="form_basic">
                                                     <div class="modal-header">
                                                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                                                         <h4 class="modal-title" id="Login">Isi Keterangan Pemesanan</h4>
@@ -159,6 +160,8 @@
                                                     <div class="modal-footer">
                                                         <input type="submit" class="btn btn-info" value="Masukkan ke keranjang">
                                                     </div>
+                                                    <input type="hidden" name="fn" value="set_cart">
+                                                    <input type="hidden" name="id_product" value="<?= $data['id_product']; ?>">
                                                 </form>
                                             </div>
                                         </div>
