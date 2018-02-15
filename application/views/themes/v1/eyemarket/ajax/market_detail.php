@@ -99,7 +99,7 @@
                                     if ($id_member == NULL) 
                                     {
                                 ?>
-                                        <a href="<?= base_url(); ?>home/login?page=<?= uri_string(); ?>">
+                                        <a href="<?= base_url(); ?>member">
                                             <span class="btn btn-template-main">
                                                 <i class="fa fa-shopping-cart"></i> Add to cart 
                                             </span>
