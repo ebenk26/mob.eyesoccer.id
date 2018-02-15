@@ -152,19 +152,37 @@ $(document).ready(function () {
             box_popup();
         }
 
-        $('#' + IDForm).append('<input type="hidden" name="val" value="true" class="cinput">');
-
-        var val = [];
+        var ci = '';
+        var val = [{name: 'val', value: true}];
         $('#' + IDForm + ' .cinput').each(function (i) {
             var nm = $(this).attr('name')
-            val[i] = {name: nm, value: $(this).val()};
+            var vl = ($(this).attr('val') !== undefined) ? $(this).attr('val') : $(this).val();
+            val[i] = {name: nm, value: vl};
+            ci = i;
         });
+
+        if($('#' + IDForm).attr('fn') !== undefined) {
+            val[ci+1] = {name: 'fn', value: $('#' + IDForm).attr('fn')};
+        }
 
         var formURL = baseURL + actURL;
         var postData = val;
         var msgRequest = ($('#' + msgBox + '.msg').attr('value') == undefined) ? 'ajaxMessage' : $('#' + msgBox + '.msg').attr('value');
 
-        ajaxReqBasic(formURL, postData, msgRequest);
+        if($('#' + IDForm).attr('wait') !== undefined)
+        {
+            var wait = $(this).data('wait');
+            if (wait) clearTimeout(wait);
+
+            wait = setTimeout(function () {
+                ajaxReqBasic(formURL, postData, msgRequest);
+            }, 500);
+
+            $(this).data('wait', wait);
+            return false;
+        } else {
+            ajaxReqBasic(formURL, postData, msgRequest);
+        }
     });
 
     // Post on Keyup
@@ -327,19 +345,37 @@ function ajaxOnLoad(ax) {
         box_popup();
     }
 
-    $('#' + IDForm).append('<input type="hidden" name="val" value="true" class="cinput">');
-
-    var val = [];
+    var ci = '';
+    var val = [{name: 'val', value: true}];
     $('#' + IDForm + ' .cinput').each(function (i) {
         var nm = $(this).attr('name')
-        val[i] = {name: nm, value: $(this).val()};
+        var vl = ($(this).attr('val') !== undefined) ? $(this).attr('val') : $(this).val();
+        val[i] = {name: nm, value: vl};
+        ci = i;
     });
+
+    if($('#' + IDForm).attr('fn') !== undefined) {
+        val[ci+1] = {name: 'fn', value: $('#' + IDForm).attr('fn')};
+    }
 
     var formURL = baseURL + actURL;
     var postData = val;
     var msgRequest = ($('#' + msgBox + '.msg').attr('value') == undefined) ? 'ajaxMessage' : $('#' + msgBox + '.msg').attr('value');
 
-    ajaxReqBasic(formURL, postData, msgRequest);
+    if($('#' + IDForm).attr('wait') !== undefined)
+    {
+        var wait = $(this).data('wait');
+        if (wait) clearTimeout(wait);
+
+        wait = setTimeout(function () {
+            ajaxReqBasic(formURL, postData, msgRequest);
+        }, 500);
+
+        $(this).data('wait', wait);
+        return false;
+    } else {
+        ajaxReqBasic(formURL, postData, msgRequest);
+    }
 }
 
 function ajaxReqGet(formURL, msgRequest) {
@@ -504,8 +540,8 @@ function responseData(msg) {
 
     if (msg.xHtml != undefined) {
         if (msg.xAppend != undefined) {
-            $('#' + msg.xClass + '.loading').remove();
-            $('#' + msg.xClass).hide().fadeIn('medium').append(msg.xHtml);
+            $('#' + msg.xClass + ' .loadhide').remove();
+            $('#' + msg.xClass).append(msg.xHtml);
         } else {
             $('#' + msg.xClass).hide().fadeIn('medium').html(msg.xHtml);
         }
