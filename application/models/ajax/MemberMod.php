@@ -29,17 +29,30 @@ class MemberMod extends CI_Model {
         {
             if($res->status == 'Error')
             {
-                $arr = array('xClass'=> 'errmsg','xHtml'=> $res->message);
-            } else {
-                $arr = array_merge($arr, array('xSplit' => true, 'xData' => array()));
-                foreach ($res->data as $key => $value) {
-                    $arr['xData'] = array_merge($arr['xData'], array('msg'.$value->param => $value->msg));
+                if($res->message == 'Validation')
+                {
+                    $arr = array_merge($arr, array('xSplit' => true, 'xData' => array()));
+                    foreach ($res->data as $key => $value) {
+                        $arr['xData'] = array_merge($arr['xData'], array('msg'.$value->param => $value->msg));
+                    }
+                } else {
+                    $arr = array('xClass'=> 'errmsg','xHtml'=> $res->message);
                 }
             }
         } else {
             #echo $res->data->username;
            $v = $res->data;
-           $this->session->username = $v->username;
+           $sess = array(
+                    'id'=> $v->id,
+                    'username' => $v->username,
+                    'name'=> $v->name,
+                    'url_pic' => $v->url_pic,
+                    'url'     => $v->url,
+                    'active'  => $v->active,
+                    'verification' => $v->verification
+                );
+           $this->session->member   = $sess;
+
            #redirect(mMEMBERAREA,'refresh');
            $arr = array('xDirect'=> base_url().$refer);
            $this->tools->__flashMessage($arr);
@@ -69,11 +82,14 @@ class MemberMod extends CI_Model {
         {
             if($res->status == 'Error')
             {
-                $arr = array('xClass'=> 'errmsg','xHtml'=> $res->message);
-            } else {
-                $arr = array_merge($arr, array('xSplit' => true, 'xData' => array()));
-                foreach ($res->data as $key => $value) {
-                    $arr['xData'] = array_merge($arr['xData'], array('msg'.$value->param => $value->msg));
+                if($res->message == 'Validation')
+                {
+                    $arr = array_merge($arr, array('xSplit' => true, 'xData' => array()));
+                    foreach ($res->data as $key => $value) {
+                        $arr['xData'] = array_merge($arr['xData'], array('msg'.$value->param => $value->msg));
+                    }
+                } else {
+                    $arr = array('xClass'=> 'errmsg','xHtml'=> $res->message);
                 }
             }
         }

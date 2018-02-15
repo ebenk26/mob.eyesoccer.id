@@ -56,7 +56,7 @@
 </div>
 <script>
    
- var no = 0;
+ var no = 1;
  var pg = 1;
       $(window).scroll(function() {
        
