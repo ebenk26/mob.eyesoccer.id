@@ -27,7 +27,7 @@ class Eyemarket extends CI_Controller {
 		$this->EyemarketMod->$fn();
 	    }
 	} else {
-	    $data['kanal'] = 'eyemarket';
+	    $data['kanal'] = 'eyemarkett';
 	    $data['content'] = 'eyemarket/home';
 	    
 	    $data['title'] = $this->config->item('meta_title');

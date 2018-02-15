@@ -76,82 +76,44 @@
                         <div class="col-sm-6" style="padding: 0px !important;">
                             <div class="box">
                                     <div class="sizes" style="text-align: left;">
-                                        <h3 style="font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;"><?= $data['nama']; ?></h3>
+                                        <h3 style="font-weight: 700;letter-spacing: 0.08em;text-transform: uppercase;"> 
+                                            <?= $data['nama']; ?> 
+                                        </h3>
                                     </div>
-                                    <?php 
-                                        if ($data["harga"] != 0)
-                                        {
-                                    ?>
-                                            <p style="margin-top: 5%;">
-                                                <del>Rp. <?= number_format($data['harga_sebelum'],0,',','.'); ?> </del>
-                                            </p>
-                                            <p class="price" style="text-align: left;">
-                                                Rp. <?= number_format($data['harga'],0,',','.'); ?> 
-                                            </p>
-                                    <?php        
-                                        }
-                                    ?>
+                            <?php 
+                                if ($data["harga"] != 0)
+                                {
+                            ?>
+                                    <p style="margin-top: 5%;">
+                                        <del>Rp. <?= number_format($data['harga_sebelum'],0,',','.'); ?> </del>
+                                    </p>
+                                    <p class="price" style="text-align: left;">
+                                        Rp. <?= number_format($data['harga'],0,',','.'); ?> 
+                                    </p>
+                            <?php        
+                                }
+                            ?>
                                     
                                     <p>
                                 <?php
-                                    if (isset($id_member) && $id_member == NULL) 
+                                    if ($id_member == NULL) 
                                     {
                                 ?>
-                                        <!-- <a href="<?= base_url(); ?>home/login?page=<?= uri_string(); ?>"> -->
-                                            <?php 
-                                                if ($data["harga"] != 0)
-                                                {
-                                            ?>
-                                                    <span class="btn btn-template-main">
-                                                        <i class="fa fa-shopping-cart"></i> Add to cart 
-                                                    </span>
-                                            <?php        
-                                                }
-                                                else
-                                                {
-                                            ?>
-                                                    <span class="btn btn-template-main">
-                                                        <i class="fa fa-shopping-cart"></i> Available Soon
-                                                    </span>
-                                            <?php        
-                                                }
-                                            ?>
-                                            
-                                            
-                                        <!-- </a> -->
-                                        <!-- <a href="#" data-toggle="modal" data-target="#login-modal" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Add to wishlist">
-                                            <i class="fa fa-heart-o"></i>
-                                        </a> -->
+                                        <a href="<?= base_url(); ?>home/login?page=<?= uri_string(); ?>">
+                                            <span class="btn btn-template-main">
+                                                <i class="fa fa-shopping-cart"></i> Add to cart 
+                                            </span>
+                                        </a>
                                 <?php        
                                     }
                                     else
                                     {
                                 ?>
-                                        <!-- <a href="#" data-toggle="modal" data-target="#chart-modal" class="btn btn-template-main"> -->
-                                            <?php 
-                                                if ($data["harga"] != 0)
-                                                {
-                                            ?>
-                                                    <span class="btn btn-template-main">
-                                                        <i class="fa fa-shopping-cart"></i> Add to chart
-                                                    </span>
-                                            <?php        
-                                                }
-                                                else
-                                                {
-                                            ?>
-                                                    <span class="btn btn-template-main">
-                                                        <i class="fa fa-shopping-cart"></i> Available Soon
-                                                    </span>
-                                            <?php        
-                                                }
-                                            ?>
-                                        <!-- </a> -->
-                                        <!-- <a href="#" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Add to wishlist">
-                                            <i class="fa fa-heart-o"></i>
-                                        </a> -->
+                                        <a href="#" data-toggle="modal" data-target="#chart-modal" class="btn btn-template-main">
+                                            <span class="btn btn-template-main">
+                                                <i class="fa fa-shopping-cart"></i> Add to chart
+                                            </span>
+                                        </a>
                                 <?php
                                     }
                                 ?>
@@ -206,21 +168,6 @@
                                         <p>
                                             <h4>Product details</h4>
                                             <p><?= $data['keterangan']; ?></p>
-                                            <!-- <h4>Material & care</h4>
-                                            <ul>
-                                                <li>Polyester</li>
-                                                <li>Machine wash</li>
-                                            </ul>
-                                            <h4>Size & Fit</h4>
-                                            <ul>
-                                                <li>Regular fit</li>
-                                                <li>The model (height 5'8" and chest 33") is wearing a size S</li>
-                                            </ul>
-
-                                            <blockquote>
-                                                <p><em>Define style this season with Armani's new range of trendy tops, crafted with intricate details. Create a chic statement look by teaming this lace number with skinny jeans and pumps.</em>
-                                                </p>
-                                            </blockquote> -->
                                     </div>
                             </div>
                         </div>

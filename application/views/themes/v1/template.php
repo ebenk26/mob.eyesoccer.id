@@ -25,6 +25,7 @@
         {
     ?>
             <link href="<?php echo SUBCDN."assets/css/bootstrap/css/eyemarket/bootstrap3.min.css" ?>" rel="stylesheet" type="text/css">
+            <link href="<?php echo SUBCDN."assets/css/bootstrap/css/eyemarket/animate.css" ?>" rel="stylesheet" type="text/css">
             <link href="<?php echo SUBCDN."assets/css/bootstrap/css/eyemarket/style.default.css" ?>" rel="stylesheet" type="text/css">
     <?php    
         }
@@ -51,6 +52,19 @@
     <!-- SWAlert -->
     <link href="<?php echo SUBCDN."assets/js/swalert/sweetalert.css" ?>" rel="stylesheet" />
     <script src="<?php echo SUBCDN."assets/js/swalert/sweetalert.min.js"; ?>"></script>
+
+    <?php if ($kanal == "eyemarket")
+        {
+    ?>
+            <script src='<?php echo SUBCDN.'assets/js/eyemarket/jquery.cookie.js'; ?>'></script>
+            <script src='<?php echo SUBCDN.'assets/js/eyemarket/waypoints.min.js'; ?>'></script>
+            <script src='<?php echo SUBCDN.'assets/js/eyemarket/jquery.counterup.min.js'; ?>'></script>
+            <script src='<?php echo SUBCDN.'assets/js/eyemarket/jquery.parallax-1.1.3.js'; ?>'></script>
+            <script src='<?php echo SUBCDN.'assets/js/eyemarket/front.js'; ?>'></script>
+    <?php    
+        }
+    ?>
+    
 </head>
 <body>
     <?php
