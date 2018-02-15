@@ -3,7 +3,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class MarketQueryMod extends CI_Model {
 
- public function get_all_product($limit)
+    function get_id_md($id_md)
+    {
+        $query = $this->db->query(" SELECT
+                                        A.id_member
+                                    FROM
+                                        tbl_member A
+                                    WHERE
+                                        md5(A.id_member) = '$id_md'
+                                        ")->row();
+        return $query;
+    }
+
+    public function get_all_product($limit)
     {
         $query = $this->db->query(" SELECT
                                         A.id_product,
@@ -120,5 +132,81 @@ class MarketQueryMod extends CI_Model {
                                         4
                                         ")->result_array();
         return $query; 
+    }
+
+    public function add_keranjang($data)
+    {
+        $this->db->insert('eyemarket_keranjang', $data);
+        
+        return $this->db->insert_id();
+    }
+
+    public function get_keranjang($id_member)
+    { 
+        $query = $this->db->query(" SELECT
+                                        A.*,
+                                        B.nama,
+                                        B.title_slug,
+                                        B.harga_sebelum,
+                                        B.harga,
+                                        B.diskon,
+                                        B.berat,
+                                        B.keterangan,
+                                        C.nama as toko,
+                                        E.id as id_image,
+                                        E.image1,
+                                        E.image2,
+                                        E.image3,
+                                        E.image4,
+                                        E.image5,
+                                        F.nama as nama_rumah,
+                                        F.kode,
+                                        F.alamat
+                                    FROM
+                                        eyemarket_keranjang A
+                                    LEFT JOIN
+                                        eyemarket_product B     on B.id_product = A.id_product
+                                    LEFT JOIN
+                                        eyemarket_toko C        on C.id = B.id_toko
+                                    LEFT JOIN
+                                        eyemarket_images E      on A.id_product =  E.id_product
+                                    LEFT JOIN
+                                        eyemarket_address F      on A.id_alamat =  F.id
+                                    WHERE 
+                                        md5(A.id_member) = '$id_member'
+                                        AND
+                                        A.status = 0
+                                    ORDER BY
+                                        A.id ASC
+                                        ")->result_array();
+        return $query;
+    }
+
+    public function get_total_harga($id_member)
+    { 
+        $query = $this->db->query(" SELECT
+                                        sum(total) as total_all
+                                    FROM
+                                        eyemarket_keranjang
+                                    WHERE
+                                        md5(id_member) = '$id_member'
+                                        AND
+                                        status = 0
+                                        ")->row();
+        return $query;
+    }
+
+    public function get_count_keranjang($id_member)
+    {
+        $query = $this->db->query(" SELECT
+                                        count(id) as jumlah
+                                    FROM
+                                        eyemarket_keranjang
+                                    WHERE
+                                        md5(id_member) = '$id_member'
+                                        AND
+                                        status = 0
+                                        ")->row();
+        return $query;
     }
 }

@@ -19,7 +19,7 @@ if ($newsdetail){
 }
 ?>
 <img style="width: 40%; margin-left: 30%;" class="load-gif loadhide" src="<?php echo base_url();?>assets/img/loadingsoccer.gif" alt="Loading">
-<div  id="reqnewslist" class='loadnewslist' action="eyenews" loading="off">
+<div  id="reqnewslist" class='loadnewslist' action="eyenews" loading="off" wait>
 	<input type="hidden" name="fn" value="related_news" class="cinput">
 	<input type="hidden" name="pg"  class="cinput" id="pg"> 
 	<input type="hidden" name="add" class="cinput" id="add">
@@ -30,9 +30,10 @@ if ($newsdetail){
 	var pg = 1;
 	var height = '';
 	$(window).scroll(function() {
-		console.log($(window).scrollTop() + $(window).height());
-		console.log($(document).height());
-		if($(window).scrollTop() + $(window).height() == $(document).height()) {
+		// console.log('1',$(window).scrollTop());
+		// console.log('2',$(window).height());
+		// console.log('3',$(document).height()/2 + $(document).height()/4);
+		if($(window).scrollTop() >= $(document).height()/2 + $(document).height()/4) {
 			pg = pg+1;
 			$('.loading').show();
 			$('#pg').val(pg);
