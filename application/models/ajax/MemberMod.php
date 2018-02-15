@@ -22,27 +22,65 @@ class MemberMod extends CI_Model {
         $pass  = $this->input->post('password');
         $query = array('email'=> $email, 'password'=> $pass);
         $res   = $this->excurl->remoteCall($this->__xurl().'login', $this->__xkey(), $query);
-
         $res   = json_decode($res);
     
-
-        if($res->status == 'Success'){
+        $arr  = [];
+        if($res AND is_array($res->data))
+        {
+            if($res->status == 'Error')
+            {
+                $arr = array('xClass'=> 'errmsg','xHtml'=> $res->message);
+            } else {
+                $arr = array_merge($arr, array('xSplit' => true, 'xData' => array()));
+                foreach ($res->data as $key => $value) {
+                    $arr['xData'] = array_merge($arr['xData'], array('msg'.$value->param => $value->msg));
+                }
+            }
+        } else {
             #echo $res->data->username;
            $v = $res->data;
            $this->session->username = $v->username;
            #redirect(mMEMBERAREA,'refresh');
            $arr = array('xDirect'=> base_url().$refer);
-           echo json_encode($arr);
-        }
-        else{
-
-            $arr   = array('xClass'=> 'errmsg','xHtml'=> 'username atau password salah','new'=> @$_GET['from'],'status'=> $res->status);
-            echo json_encode($arr);
-
+           $this->tools->__flashMessage($arr);
         }
         
-    	
+        $this->tools->__flashMessage($arr);
 	}
+
+    function __regact(){
+
+        $name = $this->input->post('name');
+        $uname = $this->input->post('username');
+        $email= $this->input->post('email');
+        $pass = $this->input->post('password');
+        $cpass= $this->input->post('passconfirm');
+        $query= array(
+                'name'  => $name,
+                'username' => $uname,
+                'email' => $email,
+                'password' => $pass,
+                'passconfirm'=> $cpass);
+        $res  = $this->excurl->remoteCall($this->__xurl().'register',$this->__xkey(),$query);
+        $res = json_decode($res);
+
+        $arr  = [];
+        if($res AND is_array($res->data))
+        {
+            if($res->status == 'Error')
+            {
+                $arr = array('xClass'=> 'errmsg','xHtml'=> $res->message);
+            } else {
+                $arr = array_merge($arr, array('xSplit' => true, 'xData' => array()));
+                foreach ($res->data as $key => $value) {
+                    $arr['xData'] = array_merge($arr['xData'], array('msg'.$value->param => $value->msg));
+                }
+            }
+        }
+
+        $this->tools->__flashMessage($arr);
+
+    }
 	
 
 }

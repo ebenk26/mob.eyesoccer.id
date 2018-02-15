@@ -1,14 +1,15 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Eyemarket extends CI_Controller {
+class Eyemarket extends CI_Controller
+{
 
     private function __theme() { return $this->config->item('themes'); }
-    
+
     function __construct()
     {
-	parent::__construct();
-	$this->load->model('ajax/EyemarketMod');
+        parent::__construct();
+        $this->load->model('ajax/EyemarketMod');
     }
 
     function index()
@@ -38,18 +39,17 @@ class Eyemarket extends CI_Controller {
 	}
     }
 
-    function detail($toko,$slug)
+    function detail($toko, $slug)
     {
-    	$data['slug'] = $slug;
-    	$data['kanal'] = 'eyemarket';
-    	$data['content'] = 'eyemarket/detail';
-    	
-    	$data['title'] = $this->config->item('meta_title');
-    	$data['meta_desc'] = $this->config->item('meta_desc');
-    	$data['meta_keyword'] = $this->config->item('meta_keyword');
-    	
-    	$this->load->view($this->__theme().'template', $data);
+        $data['slug'] = $slug;
+        $data['kanal'] = 'eyemarket';
+        $data['content'] = 'eyemarket/detail';
+
+        $data['title'] = $this->config->item('meta_title');
+        $data['meta_desc'] = $this->config->item('meta_desc');
+        $data['meta_keyword'] = $this->config->item('meta_keyword');
+
+        $this->load->view($this->__theme() . 'template', $data);
     }
-    
 
 }
