@@ -86,8 +86,10 @@ class EyemeMod extends CI_Model {
     }
     function __menotif(){
         $uname = $this->session->username;
-        $query = array('page'=> '1','limit'=> '10',$uname);
-        $res   = $this->excurl->remoteCall($this->__xurl().'me-notif'.$uname,$this->__xkey(),$query);
+       # echo $uname;
+        $query = array('page'=> '1','limit'=> '10','username'=>$uname);
+        $res   = $this->excurl->remoteCall($this->__xurl().'me-notif',$this->__xkey(),$query);
+        #p($res);
         $data['res'] = json_decode($res);
         $html  = $this->load->view($this->__theme().'eyeme/ajax/me_a_notif',$data,true);
         $arr   = array('xClass'=> 'reqnotif','xHtml'=> $html);

@@ -12,7 +12,7 @@
          
             </script>
         </div>
-    <input type="hidden" name="fn" value="notif" class="cinput">
+    <input type="hidden" name="fn" value="menotif" class="cinput">
         <table>
             <tr>
                 <td>

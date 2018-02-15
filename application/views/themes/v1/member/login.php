@@ -13,8 +13,10 @@
                     <input type="hidden" name="fn" class="cinput" value="loginact">
                     <span>email</span>
                     <input type="text" name="email" placeholder="ketik alamat email ..." class="cinput">
+                    <span class='err msgemail'></span>
                     <span>password</span>
                     <input type="password" name="password" placeholder="password anda" class="cinput">
+                    <span class='err msgpassword'></span>
                     <a href="">lupa password?</a>
                     <button type="submit" class="">masuk</button>
                     <div class="container atau-menggunakan">

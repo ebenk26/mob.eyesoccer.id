@@ -1,47 +1,29 @@
 
     <div class="info-box-notif" style="display:block">
         <div class="info-box-notif-content">
+
+            <?php 
+            #p($res->data);
+                foreach($res->data as $k => $v){
+
+
+
+            ?>
             <table>
                 <tr>
                     <td>
-                        <img src="http://modernartbuyer.com/wp-content/uploads/2014/10/Aqueous-II-278-web.jpg" alt="">
+                        <img src="<?php echo urltoimgstore($v->url_pic)?>">
                     </td>
                     <td>
-                        <a href="">Lorem Ipsum</a> menyukaifoto anda
-                        <span>10 menit lalu</span>
+                        <a href="<?php MEPROFILE.$v->username?>"><?php echo $v->username?></a>
+                        
+                        <?php echo (substr($v->notif_type,0,3) == 'LIK' ? 'Menyukai Foto Anda' :
+                                    (substr($v->notif_type,0,3) == 'COM' ? 'Mengomentari Foto Anda' : 'Mengikuti Anda'))?>
+                        <span><?php echo getTime(getDistance(NOW,$v->last_update))['timeString']?></span>
                     </td>
-                    <td><img src="http://modernartbuyer.com/wp-content/uploads/2014/10/Aqueous-II-278-web.jpg" alt=""></td>
-                </tr>
-                <tr>
-                    <td>
-                        <img src="http://modernartbuyer.com/wp-content/uploads/2014/10/Aqueous-II-278-web.jpg" alt="">
-                    </td>
-                    <td>
-                        <a href="">Lorem Ipsum</a> mengomentari post anda
-                        <span>10 menit lalu</span>
-                    </td>
-                    <td><img src="http://modernartbuyer.com/wp-content/uploads/2014/10/Aqueous-II-278-web.jpg" alt=""></td>
-                </tr>
-                <tr>
-                    <td>
-                        <img src="http://modernartbuyer.com/wp-content/uploads/2014/10/Aqueous-II-278-web.jpg" alt="">
-                    </td>
-                    <td>
-                        <a href="">Lorem Ipsum</a> mulai mengikuti anda
-                        <span>10 menit lalu</span>
-                    </td>
-                    <td><a href="">ikuti</a></td>
-                </tr>
-                <tr>
-                    <td>
-                        <img src="http://modernartbuyer.com/wp-content/uploads/2014/10/Aqueous-II-278-web.jpg" alt="">
-                    </td>
-                    <td>
-                        <a href="">Lorem Ipsum</a> mulai mengikuti anda
-                        <span>10 menit lalu</span>
-                    </td>
-                    <td><a href="" class="following-button">Mengikuti</a></td>
+                    <td><img src="<?php echo urltobetame($v->url_img)?>"></td>
                 </tr>
             </table>
+            <?php }?>
         </div>
     </div>

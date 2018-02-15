@@ -39,7 +39,8 @@ class MemberMod extends CI_Model {
         } else {
             #echo $res->data->username;
            $v = $res->data;
-           $this->session->username = $v->username;
+           $this->session->username  = $v->username;
+           $this->session->id_member = $v->id;
            #redirect(mMEMBERAREA,'refresh');
            $arr = array('xDirect'=> base_url().$refer);
            $this->tools->__flashMessage($arr);
