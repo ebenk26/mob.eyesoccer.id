@@ -30,6 +30,8 @@ if ($newsdetail){
 	var pg = 1;
 	var height = '';
 	$(window).scroll(function() {
+		console.log($(window).scrollTop() + $(window).height());
+		console.log($(document).height());
 		if($(window).scrollTop() + $(window).height() == $(document).height()) {
 			pg = pg+1;
 			$('.loading').show();
