@@ -30,8 +30,12 @@
             </div>
             <div class="container-eme-like">
                 <ul>
-                    <li><i class="fa fa-heart heart-first" aria-hidden="true"></i><span class="openComment"><i class="fa fa-comment-o" aria-hidden="true"></i></span></li>
-                    <li><span><a href="">username</a> dan <a href="">234</a> menyukai ini</span></li>
+                    <li><i class="fa fa-heart heart-first" aria-hidden="true"></i>
+                      <i class="fas fa-comments"></i></span></span>
+                    </li>
+                    <li>
+                        <span><a href="">username</a> dan <a href="">234</a> menyukai ini</span>
+                    </li>
                 </ul>
             </div>
             <ul class="comment-eme">

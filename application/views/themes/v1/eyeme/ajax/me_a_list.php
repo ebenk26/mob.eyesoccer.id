@@ -2,7 +2,7 @@
 
 $me = json_decode($eyeme);
 foreach($me->data as $k => $v){
-	$url = urltobetame($v->url_pic);
+	$url = urltobetame($v->url_img);
 
 	echo  '<a href="'.$this->library->urltomob($v->url).'">
 			<div class="eme-box">

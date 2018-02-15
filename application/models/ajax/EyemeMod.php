@@ -60,13 +60,14 @@ class EyemeMod extends CI_Model {
         $req = $this->input->post('uname');
         $req = explode('-',$req);
         $uname = $req[0];
-        $query =  array('page' => '1', 'limit' => '1' ,'username' => $uname);
+        $query =  array('page' => '1', 'limit' => '10');
         $res           = $this->excurl->remoteCall($this->__xurl().'me/'.$uname,$this->__xkey(),$query);
+
         $data['res']   = json_decode($res);
+        #p($data['res']);
 
         if(count($data['res']->data) > 0 ){
             if($req[1] == 'profile'){
-
                 $html      = $this->load->view($this->__theme().'eyeme/ajax/me_a_profile',$data,true);
                 $data      = array('xClass'=> 'reqprofile','xHtml' => $html);
             }
