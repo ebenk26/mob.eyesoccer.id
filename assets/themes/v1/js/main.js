@@ -152,15 +152,17 @@ $(document).ready(function () {
             box_popup();
         }
 
+        var ci = '';
         var val = [{name: 'val', value: true}];
         $('#' + IDForm + ' .cinput').each(function (i) {
             var nm = $(this).attr('name')
             var vl = ($(this).attr('val') !== undefined) ? $(this).attr('val') : $(this).val();
             val[i] = {name: nm, value: vl};
+            ci = i;
         });
 
         if($('#' + IDForm).attr('fn') !== undefined) {
-            val[i+1] = {name: 'fn', value: $('#' + IDForm).attr('fn')};
+            val[ci+1] = {name: 'fn', value: $('#' + IDForm).attr('fn')};
         }
 
         var formURL = baseURL + actURL;
@@ -343,15 +345,17 @@ function ajaxOnLoad(ax) {
         box_popup();
     }
 
+    var ci = '';
     var val = [{name: 'val', value: true}];
     $('#' + IDForm + ' .cinput').each(function (i) {
         var nm = $(this).attr('name')
         var vl = ($(this).attr('val') !== undefined) ? $(this).attr('val') : $(this).val();
         val[i] = {name: nm, value: vl};
+        ci = i;
     });
 
     if($('#' + IDForm).attr('fn') !== undefined) {
-        val[i+1] = {name: 'fn', value: $('#' + IDForm).attr('fn')};
+        val[ci+1] = {name: 'fn', value: $('#' + IDForm).attr('fn')};
     }
 
     var formURL = baseURL + actURL;
