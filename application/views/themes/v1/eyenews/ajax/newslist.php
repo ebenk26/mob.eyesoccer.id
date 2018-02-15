@@ -15,7 +15,9 @@ if ($newslist){
 <?php
 	}
 }
+	if(count($newslist->data)>0){
+	?>
+	<img style="width: 40%; margin-left: 30%;" class="load-gif loadhide" src="<?php echo base_url();?>assets/img/loadingsoccer.gif" alt="Loading">
+	<?php 
+	}
 ?>
-<div id="load_list" class="etube-content etube-content-detail pd-t-10">
-	Loading...
-</div>
