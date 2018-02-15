@@ -510,7 +510,7 @@ function responseData(msg) {
 
     if (msg.xHtml != undefined) {
         if (msg.xAppend != undefined) {
-            $('#' + msg.xClass + '.loading').remove();
+            $('#' + msg.xClass + ' .loadhide').remove();
             $('#' + msg.xClass).hide().fadeIn('medium').append(msg.xHtml);
         } else {
             $('#' + msg.xClass).hide().fadeIn('medium').html(msg.xHtml);

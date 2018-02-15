@@ -25,7 +25,10 @@ class EyenewsMod extends CI_Model {
     
     function __onelist()
     {
-	$query = array('page' => 1, 'limit' => 1, 'sortby' => 'newest');
+	$page  = $this->input->post('page');
+	$limit = $this->input->post('limit');
+	$desc = $this->input->post('desc');
+	$query = array('page' => $page, 'limit' => $limit, 'sortby' => 'newest', 'description' => $desc);
 	$data['list'] = $this->excurl->remoteCall($this->__xurl().'news', $this->__xkey(), $query);
 	
 	$html = $this->load->view($this->__theme().'eyenews/ajax/onelist', $data, true);
@@ -85,5 +88,31 @@ class EyenewsMod extends CI_Model {
 	$data = array('xClass' => 'reqcatlist', 'xHtml' => $html);
 	$this->tools->__flashMessage($data);
     }
+	
+	function __related_news()
+    {
+		$page  = $this->input->post('pg');
+        $cat = $this->input->post('cat');
+		$query = array('page' => $page,'limit' => 5, 'sortby' => 'newest','category' => $cat);
+		$data['newslist'] = $this->excurl->remoteCall($this->__xurl().'news',$this->__xkey(),$query);
+		
+		$html = $this->load->view($this->__theme().'eyenews/ajax/newslist', $data, true);
+		
+		$data = array('xClass' => 'reqterkait', 'xHtml' => $html, 'xAppend' => true);
+		$this->tools->__flashMessage($data);
+    }
 
+	function __homenewslist()
+    {
+		$page  = $this->input->post('page');
+        $limit = $this->input->post('limit');
+        $desc = $this->input->post('desc');
+		$query = array('page' => $page, 'limit' => $limit, 'sortby' => 'newest', 'description' => $desc);
+		$data['homenewslist'] = $this->excurl->remoteCall($this->__xurl().'news', $this->__xkey(), $query);
+		
+		$html = $this->load->view($this->__theme().'eyenews/ajax/homenewslist', $data, true);
+		
+		$data = array('xClass' => 'reqhomenewslist', 'xHtml' => $html);
+		$this->tools->__flashMessage($data);
+    }
 }

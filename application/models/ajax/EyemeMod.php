@@ -84,5 +84,16 @@ class EyemeMod extends CI_Model {
         $this->tools->__flashMessage($data);
         
     }
+    function __menotif(){
+        $uname = $this->session->username;
+       # echo $uname;
+        $query = array('page'=> '1','limit'=> '10','username'=>$uname);
+        $res   = $this->excurl->remoteCall($this->__xurl().'me-notif',$this->__xkey(),$query);
+        #p($res);
+        $data['res'] = json_decode($res);
+        $html  = $this->load->view($this->__theme().'eyeme/ajax/me_a_notif',$data,true);
+        $arr   = array('xClass'=> 'reqnotif','xHtml'=> $html);
+        $this->tools->__flashMessage($arr);
+    }
    
 }
