@@ -9,7 +9,7 @@
         <div id='errmsg'></div>
         <div class="login-box">
             <div>                    
-                 <form  class='form_basic' loading="off" action="member">
+                 <form  class='form_basic'>
                     <input type="hidden" name="fn" class="cinput" value="loginact">
                     <span>email</span>
                     <input type="text" name="email" placeholder="ketik alamat email ..." class="cinput">

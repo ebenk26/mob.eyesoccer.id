@@ -29,7 +29,7 @@ class Member extends CI_Controller {
 	    }
 	} else {
 
-		$content = ($this->session->username ? 'member/home': 'member/login');
+		$content = ($this->session->member ? 'member/home': 'member/login');
 	    $data['content']   = $content;
 	    $data['title']     = $this->config->item('meta_title');
 
@@ -49,7 +49,10 @@ class Member extends CI_Controller {
     }
     function sess(){
     	p($_SESSION);
-    	session_destroy();
+    	#session_destroy();
+    }
+    function destroy_sess(){
+    	$this->session->sess_destroy();
     }
     #function de
 
