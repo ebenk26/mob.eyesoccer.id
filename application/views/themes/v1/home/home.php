@@ -200,7 +200,7 @@
 					</div>
 					<span style="position: unset;">12 Nov 2017 22:19:06</span>
 					<h1 style="bottom: 0;padding: unset;">Di Website FIFA Bali United yang Jadi Juara Liga 1 2017</h1>
-					<p>JAKARTA - Kompetisi Liga 1 2017 memang sudah selesai. Dan,…
+					<p>JAKARTA - Kompetisi Liga 1 2017 memang sudah selesai. Dan,ï¿½
 					</p>
 				</div>
 			</a>
