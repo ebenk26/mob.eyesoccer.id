@@ -195,12 +195,17 @@ $(document).ready(function () {
         var nm = $(this).attr('name')
         var val = [{name: 'fn', value: $(this).attr('fn')}, {name: nm, value: $(this).val()}];
 
-        if ($(this).attr('id') !== undefined) {
-            val.push({name: 'id', value: $(this).attr('id')});
-        }
-
         if ($(this).attr('dest') !== undefined) {
             val.push({name: 'dest', value: $(this).attr('dest')});
+        }
+
+        if ($(this).attr('id') !== undefined) {
+            var IDForm = $(this).attr('id');
+            $('#' + IDForm + ' .cinput').each(function (i) {
+                var nm = $(this).attr('name');
+                var vl = ($(this).attr('val') !== undefined) ? $(this).attr('val') : $(this).val();
+                val.push({name: nm, value: vl});
+            });
         }
 
         var formURL = baseURL + actURL;
@@ -236,12 +241,17 @@ $(document).ready(function () {
         var nm = $(this).attr('name')
         var val = [{name: 'fn', value: $(this).attr('fn')}, {name: nm, value: $(this).val()}];
 
-        if ($(this).attr('id') !== undefined) {
-            val.push({name: 'id', value: $(this).attr('id')});
-        }
-
         if ($(this).attr('dest') !== undefined) {
             val.push({name: 'dest', value: $(this).attr('dest')});
+        }
+
+        if ($(this).attr('id') !== undefined) {
+            var IDForm = $(this).attr('id');
+            $('#' + IDForm + ' .cinput').each(function (i) {
+                var nm = $(this).attr('name');
+                var vl = ($(this).attr('val') !== undefined) ? $(this).attr('val') : $(this).val();
+                val.push({name: nm, value: vl});
+            });
         }
 
         var formURL = baseURL + actURL;
