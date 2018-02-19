@@ -99,7 +99,16 @@ class EyemarketMod extends MarketQueryMod {
         $this->tools->__flashMessage($data);
     }
 
+    function __delete_cart()
+    {
+        $id_member = $this->id_member;
 
+        $id_product = $this->input->post('id');
+        $query     = $this->delete_keranjang($id_product);
+
+        $data = array('xAlert' => true,'xCss' => 'boxsuccess','xMsg' => 'Produk berhasil dihilangkan dari keranjang','xDirect'=> base_url().'eyemarket/keranjang/'.$id_member);
+        $this->tools->__flashMessage($data);
+    }
 
 }
 
