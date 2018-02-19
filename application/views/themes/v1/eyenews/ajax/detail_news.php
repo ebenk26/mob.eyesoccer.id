@@ -4,6 +4,7 @@ if ($newsdetail){
 	$dt = json_decode($newsdetail);
 	
 ?>
+	<input id="catews" type="hidden" value="<?php echo $dt->data->news_type;?>">
 	<div class="container enews-detail">
 		<h1><?php echo $dt->data->title;?></h1>
 		<img src="<?php echo $dt->data->url_pic;?>" alt="<?php echo $dt->data->title;?>" width="100%">

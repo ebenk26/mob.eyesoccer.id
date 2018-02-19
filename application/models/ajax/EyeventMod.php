@@ -46,13 +46,37 @@ class EyeventMod extends CI_Model {
 
     function __event_list()
     {
-    	$query = array('page' => 1, 'limit' => 3, 'sortby' => 'mostview', 'category' => '');
+        $page = $this->input->post('page');
+        $limit = $this->input->post('limit');
+
+    	$query = array('page' => 1, 'limit' => $limit, 'sortby' => 'mostview', 'category' => '');
     	$data['event_list'] = $this->excurl->remoteCall($this->__xurl().'event', $this->__xkey(), $query);
 
-    	$html = $this->load->view($this->__theme().'eyevent/ajax/event_list', $data, true);
+        if ($page == 'home')
+        {
+            $html = $this->load->view($this->__theme().'eyevent/ajax/home_event_list', $data, true);            
+        }
+        else
+        {
+            $html = $this->load->view($this->__theme().'eyevent/ajax/event_list', $data, true);
+        }
+
     	
     	$data = array('xClass' => 'reqevent', 'xHtml' => $html);
     	$this->tools->__flashMessage($data);
+    }
+
+    function __event_detail()
+    {
+        $data['slug'] = $this->input->post("slug");
+        
+        $query = array('page' => 1, 'limit' => 6, 'related' => 'true');
+        $data['detail'] = $this->excurl->remoteCall($this->__xurl().'event/'.$data['slug'], $this->__xkey(), $query);
+        
+        $html = $this->load->view($this->__theme().'eyevent/ajax/detail_vent', $data, true);
+        
+        $data = array('xClass' => 'reqdetail', 'xHtml' => $html);
+        $this->tools->__flashMessage($data);
     }
 
 }

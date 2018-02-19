@@ -128,6 +128,7 @@
                 <span>30 menit lalu</span>
                 <span>2000 view - 100 suka</span>
             </div>
+
             <div class="etube-content">
                 <div class="v-etube">
                     <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
@@ -139,7 +140,7 @@
                 <span>30 menit lalu</span>
                 <span>2000 view - 100 suka</span>
             </div>
-        </div>
+         </div>
     </div>
 </div>
 <!-- EYEME -->
@@ -171,6 +172,40 @@
 </div>
 <!-- EYENEWS -->
 <div class="p-container tab2">
+	<div class="container eyetube">
+		<div id="reqhomenewslist" class='loadhomenewslist' action="eyenews" loading="off" clean="clshomenewslist">
+			<div id='clshomenewslist'>
+				<script>
+					$(document).ready(function () {
+						$(window).on('load', function () {
+							ajaxOnLoad('loadhomenewslist');
+						});
+					});
+				</script>
+			</div>
+			<input type='hidden' name='fn' value='homenewslist' class='cinput'>
+			<input type='hidden' name='limit' value='4' class='cinput'>
+			<input type='hidden' name='page' value='1' class='cinput'>
+			<input type='hidden' name='desc' value='true' class='cinput'>
+			<div class="v-eyetube">
+				<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+			</div>
+			<span style="padding-bottom: 0;margin-bottom: 0;">30 menit lalu</span>
+			<h1 style="padding-top: 0;margin-top: -5px;">Lorrem Ipsum solor sit amet</h1>
+			<span id='tab-populer' class="orange-active" active="true" style="bottom: 0;color: #FF5722;">Terkini</span>
+			<a href="http://localhost/mob.eyesoccer.id/eyenews/detail/di-website-fifa-bali-united-yang-jadi-juara-liga-1-2017" title="Di Website FIFA Bali United yang Jadi Juara Liga 1 2017">
+				<div class="rek-ber-c">
+					<div class="img-res-height" style="margin-top: 0;">
+						<img src="http://static.eyesoccer.id/v1/cache/images/2359-FIFAlagi.jpg/small" alt="Di Website FIFA Bali United yang Jadi Juara Liga 1 2017">
+					</div>
+					<span style="position: unset;">12 Nov 2017 22:19:06</span>
+					<h1 style="bottom: 0;padding: unset;">Di Website FIFA Bali United yang Jadi Juara Liga 1 2017</h1>
+					<p>JAKARTA - Kompetisi Liga 1 2017 memang sudah selesai. Dan,…
+					</p>
+				</div>
+			</a>
+		</div>
+	</div>
     <div id="reqtabnews" class='loadtabnews' action="eyenews" loading="off" clean="clstabnews">
         <div id='clstabnews'>
             <script>
@@ -311,6 +346,8 @@
                 </script>
             </div>
             <input type='hidden' name='fn' value='event_list' class='cinput'>
+            <input type='hidden' name='page' value='home' class='cinput'>
+            <input type='hidden' name='limit' value='3' class='cinput'>
             <div role="listbox" class="carousel-inner w-max">
                 <div class="box item active">
                     <div class="ev-box-content">

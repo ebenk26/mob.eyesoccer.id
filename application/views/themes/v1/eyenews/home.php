@@ -37,6 +37,9 @@
 			</script>
 		</div>
 		<input type='hidden' name='fn' value='onelist' class='cinput'>
+		<input type='hidden' name='limit' value='4' class='cinput'>
+		<input type='hidden' name='page' value='1' class='cinput'>
+		<input type='hidden' name='desc' value='true' class='cinput'>
 		<a href="enews-detail.html">
 		<div class="container eyetube">
 			<div class="v-eyetube">
