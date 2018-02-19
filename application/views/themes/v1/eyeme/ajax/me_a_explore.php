@@ -13,12 +13,4 @@ foreach($explore->data as $k => $v){$pg++?>
       
 	
 <?php }
-
-$str =  substr($added, 5);
-$str =  (isset($first) == true ? $str :  $str+1);?> 
-
-<div id="<?php echo 'addId'.$str?>">
-         
-</div>
-
      

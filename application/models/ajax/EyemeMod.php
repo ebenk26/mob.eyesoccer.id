@@ -38,19 +38,18 @@ class EyemeMod extends CI_Model {
         $addId = $this->input->post('add');
         $query = array('page' => $page,'limit' => '18', 'sortby'=> 'last_online');
         $data['explore'] = $this->excurl->remoteCall($this->__xurl().'me-images',$this->__xkey(),$query);
-        $data['added']   = $addId;
-       
-        if($page > 1){
-             $data['first'] = 0;
-             $html          = $this->load->view($this->__theme().'eyeme/ajax/me_a_explore',$data,true);
-             $data          = array('xClass' => $addId,'xHtml' => $html);
-
+        $html           = $this->load->view($this->__theme().'eyeme/ajax/me_a_explore',$data,true);
+        if(count(json_decode($data['explore'])->data ) > 0){
+            if($page == '1'){
+                $data  = array('xClass'=> 'reqexplorelist','xHtml' => $html);     
+            }
+            else{
+    
+                $data  = array('xAppend'=> 'reqexplorelist','xHtml' => $html,'xClass'=> 'reqexplorelist');
+            }
         }
         else{
-
-            $data['first']  = 1;
-            $html           = $this->load->view($this->__theme().'eyeme/ajax/me_a_explore',$data,true);
-            $data           = array('xClass' => 'reqexplorelist','xHtml' => $html);
+            $data = array();
         }
         $this->tools->__flashMessage($data);
     }
@@ -61,13 +60,14 @@ class EyemeMod extends CI_Model {
         $req = $this->input->post('uname');
         $req = explode('-',$req);
         $uname = $req[0];
-        $query =  array('page' => '1', 'limit' => '1' ,'username' => $uname);
+        $query =  array('page' => '1', 'limit' => '10');
         $res           = $this->excurl->remoteCall($this->__xurl().'me/'.$uname,$this->__xkey(),$query);
+
         $data['res']   = json_decode($res);
+        #p($data['res']);
 
         if(count($data['res']->data) > 0 ){
             if($req[1] == 'profile'){
-
                 $html      = $this->load->view($this->__theme().'eyeme/ajax/me_a_profile',$data,true);
                 $data      = array('xClass'=> 'reqprofile','xHtml' => $html);
             }

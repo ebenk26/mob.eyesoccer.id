@@ -1,5 +1,6 @@
 
 <?php 
+#p($res);
 $res = $res->data;
 #p($p);
 #$self   = ($this->session->username == $p->username ? 1 : 0 )?>
