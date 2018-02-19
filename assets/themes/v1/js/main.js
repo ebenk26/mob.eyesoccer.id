@@ -192,13 +192,6 @@ $(document).ready(function () {
         var actURL = $(this).attr('action');
         var baseURL = $('.baseurl').attr('val');
 
-        $('#boxmessage').fadeOut(200);
-        var loading = ($(this).attr('loading') === 'off') ? 0 : 1;
-        if (loading > 0) {
-            $('.loading').show();
-            box_popup();
-        }
-
         var nm = $(this).attr('name')
         var val = [{name: 'fn', value: $(this).attr('fn')}, {name: nm, value: $(this).val()}];
 
@@ -218,6 +211,13 @@ $(document).ready(function () {
         if (wait) clearTimeout(wait);
 
         wait = setTimeout(function () {
+            $('#boxmessage').fadeOut(200);
+            var loading = ($(this).attr('loading') === 'off') ? 0 : 1;
+            if (loading > 0) {
+                $('.loading').show();
+                box_popup();
+            }
+
             ajaxReqBasic(formURL, postData, msgRequest);
         }, 500);
 
@@ -233,13 +233,6 @@ $(document).ready(function () {
         var actURL = $(this).attr('action');
         var baseURL = $('.baseurl').attr('val');
 
-        $('#boxmessage').fadeOut(200);
-        var loading = ($(this).attr('loading') === 'off') ? 0 : 1;
-        if (loading > 0) {
-            $('.loading').show();
-            box_popup();
-        }
-
         var nm = $(this).attr('name')
         var val = [{name: 'fn', value: $(this).attr('fn')}, {name: nm, value: $(this).val()}];
 
@@ -259,6 +252,13 @@ $(document).ready(function () {
         if (wait) clearTimeout(wait);
 
         wait = setTimeout(function () {
+            $('#boxmessage').fadeOut(200);
+            var loading = ($(this).attr('loading') === 'off') ? 0 : 1;
+            if (loading > 0) {
+                $('.loading').show();
+                box_popup();
+            }
+
             ajaxReqBasic(formURL, postData, msgRequest);
         }, 500);
 
