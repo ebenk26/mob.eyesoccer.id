@@ -161,16 +161,15 @@ $(document).ready(function () {
             ci = i;
         });
 
-        if($('#' + IDForm).attr('fn') !== undefined) {
-            val[ci+1] = {name: 'fn', value: $('#' + IDForm).attr('fn')};
+        if ($('#' + IDForm).attr('fn') !== undefined) {
+            val[ci + 1] = {name: 'fn', value: $('#' + IDForm).attr('fn')};
         }
 
         var formURL = baseURL + actURL;
         var postData = val;
         var msgRequest = ($('#' + msgBox + '.msg').attr('value') == undefined) ? 'ajaxMessage' : $('#' + msgBox + '.msg').attr('value');
 
-        if($('#' + IDForm).attr('wait') !== undefined)
-        {
+        if ($('#' + IDForm).attr('wait') !== undefined) {
             var wait = $(this).data('wait');
             if (wait) clearTimeout(wait);
 
@@ -202,6 +201,47 @@ $(document).ready(function () {
 
         var nm = $(this).attr('name')
         var val = [{name: 'fn', value: $(this).attr('fn')}, {name: nm, value: $(this).val()}];
+
+        if ($(this).attr('dest') !== undefined) {
+            val.push({name: 'dest', value: $(this).attr('dest')});
+        }
+
+        var formURL = baseURL + actURL;
+        var postData = val;
+        var msgRequest = ($('#' + msgBox + '.msg').attr('value') === undefined) ? 'ajaxMessage' : $('#' + msgBox + '.msg').attr('value');
+
+        var wait = $(this).data('wait');
+        if (wait) clearTimeout(wait);
+
+        wait = setTimeout(function () {
+            ajaxReqBasic(formURL, postData, msgRequest);
+        }, 500);
+
+        $(this).data('wait', wait);
+        return false;
+    });
+
+    // Post on Changes
+    $(document).on("change", ".form_change", function (e) {
+        e.preventDefault();
+
+        var msgBox = $(this).attr('msg');
+        var actURL = $(this).attr('action');
+        var baseURL = $('.baseurl').attr('val');
+
+        $('#boxmessage').fadeOut(200);
+        var loading = ($(this).attr('loading') === 'off') ? 0 : 1;
+        if (loading > 0) {
+            $('.loading').show();
+            box_popup();
+        }
+
+        var nm = $(this).attr('name')
+        var val = [{name: 'fn', value: $(this).attr('fn')}, {name: nm, value: $(this).val()}];
+
+        if ($(this).attr('dest') !== undefined) {
+            val.push({name: 'dest', value: $(this).attr('dest')});
+        }
 
         var formURL = baseURL + actURL;
         var postData = val;
@@ -354,16 +394,15 @@ function ajaxOnLoad(ax) {
         ci = i;
     });
 
-    if($('#' + IDForm).attr('fn') !== undefined) {
-        val[ci+1] = {name: 'fn', value: $('#' + IDForm).attr('fn')};
+    if ($('#' + IDForm).attr('fn') !== undefined) {
+        val[ci + 1] = {name: 'fn', value: $('#' + IDForm).attr('fn')};
     }
 
     var formURL = baseURL + actURL;
     var postData = val;
     var msgRequest = ($('#' + msgBox + '.msg').attr('value') == undefined) ? 'ajaxMessage' : $('#' + msgBox + '.msg').attr('value');
 
-    if($('#' + IDForm).attr('wait') !== undefined)
-    {
+    if ($('#' + IDForm).attr('wait') !== undefined) {
         var wait = $(this).data('wait');
         if (wait) clearTimeout(wait);
 
