@@ -209,4 +209,11 @@ class MarketQueryMod extends CI_Model {
                                         ")->row();
         return $query;
     }
+
+    public function delete_keranjang($id)
+    {
+        $this->db->delete('eyemarket_keranjang', array('id' => $id));
+
+        return $this->db->affected_rows();;
+    }
 }

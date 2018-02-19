@@ -64,4 +64,6 @@ class Eyemarket extends CI_Controller
         $this->load->view($this->__theme() . 'template', $data);
     }
 
+    
+
 }

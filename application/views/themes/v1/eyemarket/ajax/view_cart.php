@@ -64,7 +64,7 @@
                             <span id="id_keranjang"><?= $cart['id']; ?></span>
                         </td>
                         <td> 
-                            <a href="javascript:void(0)" action="eyemarket" class="form_post" fn="delete_cart" id="reqdelcart"> 
+                            <a href="javascript:void(0)" action="eyemarket" class="form_post" fn="delete_cart" id="reqdelcart">
                                 <i class="far fa-trash-alt"></i> 
                                 <div class="cinput" name="id" val="<?= $cart['id']; ?>"></div>
                             </a>
