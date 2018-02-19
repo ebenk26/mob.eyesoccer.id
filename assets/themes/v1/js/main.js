@@ -207,12 +207,12 @@ $(document).ready(function () {
         var postData = val;
         var msgRequest = ($('#' + msgBox + '.msg').attr('value') === undefined) ? 'ajaxMessage' : $('#' + msgBox + '.msg').attr('value');
 
+        var loading = ($(this).attr('loading') === 'off') ? 0 : 1;
         var wait = $(this).data('wait');
         if (wait) clearTimeout(wait);
 
         wait = setTimeout(function () {
             $('#boxmessage').fadeOut(200);
-            var loading = ($(this).attr('loading') === 'off') ? 0 : 1;
             if (loading > 0) {
                 $('.loading').show();
                 box_popup();
@@ -248,12 +248,12 @@ $(document).ready(function () {
         var postData = val;
         var msgRequest = ($('#' + msgBox + '.msg').attr('value') === undefined) ? 'ajaxMessage' : $('#' + msgBox + '.msg').attr('value');
 
+        var loading = ($(this).attr('loading') === 'off') ? 0 : 1;
         var wait = $(this).data('wait');
         if (wait) clearTimeout(wait);
 
         wait = setTimeout(function () {
             $('#boxmessage').fadeOut(200);
-            var loading = ($(this).attr('loading') === 'off') ? 0 : 1;
             if (loading > 0) {
                 $('.loading').show();
                 box_popup();
