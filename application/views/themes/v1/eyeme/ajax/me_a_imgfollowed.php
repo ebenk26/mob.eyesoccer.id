@@ -39,29 +39,11 @@ $imglist = json_decode($imglist);
                         <a  class="com" ref="<?php echo substr($v->id,0,3)?>">
                             <img class="openComment" src="<?php echo base_url()?>assets/img/menu/eyeme/comment.svg" alt="">
                         </a>
-                        <div id="<?php echo substr($v->id,0,3)?>" class="loadcomment <?php echo substr($v->id,0,3)?>" action="eyeme" loading="off" clean="clscom">
+                        <div id="<?php echo substr($v->id,0,3)?>" class="loadcomment <?php echo substr($v->id,0,3)?>" action="eyeme" loading="off">
                             <input type="hidden" class="cinput" name="fn" value="gtcomment">
                             <input type="hidden" class="cinput" name="uid" value="<?php echo $v->id?>">
 
                         </div>
-
-                      
-                        <!--<span class="openComment">-->
-                     <!--<form class="form_basic" action="test">--><!--<span class="openComment">-->
-                       <!--<div id="<?php #echo $v->id?>" class='loadcomment lcomment loadcomment-<?php #echo $v->id?>' action="eyeme" loading="off" clean="clscom" ref="<?php #echo $v->id?>">
-                            <input type="hidden" name="fn" value="gtcomment" class="cinput">
-                            <input type="hidden" name="uid" value="<?php #echo $v->id?>" class="cinput">-->
-
-                        <!-- <i class="fa fa-heart heart-first <?php #echo ($hasLike == 1 ?  'active' : '')?>" aria-hidden="true"></i> -->
-                        
-                       <!-- <img class="openComment" src="<?php #echo base_url()?>assets/img/menu/eyeme/comment.svg" alt="">-->
-                        <!-- <span class="openComment"> -->
-                     <!--<form class="form_basic" action="test">--><!--<span class="">-->
-                       <!-- <div id="reqcomment" class='loadcomment' action="eyeme" loading="off" clean="clscom">
-                            <input type="hidden" name="fn" value="fungsi" class="cinput">
->>>>>>> 09ea8021756fc6e13540907ec72d9e8f1b83a364
-                           <a class="com" ref="<?php #echo $v->id?>"><i class="fas fa-comments"></i></a></span>
-                        </div> -->
                        
                     </li>
                     <li><span><?php echo count($v->likes)?></span></li>
