@@ -743,39 +743,24 @@ function rmdata(val) {
     }
 }
 
-function tabmenu(id, beforeClick, afterClick) {
-    $('#boxtab span, #boxtab a').each(function () {
-        if ($(this).attr('active') == 'true') {
+function tabmenu(id, tagClick, tagShow, beforeClick, afterClick) {
+    $('#boxtab ' + tagClick).each(function () {
+        if ($(this).attr('active') === 'true') {
             var idx = $(this).attr('id');
 
-            $('#' + idx).removeAttr('active');
-            $('#' + idx).removeAttr('class');
-            $('#' + idx).addClass(beforeClick);
+            $(tagClick + '#' + idx).removeAttr('active');
+            $(tagClick + '#' + idx).removeAttr('class');
 
-            if ($('div#' + idx).html() != undefined) {
-                $('div#' + idx).fadeOut(0);
-            }
-
-
-            if ($('table#' + idx).html() != undefined) {
-                $('table#' + idx).fadeOut(0);
-            }
-
-            var fltab = idx;
+            if (afterClick !== undefined) $(tagClick + '#' + idx).addClass(beforeClick);
+            $(tagShow + '#' + idx).fadeOut(0);
         }
     });
 
-    afterClick = (afterClick != undefined) ? afterClick : beforeClick;
-    $('#' + id).attr('active', 'true');
-    $('#' + id).addClass(afterClick);
+    afterClick = (afterClick !== undefined) ? afterClick : beforeClick;
+    $(tagClick + '#' + id).attr('active', 'true');
+    $(tagClick + '#' + id).addClass(afterClick);
 
-    if ($('div#' + id).html() != undefined) {
-        $('div#' + id).fadeIn('fast');
-    }
-
-    if ($('table#' + id).html() != undefined) {
-        $('table#' + id).fadeIn('fast');
-    }
+    $(tagShow + '#' + id).fadeIn('fast');
 }
 
 function tabflag(id) {
