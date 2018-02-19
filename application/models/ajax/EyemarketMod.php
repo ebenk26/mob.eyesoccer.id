@@ -110,6 +110,36 @@ class EyemarketMod extends MarketQueryMod {
         $this->tools->__flashMessage($data);
     }
 
+    function __edit_cart()
+    {
+        $id_member = $this->id_member;
+        $id_keranjang = $this->input->post('idcart');
+        $jumlah = $this->input->post('jumlah');
+
+        $harga_satuan   = $this->get_harga_satuan($id_keranjang);
+        $berat_satuan   = $this->get_berat($id_keranjang);
+
+        $total          = $jumlah * $harga_satuan->harga;
+        $berat          = $jumlah * $berat_satuan->berat;
+
+        $data = array(
+                'jumlah' => $jumlah,
+                'total' => $total,
+                'berat' => $berat,
+        );
+
+        $update                 = $this->edit_keranjang($data,$id_keranjang);
+        $total_all_update       = $this->get_total_harga($id_member);
+
+        $total_all_updatenya    = $total_all_update->total_all;
+
+        $total_sub = "Rp. ".number_format($total,0,',','.');
+        $total_cart = "Rp. ".number_format($total_all_updatenya,0,',','.');
+
+        $data = array('xSplit' => true, 'xData' => array($this->input->post('dest') => $total_sub, $this->input->post('dest_total') => $total_cart));
+        $this->tools->__flashMessage($data);
+    }
+
 }
 
 
