@@ -202,6 +202,10 @@ $(document).ready(function () {
         var nm = $(this).attr('name')
         var val = [{name: 'fn', value: $(this).attr('fn')}, {name: nm, value: $(this).val()}];
 
+        if ($(this).attr('id') !== undefined) {
+            val.push({name: 'id', value: $(this).attr('id')});
+        }
+
         if ($(this).attr('dest') !== undefined) {
             val.push({name: 'dest', value: $(this).attr('dest')});
         }
@@ -238,6 +242,10 @@ $(document).ready(function () {
 
         var nm = $(this).attr('name')
         var val = [{name: 'fn', value: $(this).attr('fn')}, {name: nm, value: $(this).val()}];
+
+        if ($(this).attr('id') !== undefined) {
+            val.push({name: 'id', value: $(this).attr('id')});
+        }
 
         if ($(this).attr('dest') !== undefined) {
             val.push({name: 'dest', value: $(this).attr('dest')});
