@@ -12,4 +12,3 @@
         echo ul($list)?>
        
     </div>
-    fg
