@@ -2,13 +2,13 @@
 <?php 
 
 $imglist = json_decode($imglist);
-	#p($imglist);
+
 	foreach($imglist->data as $k => $v){
 
 		if(count($v->likes) > 0 ){
-            foreach($v->likes as $a => $b){
-            $hasLike = ( $b->username == $this->session->username ? 1 : 0 );
 
+            foreach($v->likes as $a => $b){            
+            $hasLike = ( $b->username == $this->session->member['username'] ? 1 : 0 );
             }
 
         }
@@ -33,18 +33,20 @@ $imglist = json_decode($imglist);
              <div class="container-eme-like">
                 <ul>
                     <li>
-                        <!-- <i class="fa fa-heart heart-first <?php echo ($hasLike == 1 ?  'active' : '')?>" aria-hidden="true"></i> -->
-                        <img src="<?php echo base_url()?>assets/img/menu/eyeme/love.svg" alt="">
-                        <img class="openComment" src="<?php echo base_url()?>assets/img/menu/eyeme/comment.svg" alt="">
-                        <!-- <span class="openComment"> -->
-                     <!--<form class="form_basic" action="test">--><span class="">
-                       <!-- <div id="reqcomment" class='loadcomment' action="eyeme" loading="off" clean="clscom">
-                            <input type="hidden" name="fn" value="fungsi" class="cinput">
-                           <a class="com" ref="<?php echo $v->id?>"><i class="fas fa-comments"></i></a></span>
-                        </div> -->
+
+                        <img src="<?php echo MEMENU.($hasLike == 1 ? 'love-active.svg' : 'love.svg') ?>">
+
+                        <a  class="com" ref="<?php echo substr($v->id,0,3)?>">
+                            <img class="openComment" src="<?php echo base_url()?>assets/img/menu/eyeme/comment.svg" alt="">
+                        </a>
+                        <div id="<?php echo substr($v->id,0,3)?>" class="loadcomment <?php echo substr($v->id,0,3)?>" action="eyeme" loading="off">
+                            <input type="hidden" class="cinput" name="fn" value="gtcomment">
+                            <input type="hidden" class="cinput" name="uid" value="<?php echo $v->id?>">
+
+                        </div>
                        
                     </li>
-                    <li><span><a href="">username</a> dan <a href="">234</a> menyukai ini</span></li>
+                    <li><span><?php echo count($v->likes)?></span></li>
                 </ul>
             </div>
            
@@ -58,9 +60,13 @@ $imglist = json_decode($imglist);
 
  <?php } ?>
  <script>
-    $('.com').click(function(){
+    $('a.com').click(function(){
+         var ref =  $(this).attr('ref');
+        //console.log('test');
+       // var $class =  $('.lcomment').attr('class');
+       // console.log($class);
         //if($(this).attr('ref') == $v->id)
-        ajaxOnLoad('loadcomment');
+        ajaxOnLoad(ref);
 
 
     })

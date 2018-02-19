@@ -216,4 +216,39 @@ class MarketQueryMod extends CI_Model {
 
         return $this->db->affected_rows();;
     }
+
+    public function get_harga_satuan($id_keranjang)
+    { 
+        $query = $this->db->query(" SELECT
+                                        A.harga
+                                    FROM
+                                        eyemarket_product A
+                                    LEFT JOIN
+                                        eyemarket_keranjang B on B.id_product = A.id_product 
+                                    WHERE
+                                        B.id = '$id_keranjang'
+                                        ")->row();
+        return $query;
+    }
+
+    public function get_berat($id_keranjang)
+    { 
+        $query = $this->db->query(" SELECT
+                                        A.berat
+                                    FROM
+                                        eyemarket_product A
+                                    LEFT JOIN
+                                        eyemarket_keranjang B on B.id_product = A.id_product 
+                                    WHERE
+                                        B.id = '$id_keranjang'
+                                        ")->row();
+        return $query;
+    }
+
+    public function edit_keranjang($data,$id_keranjang)
+    {
+        $query = $this->db->update('eyemarket_keranjang', $data, array('id' => $id_keranjang, 'status' => '0'));
+        
+        return $query;
+    }
 }

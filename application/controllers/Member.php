@@ -54,6 +54,5 @@ class Member extends CI_Controller {
     function destroy_sess(){
     	$this->session->sess_destroy();
     }
-    #function de
 
 }
