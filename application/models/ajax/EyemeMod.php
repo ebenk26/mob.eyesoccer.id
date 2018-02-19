@@ -95,5 +95,9 @@ class EyemeMod extends CI_Model {
         $arr   = array('xClass'=> 'reqnotif','xHtml'=> $html);
         $this->tools->__flashMessage($arr);
     }
+    function __gtcomment(){
+        echo 'running';
+
+    }
    
 }

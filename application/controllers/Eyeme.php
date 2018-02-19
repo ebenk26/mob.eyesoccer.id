@@ -10,7 +10,7 @@ class Eyeme extends CI_Controller {
 	parent::__construct();
 	$this->load->model('ajax/EyemeMod');
 
-	$this->session->username    = 'sofyanwaldy';
+	//$this->session->username    = 'sofyanwaldy';
 	//temporary session 
     }
     protected function getdata(){

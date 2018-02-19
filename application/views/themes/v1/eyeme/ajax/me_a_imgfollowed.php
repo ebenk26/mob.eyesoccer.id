@@ -36,8 +36,9 @@ $imglist = json_decode($imglist);
                         <i class="fa fa-heart heart-first <?php echo ($hasLike == 1 ?  'active' : '')?>" aria-hidden="true"></i>
                         <span class="openComment">
                      <!--<form class="form_basic" action="test">--><span class="openComment">
-                       <div id="reqcomment" class='loadcomment' action="eyeme" loading="off" clean="clscom">
-                            <input type="hidden" name="fn" value="fungsi" class="cinput">
+                       <div id="<?php echo $v->id?>" class='loadcomment lcomment loadcomment-<?php echo $v->id?>' action="eyeme" loading="off" clean="clscom" ref="<?php echo $v->id?>">
+                            <input type="hidden" name="fn" value="gtcomment" class="cinput">
+                            <input type="hidden" name="uid" value="<?php echo $v->id?>" class="cinput">
                            <a class="com" ref="<?php echo $v->id?>"><i class="fas fa-comments"></i></a></span>
                         </div>
                        
@@ -57,6 +58,8 @@ $imglist = json_decode($imglist);
  <?php } ?>
  <script>
     $('.com').click(function(){
+       // var $class =  $('.lcomment').attr('class');
+       // console.log($class);
         //if($(this).attr('ref') == $v->id)
         ajaxOnLoad('loadcomment');
 
