@@ -50,13 +50,17 @@
                             <a href="#" data-toggle="modal" data-target="#form-catatan-<?= $cart['id']; ?>" style="cursor: pointer;">Edit?</a>
                         </td>
                         <td>
-                            <input type="number" id="jumlah-<?= $cart['id']; ?>" name="jumlah" value="<?= $cart['jumlah']; ?>" class="form-control" style="width: 60px;" onchange="editJumlah(<?= $cart['id']; ?>)">
+                            <div id="<?= md5($cart['jumlah']); ?>" style="display: none;">
+                                <span name="idcart" class="cinput" val="<?= $cart['id']; ?>"></span>
+                                <span name="dest_total" class="cinput" val="total-all"></span>
+                            </div>
+                            <input type="number" id="<?= md5($cart['jumlah']); ?>" name="jumlah" value="<?= $cart['jumlah']; ?>" class="form-control form_change form_keyup" style="width: 60px;" dest="total-<?= $cart['id']; ?>" action="eyemarket" fn="edit_cart" loading="off">
                         </td>
                         <td>
                             Rp. <?= number_format($cart['harga'],0,',','.'); ?>
                         </td>
                         <td>
-                            <span id="total-<?= $cart['id']; ?>">
+                            <span class="total-<?= $cart['id']; ?>">
                                 Rp. <?= number_format($cart['total'],0,',','.'); ?>
                             </span>
                         </td>
@@ -78,7 +82,7 @@
                     <tr>
                         <th colspan="5">Total</th>
                         <th>
-                            <span id="total-all">Rp. <?= number_format($total_all->total_all,0,',','.'); ?></span>
+                            <span class="total-all">Rp. <?= number_format($total_all->total_all,0,',','.'); ?></span>
                         </th>
                     </tr>
                 </tfoot>
