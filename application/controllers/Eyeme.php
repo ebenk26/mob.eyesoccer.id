@@ -16,7 +16,7 @@ class Eyeme extends CI_Controller {
     protected function getdata(){
     	$data = array(
     			'kanal'  => 'eyeme',
-				'me_menu'=> ($this->session->username ? 1 : 0 ),
+				'me_menu'=> ($this->session->member ? 1 : 0 ),
 				'title'  => $this->config->item('meta_title'),
 				'meta_desc'=> $this->config->item('meta_desc'),
 				'meta_keyword'=> $this->config->item('meta_keyword'));
@@ -40,7 +40,8 @@ class Eyeme extends CI_Controller {
 	    }
 	} else {
 	    $data = $this->getdata();
-	    $data['content'] = ($this->session->username ? 'eyeme/me_home' : 'eyeme/me_explore');
+       # p($this->session->member);
+	    $data['content'] = (isset($this->session->member) ? 'eyeme/me_home' : 'eyeme/me_explore');
 	  
 	    $this->load->view($this->__theme().'template', $data);
 

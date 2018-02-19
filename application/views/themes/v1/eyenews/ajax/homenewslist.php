@@ -12,7 +12,7 @@
 				</div>
 				<span style="padding-bottom: 0;margin-bottom: 0;"><?php echo relative_time($this->library->datenormal($dt->publish_on)); ?> lalu</span>
 				<h1 style="padding-top: 0;margin-top: -5px;"><?php echo $dt->title; ?></h1>
-				<span id='tab-populer' class="orange-active" active="true" style="bottom: 0;color: #FF5722;">Terkini</span>
+				<span id='tab-populer' class="orange-active" active="true" style="bottom: -15px;color: #FF5722;left: -2.5%;margin-top: -40px;font-size: 1em;">Terkini</span>
 			</a>
 		<?php
 		}else{

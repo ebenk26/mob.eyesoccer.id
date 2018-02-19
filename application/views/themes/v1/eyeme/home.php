@@ -61,7 +61,7 @@
         </div>
     </div>
     <!-- KOMENTAR -->
-    <div class="container-comment">
+    <div class="container-comment" id="chcomment">
         <span class="up-next-etube" style="padding-left: 10px;">Komentar</span> <span id="close" class="up-next-etube" style="float:right; padding-right: 10px;"><i class="material-icons">close</i></span>
         <div class="box-komentar">
             <div class="img-radius">

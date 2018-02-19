@@ -56,24 +56,27 @@
 </div>
 <script>
    
- var no = 1;
- var pg = 1;
+ // var no = 1;
+ // var pg = 1;
       $(window).scroll(function() {
        
-           if($(window).scrollTop() + $(window).height() == $(document).height()) {
-             no = no+1;
-             pg = pg+1;
+           if($(window).scrollTop() >= $(document).height()/2 + $(document).height()/4) {
+             //no = no+1;
+             //pg = pg+1;
              $('#an').val('addId'+no);
              $('#pg').val(pg);
                 ajaxOnLoad('loadnewlist');
                
                  //console.log(no);
-                  console.log(no)
+                  //console.log(no);
 
              
            }
-
+           
         })
+
+
+ 
 </script>
          
    

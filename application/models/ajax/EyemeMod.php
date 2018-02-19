@@ -96,7 +96,14 @@ class EyemeMod extends CI_Model {
         $this->tools->__flashMessage($arr);
     }
     function __gtcomment(){
-        echo 'running';
+        //echo 'running';
+        $id_img      = $this->input->post('uid');
+        $query       = array('page' => '1','limit' => '10','id'=> $id_img);
+        $res         = $this->excurl->remoteCall($this->__xurl().'me-comment',$this->__xkey(),$query);
+        $data['res'] = json_decode($res);
+        $html = $this->load->view($this->__theme().'eyeme/ajax/me_a_comment',$data,true);
+        $arr = array('xClass'=> 'idcom','xHtml'=> $html);
+        $this->tools->__flashMessage($arr);
 
     }
    

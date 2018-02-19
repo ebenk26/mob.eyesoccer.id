@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,600,700');
 @import url('https://fonts.googleapis.com/css?family=Roboto:300');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600');
 html, body{
     width: 100%;
     /* min-width: 375px; */
@@ -9,7 +10,6 @@ body{
     margin: 0 auto;
     font-family: 'Montserrat', sans-serif;
     /* min-width: 375px; */
-    
 }
 *{
     -webkit-font-smoothing: antialiased;
@@ -955,7 +955,7 @@ nav>.f-r:hover{
     width: 100%;
     float: left;
     padding: 10px 0px;
-    border-bottom: 1px solid gainsboro;
+    border-bottom: 1px solid #dcdcdc4d;
 }
 .item-komentar .img-radius, .box-komentar .img-radius{
     width: 40px;
@@ -995,13 +995,15 @@ nav>.f-r:hover{
 .item-komentar{
     width: 100%;
     float: left;
-    border-bottom: 1px solid gainsboro;
+    border-bottom: 1px solid #dcdcdc4d;
     padding: 15px 0px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 .text-komentar{
     float: left;
     margin-left: 10px;
     width: 290px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 .text-komentar p{
     line-height: 1.2em;
@@ -1010,10 +1012,11 @@ nav>.f-r:hover{
     margin: 0 0 5px 0;
     font-size: .8em;
     color: #333;
+    font-weight: 100;
 }
 .text-komentar h3{
     font-size: .7em;
-    font-weight: 600;
+    font-weight: 500;
     color: #444;
     display: inline;
 }
@@ -1421,20 +1424,28 @@ ul, li {
     /* border: 1px solid #00000082; */
     overflow: hidden;
     margin: 10px 10px 10px 15px;
-    position: relative;
+    /* position: relative; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .img-usr img{
-    width: 100%;
+    /* width: 100%;
     position: absolute;
     top: 50%;
     left: 50%;
     margin-right: -50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); */
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%;
+    max-width: 180%;
+    max-height: 180%;
 }
 .emepost span{
     position: relative;
     top: 17px;
-    font-weight: 500;
+    /* font-weight: 500; */
     color: black;
     text-decoration: none;
 }
@@ -2900,4 +2911,41 @@ ul, li {
 .container-eme-like li img{
     height: 22px;
     margin-right: 10px;
+}
+.gr{
+    background: #0288d1;
+    background: -moz-linear-gradient(left, #0288d1 0%, #0288d1 50%, #2196f3 51%, #4fc3f7 100%);
+    background: -webkit-linear-gradient(left, #0288d1 0%,#0288d1 50%,#2196f3 51%,#4fc3f7 100%);
+    background: linear-gradient(to right, #0288d1 0%,#0288d1 50%,#2196f3 51%,#4fc3f7 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0288d1', endColorstr='#4fc3f7',GradientType=1 );
+
+    background-size: 200% 100%;
+
+    -webkit-animation: gr 2s ease infinite;
+    -moz-animation: gr 2s ease infinite;
+    -o-animation: gr 2s ease infinite;
+    animation: gr 2s ease infinite;
+}
+@-webkit-keyframes gr {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes gr {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-o-keyframes gr {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes gr { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+.eme-post-section{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
