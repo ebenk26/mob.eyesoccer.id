@@ -17,7 +17,7 @@ $imglist = json_decode($imglist);
         }
 
 ?>	
-        <div class="container">
+        <div class="container eme-post-section">
             <div class="container emepost">
                 <a href="<?php echo $this->library->urltomob($v->url)?>">
                 <div class="img-usr">
@@ -33,13 +33,15 @@ $imglist = json_decode($imglist);
              <div class="container-eme-like">
                 <ul>
                     <li>
-                        <i class="fa fa-heart heart-first <?php echo ($hasLike == 1 ?  'active' : '')?>" aria-hidden="true"></i>
-                        <span class="openComment">
-                     <!--<form class="form_basic" action="test">--><span class="openComment">
-                       <div id="reqcomment" class='loadcomment' action="eyeme" loading="off" clean="clscom">
+                        <!-- <i class="fa fa-heart heart-first <?php echo ($hasLike == 1 ?  'active' : '')?>" aria-hidden="true"></i> -->
+                        <img src="<?php echo base_url()?>assets/img/menu/eyeme/love.svg" alt="">
+                        <img class="openComment" src="<?php echo base_url()?>assets/img/menu/eyeme/comment.svg" alt="">
+                        <!-- <span class="openComment"> -->
+                     <!--<form class="form_basic" action="test">--><span class="">
+                       <!-- <div id="reqcomment" class='loadcomment' action="eyeme" loading="off" clean="clscom">
                             <input type="hidden" name="fn" value="fungsi" class="cinput">
                            <a class="com" ref="<?php echo $v->id?>"><i class="fas fa-comments"></i></a></span>
-                        </div>
+                        </div> -->
                        
                     </li>
                     <li><span><a href="">username</a> dan <a href="">234</a> menyukai ini</span></li>
