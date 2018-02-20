@@ -101,7 +101,7 @@
     ?>
             <div class="pull-right">
                 <!-- <button class="btn btn-default"><i class="fa fa-refresh"></i> Update cart</button> -->
-                <a href="<?= base_url(); ?>eyemarket/input_order/<?= $id_member; ?>" class="btn btn-template-main">Pesan Sekarang <i class="fa fa-chevron-right"></i>
+                <a href="<?= base_url(); ?>eyemarket/set_alamat/<?= $id_member; ?>" class="btn btn-template-main">Pesan Sekarang <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
     <?php        

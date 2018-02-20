@@ -196,6 +196,20 @@ class MarketQueryMod extends CI_Model {
         return $query;
     }
 
+    public function get_total_berat($id_member)
+    { 
+        $query = $this->db->query(" SELECT
+                                        sum(berat) as berat_all
+                                    FROM
+                                        eyemarket_keranjang
+                                    WHERE
+                                        md5(id_member) = '$id_member'
+                                        AND
+                                        status = 0
+                                        ")->row();
+        return $query;
+    }
+
     public function get_count_keranjang($id_member)
     {
         $query = $this->db->query(" SELECT
@@ -248,6 +262,97 @@ class MarketQueryMod extends CI_Model {
     public function edit_keranjang($data,$id_keranjang)
     {
         $query = $this->db->update('eyemarket_keranjang', $data, array('id' => $id_keranjang, 'status' => '0'));
+        
+        return $query;
+    }
+
+    public function get_member($id_member)
+    {
+        $query = $this->db->query(" SELECT
+                                        A.*
+                                    FROM
+                                        tbl_member A
+                                    WHERE 
+                                        md5(A.id_member) = '$id_member'
+                                        ")->result_array();
+        return $query;
+    }
+
+    public function get_address($id_member)
+    { 
+        $query = $this->db->query(" SELECT
+                                        *
+                                    FROM
+                                        eyemarket_address
+                                    WHERE
+                                        md5(id_member) = '$id_member'
+                                    ")->result_array();
+        return $query;
+    }
+
+    public function get_all_provinsi()
+    {
+        $this->db->select('provinsi');
+        $this->db->group_by('provinsi');
+        $query = $this->db->get('eyemarket_destinasi')->result_array();
+
+        return $query;
+    }
+
+    public function get_kota($prov)
+    {
+        $query = $this->db->query(" SELECT
+                                        A.kota
+                                    FROM
+                                        eyemarket_destinasi A
+                                    WHERE
+                                        A.provinsi = '$prov'
+                                        AND
+                                        A.kota != 'DKI JAKARTA'
+                                    GROUP BY
+                                        A.kota
+                                        ")->result();
+        return $query;
+    }
+
+    public function get_kecamatan($kota)
+    {
+        $query = $this->db->query(" SELECT
+                                        A.kecamatan
+                                    FROM
+                                        eyemarket_destinasi A
+                                    WHERE
+                                        A.kota = '$kota'
+                                    GROUP BY
+                                        A.kecamatan
+                                        ")->result();
+        return $query;
+    }
+
+    public function get_kode_jne($kota,$kecamatan)
+    {
+        $query = $this->db->query(" SELECT
+                                        A.kode
+                                    FROM
+                                        eyemarket_destinasi A
+                                    WHERE
+                                        A.kota = '$kota'
+                                        AND
+                                        A.kecamatan = '$kecamatan'
+                                        ")->row();
+        return $query;
+    }
+
+    public function tambah_address($input)
+    {
+        $this->db->insert('eyemarket_address', $input);
+        
+        return $this->db->insert_id();
+    }
+
+    public function update_cart_address($id_member,$data)
+    {
+        $query = $this->db->update('eyemarket_keranjang', $data, array('md5(id_member)' => $id_member, 'status' => '0'));
         
         return $query;
     }

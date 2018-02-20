@@ -140,6 +140,140 @@ class EyemarketMod extends MarketQueryMod {
         $this->tools->__flashMessage($data);
     }
 
+    function __view_address()
+    {
+        $data['id_member']  = $this->id_member;
+        $data['member']     = $this->get_member($data['id_member']);
+        $data['address']    = $this->get_address($data['id_member']);
+        $data['provinsi']   = $this->get_all_provinsi();
+        $data['jumlah']     = count($data['address']);
+
+        $html = $this->load->view($this->__theme().'eyemarket/ajax/view_address',$data,true);
+        $data = array('xClass'=> 'reqaddress','xHtml' => $html);
+        $this->tools->__flashMessage($data);
+    }
+
+    function __get_kota()
+    { 
+        $data["kota"]   = $this->get_kota($this->input->post('provinsi'));
+
+        $html = $this->load->view($this->__theme().'eyemarket/ajax/view_kota',$data,true);
+
+        $data = array('xSplit' => true, 'xData' => array($this->input->post('dest') => $html));
+        $this->tools->__flashMessage($data);
+    }
+
+    function __get_kecamatan()
+    { 
+        $data["kecamatan"]   = $this->get_kecamatan($this->input->post('kota'));
+
+        $html = $this->load->view($this->__theme().'eyemarket/ajax/view_kecamatan',$data,true);
+
+        $data = array('xSplit' => true, 'xData' => array($this->input->post('dest') => $html));
+        $this->tools->__flashMessage($data);
+    }
+
+    function __set_address()
+    { 
+        $id_member = $this->input->post('id_member');
+        $id_membernya = $this->get_id_md($id_member);
+
+        $nama_alamat = $this->input->post('nama_alamat');
+        $penerima = $this->input->post('penerima');
+        $hp = $this->input->post('hp');
+        $alamat = $this->input->post('alamat');
+        $kodepos = $this->input->post('kodepos');
+        $provinsi = $this->input->post('provinsi');
+        $kota = $this->input->post('kota');
+        $kecamatan = $this->input->post('kecamatan');
+
+        $kode_jne   = $this->get_kode_jne($kota,$kecamatan);
+
+        $input = array(
+            'id_member'     => $id_membernya->id_member,
+            'nama'          => $nama_alamat,
+            'penerima'      => $penerima,
+            'hp'            => $hp,
+            'alamat'        => $alamat,
+            'kodepos'       => $kodepos,
+            'provinsi'      => $provinsi,
+            'kota'          => $kota,
+            'kecamatan'     => $kecamatan,
+            'kode'          => $kode_jne->kode,
+            'created_date'  => date("Y-m-d H:i:s"),
+        );
+
+        $insert = $this->tambah_address($input);
+
+        $data = array('xAlert' => true,'xCss' => 'boxsuccess','xMsg' => 'Alamat baru berhasil ditambah','xDirect'=> base_url().'eyemarket/set_alamat/'.$id_member);
+        $this->tools->__flashMessage($data);
+
+    }
+
+    function __order_address()
+    {
+        $id_member = $this->input->post('id_member');
+        $id_alamat = $this->input->post('pilih_alamat');
+
+        $input = array(
+            'id_alamat'     => $id_alamat,
+        );
+
+        $update_cart = $this->update_cart_address($id_member,$input);
+
+        $data = array('xAlert' => true,'xCss' => 'boxsuccess','xMsg' => 'Alamat pengiriman berhasil diatur','xDirect'=> base_url().'eyemarket/set_kurir/'.$id_member);
+        $this->tools->__flashMessage($data);
+    }
+
+    function __view_delivery()
+    {
+        $data['id_member'] = $this->id_member;
+        $data['member'] = $this->get_member($data['id_member']);
+
+        $data['berat'] = $this->get_total_berat($data['id_member']);
+        $berat = $data['berat']->berat_all;
+
+        $model = $this->get_keranjang($data['id_member']);
+        $kode_tujuan = $model[0]['kode'];
+        $data['alamat'] = $model[0]['alamat'];
+
+        $this->load->helper('my');
+
+        $get_ongkir = getOngkir($kode_tujuan,$berat);
+        $jmlh_service = count($get_ongkir->price);
+        $data['ctc'] = '';
+        $data['reg'] = '';
+        $data['yes'] = '';
+        $data['ctcyes'] = '';
+
+        for ($i = 0; $i < $jmlh_service ; $i++)
+        {
+            if ($get_ongkir->price[$i]->service_display == "CTC")
+            {
+                $data['ctc'] = $get_ongkir->price[$i]->price;
+            }
+            else
+            if ($get_ongkir->price[$i]->service_display == "REG")
+            {
+                $data['reg'] = $get_ongkir->price[$i]->price;
+            }
+            else
+            if ($get_ongkir->price[$i]->service_display == "YES")
+            {
+                $data['yes'] = $get_ongkir->price[$i]->price;
+            }
+            else
+            if ($get_ongkir->price[$i]->service_display == "CTCYES")
+            {
+                $data['ctcyes'] = $get_ongkir->price[$i]->price;
+            }
+        }
+
+        $html = $this->load->view($this->__theme().'eyemarket/ajax/view_delivery',$data,true);
+        $data = array('xClass'=> 'reqkurir','xHtml' => $html);
+        $this->tools->__flashMessage($data);
+    }
+
 }
 
 
