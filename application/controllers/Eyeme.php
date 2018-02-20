@@ -55,6 +55,8 @@ class Eyeme extends CI_Controller {
     }
     function profile(){
     	$data  = $this->getdata();
+        #if($uname)
+        #$data['uname']     = $uname;
     	$data['content']   = 'eyeme/me_profile';
     	$this->load->view($this->__theme().'template',$data);
     
@@ -67,6 +69,13 @@ class Eyeme extends CI_Controller {
     function sess_destroy(){
     	$this->session->sess_destroy();
     	$this->index();
+    }
+    function img($id = ''){
+
+        $data  = $this->getdata();
+        $data['content'] = 'eyeme/me_img';
+        $this->load->view($this->__theme().'template',$data);
+
     }
 
 }

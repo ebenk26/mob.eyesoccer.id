@@ -141,7 +141,7 @@ function p($arr){
     echo '</pre>';
 
 }
-function loginBtn($hasLogin=array()){
+function loginBtn($hasLogin){
     
     if(is_array($hasLogin)){
         return '

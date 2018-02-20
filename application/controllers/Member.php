@@ -51,8 +51,9 @@ class Member extends CI_Controller {
     	p($_SESSION);
     	#session_destroy();
     }
-    function destroy_sess(){
+    function logout(){
     	$this->session->sess_destroy();
+    	redirect(base_url(),'refresh');
     }
 
 }
