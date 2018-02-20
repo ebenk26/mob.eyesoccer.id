@@ -274,6 +274,25 @@ class EyemarketMod extends MarketQueryMod {
         $this->tools->__flashMessage($data);
     }
 
+    function __order_delivery()
+    {
+        $id_member = $this->id_member;
+        $id_kurir = $this->input->post('delivery');
+        $ongkir = $this->input->post('ongkir'.$id_kurir);
+
+        // $data['harga']      = $this->get_total_harga($id_member);
+
+        $data1 = array(
+            'id_kurir'  => $id_kurir,
+            'ongkir'    => $ongkir,
+        );
+
+        $update_cart    = $this->update_cart_delivery($id_member,$data1);
+
+        $data = array('xAlert' => true,'xCss' => 'boxsuccess','xMsg' => 'Metode pengiriman berhasil diatur','xDirect'=> base_url().'eyemarket/set_payment/'.$id_member);
+        $this->tools->__flashMessage($data);
+    }
+
 }
 
 

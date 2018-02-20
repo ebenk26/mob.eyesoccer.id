@@ -88,4 +88,16 @@ class Eyemarket extends CI_Controller
         $this->load->view($this->__theme() . 'template', $data);
     }
 
+    function set_payment($id_member)
+    {
+        $data['kanal'] = 'eyemarket';
+        $data['content'] = 'eyemarket/payment';
+
+        $data['title'] = $this->config->item('meta_title');
+        $data['meta_desc'] = $this->config->item('meta_desc');
+        $data['meta_keyword'] = $this->config->item('meta_keyword');
+
+        $this->load->view($this->__theme() . 'template', $data);
+    }
+
 }

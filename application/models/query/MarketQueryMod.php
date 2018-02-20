@@ -356,4 +356,11 @@ class MarketQueryMod extends CI_Model {
         
         return $query;
     }
+
+    public function update_cart_delivery($id_member,$data)
+    {
+        $query = $this->db->update('eyemarket_keranjang', $data, array('md5(id_member)' => $id_member, 'status' => '0'));
+        
+        return $query;
+    }
 }

@@ -1,5 +1,5 @@
 
-<form method="post" action="<?= base_url(); ?>eyemarket/update_cart_delivery/<?= $id_member; ?>">
+<form action="<?= base_url(); ?>eyemarket" class="form_basic" loading="off">
     <div class="content">
         <div class="row">
             <div class="col-sm-6">
@@ -64,4 +64,6 @@
             </button>
         </div>
     </div>
+    <input type="hidden" name="fn" value="order_delivery">
+    <input type="hidden" name="id_member" value="<?= $id_member; ?>">
 </form>
