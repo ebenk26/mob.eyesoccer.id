@@ -61,8 +61,8 @@
         </div>
     </div>
     <!-- KOMENTAR -->
-    <div class="container-comment" id="chcomment">
-        <span class="up-next-etube" style="padding-left: 10px;">Komentar</span> <span id="close" class="up-next-etube" style="float:right; padding-right: 10px;"><i class="material-icons">close</i></span>
+    <div class="container-comment">
+        <span class="up-next-etube" style="padding-left: 10px !important;color: #212121 !important;">Komentar</span> <span id="close" class="up-next-etube" style="float:right; padding-right: 10px;"><i class="material-icons">close</i></span>
         <div class="box-komentar">
             <div class="img-radius">
                 <img src="https://upload.wikimedia.org/wikipedia/en/thumb/d/df/Persija_Jakarta.svg/1200px-Persija_Jakarta.svg.png" alt="">
@@ -132,7 +132,7 @@
             </li>
             <li>
                 <img src="<?php echo base_url()?>assets/img/menu/eyeme/notification.svg" alt="Notification">
-            </li>
+            </li>cv
             <li>
                 <div class="img-radius">
                     <img src="http://modernartbuyer.com/wp-content/uploads/2014/10/Aqueous-II-278-web.jpg" alt="">

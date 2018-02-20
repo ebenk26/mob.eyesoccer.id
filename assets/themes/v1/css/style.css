@@ -854,16 +854,19 @@ nav>.f-r:hover{
     position: relative;
 }
 .etube-v-title-mobile>h1{
+    all: unset;
     font-size: .9em;
     padding-left: 12px;
-    font-weight: 300;
-    margin-bottom: 0px;
+    margin: 10px 0px 0px;
     display: inline-block;
+    font-weight: 500;
 }
 .etube-v-title-mobile>span{
+    all: unset;
     padding-left: 12px;
     font-size: .65em;
     display: block;
+    margin: 5px 0px 20px;
 }
 .etube-share>i{
     font-size: 1.5em;
@@ -912,8 +915,14 @@ nav>.f-r:hover{
 }
 .up-next-etube{
     margin-top: 10px;
-    display: inline-block;
-    font-size: .9em;
+    display: inline-block !important;
+    font-size: .9em !important;
+    position: unset !important;
+    bottom: unset !important;
+    color: #E64A19 !important;
+    margin-bottom: unset !important;
+    padding-left: unset !important;
+    /* font-weight: unset !important; */
 }
 .container-94{
     width: 94%;
@@ -1560,9 +1569,9 @@ ul, li {
     display: block;
 }
 .info-box-notif-content tr>td:nth-of-type(3){
-    max-width: 80px;
+    max-width: 50px;
     display: block;
-    float: left;
+    float: right;
 }
 .info-box-notif-content tr>td:nth-of-type(3) a, .following-button:hover{
     display: block;
@@ -1634,6 +1643,7 @@ ul, li {
 }
 .eme-prof-user{
     float: left;
+    width: 70vw;
 }
 .eme-prof-user a{
     font-weight: 600;
@@ -1660,9 +1670,10 @@ ul, li {
     float: left;
     margin-top: 10px;
     display: block;
-    margin: 10px 5vw;
+    margin: 10px 0;
     padding: 2px;
     font-size: .8em;
+    width: 65vw;
 }
 .tr-1-bold tr td{
     padding: 1px 8px;
@@ -1675,6 +1686,9 @@ ul, li {
     font-weight: 500;
     font-size: .9em;
     line-height: 10px;
+}
+.tr-1-bold tr:nth-of-type(1) td{
+    padding-top: 15px;
 }
 .tr-1-bold tr:nth-of-type(2){
     color: #0000004a;

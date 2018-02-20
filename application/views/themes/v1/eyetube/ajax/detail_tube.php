@@ -1,3 +1,17 @@
+<style>
+    #st-1 .st-total > span.st-shares {
+        all: inherit;
+        font-size: 9px;
+        line-height: 9px;
+    }
+    #st-1 .st-total > span {
+        all: unset;
+        font-size: 16px;
+        line-height: 17px;
+        display: block;
+        padding: 0;
+    }
+</style>
 <?php
     if ($tube)
     {
@@ -17,7 +31,7 @@
                 <div class="container ">
                     
                 </div>
-                <div class="tx-c etube-share">
+                <!-- <div class="tx-c etube-share">
                     <i id='reqsetlike' class="fas fa-heart heart-first form_post" aria-hidden="true" action="ajax">
                         <input type='hidden' name='fn' value='set_like' class='cinput'>
                         <input type='hidden' name='id' value='<?= $tube->data->id; ?>' class='cinput'> 
@@ -31,8 +45,8 @@
                     <i class="far fa-paper-plane" aria-hidden="true" id="btn-share" style="visibility: hidden;"> 
                         <span>33</span> 
                     </i>
-                    <!-- <i class="material-icons more display-box-notif">more_horiz</i> -->
-                </div>
+                    <i class="material-icons more display-box-notif">more_horiz</i>
+                </div> -->
 
                 <div class="kolom-share">
                     <div class="sharethis-inline-share-buttons" data-url="<?php echo $tube->data->share_url;?>"></div>

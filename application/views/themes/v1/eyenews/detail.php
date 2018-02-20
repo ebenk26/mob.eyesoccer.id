@@ -251,7 +251,7 @@
 </div>
 <!-- KOMENTAR -->
 <div class="container-comment">
-    <span class="up-next-etube" style="padding-left: 10px;">Komentar</span> <span id="close" class="up-next-etube" style="float:right; padding-right: 10px;"><i class="material-icons">close</i></span>
+    <span class="up-next-etube" style="padding-left: 10px !important;color: #212121 !important;">Komentar</span> <span id="close" class="up-next-etube" style="float:right; padding-right: 10px;"><i class="material-icons">close</i></span>
     <div class="fb-comments" data-href="<?="https://www.eyesoccer.id/";?><?=$_SERVER['REQUEST_URI']?>" data-numposts="5"></div>
 </div>
 <div class="box-notif">
