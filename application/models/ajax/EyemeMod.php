@@ -27,7 +27,7 @@ class EyemeMod extends CI_Model {
         $query = array('page' => '1', 'limit' => '10','username'=> $this->session->username,'following'=> true);
         $data['imglist'] = $this->excurl->remoteCall($this->__xurl().'me-images',$this->__xkey(),$query);
 
-        $html = $this->load->view($this->__theme().'eyeme/ajax/me_a_imgfollowed',$data,true);
+        $html = $this->load->view($this->__theme().'eyeme/ajax/me_a_home',$data,true);
 
         $data = array('xClass' => 'reqimgfollowedlist','xHtml' => $html);
         $this->tools->__flashMessage($data);
@@ -57,11 +57,12 @@ class EyemeMod extends CI_Model {
         $page  = $this->input->post('pg');
     }
     function __meprofile(){
-        $req = $this->input->post('uname');
+        $req     = $this->input->post('uname');
         $req = explode('-',$req);
+        $visitor = ($this->session->member ? $this->session->member['username'] : '');
         $uname = $req[0];
-        $query =  array('page' => '1', 'limit' => '10');
-        $res           = $this->excurl->remoteCall($this->__xurl().'me/'.$uname,$this->__xkey(),$query);
+        $query =  array('page' => '1', 'limit' => '10','visitor' => $visitor);
+        $res   = $this->excurl->remoteCall($this->__xurl().'me/'.$uname,$this->__xkey(),$query);
 
         $data['res']   = json_decode($res);
 

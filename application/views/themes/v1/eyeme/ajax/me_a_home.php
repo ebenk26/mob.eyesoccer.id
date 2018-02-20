@@ -35,10 +35,13 @@ $imglist = json_decode($imglist);
                     <li>
 
                         <img src="<?php echo MEMENU.($hasLike == 1 ? 'love-active.svg' : 'love.svg') ?>">
+                        <span><?php echo count($v->likes)?></span>
 
                         <a  class="com" ref="<?php echo substr($v->id,0,3)?>">
                             <img class="openComment" src="<?php echo base_url()?>assets/img/menu/eyeme/comment.svg" alt="">
+                            <span><?php echo count($v->comments)?></span>
                         </a>
+
                         <div id="<?php echo substr($v->id,0,3)?>" class="loadcomment <?php echo substr($v->id,0,3)?>" action="eyeme" loading="off">
                             <input type="hidden" class="cinput" name="fn" value="gtcomment">
                             <input type="hidden" class="cinput" name="uid" value="<?php echo $v->id?>">
@@ -46,7 +49,7 @@ $imglist = json_decode($imglist);
                         </div>
                        
                     </li>
-                    <li><span><?php echo count($v->likes)?></span></li>
+                    <li></li>
                 </ul>
             </div>
            
@@ -61,13 +64,7 @@ $imglist = json_decode($imglist);
  <?php } ?>
  <script>
     $('a.com').click(function(){
-         var ref =  $(this).attr('ref');
-        //console.log('test');
-       // var $class =  $('.lcomment').attr('class');
-       // console.log($class);
-        //if($(this).attr('ref') == $v->id)
+        var ref =  $(this).attr('ref');
         ajaxOnLoad(ref);
-
-
     })
 </script>

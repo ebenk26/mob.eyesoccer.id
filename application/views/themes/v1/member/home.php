@@ -128,7 +128,7 @@
     </style>
 <div class="head-content full-width">
         <div class="img-radius">
-            <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="" srcset="">
+            <img src="<?php echo urltoimgstore($this->session->member['url_pic'])?>" alt="" srcset="">
         </div>
         <div class="full-width">
             <label class="btn-blue">
@@ -169,7 +169,7 @@
         <div class="informasi">
             <form action="">
                 <span>Nama Depan</span>
-                <input type="text" name="" id="">
+                <input type="text" name="" id="" value="<?php echo $this->session->member['username']?>">
                 <span>Nama Belakang</span>
                 <input type="text" name="" id="">
                 <span>Alamat</span>
@@ -192,16 +192,7 @@
             <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="" srcset="">
             <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="" srcset="">
             <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="" srcset="">
-            <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="" srcset="">
-            <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="" srcset="">
-            <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="" srcset="">
-            <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="" srcset="">
-            <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="" srcset="">
-            <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="" srcset="">
-            <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="" srcset="">
-            <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="" srcset="">
-            <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="" srcset="">
-            <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="" srcset="">
+
            
         </div>
         <div class="bottom-content">
