@@ -141,7 +141,17 @@ function p($arr){
     echo '</pre>';
 
 }
-
+function loginBtn($hasLogin){
+    
+    if(is_array($hasLogin)){
+        return '
+        <img src="'.urltoimgstore($hasLogin['url_pic']).'" style="width:30px;height:30px;">
+        <a class="m-reg" href="'.LOGINURL.'">Hai '.$hasLogin['username'].'</a>';
+    }
+    else{
+        return '<a class="m-reg" href="'.LOGINURL.'"><i class="material-icons">input</i>Login</a>';
+    }
+}
 function imgCache($imgName,$size="medium"){
     return 'http://static.eyesoccer.id/v1/cache/images/'.$imgName.'/'.$size;
 }

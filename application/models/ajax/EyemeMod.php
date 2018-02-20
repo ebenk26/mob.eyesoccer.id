@@ -64,9 +64,8 @@ class EyemeMod extends CI_Model {
         $res           = $this->excurl->remoteCall($this->__xurl().'me/'.$uname,$this->__xkey(),$query);
 
         $data['res']   = json_decode($res);
-        #p($data['res']);
 
-        if(count($data['res']->data) > 0 ){
+        if(count($data['res']->data) > 0  AND !empty($uname)){
             if($req[1] == 'profile'){
                 $html      = $this->load->view($this->__theme().'eyeme/ajax/me_a_profile',$data,true);
                 $data      = array('xClass'=> 'reqprofile','xHtml' => $html);
@@ -86,13 +85,31 @@ class EyemeMod extends CI_Model {
     }
     function __menotif(){
         $uname = $this->session->username;
-       # echo $uname;
         $query = array('page'=> '1','limit'=> '10','username'=>$uname);
         $res   = $this->excurl->remoteCall($this->__xurl().'me-notif',$this->__xkey(),$query);
-        #p($res);
         $data['res'] = json_decode($res);
         $html  = $this->load->view($this->__theme().'eyeme/ajax/me_a_notif',$data,true);
         $arr   = array('xClass'=> 'reqnotif','xHtml'=> $html);
+        $this->tools->__flashMessage($arr);
+    }
+    function __gtcomment(){
+    
+        $id_img      = $this->input->post('uid');
+        $query       = array('page' => '1','limit' => '10','id'=> $id_img);
+        $res         = $this->excurl->remoteCall($this->__xurl().'me-comment',$this->__xkey(),$query);
+        $data['res'] = json_decode($res);
+        $html = $this->load->view($this->__theme().'eyeme/ajax/me_a_comment',$data,true);
+        $arr = array('xClass'=> 'idcom','xHtml'=> $html);
+        $this->tools->__flashMessage($arr);
+
+    }
+    function __meimg(){
+        $id_img      = $this->input->post('uid');
+        $query       = array('page' => '1','limit' => '10','id'=> $id_img);
+        $res         = $this->excurl->remoteCall($this->__xurl().'me-images',$this->__xkey(),$query);
+        $data['res'] = json_decode($res);
+        $html        = $this->load->view($this->__theme().'eyeme/ajax/me_a_img',$data,true);
+        $arr         = array('xClass'=> 'reqimg','xHtml'=> $html);
         $this->tools->__flashMessage($arr);
     }
    

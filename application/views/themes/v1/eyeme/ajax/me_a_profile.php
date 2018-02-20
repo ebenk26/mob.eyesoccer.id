@@ -16,8 +16,8 @@ $res = $res->data;
         <table class="tx-c tr-1-bold">
             <tr>
                 <td><?php echo count($res->images)?></td>
-                <td>456</td>
-                <td>789</td>
+                <td><?php echo $res->follower?></td>
+                <td><?php echo $res->following?></td>
             </tr>
             <tr>
                 <td>photo</td>

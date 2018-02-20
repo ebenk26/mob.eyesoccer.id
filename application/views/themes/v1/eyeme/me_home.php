@@ -28,7 +28,7 @@
             <div class="eme-img-content">
                 <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
             </div>
-            <div class="container-eme-like">
+            <!-- <div class="container-eme-like">
                 <ul>
                     <li><i class="fa fa-heart heart-first" aria-hidden="true"></i>
                       <i class="fas fa-comments"></i></span></span>
@@ -37,19 +37,19 @@
                         <span><a href="">username</a> dan <a href="">234</a> menyukai ini</span>
                     </li>
                 </ul>
-            </div>
-            <ul class="comment-eme">
-                <!-- <li><a href="">username</a> lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet</li>
+            </div> -->
+            <!-- <ul class="comment-eme">
+                <li><a href="">username</a> lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet</li>
                 <li><a href="">username</a> lorem ipsum dolor sit amet lorem ipsum dolor sit amet</li>
-                <li><span class="openComment">Lihat komentar lainnya</span></li> -->
+                <li><span class="openComment">Lihat komentar lainnya</span></li>
                 <li><span class="eme-time-post">30 menit lalu</span></li>
-            </ul>
+            </ul> -->
         </div>
     </div>
    
     <!-- KOMENTAR -->
     <div class="container-comment">
-        <span class="up-next-etube" style="padding-left: 10px;">Komentar</span> <span id="close" class="up-next-etube" style="float:right; padding-right: 10px;"><i class="material-icons">close</i></span>
+        <span class="up-next-etube" style="padding-left: 10px !important;color: #212121 !important;">Komentar</span> <span id="close" class="up-next-etube" style="float:right; padding-right: 10px;"><i class="material-icons">close</i></span>
         <div class="box-komentar">
             <div class="img-radius">
                 <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="" width="100%">
@@ -99,6 +99,8 @@
             </div>
         </div>
     </div>
+    <div class="container-comment" id="idcom">
     </div>
+</div>
    
    
