@@ -31,7 +31,15 @@
                             <img src="<?php echo MEMENU.($hasLike == 1 ? 'love-active.svg' : 'love.svg') ?>">
                             <span><?php echo count($v->likes)?></span>
                          </a>
+                        <span id="<?php echo substr($v->id,0,3).'lk'?>" class="<?php echo substr($v->id,0,3).'lk'?>" action="eyeme" loading="off">
+                        <input type="hidden" class="cinput" name="fn" value="gtlike">
+                        <input type="hidden" class="cinput" name="uid" value="<?php echo $v->id?>">
+                        <input type="hidden" class="cinput" name="act" value="<?php echo $hasLike == 0 ? 'like' : 'unlike'?>">
+                        <input type="hidden" class="cinput" name="clss" value="<?php echo substr($v->id,0,3).'clss'?>">
+
+                         </span>
                     </span>
+
                     <a  class="com" ref="<?php echo substr($v->id,0,3)?>">
                         <img class="openComment" src="<?php echo base_url()?>assets/img/menu/eyeme/comment.svg" alt="">
                         <span><?php echo count($v->comments)?></span>
@@ -42,12 +50,7 @@
                         <input type="hidden" class="cinput" name="uid" value="<?php echo $v->id?>">
 
                     </div>
-                    <div id="<?php echo substr($v->id,0,3).'lk'?>" class="<?php echo substr($v->id,0,3).'lk'?>" action="eyeme" loading="off">
-                        <input type="hidden" class="cinput" name="fn" value="gtlike">
-                        <input type="hidden" class="cinput" name="uid" value="<?php echo $v->id?>">
-                        <input type="hidden" class="cinput" name="clss" value="<?php echo substr($v->id,0,3).'clss'?>">
 
-                    </div>
                 </li>
               
             </ul>
@@ -70,7 +73,7 @@
     $('a.like').click(function(){
 
         var ref = $(this).attr('ref');
-        //console.log(ref);
+        console.log(ref);
         ajaxOnLoad(ref);
     });
 </script>

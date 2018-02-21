@@ -107,9 +107,13 @@ class EyemeMod extends CI_Model {
     function __gtlike(){
         $id_img      = $this->input->post('uid');
         $xClass      = $this->input->post('clss');
+        $act         = $this->input->post('act');
         $query       = array('id' => $id_img,'username' => $this->session->member['username']);
-        $res         = $this->excurl->remoteCall($this->__xurl().'like-me',$this->__xkey(),$query);
+        $res         = $this->excurl->remoteCall($this->__xurl().($act == 'like' ? 'like-me' : 'unlike-me'),$this->__xkey(),$query);
         $data['res'] = json_decode($res);
+        #p($res);
+        #exit;
+        $data['act'] = $act;
         $html        = $this->load->view($this->__theme().'eyeme/ajax/me_a_like',$data,true);
         $arr         = array('xClass'=> $xClass,'xHtml'=> $html);
         $this->tools->__flashMessage($arr);
