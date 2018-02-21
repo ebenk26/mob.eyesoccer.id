@@ -26,7 +26,7 @@ if ($list){
 								<img src="<?php echo $dt->url_pic; ?>" alt="<?php echo $dt->title; ?>">
 							</div>
 							<span style="position: unset;"><?php echo relative_time($this->library->datenormal($dt->publish_on)); ?> lalu</span>
-							<h1 style="bottom: 0;padding: unset;"><?php echo $dt->title; ?></h1>
+							<h1 style="bottom: 0;padding: unset;text-shadow: unset;"><?php echo $dt->title; ?></h1>
 							<p><?php echo word_limiter(strip_tags($dt->description), 10); ?></p>
 						</div>
 				</a>
