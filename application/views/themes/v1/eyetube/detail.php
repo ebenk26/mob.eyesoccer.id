@@ -112,8 +112,8 @@
             <h3>ini nama yg komentar</h3>
             <span>30 menit lalu</span>
         </div>
-    </div> 
-</div>-->
+    </div> -->
+</div>
 <!-- MENU BOTTOM EYETUBE -->
 <!-- <div class="menu-bottom-etube">
     <i class="material-icons">home</i>
