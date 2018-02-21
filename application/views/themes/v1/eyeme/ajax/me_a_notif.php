@@ -19,7 +19,7 @@
                                         (substr($v->notif_type,0,3) == 'COM' ? 'Mengomentari Foto Anda' : 'Mengikuti Anda'))?>
                             <span><?php echo getTime(getDistance(NOW,$v->last_update))['timeString']?></span>
                         </td>
-                        <td><img src="<?php echo urltobetame($v->url_img)?>"></td>
+                        <td><img src="<?php echo $v->url_img.'/small'?>"></td>
                     </tr>
                 </table>
             <?php }?>

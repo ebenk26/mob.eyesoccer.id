@@ -40,18 +40,16 @@
     </div>
 </div>
 <script>
- // var no = 1;
- // var pg = 1;
 
-      $(window).scroll(function() {
-       
-           if($(window).scrollTop() >= $(document).height()/2 + $(document).height()/4) {
-             
-                ajaxOnLoad('loadnewlist');
-             
-           }
-           
-        });
+  $(window).scroll(function() {
    
+       if($(window).scrollTop() >= $(document).height()/2 + $(document).height()/4) {
+         
+            ajaxOnLoad('loadnewlist');
+         
+       }
+       
+    });
+    
  
 </script>

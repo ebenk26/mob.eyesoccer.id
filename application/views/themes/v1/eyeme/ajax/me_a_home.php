@@ -1,4 +1,3 @@
-
 <?php 
 
 $imglist = json_decode($imglist);
@@ -17,49 +16,54 @@ $imglist = json_decode($imglist);
         }
 
 ?>	
-        <div class="container eme-post-section">
-            <div class="container emepost">
-                <a href="<?php echo $this->library->urltomob($v->url)?>">
-                <div class="img-usr">
-                    <img src="<?php echo urltoimgstore($v->url_pic)?>" alt="<?php echo $v->username?>">
-                </div>
-                <span><?php echo $v->username?></span>
-                </a>
-                <i class="material-icons more display-box-notif">more_horiz</i>
+    <div class="container eme-post-section">
+        <div class="container emepost">
+            <a href="<?php echo $v->url?>">
+            <div class="img-usr">
+                <img src="<?php echo urltoimgstore($v->url_pic)?>" alt="<?php echo $v->username?>">
             </div>
-            <div class="eme-img-content">
-                <img src="<?php echo urltobetame($v->url_img)?>" alt="<?php echo $v->img_caption?>">
-            </div>
-             <div class="container-eme-like">
-                <ul>
-                    <li>
-
+            <span><?php echo $v->username?></span>
+            </a>
+            <i class="material-icons more display-box-notif">more_horiz</i>
+        </div>
+        <div class="eme-img-content">
+            <img src="<?php echo $v->url_img.'/medium'?>" alt="<?php echo $v->img_caption?>">
+        </div>
+        <div class="container-eme-like">
+            <ul>
+                <li>
+                  
+                    <a class="<?php ($hasLike == 1 ? 'like' : 'unlike')?>" ref="<?php echo substr($v->id,0,3)?>">
                         <img src="<?php echo MEMENU.($hasLike == 1 ? 'love-active.svg' : 'love.svg') ?>">
-                        <span><?php echo count($v->likes)?></span>
+                    </a>
+                    <span><?php echo count($v->likes)?></span>
+                  
 
-                        <a  class="com" ref="<?php echo substr($v->id,0,3)?>">
-                            <img class="openComment" src="<?php echo base_url()?>assets/img/menu/eyeme/comment.svg" alt="">
-                            <span><?php echo count($v->comments)?></span>
-                        </a>
+                    <a  class="com" ref="<?php echo substr($v->id,0,3)?>">
+                        <img class="openComment" src="<?php echo base_url()?>assets/img/menu/eyeme/comment.svg" alt="">
+                        <span><?php echo count($v->comments)?></span>
+                    </a>
 
-                        <div id="<?php echo substr($v->id,0,3)?>" class="loadcomment <?php echo substr($v->id,0,3)?>" action="eyeme" loading="off">
-                            <input type="hidden" class="cinput" name="fn" value="gtcomment">
-                            <input type="hidden" class="cinput" name="uid" value="<?php echo $v->id?>">
+                    <div id="<?php echo substr($v->id,0,3)?>" class="loadcomment <?php echo substr($v->id,0,3)?>" action="eyeme" loading="off">
+                        <input type="hidden" class="cinput" name="fn" value="gtcomment">
+                        <input type="hidden" class="cinput" name="uid" value="<?php echo $v->id?>">
 
-                        </div>
-                       
-                    </li>
-                    <li></li>
-                </ul>
-            </div>
-           
-            <ul class="comment-eme">
-                <!-- <li><a href="">username</a> lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet</li>
-                <li><a href="">username</a> lorem ipsum dolor sit amet lorem ipsum dolor sit amet</li>
-                <li><span class="openComment">Lihat komentar lainnya</span></li> -->
-                <li><span class="eme-time-post"><?php echo  getTime(getDistance(NOW,$v->last_update))['timeString']?></span></li>
+                    </div>
+                    <div id="<?php echo substr($v->id,0,3)?>" class="loadlike <?php echo substr($v->id,0,3)?>" action="eyeme" loading="off">
+                        <input type="hidden" class="cinput" name="fn" value="gtlike">
+                        <input type="hidden" class="cinput" name="uid" value="<?php echo $v->id?>">
+                      
+
+                    </div>
+                   
+                </li>
             </ul>
         </div>
+       
+        <ul class="comment-eme">
+            <li><span class="eme-time-post"><?php echo  getTime(getDistance(NOW,$v->last_update))['timeString']?></span></li>
+        </ul>
+    </div>
 
  <?php } ?>
  <script>

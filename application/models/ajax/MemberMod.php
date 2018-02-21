@@ -35,8 +35,9 @@ class MemberMod extends CI_Model {
                     foreach ($res->data as $key => $value) {
                         $arr['xData'] = array_merge($arr['xData'], array('msg'.$value->param => $value->msg));
                     }
+                    
                 } else {
-                    $arr = array('xClass'=> 'errmsg','xHtml'=> $res->message);
+                    $arr = array('xCss'=> 'boxfailed','xMsg'=> $res->message,'xAlert'=> true);
                 }
             }
         } else {
@@ -54,7 +55,7 @@ class MemberMod extends CI_Model {
            $this->session->member   = $sess;
 
            #redirect(mMEMBERAREA,'refresh');
-           $arr = array('xDirect'=> base_url().$refer);
+           $arr = array('xDirect'=> base_url().$refer,'xCss'=> 'boxsuccess','xMsg'=> $res->message,'xAlert'=> true);
            $this->tools->__flashMessage($arr);
         }
         
