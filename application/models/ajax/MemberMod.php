@@ -90,10 +90,12 @@ class MemberMod extends CI_Model {
                         $arr['xData'] = array_merge($arr['xData'], array('msg'.$value->param => $value->msg));
                     }
                 } else {
-                    $arr = array('xClass'=> 'errmsg','xHtml'=> $res->message);
+                    $arr = array('xCss'=> 'boxfailed','xMsg'=> $res->message,'xAlert'=> true);
                 }
             }
         }
+
+        $arr = array('xDirect'=> base_url(),'xCss'=> 'boxsuccess','xMsg'=> 'Silahkan Cek Email <br> Untuk aktifasi akun anda','xAlert'=> true);
 
         $this->tools->__flashMessage($arr);
 
