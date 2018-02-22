@@ -29,8 +29,8 @@ $hasLike = 0 ;
                     <a class="like" ref="<?php echo substr($v->id,0,3).'lk'?>"> 
                     <span id="<?php echo substr($v->id,0,3).'clss'?>">
                         
-                            <img src="<?php echo MEMENU.($hasLike == 1 ? 'love-active.svg' : 'love.svg') ?>">
-                            <span><?php echo count($v->likes)?></span>
+                        <img src="<?php echo MEMENU.($hasLike == 1 ? 'love-active.svg' : 'love.svg') ?>">
+                        <span><?php echo count($v->likes)?></span>
                          
                         <span id="<?php echo substr($v->id,0,3).'lk'?>" class="<?php echo substr($v->id,0,3).'lk'?>" action="eyeme" loading="off">
                         <input type="hidden" class="cinput" name="fn" value="gtlike">
@@ -64,17 +64,30 @@ $hasLike = 0 ;
 <?php } ?>
 <!-- KOMENTAR -->
 <div class="container-comment" id="idcom">
+<span class="up-next-etube" style="padding-left: 10px !important;color: #212121 !important;">Komentar</span> <span id="close" class="up-next-etube" style="float:right; padding-right: 10px;"><i class="material-icons">close</i></span>
+    <div class="box-komentar">
+        <div class="img-radius">
+            <img src="<?php echo urltoimgstore($this->session->member['url_pic'])?>" alt="<?php echo $this->session->member['username']?>" width="100%">
+        </div>
+        <div  id='reqcomment' style="display:none;">   
+            <span name="uid" class="cinput" />
+        </div> 
+        <div class="input-komentar">
+            <input type="text" placeholder="Tambahkan Komentar ..." name="comment" fn="pscomment" action="eyeme" id="reqcomment" class="form_keyup" enter="true" loading="off">
+        </div>
+        
+    </div>
 
 </div>
  <script>
     $('a.com').click(function(){
+        // console.log('test');
         var ref =  $(this).attr('ref');
         ajaxOnLoad(ref);
     });
     $('a.like').click(function(){
 
         var ref = $(this).attr('ref');
-        console.log(ref);
         ajaxOnLoad(ref);
     });
 </script>
