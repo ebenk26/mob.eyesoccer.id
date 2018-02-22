@@ -104,6 +104,9 @@ class EyemeMod extends CI_Model {
         $this->tools->__flashMessage($arr);
 
     }
+    function __pscomment(){
+        
+    }
     function __gtlike(){
         $id_img      = $this->input->post('uid');
         $xClass      = $this->input->post('clss');
@@ -111,8 +114,10 @@ class EyemeMod extends CI_Model {
         $query       = array('id' => $id_img,'username' => $this->session->member['username']);
         $res         = $this->excurl->remoteCall($this->__xurl().($act == 'like' ? 'like-me' : 'unlike-me'),$this->__xkey(),$query);
         $data['res'] = json_decode($res);
-        #p($res);
-        #exit;
+        $queryLike   = array('page' => '1','id'=> $id_img,'limit'=> '100');
+        $resLike     = $this->excurl->remoteCall($this->__xurl().'me-like',$this->__xkey(),$queryLike);
+        $resLike      =json_decode($resLike);
+        $data['like'] = count($resLike->data);
         $data['act'] = $act;
         $html        = $this->load->view($this->__theme().'eyeme/ajax/me_a_like',$data,true);
         $arr         = array('xClass'=> $xClass,'xHtml'=> $html);
@@ -122,7 +127,6 @@ class EyemeMod extends CI_Model {
     }
     function __meimg(){
         $id_img      = $this->input->post('uid');
-
         $query       = array('page' => '1','limit' => '10','id'=> $id_img);
         $res         = $this->excurl->remoteCall($this->__xurl().'me-images',$this->__xkey(),$query);
         $data['res'] = json_decode($res);
@@ -130,5 +134,6 @@ class EyemeMod extends CI_Model {
         $arr         = array('xClass'=> 'reqimg','xHtml'=> $html);
         $this->tools->__flashMessage($arr);
     }
+
    
 }

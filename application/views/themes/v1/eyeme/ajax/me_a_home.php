@@ -7,7 +7,6 @@ $imglist = json_decode($imglist);
         $hasLike = 0 ;
 
 		if(count($v->likes) > 0 ){
-            #p($v->likes);
 
             foreach($v->likes as $a => $b){  
                 if($b->username == $this->session->member['username']){

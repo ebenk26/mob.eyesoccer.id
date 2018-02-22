@@ -1,17 +1,17 @@
 <?php 
 //p($res);
-   foreach($res->data as $k => $v){
-        if(count($v->likes) > 0 ){
-            foreach($v->likes as $a => $b){            
-            $hasLike = ( $b->username == $this->session->member['username'] ? 1 : 0 );
+foreach($res->data as $k => $v){
+$hasLike = 0 ;
+    if(count($v->likes) > 0 ){
+        foreach($v->likes as $a => $b){            
+            if($b->username == $this->session->member['username']){
+                $hasLike = 1;
+                break;
             }
-
-        }
-        else{
-            $hasLike = 0 ;
         }
 
-    ?>
+    }
+?>
     <div class="container">
         <div class="container emepost">
             <div class="img-usr">
@@ -26,11 +26,12 @@
         <div class="container-eme-like">
             <ul>
                 <li>
+                    <a class="like" ref="<?php echo substr($v->id,0,3).'lk'?>"> 
                     <span id="<?php echo substr($v->id,0,3).'clss'?>">
-                        <a class="like" ref="<?php echo substr($v->id,0,3).'lk'?>"> 
+                        
                             <img src="<?php echo MEMENU.($hasLike == 1 ? 'love-active.svg' : 'love.svg') ?>">
                             <span><?php echo count($v->likes)?></span>
-                         </a>
+                         
                         <span id="<?php echo substr($v->id,0,3).'lk'?>" class="<?php echo substr($v->id,0,3).'lk'?>" action="eyeme" loading="off">
                         <input type="hidden" class="cinput" name="fn" value="gtlike">
                         <input type="hidden" class="cinput" name="uid" value="<?php echo $v->id?>">
@@ -39,7 +40,7 @@
 
                          </span>
                     </span>
-
+                    </a>
                     <a  class="com" ref="<?php echo substr($v->id,0,3)?>">
                         <img class="openComment" src="<?php echo base_url()?>assets/img/menu/eyeme/comment.svg" alt="">
                         <span><?php echo count($v->comments)?></span>
