@@ -390,37 +390,37 @@ class Library
                 if ($pagetotal > 1) {
                     if ($this->ci->session->userdata($pageses) > 1) {
                         ?>
-                            <a href='javascript:void(0)' id='reqback' class='form_post' action='<?php echo $action; ?>'>
-                                <input type='hidden' name='fn' value='<?php echo $fn; ?>' class='cinput'>
-                                <input type='hidden' name='paging' value='back' class='cinput'>
-                                <?php
-                                    if (isset($opt['slug'])) {
-                                        ?> <input type='hidden' name='slug' value='<?php echo $opt['slug']; ?>' class='cinput'> <?php
-                                    }
+                        <a href='javascript:void(0)' id='reqback' class='form_post' action='<?php echo $action; ?>'>
+                            <input type='hidden' name='fn' value='<?php echo $fn; ?>' class='cinput'>
+                            <input type='hidden' name='paging' value='back' class='cinput'>
+                            <?php
+                            if (isset($opt['slug'])) {
+                                ?> <input type='hidden' name='slug' value='<?php echo $opt['slug']; ?>' class='cinput'> <?php
+                            }
 
-                                    $class = (isset($opt['class'])) ? $opt['class'] : "pagination-green-btn";
-                                    $name = (isset($opt['name'])) ? $opt['name'] : "Sebelumnya";
-                                ?>
-                                <span><button class="<?php echo $class; ?>" style="float: left;"><?php echo $name; ?></button></span>
-                            </a>
+                            $class = (isset($opt['class'])) ? $opt['class'] : "pagination-green-btn";
+                            $name = (isset($opt['name'])) ? $opt['name'] : "Sebelumnya";
+                            ?>
+                            <span><button class="<?php echo $class; ?>" style="float: left;"><?php echo $name; ?></button></span>
+                        </a>
                         <?php
                     }
 
                     if ($pagetotal > $this->ci->session->userdata($pageses)) {
                         ?>
-                            <a href='javascript:void(0)' id='reqnext' class='form_post' action='<?php echo $action; ?>'>
-                                <input type='hidden' name='fn' value='<?php echo $fn; ?>' class='cinput'>
-                                <input type='hidden' name='paging' value='next' class='cinput'>
-                                <?php
-                                    if (isset($opt['slug'])) {
-                                        ?> <input type='hidden' name='slug' value='<?php echo $opt['slug']; ?>' class='cinput'> <?php
-                                    }
+                        <a href='javascript:void(0)' id='reqnext' class='form_post' action='<?php echo $action; ?>'>
+                            <input type='hidden' name='fn' value='<?php echo $fn; ?>' class='cinput'>
+                            <input type='hidden' name='paging' value='next' class='cinput'>
+                            <?php
+                            if (isset($opt['slug'])) {
+                                ?> <input type='hidden' name='slug' value='<?php echo $opt['slug']; ?>' class='cinput'> <?php
+                            }
 
-                                    $class = (isset($opt['class'])) ? $opt['class'] : "pagination-green-btn";
-                                    $name = (isset($opt['name'])) ? $opt['name'] : "Selanjutnya";
-                                ?>
-                                <span><button class="<?php echo $class; ?>" style="float: right;"><?php echo $name; ?></button></span>
-                            </a>
+                            $class = (isset($opt['class'])) ? $opt['class'] : "pagination-green-btn";
+                            $name = (isset($opt['name'])) ? $opt['name'] : "Selanjutnya";
+                            ?>
+                            <span><button class="<?php echo $class; ?>" style="float: right;"><?php echo $name; ?></button></span>
+                        </a>
                         <?php
                     }
                 }
