@@ -17,8 +17,8 @@ $id_img = $res->query->id;
         </div>
         
     </div>
-    <div id="rescomment">
-        
+    <div id="rescomment" class="ncom">
+
     </div>
 <?php 
 

@@ -26,9 +26,7 @@ class EyemeMod extends CI_Model {
         
         $query = array('page' => '1', 'limit' => '10','username'=> $this->session->username,'following'=> true);
         $data['imglist'] = $this->excurl->remoteCall($this->__xurl().'me-images',$this->__xkey(),$query);
-
         $html = $this->load->view($this->__theme().'eyeme/ajax/me_a_home',$data,true);
-
         $data = array('xClass' => 'reqimgfollowedlist','xHtml' => $html);
         $this->tools->__flashMessage($data);
 
@@ -114,6 +112,8 @@ class EyemeMod extends CI_Model {
         $res         = $this->excurl->remoteCall($this->__xurl().'me-comment',$this->__xkey(),$queryCom);
         $data['res'] = json_decode($res);
         $html        = $this->load->view($this->__theme().'eyeme/ajax/me_a_n_comment',$data,true);
+       # $xData       = array('ncom'=> $html,'countcomment' => count($data['res']->data));
+        #$arr         = array('xSplit'=> false, 'xData' => $xData);       
         $arr         = array('xClass'=> 'rescomment','xHtml' => $html );
         $this->tools->__flashMessage($arr);
         
