@@ -213,12 +213,11 @@ $(document).ready(function () {
         var msgRequest = ($('#' + msgBox + '.msg').attr('value') === undefined) ? 'ajaxMessage' : $('#' + msgBox + '.msg').attr('value');
 
         var loading = ($(this).attr('loading') === 'off') ? 0 : 1;
-        var enter = $(this).data('enter');
+        var enter = $(this).attr('enter');
         var wait = $(this).data('wait');
         if (wait) clearTimeout(wait);
 
         wait = setTimeout(function () {
-
             var en = 1;
             if (enter !== undefined) {
                 en = (e.keyCode === 13) ? 1 : 0;
@@ -233,7 +232,6 @@ $(document).ready(function () {
 
                 ajaxReqBasic(formURL, postData, msgRequest);
             }
-
         }, 500);
 
         $(this).data('wait', wait);
