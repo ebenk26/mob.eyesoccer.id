@@ -187,6 +187,13 @@ class MarketQueryMod extends CI_Model {
         return $query;
     }
 
+    public function edit_catatan($data,$id_keranjang)
+    {
+        $query = $this->db->update('eyemarket_keranjang', $data, array('id' => $id_keranjang, 'status' => '0'));
+        
+        return $query;
+    }
+
     public function get_total_harga($id_member)
     { 
         $query = $this->db->query(" SELECT

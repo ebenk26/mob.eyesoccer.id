@@ -43,11 +43,16 @@
                             </a>
                         </td>
                         <td>
-                            <span id="text-catatan-<?= $cart['id']; ?>">
+                            <!-- <form action="" > -->
+                            <span class="text-catatan-<?= $cart['id']; ?>">
                                 <?php echo isset($cart['catatan']) ? $cart['catatan'] : ""; ?>
                             </span>
                             
-                            <a href="#" data-toggle="modal" data-target="#form-catatan-<?= $cart['id']; ?>" style="cursor: pointer;">Edit?</a>
+                            <a href="#" data-toggle="modal" data-target="#form-catatan-<?= $cart['id']; ?>" style="cursor: pointer;"><b>Edit</b></a>
+                            
+                                <!-- <input type="text" name="catatan" value="<?php echo isset($cart['catatan']) ? $cart['catatan'] : ""; ?>" class="text-catatan-<?= $cart['id']; ?> form-control">
+                                <input type="submit" name="" value="Ubah" class="btn btn-info"> -->
+                            <!-- </form> -->
                         </td>
                         <td>
                             <div id="<?= md5($cart['jumlah']); ?>" style="display: none;">
@@ -113,3 +118,33 @@
     <!-- /.box -->
 
 </div>
+
+
+<?php
+    foreach ($model as $cart)
+    {
+?>
+        <div class="modal fade" id="form-catatan-<?= $cart['id']; ?>" tabindex="-1" role="dialog" aria-labelledby="Login" aria-hidden="true" style="font-size: 14px;opacity: 1;">
+            <div class="modal-dialog modal-sm" style="margin-top: 40%;">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="Login">Edit Catatan <?= $cart['nama']; ?></h4>
+                    </div>
+                    <div class="modal-body">
+                        <form action="<?= base_url(); ?>eyemarket" class="form_basic">
+                            <div class="form-group">
+                                <textarea name="catatan" class="form-control" id="catatan-<?= $cart['id']; ?>"><?php echo isset($cart['catatan']) ? $cart['catatan'] : ""; ?></textarea>
+                            </div>
+                            <!-- <input type="submit" name="simpan" value="Simpan" class="btn btn-info"> -->
+                            <input type="submit" class="btn btn-info" id="btn-catatan-<?= $cart['id']; ?>" value="Simpan">
+                            <input type="hidden" name="fn" value="edit_catatan">
+                            <input type="hidden" name="id_keranjang" value="<?= $cart['id']; ?>">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+<?php        
+    }
+?>
