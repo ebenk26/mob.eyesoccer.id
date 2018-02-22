@@ -21,23 +21,36 @@
             <i class="material-icons more display-box-notif">more_horiz</i>
         </div>
         <div class="eme-img-content">
-           <img src="<?php echo urltobetame($v->url_img)?>" alt="<?php echo $v->img_caption?>">
+           <img src="<?php echo $v->url_img?>" alt="<?php echo $v->img_caption?>">
         </div>
         <div class="container-eme-like">
             <ul>
                 <li>
-                    <img src="<?php echo MEMENU.($hasLike == 1 ? 'love-active.svg' : 'love.svg') ?>">
-                    <span><?php echo count($v->likes)?></span>
+                    <span id="<?php echo substr($v->id,0,3).'clss'?>">
+                        <a class="like" ref="<?php echo substr($v->id,0,3).'lk'?>"> 
+                            <img src="<?php echo MEMENU.($hasLike == 1 ? 'love-active.svg' : 'love.svg') ?>">
+                            <span><?php echo count($v->likes)?></span>
+                         </a>
+                        <span id="<?php echo substr($v->id,0,3).'lk'?>" class="<?php echo substr($v->id,0,3).'lk'?>" action="eyeme" loading="off">
+                        <input type="hidden" class="cinput" name="fn" value="gtlike">
+                        <input type="hidden" class="cinput" name="uid" value="<?php echo $v->id?>">
+                        <input type="hidden" class="cinput" name="act" value="<?php echo $hasLike == 0 ? 'like' : 'unlike'?>">
+                        <input type="hidden" class="cinput" name="clss" value="<?php echo substr($v->id,0,3).'clss'?>">
+
+                         </span>
+                    </span>
+
                     <a  class="com" ref="<?php echo substr($v->id,0,3)?>">
                         <img class="openComment" src="<?php echo base_url()?>assets/img/menu/eyeme/comment.svg" alt="">
                         <span><?php echo count($v->comments)?></span>
                     </a>
 
-                    <div id="<?php echo substr($v->id,0,3)?>" class="loadcomment <?php echo substr($v->id,0,3)?>" action="eyeme" loading="off">
+                    <div id="<?php echo substr($v->id,0,3)?>" class="<?php echo substr($v->id,0,3)?>" action="eyeme" loading="off">
                         <input type="hidden" class="cinput" name="fn" value="gtcomment">
                         <input type="hidden" class="cinput" name="uid" value="<?php echo $v->id?>">
 
                     </div>
+
                 </li>
               
             </ul>
@@ -56,5 +69,11 @@
     $('a.com').click(function(){
         var ref =  $(this).attr('ref');
         ajaxOnLoad(ref);
-    })
+    });
+    $('a.like').click(function(){
+
+        var ref = $(this).attr('ref');
+        console.log(ref);
+        ajaxOnLoad(ref);
+    });
 </script>

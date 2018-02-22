@@ -18,14 +18,16 @@
         <div class="container emepost">
             <a href="eyeme-profile.html">
             <div class="img-usr">
-                <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+                <div style="background: #ccc;height: 20px;width: 20px">
+                </div>
             </div>
             <span>username</span>
             </a>
             <i class="material-icons more display-box-notif">more_horiz</i>
         </div>
         <div class="eme-img-content">
-            <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+            <div style="background: #ccc;height:300px;width: 400px;margin-top:90px">
+            </div>
         </div>
        
     </div>

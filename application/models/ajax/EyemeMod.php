@@ -72,8 +72,8 @@ class EyemeMod extends CI_Model {
                 $data      = array('xClass'=> 'reqprofile','xHtml' => $html);
             }
             else{
-                $html       = $this->load->view($this->__theme().'eyeme/ajax/me_a_profileimg',$data,true);
-                $data       = array('xClass'=> 'reqprofileimg','xHtml' => $html);
+                $html      = $this->load->view($this->__theme().'eyeme/ajax/me_a_profileimg',$data,true);
+                $data      = array('xClass'=> 'reqprofileimg','xHtml' => $html);
             }
 
         }
@@ -99,13 +99,30 @@ class EyemeMod extends CI_Model {
         $query       = array('page' => '1','limit' => '10','id'=> $id_img);
         $res         = $this->excurl->remoteCall($this->__xurl().'me-comment',$this->__xkey(),$query);
         $data['res'] = json_decode($res);
-        $html = $this->load->view($this->__theme().'eyeme/ajax/me_a_comment',$data,true);
-        $arr = array('xClass'=> 'idcom','xHtml'=> $html);
+        $html        = $this->load->view($this->__theme().'eyeme/ajax/me_a_comment',$data,true);
+        $arr         = array('xClass'=> 'idcom','xHtml'=> $html);
         $this->tools->__flashMessage($arr);
+
+    }
+    function __gtlike(){
+        $id_img      = $this->input->post('uid');
+        $xClass      = $this->input->post('clss');
+        $act         = $this->input->post('act');
+        $query       = array('id' => $id_img,'username' => $this->session->member['username']);
+        $res         = $this->excurl->remoteCall($this->__xurl().($act == 'like' ? 'like-me' : 'unlike-me'),$this->__xkey(),$query);
+        $data['res'] = json_decode($res);
+        #p($res);
+        #exit;
+        $data['act'] = $act;
+        $html        = $this->load->view($this->__theme().'eyeme/ajax/me_a_like',$data,true);
+        $arr         = array('xClass'=> $xClass,'xHtml'=> $html);
+        $this->tools->__flashMessage($arr);
+
 
     }
     function __meimg(){
         $id_img      = $this->input->post('uid');
+
         $query       = array('page' => '1','limit' => '10','id'=> $id_img);
         $res         = $this->excurl->remoteCall($this->__xurl().'me-images',$this->__xkey(),$query);
         $data['res'] = json_decode($res);
