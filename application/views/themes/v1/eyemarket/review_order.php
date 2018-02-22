@@ -20,23 +20,23 @@
                 </li>
                 <li class="disabled"><a href="#"><i class="fas fa-truck"></i><br>Metode Pengiriman</a>
                 </li>
-                <li class="active"><a href="#"><i class="far fa-money-bill-alt"></i><br>Metode Pembayaran</a>
+                <li class="disabled"><a href="#"><i class="far fa-money-bill-alt"></i><br>Metode Pembayaran</a>
                 </li>
-                <li class="disabled"><a href="#"><i class="fas fa-eye"></i><br>Ulasan Pesanan</a>
+                <li class="active"><a href="#"><i class="fas fa-eye"></i><br>Ulasan Pesanan</a>
                 </li>
             </ul>
 
-            <div id="reqpayment" class='loadpayment' action="eyemarket" loading="off" clean="clsmarket">
+            <div id="reqreview" class='loadreview' action="eyemarket" loading="off" clean="clsmarket">
                 <div id='clsmarket'>
                     <script>
                         $(document).ready(function(){
                             $(window).on('load',function(){
-                                ajaxOnLoad('loadpayment');
+                                ajaxOnLoad('loadreview');
                             });
                         });
                     </script>
                 </div>
-                <input type='hidden' name='fn' value='view_payment' class='cinput'>
+                <input type='hidden' name='fn' value='view_order_review' class='cinput'>
             </div>
                 
         </div>
