@@ -17,6 +17,7 @@ class EyemarketMod extends MarketQueryMod {
         $this->id_member = $member["id"];
         $this->username = $member["username"];
         $this->name = $member["name"];
+        date_default_timezone_set('Asia/Jakarta');
     }
  
     function __market(){
@@ -137,6 +138,23 @@ class EyemarketMod extends MarketQueryMod {
         $total_cart = "Rp. ".number_format($total_all_updatenya,0,',','.');
 
         $data = array('xSplit' => true, 'xData' => array($this->input->post('dest') => $total_sub, $this->input->post('dest_total') => $total_cart));
+        $this->tools->__flashMessage($data);
+    }
+
+    function __edit_catatan()
+    {
+        $id_member = $this->id_member;
+        $new_note = $this->input->post('catatan');
+        $id_keranjang = $this->input->post('id_keranjang');
+        $tag = "text-catatan-".$id_keranjang;
+        
+        $data = array(
+                'catatan'   => $new_note,
+        );
+
+        $update     = $this->edit_catatan($data,$id_keranjang);
+
+        $data = array('xAlert' => true,'xCss' => 'boxsuccess','xMsg' => 'Catatan berhasil diubah','xDirect'=> base_url().'eyemarket/keranjang/'.$id_member);
         $this->tools->__flashMessage($data);
     }
 

@@ -123,7 +123,7 @@
 
                                     <!-- Chart Modal -->
                                     <div class="modal fade" id="chart-modal" tabindex="-1" role="dialog" aria-labelledby="Login" aria-hidden="true" style="font-size: 14px;opacity: 1;">
-                                        <div class="modal-dialog">
+                                        <div class="modal-dialog" style="margin-top: 40%;">
                                             <div class="modal-content">
                                                 <form action="<?= base_url(); ?>eyemarket" class="form_basic">
                                                     <div class="modal-header">
@@ -153,7 +153,7 @@
                                                             </div>
                                                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                                                                 <p>Catatan untuk toko / penjual</p>
-                                                                <textarea name="catatan" id="" cols="30" rows="5" placeholder="Contoh: Warna Putih/Ukuran XL/Edisi ke-2"></textarea>
+                                                                <textarea name="catatan" id="" cols="30" rows="5" placeholder="Contoh: Warna Putih/Ukuran XL/Edisi ke-2" style="margin-top: -5px"></textarea>
                                                             </div>
                                                         </div>
                                                     </div>
