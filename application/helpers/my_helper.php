@@ -271,7 +271,7 @@ function getTime($timeStamp){
     $years     = ($month > 12 ? floor($day / 365) : 0);
     $hours     = floor(($timeStamp % (3600 * 24)) / 3600 );
     $minute    = (floor($timeStamp) / 60) % 60;
-    $secon     = floor($timeStamp % 60);
+    $secon     = (floor($timeStamp % 60) > 1 ? floor($timeStamp % 60) : 1);
 
     if($years > 0 ){
         $timeString .= $years.'Tahun yang lalu';
