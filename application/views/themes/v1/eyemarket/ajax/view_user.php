@@ -1,5 +1,5 @@
 <h1>Profile 
-	<a data-toggle="modal" data-target="#form-edit-profile" class="btn btn-outline-success" id="edit-profile">Edit</a> 
+	<!-- <a data-toggle="modal" data-target="#form-edit-profile" class="btn btn-outline-success" id="edit-profile">Edit</a>  -->
 </h1>
 
 <!-- modal edit profile -->
