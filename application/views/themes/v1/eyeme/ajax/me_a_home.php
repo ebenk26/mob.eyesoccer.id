@@ -1,13 +1,10 @@
 <?php 
 
 $imglist = json_decode($imglist);
-
-
 	foreach($imglist->data as $k => $v){
         $hasLike = 0 ;
 
 		if(count($v->likes) > 0 ){
-            #p($v->likes);
 
             foreach($v->likes as $a => $b){  
                 if($b->username == $this->session->member['username']){
@@ -17,11 +14,8 @@ $imglist = json_decode($imglist);
             }
             
         }
-       
-
 ?>	
     <div class="container eme-post-section">
-        <?php echo '<br>'.@$mas;?>
         <div class="container emepost">
             <a href="<?php echo $v->url?>">
             <div class="img-usr">
@@ -39,9 +33,8 @@ $imglist = json_decode($imglist);
                 <li>
                      <a class="like" ref="<?php echo substr($v->id,0,3).'lk'?>"> 
                       <span id="<?php echo substr($v->id,0,3).'clss'?>">
-                           <script>console.log('<?php echo $hasLike?>')</script>
                                 <img src="<?php echo MEMENU.($hasLike == 1 ? 'love-active.svg' : 'love.svg') ?>">
-                                <span><?php echo count($v->likes)?></span>
+                                <span><?php echo (count($v->likes) == 0 ? '' : count($v->likes))?></span>
                              
                             <span id="<?php echo substr($v->id,0,3).'lk'?>" class="<?php echo substr($v->id,0,3).'lk'?>" action="eyeme" loading="off">
                             <input type="hidden" class="cinput" name="fn" value="gtlike">
@@ -53,12 +46,12 @@ $imglist = json_decode($imglist);
                         </span> 
                     </a>        
 
-                    <a  class="com" ref="<?php echo substr($v->id,0,3)?>">
+                    <a  class="com" val="<?php echo $v->id?>">
                         <img class="openComment" src="<?php echo base_url()?>assets/img/menu/eyeme/comment.svg" alt="">
-                        <span><?php echo count($v->comments)?></span>
+                        <span><?php echo (count($v->comments) == 0 ? '' : count($v->comments))?></span>
                     </a>
 
-                    <div id="<?php echo substr($v->id,0,3)?>" class="loadcomment <?php echo substr($v->id,0,3)?>" action="eyeme" loading="off">
+                    <div id="<?php echo substr($v->id,0,3)?>" class="<?php echo $v->id?>" action="eyeme" loading="off">
                         <input type="hidden" class="cinput" name="fn" value="gtcomment">
                         <input type="hidden" class="cinput" name="uid" value="<?php echo $v->id?>">
 
@@ -75,22 +68,34 @@ $imglist = json_decode($imglist);
         </div>
        
         <ul class="comment-eme">
-            <li><span class="eme-time-post"><?php echo  getTime(getDistance(NOW,$v->last_update))['timeString']?></span></li>
+            <li><span class="eme-time-post">
+                <?php  echo  getTime(getDistance(NOW,$v->last_update))['timeString']?>     
+                </span>
+            </li>
         </ul>
     </div>
 
  <?php } ?>
  <script>
     $('a.com').click(function(){
-        var ref =  $(this).attr('ref');
-        ajaxOnLoad(ref);
+        //var ref =  $(this).attr('ref');
+        var val =  $(this).attr('val');
+        $('#cominput').attr('val',val);
+        $('#cominput').attr('test');
+        console.log(val);
+        ajaxOnLoad(val);
     })
 
      $('a.like').click(function(){
 
         var ref = $(this).attr('ref');
-        console.log(ref);
         ajaxOnLoad(ref);
+    });
+    $('.form_keyup').keypress(function(event) {
+        /* Act on the event */
+        if(keyCode == 13){
+        alert('test');
+        }
     });
     
 </script>
