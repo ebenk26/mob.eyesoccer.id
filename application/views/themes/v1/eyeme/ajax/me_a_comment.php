@@ -31,7 +31,7 @@ foreach($res->data as $k => $v){?>
         <div class="text-komentar">
             <p><?php echo $v->comment?></p>
             <h3><?php echo $v->username?></h3>
-            <span><?php echo getTime(getDistance(NOW,$v->last_update))['timeString']?></span>
+            <span><?php echo str_replace('-','',getTime(getDistance(NOW,$v->last_update))['timeString'])?></span>
         </div>
     </div>
 
