@@ -9,6 +9,7 @@ class Eyenews extends CI_Controller {
     {
 	parent::__construct();
 	$this->load->model('ajax/EyenewsMod');
+	$this->load->model('ajax/HomeMod');
     }
 
     function index()
@@ -63,5 +64,4 @@ class Eyenews extends CI_Controller {
 	
 	$this->load->view($this->__theme().'template', $data);
     }
-
 }

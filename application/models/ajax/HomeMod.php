@@ -65,4 +65,60 @@ class HomeMod extends CI_Model
         $data = array('xClass' => 'reqklasemen', 'xHtml' => $html);
         $this->tools->__flashMessage($data);
     }
+	
+	public function cek_ip_view($kanal,$id,$ip,$tipe)
+	{
+	    $query = $this->db->query(" SELECT
+	                                    *
+	                                FROM
+	                                    tbl_view
+	                                WHERE
+	                                    type_visit  = '$tipe'
+	                                    AND
+	                                    place_visit = '$kanal'
+	                                    AND
+	                                    place_id    = '$id'
+	                                    AND
+	                                    session_ip  = '$ip'
+	                                LIMIT
+	                                    1
+	                                    ")->num_rows();
+	    return $query;
+	}
+
+	public function set_news_emot($tbl,$kanal,$id,$field)
+	{
+
+	    $object = array(
+	    			$field => $field + 1,
+	    );
+
+	    $query = $this->db->update($tbl, $object, array($kanal.'_id' => $id));
+
+	    return $query;
+	}
+	function get_id($select_id, $table, $id_md)
+    {
+        $query = $this->db->query(" SELECT
+                                        $select_id
+                                    FROM
+                                        $table
+                                    WHERE
+                                        md5($select_id) = '$id_md'
+                                        ")->row()->$select_id;
+        return $query;
+    }
+	
+	public function set_tbl_view($object)
+	{
+		$this->db->insert('tbl_view', $object);
+
+        return $this->db->insert_id();
+	}
+	
+	public function get_jumlah_emot($tbl,$id,$field,$kanal)
+	{
+		$query = $this->db->get_where($tbl, array($kanal.'_id' => $id))->row();
+	    return $query;
+	}
 }

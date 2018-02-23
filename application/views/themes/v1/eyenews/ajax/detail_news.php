@@ -5,6 +5,7 @@ if ($newsdetail){
 	
 ?>
 	<input id="catews" type="hidden" value="<?php echo $dt->data->news_type;?>">
+	<input id="eyenews_id" type="hidden" value="<?php echo $dt->data->id;?>">
 	<div class="container enews-detail">
 		<h1><?php echo $dt->data->title;?></h1>
 		<img src="<?php echo $dt->data->url_pic;?>" alt="<?php echo $dt->data->title;?>" width="100%">
@@ -30,74 +31,74 @@ if ($newsdetail){
 		<!-- EMOTICON -->
 		<div class="container-94" style="background-color: white;padding: 10px 0px 20px;">
 			<div class="col-3 col-emoji">
-				<a href="">
+				<a class="emoticon" type_emot="proud">
 					<div class="img-box">
 						<img src="<?php echo SUBCDN."assets/$folder/" ?>img/emoji/bangga.png" alt="">
 					</div>
-					<span><?php echo $dt->data->news_proud;?></span>
+					<span class="replace_proud"><?php echo $dt->data->news_proud;?></span>
 					<span>bangga</span>
 				</a>
 			</div>
 			<div class="col-3 col-emoji">
-				<a href="">
+				<a class="emoticon" type_emot="inspired">
 					<div class="img-box">
 						<img style="margin-top:  -6px;" src="<?php echo SUBCDN."assets/$folder/" ?>img/emoji/bingung.png" alt="">
 					</div>
-					<span><?php echo $dt->data->news_inspired;?></span>
+					<span class="replace_inspired"><?php echo $dt->data->news_inspired;?></span>
 					<span>terinspirasi</span>
 				</a>
 			</div>
 			<div class="col-3 col-emoji">
-				<a href="">
+				<a class="emoticon" type_emot="happy">
 					<div class="img-box box-img-90">
 						<img src="<?php echo SUBCDN."assets/$folder/" ?>img/emoji/gembira.png" alt="">
 					</div>
-					<span><?php echo $dt->data->news_happy;?></span>
+					<span class="replace_happy"><?php echo $dt->data->news_happy;?></span>
 					<span>gembira</span>
 				</a>
 			</div>
 			<div class="col-3 col-emoji">
-				<a href="">
+				<a class="emoticon" type_emot="sad">
 					<div class="img-box">
 						<img src="<?php echo SUBCDN."assets/$folder/" ?>img/emoji/sedih.png" alt="">
 					</div>
-					<span><?php echo $dt->data->news_inspired;?></span>
+					<span class="replace_sad"><?php echo $dt->data->news_inspired;?></span>
 					<span>sedih</span>
 				</a>
 			</div>
 			<div class="col-3 col-emoji">
-				<a href="">
+				<a class="emoticon" type_emot="angry">
 					<div class="img-box">
 						<img style="margin-top:  -6px;" src="<?php echo SUBCDN."assets/$folder/" ?>img/emoji/suka.png" alt="">
 					</div>
-					<span><?php echo $dt->data->news_angry;?></span>
+					<span class="replace_angry"><?php echo $dt->data->news_angry;?></span>
 					<span>marah</span>
 				</a>
 			</div>
 			<div class="col-3 col-emoji">
-				<a href="">
+				<a class="emoticon" type_emot="fear">
 					<div class="img-box">
 						<img src="<?php echo SUBCDN."assets/$folder/" ?>img/emoji/takut.png" alt="">
 					</div>
-					<span><?php echo $dt->data->news_fear;?></span>
+					<span class="replace_fear"><?php echo $dt->data->news_fear;?></span>
 					<span>takut</span>
 				</a>
 			</div>
 			<div class="col-3 col-emoji">
-				<a href="">
+				<a class="emoticon" type_emot="fun">
 					<div class="img-box">
 						<img src="<?php echo SUBCDN."assets/$folder/" ?>img/emoji/terhibur.png" alt="">
 					</div>
-					<span><?php echo $dt->data->news_fun;?></span>
+					<span class="replace_fun"><?php echo $dt->data->news_fun;?></span>
 					<span>terhibur</span>
 				</a>
 			</div>
 			<div class="col-3 col-emoji">
-				<a href="">
+				<a class="emoticon" type_emot="shock">
 					<div class="img-box">
 						<img src="<?php echo SUBCDN."assets/$folder/" ?>img/emoji/terkejut.png" alt="">
 					</div>
-					<span><?php echo $dt->data->news_shock;?></span>
+					<span class="replace_shock"><?php echo $dt->data->news_shock;?></span>
 					<span>terkejut</span>
 				</a>
 			</div>
@@ -106,6 +107,28 @@ if ($newsdetail){
 	<script>
 		$(document).ready(function(){
 			$(".fb-comments").attr("data-href","<?php echo $dt->data->url;?>");
+			$(".emoticon").click(function(){
+				console.log($(this).attr("type_emot"));
+				id = $("#eyenews_id").val();
+				tipe = $(this).attr("type_emot");
+				link = "eyenews";
+				tbl         = "tbl_eyenews";
+				kanal       = "eyenews";
+				sub_field   = "news_";
+
+				$.ajax({
+
+				type: "POST",
+				data: { 'type': tipe, 'id': id, 'link': link, 'tbl': tbl, 'kanal': kanal, 'sub_field': sub_field, 'select_id': 'eyenews_id' },
+				url: "<?=base_url()?>home/set_emot/" + id,
+				dataType: "json",
+
+				success: function (data) {
+					$(".replace_"+tipe).empty().html(data.html);
+				}
+
+				});
+			})
 		});
 	</script>
 <?php

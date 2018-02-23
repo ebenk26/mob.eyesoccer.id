@@ -156,7 +156,7 @@
             </div>
             <div class="col-1">
                 <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="" srcset="">
-                <a href="">Eyemarket</a>
+                <a href="<?= base_url(); ?>eyemarket/user/<?= $this->session->member['id'] ?>">Eyemarket</a>
             </div>
             <div class="col-1">
                 <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="" srcset="">
