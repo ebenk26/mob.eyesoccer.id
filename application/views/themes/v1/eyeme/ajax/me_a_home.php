@@ -15,7 +15,7 @@ $imglist = json_decode($imglist);
             
         }
 ?>	
-    <div class="container eme-post-section">
+    <div class="container eme-post-section" xhide="true">
         <div class="container emepost">
             <a href="<?php echo $v->url?>">
             <div class="img-usr">
