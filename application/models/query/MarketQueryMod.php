@@ -458,4 +458,18 @@ class MarketQueryMod extends CI_Model {
                                         ")->row();
         return $query;
     }
+
+    public function get_pesanan($id_member)
+    {
+        $query = $this->db->query(" SELECT
+                                        A.*
+                                    FROM
+                                        eyemarket_order A
+                                    WHERE
+                                        md5(A.id_member) = '$id_member'
+                                    ORDER BY
+                                        A.id DESC
+                                        ")->result_array();
+        return $query;
+    }
 }

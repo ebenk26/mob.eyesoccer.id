@@ -9,7 +9,7 @@
 				<a href="<?php echo base_url().'eyeprofile/pemain_detail/'.$dt->slug;?>">
 					<div class="user-pemain">
 						<div class="pemain-img">
-							<img src="<?php echo $this->library->lastext($dt->url_pic,'.') ? $dt->url_logo : $default;?>/small" alt="<?php echo $dt->name;?>" srcset="">
+							<img src="<?php echo $this->library->lastext($dt->url_pic,'.') ? $dt->url_pic : $default;?>/small" alt="<?php echo $dt->name;?>" srcset="">
 						</div>
 						<div class="pemain-data">
 							<h3><?php echo $dt->name;?></h3>
