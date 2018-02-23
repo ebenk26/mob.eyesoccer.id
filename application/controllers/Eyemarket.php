@@ -10,6 +10,10 @@ class Eyemarket extends CI_Controller
     {
         parent::__construct();
         $this->load->model('ajax/EyemarketMod');
+        $member = @$this->session->userdata("member");
+        $this->id_member = $member["id"];
+        $this->username = $member["username"];
+        $this->name = $member["name"];
     }
 
     function index()
@@ -98,6 +102,33 @@ class Eyemarket extends CI_Controller
         $data['meta_keyword'] = $this->config->item('meta_keyword');
 
         $this->load->view($this->__theme() . 'template', $data);
+    }
+
+    function review_pesanan($id_member)
+    {
+        $data['kanal'] = 'eyemarket';
+        $data['content'] = 'eyemarket/review_order';
+
+        $data['title'] = $this->config->item('meta_title');
+        $data['meta_desc'] = $this->config->item('meta_desc');
+        $data['meta_keyword'] = $this->config->item('meta_keyword');
+
+        $this->load->view($this->__theme() . 'template', $data);
+    }
+
+    function user($id_member)
+    {
+        $data['kanal'] = 'eyemarket_user';
+        $data['id_member'] = $id_member;
+        $data['nama_lengkap'] = $this->name;
+        $data["active"]     = "profile";
+
+        $data['title'] = $this->config->item('meta_title');
+        $data['meta_desc'] = $this->config->item('meta_desc');
+        $data['meta_keyword'] = $this->config->item('meta_keyword');
+
+        $data['content'] = $this->load->view($this->__theme() . '/eyemarket/user',$data,TRUE);
+        $this->load->view($this->__theme() . 'eyemarket/template_user', $data);
     }
 
 }

@@ -17,6 +17,7 @@ class EyemarketMod extends MarketQueryMod {
         $this->id_member = $member["id"];
         $this->username = $member["username"];
         $this->name = $member["name"];
+        date_default_timezone_set('Asia/Jakarta');
     }
  
     function __market(){
@@ -137,6 +138,23 @@ class EyemarketMod extends MarketQueryMod {
         $total_cart = "Rp. ".number_format($total_all_updatenya,0,',','.');
 
         $data = array('xSplit' => true, 'xData' => array($this->input->post('dest') => $total_sub, $this->input->post('dest_total') => $total_cart));
+        $this->tools->__flashMessage($data);
+    }
+
+    function __edit_catatan()
+    {
+        $id_member = $this->id_member;
+        $new_note = $this->input->post('catatan');
+        $id_keranjang = $this->input->post('id_keranjang');
+        $tag = "text-catatan-".$id_keranjang;
+        
+        $data = array(
+                'catatan'   => $new_note,
+        );
+
+        $update     = $this->edit_catatan($data,$id_keranjang);
+
+        $data = array('xAlert' => true,'xCss' => 'boxsuccess','xMsg' => 'Catatan berhasil diubah','xDirect'=> base_url().'eyemarket/keranjang/'.$id_member);
         $this->tools->__flashMessage($data);
     }
 
@@ -287,9 +305,171 @@ class EyemarketMod extends MarketQueryMod {
             'ongkir'    => $ongkir,
         );
 
-        $update_cart    = $this->update_cart_delivery($id_member,$data1);
+        $update_cart = $this->update_cart_delivery($id_member,$data1);
 
         $data = array('xAlert' => true,'xCss' => 'boxsuccess','xMsg' => 'Metode pengiriman berhasil diatur','xDirect'=> base_url().'eyemarket/set_payment/'.$id_member);
+        $this->tools->__flashMessage($data);
+    }
+
+    function __view_payment()
+    {
+        $data['id_member'] = $this->id_member;
+        $data['model'] = $this->get_keranjang($data['id_member']);
+        $data['bank'] = $this->get_all_bank();
+
+        $html = $this->load->view($this->__theme().'eyemarket/ajax/view_payment',$data,true);
+        $data = array('xClass'=> 'reqpayment','xHtml' => $html);
+        $this->tools->__flashMessage($data);
+    }
+
+    function __order_payment()
+    {
+        $id_member = $this->id_member;
+
+        $object     = array(
+            'id_tipe_bayar'     => $this->input->post('payment'),
+        );
+        
+        $update = $this->update_cart_payment($id_member,$object);
+
+        $data = array('xAlert' => true,'xCss' => 'boxsuccess','xMsg' => 'Metode pembayaran berhasil diatur','xDirect'=> base_url().'eyemarket/review_pesanan/'.$id_member);
+        $this->tools->__flashMessage($data);
+    }
+
+    function __view_order_review()
+    {
+        $data['id_member'] = $this->id_member;
+        $data['model'] = $this->get_keranjang($data['id_member']);
+        $data['address'] = $this->get_address($data['id_member']);
+        $data['jumlah'] = count($data['address']);
+        $data['total_all'] = $this->get_total_harga($data['id_member']);
+        $data['beratnya'] = $this->get_total_berat($data['id_member']);
+
+        $data['kurir']          = "";
+        $data['ongkir']         = "";
+        $data['penerima']       = "";
+        $data['alamat']         = "";
+        $data['hp']             = "";
+        $data['berat_all']      = $data['beratnya']->berat_all;
+
+        foreach ($data['model'] as $val)
+        {
+            $data['kurir']          = $val['kurir'];
+            $data['ongkir']         = $val['ongkir'];
+            $data['penerima']       = $val['nama_penerima'];
+            $data['alamat']         = $val['alamat'];
+            $data['hp']             = $val['hp'];
+            $data['berat']          = $val['berat'];
+        }
+
+        $data['berat_all'] = $data['beratnya']->berat_all;
+        $data['total_finish'] = $data['total_all']->total_all + $data['ongkir'];
+
+        $html = $this->load->view($this->__theme().'eyemarket/ajax/view_order_review',$data,true);
+        $data = array('xClass'=> 'reqreview','xHtml' => $html);
+        $this->tools->__flashMessage($data);
+    }
+
+    function __set_order()
+    {
+        $tahun = date("Y");
+        $bulan = date("m");
+
+        $data['id_member'] = $this->id_member;
+        $id_membernya = $this->get_id_md($data['id_member']);
+
+        $data['keranjang'] = $this->get_keranjang($data['id_member']);
+
+        $data['total_all']  = $this->get_total_harga($data['id_member']);
+        $data['berat_all']  = $this->get_total_berat($data['id_member']);
+
+        $harga      = $data['total_all']->total_all;
+        $total_all  = $data['keranjang'][0]['ongkir'] + $harga;
+
+        //=====set nomor urut
+        $no_urut_last = $this->get_max_nourut($id_membernya->id_member);
+        $no_urut_now = (int)$no_urut_last->max_urut;
+        $no_urut_now++;
+        $new_no_urut = sprintf("%03s", $no_urut_now);
+
+        //=====set nomor order
+        $no_order = "$tahun$bulan$id_membernya->id_member$new_no_urut";
+        $data['no_order'] = $no_order;
+
+        //=====set nomor invoice
+        $no_invoice             = "INV-MBCI/EMK/".$tahun."/".$bulan."/".$id_membernya->id_member."/".$new_no_urut;
+        $data['no_invoice']     = $no_invoice;
+
+        $data['expired']    = date('Y-m-d H:i:s',strtotime("+4 hours"));
+
+        
+
+
+        
+        $objek = array(
+                    'id_member' => $id_membernya->id_member,
+                    'id_alamat' => $data['keranjang'][0]['id_alamat'],
+                    'id_kurir' => $data['keranjang'][0]['id_kurir'],
+                    'id_tipe_bayar' => $data['keranjang'][0]['id_tipe_bayar'],
+                    'no_urut' => $new_no_urut,
+                    'no_order' => $no_order,
+                    'no_invoice' => $no_invoice,
+                    'harga' => $harga,
+                    'berat_all' => $data['berat_all']->berat_all,
+                    'ongkir' => $data['keranjang'][0]['ongkir'],
+                    'harga_all' => $total_all,
+                    'order_date' => date("Y-m-d H:i:s"),
+                    'expired_date' => $data['expired'],
+                    'status' => 1,
+        );
+        $id_order      = $this->set_order($objek);
+
+        //===== update keranjang
+        $cart = array(
+            'id_order' => $id_order,
+            'status' => 1,
+        );
+
+        $update_cart = $this->db->update('eyemarket_keranjang', $cart, array('id_member' => $id_membernya->id_member, 'status' => 0));
+
+        //for email
+        $data['model'] = $this->get_invoice($no_order);
+        $data["profile"] = $this->get_member($data['id_member']);
+        foreach ($data["profile"] as $value)
+        {
+            $data['username'] = $value['name'];
+            $data['nama_lengkap'] = $value['fullname'];
+            $data['email'] = $value['email'];
+        }
+
+        $message = $this->load->view($this->__theme().'eyemarket/mail_order',$data,TRUE);
+        $to = $data["email"];
+        $subject = 'Menunggu Pembayaran untuk Pemesanan '.$no_invoice;
+
+        $query = array('to'=> $to, 'subject'=> $subject, 'message'=> $message);
+        $this->excurl->remoteCall($this->__xurl().'mailer', $this->__xkey(), $query);
+        // $send_mail  = send_mail($to,$subject,$msg);
+
+        $data = array('xAlert' => true,'xCss' => 'boxsuccess','xMsg' => '<strong>Order anda berhasil</strong><br />Silahkan cek email anda untuk langkah selanjutnya','xDirect'=> base_url().'eyemarket');
+        $this->tools->__flashMessage($data);
+    }
+
+    function __profile()
+    {
+        $data["id_member"]  = $this->id_member;
+        $data["profile"]    = $this->get_member($data["id_member"]);
+
+        foreach ($data["profile"] as $value)
+        {
+            $data['username']       = $value['name'];
+            $data['nama_lengkap']   = $value['fullname'];
+            $data['email']          = $value['email'];
+            $data['hp']             = $value['phone'];
+            $data['alamat']         = $value['address'];
+        }
+
+        $html = $this->load->view($this->__theme().'eyemarket/ajax/view_user',$data,true);
+        $data = array('xClass'=> 'reqprofile','xHtml' => $html);
         $this->tools->__flashMessage($data);
     }
 

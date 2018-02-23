@@ -153,6 +153,7 @@ class MarketQueryMod extends CI_Model {
                                         B.berat,
                                         B.keterangan,
                                         C.nama as toko,
+                                        D.nama as kurir,
                                         E.id as id_image,
                                         E.image1,
                                         E.image2,
@@ -160,7 +161,9 @@ class MarketQueryMod extends CI_Model {
                                         E.image4,
                                         E.image5,
                                         F.nama as nama_rumah,
+                                        F.penerima as nama_penerima,
                                         F.kode,
+                                        F.hp,
                                         F.alamat
                                     FROM
                                         eyemarket_keranjang A
@@ -172,6 +175,8 @@ class MarketQueryMod extends CI_Model {
                                         eyemarket_images E      on A.id_product =  E.id_product
                                     LEFT JOIN
                                         eyemarket_address F      on A.id_alamat =  F.id
+                                    LEFT JOIN
+                                        eyemarket_kurir D       ON D.id     = A.id_kurir
                                     WHERE 
                                         md5(A.id_member) = '$id_member'
                                         AND
@@ -179,6 +184,13 @@ class MarketQueryMod extends CI_Model {
                                     ORDER BY
                                         A.id ASC
                                         ")->result_array();
+        return $query;
+    }
+
+    public function edit_catatan($data,$id_keranjang)
+    {
+        $query = $this->db->update('eyemarket_keranjang', $data, array('id' => $id_keranjang, 'status' => '0'));
+        
         return $query;
     }
 
@@ -361,6 +373,89 @@ class MarketQueryMod extends CI_Model {
     {
         $query = $this->db->update('eyemarket_keranjang', $data, array('md5(id_member)' => $id_member, 'status' => '0'));
         
+        return $query;
+    }
+
+    public function get_all_bank()
+    {
+        $query  = $this->db->get('eyemarket_payment')->result_array();
+
+        return $query;
+    }
+
+    public function update_cart_payment($id_member,$data)
+    {
+        $query = $this->db->update('eyemarket_keranjang', $data, array('md5(id_member)' => $id_member, 'status' => '0'));
+        
+        return $query;
+    }
+
+    public function get_max_nourut($id_member)
+    {
+        $query = $this->db->query(" SELECT
+                                        MAX(A.no_urut) AS max_urut
+                                    FROM
+                                        eyemarket_order A 
+                                    WHERE
+                                        A.id_member = '$id_member'
+                                        ")->row();
+        return $query;
+    }
+
+    public function set_order($object)
+    {
+        $this->db->insert('eyemarket_order', $object);
+        
+        return $this->db->insert_id();
+    }
+
+    function set_keranjang_status($id_order,$cart)
+    {
+        $query = $this->db->update('eyemarket_keranjang', $cart, array('id_order' => $id_order));
+        
+        return $query;
+    }
+
+    public function get_invoice($no_order)
+    { 
+        $query = $this->db->query(" SELECT
+                                        A.*,
+                                        D.nama as toko,
+                                        D.hp,
+                                        D.email,
+                                        D.alamat,
+                                        E.nama as kurir,
+                                        G.name as username,
+                                        H.penerima,
+                                        H.alamat,
+                                        H.provinsi as provinsinya,
+                                        H.kota,
+                                        H.kecamatan,
+                                        I.rekening,
+                                        I.bank,
+                                        I.nama_pemilik,
+                                        I.logo
+                                    FROM
+                                        eyemarket_order A
+                                    LEFT JOIN
+                                        eyemarket_keranjang B   on B.id_order = A.id
+                                    LEFT JOIN
+                                        eyemarket_product C     on C.id_product = B.id_product
+                                    LEFT JOIN
+                                        eyemarket_toko D        on D.id = C.id_toko
+                                    LEFT JOIN
+                                         eyemarket_kurir E      on E.id = A.id_kurir
+                                    LEFT JOIN
+                                        tbl_member G            on A.id_member =  G.id_member
+                                    LEFT JOIN
+                                        eyemarket_address H     on A.id_alamat =  H.id
+                                    LEFT JOIN
+                                        eyemarket_payment I     on A.id_tipe_bayar = I.id
+                                    WHERE
+                                        A.no_order = '$no_order'
+                                    LIMIT
+                                        1
+                                        ")->row();
         return $query;
     }
 }

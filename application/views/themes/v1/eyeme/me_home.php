@@ -12,6 +12,7 @@
          
             </script>
         </div>
+        <span class="reqimgfollowedlist"></span>
     <input type="hidden" name="fn" value="imgfollowedlist" class="cinput">
     
     <div class="container">
@@ -35,6 +36,7 @@
 
 <!-- KOMENTAR -->
 <div class="container-comment" id="idcom">
+    
+
 </div>
-   
    
