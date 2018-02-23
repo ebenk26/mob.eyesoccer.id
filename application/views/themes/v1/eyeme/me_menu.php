@@ -8,7 +8,7 @@
         $list  = array(
                     anchor(MEHOME,img(array('src' => MEMENU.'home.svg','alt'=> 'home'))),
                     anchor(MEEXPLORE,img(array('src' => MEMENU.'search.svg','alt'=> 'explore'))),
-                    anchor(MEUPLOAD,img(array('src' => MEMENU.'add-post.svg','alt' => 'upload'))),
+                    anchor('',img(array('src' => MEMENU.'add-post.svg','alt' => 'upload')),array('class'=> 'upl')),
                     anchor(MENOTIF,img(array('src' => MEMENU.'notification.svg','alt' => 'Notification'))),
                     anchor(MEPROFILE.$this->session->member['username'],img($DPIC))
                 );

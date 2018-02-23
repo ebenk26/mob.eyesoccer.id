@@ -36,7 +36,3 @@ foreach($res->data as $k => $v){?>
     </div>
 
 <?php }?>
-
-
-
-       
