@@ -34,7 +34,7 @@
         $('#upload').on('change',function(){
             $('.container[xhide="true"]').hide();
             var file = this.files[0];
-            showfile(file);
+                showfile(file);
             $('#imgtemplate').show();
 
         })
