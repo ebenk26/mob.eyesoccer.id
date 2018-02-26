@@ -164,7 +164,10 @@ class MarketQueryMod extends CI_Model {
                                         F.penerima as nama_penerima,
                                         F.kode,
                                         F.hp,
-                                        F.alamat
+                                        F.alamat,
+                                        F.provinsi,
+                                        F.kota,
+                                        F.kecamatan
                                     FROM
                                         eyemarket_keranjang A
                                     LEFT JOIN
