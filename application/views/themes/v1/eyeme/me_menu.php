@@ -16,8 +16,9 @@
     echo ul($list)?>
    
 </div>
+
 <?php $this->load->view('themes/v1/eyeme/me_upload')?>
-<input type="file" name="file" hidden="hidden" id="upload">
+<input type="file" name="fupload" hidden="hidden" id="upload" form="formtpl">
 <script>
     function showfile(file) {
         var reader = new FileReader(file);

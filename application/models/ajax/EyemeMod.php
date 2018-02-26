@@ -147,6 +147,19 @@ class EyemeMod extends CI_Model {
         $arr         = array('xClass'=> 'reqimg','xHtml'=> $html);
         $this->tools->__flashMessage($arr);
     }
+    function __upload(){
+        $username   = $this->session->member['username'];
+        $caption  = $this->input->post('caption');
+        $file = $_FILES['fupload'];
+        $query = array('username' => $username,'caption' => $caption,'fupload' => $file);
+        $res  = $this->excurl->remoteCall($this->xurl().'upload-me',$this->__xkey(),$query);
+        $data['res'] = json_decode($res);
+        $html   = 'berhasil di upload';
+        $arr = array('xClass' => 'requpload','xHtml' => $html);
+        $this->tools->__flashMessage($arr);
+        
+
+    }
 
    
 }
