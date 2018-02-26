@@ -14,6 +14,12 @@
                     <p>JNE Reguler adalah paket reguler yang ditawarkan JNE. Kecepatan pengiriman tergantung dari lokasi pengiriman dan lokasi tujuan. Untuk kota yang sama, umumnya memakan waktu 2-3 hari.</p>
                     Tujuan : <strong><?= $alamat; ?></strong>
                     <br>
+                    <strong style="margin-left: 58px;"><?= $kecamatan; ?></strong>
+                    <br>
+                    <strong style="margin-left: 58px;"><?= $kota; ?></strong>
+                    <br>
+                    <strong style="margin-left: 58px;"><?= $provinsi; ?></strong>
+                    <br>
                     Ongkir : <strong> Rp. <?php echo ($ctc != NULL) ? number_format($ctc,0,',','.') : number_format($reg,0,',','.'); ?> </strong>
 
                     <div class="box-footer text-center">
@@ -36,7 +42,12 @@
                     <h4>JNE YES</h4>
 
                     <p>JNE YES adalah paket dengan prioritas pengiriman tercepat yang ditawarkan JNE. Hanya saja perlu diperhatikan kecepatan barang diterima juga dipengaruhi oleh kecepatan penjual melakukan pengiriman barang.</p>
-                    Tujuan : <strong><?= $alamat; ?></strong>
+                    Tujuan : <strong><?= $alamat; ?></strong><br>
+                    <strong style="margin-left: 58px;"><?= $kecamatan; ?></strong>
+                    <br>
+                    <strong style="margin-left: 58px;"><?= $kota; ?></strong>
+                    <br>
+                    <strong style="margin-left: 58px;"><?= $provinsi; ?></strong>
                     <br>
                     Ongkir : <strong> Rp. <?php echo ($ctcyes != NULL) ? number_format($ctcyes,0,',','.') : number_format($yes,0,',','.'); ?> </strong>
 

@@ -51,4 +51,16 @@ class Eyevent extends CI_Controller {
 	    $this->load->view($this->__theme().'template', $data);
     }
 
+    function jadwal()
+    {
+		$data['kanal'] = 'eyevent-jadwal';
+	    $data['content'] = 'eyevent/jadwal';
+	    
+	    $data['title'] = $this->config->item('meta_title');
+	    $data['meta_desc'] = $this->config->item('meta_desc');
+	    $data['meta_keyword'] = $this->config->item('meta_keyword');
+	    
+	    $this->load->view($this->__theme().'template', $data);
+    }
+
 }

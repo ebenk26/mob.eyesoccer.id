@@ -254,6 +254,9 @@ class EyemarketMod extends MarketQueryMod {
         $model = $this->get_keranjang($data['id_member']);
         $kode_tujuan = $model[0]['kode'];
         $data['alamat'] = $model[0]['alamat'];
+        $data['kecamatan'] = $model[0]['kecamatan'];
+        $data['kota'] = $model[0]['kota'];
+        $data['provinsi'] = $model[0]['provinsi'];
 
         $this->load->helper('my');
 
@@ -349,6 +352,9 @@ class EyemarketMod extends MarketQueryMod {
         $data['ongkir']         = "";
         $data['penerima']       = "";
         $data['alamat']         = "";
+        $data['provinsi']       = "";
+        $data['kota']           = "";
+        $data['kecamatan']      = "";
         $data['hp']             = "";
         $data['berat_all']      = $data['beratnya']->berat_all;
 
@@ -358,11 +364,13 @@ class EyemarketMod extends MarketQueryMod {
             $data['ongkir']         = $val['ongkir'];
             $data['penerima']       = $val['nama_penerima'];
             $data['alamat']         = $val['alamat'];
+            $data['provinsi']       = $val['provinsi'];
+            $data['kota']           = $val['kota'];
+            $data['kecamatan']      = $val['kecamatan'];
             $data['hp']             = $val['hp'];
             $data['berat']          = $val['berat'];
         }
 
-        $data['berat_all'] = $data['beratnya']->berat_all;
         $data['total_finish'] = $data['total_all']->total_all + $data['ongkir'];
 
         $html = $this->load->view($this->__theme().'eyemarket/ajax/view_order_review',$data,true);
