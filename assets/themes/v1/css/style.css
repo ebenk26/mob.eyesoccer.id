@@ -2972,3 +2972,43 @@ ul, li {
 .loadhomenewslist a:nth-last-of-type(1) .home-rek-ber-c{
     margin-bottom: 0px;
 }
+.news-headline{
+    background-color: #B71C1C;
+    color: white;
+    font-weight: 600;
+    font-size: .8em;
+    line-height: 1.4em;
+    padding: 8px;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    position: relative;
+    top: -44px;
+}
+.news-headline ul li{
+    display: block;
+}
+.news-headline ul li a p{
+    margin: 0px;
+    height: 1.4em;
+    overflow: hidden;
+}
+.news-headline ul li a p::before{
+    content: '.';
+    font-size: 3em;
+    color: white;
+    display: inline-block;
+    float: left;
+    position: relative;
+    top: -11px;
+    width: 15px;
+}
+.tab-popular-custom-home{
+    color: #FF5722 !important;
+    font-size: 1em !important;
+    display: block !important;
+    float: left;
+    font-weight: 600 !important;
+    left: -10px;
+    margin: 15px 0px 0px !important;
+}
