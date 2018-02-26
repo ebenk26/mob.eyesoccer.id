@@ -14,6 +14,7 @@ class EyeventMod extends CI_Model {
 
     function __match_schedule()
     {
+        $page = ($this->input->post('page') != NULL) ? $this->input->post('page') : "";
     	$data["kemarin"] = get_date("-1");
     	$data["hari_ini"] = get_date("+0");
     	$data["besok"] = get_date("+1");
@@ -30,7 +31,15 @@ class EyeventMod extends CI_Model {
     	$query = array('page' => 1, 'limit' => 5, 'sortby' => 'mostview', 'startdate' => $data["besok"]["tanggalnya"], 'enddate' => $data["besok"]["tanggalnya"]);
     	$data['match_tomorrow'] = $this->excurl->remoteCall($this->__xurl().'event-match', $this->__xkey(), $query);
 
-    	$html = $this->load->view($this->__theme().'eyevent/ajax/match_schedule', $data, true);
+        if ($page == "eyevent-match") 
+        {
+            $html = $this->load->view($this->__theme().'eyevent/ajax/schedule', $data, true);
+        }
+        else
+        {
+            $html = $this->load->view($this->__theme().'eyevent/ajax/match_schedule', $data, true);
+        }
+    	
     	
     	$data = array('xClass' => 'reqmatch', 'xHtml' => $html);
     	$this->tools->__flashMessage($data);

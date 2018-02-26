@@ -19,7 +19,7 @@
                     <tr>
                         <td>
                             <a href="#">
-                                <img src="<?= MEIMG; ?><?= $cart['image1']; ?>" alt="<?= $cart['nama']; ?>">
+                                <img src="<?= MARKETIMG; ?><?= $cart['image1']; ?>" alt="<?= $cart['nama']; ?>">
                             </a>
                         </td>
                         <td>
@@ -54,6 +54,12 @@
                                 <?= $penerima; ?>
                             </div>
                             <?= $alamat; ?>
+                            <br>
+                            <?= $kecamatan; ?>
+                            <br>
+                            <?= $kota; ?>
+                            <br>
+                            <?= $provinsi; ?>
                             <br>
                             Telp: <?= $hp; ?>
                         </td>

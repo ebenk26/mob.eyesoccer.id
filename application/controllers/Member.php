@@ -55,5 +55,10 @@ class Member extends CI_Controller {
     	$this->session->sess_destroy();
     	redirect(base_url(),'refresh');
     }
+	
+	public function profile_upload()
+    {
+		$this->MemberMod->profile_upload($_FILES, $_POST);
+    }
 
 }

@@ -127,18 +127,23 @@
     }
     </style>
 <div class="head-content full-width">
+	<form method="POST" action="<?=base_url()?>member/profile_upload/" enctype="multipart/form-data" class="container" style="width:unset;float:unset;">
         <div class="img-radius">
-            <img src="<?php echo urltoimgstore($this->session->member['url_pic'])?>" alt="" srcset="">
+            <img src="<?php echo urltoimgstore($this->session->member['url_pic'])?>" alt="" srcset="" class="viewimg">
         </div>
         <div class="full-width">
             <label class="btn-blue">
                 Ganti Foto
-                <input id="file_pic" name="pic" type="file" style="display: none;">
+                <input id="file_pic" name="pic" type="file" style="display: none;" accept="image/*">
             </label>
+			<button class="btn-blue" type="submit" class="btn-info btn" id="submit_pic" style="display:none;border: none;cursor: pointer;" >Simpan Foto</button>
             <a class="btn-blue" href="<?php echo base_url().'member/logout'?>" style="background-color: #EC407A;
                 border: none;">Logout</a>
         </div>
-    </div>
+		<input class="lat" name="lat" type="hidden"/>
+		<input class="lon" name="lon" type="hidden"/>
+	</form>
+</div>
     <div class="head-content container">
         <div class="action-menu">
             <!-- <h2>Menu</h2> -->
@@ -205,3 +210,31 @@
                 <input id="file_pic" name="pic" type="file" style="display: none;">
             </label>
         </div>
+		
+		<script>
+			$(document).ready(function(){
+				function readURL(input) {
+					if (input.files && input.files[0]) {
+						var reader = new FileReader();
+						reader.onload = function (e) {
+							$('.viewimg').attr('src', e.target.result);
+							$("#submit_pic").show();
+						}
+
+						reader.readAsDataURL(input.files[0]);
+					}
+				}
+				
+				$("#file_pic").change(function(){
+					readURL(this);
+				});
+				jQuery.get("https://ipinfo.io", function (response)
+				{
+				   lats = response.loc.split(',')[0]; 
+				   lngs = response.loc.split(',')[1];
+				   $(".lat").val(lats);
+				   $(".lon").val(lngs);
+
+				}, "jsonp");
+			});
+		</script>
