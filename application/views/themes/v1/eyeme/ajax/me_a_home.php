@@ -34,7 +34,7 @@ $imglist = json_decode($imglist);
                      <a class="like" ref="<?php echo substr($v->id,0,3).'lk'?>"> 
                       <span id="<?php echo substr($v->id,0,3).'clss'?>">
                             <img src="<?php echo MEMENU.($hasLike == 1 ? 'love-active.svg' : 'love.svg') ?>">
-                            <span><?php echo ($v->likecount == 0 ? '' : $v->likecount)?></span>
+                            <span class="adbo"><?php echo ($v->likecount == 0 ? '' : $v->likecount)?></span>
                              
                             <span id="<?php echo substr($v->id,0,3).'lk'?>" class="<?php echo substr($v->id,0,3).'lk'?>" action="eyeme" loading="off">
                             <input type="hidden" class="cinput" name="fn" value="gtlike">
@@ -48,7 +48,7 @@ $imglist = json_decode($imglist);
 
                     <a  class="com" val="<?php echo $v->id?>">
                         <img class="openComment" src="<?php echo base_url()?>assets/img/menu/eyeme/comment.svg" alt="">
-                        <span class="c<?php echo $v->id?>"><?php echo ($v->commentcount == 0 ? '' : $v->commentcount)?></span>
+                        <span class="adbo c<?php echo $v->id?>"><?php echo ($v->commentcount == 0 ? '' : $v->commentcount)?></span>
                     </a>
 
                     <div id="<?php echo substr($v->id,0,3)?>" class="<?php echo $v->id?>" action="eyeme" loading="off">
