@@ -151,13 +151,19 @@ class EyemeMod extends CI_Model {
         $username   = $this->session->member['username'];
         $caption  = $this->input->post('caption');
         $file = $_FILES['fupload'];
-        $query = array('username' => $username,'caption' => $caption,'fupload' => $file);
-        $res  = $this->excurl->remoteCall($this->xurl().'upload-me',$this->__xkey(),$query);
-        $data['res'] = json_decode($res);
-        $html   = 'berhasil di upload';
-        $arr = array('xClass' => 'requpload','xHtml' => $html);
+
+        $query = array('username' => $username,'caption' => $caption);
+         #p($query);
+        #exit;
+        $res  = $this->excurl->remoteCall($this->__xurl().'upload-me',$this->__xkey(),$query,array('fupload'));
+        $res  = json_decode($res);
+        $arr  = array('xDirect' => base_url().'/eyeme','xAlert' => true);
+        $arr['xCss'] = ($res->status == 'Success' ? 'boxsuccess' : 'boxfailed');
+        $arr['xMsg'] = ($res->status == 'Success' ? 'Berhasil Upload foto' : 'Gaga Upload foto');
+       
+        // $arr = array('xClass' => 'requpload','xHtml' => $html);
         $this->tools->__flashMessage($arr);
-        
+
 
     }
 
