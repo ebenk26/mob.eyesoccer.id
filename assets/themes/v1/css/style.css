@@ -2924,7 +2924,7 @@ ul, li {
 }
 .container-eme-like li img{
     height: 22px;
-    margin-right: 10px;
+    /* margin-right: 10px; */
 }
 .gr{
     background: #0288d1;
@@ -3011,4 +3011,9 @@ ul, li {
     font-weight: 600 !important;
     left: -10px;
     margin: 15px 0px 0px !important;
+}
+.adbo{
+    font-size: .8em;
+    margin-right: 10px;
+    /* margin-left: -5px; */
 }
