@@ -1,3 +1,4 @@
+<div class="container" xhide="true">
 <div class="info-box-notif" style="display:block">
     <div class="info-box-notif-content">
         <div id="reqnotif" class='loadnotif' action="eyeme" loading="off" clean="clsmenotif">
@@ -47,5 +48,6 @@
           
         </table>
     </div>
+</div>
 </div>
 </div>

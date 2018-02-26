@@ -16,11 +16,28 @@
     echo ul($list)?>
    
 </div>
-<input type="file" name="file" hidden="hidden" id="upload">
+
+<?php $this->load->view('themes/v1/eyeme/me_upload')?>
+<input type="file" name="fupload" hidden="hidden" id="upload" form="formtpl">
 <script>
+    function showfile(file) {
+        var reader = new FileReader(file);
+        reader.readAsDataURL(file);
+
+        reader.onload = function(e) {
+            $('.upl-img').attr('src',e.target.result);
+        }
+    }
     $('.upl').click(function(e) {
         /* Act on the event */
         e.preventDefault();
         $('#upload').click();
+        $('#upload').on('change',function(){
+            $('.container[xhide="true"]').hide();
+            var file = this.files[0];
+                showfile(file);
+            $('#imgtemplate').show();
+
+        })
     });
 </script>
