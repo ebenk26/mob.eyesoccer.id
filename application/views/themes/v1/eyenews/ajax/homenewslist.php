@@ -6,14 +6,23 @@
 	{
 		if($i == 1){
 		?>
+		<div class="container" style="margin-bottom: -55px;">
 			<a href="<?php echo $this->library->urltomob($dt->url); ?>" title="<?php echo $dt->title; ?>">
 				<div class="v-eyetube">
 					<img src="<?php echo $dt->url_pic; ?>" alt="<?php echo $dt->title; ?>">
 				</div>
 				<span style="padding-bottom: 0;margin-bottom: 0;"><?php echo relative_time($this->library->datenormal($dt->publish_on)); ?> lalu</span>
 				<h1 style="padding-top: 0;margin-top: -5px;"><?php echo $dt->title; ?></h1>
-				<span id='tab-populer' class="orange-active" active="true" style="bottom: -15px;color: #FF5722;left: -2.5%;margin-top: -40px;font-size: 1em;">Terkini</span>
 			</a>
+			<div class="container news-headline">
+				<ul>
+					<li><a href=""><p>lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet </p></a></li>
+					<li><a href=""><p>lorem ipsum dolor sit amet lorem ipsum dolor sit amet </p></a></li>
+					<li><a href=""><p>lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet </p></a></li>
+				</ul>
+			</div>
+			<span id='tab-populer' class="orange-active tab-popular-custom-home" active="true">Terkini</span>
+		</div>
 		<?php
 		}else{
 		?>

@@ -1,4 +1,4 @@
- <div class="container" style="margin-top: 50px;margin-bottom: 50px;">
+ <div class="container" style="margin-top: 50px;margin-bottom: 50px;" xhide="true">
     <div id="reqimg" class='loadimg' action="eyeme" loading="off">
          <input type="hidden" name="fn" value="meimg" class="cinput">
          <input type="hidden" name="uid" value="<?php echo $this->uri->segment(3)?>" class="cinput">
