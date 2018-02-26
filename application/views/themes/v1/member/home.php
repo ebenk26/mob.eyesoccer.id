@@ -172,15 +172,15 @@
     <div class="container">
         <!-- <h2>informasi akun</h2> -->
         <div class="informasi">
-            <form action="">
+            <form method="POST" action="member/profile_submit_data" class="form_basic">
                 <span>Nama Depan</span>
-                <input type="text" name="" id="" value="<?php echo $this->session->member['username']?>">
+                <input type="text" name="name" id="" value="<?php echo $this->session->member['name']?>">
                 <span>Nama Belakang</span>
-                <input type="text" name="" id="">
+                <input type="text" name="fullname" id="" value="<?php echo $detail->fullname?>">
                 <span>Alamat</span>
-                <textarea name="" id="" cols="30" rows="10"></textarea>
+                <textarea name="address" id="" cols="30" rows="10"><?php echo $detail->address?></textarea>
                 <span>Tentang Saya</span>
-                <textarea name="" id="" cols="30" rows="10"></textarea>
+                <textarea name="about" id="" cols="30" rows="10"><?php echo $detail->about?></textarea>
                 <button type="submit">Ubah Profile</button>
             </form>
         </div>
@@ -203,11 +203,11 @@
         <div class="bottom-content">
             <label class="btn-blue">
                 Tambah Foto
-                <input id="file_pic" name="pic" type="file" style="display: none;">
+                <input id="file_pic" name="pic" type="file" style="display: none;" accept="image/*">
             </label>
             <label class="btn-blue">
                 Tambah video
-                <input id="file_pic" name="pic" type="file" style="display: none;">
+                <input id="file_pic" name="pic" type="file" style="display: none;" accept="video/mp4">
             </label>
         </div>
 		

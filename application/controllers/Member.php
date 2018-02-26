@@ -9,6 +9,7 @@ class Member extends CI_Controller {
     {
 	parent::__construct();
 	$this->load->model('ajax/MemberMod');
+	$this->load->model('ajax/HomeMod');
 	#$this->session->username= 'sofyanwaldy';
     }
 
@@ -30,6 +31,10 @@ class Member extends CI_Controller {
 	} else {
 
 		$content = ($this->session->member ? 'member/home': 'member/login');
+		if($this->session->member){
+			$data['id']  	= $this->HomeMod->get_id('id_member', 'tbl_member', $this->session->member['id']);
+			$data['detail'] = $this->MemberMod->member_detail($data['id']);
+		}
 	    $data['content']   = $content;
 	    $data['title']     = $this->config->item('meta_title');
 
@@ -59,6 +64,11 @@ class Member extends CI_Controller {
 	public function profile_upload()
     {
 		$this->MemberMod->profile_upload($_FILES, $_POST);
+    }
+	
+	public function profile_submit_data()
+    {
+		$this->MemberMod->submit_data_member($_POST);
     }
 
 }

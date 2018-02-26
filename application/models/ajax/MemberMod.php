@@ -148,4 +148,54 @@ class MemberMod extends CI_Model {
         }
 	}
 
+	function member_detail($id){
+		$query = $this->db->query(" SELECT
+                                        *
+                                    FROM
+                                        tbl_member
+                                    WHERE
+                                        id_member = '$id'
+                                        ")->row();
+        return $query;
+    }
+	
+	function submit_data_member($post){
+		$id  	= $this->HomeMod->get_id('id_member', 'tbl_member', $this->session->member['id']);
+		$col = ""; $i = 0;
+		foreach($post as $field => $value)
+		{
+			$x = 0;
+			switch ($field){
+				case 'val':
+				case 'undefined':
+				$x = 1;
+				break;
+			}
+			
+			if($x == 0)
+			{
+				if ($i > 0) {
+					$col .=",$field='$value'";
+				}else{
+					//last item
+					$col .="$field='$value'";
+				}
+				
+				$i++;
+			}
+		}
+		$this->db->query(" UPDATE
+								tbl_member
+							SET
+								$col
+							WHERE
+								id_member = '$id'
+						");
+        if($this->db->affected_rows() > 0){
+			$arr = array('xCss'=> 'boxsuccess','xMsg'=> 'Submit Data Berhasil.','xAlert'=> true);
+		}else{
+			$arr = array('xCss'=> 'boxfailed','xMsg'=> 'Submit Data Gagal.','xAlert'=> true);
+		}
+		$this->tools->__flashMessage($arr);
+    }
 }
