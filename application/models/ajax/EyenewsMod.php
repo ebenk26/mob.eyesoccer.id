@@ -80,7 +80,11 @@ class EyenewsMod extends CI_Model {
     
     function __categorylist()
     {
-	$query = array('page' => 1, 'limit' => 12, 'category' => $this->input->post('slug'));
+	if($this->input->post('subslug')){
+		$query = array('page' => 1, 'limit' => 12, 'categorysub' => $this->input->post('subslug'));
+	}else{
+		$query = array('page' => 1, 'limit' => 12, 'category' => $this->input->post('slug'));
+	}
 	$data['catlist'] = $this->excurl->remoteCall($this->__xurl().'news', $this->__xkey(), $query);
 	
 	$html = $this->load->view($this->__theme().'eyenews/ajax/categorylist', $data, true);
@@ -113,6 +117,18 @@ class EyenewsMod extends CI_Model {
 		$html = $this->load->view($this->__theme().'eyenews/ajax/homenewslist', $data, true);
 		
 		$data = array('xClass' => 'reqhomenewslist', 'xHtml' => $html);
+		$this->tools->__flashMessage($data);
+    }
+	
+	function __subcategorylist()
+    {
+		$query = array('category' => $this->input->post('slug'));
+		$data['subcatlist'] = $this->excurl->remoteCall($this->__xurl().'news-category-sub', $this->__xkey(), $query);
+		$data['slug'] = $this->input->post('slug');
+		
+		$html = $this->load->view($this->__theme().'eyenews/ajax/subcategorylist', $data, true);
+		
+		$data = array('xClass' => 'reqsubcatlist', 'xHtml' => $html);
 		$this->tools->__flashMessage($data);
     }
 }

@@ -671,26 +671,42 @@ function urltoimgstore($url){
 
 function set_breadcrumb($kanal,$page)
 {
-    if ($page != "")
-    {
-        $html   = " <div class='crumb'>
-                        <ul>
-                        <li><a href='".base_url()."' style='display: unset'>Home</a></li>
-                        <li><a href='".base_url()."".$kanal."' style='display: unset'>".$kanal."</a></li>
-                        <li style='cursor:default;'>".$page."</li>
-                        </ul>
-                    </div>";
+	if (is_array($page)) {
+        $html = " <div class='crumb'>
+					<ul>
+					<li><a href='" . base_url() . "' style='display: unset'>Home</a></li>
+					<li><a href='" . base_url() . "" . $kanal . "' style='display: unset'>" . $kanal . "</a></li>";
+        $numItems = count($page);
+        $i = 0;
+        foreach ($page as $value) {
+            if (++$i === $numItems) {
+                $html .= "<li style='cursor:default;'>" . $value . "</li>";
+            } else {
+                $html .= "<li><a href='" . base_url() . "" . $kanal . "/kategori/" . $value . "' style='display: unset'>" . $value . "</a></li>";
+            }
+        }
+        $html .= "</ul></div>";
+    } else {
+		if ($page != "")
+		{
+			$html   = " <div class='crumb'>
+							<ul>
+							<li><a href='".base_url()."' style='display: unset'>Home</a></li>
+							<li><a href='".base_url()."".$kanal."' style='display: unset'>".$kanal."</a></li>
+							<li style='cursor:default;'>".$page."</li>
+							</ul>
+						</div>";
+		}
+		else
+		{
+			$html   = " <div class='crumb'>
+							<ul>
+							<li><a href='".base_url()."' style='display: unset'>Home</a></li>
+							<li><a href='".base_url()."".$kanal."' style='display: unset'>".$kanal."</a></li>
+							</ul>
+						</div>";
+		}
     }
-    else
-    {
-        $html   = " <div class='crumb'>
-                        <ul>
-                        <li><a href='".base_url()."' style='display: unset'>Home</a></li>
-                        <li><a href='".base_url()."".$kanal."' style='display: unset'>".$kanal."</a></li>
-                        </ul>
-                    </div>";
-    }
-    
     
     return $html;
 }
