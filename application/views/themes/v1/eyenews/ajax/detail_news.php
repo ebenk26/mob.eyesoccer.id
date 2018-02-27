@@ -20,7 +20,7 @@ if ($newsdetail){
 			</div>
 			<div class="container tx-c share">
 				<div class="sharethis-inline-share-buttons" data-url="<?php echo $dt->data->url;?>"></div>
-				<script type="text/javascript" src="//platform-api.sharethis.com/js/sharethis.js#property=5a81408ae45fbb001342fedf&product=inline-share-buttons"></script>
+				<script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5a952e008ccc5a00135bcc0e&product=inline-share-buttons' async='async'></script>
 			</div>
 		</div>
 		<div class="container-94">
