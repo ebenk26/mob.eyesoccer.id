@@ -142,7 +142,24 @@ class Eyemarket extends CI_Controller
         $data['meta_desc'] = $this->config->item('meta_desc');
         $data['meta_keyword'] = $this->config->item('meta_keyword');
 
-        $data['content'] = $this->load->view($this->__theme() . '/eyemarket/pesanan',$data,TRUE);
+        $data['content'] = $this->load->view($this->__theme() . '/eyemarket/orders',$data,TRUE);
+        $this->load->view($this->__theme() . 'eyemarket/template_user', $data);
+    }
+
+    function konfirmasi($no_order)
+    {
+        $data['no_order'] = $no_order;
+        
+        $data['kanal'] = 'eyemarket_user';
+        $data['id_member'] = $this->id_member;
+        $data['nama_lengkap'] = $this->name;
+        $data["active"]     = "pesanan";
+
+        $data['title'] = $this->config->item('meta_title');
+        $data['meta_desc'] = $this->config->item('meta_desc');
+        $data['meta_keyword'] = $this->config->item('meta_keyword');
+
+        $data['content'] = $this->load->view($this->__theme() . '/eyemarket/confirm',$data,TRUE);
         $this->load->view($this->__theme() . 'eyemarket/template_user', $data);
     }
 

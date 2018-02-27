@@ -502,6 +502,28 @@ class EyemarketMod extends MarketQueryMod {
         $this->tools->__flashMessage($data);
     }
 
+    function __view_confirm()
+    {
+        $no_order = $this->input->post('no_order');
+        $data["id_member"]  = $this->id_member;
+        $data["profile"]    = $this->get_member($data["id_member"]);
+
+        foreach ($data["profile"] as $value)
+        {
+            $data['username']       = $value['name'];
+            $data['nama_lengkap']   = $value['fullname'];
+            $data['email']          = $value['email'];
+            $data['hp']             = $value['phone'];
+            $data['alamat']         = $value['address'];
+        }
+
+        $data["model"]      = $this->get_invoice($no_order);
+
+        $html = $this->load->view($this->__theme().'eyemarket/ajax/view_confirm',$data,true);
+        $data = array('xClass'=> 'reqconfirm','xHtml' => $html);
+        $this->tools->__flashMessage($data);
+    }
+
 }
 
 
