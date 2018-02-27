@@ -3164,6 +3164,7 @@ tbody table{
     box-shadow: 0px 1px 9px -1px #0000004d;
     margin: 0 auto;
     text-transform: uppercase;
+    border: none;
 }
 .lc{
     display: block;
