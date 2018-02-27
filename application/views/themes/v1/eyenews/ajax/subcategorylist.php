@@ -7,7 +7,7 @@
 	foreach($subcatlist->data as $dt)
 	{
 	    ?>
-			<span><a href="<?php echo base_url().'eyenews/kategori/'.$slug.'/'.$dt->sub_category_name?>" style="display: unset"><?php echo $dt->sub_category_name; ?></a></span>
+			<span style="background-color: steelblue;border-radius: 5px;color: white;"><a href="<?php echo base_url().'eyenews/kategori/'.$slug.'/'.$dt->sub_category_name?>" style="display: unset"><?php echo $dt->sub_category_name; ?></a></span>
 		
 	    <?php
 	}

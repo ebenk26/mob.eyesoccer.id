@@ -183,4 +183,18 @@ class Home extends CI_Controller {
 
         }
     }
+	
+	public function search()
+    {
+		$data['content']   = 'home/search';
+	    $data['title']     = $this->config->item('meta_title');
+
+		$data['kanal'] = 'home';
+
+	    $data['meta_desc'] = $this->config->item('meta_desc');
+	    $data['meta_keyword'] = $this->config->item('meta_keyword');
+	    
+	    $this->load->view($this->__theme().'template', $data);
+		// $this->HomeMod->submit_search($this->input->post('search'));
+    }
 }

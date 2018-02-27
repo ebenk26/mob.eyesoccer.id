@@ -1,7 +1,7 @@
 <!-- SEARCHBOX -->
 <div id="srcbox" class="searchbox">
-    <input type="text" placeholder="cari apa hari ini?"><button id="srcSub" type="submit">Cari</button>
-    <div class="close"></div>
+	<input class="input_search" type="search" name="search" placeholder="cari apa hari ini?"><button id="srcSub" type="button"><a onclick="Search()">Cari</a></button>
+	<div class="close"></div>
 </div>
 
 <!-- MENU -->
@@ -72,3 +72,17 @@
 	}
     ?>
 </div>
+<script>
+	function Search(){
+		location.href = '<?php echo base_url()?>home/search?q='+$('.input_search').val()+'';
+	}
+	$('.input_search').bind("enterKey",function(e){
+	   Search();
+	});
+	$('.input_search').keyup(function(e){
+		if(e.keyCode == 13)
+		{
+			$(this).trigger("enterKey");
+		}
+	});
+</script>
