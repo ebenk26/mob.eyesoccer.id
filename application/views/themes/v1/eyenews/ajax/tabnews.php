@@ -1,11 +1,11 @@
 <div id='boxtab'>
-    <span id='tab-populer' onclick="tabmenu(this.id, 'span', 'div', 'orange-active')" class="orange-active" active="true">terpopuler</span>
-    <span id='tab-rekomendasi' onclick="tabmenu(this.id, 'span', 'div', 'orange-active')">rekomendasi</span>
+    <span id='tab-rekomendasi' onclick="tabmenu(this.id, 'span', 'div', 'orange-active')" class="orange-active" active="true">rekomendasi</span>
+    <span id='tab-populer' onclick="tabmenu(this.id, 'span', 'div', 'orange-active')">terpopuler</span>
     <span id='tab-usiamuda' onclick="tabmenu(this.id, 'span', 'div', 'orange-active')">usia muda</span>
 </div>
 <hr>
 <div role="listbox" class="carousel-inner">
-    <div id='tab-populer' class="box item active">
+    <div id='tab-populer' class="box item">
         <div class="container rek-ber">
             <?php
                 if ($popular) {
@@ -28,7 +28,7 @@
             ?>
         </div>
     </div>
-    <div id='tab-rekomendasi' class="box item">
+    <div id='tab-rekomendasi' class="box item active">
         <div class="container rek-ber">
             <?php
                 if ($recommended) {
