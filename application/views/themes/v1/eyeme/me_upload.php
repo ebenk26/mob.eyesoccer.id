@@ -1,5 +1,5 @@
 <!--UPLOAD PAGE--> 
-<form <?php echo ($this->uri->segment(2) === null ? 'action="eyeme"' : 'action="../eyeme"' )?>  enctype="multipart/form-data"  id="formtpl" method="post" class="form_multi ">
+<form <?php echo ($this->uri->segment(2) === null ? 'action="eyeme"' : ($this->uri->segment(3) === null ? 'action="../eyeme"' : 'action="../../eyeme"') )?>  enctype="multipart/form-data"  id="formtpl" method="post" class="form_multi ">
 <div id="imgtemplate" style="display:none;margin-top:200px;background:#ccc;position:fixed">
 	<input type="hidden" name="fn" value="upload" class="cinput">
 	<input type="file" name="fupload" hidden="hidden" id="upload" form="formtpl" class="cinput">
