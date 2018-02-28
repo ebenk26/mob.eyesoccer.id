@@ -17,7 +17,7 @@ $imglist = json_decode($imglist);
 ?>	
     <div class="container eme-post-section" xhide="true">
         <div class="container emepost">
-            <a href="<?php echo $v->url?>">
+            <a href="<?php echo urltomob($v->url); ?>">
             <div class="img-usr">
                 <img src="<?php echo $v->url_pic.'/thumb'; ?>" alt="<?php echo $v->username?>">
             </div>
