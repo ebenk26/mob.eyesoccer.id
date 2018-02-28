@@ -1,9 +1,18 @@
+<style>
+    .show {
+        display: unset;
+    }
+</style>
 <div class="container" style="margin-top: 50px;">
     <div id="popupKalender" class="modal fade" role="dialog">
-        <div class="m-event-kalender">
-            <div id="z"></div>
-            <button class="btn-white-g" type="button" style="margin-left: 8.75%;" data-dismiss="modal">Lihat</button>
-            <button class="btn-white-g btn-white-g-block" type="button" data-dismiss="modal">tutup</button>
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="m-event-kalender">
+                    <div id="z"></div>
+                    <button class="btn-white-g" type="button" style="margin-left: 8.75%;" data-dismiss="modal">Lihat</button>
+                    <button class="btn-white-g btn-white-g-block" type="button" data-dismiss="modal">tutup</button>
+                </div>
+            </div>
         </div>
     </div>
     <div class="container">
@@ -184,3 +193,14 @@
         </div>
     </div>
 </div>
+<script>
+    $('#z').datepicker({
+        inline: true,
+        altField: '#d'
+    });
+
+    $('#d').change(function(){
+        $('#z').datepicker('setDate', $(this).val());
+    });
+    $("#popupKalender").modal()
+</script>

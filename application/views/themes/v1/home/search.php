@@ -1,0 +1,32 @@
+<div class="container-full">
+	<div class="box-90">
+		<center>Hasil Pencarian "<?php echo $_GET['q'];?>"</center>
+		<div id="reqsearch" class='loadsearch' action="home" loading="off" clean="clssearch">
+			<div id='clsdetailclub'>
+				<script>
+					$(document).ready(function(){
+						$(window).on('load',function(){
+							ajaxOnLoad('loadsearch');
+						});
+					});
+				</script>
+			</div>
+			<input type='hidden' name='fn' value='search' class='cinput'>
+			<input type='hidden' name='query' value='<?php echo $_GET['q'];?>' class='cinput'>
+			Eyenews
+			<div class="etube-content pd-t-10">
+				<a href="http://localhost/mob.eyesoccer.id/eyetube/detail/3-nama-yang-cocok-menggantikan-arsene-wenger-b57b86f" title="3 Nama yang Cocok Menggantikan Arsene Wenger">
+					<div class="v-etube">
+						<img src="http://static.eyesoccer.id/v1/cache/images/thumbnail.jpg/small" alt="3 Nama yang Cocok Menggantikan Arsene Wenger">
+						<div class="btn-play">
+							<img src="http://localhost/mob.eyesoccer.id/assets/themes/v1/img/btn-play.png" alt="">
+						</div>                    
+					</div>
+					<h1>Lorem Ipsum</h1>
+					<span>0 hari </span>
+					<span>0 view - 0 suka</span>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>

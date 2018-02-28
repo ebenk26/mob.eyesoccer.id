@@ -6,7 +6,7 @@
 ?>
 		<div class="head">
 			<div class="img-radius">
-				<img src="<?php echo $this->library->lastext($dt->url_pic,'.') ? $dt->url_logo : $default;?>/medium" alt="<?php echo $dt->name;?>">
+				<img src="<?php echo $this->library->lastext($dt->url_pic,'.') ? $dt->url_pic : $default;?>/medium" alt="<?php echo $dt->name;?>">
 			</div>
 			<h2 class="h2-text-bottom"><?php echo $dt->name;?></h2>
 			<p style="display:none;">
