@@ -105,16 +105,29 @@ class Excurl
         return $result;
     }
 
-    function remoteCall($url, $cred = '', $data = '')
+    function remoteCall($url, $cred = '', $data = '', $file = '')
     {
+        $contents = array('Content-Type: application/json', 'Accept: application/json');
+        if (is_array($file)) {
+            $files = [];
+            foreach ($file as $f) {
+                $files[] = array('name' => $f, 'filename' => $_FILES[$f]['name'], 'filetype' => $_FILES[$f]['type'],
+                    'content' => file_get_contents($_FILES[$f]['tmp_name']));
+            }
+
+            $url_data = http_build_query($data);
+
+            $boundary = uniqid();
+            $delimiter = '-------------' . $boundary;
+
+            $postdata = $this->buildDataFiles($boundary, $data, $files);
+            $contents = array('Content-Type: multipart/form-data; boundary=' . $delimiter, 'Content-Length: ' . strlen($postdata));
+        }
+
         $ch = curl_init();
         $curl_options = array(
             CURLOPT_URL => $url,
-            CURLOPT_HTTPHEADER => array(
-                'Content-Type: application/json',
-                'Accept: application/json',
-                'Authorization: Basic ' . base64_encode($cred)
-            ),
+            CURLOPT_HTTPHEADER => array_merge($contents, array('Authorization: Basic ' . base64_encode($cred))),
             CURLOPT_SSL_VERIFYPEER => false,
             CURLOPT_RETURNTRANSFER => true
         );
@@ -135,7 +148,16 @@ class Excurl
 
         if (is_array($data)) {
             $curl_options[CURLOPT_POST] = 1;
-            $curl_options[CURLOPT_POSTFIELDS] = ($data) ? json_encode($data) : '';
+            if (is_array($file)) {
+                $curl_options[CURLOPT_POSTFIELDS] = $postdata;
+            } else {
+                $curl_options[CURLOPT_POSTFIELDS] = ($data) ? json_encode($data) : '';
+            }
+        } else {
+            if (is_array($file)) {
+                $curl_options[CURLOPT_POST] = 1;
+                $curl_options[CURLOPT_POSTFIELDS] = $postdata;
+            }
         }
 
         curl_setopt_array($ch, $curl_options);
