@@ -126,7 +126,7 @@
         padding: 8px 0px;
     }
     </style>
-<div class="head-content full-width">
+<div class="head-content full-width mt60">
 	<form method="POST" action="<?=base_url()?>member/profile_upload/" enctype="multipart/form-data" class="container" style="width:unset;float:unset;">
         <div class="img-radius">
             <img src="<?php echo urltoimgstore($this->session->member['url_pic'])?>" alt="" srcset="" class="viewimg">
