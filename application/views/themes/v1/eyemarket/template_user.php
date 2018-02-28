@@ -8,8 +8,8 @@
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
       <title>EyeMarket - EyeSoccer</title>
       <link href="<?php echo SUBCDN."assets/css/font-awesome/css/fontawesome-all.css" ?>" rel="stylesheet" type="text/css">
-      <link rel="stylesheet" href="<?=base_url()?>assets/eyemarket/user/node_modules/perfect-scrollbar/dist/css/perfect-scrollbar.min.css" />
-      <link rel="stylesheet" href="<?=base_url()?>assets/eyemarket/user/style.css"/>
+      <link rel="stylesheet" href="<?=base_url()?>assets/js/eyemarket/user/node_modules/perfect-scrollbar/dist/css/perfect-scrollbar.min.css" />
+      <link rel="stylesheet" href="<?=base_url()?>assets/js/eyemarket/user/style.css"/>
       <link rel="shortcut icon" href="<?=base_url()?>img/tab_icon.png"/>
       <script src='<?php echo SUBCDN.'assets/js/jquery-2.0.2.min.js'; ?>'></script>
       <script src='<?php echo SUBCDN."assets/$folder/js/main.js"; ?>'></script>
@@ -28,8 +28,8 @@
         <!--Navbar-->
         <nav class="navbar bg-primary-gradient col-lg-12 col-12 p-0 fixed-top navbar-inverse d-flex flex-row" style="height: 50px;">
             <div class="bg-white text-center navbar-brand-wrapper">
-                <a class="navbar-brand brand-logo" href="<?= base_url(); ?>member"><img src="<?=base_url()?>assets/eyemarket/eyemarket_icon.png" style="width: 40px;" /></a>
-                <a class="navbar-brand brand-logo-mini" href="<?= base_url(); ?>member"><img src="<?=base_url()?>assets/eyemarket/eyemarket_icon.png"  alt=""></a>
+                <a class="navbar-brand brand-logo" href="<?= base_url(); ?>member"><img src="<?=base_url()?>assets/js/eyemarket/eyemarket_icon.png" style="width: 40px;" /></a>
+                <a class="navbar-brand brand-logo-mini" href="<?= base_url(); ?>member"><img src="<?=base_url()?>assets/js/eyemarket/eyemarket_icon.png"  alt=""></a>
             </div>
             <div class="navbar-menu-wrapper d-flex align-items-center" style="padding-bottom: 6px;padding-top: 10px;">
                 <button class="navbar-toggler navbar-toggler hidden-md-down align-self-center mr-3" type="button" data-toggle="minimize">
@@ -146,19 +146,19 @@
                         <li class="nav-item" id="profile">
                             <a class="nav-link" href="<?= base_url() ?>eyemarket/user/<?= $id_member; ?>">
                                 <!-- <i class="fa fa-dashboard"></i> -->
-                                <img src="<?=base_url()?>assets/eyemarket/user/images/icons/1.png" alt="">
+                                <img src="<?=base_url()?>assets/js/eyemarket/user/images/icons/1.png" alt="">
                                 <span class="menu-title">Profile</span>
                             </a>
                         </li>
                         <li class="nav-item" id="keranjang">
                             <a class="nav-link" href="<?= base_url() ?>eyemarket/keranjang/<?= $id_member; ?>">
-                                <img src="<?=base_url()?>assets/eyemarket/user/images/icons/keranjang.png" alt="">
+                                <img src="<?=base_url()?>assets/js/eyemarket/user/images/icons/keranjang.png" alt="">
                                 <span class="menu-title">Keranjang</span>
                             </a>
                         </li>
                         <li class="nav-item" id="pesanan">
                             <a class="nav-link" href="<?= base_url() ?>eyemarket/pesanan/<?= $id_member; ?>">
-                                <img src="<?=base_url()?>assets/eyemarket/user/images/icons/pesanan.png" alt="">
+                                <img src="<?=base_url()?>assets/js/eyemarket/user/images/icons/pesanan.png" alt="">
                                 <span class="menu-title">Pesanan</span>
                             </a>
                         </li>
@@ -204,20 +204,22 @@
 
       </div>
 
-      <script src="<?=base_url()?>assets/eyemarket/user/node_modules/jquery/dist/jquery.min.js"></script>
-      <script src="<?=base_url()?>assets/eyemarket/user/node_modules/tether/dist/js/tether.min.js"></script>
-      <script src="<?=base_url()?>assets/eyemarket/user/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-      <script src="<?=base_url()?>assets/eyemarket/user/node_modules/chart.js/dist/Chart.min.js"></script>
-      <script src="<?=base_url()?>assets/eyemarket/user/node_modules/perfect-scrollbar/dist/js/perfect-scrollbar.jquery.min.js"></script>
+      <script src="<?=base_url()?>assets/js/eyemarket/user/node_modules/jquery/dist/jquery.min.js"></script>
+      <script src="<?=base_url()?>assets/js/eyemarket/user/node_modules/tether/dist/js/tether.min.js"></script>
+      <script src="<?=base_url()?>assets/js/eyemarket/user/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+      <script src="<?=base_url()?>assets/js/eyemarket/user/node_modules/chart.js/dist/Chart.min.js"></script>
+      <script src="<?=base_url()?>assets/js/eyemarket/user/node_modules/perfect-scrollbar/dist/js/perfect-scrollbar.jquery.min.js"></script>
       <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5NXz9eVnyJOA81wimI8WYE08kW_JMe8g&callback=initMap" async defer></script> -->
-      <script src="<?=base_url()?>assets/eyemarket/user/js/off-canvas.js"></script>
-      <script src="<?=base_url()?>assets/eyemarket/user/js/hoverable-collapse.js"></script>
-      <script src="<?=base_url()?>assets/eyemarket/user/js/misc.js"></script>
-      <script src="<?=base_url()?>assets/eyemarket/user/js/jquery.chained.js"></script>
-      <script src="<?=base_url()?>assets/eyemarket/user/js/jquery.chained.remote.js"></script>
+      <script src="<?=base_url()?>assets/js/eyemarket/user/js/off-canvas.js"></script>
+      <script src="<?=base_url()?>assets/js/eyemarket/user/js/hoverable-collapse.js"></script>
+      <script src="<?=base_url()?>assets/js/eyemarket/user/js/misc.js"></script>
+      <script src="<?=base_url()?>assets/js/eyemarket/user/js/jquery.chained.js"></script>
+      <script src="<?=base_url()?>assets/js/eyemarket/user/js/jquery.chained.remote.js"></script>
       <!-- <script src="<?=base_url()?>assets/eyemarket/user/js/chart.js"></script> -->
       <!-- <script src="<?=base_url()?>assets/eyemarket/user/js/maps.js"></script> -->
-
+    <!-- SWAlert -->
+    <link href="<?php echo SUBCDN."assets/js/swalert/sweetalert.css" ?>" rel="stylesheet" />
+    <script src="<?php echo SUBCDN."assets/js/swalert/sweetalert.min.js"; ?>"></script>
       
 
     <script type="text/javascript">

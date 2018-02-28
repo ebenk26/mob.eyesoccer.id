@@ -458,7 +458,7 @@ class EyemarketMod extends MarketQueryMod {
         $this->excurl->remoteCall($this->__xurl().'mailer', $this->__xkey(), $query);
         // $send_mail  = send_mail($to,$subject,$msg);
 
-        $data = array('xAlert' => true,'xCss' => 'boxsuccess','xMsg' => '<strong>Order anda berhasil</strong><br />Silahkan cek email anda untuk langkah selanjutnya','xDirect'=> base_url().'eyemarket');
+        $data = array('xAlert' => true,'xCss' => 'boxsuccess','xMsg' => '<strong>Order anda berhasil</strong><br />Silahkan cek email anda untuk langkah selanjutnya','xDirect'=> base_url().'eyemarket/pesanan/'.$data['id_member']);
         $this->tools->__flashMessage($data);
     }
 
@@ -522,6 +522,69 @@ class EyemarketMod extends MarketQueryMod {
         $html = $this->load->view($this->__theme().'eyemarket/ajax/view_confirm',$data,true);
         $data = array('xClass'=> 'reqconfirm','xHtml' => $html);
         $this->tools->__flashMessage($data);
+    }
+
+    function __set_confirm()
+    { 
+        $id_member = $this->id_member;
+        $no_order = $this->input->post('no_order');
+        $id_order = $this->input->post('id_order');
+        $nominal = $this->input->post('nominal');
+        $file_name = $_FILES['bukti']['name'];
+  
+        $this->load->library('upload');
+        
+        //===== atur upload bukti
+        $config['upload_path'] = pathUrl()."img/eyemarket/bukti/";
+        $config['allowed_types'] = '*';
+        $config['max_size']  = '10000';
+        $config['max_width']  = '0';
+        $config['max_height']  = '0';
+
+        $this->upload->initialize($config);
+
+
+        if (!$this->upload->do_upload('bukti'))
+        {
+            $error = $this->upload->display_errors();
+            // var_dump($error);exit();
+            redirect($_SERVER['HTTP_REFERER']);
+        }
+        else
+        {
+            //===== insert ke table eyemarket_konfirmasi
+            $objek = array(
+                            'id_order'      => $id_order,
+                            'nominal'       => $nominal,
+                            'bukti'         => $file_name,
+                            'created_date'  => date("Y-m-d H:i:s"),
+                        );
+
+            $insert =   $this->set_konfirmasi($objek);
+
+            $objek2 = array(
+                            'status' => 2,
+            );
+
+            $this->db->update('eyemarket_order', $objek2, array('id' => $id_order));
+
+            $data['no_order'] = $no_order;
+            $data['nominal'] = $nominal;
+            $data['file_name'] = $file_name;
+            $data['name'] = $this->name;
+
+            $message = $this->load->view($this->__theme().'eyemarket/mail_bukti',$data,TRUE);
+            $to = "info@eyesoccer.id";
+            $subject = 'Ada konfirmasi pembayaran untuk nomor order '.$no_order;
+
+            $query = array('to'=> $to, 'subject'=> $subject, 'message'=> $message);
+            $this->excurl->remoteCall($this->__xurl().'mailer', $this->__xkey(), $query);
+
+            $data = array('xAlert' => true,'xCss' => 'boxsuccess','xMsg' => 'Konfirmasi Pembayaran berhasil diunggah, <br> Mohon tunggu konfirmasi admin EyeMarket','xDirect'=> base_url().'eyemarket/pesanan/'.$id_member);
+            $this->tools->__flashMessage($data);
+        }
+
+        
     }
 
 }

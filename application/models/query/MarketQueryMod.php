@@ -475,4 +475,11 @@ class MarketQueryMod extends CI_Model {
                                         ")->result_array();
         return $query;
     }
+
+    function set_konfirmasi($objek)
+    {
+        $this->db->insert('eyemarket_konfirmasi', $objek);
+        
+        return $this->db->insert_id();
+    }
 }
