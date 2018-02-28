@@ -20,7 +20,7 @@ echo set_breadcrumb("eyenews",$page);
 	</div>
 </div>
 <!-- EYENEWS -->
-<div class="etube-home enews">
+<div class="etube-home enews" style="padding: unset;">
     <div id="reqcatlist" class='loadcatlist' action="eyenews" loading="off" clean="clscatlist">
         <div id='clscatlist'>
             <script>

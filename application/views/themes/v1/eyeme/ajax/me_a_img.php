@@ -9,7 +9,6 @@ $hasLike = 0 ;
                 break;
             }
         }
-
     }
 ?>
     <div class="container">
