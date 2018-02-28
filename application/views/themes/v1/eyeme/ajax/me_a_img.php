@@ -13,10 +13,12 @@ $hasLike = 0 ;
 ?>
     <div class="container">
         <div class="container emepost">
-            <div class="img-usr">
-                <img src="<?php echo $v->url_pic?>" alt="<?php echo $v->username?>">
-            </div>
-            <span><?php echo $v->username?></span>
+            <a href="<?php echo $this->library->urltomob($v->url); ?>">
+                <div class="img-usr">
+                    <img src="<?php echo $v->url_pic.'/thumb'; ?>" alt="<?php echo $v->username?>">
+                </div>
+                <span><?php echo $v->username?></span>
+            </a>
             <i class="material-icons more display-box-notif">more_horiz</i>
         </div>
         <div class="eme-img-content">
