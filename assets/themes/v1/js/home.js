@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $("#evSlide").carousel();
+    // $("#evSlide").carousel();
     $(".left").click(function(){
         $("#evSlide").carousel("prev");
     });

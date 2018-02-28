@@ -1,6 +1,6 @@
  <div class="container-full">
     <div class="forgot-form login-form">
-        <h4 style="margin-top:0px">selamat datang eyesoccer.id</h4>
+        <h4 style="margin-top:0px">Selamat datang di eyesoccer.id</h4>
         <span>semua berita tentang tim favoritmu ada disini</span>
         <div class="btn-option-log">
             <a href="#" id="logBtn" class="active">masuk</a>
@@ -26,14 +26,14 @@
                     <div class="container">
                         <a href="" class="btn-log-fb">
                             <div class="log-fb">
-                                <!--<img src="../assets/img/fb_logo.png" alt="" srcset="">-->
+                                <img src="assets/img/logo_fb.svg" alt="" srcset="">
                                 <span>Facebook</span>
                             </div>
                         </a>
                         <a href="" class="btn-log-g">
                             <div class="log-g">
-                                <!--<img src="../assets/img/google_g_logo.svg" alt="" srcset="">-->
-                                <span>Facebook</span>
+                                <img src="assets/img/logo_g.svg" alt="" srcset="">
+                                <span>Google</span>
                             </div>
                         </a>
                     </div>

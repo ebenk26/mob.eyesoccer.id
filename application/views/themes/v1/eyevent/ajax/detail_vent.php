@@ -9,7 +9,7 @@
             <div class="container profile-writer b-b-1">
                 <div class="container">
                     <div class="img-radius" style="background-color: #f2f2f2;">
-                        <img src="http://beta.eyesoccer.id/assets/img/EYEME/user-discover.png" alt="<?= $detail->fullname; ?>" style="margin-top: -4px;margin-left: -17px;">
+                        <img src="<?php echo imgEyesoccer()?>" alt="<?= $detail->fullname; ?>" style="margin-top: -4px;margin-left: -17px;">
                     </div>
                     <h3><?= $detail->fullname; ?></h3>
                     <span> 

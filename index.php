@@ -310,8 +310,8 @@ switch (ENVIRONMENT)
  * CDN STATIC URL
  *
  */
-define('SUBCDN', 'http://localhost/mobile/'); //'http://cdn.eyesoccer.id/';
-define('SUBSTATIC', 'http://localhost/mobile/'); //'http://static.eyesoccer.id/';
+define('SUBCDN', 'http://localhost/m.eyesoccer.id/'); //'http://cdn.eyesoccer.id/';
+define('SUBSTATIC', 'http://localhost/m.eyesoccer.id/'); //'http://static.eyesoccer.id/';
 
 /*
  * --------------------------------------------------------------------
