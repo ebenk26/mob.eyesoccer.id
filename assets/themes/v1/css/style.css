@@ -829,16 +829,15 @@ nav>.f-r:hover{
     font-weight: 500;
 }
 .eme-box{
-    /* width: 117px;
-    height: 117px; */
-    width: 31.4vw;
-    height: 31.4vw;
+    width: 32.06vw;
+    height: 32.06vw;
     float: left;
     overflow: hidden;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: .3vw;
 }
 .eme-box>img{
     /* height: 100%;
