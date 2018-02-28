@@ -38,9 +38,7 @@ class Eyeme extends CI_Controller {
 	    }
 	} else {
 	    $data = $this->getdata();
-       # p($this->session->member);
 	    $data['content'] = (isset($this->session->member) ? 'eyeme/me_home' : 'eyeme/me_explore');
-	  
 	    $this->load->view($this->__theme().'template', $data);
 
 	}
@@ -53,8 +51,6 @@ class Eyeme extends CI_Controller {
     }
     function profile(){
     	$data  = $this->getdata();
-        #if($uname)
-        #$data['uname']     = $uname;
     	$data['content']   = 'eyeme/me_profile';
     	$this->load->view($this->__theme().'template',$data);
     

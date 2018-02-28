@@ -13,7 +13,7 @@ $self = ($id == $res->id) ? TRUE : FALSE;
         <div class="eme-prof-user">
             <a href="<?php echo MEPROFILE.$res->username?>"><?php echo $res->username?></a>
             <div id="reqfol">
-                <?php echo btnFol($id,$res->hasfollow,'','follow-button',$self)?>
+                <?php echo btnFol($id,$res->hasfollow,array('onclick' => 'clickfol()'),'follow-button',$self)?>
             </div>
             <div id="btn-fol" action="eyeme" class="btn-fol">
                 <input type="hidden" name="fn" value="follow" class="cinput">
@@ -36,8 +36,11 @@ $self = ($id == $res->id) ? TRUE : FALSE;
         </table>
     </div>
 <script  type="text/javascript">
-    $('.follow-button').on('click',function(){
+    function clickfol(){
         ajaxOnLoad('btn-fol');
-    })
+    }
+    // $('.follow-button').on('click',function(){
+    //     ajaxOnLoad('btn-fol');
+    // })
 </script>
 
