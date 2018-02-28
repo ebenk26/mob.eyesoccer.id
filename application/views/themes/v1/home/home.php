@@ -455,7 +455,7 @@
 <!-- BANNER -->
 <div class="border-box">
     <div class="banner-150">
-        <img src="" alt="">
+        <img src="https://eyesoccer.id/assets/img/BANNER-MOBILE.jpg" alt="">
     </div>
 </div>
 <!-- KLASEMEN -->
