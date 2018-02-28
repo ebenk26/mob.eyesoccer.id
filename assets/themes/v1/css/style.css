@@ -631,10 +631,21 @@ nav>.f-r:hover{
     top: 3px;
 }
 .m-log, .m-reg{
-    width: 50%;
+    /* width: 50%; */
 }
 .m-log{
-    text-align: right;
+    /* text-align: right; */
+    float: right;
+    margin: -5px 0;
+}
+.m-reg {
+    margin: 10px 5px;
+    display: inline;
+}
+.m-top img {
+    float: left;
+    margin: 10px;
+    border-radius: 50%;
 }
 .m-top i{
     color: orange;
@@ -817,13 +828,16 @@ nav>.f-r:hover{
     color: #616161;
     font-weight: 500;
 }
-.eme-box{
-    width: 117px;
-    height: 117px;
+.loadme {
+    width: 99vw;
+}
+.eme-box {
+    width: 32vw;
+    height: 32vw;
+    margin: 1px;
     float: left;
-    border: 2px solid white;
     overflow: hidden;
-    /* position: relative; */
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -3196,4 +3210,7 @@ tbody table{
 }
 .subcategorylist a{
     display: inline-block;
+}
+.full-width.head-content {
+    margin-top: 60px !important;
 }
