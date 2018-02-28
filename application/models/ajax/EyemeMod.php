@@ -170,7 +170,7 @@ class EyemeMod extends CI_Model {
         $data = $res->data;
         #p($data);
         
-        $html = btnFol('',$data->hasfollow,'','follow-button',false);
+        $html = btnFol('',$data->hasfollow,array('onclick' => 'clickfol()'),'follow-button',false);
         $arr = array('xClass' => 'reqfol','xHtml'=> $html);
         $this->tools->__flashMessage($arr);
         
