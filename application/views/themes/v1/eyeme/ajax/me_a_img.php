@@ -13,10 +13,12 @@ $hasLike = 0 ;
 ?>
     <div class="container">
         <div class="container emepost">
-            <div class="img-usr">
-                <img src="<?php echo $v->url_pic?>" alt="<?php echo $v->username?>">
-            </div>
-            <span><?php echo $v->username?></span>
+            <a href="<?php echo $this->library->urltomob($v->url); ?>">
+                <div class="img-usr">
+                    <img src="<?php echo $v->url_pic.'/thumb'; ?>" alt="<?php echo $v->username?>">
+                </div>
+                <span><?php echo $v->username?></span>
+            </a>
             <i class="material-icons more display-box-notif">more_horiz</i>
         </div>
         <div class="eme-img-content">
@@ -66,7 +68,7 @@ $hasLike = 0 ;
 <span class="up-next-etube" style="padding-left: 10px !important;color: #212121 !important;">Komentar</span> <span id="close" class="up-next-etube" style="float:right; padding-right: 10px;"><i class="material-icons">close</i></span>
     <div class="box-komentar">
         <div class="img-radius">
-            <img src="<?php echo urltoimgstore($this->session->member['url_pic'])?>" alt="<?php echo $this->session->member['username']?>" width="100%">
+            <img src="<?php echo $this->session->member['url_pic'].'/thumb'; ?>" alt="<?php echo $this->session->member['username']?>" width="100%">
         </div>
         <div  id='reqcomment' style="display:none;">   
             <span name="uid" class="cinput" />
