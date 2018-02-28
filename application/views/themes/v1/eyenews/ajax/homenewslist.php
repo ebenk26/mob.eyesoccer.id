@@ -14,18 +14,21 @@
 				<span style="padding-bottom: 0;margin-bottom: 0;"><?php echo relative_time($this->library->datenormal($dt->publish_on)); ?> lalu</span>
 				<h1 style="padding-top: 0;margin-top: -5px;"><?php echo $dt->title; ?></h1>
 			</a>
+			
 			<div class="container news-headline">
 				<ul>
-					<li><a href=""><p>lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet </p></a></li>
-					<li><a href=""><p>lorem ipsum dolor sit amet lorem ipsum dolor sit amet </p></a></li>
-					<li><a href=""><p>lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet </p></a></li>
+		<?php
+		}else if($i == 2 || $i == 3 || $i == 4){
+		?>
+					<li><a href="<?php echo $this->library->urltomob($dt->url); ?>"><p><?php echo $dt->title; ?></p></a></li>
+		<?php
+		}else{
+		?>
+			
 				</ul>
 			</div>
 			<span id='tab-populer' class="orange-active tab-popular-custom-home" active="true">Terkini</span>
 		</div>
-		<?php
-		}else{
-		?>
 			<a href="<?php echo $this->library->urltomob($dt->url); ?>" title="<?php echo $dt->title; ?>">
 				<div class="rek-ber-c home-rek-ber-c">
 					<div class="img-res-height" style="margin-top: 0;">

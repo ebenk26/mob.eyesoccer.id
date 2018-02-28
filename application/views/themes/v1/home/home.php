@@ -184,7 +184,7 @@
 				</script>
 			</div>
 			<input type='hidden' name='fn' value='homenewslist' class='cinput'>
-			<input type='hidden' name='limit' value='4' class='cinput'>
+			<input type='hidden' name='limit' value='7' class='cinput'>
 			<input type='hidden' name='page' value='1' class='cinput'>
 			<input type='hidden' name='desc' value='true' class='cinput'>
 			<div class="v-eyetube">

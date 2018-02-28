@@ -1,8 +1,16 @@
 <!-- CONTENT BODY -->
-<?php
-    echo set_breadcrumb("eyeprofile",urldecode($slug));
-?>
-
+<?php 
+		$slugnya = urldecode($slug);
+	?>
+	<!-- CONTENT BODY -->
+    <div class="crumb">
+		<ul>
+			<li><a href="<?php echo base_url();?>" style="display:unset;">Home</a></li>
+			<li><a href="<?php echo base_url();?>eyeprofile/klub" style="display:unset;">Eyeprofile</a></li>
+			<li><a href="<?php echo base_url();?>eyeprofile/official/<?php echo $slug?>" style="display:unset;">Ofisial</a></li>
+			<li><?php echo urldecode($slug);?></li>
+		</ul>
+	</div>
 <div class="eprofile">
     <div class="head">
         <div class="img-radius" style="display:none;">
@@ -44,6 +52,15 @@
             </div>
         </div>
     </div>
+	<div class="container over-x">
+		<div class="container sub-menu w-max">
+			<a href="<?php echo base_url();?>eyeprofile/klub">klub</a>
+			<a href="<?php echo base_url();?>eyeprofile/pemain">pemain</a>
+			<a href="<?php echo base_url();?>eyeprofile/official/<?= $slug; ?>" class="active">ofisial</a>
+			<a href="">perangkat pertandingan</a>
+			<a href="">supporter</a>
+		</div>
+	</div>
     <div class="container" style="font-size: .8em;">
         <div id="reqcompetition" class='loadcompetition' action="eyeprofile" loading="off" clean="clscompetition">
             <div id='clscompetition'>
