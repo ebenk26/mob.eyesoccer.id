@@ -127,14 +127,15 @@
     }
     </style>
 <div class="head-content full-width">
-	<form method="POST" action="<?=base_url()?>member/profile_upload/" enctype="multipart/form-data" class="container" style="width:unset;float:unset;">
+	<form method="POST" enctype="multipart/form-data" class="container form_multi" style="width:unset;float:unset;">
         <div class="img-radius">
-            <img src="<?php echo urltoimgstore($this->session->member['url_pic'])?>" alt="" srcset="" class="viewimg">
+            <img src="<?php echo $this->session->member['url_pic'].'/small'?>" alt="" srcset="" class="viewimg">
         </div>
         <div class="full-width">
             <label class="btn-blue">
                 Ganti Foto
-                <input id="file_pic" name="pic" type="file" style="display: none;" accept="image/*">
+				<input type="hidden" name="fn" value="profile_upload">
+                <input id="file_pic" name="fupload" type="file" style="display: none;" accept="image/*">
             </label>
 			<button class="btn-blue" type="submit" class="btn-info btn" id="submit_pic" style="display:none;border: none;cursor: pointer;" >Simpan Foto</button>
             <a class="btn-blue" href="<?php echo base_url().'member/logout'?>" style="background-color: #EC407A;
@@ -172,15 +173,15 @@
     <div class="container">
         <!-- <h2>informasi akun</h2> -->
         <div class="informasi">
-            <form action="">
+            <form method="POST" action="member/profile_submit_data" class="form_basic">
                 <span>Nama Depan</span>
-                <input type="text" name="" id="" value="<?php echo $this->session->member['username']?>">
+                <input type="text" name="name" id="" value="<?php echo $this->session->member['name']?>">
                 <span>Nama Belakang</span>
-                <input type="text" name="" id="">
+                <input type="text" name="fullname" id="" value="<?php echo $detail->fullname?>">
                 <span>Alamat</span>
-                <textarea name="" id="" cols="30" rows="10"></textarea>
+                <textarea name="address" id="" cols="30" rows="10"><?php echo $detail->address?></textarea>
                 <span>Tentang Saya</span>
-                <textarea name="" id="" cols="30" rows="10"></textarea>
+                <textarea name="about" id="" cols="30" rows="10"><?php echo $detail->about?></textarea>
                 <button type="submit">Ubah Profile</button>
             </form>
         </div>
@@ -203,11 +204,11 @@
         <div class="bottom-content">
             <label class="btn-blue">
                 Tambah Foto
-                <input id="file_pic" name="pic" type="file" style="display: none;">
+                <input id="file_pic" name="pic" type="file" style="display: none;" accept="image/*">
             </label>
             <label class="btn-blue">
                 Tambah video
-                <input id="file_pic" name="pic" type="file" style="display: none;">
+                <input id="file_pic" name="pic" type="file" style="display: none;" accept="video/mp4">
             </label>
         </div>
 		

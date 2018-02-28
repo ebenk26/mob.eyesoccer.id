@@ -121,4 +121,18 @@ class HomeMod extends CI_Model
 		$query = $this->db->get_where($tbl, array($kanal.'_id' => $id))->row();
 	    return $query;
 	}
+	
+	function __search()
+    {
+        $query = array('search' => $this->input->post('query'));
+        $data['eyenews'] = $this->excurl->remoteCall($this->__xurl() . 'news', $this->__xkey(), $query);
+        $data['eyetube'] = $this->excurl->remoteCall($this->__xurl() . 'video', $this->__xkey(), $query);
+        $data['player'] = $this->excurl->remoteCall($this->__xurl() . 'profile', $this->__xkey(), $query);
+        $data['club'] = $this->excurl->remoteCall($this->__xurl() . 'profile-club', $this->__xkey(), $query);
+
+        $html = $this->load->view($this->__theme() . 'home/ajax/search', $data, true);
+
+        $data = array('xClass' => 'reqsearch', 'xHtml' => $html);
+        $this->tools->__flashMessage($data);
+    }
 }

@@ -10,7 +10,7 @@
                         <div class="form-group">
                             <label> Pilih Alamat </label>
                     <?php 
-                        if ($jumlah < 3)
+                        if ($jumlah < 4)
                         {
                     ?>
                             <a id="tambah-alamat" style="float: right; cursor: pointer;"> Tambah Alamat </a>
