@@ -828,21 +828,11 @@ nav>.f-r:hover{
     color: #616161;
     font-weight: 500;
 }
-<<<<<<< HEAD
-.loadme {
-    width: 99vw;
-}
-.eme-box {
-    width: 32vw;
-    height: 32vw;
-    margin: 1px;
-=======
 .eme-box{
     /* width: 117px;
     height: 117px; */
     width: 31.4vw;
     height: 31.4vw;
->>>>>>> 83e71874ddcdeeba04db3d6f41f489d9d4c0b571
     float: left;
     overflow: hidden;
     position: relative;
