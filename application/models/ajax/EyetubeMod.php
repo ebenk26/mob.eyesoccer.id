@@ -38,7 +38,7 @@ class EyetubeMod extends CI_Model {
     {
         $data['slug'] = $this->input->post("slug");
         
-    	$query = array('page' => 1, 'limit' => 6, 'related' => 'true');
+    	$query = array('page' => 1, 'limit' => 100, 'related' => 'true');
     	$data['tube'] = $this->excurl->remoteCall($this->__xurl().'video/'.$data['slug'], $this->__xkey(), $query);
     	
     	$html = $this->load->view($this->__theme().'eyetube/ajax/detail_tube', $data, true);

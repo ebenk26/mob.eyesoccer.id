@@ -2973,7 +2973,7 @@ ul, li {
     margin-bottom: 0px;
 }
 .news-headline{
-    background-color: #B71C1C;
+    background-color: #d50000cf;
     color: white;
     font-weight: 600;
     font-size: .8em;
@@ -2985,13 +2985,18 @@ ul, li {
     position: relative;
     top: -44px;
 }
+.news-headline ul{
+    margin: 10px 0px;
+}
 .news-headline ul li{
     display: block;
 }
 .news-headline ul li a p{
     margin: 0px;
-    height: 1.4em;
+    height: 1.35em;
     overflow: hidden;
+    font-size: 1.1em;
+    font-weight: 500;
 }
 .news-headline ul li a p::before{
     content: '.';
