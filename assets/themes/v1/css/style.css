@@ -3211,3 +3211,23 @@ tbody table{
 .full-width.head-content {
     margin-top: 60px !important;
 }
+.emarket-content-home{
+    width: 316px;
+    margin: 0 auto;
+    float: unset;
+}
+@media screen and (min-width: 475px) {
+    .emarket-content-home{
+        width: 474px;
+    }
+}
+@media screen and (min-width: 634px) {
+    .emarket-content-home{
+        width: 632px;
+    }
+}
+.produk-lainnya-h3{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.2em;
+}
