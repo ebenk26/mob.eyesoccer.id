@@ -126,15 +126,16 @@
         padding: 8px 0px;
     }
     </style>
-<div class="head-content full-width mt60">
-	<form method="POST" action="<?=base_url()?>member/profile_upload/" enctype="multipart/form-data" class="container" style="width:unset;float:unset;">
+<div class="head-content full-width">
+	<form method="POST" enctype="multipart/form-data" class="container form_multi" style="width:unset;float:unset;">
         <div class="img-radius">
-            <img src="<?php echo urltoimgstore($this->session->member['url_pic'])?>" alt="" srcset="" class="viewimg">
+            <img src="<?php echo $this->session->member['url_pic'].'/small'?>" alt="" srcset="" class="viewimg">
         </div>
         <div class="full-width">
             <label class="btn-blue">
                 Ganti Foto
-                <input id="file_pic" name="pic" type="file" style="display: none;" accept="image/*">
+				<input type="hidden" name="fn" value="profile_upload">
+                <input id="file_pic" name="fupload" type="file" style="display: none;" accept="image/*">
             </label>
 			<button class="btn-blue" type="submit" class="btn-info btn" id="submit_pic" style="display:none;border: none;cursor: pointer;" >Simpan Foto</button>
             <a class="btn-blue" href="<?php echo base_url().'member/logout'?>" style="background-color: #EC407A;

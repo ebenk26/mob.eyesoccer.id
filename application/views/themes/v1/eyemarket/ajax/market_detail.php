@@ -102,7 +102,7 @@
                                 ?>
                                         <a href="<?= base_url(); ?>member">
                                             <span class="btn btn-template-main">
-                                                <i class="fa fa-shopping-cart"></i> Add to cart 
+                                                <i class="fa fa-shopping-cart"></i> Tambahkan ke Keranjang 
                                             </span>
                                         </a>
                                 <?php        
@@ -112,7 +112,7 @@
                                 ?>
                                         <a href="#" data-toggle="modal" data-target="#chart-modal" class="btn btn-template-main">
                                             <span class="btn btn-template-main">
-                                                <i class="fa fa-shopping-cart"></i> Add to chart
+                                                <i class="fa fa-shopping-cart"></i> Tambahkan ke Keranjang
                                             </span>
                                         </a>
                                 <?php
@@ -169,7 +169,7 @@
 
                                     <div class="box" id="details">
                                         <p>
-                                            <h4>Product details</h4>
+                                            <h4>Detail Produk</h4>
                                             <p><?= $data['keterangan']; ?></p>
                                     </div>
                             </div>

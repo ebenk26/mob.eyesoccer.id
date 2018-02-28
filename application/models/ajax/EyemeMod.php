@@ -116,7 +116,6 @@ class EyemeMod extends CI_Model {
             'ncom'=> $html,'countcomment' => count($data['res']->data),
             'c'.$id_img => count($data['res']->data));
         $arr         = array('xSplit'=> false, 'xData' => $xData);       
-        #$arr         = array('xClass'=> 'rescomment','xHtml' => $html );
         $this->tools->__flashMessage($arr);
         
     }
@@ -160,11 +159,21 @@ class EyemeMod extends CI_Model {
         $arr  = array('xDirect' => base_url().'/eyeme','xAlert' => true);
         $arr['xCss'] = ($res->status == 'Success' ? 'boxsuccess' : 'boxfailed');
         $arr['xMsg'] = ($res->status == 'Success' ? 'Berhasil Upload foto' : 'Gaga Upload foto');
-       
-        // $arr = array('xClass' => 'requpload','xHtml' => $html);
         $this->tools->__flashMessage($arr);
-
-
+    }
+    function __follow(){
+        $username = $this->session->member['username'];
+        $visitor = $this->input->post('unamefol');
+        $query = array('username'=> $visitor,'visitor' => $username);
+        $res = $this->excurl->remoteCall($this->__xurl().'follow-me',$this->__xkey(),$query);
+        $res = json_decode($res);
+        $data = $res->data;
+        #p($data);
+        
+        $html = btnFol('',$data->hasfollow,'','follow-button',false);
+        $arr = array('xClass' => 'reqfol','xHtml'=> $html);
+        $this->tools->__flashMessage($arr);
+        
     }
 
    
