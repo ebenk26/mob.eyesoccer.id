@@ -10,7 +10,7 @@ class Eyemarket extends CI_Controller
     function __construct()
     {
         parent::__construct();
-        $this->load->model('ajax/EyemarketMod','marketmod');
+        $this->load->model('ajax/EyemarketMod');
         $this->load->model('query/MarketQueryMod','qumod');
         $member = @$this->session->userdata("member");
         $this->id_member = $member["id"];
@@ -20,29 +20,29 @@ class Eyemarket extends CI_Controller
 
     function index()
     {
-	if($_POST)
-	{
-	    $this->load->view($this->__theme().'function');
-	    $fn = $_POST['fn'];
-	    
-	    $data = [];
-	    if(function_exists($fn))
-	    {
-		$fn();
-	    } else {
-		$fn = "__".$fn;
-		$this->EyemarketMod->$fn();
-	    }
-	} else {
-	    $data['kanal'] = 'eyemarkett';
-	    $data['content'] = 'eyemarket/home';
-	    
-	    $data['title'] = $this->config->item('meta_title');
-	    $data['meta_desc'] = $this->config->item('meta_desc');
-	    $data['meta_keyword'] = $this->config->item('meta_keyword');
-	    
-	    $this->load->view($this->__theme().'template', $data);
-	}
+    if($_POST)
+    {
+        $this->load->view($this->__theme().'function');
+        $fn = $_POST['fn'];
+        
+        $data = [];
+        if(function_exists($fn))
+        {
+        $fn();
+        } else {
+        $fn = "__".$fn;
+        $this->EyemarketMod->$fn();
+        }
+    } else {
+        $data['kanal'] = 'eyemarkett';
+        $data['content'] = 'eyemarket/home';
+        
+        $data['title'] = $this->config->item('meta_title');
+        $data['meta_desc'] = $this->config->item('meta_desc');
+        $data['meta_keyword'] = $this->config->item('meta_keyword');
+        
+        $this->load->view($this->__theme().'template', $data);
+    }
     }
 
     function detail($toko, $slug)
@@ -152,7 +152,7 @@ class Eyemarket extends CI_Controller
     {
         $data['no_order'] = $no_order;
         
-        $data['kanal'] = 'eyemarket_user';
+        $data['kanal'] = 'eyemarket_konf';
         $data['id_member'] = $this->id_member;
         $data['nama_lengkap'] = $this->name;
         $data["active"]     = "pesanan";
