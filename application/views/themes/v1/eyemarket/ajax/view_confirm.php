@@ -4,7 +4,7 @@
     <div class="card-block">
         <h1>Konfirmasi Pesanan</h1>
         <br>
-        <form action="<?= base_url(); ?>eyemarket" class="form_multi" loading="off" enctype="multipart/form-data">
+        <form action="<?= base_url(); ?>eyemarket" class="form_multi" loading="off" enctype="multipart/form-data" method="post">
     		<div class="row">
     			<div class="col-md-12">
     				<div class="col-md-6" style="padding-left: unset;">
