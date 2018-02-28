@@ -13,14 +13,17 @@ echo set_breadcrumb("eyenews",$page);
 		</script>
 	</div>
 	<input type='hidden' name='fn' value='subcategorylist' class='cinput'>
-	<input type='hidden' name='slug' value='<?php echo $slug; ?>' class='cinput'>
-	<div class="crumb">
-		<span><a href="<?php echo base_url().$slug.'/'.$subslug?>" style="display: unset">Liga Indonesia</a></span>
-		<span><a href="http://localhost/mob.eyesoccer.id/eyenews" style="display: unset">Liga Inggris</a></span>
-	</div>
+    <input type='hidden' name='slug' value='<?php echo $slug; ?>' class='cinput'>
+    <!-- <div class="container" style="margin-top:48px;">
+        <div class="crumb" style="margin: unset;">
+            <span><a href="<?php echo base_url().$slug.'/'.$subslug?>" style="display: unset">Liga Indonesia</a></span>
+            <span><a href="http://localhost/mob.eyesoccer.id/eyenews" style="display: unset">Liga Inggris</a></span>
+        </div>
+    </div> -->
 </div>
 <!-- EYENEWS -->
-<div class="etube-home enews">
+<div class="container">
+<div class="etube-home enews" style="padding: unset;">
     <div id="reqcatlist" class='loadcatlist' action="eyenews" loading="off" clean="clscatlist">
         <div id='clscatlist'>
             <script>
@@ -107,4 +110,5 @@ echo set_breadcrumb("eyenews",$page);
         </div>
         </a>
     </div>
+</div>
 </div>

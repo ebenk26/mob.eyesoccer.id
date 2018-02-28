@@ -1,6 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+
 class Eyemarket extends CI_Controller
 {
 
@@ -9,7 +10,8 @@ class Eyemarket extends CI_Controller
     function __construct()
     {
         parent::__construct();
-        $this->load->model('ajax/EyemarketMod');
+        $this->load->model('ajax/EyemarketMod','marketmod');
+        $this->load->model('query/MarketQueryMod','qumod');
         $member = @$this->session->userdata("member");
         $this->id_member = $member["id"];
         $this->username = $member["username"];
@@ -161,6 +163,17 @@ class Eyemarket extends CI_Controller
 
         $data['content'] = $this->load->view($this->__theme() . '/eyemarket/confirm',$data,TRUE);
         $this->load->view($this->__theme() . 'eyemarket/template_user', $data);
+    }
+
+    function invoice($no_order)
+    {
+        $data['id_member'] = $this->id_member;
+        $data['nama_lengkap'] = $this->name;
+
+        $data["model"] = $this->qumod->get_invoice($no_order);
+        $data['cart'] = $this->qumod->get_keranjang_invoice($data['model']->id);
+
+        $this->load->view($this->__theme() . 'eyemarket/invoice', $data);
     }
 
 }

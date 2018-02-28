@@ -144,11 +144,9 @@ function p($arr){
 function loginBtn($hasLogin){
     
     if(is_array($hasLogin)){
-        return '
-        <img src="'.urltoimgstore($hasLogin['url_pic']).'" style="width:30px;height:30px;">
-        <a class="m-reg" href="'.LOGINURL.'">Hai '.$hasLogin['username'].'</a>';
-    }
-    else{
+        return '<img src="'.$hasLogin['url_pic'].'/small" style="width:30px;height:30px;">
+                <a class="m-reg" href="'.LOGINURL.'">Hai '.$hasLogin['username'].'</a>';
+    } else {
         return '<a class="m-reg" href="'.LOGINURL.'"><i class="material-icons">input</i>Login</a>';
     }
 }
@@ -318,13 +316,13 @@ function btnFol($id_member,$has_follow = TRUE,$attr=array(),$class='btn-white-fo
         }
     }
 
-        if($checkSelf == TRUE){
-            return '';
-        }
-        else{
-            return '<button class="'.$class.' '.(!$has_follow ? 'fol' : 'unfol').'" type="button" rel="'.$id_member.'" '.$addAttr.'>'
-            .(!$has_follow ? 'ikuti':'Mengikuti').'</button>';
-        }
+    if($checkSelf == TRUE){
+        return '';
+    }
+    else{
+        return '<button class="'.$class.' '.(!$has_follow ? 'fol' : 'unfol').'" type="button" rel="'.$id_member.'" '.$addAttr.'>'
+        .(!$has_follow ? 'ikuti':'Mengikuti').'</button>';
+    }
 }
 
 //button login 
@@ -672,7 +670,8 @@ function urltoimgstore($url){
 function set_breadcrumb($kanal,$page)
 {
 	if (is_array($page)) {
-        $html = " <div class='crumb'>
+        $html = " <div class='container' style='margin-top: 50px;'>
+        <div class='crumb' style='margin: unset;'>
 					<ul>
 					<li><a href='" . base_url() . "' style='display: unset'>Home</a></li>
 					<li><a href='" . base_url() . "" . $kanal . "' style='display: unset'>" . $kanal . "</a></li>";
@@ -685,7 +684,7 @@ function set_breadcrumb($kanal,$page)
                 $html .= "<li><a href='" . base_url() . "" . $kanal . "/kategori/" . $value . "' style='display: unset'>" . $value . "</a></li>";
             }
         }
-        $html .= "</ul></div>";
+        $html .= "</ul></div></div>";
     } else {
 		if ($page != "")
 		{
@@ -709,4 +708,8 @@ function set_breadcrumb($kanal,$page)
     }
     
     return $html;
+}
+
+function imgEyesoccer(){
+	return 'http://static.eyesoccer.id/v1/cache/images/1519793206557_logo_login.png/small';
 }

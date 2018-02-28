@@ -475,4 +475,40 @@ class MarketQueryMod extends CI_Model {
                                         ")->result_array();
         return $query;
     }
+
+    function set_konfirmasi($objek)
+    {
+        $this->db->insert('eyemarket_konfirmasi', $objek);
+        
+        return $this->db->insert_id();
+    }
+
+    public function get_keranjang_invoice($id_order)
+    { 
+        $query = $this->db->query(" SELECT
+                                        A.*,
+                                        B.nama,
+                                        B.title_slug,
+                                        B.harga_sebelum,
+                                        B.harga,
+                                        B.diskon,
+                                        B.berat,
+                                        B.keterangan,
+                                        C.nama as toko,
+                                        F.nama as nama_rumah
+                                    FROM
+                                        eyemarket_keranjang A
+                                    LEFT JOIN
+                                        eyemarket_product B         on B.id_product = A.id_product
+                                    LEFT JOIN
+                                        eyemarket_toko C            on C.id = B.id_toko
+                                    LEFT JOIN
+                                        eyemarket_address F         on A.id_alamat =  F.id
+                                    WHERE 
+                                        A.id_order = '$id_order'
+                                    ORDER BY
+                                        A.id ASC
+                                        ")->result_array();
+        return $query;
+    }
 }

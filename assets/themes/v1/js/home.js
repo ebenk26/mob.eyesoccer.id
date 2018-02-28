@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $("#evSlide").carousel();
+    // $("#evSlide").carousel();
     $(".left").click(function(){
         $("#evSlide").carousel("prev");
     });
@@ -52,9 +52,9 @@ window.onload = function(){
     //    $('#regBtn').addClass('active');
     //    $('#logBtn').removeClass('active');
     // }
-    src.onclick = function() {
-        srcbox.style.display = "block";
-    }
+    // src.onclick = function() {
+    //     srcbox.style.display = "block";
+    // }
     srcS.onclick = function() {
         srcbox.style.display = "none";
     }
