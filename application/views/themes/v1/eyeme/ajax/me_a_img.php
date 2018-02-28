@@ -66,7 +66,7 @@ $hasLike = 0 ;
 <span class="up-next-etube" style="padding-left: 10px !important;color: #212121 !important;">Komentar</span> <span id="close" class="up-next-etube" style="float:right; padding-right: 10px;"><i class="material-icons">close</i></span>
     <div class="box-komentar">
         <div class="img-radius">
-            <img src="<?php echo urltoimgstore($this->session->member['url_pic'])?>" alt="<?php echo $this->session->member['username']?>" width="100%">
+            <img src="<?php echo $this->session->member['url_pic'].'/thumb'; ?>" alt="<?php echo $this->session->member['username']?>" width="100%">
         </div>
         <div  id='reqcomment' style="display:none;">   
             <span name="uid" class="cinput" />
