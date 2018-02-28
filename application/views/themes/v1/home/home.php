@@ -144,7 +144,7 @@
     </div>
 </div>
 <!-- EYEME -->
-<div class="border-box over-no pd-l-4 m-b-20">
+<div class="border-box over-no pd-l-4 m-b-20" style="padding-left: 1vw !important; width: 98vw;">
     <div id="reqme" class='loadme' action="eyeme" loading="off" clean="clsme">
         <div id='clsme'>
             <script>
