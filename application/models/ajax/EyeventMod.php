@@ -88,4 +88,42 @@ class EyeventMod extends CI_Model {
         $this->tools->__flashMessage($data);
     }
 
+    public function get_all_jadwal($tanggalnya,$liganya)
+    {
+        $this->db->select(' a.score_a,
+                            a.score_b,
+                            a.jadwal_pertandingan,
+                            a.lokasi_pertandingan,
+                            c.club_id as club_id_a,
+                            d.club_id as club_id_b,
+                            c.logo as logo_a,
+                            d.logo as logo_b,
+                            c.name as club_a,
+                            d.name as club_b,
+                            c.url as url_a,
+                            d.url as url_b,
+                            b.title as kompetisi
+                            ');
+
+        $this->db->from('tbl_jadwal_event AS a');
+
+        $this->db->join('tbl_event AS b', 'b.id_event=a.id_event', 'LEFT');
+        $this->db->join('tbl_club AS c', 'c.club_id=a.tim_a', 'INNER');
+        $this->db->join('tbl_club AS d', 'd.club_id=a.tim_b', 'INNER');
+
+        $this->db->where('a.jadwal_pertandingan >=', $tanggalnya.' 00:00:01');
+        $this->db->where('a.jadwal_pertandingan <=', $tanggalnya.' 23:59:59');
+        
+        if ($liganya != null)
+        {
+            $this->db->where('a.id_event', $liganya);
+        }
+
+        $this->db->order_by('a.jadwal_pertandingan', 'desc');
+
+        $query = $this->db->get()->result_array();
+
+        return $query;
+    }
+
 }
