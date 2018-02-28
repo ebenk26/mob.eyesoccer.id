@@ -42,7 +42,7 @@
             <a href="<?=base_url()?>eyemarket/order_delivery/<?= $id_member; ?>" class="btn btn-default"><i class="fa fa-chevron-left"></i>Kembali ke Metode Pengiriman</a>
         </div>
         <div class="pull-right">
-            <button type="submit" class="btn btn-template-main">Continue to Order review<i class="fa fa-chevron-right"></i>
+            <button type="submit" class="btn btn-template-main">Lanjut Ke Review Pesanan<i class="fa fa-chevron-right"></i>
             </button>
         </div>
     </div>

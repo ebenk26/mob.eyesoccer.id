@@ -38,4 +38,4 @@
             <input type="hidden" name="id_order" value="<?= $model->id; ?>">
         </form>
     </div>
-</div>
+</div> 
