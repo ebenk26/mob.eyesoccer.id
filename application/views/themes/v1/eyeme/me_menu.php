@@ -2,7 +2,7 @@
 <div class="menu-eme">
     <?php 
     //show display picture if user has been login 
-    $DPIC['src'] = ($this->session->member ? urltoimgstore($this->session->member['url_pic']) : DPIC);
+    $DPIC['src'] = ($this->session->member ? $this->session->member['url_pic'].'/thumb' : DPIC);
     $DPIC['alt'] = ($this->session->member ? $this->session->member['username'] : 'photo profile');
 
     $list  = array(

@@ -547,8 +547,10 @@ class EyemarketMod extends MarketQueryMod {
         if (!$this->upload->do_upload('bukti'))
         {
             $error = $this->upload->display_errors();
-            // var_dump($error);exit();
-            redirect($_SERVER['HTTP_REFERER']);
+            var_dump($error);exit();
+            // redirect($_SERVER['HTTP_REFERER']);
+            $data = array('xAlert' => true,'xCss' => 'boxfailed','xMsg' => 'Maaf telah terjadi kesalahan, mohon tunggu beberapa saat dan hubungi Admin EyeMarket jika masih terdapat error ','xDirect'=> base_url().'eyemarket/pesanan/'.$id_member);
+            $this->tools->__flashMessage($data);
         }
         else
         {

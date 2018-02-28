@@ -11,6 +11,7 @@
       <link rel="stylesheet" href="<?=base_url()?>assets/js/eyemarket/user/node_modules/perfect-scrollbar/dist/css/perfect-scrollbar.min.css" />
       <link rel="stylesheet" href="<?=base_url()?>assets/js/eyemarket/user/style.css"/>
       <link rel="shortcut icon" href="<?=base_url()?>img/tab_icon.png"/>
+      
       <script src='<?php echo SUBCDN.'assets/js/jquery-2.0.2.min.js'; ?>'></script>
       <script src='<?php echo SUBCDN."assets/$folder/js/main.js"; ?>'></script>
       <script src="<?php echo SUBCDN."assets/$folder/js/home.js"; ?>"></script>
