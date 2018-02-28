@@ -12,7 +12,7 @@ if ($newsdetail){
 		<div class="container profile-writer b-b-1">
 			<div class="container">
 				<div class="img-radius">
-					<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+					<img src="<?php echo imgEyesoccer();?>" alt="">
 				</div>
 				<h3><?php echo $dt->data->fullname;?></h3>
 				<span><?php echo relative_time($this->library->datenormal($dt->data->publish_on)); ?> lalu - <?php echo $dt->data->news_like; ?> view</span>

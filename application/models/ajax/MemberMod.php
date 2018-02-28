@@ -66,10 +66,10 @@ class MemberMod extends CI_Model {
 
         $name = $this->input->post('name');
         $uname = $this->input->post('username');
-        $email= $this->input->post('email');
-        $pass = $this->input->post('password');
-        $cpass= $this->input->post('passconfirm');
-        $query= array(
+        $email = $this->input->post('email');
+        $pass  = $this->input->post('password');
+        $cpass = $this->input->post('passconfirm');
+        $query = array(
                 'name'  => $name,
                 'username' => $uname,
                 'email' => $email,
@@ -101,51 +101,20 @@ class MemberMod extends CI_Model {
 
     }
 	
-	function profile_upload(){
-		if ($_FILES['pic']['size'] > 10485760) {
-            $return = 'Gambar terlalu besar. Maksimum besar gambar adalah 1MB.';
-			$arr = array('xCss'=> 'boxfailed','xMsg'=> $return,'xAlert'=> true);
-
-			$this->tools->__flashMessage($arr);
-        } else {
-            $allowed = array('gif', 'png', 'jpg', 'jpeg');
-            $filename = file_name('pic');
-			$return = 'Success.';
-			$caption = "Profile Picture";
-			$lat = $_POST['lat'];
-			$lon = $_POST['lon'];
-			$date = date("Y-m-d H:i:s");
-			$pic = "foto-" . $filename;
-			$path = ($_SERVER['SERVER_NAME'] == 'localhost') ? pathUrl() . "img/img_storage/" : IMGSTORAGE . '/';
-			move_uploaded_file($_FILES['pic']['tmp_name'], $path . 'ori_' . $pic);
-			$last_id = $this->session->member['id'];
-			$post_data = array(
-				'title' => $caption,
-				'tags' => 'profil',
-				'pic' => $pic,
-				'thumb1' => $pic,
-				'lat' => $lat,
-				'lon' => $lon,
-				'upload_date' => date("Y-m-d H:i:s"),
-				'publish_by' => 'member',
-				'publish_type' => 'public',
-				'upload_user' => $last_id
-			);
-			$cmd = $this->db->insert("tbl_gallery", $post_data);
-			$this->db->trans_complete();
-			$pic_id = $this->db->insert_id();
-
-			$this->db->query("UPDATE tbl_member SET profile_pic='" . $pic_id . "' WHERE id_member='" . $_SESSION["member_id"] . "'");
-			if ($this->db->affected_rows() > 0) {
-				$arr = array('xDirect'=> base_url(),'xCss'=> 'boxsuccess','xMsg'=> 'Upload Foto Profil Sukses.','xAlert'=> true);
-
-				$this->tools->__flashMessage($arr);
-			} else {
-				$arr = array('xCss'=> 'boxfailed','xMsg'=> 'Upload Foto Profil Gagal.','xAlert'=> true);
-
-				$this->tools->__flashMessage($arr);
-			}
-        }
+	function __profile_upload(){
+		$param = array('username'=> $this->session->member['username']);
+        $res   = $this->excurl->remoteCall($this->__xurl().'upload-pic', $this->__xkey(), $param, ['fupload']);
+		$res = json_decode($res);
+		if($res->status == 'Error')
+		{
+			$arr = array('xCss'=> 'boxfailed','xMsg'=> $res->message,'xAlert'=> true);
+		}else{
+			$arr = array('xDirect'=> base_url().'member','xCss'=> 'boxsuccess','xMsg'=> 'Upload Profile Berhasil.','xAlert'=> true);
+           $this->session->set_userdata(['member' => (array)$res->data]);
+		}
+		
+		
+		$this->tools->__flashMessage($arr);
 	}
 
 	function member_detail($id){
