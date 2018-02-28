@@ -711,5 +711,5 @@ function set_breadcrumb($kanal,$page)
 }
 
 function imgEyesoccer(){
-	return 'http://static.eyesoccer.id/v1/cache/images/logo_player_2.png/medium';
+	return 'http://static.eyesoccer.id/v1/cache/images/1519793206557_logo_login.png/small';
 }
