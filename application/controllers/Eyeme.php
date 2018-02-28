@@ -68,7 +68,7 @@ class Eyeme extends CI_Controller {
     	$this->session->sess_destroy();
     	$this->index();
     }
-    function img($id = ''){
+    function img(){
 
         $data  = $this->getdata();
         $data['content'] = 'eyeme/me_img';
