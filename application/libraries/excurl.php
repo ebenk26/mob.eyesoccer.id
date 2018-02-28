@@ -186,7 +186,6 @@ class Excurl
                 . $content . $eol;
         }
 
-
         foreach ($files as $name => $content) {
             $data .= "--" . $delimiter . $eol
                 . 'Content-Disposition: form-data; name="' . $content['name'] . '"; filename="' . $content['filename'] . '"' . $eol
@@ -198,7 +197,6 @@ class Excurl
         }
 
         $data .= "--" . $delimiter . "--" . $eol;
-
 
         return $data;
     }
