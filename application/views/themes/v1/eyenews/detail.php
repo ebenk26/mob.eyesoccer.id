@@ -122,7 +122,7 @@
 		<div class="box-flyad">
 			<div class="flyad">
 				<div class="m-0">
-					<span style="font-size: 7em;font-weight: 100;position: fixed;text-align: center;top: 20%;color: white;">ini iklan yaa</span>
+					<span style="font-size: 7em;font-weight: 100;position: fixed;text-align: center;top: 20%;color: white;"><!--ini iklan yaa--></span>
 					<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
 				</div>
 			</div>
