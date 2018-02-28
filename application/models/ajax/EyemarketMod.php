@@ -583,8 +583,6 @@ class EyemarketMod extends MarketQueryMod {
             $data = array('xAlert' => true,'xCss' => 'boxsuccess','xMsg' => 'Konfirmasi Pembayaran berhasil diunggah, <br> Mohon tunggu konfirmasi admin EyeMarket','xDirect'=> base_url().'eyemarket/pesanan/'.$id_member);
             $this->tools->__flashMessage($data);
         }
-
-        
     }
 
 }

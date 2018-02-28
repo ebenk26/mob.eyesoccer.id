@@ -52,9 +52,9 @@ window.onload = function(){
     //    $('#regBtn').addClass('active');
     //    $('#logBtn').removeClass('active');
     // }
-    src.onclick = function() {
-        srcbox.style.display = "block";
-    }
+    // src.onclick = function() {
+    //     srcbox.style.display = "block";
+    // }
     srcS.onclick = function() {
         srcbox.style.display = "none";
     }
