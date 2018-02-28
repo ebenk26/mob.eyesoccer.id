@@ -2,6 +2,7 @@
     if ($homenewslist){
 	$homenewslist = json_decode($homenewslist);
 	$i = 1;
+	$n = 0;
 	foreach($homenewslist->data as $dt)
 	{
 		if($i == 1){
@@ -22,13 +23,16 @@
 		?>
 					<li><a href="<?php echo $this->library->urltomob($dt->url); ?>"><p><?php echo $dt->title; ?></p></a></li>
 		<?php
-		}else{
+			if($i == 4){
 		?>
-			
 				</ul>
 			</div>
 			<span id='tab-populer' class="orange-active tab-popular-custom-home" active="true">Terkini</span>
 		</div>
+		<?php
+			}
+		}else{
+		?>
 			<a href="<?php echo $this->library->urltomob($dt->url); ?>" title="<?php echo $dt->title; ?>">
 				<div class="rek-ber-c home-rek-ber-c">
 					<div class="img-res-height" style="margin-top: 0;">
