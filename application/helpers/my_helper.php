@@ -144,9 +144,8 @@ function p($arr){
 function loginBtn($hasLogin){
     
     if(is_array($hasLogin)){
-        return '
-        <img src="'.$hasLogin['url_pic'].'/small" style="width:30px;height:30px;">
-        <a class="m-reg" href="'.LOGINURL.'">Hai '.$hasLogin['username'].'</a>';
+        return '<img src="'.$hasLogin['url_pic'].'/small" style="width:30px;height:30px;">
+                <a class="m-reg" href="'.LOGINURL.'">Hai '.$hasLogin['username'].'</a>';
     } else {
         return '<a class="m-reg" href="'.LOGINURL.'"><i class="material-icons">input</i>Login</a>';
     }
@@ -317,13 +316,13 @@ function btnFol($id_member,$has_follow = TRUE,$attr=array(),$class='btn-white-fo
         }
     }
 
-        if($checkSelf == TRUE){
-            return '';
-        }
-        else{
-            return '<button class="'.$class.' '.(!$has_follow ? 'fol' : 'unfol').'" type="button" rel="'.$id_member.'" '.$addAttr.'>'
-            .(!$has_follow ? 'ikuti':'Mengikuti').'</button>';
-        }
+    if($checkSelf == TRUE){
+        return '';
+    }
+    else{
+        return '<button class="'.$class.' '.(!$has_follow ? 'fol' : 'unfol').'" type="button" rel="'.$id_member.'" '.$addAttr.'>'
+        .(!$has_follow ? 'ikuti':'Mengikuti').'</button>';
+    }
 }
 
 //button login 

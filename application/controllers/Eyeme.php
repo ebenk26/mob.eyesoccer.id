@@ -10,8 +10,6 @@ class Eyeme extends CI_Controller {
 	parent::__construct();
 	$this->load->model('ajax/EyemeMod');
 
-	//$this->session->username    = 'sofyanwaldy';
-	//temporary session 
     }
     protected function getdata(){
     	$data = array(
@@ -70,7 +68,7 @@ class Eyeme extends CI_Controller {
     	$this->session->sess_destroy();
     	$this->index();
     }
-    function img($id = ''){
+    function img(){
 
         $data  = $this->getdata();
         $data['content'] = 'eyeme/me_img';

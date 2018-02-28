@@ -15,7 +15,7 @@ $hasLike = 0 ;
     <div class="container">
         <div class="container emepost">
             <div class="img-usr">
-                <img src="<?php echo urltoimgstore($v->url_pic)?>" alt="<?php echo $v->username?>">
+                <img src="<?php echo $v->url_pic?>" alt="<?php echo $v->username?>">
             </div>
             <span><?php echo $v->username?></span>
             <i class="material-icons more display-box-notif">more_horiz</i>
