@@ -66,10 +66,10 @@ class MemberMod extends CI_Model {
 
         $name = $this->input->post('name');
         $uname = $this->input->post('username');
-        $email= $this->input->post('email');
-        $pass = $this->input->post('password');
-        $cpass= $this->input->post('passconfirm');
-        $query= array(
+        $email = $this->input->post('email');
+        $pass  = $this->input->post('password');
+        $cpass = $this->input->post('passconfirm');
+        $query = array(
                 'name'  => $name,
                 'username' => $uname,
                 'email' => $email,
