@@ -670,7 +670,8 @@ function urltoimgstore($url){
 function set_breadcrumb($kanal,$page)
 {
 	if (is_array($page)) {
-        $html = " <div class='crumb'>
+        $html = " <div class='container' style='margin-top: 50px;'>
+        <div class='crumb' style='margin: unset;'>
 					<ul>
 					<li><a href='" . base_url() . "' style='display: unset'>Home</a></li>
 					<li><a href='" . base_url() . "" . $kanal . "' style='display: unset'>" . $kanal . "</a></li>";
@@ -683,7 +684,7 @@ function set_breadcrumb($kanal,$page)
                 $html .= "<li><a href='" . base_url() . "" . $kanal . "/kategori/" . $value . "' style='display: unset'>" . $value . "</a></li>";
             }
         }
-        $html .= "</ul></div>";
+        $html .= "</ul></div></div>";
     } else {
 		if ($page != "")
 		{
