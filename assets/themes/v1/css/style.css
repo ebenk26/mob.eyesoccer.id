@@ -840,12 +840,6 @@ nav>.f-r:hover{
     margin: .3vw;
 }
 .eme-box>img{
-    /* height: 100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%); */
     flex-shrink: 0;
     min-width: 100%;
     min-height: 100%;
@@ -2666,13 +2660,12 @@ ul, li {
 .tentang a{
     width: 100px;
     margin: 20px auto 0px;
-    display: block;
-    background-color: #F44336;
-    color: white;
-    padding: 8px;
+    color: #F44336;
+    padding: 0 1px;
     border: none;
     border-radius: 5px;
     font-size: .9em;
+    font-weight: 600;
     text-decoration: none;
     text-align: center;
 }
@@ -3004,8 +2997,8 @@ ul, li {
 }
 .news-headline ul li a p{
     margin: 0px;
-    height: 1.35em;
-    overflow: hidden;
+    /* height: 1.35em; */
+    /* overflow: hidden; */
     font-size: 1.1em;
     font-weight: 500;
 }
@@ -3018,6 +3011,7 @@ ul, li {
     position: relative;
     top: -11px;
     width: 15px;
+    height: 30px;
 }
 .tab-popular-custom-home{
     color: #FF5722 !important;

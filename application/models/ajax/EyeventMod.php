@@ -15,9 +15,15 @@ class EyeventMod extends CI_Model {
     function __match_schedule()
     {
         $page = ($this->input->post('page') != NULL) ? $this->input->post('page') : "";
+        $data["kemarin_lusa"] = get_date("-2");
     	$data["kemarin"] = get_date("-1");
     	$data["hari_ini"] = get_date("+0");
-    	$data["besok"] = get_date("+1");
+        $data["besok"] = get_date("+1");
+    	$data["lusa"] = get_date("+2");
+
+        // ===== kemarin lusa
+        $query = array('page' => 1, 'limit' => 5, 'sortby' => 'mostview', 'startdate' => $data["kemarin_lusa"]["tanggalnya"], 'enddate' => $data["kemarin_lusa"]["tanggalnya"]);
+        $data['match_2yest'] = $this->excurl->remoteCall($this->__xurl().'event-match', $this->__xkey(), $query);
 
     	// ===== kemarin
     	$query = array('page' => 1, 'limit' => 5, 'sortby' => 'mostview', 'startdate' => $data["kemarin"]["tanggalnya"], 'enddate' => $data["kemarin"]["tanggalnya"]);
@@ -28,10 +34,19 @@ class EyeventMod extends CI_Model {
     	$data['match_today'] = $this->excurl->remoteCall($this->__xurl().'event-match', $this->__xkey(), $query);
 
     	// ===== besok
-    	$query = array('page' => 1, 'limit' => 5, 'sortby' => 'mostview', 'startdate' => $data["besok"]["tanggalnya"], 'enddate' => $data["besok"]["tanggalnya"]);
-    	$data['match_tomorrow'] = $this->excurl->remoteCall($this->__xurl().'event-match', $this->__xkey(), $query);
+        $query = array('page' => 1, 'limit' => 5, 'sortby' => 'mostview', 'startdate' => $data["besok"]["tanggalnya"], 'enddate' => $data["besok"]["tanggalnya"]);
+        $data['match_tomorrow'] = $this->excurl->remoteCall($this->__xurl().'event-match', $this->__xkey(), $query);
 
-        if ($page == "eyevent-match") 
+        // ===== lusa
+    	$query = array('page' => 1, 'limit' => 5, 'sortby' => 'mostview', 'startdate' => $data["lusa"]["tanggalnya"], 'enddate' => $data["lusa"]["tanggalnya"]);
+    	$data['match_lusa'] = $this->excurl->remoteCall($this->__xurl().'event-match', $this->__xkey(), $query);
+
+        if ($page == "eyevent-result") 
+        {
+            $html = $this->load->view($this->__theme().'eyevent/ajax/result', $data, true);
+        }
+        else
+        if ($page == "eyevent-schedule") 
         {
             $html = $this->load->view($this->__theme().'eyevent/ajax/schedule', $data, true);
         }
@@ -94,6 +109,7 @@ class EyeventMod extends CI_Model {
                             a.score_b,
                             a.jadwal_pertandingan,
                             a.lokasi_pertandingan,
+                            a.live_pertandingan,
                             c.club_id as club_id_a,
                             d.club_id as club_id_b,
                             c.logo as logo_a,
