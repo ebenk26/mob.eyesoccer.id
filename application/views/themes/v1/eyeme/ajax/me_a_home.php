@@ -28,7 +28,7 @@ $imglist = json_decode($imglist);
             <i class="material-icons more display-box-notif">more_horiz</i>
         </div>
         <div class="eme-img-content">
-            <img src="<?php echo $v->url_img.'/medium'?>" alt="<?php echo $v->img_caption?>">
+            <img src="<?php echo $v->url_img?>" alt="<?php echo $v->img_caption?>">
         </div>
         <div class="container-eme-like">
             <ul>
