@@ -282,8 +282,18 @@ define('VIEWPATH', $view_folder . DIRECTORY_SEPARATOR);
  * CDN STATIC URL
  *
  */
-define('SUBCDN', 'http://localhost:8081/project/aplikasi/eyesoccer/mobeye/'); //'http://cdn.eyesoccer.id/';
-define('SUBSTATIC', 'http://localhost:8081/project/aplikasi/eyesoccer/mobeye/'); //'http://static.eyesoccer.id/';
+<<<<<<< HEAD
+define('SUBCDN', 'http://localhost/mob.eyesoccer.id/'); //'http://cdn.eyesoccer.id/';
+define('SUBSTATIC', 'http://localhost/mob.eyesoccer.id/'); //'http://static.eyesoccer.id/';
+=======
+<<<<<<< HEAD
+define('SUBCDN', 'http://m.eyesoccer.id/'); //'http://cdn.eyesoccer.id/';
+define('SUBSTATIC', 'http://m.eyesoccer.id/'); //'http://static.eyesoccer.id/';
+=======
+define('SUBCDN', 'http://'.$_SERVER['HTTP_HOST'].'/mobeye/'); //'http://cdn.eyesoccer.id/';
+define('SUBSTATIC', 'http://'.$_SERVER['HTTP_HOST'].'/mobeye/'); //'http://static.eyesoccer.id/';
+>>>>>>> 3053cbd81e425eef9948d7381f8726fd116030ab
+>>>>>>> f417ca6cb53bbc5e9dbc1c806490b9e24daa7cb1
 
 /*
  * --------------------------------------------------------------------

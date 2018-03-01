@@ -679,7 +679,9 @@ function set_breadcrumb($kanal,$page)
         $i = 0;
         foreach ($page as $value) {
             if (++$i === $numItems) {
-                $html .= "<li style='cursor:default;'>" . $value . "</li>";
+				if(!empty($value)){
+					$html .= "<li style='cursor:default;'>" . $value . "</li>";
+				}
             } else {
                 $html .= "<li><a href='" . base_url() . "" . $kanal . "/kategori/" . $value . "' style='display: unset'>" . $value . "</a></li>";
             }
