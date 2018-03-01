@@ -20,9 +20,9 @@
         </div> -->
         <div class="container">
             <h2 class="thjadwalhasil">JADWAL & HASIL PERTANDINGAN</h2>
-            <select id="pilih-liga" class="lc">
+            <!-- <select id="pilih-liga" class="lc">
                 <option>Semua Liga</option>
-            </select>
+            </select> -->
             <button type="button" class="lihat-jadwal" data-toggle="modal" data-target="#popupKalender">Pilih Tanggal Jadwal Lainnya</button>
         </div>
     </div>

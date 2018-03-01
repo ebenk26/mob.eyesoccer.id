@@ -446,7 +446,7 @@
             </table>
         </div>
         <div class="t-c-b">
-            <a href="<?= base_url(); ?>eyevent/jadwal">
+            <a href="<?= base_url(); ?>eyevent/jadwal-hasil">
                 <button type="" class="btn-green">Lihat Jadwal Lainnya</button>
             </a>
         </div>

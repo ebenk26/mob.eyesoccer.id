@@ -100,21 +100,27 @@
                                     if ($id_member == NULL) 
                                     {
                                 ?>
-                                        <a href="<?= base_url(); ?>member">
+                                        <!-- <a href="<?= base_url(); ?>member">
                                             <span class="btn btn-template-main">
                                                 <i class="fa fa-shopping-cart"></i> Tambahkan ke Keranjang 
                                             </span>
-                                        </a>
+                                        </a> -->
+                                        <span class="btn btn-template-main">
+                                                <i class="fa fa-shopping-cart"></i> Available Soon
+                                            </span>
                                 <?php        
                                     }
                                     else
                                     {
                                 ?>
-                                        <a href="#" data-toggle="modal" data-target="#chart-modal" class="btn btn-template-main">
+                                        <!-- <a href="#" data-toggle="modal" data-target="#chart-modal" class="btn btn-template-main">
                                             <span class="btn btn-template-main">
                                                 <i class="fa fa-shopping-cart"></i> Tambahkan ke Keranjang
                                             </span>
-                                        </a>
+                                        </a> -->
+                                        <span class="btn btn-template-main">
+                                                <i class="fa fa-shopping-cart"></i> Available Soon
+                                            </span>
                                 <?php
                                     }
                                 ?>
