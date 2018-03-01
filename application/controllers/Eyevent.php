@@ -63,4 +63,15 @@ class Eyevent extends CI_Controller {
 	    $this->load->view($this->__theme().'template', $data);
     }
 
+    function get_jadwal($tanggal='')
+    {
+    	$data['jdwl'] = $this->EyeventMod->get_all_jadwal($tanggal,null);
+    	
+    	$body = $this->load->view($this->__theme().'eyevent/ajax/body-schedule', $data,TRUE);
+    	
+    	echo json_encode(array(	'status' 	=> '1',
+    							'body' 		=> $body,
+    						));
+    }
+
 }

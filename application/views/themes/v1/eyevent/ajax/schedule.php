@@ -9,7 +9,7 @@
             <div class="modal-content">
                 <div class="m-event-kalender">
                     <div id="z"></div>
-                    <button class="btn-white-g" type="button" style="margin-left: 8.75%;" data-dismiss="modal">Lihat</button>
+                    <button id="btn-date" class="btn-white-g" type="button" style="margin-left: 8.75%;" data-dismiss="modal">Lihat</button>
                     <button class="btn-white-g btn-white-g-block" type="button" data-dismiss="modal">tutup</button>
                 </div>
             </div>
@@ -17,7 +17,7 @@
     </div>
     <div class="container">
         <h2 class="thjadwalhasil">JADWAL & HASIL PERTANDINGAN</h2>
-        <select id="pilih-liga" class="lc">
+        <!-- <select id="pilih-liga" class="lc">
             <option>Semua Liga</option>
             <option value="6">Liga Santri Nusantara 2017 - Seri Nasional</option>
             <option value="16">English Premier League 2017/2018</option>
@@ -31,9 +31,24 @@
             <option value="75">COPA DEL RAY 2017/2018</option>
             <option value="89">Piala Dunia 2018 Rusia</option>
             <option value="92">Piala Presiden 2018</option>
-        </select>
+        </select> -->
         <button type="button" class="lihat-jadwal" data-toggle="modal" data-target="#popupKalender">Pilih Tanggal Jadwal Lainnya</button>
         <div class="box-jadwalhasil">
+
+            <div id="jp" style="display: none;">
+                <table class="jadwalhasil">
+                    <thead>
+                        <tr>
+                            <th colspan="3" id="ajax-tgl-jadwal">
+                                
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody id="body-jp">
+                    </tbody>
+                </table>
+            </div>
+
             <table class="jadwalhasil">
                 <thead>
                     <tr>
@@ -196,11 +211,55 @@
 <script>
     $('#z').datepicker({
         inline: true,
-        altField: '#d'
+        altField: '#d',
+        onSelect: function() { 
+                tgl = $(this).datepicker('getDate');
+                
+                $('#hdn-date').val(tgl);
+                console.log(tgl);
+            }
     });
 
     $('#d').change(function(){
         $('#z').datepicker('setDate', $(this).val());
     });
-    $("#popupKalender").modal()
+    // $("#popupKalender").modal();
+
+    $(document).ready(function(){
+        $("#btn-date").on("click", function(){
+
+            var tanggal = tgl.getDate();
+            
+            var monthNames = ["January", "February", "March", "April", "May", "June",
+              "July", "August", "September", "October", "November", "December"
+            ];
+            var bulan       = tgl.getMonth() + 1;
+            var nm_bulan    = monthNames[tgl.getMonth()];
+
+            var tahun = tgl.getFullYear();
+
+            var txt_tanggal     = tahun+"-"+bulan+"-"+tanggal;
+
+            $('#jp').attr('style', 'display:block');
+            $('#ajax-tgl-jadwal').html(tanggal + " " + nm_bulan + " " + tahun);
+            console.log(txt_tanggal);
+
+            var urlnya = "<?= base_url(); ?>Eyevent/get_jadwal/"+txt_tanggal;
+            
+            $.ajax({
+                url: urlnya,
+                type: 'POST',
+                dataType: 'json',
+                data: {txt_tanggal: txt_tanggal},
+            })
+            .done(function(result) {
+
+                // console.log(result.body);
+                $('#body-jp').html('');
+                $('#body-jp').append(result.body);
+                
+            });
+        });
+    });
+
 </script>

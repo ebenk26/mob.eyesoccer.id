@@ -144,7 +144,7 @@
     </div>
 </div>
 <!-- EYEME -->
-<div class="border-box over-no pd-l-4 m-b-20">
+<div class="border-box over-no pd-l-4 m-b-20" style="padding-left: 1vw !important; width: 98vw;">
     <div id="reqme" class='loadme' action="eyeme" loading="off" clean="clsme">
         <div id='clsme'>
             <script>
@@ -446,7 +446,7 @@
             </table>
         </div>
         <div class="t-c-b">
-            <a href="<?= base_url(); ?>eyevent/jadwal">
+            <a href="<?= base_url(); ?>eyevent/jadwal-hasil">
                 <button type="" class="btn-green">Lihat Jadwal Lainnya</button>
             </a>
         </div>
@@ -455,7 +455,7 @@
 <!-- BANNER -->
 <div class="border-box">
     <div class="banner-150">
-        <img src="" alt="">
+        <img src="https://eyesoccer.id/assets/img/BANNER-MOBILE.jpg" alt="">
     </div>
 </div>
 <!-- KLASEMEN -->

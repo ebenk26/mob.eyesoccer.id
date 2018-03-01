@@ -4,7 +4,7 @@ foreach($res->data as $k => $v){?>
     
     <div class="item-komentar">
         <div class="img-radius">
-            <img src="<?php echo urltoimgstore($v->url_pic)?>" alt="<?php echo $v->username?>" width="100%">
+            <img src="<?php echo $v->url_pic.'/thumb'; ?>" alt="<?php echo $v->username?>" width="100%">
         </div>
         <div class="text-komentar">
             <p><?php echo $v->comment?></p>

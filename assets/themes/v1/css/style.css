@@ -631,10 +631,21 @@ nav>.f-r:hover{
     top: 3px;
 }
 .m-log, .m-reg{
-    width: 50%;
+    /* width: 50%; */
 }
 .m-log{
-    text-align: right;
+    /* text-align: right; */
+    float: right;
+    margin: -5px 0;
+}
+.m-reg {
+    margin: 10px 5px;
+    display: inline;
+}
+.m-top img {
+    float: left;
+    margin: 10px;
+    border-radius: 50%;
 }
 .m-top i{
     color: orange;
@@ -818,15 +829,15 @@ nav>.f-r:hover{
     font-weight: 500;
 }
 .eme-box{
-    width: 117px;
-    height: 117px;
+    width: 32.06vw;
+    height: 32.06vw;
     float: left;
-    border: 2px solid white;
     overflow: hidden;
-    /* position: relative; */
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: .3vw;
 }
 .eme-box>img{
     /* height: 100%;
@@ -3196,4 +3207,27 @@ tbody table{
 }
 .subcategorylist a{
     display: inline-block;
+}
+.full-width.head-content {
+    margin-top: 60px !important;
+}
+.emarket-content-home{
+    width: 316px;
+    margin: 0 auto;
+    float: unset;
+}
+@media screen and (min-width: 475px) {
+    .emarket-content-home{
+        width: 474px;
+    }
+}
+@media screen and (min-width: 634px) {
+    .emarket-content-home{
+        width: 632px;
+    }
+}
+.produk-lainnya-h3{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.2em;
 }
