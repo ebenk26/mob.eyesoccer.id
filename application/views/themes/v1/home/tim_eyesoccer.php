@@ -29,7 +29,7 @@
 					<tr>
 						<td>CEO / Founder</td>
 						<td>CTO / Founder</td>
-						<td>CFO / Founder</td>
+						<td>CFO / Co - Founder</td>
 					</tr>
 					<tr>
 						<td colspan="3">
@@ -56,7 +56,7 @@
 						<td>Fadia Sekar
 							<br>Ade Firmansyah
 							<br>I Gede Agus Sukra Tanaya
-							<br>Ondri S. Prakarsa</td>
+						</td>
 					</tr>
 					<tr>
 						<td><h2>Head of EyeProfile Division</h2></td>
@@ -66,8 +66,8 @@
 					</tr>
 					<tr>
 						<td>
-							<h2>Head of EyeEvent Division</h2>
-							<br>Ajuan Firel
+							<h2>EyeEvent Division</h2>
+							<br>Maylani Sofyand
 						</td>
 					</tr>
 					<tr>
@@ -82,21 +82,22 @@
 					<tr>
 						<td>
 							<h2>Admin</h2>
-							<br>Appeli Hadishtis
+							<br>Apelli Hadishtis
 							<br>Aris Diyantoro
 							<br>Budi Harjo
 						</td>
 					</tr>
 					<tr>
 						<td>
-							<h2>Event Assistant</h2>
-							<br>Maylani Sofyand
+							<h2>Info Grafis</h2>
+							<br>Charles Lubis
 						</td>
 					</tr>
 					<tr>
 						<td>
-							<h2>Info Grafis</h2>
-							<br>Charles Lubis
+							<h2>Social Media</h2>
+							<br>Putra Nugraha
+							<br>DB Krishna
 						</td>
 					</tr>
 					<tr>
@@ -124,7 +125,7 @@
 					<tr>
 						<td>
 							<h2>Graphic Design</h2>
-							<br>Fauzan
+							<br>Emil Siregar
 						</td>
 					</tr>
 					<tr>
@@ -134,6 +135,7 @@
 						<td>
 							<h2>Sales and Marketing</h2>
 							<br>Philips Gregory
+							<br>Owin Rodwin
 						</td>
 					</tr>
 					<tr>
@@ -155,10 +157,16 @@
 					</tr>
 					<tr>
 						<td>
+							<h2>Supervisor</h2>
+							<br>Rizki Satrio Putro
+						</td>
+					</tr>
+					<tr>
+						<td>
 							<h2>Back End</h2>
 							<br>Muhammad Robi
-							<br>Rizki Satrio Putro
-							<br>Yudi Santoso
+							<br>Sofyan Walid
+							<br>Kharizuno
 						</td>
 					</tr>
 					<tr>
@@ -171,7 +179,14 @@
 					<tr>
 						<td>
 							<h2>SEO Specialist</h2>
-							<br>Andri Sukma Varoga
+							<br>Ardiatma
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<h2>Android Mobile Developer</h2>
+							<br>Fazil Muamar
+							<br>Naufal Syarifuddin
 						</td>
 					</tr>
 				</table>
