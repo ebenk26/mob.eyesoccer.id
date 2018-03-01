@@ -44,15 +44,27 @@
 </div>
 <script>
 
-  $(window).scroll(function() {
-   
-       if($(window).scrollTop() >= $(document).height()/2 + $(document).height()/4) {
-         
-            ajaxOnLoad('loadnewlist');
-         
-       }
-       
+ // $(window).scroll(function() {
+    //console.log($(window).scrollTop());
+    //console.log($(document).height());
+
+    jQuery(function($) {
+    $(window).on('scroll', function() {
+        console.log($(this).scrollTop());
+        console.log($(this).innerHeight());
+        console.log($(this)[0]);
+            if($(this).scrollTop() + $(this).innerHeight() >= $(this)[0].scrollHeight) {
+                alert('end reached');
+            }
+        })
     });
+    //    #if($(window).scrollTop() >= $(document).height()/2 + $(document).height()/4) {
+         
+    //         ajaxOnLoad('loadnewlist');
+         
+    //    }
+       
+    // });
     
  
 </script>

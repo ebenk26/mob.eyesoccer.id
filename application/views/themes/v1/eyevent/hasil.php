@@ -9,7 +9,7 @@
         </script>
     </div>
     <input type='hidden' name='fn' value='match_schedule' class='cinput'>
-    <input type='hidden' name='page' value='eyevent-schedule' class='cinput'>
+    <input type='hidden' name='page' value='eyevent-result' class='cinput'>
     <div class="container" style="margin-top: 50px;">
         <!-- <div id="popupKalender" class="modal fade" role="dialog">
             <div class="m-event-kalender">
@@ -19,7 +19,7 @@
             </div>
         </div> -->
         <div class="container">
-            <h2 class="thjadwalhasil">Jadwal PERTANDINGAN</h2>
+            <h2 class="thjadwalhasil">HASIL PERTANDINGAN</h2>
             <!-- <select id="pilih-liga" class="lc">
                 <option>Semua Liga</option>
             </select> -->

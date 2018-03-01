@@ -29,7 +29,7 @@
 					<tr>
 						<td>CEO / Founder</td>
 						<td>CTO / Founder</td>
-						<td>CFO / Founder</td>
+						<td>CFO / Co-Founder</td>
 					</tr>
 					<tr>
 						<td colspan="3">
@@ -50,27 +50,6 @@
 						</td>
 					</tr>
 					<tr>
-						<td><h2>Head of EyeTube Division</h2></td>
-					</tr>
-					<tr>
-						<td>Fadia Sekar
-							<br>Ade Firmansyah
-							<br>I Gede Agus Sukra Tanaya
-							<br>Ondri S. Prakarsa</td>
-					</tr>
-					<tr>
-						<td><h2>Head of EyeProfile Division</h2></td>
-					</tr>
-					<tr>
-						<td>Andi Saputra</td>
-					</tr>
-					<tr>
-						<td>
-							<h2>Head of EyeEvent Division</h2>
-							<br>Ajuan Firel
-						</td>
-					</tr>
-					<tr>
 						<td>
 							<h2>Reporter dan Jurnalis</h2>
 							<br>Bayu Mahendra
@@ -78,6 +57,33 @@
 							<br>Ridhoni
 							<br>Busthomi
 						</td>
+					</tr>
+					<tr>
+						<td>
+							<h2>Info Grafis</h2>
+							<br>Charles Lubis
+						</td>
+					</tr>
+					<tr>
+						<td><h2>EyeTube Division</h2></td>
+					</tr>
+					<tr>
+						<td>Fadia Sekar
+							<br>Ade Firmansyah
+							<br>I Gede Agus Sukra Tanaya
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<h2>Motion Graphic Artist</h2>
+							<br>Pratama Ilmiawan
+						</td>
+					</tr>
+					<tr>
+						<td><h2>Head of EyeProfile Division</h2></td>
+					</tr>
+					<tr>
+						<td>Andi Saputra</td>
 					</tr>
 					<tr>
 						<td>
@@ -89,14 +95,14 @@
 					</tr>
 					<tr>
 						<td>
-							<h2>Event Assistant</h2>
-							<br>Maylani Sofyand
+							<h2>Eyemarket Division</h2>
+							<br>Soraya Noor
 						</td>
 					</tr>
 					<tr>
 						<td>
-							<h2>Info Grafis</h2>
-							<br>Charles Lubis
+							<h2>EyeEvent Division</h2>
+							<br>Maylani Sofyand
 						</td>
 					</tr>
 					<tr>
@@ -118,13 +124,15 @@
 					<tr>
 						<td>
 							<h2>Internal Relation</h2>
-							<br>Noor Aliyah
+							<br>Siska Oktavia Lestari
+							<br>Abdul Aziz
+							<br>Andi <br>Deni
 						</td>
 					</tr>
 					<tr>
 						<td>
 							<h2>Graphic Design</h2>
-							<br>Fauzan
+							<br>Emil Siregar
 						</td>
 					</tr>
 					<tr>
@@ -134,6 +142,7 @@
 						<td>
 							<h2>Sales and Marketing</h2>
 							<br>Philips Gregory
+							<br>Owien Rodwin
 						</td>
 					</tr>
 					<tr>
@@ -150,28 +159,53 @@
 					</tr>
 					<tr>
 						<td>
+							<h2>Social Media Specialist</h2>
+							<br>Nugraha Putra
+						</td>
+					</tr>
+					<tr>
+						<td>
 							<h3>IT Department</h3>
 						</td>
 					</tr>
 					<tr>
 						<td>
-							<h2>Back End</h2>
-							<br>Muhammad Robi
+							<h2>IT Supervisor</h2>
 							<br>Rizki Satrio Putro
-							<br>Yudi Santoso
 						</td>
 					</tr>
 					<tr>
 						<td>
-							<h2>Front End</h2>
+							<h2>Back End Developer</h2>
+							<br>Muhammad Robi
+							<br>Kharizuno Hizbullah
+							<br>Sofyan Waldy
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<h2>Front End Developer</h2>
 							<br>Fajar Ulin Nuha
 							<br>Faradilah Nurzahra Danopa
 						</td>
 					</tr>
 					<tr>
 						<td>
+							<h2>Android App Developer</h2>
+							<br>Fazil Muamar
+							<br>Naufal Syarifuddin
+						</td>
+					</tr>
+					<tr>
+						<td>
 							<h2>SEO Specialist</h2>
-							<br>Andri Sukma Varoga
+							<br>Ardiatma
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<h2>IT Infrastructure</h2>
+							<br>Jimmy Zakaria
 						</td>
 					</tr>
 				</table>
