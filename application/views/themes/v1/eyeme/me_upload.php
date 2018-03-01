@@ -1,16 +1,16 @@
 <!--UPLOAD PAGE--> 
 <form <?php echo ($this->uri->segment(2) === null ? 'action="eyeme"' : ($this->uri->segment(3) === null ? 'action="../eyeme"' : 'action="../../eyeme"') )?>  enctype="multipart/form-data"  id="formtpl" method="post" class="form_multi ">
-<div id="imgtemplate" style="display:none;margin-top:200px;background:#ccc;position:fixed">
+<div id="imgtemplate" class="imguploademe">
 	<input type="hidden" name="fn" value="upload" class="cinput">
 	<input type="file" name="fupload" hidden="hidden" id="upload" form="formtpl" class="cinput">
 
 	<div class="img">
-		<img src="#" class="upl-img" width="100" height="100"> 
+		<img src="#" class="upl-img" width="100%"> 
 	</div>
 
-	<textarea name="caption"></textarea>
+	<textarea name="caption" class="textarea-caption-eme"></textarea>
 
-<button type="submit">upload
+<button type="submit"><i class="material-icons">send</i>
 </button>
 </div>
 
