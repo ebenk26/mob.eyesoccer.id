@@ -3004,8 +3004,8 @@ ul, li {
 }
 .news-headline ul li a p{
     margin: 0px;
-    height: 1.35em;
-    overflow: hidden;
+    /* height: 1.35em; */
+    /* overflow: hidden; */
     font-size: 1.1em;
     font-weight: 500;
 }
@@ -3018,6 +3018,7 @@ ul, li {
     position: relative;
     top: -11px;
     width: 15px;
+    height: 30px;
 }
 .tab-popular-custom-home{
     color: #FF5722 !important;

@@ -11,7 +11,7 @@
 				</script>
 			</div>
 			<input type='hidden' name='fn' value='trending' class='cinput'>
-			<span class="x-c">
+			<span class="x-c fafa">
 				<span>Trending</span>
 				<x class="m-l-100"></x>
 				<a href="">Choirul Huda</a>
@@ -41,7 +41,7 @@
 		<input type='hidden' name='page' value='1' class='cinput'>
 		<input type='hidden' name='desc' value='true' class='cinput'>
 		<a href="enews-detail.html">
-		<div class="container eyetube">
+		<div class="container eyetube fafa">
 			<div class="v-eyetube">
 				<img src="" alt="">
 			</div>
@@ -76,62 +76,6 @@
                                 <img src="" alt="">                                
                             </div>
 							<span>17 Okt 2017 - 12.451</span>
-							<h1>lorem ipsum dolor sit amet lorem ipsum dolor sit amet </h1>
-							<p>lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet </p>
-						</div>
-						<div class="rek-ber-c">
-							<div class="img-res-height">
-                                <img src="" alt="">                                
-                            </div>
-							<span>17 Okt 2017 - 12.45</span>
-							<h1>lorem ipsum dolor sit amet lorem ipsum dolor sit amet </h1>
-							<p>lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet </p>
-						</div>
-						<div class="rek-ber-c">
-							<div class="img-res-height">
-                                <img src="" alt="">                                
-                            </div>
-							<span>17 Okt 2017 - 12.45</span>
-							<h1>lorem ipsum dolor sit amet lorem ipsum dolor sit amet </h1>
-							<p>lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet </p>
-						</div>
-					</div>
-				</div>
-				<div id='tab-rekomendasi' class="box item">
-					<div class="container rek-ber fafa">
-						<div class="rek-ber-c">
-							<div class="img-res-height">
-                                <img src="" alt="">                                
-                            </div>
-							<span>17 Okt 2017 - 12.452</span>
-							<h1>lorem ipsum dolor sit amet lorem ipsum dolor sit amet </h1>
-							<p>lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet </p>
-						</div>
-						<div class="rek-ber-c">
-							<div class="img-res-height">
-                                <img src="" alt="">                                
-                            </div>
-							<span>17 Okt 2017 - 12.45</span>
-							<h1>lorem ipsum dolor sit amet lorem ipsum dolor sit amet </h1>
-							<p>lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet </p>
-						</div>
-						<div class="rek-ber-c">
-							<div class="img-res-height">
-                                <img src="" alt="">                                
-                            </div>
-							<span>17 Okt 2017 - 12.45</span>
-							<h1>lorem ipsum dolor sit amet lorem ipsum dolor sit amet </h1>
-							<p>lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet </p>
-						</div>
-					</div>
-				</div>
-				<div id='tab-usiamuda' class="box item">
-					<div class="container rek-ber fafa">
-						<div class="rek-ber-c">
-							<div class="img-res-height">
-                                <img src="" alt="">                                
-                            </div>
-							<span>17 Okt 2017 - 12.453</span>
 							<h1>lorem ipsum dolor sit amet lorem ipsum dolor sit amet </h1>
 							<p>lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet </p>
 						</div>

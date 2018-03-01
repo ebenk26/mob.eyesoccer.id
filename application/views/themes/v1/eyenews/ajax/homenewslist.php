@@ -7,16 +7,19 @@
 	{
 		if($i == 1){
 		?>
-		<div class="container" style="margin-bottom: -55px;">
+		<div class="container">
 			<a href="<?php echo $this->library->urltomob($dt->url); ?>" title="<?php echo $dt->title; ?>">
-				<div class="v-eyetube">
-					<img src="<?php echo $dt->url_pic; ?>" alt="<?php echo $dt->title; ?>">
+				<div class="container" style="height: 195px;">
+					<div class="v-eyetube" style="height: 195px;">
+						<img src="<?php echo $dt->url_pic; ?>" alt="<?php echo $dt->title; ?>">
+					</div>
+					<span style="padding-bottom: 0;margin-bottom: 0;margin-top: 0px;bottom: 82px;font-size: .6em;"><?php echo relative_time($this->library->datenormal($dt->publish_on)); ?> lalu</span>
+					<h1 style="padding-top: 0;margin-top: -40px;bottom: 40px; height: unset; overflow: unset;"><?php echo $dt->title; ?></h1>
 				</div>
-				<span style="padding-bottom: 0;margin-bottom: 0;"><?php echo relative_time($this->library->datenormal($dt->publish_on)); ?> lalu</span>
-				<h1 style="padding-top: 0;margin-top: -5px;"><?php echo $dt->title; ?></h1>
 			</a>
+		</div>
 			
-			<div class="container news-headline">
+			<div class="container news-headline" style="margin-bottom: unset;top: unset;">
 				<ul>
 		<?php
 		}else if($i == 2 || $i == 3 || $i == 4){
@@ -27,7 +30,7 @@
 		?>
 				</ul>
 			</div>
-			<span id='tab-populer' class="orange-active tab-popular-custom-home" active="true">Terkini</span>
+			<span id='tab-populer' class="orange-active tab-popular-custom-home" active="true" style="bottom: 0px;">Terkini</span>
 		</div>
 		<?php
 			}
