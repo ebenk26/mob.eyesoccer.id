@@ -56,7 +56,8 @@ $route['kebijakan-privasi'] 					= "home/kebijakan_privasi";
 $route['panduan-komunitas'] 					= "home/panduan_komunitas";
 $route['kontak'] 								= "home/kontak";
 $route['karir'] 								= "home/karir";
-$route['eyevent/jadwal-hasil'] 					= "Eyevent/jadwal_hasil";
+$route['eyevent/hasil-pertandingan'] 			= "Eyevent/hasil";
+$route['eyevent/jadwal-pertandingan'] 			= "Eyevent/jadwal";
 
 $route['default_controller'] = 'home';
 $route['404_override'] = '';
