@@ -17,7 +17,7 @@
     </div>
     <div class="container">
         <h2 class="thjadwalhasil">JADWAL & HASIL PERTANDINGAN</h2>
-        <select id="pilih-liga" class="lc">
+        <!-- <select id="pilih-liga" class="lc">
             <option>Semua Liga</option>
             <option value="6">Liga Santri Nusantara 2017 - Seri Nasional</option>
             <option value="16">English Premier League 2017/2018</option>
@@ -31,7 +31,7 @@
             <option value="75">COPA DEL RAY 2017/2018</option>
             <option value="89">Piala Dunia 2018 Rusia</option>
             <option value="92">Piala Presiden 2018</option>
-        </select>
+        </select> -->
         <button type="button" class="lihat-jadwal" data-toggle="modal" data-target="#popupKalender">Pilih Tanggal Jadwal Lainnya</button>
         <div class="box-jadwalhasil">
 
@@ -245,7 +245,7 @@
             console.log(txt_tanggal);
 
             var urlnya = "<?= base_url(); ?>Eyevent/get_jadwal/"+txt_tanggal;
-
+            
             $.ajax({
                 url: urlnya,
                 type: 'POST',
@@ -255,6 +255,7 @@
             .done(function(result) {
 
                 // console.log(result.body);
+                $('#body-jp').html('');
                 $('#body-jp').append(result.body);
                 
             });

@@ -17,7 +17,7 @@
            
         <div class="container">
             <div class="eme-prof-pict">
-                <div style="background: #ccc;width: 200px;height: 200px">
+                <div class="gr" style="width: 200px;height: 200px">
                 </div>
             </div>
             <div class="eme-prof-user">
@@ -26,14 +26,9 @@
             <p class="eme-prof-desc"></p>
             <table class="tx-c tr-1-bold">
                 <tr>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                </tr>
-                <tr>
-                    <td>photo</td>
-                    <td>pengikut</td>
-                    <td>diikuti</td>
+                    <td><span class="gr">xxxxx</span></td>
+                    <td><span class="gr">xxxxx</span></td>
+                    <td><span class="gr">xxxxx</span></td>
                 </tr>
             </table>
         </div>
@@ -53,11 +48,26 @@
         </div>
             <input type="hidden" name="fn" value="meprofile" class="cinput">
             <input type="hidden" name="uname" value ="<?php echo $this->uri->segment(3)?>-imglist" class="cinput">
-        <div class="content-profile">
-            <div style="background:#ccc;height:200px;margin:auto">
-            Loading
+            <div class="content-profile">
+                <div class="content-profile-item gr">
+                    <img src="" alt="">
+                </div>
+                <div class="content-profile-item gr">
+                    <img src="" alt="">
+                </div>
+                <div class="content-profile-item gr">
+                    <img src="" alt="">
+                </div>
+                <div class="content-profile-item gr">
+                    <img src="" alt="">
+                </div>
+                <div class="content-profile-item gr">
+                    <img src="" alt="">
+                </div>
+                <div class="content-profile-item gr">
+                    <img src="" alt="">
+                </div>
             </div>
-        </div>
     </div>
 </div>
 </div>
