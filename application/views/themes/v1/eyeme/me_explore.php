@@ -50,12 +50,13 @@
 
     jQuery(function($) {
     $(window).on('scroll', function() {
-        console.log($(this).scrollTop());
+        //console.log($(this).scrollTop());
         console.log($(this).innerHeight());
-        console.log($(this)[0]);
-            if($(this).scrollTop() + $(this).innerHeight() >= $(this)[0].scrollHeight) {
-                alert('end reached');
-            }
+        console.log($(document).height());
+        //console.log($(this)[0]);
+            // if($(this).scrollTop() >= 430) {
+            //    ajaxOnLoad('loadnewlist');
+            // }
         })
     });
     //    #if($(window).scrollTop() >= $(document).height()/2 + $(document).height()/4) {

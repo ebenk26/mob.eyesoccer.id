@@ -27,7 +27,10 @@ $hasLike = 0 ;
         <div class="container-eme-like">
             <ul>
                 <li>
-                    <a class="like" ref="<?php echo substr($v->id,0,3).'lk'?>"> 
+                    <?php 
+
+                    if($this->session->member['username']){?>
+                     <a class="like" ref="<?php echo substr($v->id,0,3).'lk'?>"> 
                     <span id="<?php echo substr($v->id,0,3).'clss'?>">
                         
                         <img src="<?php echo MEMENU.($hasLike == 1 ? 'love-active.svg' : 'love.svg') ?>">
@@ -46,6 +49,9 @@ $hasLike = 0 ;
                         <img class="openComment" src="<?php echo base_url()?>assets/img/menu/eyeme/comment.svg" alt="">
                         <span><?php echo count($v->comments)?></span>
                     </a>
+
+                    <?php }?>
+                   
 
                     <div id="<?php echo substr($v->id,0,3)?>" class="<?php echo substr($v->id,0,3)?>" action="eyeme" loading="off">
                         <input type="hidden" class="cinput" name="fn" value="gtcomment">
