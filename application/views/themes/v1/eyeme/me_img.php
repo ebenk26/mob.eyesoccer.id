@@ -12,30 +12,21 @@
      
         </script>
        
-        <div class="container">
+       <div class="container">
             <div class="container emepost">
+                <a href="">
                 <div class="img-usr">
-                    <div style="background: #ccc;height: 300px;width:200px">
+                    <div style="background: #f3f3f3;height: 20px;width: 20px;border-radius: 50%;">
                     </div>
                 </div>
-                <span>username</span>
-                <i class="material-icons more display-box-notif">more_horiz</i>
+                <span class="gr">username</span>
+                </a>
+                <i class="material-icons more display-box-notif" style="color: #f3f3f3;">more_horiz</i>
             </div>
             <div class="eme-img-content">
-               <div style="background:#ccc;height:281px;width:375px;margin-top:50px">
-               </div>
+                <div style="background: #f3f3f3;height:300px;width: 400px;margin-top:50px">
+                </div>
             </div>
-            <div class="container-eme-like">
-                <ul>
-                    <li>
-                        <img src="<?php echo MEMENU.'love.svg'?>">
-                        <i class="fa fa-comment-o openComment" aria-hidden="true"></i></li>
-                    <li><span><a href="">username</a> dan <a href="">234</a> menyukai ini</span></li>
-                </ul>
-            </div>
-            <ul class="comment-eme">
-                <li><span class="eme-time-post"></span></li>
-            </ul>
         </div>
     </div>
 </div>

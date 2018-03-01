@@ -17,35 +17,76 @@
         <table>
             <tr>
                 <td>
-                    <img src="http://modernartbuyer.com/wp-content/uploads/2014/10/Aqueous-II-278-web.jpg" alt="">
+                    <span class="gr" style="width: 25px;height: 25px;border-radius: 50%;display: block;"></span>
                 </td>
                 <td>
-                    <a href="">Lorem Ipsum</a> menyukaifoto anda
-                    <span>10 menit lalu</span>
+                    <a href="" class="gr">Lorem Ipsum lorem ipsum</a>
                 </td>
-                <td><img src="http://modernartbuyer.com/wp-content/uploads/2014/10/Aqueous-II-278-web.jpg" alt=""></td>
+                <td><span class="gr" style="width: 25px;height: 25px;border-radius: 50%;display: block;"></span></td>
             </tr>
             <tr>
                 <td>
-                    <img src="http://modernartbuyer.com/wp-content/uploads/2014/10/Aqueous-II-278-web.jpg" alt="">
+                <span class="gr" style="width: 25px;height: 25px;border-radius: 50%;display: block;"></span>
                 </td>
                 <td>
-                    <a href="">Lorem Ipsum</a> mengomentari post anda
-                    <span>10 menit lalu</span>
+                    <a href="" class="gr">Lorem Ipsum lorem ipsum</a>
                 </td>
-                <td><img src="http://modernartbuyer.com/wp-content/uploads/2014/10/Aqueous-II-278-web.jpg" alt=""></td>
+                <td><span class="gr" style="width: 25px;height: 25px;border-radius: 50%;display: block;"></span></td>
             </tr>
             <tr>
                 <td>
-                    <img src="http://modernartbuyer.com/wp-content/uploads/2014/10/Aqueous-II-278-web.jpg" alt="">
+                    <span class="gr" style="width: 25px;height: 25px;border-radius: 50%;display: block;"></span>
                 </td>
                 <td>
-                    <a href="">Lorem Ipsum</a> mulai mengikuti anda
-                    <span>10 menit lalu</span>
+                    <a href="" class="gr">Lorem Ipsum lorem ipsum</a>
                 </td>
-                <td><a href="">ikuti</a></td>
+                <td><span class="gr" style="width: 25px;height: 25px;border-radius: 50%;display: block;"></span></td>
             </tr>
-          
+            <tr>
+                <td>
+                <span class="gr" style="width: 25px;height: 25px;border-radius: 50%;display: block;"></span>
+                </td>
+                <td>
+                    <a href="" class="gr">Lorem Ipsum lorem ipsum</a>
+                </td>
+                <td><span class="gr" style="width: 25px;height: 25px;border-radius: 50%;display: block;"></span></td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="gr" style="width: 25px;height: 25px;border-radius: 50%;display: block;"></span>
+                </td>
+                <td>
+                    <a href="" class="gr">Lorem Ipsum lorem ipsum</a>
+                </td>
+                <td><span class="gr" style="width: 25px;height: 25px;border-radius: 50%;display: block;"></span></td>
+            </tr>
+            <tr>
+                <td>
+                <span class="gr" style="width: 25px;height: 25px;border-radius: 50%;display: block;"></span>
+                </td>
+                <td>
+                    <a href="" class="gr">Lorem Ipsum lorem ipsum</a>
+                </td>
+                <td><span class="gr" style="width: 25px;height: 25px;border-radius: 50%;display: block;"></span></td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="gr" style="width: 25px;height: 25px;border-radius: 50%;display: block;"></span>
+                </td>
+                <td>
+                    <a href="" class="gr">Lorem Ipsum lorem ipsum</a>
+                </td>
+                <td><span class="gr" style="width: 25px;height: 25px;border-radius: 50%;display: block;"></span></td>
+            </tr>
+            <tr>
+                <td>
+                <span class="gr" style="width: 25px;height: 25px;border-radius: 50%;display: block;"></span>
+                </td>
+                <td>
+                    <a href="" class="gr">Lorem Ipsum lorem ipsum</a>
+                </td>
+                <td><span class="gr" style="width: 25px;height: 25px;border-radius: 50%;display: block;"></span></td>
+            </tr>
         </table>
     </div>
 </div>
