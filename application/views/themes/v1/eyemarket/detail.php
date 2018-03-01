@@ -1,4 +1,4 @@
-<div class="container" style="margin-top:47px;">
+<div style="margin-top:57px; width: 100vw;">
 	<div id="reqdetail" class='loaddetail' action="eyemarket" loading="off" clean="clsmarket">
 	    <div id='clsmarket'>
 	        <script>

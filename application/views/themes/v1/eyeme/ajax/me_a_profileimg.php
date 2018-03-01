@@ -13,9 +13,9 @@ echo '</div>';
 
 ?>
  <script type="text/javascript">
-    	
+    var meimg = '<?php echo MEIMGUSR?>'
 	function gambar(ref){
-        location.href= 'http://localhost/mobile/eyeme/img/'+ ref;
+        location.href= meimg + ref;
     }
 
 </script>

@@ -1,15 +1,16 @@
-<div class="container over-x">
-    <div id="emSlide" class="carousel slide t-30">
-        <div role="listbox" class="carousel-inner w-max">
+<div class="container" style="margin-top:70px;">
+        <div class="emarket-content-home">
             <div id="reqmarket" class='loadmarket' action="eyemarket" loading="off" clean="clsmarket">
-                <div id="clsmarket">
-                       <script>
+                <div>
+                    <div id="clsmarket">
+                        <script>
                             $(document).ready(function(){
                                 $(window).on('load',function(){
                                     ajaxOnLoad('loadmarket');
                                 });
                             });
                         </script>
+                    </div>
                 </div>
                 <input type='hidden' name='fn' value='market_home' class='cinput'>
                 <div class="box item active">
@@ -34,5 +35,4 @@
                 </div>
             </div>
         </div>
-    </div>
 </div>

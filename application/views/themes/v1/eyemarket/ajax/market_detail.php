@@ -2,18 +2,11 @@
     foreach ($product as $data)
     {
 ?>
-
-        <div class="center-desktop">
-            <div class="row m-0-30">
-
-                <div class="col-md-12">
-
-                    <div class="row" id="productMain">
-                        <div class="col-sm-6" style="padding: 0px !important;">
-                            <div id="mainImage" style="margin-top: 10%;">
+                        <div class="container" style="width: unset;">
+                            <div id="mainImage" style="margin: 10px 0px;">
                                 <img src="<?= MARKETIMG."".$data["image1"]; ?>" class="img-responsive">
                             </div>
-                                <div class="row" id="thumbs" style="margin-top: 10px !important;">
+                                <div class="row" id="thumbs">
                                     <div class="col-xs-2">
                                         <a href="<?= MARKETIMG."".$data["image1"]; ?>" class="thumb">
                                             <img src="<?= MARKETIMG."".$data["image1"]; ?>" alt="<?= $data['nama']; ?>" class="img-responsive">
@@ -74,7 +67,7 @@
 
                         ?>
                         </div>
-                        <div class="col-sm-6" style="padding: 0px !important;">
+                        <div class="container">
                             <div class="box">
                                     <div class="sizes" style="text-align: left;">
                                         <h3 style="font-weight: 700;letter-spacing: 0.08em;text-transform: uppercase;"> 
@@ -176,69 +169,49 @@
                                     <div class="box" id="details">
                                         <p>
                                             <h4>Detail Produk</h4>
-                                            <p><?= $data['keterangan']; ?></p>
+                                            <p style="width: 90%;"><?= $data['keterangan']; ?></p>
                                     </div>
                             </div>
                         </div>
 
-                
 
-                    </div>
-
-                    <!-- <div class="box social" id="product-social">
-                        <h4>Bagikan Ke Teman Anda</h4>
-                        <p>
-                            <a href="#" class="external facebook" data-animate-hover="pulse"><i class="fa fa-facebook"></i></a>
-                            <a href="#" ><img src="<?= base_url(); ?>assets/img/wa-logo.png" alt="" width="26px"></a>
-                            <a href="#" class="external twitter" data-animate-hover="pulse"><i class="fa fa-twitter"></i></a>
-                            <a href="#" class="email" data-animate-hover="pulse"><i class="fa fa-envelope"></i></a>
-                        </p>
-                    </div> -->
-
-                    <div class="row">
-                        <div class="container">
-                            <div class="box text-uppercase">
-                                <h3>Produk Lainnya</h3>
-                            </div>
-                        </div>
-
-                        <div class="container">
+<!-- NEW PRODUK LAINNYA -->
+<h3 class="produk-lainnya-h3">Produk Lainnya</h3>
+<div class="container over-x" style="padding: unset;">
+    <div id="emSlide" class="carousel slide t-30">
+        <div role="listbox" class="carousel-inner w-max">
+            <div id="reqmarket" class="loadmarket" action="eyemarket" loading="off" clean="clstube" style="display: block;">
                     <?php
-                        foreach ($ex_product as $value)
-                        {
-                    ?>
-                            <a href="<?= base_url(); ?>eyemarket/detail/<?= $value['toko']; ?>/<?= $value['title_slug']; ?>">
-                                <div class="product col-md-3 col-sm-6 col-xm-12">
-                                    <div class="image">
-                                        <img src="<?= MARKETIMG."".$value["image1"]; ?>" alt="<?= $value['nama']; ?>" class="img-responsive">
-                                    </div>
-                                    <div class="text">
-                                        <h3><?= $value['nama']; ?></h3>
-                                        <?php
-                                            if ($value['harga'] != 0)
-                                            {
-                                        ?>
-                                                <p class="price">Rp. <?= number_format($value['harga'],0,',','.'); ?> </p>
-                                        <?php        
-                                            }
-                                        ?>
-
-                                    </div>
-                                </div>
-                            </a>
-                            <!-- /.product -->
-                    <?php        
-                        }
-                    ?>
+                    foreach ($ex_product as $value)
+                    {
+                ?>
+                <a href="<?= base_url(); ?>eyemarket/detail/<?= $value['toko']; ?>/<?= $value['title_slug']; ?>">
+                    <div class="em-box-content">
+                        <div class="img-prod">
+                            <img src="<?= MARKETIMG."".$value["image1"]; ?>" alt="<?= $value['nama']; ?>">
                         </div>
-
+                                            
+                        <h1><?= $value['nama']; ?></h1>
+                        <!-- <p class="prices" style="visibility:hidden;"> 0</p> -->
+                        <?php
+                                                if ($value['harga'] != 0)
+                                                {
+                                            ?>
+                                                    <p class="price">Rp. <?= number_format($value['harga'],0,',','.'); ?> </p>
+                                            <?php        
+                                                }
+                                            ?>
+                        <button type="text" class="beli">Available Soon</button>
                     </div>
-
-                </div>
-
+                </a>
+                            
+                        <?php        
+                            }
+                        ?>
             </div>
-            <!-- /.row -->
         </div>
+    </div>
+</div>
 <?php        
     }
 ?>
