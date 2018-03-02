@@ -32,21 +32,24 @@ class EyemeMod extends CI_Model {
 
     }
     function __explorelist(){
-        $page  = $this->input->post('pg');
-        $addId = $this->input->post('add');
+        $page = 1;
+        if($this->input->post('sess')) {
+            $page = $this->session->pageexplore+1;
+            $this->session->set_userdata(array('pageexplore' => $page));
+        } else {
+            $this->session->set_userdata(array('pageexplore' => 1));
+        }
+        
         $query = array('page' => $page,'limit' => '18', 'sortby'=> 'last_online');
         $data['explore'] = $this->excurl->remoteCall($this->__xurl().'me-images',$this->__xkey(),$query);
-        $html           = $this->load->view($this->__theme().'eyeme/ajax/me_a_explore',$data,true);
-        if(count(json_decode($data['explore'])->data ) > 0){
+        $html = $this->load->view($this->__theme().'eyeme/ajax/me_a_explore',$data,true);
+        if(count(json_decode($data['explore'])->data ) > 0) {
             if($page == '1'){
-                $data  = array('xClass'=> 'reqexplorelist','xHtml' => $html);     
+                $data  = array('xClass' => 'reqexplorelist','xHtml' => $html);     
+            } else {
+                $data  = array('xAppend' => 'reqexplorelist','xHtml' => $html,'xClass' => 'reqexplorelist','test' => $page);
             }
-            else{
-    
-                $data  = array('xAppend'=> 'reqexplorelist','xHtml' => $html,'xClass'=> 'reqexplorelist');
-            }
-        }
-        else{
+        } else {
             $data = array();
         }
         $this->tools->__flashMessage($data);
