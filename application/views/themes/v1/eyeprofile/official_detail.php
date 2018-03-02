@@ -1,6 +1,13 @@
 <?php
-    echo set_breadcrumb("eyeprofile",urldecode($slug));
+    // echo set_breadcrumb("eyeprofile",urldecode($slug));
 ?>
+<div class="crumb">
+	<ul>
+		<li><a href="<?php echo base_url();?>" style="display:unset;">Home</a></li>
+		<li><a href="<?php echo base_url();?>eyeprofile/klub" style="display:unset;">Eyeprofile</a></li>
+		<li id="slug_official_detail"><?php echo urldecode($slug);?></li>
+	</ul>
+</div>
 <div id="reqoffcdetail" class='loadoffcdetail' action="eyeprofile" loading="off" clean="clsoffcdetail">
     <div id='clsoffcdetail'>
         <script>

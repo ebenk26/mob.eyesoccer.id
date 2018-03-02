@@ -41,6 +41,7 @@
                         </script>
                     </div>
                     <input type="hidden" name="fn" value="playerhome" class="cinput">
+                    <input type="hidden" name="page" value="<?php echo rand(1, 100) ?>" class="cinput">
                     <a href="">
                         <div class="ep-box-content">
                             <div class="img">

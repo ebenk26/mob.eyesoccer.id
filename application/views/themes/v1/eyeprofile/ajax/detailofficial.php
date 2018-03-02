@@ -78,3 +78,6 @@
         </div>
     </div>
 </div>
+<script>
+	$('#slug_official_detail').html('<?= $model->name; ?>');
+</script>
