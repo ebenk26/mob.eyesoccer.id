@@ -171,7 +171,7 @@
     </div>
 </div>
 <!-- EYENEWS -->
-<div class="p-container tab2">
+<div class="p-container tab2" style="padding-top: 0px;">
 	<div class="container eyetube">
 		<div id="reqhomenewslist" class='loadhomenewslist' action="eyenews" loading="off" clean="clshomenewslist">
 			<div id='clshomenewslist'>
