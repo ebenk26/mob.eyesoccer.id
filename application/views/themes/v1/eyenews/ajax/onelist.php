@@ -7,7 +7,7 @@ if ($list){
 		if($i == 1){
 ?>
 			<a href="<?php echo base_url()."eyenews/detail/".$dt->slug;?>">
-				<div class="container eyetube">
+				<div class="container eyetube" style="height: 220px;">
 					<div class="v-eyetube">
 						<img src="<?php echo $dt->url_pic;?>" alt="">
 					</div>
@@ -15,7 +15,14 @@ if ($list){
 					<h1><?php echo $dt->title;?></h1>
 				</div>
 			</a>
-			<span id='tab-populer' class="orange-active" active="true" style="bottom: 0;color: #FF5722;margin: 5px;">Terkini</span>
+			<div class="container news-headline" style="margin-bottom: 10px;top: unset;">
+				<ul>
+							<li><a href="http://m.eyesoccer.id/eyenews/detail/pembagian-hak-siar-di-serie-a-akan-berdampak-pada-kenaikan-kualitas-setiap-klub-5c2abc7"><p>Pembagian Hak Siar di Serie A, Akan Berdampak Pada Kenaikan Kualitas Setiap Klub</p></a></li>
+							<li><a href="http://m.eyesoccer.id/eyenews/detail/inter-membantah-berita-mengenai-laporan-hutangnya-yang-besar-add0007"><p>Inter Membantah Berita Mengenai Laporan Hutangnya yang Besar</p></a></li>
+							<li><a href="http://m.eyesoccer.id/eyenews/detail/panpel-sikapi-rekor-penonton-di-piala-afc-saat-persija-vs-tampines-rovers-4d7199a"><p>Panpel Sikapi Rekor Penonton di Piala AFC Saat Persija vs Tampines Rovers</p></a></li>
+						</ul>
+			</div>
+			<span id='tab-populer' class="orange-active" active="true" style="bottom: 0;color: #FF5722;margin: 5px;font-weight: 600;">Terkini</span>
 <?php
 		}else{
 		?>
