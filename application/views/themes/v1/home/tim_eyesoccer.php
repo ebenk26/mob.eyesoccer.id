@@ -29,7 +29,7 @@
 					<tr>
 						<td>CEO / Founder</td>
 						<td>CTO / Founder</td>
-						<td>CFO / Co-Founder</td>
+						<td>CFO / Co - Founder</td>
 					</tr>
 					<tr>
 						<td colspan="3">
@@ -75,6 +75,12 @@
 					</tr>
 					<tr>
 						<td>
+							<h2>EyeEvent Division</h2>
+							<br>Maylani Sofyand
+						</td>
+					</tr>
+					<tr>
+						<td>
 							<h2>Motion Graphic Artist</h2>
 							<br>Pratama Ilmiawan
 						</td>
@@ -88,7 +94,7 @@
 					<tr>
 						<td>
 							<h2>Admin</h2>
-							<br>Appeli Hadishtis
+							<br>Apelli Hadishtis
 							<br>Aris Diyantoro
 							<br>Budi Harjo
 						</td>
@@ -97,6 +103,13 @@
 						<td>
 							<h2>Eyemarket Division</h2>
 							<br>Soraya Noor
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<h2>Social Media</h2>
+							<br>Putra Nugraha
+							<br>DB Krishna
 						</td>
 					</tr>
 					<tr>
@@ -142,7 +155,7 @@
 						<td>
 							<h2>Sales and Marketing</h2>
 							<br>Philips Gregory
-							<br>Owien Rodwin
+							<br>Owin Rodwin
 						</td>
 					</tr>
 					<tr>
@@ -176,6 +189,14 @@
 					</tr>
 					<tr>
 						<td>
+							<h2>Back End</h2>
+							<br>Muhammad Robi
+							<br>Sofyan Walid
+							<br>Kharizuno
+						</td>
+					</tr>
+					<tr>
+						<td>
 							<h2>Back End Developer</h2>
 							<br>Muhammad Robi
 							<br>Kharizuno Hizbullah
@@ -200,6 +221,13 @@
 						<td>
 							<h2>SEO Specialist</h2>
 							<br>Ardiatma
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<h2>Android Mobile Developer</h2>
+							<br>Fazil Muamar
+							<br>Naufal Syarifuddin
 						</td>
 					</tr>
 					<tr>
