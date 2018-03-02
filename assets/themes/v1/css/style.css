@@ -2715,9 +2715,10 @@ ul, li {
     display: inline-block;
     padding-bottom: 5px;
 }
-.fafa span, .fafa h1, .fafa p, .fafa h2, .fafa h3{
-    background-color: #fafafa;
-    color: #fafafa;
+.fafa span, .fafa h1, .fafa p, .fafa h2, .fafa h3
+{
+    background-color: #fafafa !important;
+    color: #fafafa !important;
 }
 .loadtabnews #boxtab span{
     float: unset !important;
@@ -2997,8 +2998,8 @@ ul, li {
 }
 .news-headline ul li a p{
     margin: 0px;
-    /* height: 1.35em; */
-    /* overflow: hidden; */
+    max-height: 2.35em;
+    overflow: hidden;
     font-size: 1.1em;
     font-weight: 500;
 }

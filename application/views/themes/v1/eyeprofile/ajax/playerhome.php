@@ -8,7 +8,7 @@ foreach ($profile->data as $k => $v) {
         <a href='<?php echo $v->share_url; ?>'>
             <div class='ep-box-content'>
                 <div class='img'>
-                    <img src='<?php echo(($this->library->lastext($v->url_pic, ' .')) ? $v->url_pic : $default); ?>' alt='<?php echo $v->name; ?>'>
+                    <img src='<?php echo $v->url_pic; ?>' alt='<?php echo $v->name; ?>'>
                 </div>
                 <div class='ep-detail'>
                     <h1><?php echo $v->name; ?></h1>

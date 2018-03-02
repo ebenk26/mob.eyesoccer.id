@@ -28,7 +28,11 @@ class EyenewsMod extends CI_Model {
 	$page  = $this->input->post('page');
 	$limit = $this->input->post('limit');
 	$desc = $this->input->post('desc');
-	$query = array('page' => $page, 'limit' => $limit, 'sortby' => 'newest', 'description' => $desc);
+
+	$query = array('page' => 1, 'limit' => 4, 'sortby' => 'newest', 'description' => $desc);
+	$data['awal'] = $this->excurl->remoteCall($this->__xurl().'news', $this->__xkey(), $query);
+
+	$query = array('page' => 2, 'limit' => 3, 'sortby' => 'newest', 'description' => $desc);
 	$data['list'] = $this->excurl->remoteCall($this->__xurl().'news', $this->__xkey(), $query);
 	
 	$html = $this->load->view($this->__theme().'eyenews/ajax/onelist', $data, true);

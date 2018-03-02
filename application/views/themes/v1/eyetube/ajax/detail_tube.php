@@ -19,7 +19,7 @@
         $tube  = json_decode($tube);
 ?>	
 			<input id="eyetube_id" type="hidden" value="<?php echo $tube->data->id;?>">
-            <video controlsList="nodownload" width="100%" height="" controls poster="<?= $tube->data->url_thumb; ?>/medium">
+            <video autoplay controlsList="nodownload" width="100%" height="100%" controls="true" poster="<?= $tube->data->url_thumb; ?>/medium">
                 <source src="<?= $tube->data->url_video; ?>" type="video/mp4">
             </video>
             <div class="etube-v-title-mobile">

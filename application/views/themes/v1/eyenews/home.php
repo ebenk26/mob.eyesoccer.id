@@ -14,14 +14,10 @@
 			<span class="x-c fafa">
 				<span>Trending</span>
 				<x class="m-l-100"></x>
-				<a href="">Choirul Huda</a>
-				<a href="">IndonesiaU-19</a>
-				<a href="">Egy Maulana Vikri</a>
-				<a href="">Persib</a>
-				<a href="">Liga2</a>
-				<a href="">Liga Santri Nusantara</a>
-				<a href="">Liga Champion</a>
-				<a href="">Liga1</a>
+				<a href="" class="gr">Choirul Huda</a>
+				<a href="" class="gr">IndonesiaU-19</a>
+				<a href="" class="gr">Egy Maulana Vikri</a>
+				<a href="" class="gr">Persib</a>
 			</span>
 		</div>
     </div>
@@ -42,11 +38,9 @@
 		<input type='hidden' name='desc' value='true' class='cinput'>
 		<a href="enews-detail.html">
 		<div class="container eyetube fafa">
-			<div class="v-eyetube">
+			<div class="container" style="background-color: #fafafa !important;height: 220px;overflow: hidden;">
 				<img src="" alt="">
 			</div>
-			<span>30 menit lalu</span>
-			<h1>Lorrem Ipsum solor sit ametLorem Ipsum Dolor Sit Amet</h1>
 		</div>
 		</a>
 	</div>
@@ -63,9 +57,9 @@
 			</div>
 			<input type='hidden' name='fn' value='tabnews' class='cinput'>
 
-				<span id='tab-populer' onclick="tabmenu(this.id, 'orange-active')" class="orange-active">terpopuler</span>
-				<span id='tab-rekomendasi' onclick="tabmenu(this.id, 'orange-active')">rekomendasi</span>
-				<span id='tab-usiamuda' onclick="tabmenu(this.id, 'orange-active')">usia muda</span>
+				<span id='tab-populer' onclick="tabmenu(this.id, 'orange-active')" class="orange-active gr">terpopuler</span>
+				<span id='tab-rekomendasi' onclick="tabmenu(this.id, 'orange-active')" class="gr">rekomendasi</span>
+				<span id='tab-usiamuda' onclick="tabmenu(this.id, 'orange-active')" class="gr">usia muda</span>
 			
 			<hr>
 			<div role="listbox" class="carousel-inner">                    
@@ -118,7 +112,7 @@
 						</div>
 						<input type='hidden' name='fn' value='list_tube_eyenews' class='cinput'>
 						<a href="enews-detail.html">
-							<div class="video-thumb">
+							<div class="video-thumb fafa">
 								<div class="v-thumb-img">
 									<img src="" alt="">
 								</div>
@@ -127,38 +121,11 @@
 							</div>
 						</a>
 						<a href="enews-detail.html">
-							<div class="video-thumb">
+							<div class="video-thumb fafa">
 								<div class="v-thumb-img">
 									<img src="" alt="">
 								</div>
 								<h2>Lorem Ipsum Dolor Sit AmetLorem Ipsum Dolor Sit AmetLorem Ipsum Dolor Sit Amet</h2>
-								<span>2 jam lalu</span>
-							</div>
-						</a>
-						<a href="enews-detail.html">
-							<div class="video-thumb">
-								<div class="v-thumb-img">
-									<img src="" alt="">
-								</div>
-								<h2>Lorem Ipsum Dolor Sit Amet</h2>
-								<span>2 jam lalu</span>
-							</div>
-						</a>
-						<a href="enews-detail.html">
-							<div class="video-thumb">
-								<div class="v-thumb-img">
-									<img src="" alt="">
-								</div>
-								<h2>Lorem Ipsum Dolor Sit Amet</h2>
-								<span>2 jam lalu</span>
-							</div>
-						</a>
-						<a href="enews-detail.html">
-							<div class="video-thumb">
-								<div class="v-thumb-img">
-									<img src="" alt="">
-								</div>
-								<h2>Lorem Ipsum Dolor Sit Amet</h2>
 								<span>2 jam lalu</span>
 							</div>
 						</a>
