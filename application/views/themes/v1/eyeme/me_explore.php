@@ -39,4 +39,7 @@
     function gambar(ref){
         location.href= '<?php echo MEURL.'img/'?>'+ ref;
     }
+    function xdir(){
+        location.href="<?php echo LOGINURL.'?from=eyeme'?>";
+    }
 </script>

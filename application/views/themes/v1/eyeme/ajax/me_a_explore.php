@@ -12,6 +12,9 @@
 				     	$imglist['onclick'] = 'gambar(this.id)';
 				     	$imglist['id']      = $v->id;
 				     }
+				     else{
+				     	$imglist['onclick'] = 'xdir()';
+				     }
 				     echo img($imglist)
 				?>
 		    </div>

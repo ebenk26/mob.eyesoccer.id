@@ -35,6 +35,7 @@ class Member extends CI_Controller {
 			$data['id']  	= $this->HomeMod->get_id('id_member', 'tbl_member', $this->session->member['id']);
 			$data['detail'] = $this->MemberMod->member_detail($data['id']);
 		}
+		$data['eyeme']     = ($this->input->get('from') == 'eyeme' ? 1 : 0);
 	    $data['content']   = $content;
 	    $data['title']     = $this->config->item('meta_title');
 
