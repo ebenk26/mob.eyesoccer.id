@@ -282,9 +282,13 @@ define('VIEWPATH', $view_folder . DIRECTORY_SEPARATOR);
  * CDN STATIC URL
  *
  */
-
-define('SUBCDN', 'http://localhost/mob.eyesoccer.id/'); //'http://cdn.eyesoccer.id/';
-define('SUBSTATIC', 'http://localhost/mob.eyesoccer.id/'); //'http://static.eyesoccer.id/';
+if($_SERVER['SERVER_NAME'] === 'localhost'){
+	define('SUBCDN', 'http://localhost/mob.eyesoccer.id/'); //'http://cdn.eyesoccer.id/';
+	define('SUBSTATIC', 'http://localhost/mob.eyesoccer.id/'); //'http://static.eyesoccer.id/';
+}else{
+	define('SUBCDN', 'http://m.eyesoccer.id/'); //'http://cdn.eyesoccer.id/';
+	define('SUBSTATIC', 'http://m.eyesoccer.id/'); //'http://static.eyesoccer.id/';
+}
 
 /*
  * --------------------------------------------------------------------
