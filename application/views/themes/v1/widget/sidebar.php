@@ -1,6 +1,16 @@
 <!-- SEARCHBOX -->
 <div id="srcbox" class="searchbox">
-	<input class="input_search" type="search" name="search" placeholder="cari apa hari ini?"><button id="srcSub" type="button"><a onclick="Search()">Cari</a></button>
+	<?php 
+
+		if(@$me_menu != '1'){
+
+			echo '<input class="input_search" type="search" name="search" placeholder="cari apa hari ini?"><button id="srcSub" type="button"><a onclick="Search()">Cari</a></button>';
+
+		}
+		echo 'console.log(\''.var_dump($me_menu).'\')';
+
+	?>
+	
 	<div class="close"></div>
 </div>
 

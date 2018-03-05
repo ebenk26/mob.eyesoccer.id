@@ -52,12 +52,12 @@ window.onload = function(){
     //    $('#regBtn').addClass('active');
     //    $('#logBtn').removeClass('active');
     // }
-    src.onclick = function() {
-        srcbox.style.display = "block";
-    }
-    srcS.onclick = function() {
-        srcbox.style.display = "none";
-    }
+    // // src.onclick = function() {
+    // //     srcbox.style.display = "block";
+    // // }
+    // srcS.onclick = function() {
+    //     srcbox.style.display = "none";
+    // }
     close.onclick = function() {
         srcbox.style.display = "none";
     }
