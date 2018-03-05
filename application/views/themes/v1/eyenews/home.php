@@ -1,26 +1,84 @@
     <!-- TRENDING --> 
-    <div class="trending">
+    <!-- <div class="trending"> -->
         <div id="reqtrend" class='loadtrend' action="eyenews" loading="off" clean="clstrend">
 			<div id='clstrend'>
-				<script>
+				<!-- <script>
 					$(document).ready(function(){
 						$(window).on('load',function(){
 							ajaxOnLoad('loadtrend');
 						});
 					});
-				</script>
+				</script> -->
 			</div>
 			<input type='hidden' name='fn' value='trending' class='cinput'>
-			<span class="x-c fafa">
+			<!-- <span class="x-c fafa">
 				<span>Trending</span>
 				<x class="m-l-100"></x>
 				<a href="" class="gr">Choirul Huda</a>
 				<a href="" class="gr">IndonesiaU-19</a>
 				<a href="" class="gr">Egy Maulana Vikri</a>
 				<a href="" class="gr">Persib</a>
-			</span>
+			</span> -->
+			<!-- <span class="x-c">
+				<span>
+					<ul>
+						<li>
+							<a href="">LIGA</a>
+							<ul>
+								<li><a href="">Di Pinggir Lapangan</a></li>
+								<li><a href="">Di Pinggir Lapangan</a></li>
+								<li><a href="">Di Pinggir Lapangan</a></li>
+								<li><a href="">Di Pinggir Lapangan</a></li>
+							</ul>
+						</li>
+					</ul>
+				</span>
+				<div class="container">
+					<a href="" class="gr">Choirul Huda</a>
+					<a href="" class="gr">IndonesiaU-19</a>
+					<a href="" class="gr">Egy Maulana Vikri</a>
+					<a href="" class="gr">Persib</a>
+				</div>
+			</span> -->
 		</div>
-    </div>
+	<!-- </div> -->
+	<div class="container xc" style="margin-top: 50px;">
+		<table>
+			<tr>
+				<td>
+					<div class="cat-x">
+						<ul>
+							<li>
+								<span>LIGA</span>
+								<ul>
+									<li>
+										<a href="">Di Pinggir Lapangan</a>
+									</li>
+									<li>
+										<a href="">Di Pinggir Lapangan</a>
+									</li>
+									<li>
+										<a href="">Di Pinggir Lapangan</a>
+									</li>
+									<li>
+										<a href="">Di Pinggir Lapangan</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</td>
+				<td class="container over-x" style="max-width: 90vw !important;height: max-content;margin-bottom: -20px;">
+					<div class="trend w-max" style="margin-top: 10px;">
+						<a href="">Choirul Huda</a>
+						<a href="">IndonesiaU-19</a>
+						<a href="">Egy Maulana Vikri</a>
+						<a href="">Persib</a>
+					</div>
+				</td>
+			</tr>
+		</table>
+	</div>
     <!-- EYENEWS -->
 	<div id="reqonelist" class='loadonelist' action="eyenews" loading="off" clean="clsonelist">
 		<div id='clsonelist'>

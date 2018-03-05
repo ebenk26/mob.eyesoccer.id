@@ -11,7 +11,7 @@
             {
                 ?>
                     <a href="<?php echo $this->library->urltomob($dt->share_url); ?>" title="<?php echo $dt->title; ?>">
-                        <div class="v-eyetube">
+                        <div class="v-eyetube"  style="height: 185px;">
                             <img src="<?php echo $dt->url_thumb.'/medium'; ?>" alt="<?php echo $dt->title; ?>">
                         </div>
                         <span><?php echo relative_time($this->library->datenormal($dt->createon)); ?> lalu</span>
