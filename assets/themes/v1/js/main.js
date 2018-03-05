@@ -624,6 +624,12 @@ function responseData(msg) {
         })
     }
 
+    if (msg.xHidden != undefined) {
+        $.each(msg.xData, function (v, n) {
+            $('.' + v).fadeOut('fast');
+        })
+    }
+
     if (msg.xUrlhash != undefined) {
         urlUpdate(urlSplit(msg.xUrlhash));
     }

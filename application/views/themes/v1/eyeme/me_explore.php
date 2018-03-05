@@ -5,22 +5,20 @@
         <img src="http://m.eyesoccer.id/assets/img/eyeme/menu/search.svg" alt="explore">
     </div>
     <div id="reqexplorelist" class='loadexplorelist' action="eyeme" loading="off" clean="clsexplorelist">
-    <div class="content-explore">
-        <div id='clsexplorelist'>
-            <script>
-                $(document).ready(function(){
-                    $(window).on('load',function(){
-                        ajaxOnLoad('loadexplorelist');
-                    });
+        <div class="content-explore">
+            <div id='clsexplorelist'>
+                <script>
+                    $(document).ready(function(){
+                        $(window).on('load',function(){
+                            ajaxOnLoad('loadexplorelist');
+                        });
 
-                });
-         
-            </script>
-        </div>
+                    });
+             
+                </script>
+            </div>
             <input type="hidden" name="fn" value="explorelist" class="cinput">
-            <input type="hidden" name="pg" value="1" class="cinput">
-             <input type="hidden" name="add" id="an" class="cinput" value="addId1">
-    
+            <input type="hidden" name="pg" value="1" class="cinput">        
             <div class="content-explore-item gr">                
             </div>
             <div class="content-explore-item gr">                
@@ -33,39 +31,15 @@
             </div>
             <div class="content-explore-item gr">                
             </div>          
+        </div>  
     </div>  
- </div>  
-    <div  id="reqnewlist" class='loadnewlist' action="eyeme" loading="off">
-  
-        <input type="hidden" name="fn" value="explorelist" class="cinput">
-        <input type="hidden" name="pg"  class="cinput" id="pg"> 
-        <input type="hidden" name="add" id="an" class="cinput">
-    </div>
 </div>
-<script>
 
- // $(window).scroll(function() {
-    //console.log($(window).scrollTop());
-    //console.log($(document).height());
-
-    jQuery(function($) {
-    $(window).on('scroll', function() {
-        //console.log($(this).scrollTop());
-        console.log($(this).innerHeight());
-        console.log($(document).height());
-        //console.log($(this)[0]);
-            // if($(this).scrollTop() >= 430) {
-            //    ajaxOnLoad('loadnewlist');
-            // }
-        })
-    });
-    //    #if($(window).scrollTop() >= $(document).height()/2 + $(document).height()/4) {
-         
-    //         ajaxOnLoad('loadnewlist');
-         
-    //    }
-       
-    // });
-    
- 
+<script type="text/javascript">
+    function gambar(ref){
+        location.href= '<?php echo MEURL.'img/'?>'+ ref;
+    }
+    function xdir(){
+        location.href="<?php echo LOGINURL.'?from=eyeme'?>";
+    }
 </script>

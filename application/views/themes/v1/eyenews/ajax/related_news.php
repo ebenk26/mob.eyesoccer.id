@@ -28,7 +28,6 @@ if ($newsdetail){
 
 <script>
 	var pg = 1;
-	var height = '';
 	$(window).scroll(function() {
 		// console.log('1',$(window).scrollTop());
 		// console.log('2',$(window).height());

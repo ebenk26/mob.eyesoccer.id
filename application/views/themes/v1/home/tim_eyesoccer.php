@@ -107,13 +107,6 @@
 					</tr>
 					<tr>
 						<td>
-							<h2>Social Media</h2>
-							<br>Putra Nugraha
-							<br>DB Krishna
-						</td>
-					</tr>
-					<tr>
-						<td>
 							<h2>EyeEvent Division</h2>
 							<br>Maylani Sofyand
 						</td>
@@ -174,6 +167,7 @@
 						<td>
 							<h2>Social Media Specialist</h2>
 							<br>Nugraha Putra
+							<br>DB Krishna
 						</td>
 					</tr>
 					<tr>

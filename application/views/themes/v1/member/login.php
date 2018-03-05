@@ -1,7 +1,17 @@
  <div class="container-full">
     <div class="forgot-form login-form">
-        <h4 style="margin-top:0px">Selamat datang di eyesoccer.id</h4>
-        <span>semua berita tentang tim favoritmu ada disini</span>
+
+      
+        <?php if($eyeme == 1){
+
+            echo '<h4 style="margin-top:0px">Selamat datang di eyeme</h4>
+            <br>
+                    <span>Abadikan momen terbaik kamu dan teman - teman mu tentang sepakbola hanya di Eyeme</span>';
+        }
+        else {
+            echo  '<h4 style="margin-top:0px">Selamat datang di eyesoccer.id</h4>
+                    <span>semua berita tentang tim favoritmu ada disini</span>';
+        }?>
         <div class="btn-option-log">
             <a href="#" id="logBtn" class="active">masuk</a>
             <a href="#" id="regBtn">daftar</a>
