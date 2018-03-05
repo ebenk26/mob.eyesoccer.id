@@ -19,9 +19,14 @@
         $tube  = json_decode($tube);
 ?>	
 			<input id="eyetube_id" type="hidden" value="<?php echo $tube->data->id;?>">
-            <video autoplay controlsList="nodownload" width="100%" height="100%" controls="true" poster="<?= $tube->data->url_thumb; ?>/medium">
-                <source src="<?= $tube->data->url_video; ?>" type="video/mp4">
-            </video>
+			<video id="my-video" class="video-js" controls preload="auto" width="100%" height="100%"
+				poster="<?= $tube->data->url_thumb; ?>/medium" data-setup="{}">
+				<source src="<?= $tube->data->url_video; ?>" type='video/mp4'>
+				<p class="vjs-no-js">
+				To view this video please enable JavaScript, and consider upgrading to a web browser that
+				<a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+				</p>
+			</video>
             <div class="etube-v-title-mobile">
                 <h1><?= $tube->data->title; ?></h1> 
                     <!-- <i class="heightControl2 material-icons arrow-right-etube">arrow_drop_up</i> 

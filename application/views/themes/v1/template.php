@@ -44,6 +44,7 @@
     <link href="<?php echo SUBCDN."assets/$folder/css/bs.css" ?>" rel="stylesheet" type="text/css" />
     <link href="<?php echo SUBCDN."assets/$folder/css/dev.css" ?>" rel="stylesheet" type="text/css" />
     <link href="<?php echo SUBCDN."assets/$folder/css/style.css" ?>" rel="stylesheet" type="text/css" />
+    <link href="<?php echo SUBCDN."assets/css/video-js.css" ?>" rel="stylesheet" type="text/css" />
     
     <!-- JQuery UI -->
     <!--<script src='<?php /*echo SUBCDN.'assets/js/jquery-2.0.2.min.js'; */?>'></script>
@@ -76,6 +77,9 @@
     <!-- SWAlert -->
     <link href="<?php echo SUBCDN."assets/js/swalert/sweetalert.css" ?>" rel="stylesheet" />
     <script src="<?php echo SUBCDN."assets/js/swalert/sweetalert.min.js"; ?>"></script>
+	
+	<!-- Jquery Video -->
+    <script src="<?php echo SUBCDN."assets/js/videojs-ie8.min.js"; ?>"></script>
 
     
 </head>
@@ -150,5 +154,6 @@
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
     </script>
+	<script src="<?php echo SUBCDN."assets/js/video.js"; ?>"></script>
 </body>
 </html>
