@@ -53,9 +53,16 @@ class Member extends CI_Controller {
     	$arr = array('email'=> $email,'xHtml'=> $pass);
     	echo json_encode($arr);
     }
-    function sess(){
-    	p($_SESSION);
-    	#session_destroy();
+    function forgot(){
+    	$content = 'member/forgot';
+    	$data['content'] = $content;
+    	$data['title']   = $this->config->item('meta_title');
+    	$data['kanal']   = 'member';
+    	$data['meta_desc'] = $this->config->item('meta_desc');
+	    $data['meta_keyword'] = $this->config->item('meta_keyword');
+	    
+	    $this->load->view($this->__theme().'template', $data);
+
     }
     function logout(){
     	$this->session->sess_destroy();
