@@ -1,5 +1,13 @@
-
-                
+<table class="jadwalhasil">
+    <thead>
+       <tr>
+           <th colspan="3">
+               <?= $txt_tgl; ?>
+           </th>
+       </tr>
+    </thead>
+    <tbody>
+   
 <?php
     foreach ($jdwl as $value) 
     {
@@ -35,3 +43,5 @@
 <?php
     }
 ?>
+    </tbody>
+</table>   
