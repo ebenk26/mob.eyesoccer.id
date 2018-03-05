@@ -19,13 +19,14 @@
     if ($tube)
     {
         $tube  = json_decode($tube);
+        $video = str_replace('http://static.eyesoccer.id/v1/cache/images/', 'https://www.eyesoccer.id/upload/eyetube_storage/ori_', $tube->data->url_video);
 ?>	
 			<input id="eyetube_id" type="hidden" value="<?php echo $tube->data->id;?>">
             <div id="video-player"></div>
 
             <script>
                 $(document).ready(function () {
-                    videoAction("<?= $tube->data->title; ?>", "<?= $tube->data->url_video; ?>", "<?= $tube->data->url_thumb.'/medium'; ?>");
+                    videoAction("<?= $tube->data->title; ?>", "<?= $video; ?>", "<?= $tube->data->url_thumb.'/medium'; ?>");
                 });
             </script>
             <div class="etube-v-title-mobile">
