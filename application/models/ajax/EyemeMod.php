@@ -14,7 +14,7 @@ class EyemeMod extends CI_Model {
     
     function __melist()
     {
-    	$query = array('page'=> '1', 'limit'=> '5', 'sortby'=> 'last_online');
+    	$query = array('page'=> '1', 'limit'=> '6', 'sortby'=> 'last_online');
     	$data['eyeme'] = $this->excurl->remoteCall($this->__xurl().'me-images', $this->__xkey(), $query);
 	
     	$html = $this->load->view($this->__theme().'eyeme/ajax/me_a_list', $data, true);
