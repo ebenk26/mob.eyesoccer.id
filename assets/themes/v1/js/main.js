@@ -926,7 +926,7 @@ function isMobile() {
     return false;
 }
 
-function videoAction(xurl, ximage, xtag) {
+function videoAction(xtitle, xurl, ximage, xtag) {
     console.log(xurl);
     xtag = (xtag) ? xtag : 'video-player';
     var video_url = xurl,
@@ -956,59 +956,9 @@ function videoAction(xurl, ximage, xtag) {
         };
 
     player.setup(options);
-    player.on('error', function (e) {
-        //console.log(1);
-        var mode = player.getProvider();
-        $('.jw-title-primary').addClass('hidden');
-        if (mode.name == 'flash_video') {
-            $('.jw-display-icon-container').addClass('hidden');
-            player.load({
-                file: video_url,
-                image: not_found,
-                type: 'mp4',
-                startparam: 'start'
-            });
-            player.play();
-        } else {
-            if (counter < max_retry) {
-                player.load({
-                    file: video_url + '&retry=' + counter,
-                    image: poster_url,
-                    type: 'mp4',
-                    startparam: 'start'
-                });
-                player.play();
-                counter++;
-            } else {
-                $('.jw-display-icon-container').addClass('hidden');
-                player.load({
-                    file: video_url,
-                    image: not_found,
-                    type: 'mp4',
-                    startparam: 'start'
-                });
-                if (next_server != '') {
-                    console.log('Maaf, video pada server ini tidak dapat dimainkan.');
-                    window.location = next_server;
-                } else {
-                    console.log('Maaf, Sementara ini video tidak dapat di-streaming.');
-                }
-            }
-        }
+    var adapter = new playerjs.JWPlayerAdapter(jwplayer());
+
+    jwplayer().onReady(function(){
+        adapter.ready();
     });
-    player.on("play", function () {
-        var e = !0;
-        if (typeof(Storage) !== "undefined") {
-            lastP = localStorage.getItem('ipt-' + video_url);
-        }
-        if (lastP > 0 && Math.abs(player.getDuration() - lastP) > 5) {
-            player.seek(lastP);
-        }
-    });
-    window.onunload = function () {
-        //console.log(3);
-        if (typeof(Storage) !== "undefined") {
-            localStorage.setItem('ipt-' + video_url, player.getPosition());
-        }
-    };
 }

@@ -25,11 +25,11 @@
 
             <script>
                 $(document).ready(function () {
-                    videoAction("<?= $tube->data->url_video; ?>", "<?= $tube->data->url_thumb.'/medium'; ?>");
+                    videoAction("<?= $tube->data->title; ?>", "<?= $tube->data->url_video; ?>", "<?= $tube->data->url_thumb.'/medium'; ?>");
                 });
             </script>
             <div class="etube-v-title-mobile">
-                <h1><?= $tube->data->title; ?></h1> 
+                <h1><?= $tube->data->title; ?></h1>
                     <!-- <i class="heightControl2 material-icons arrow-right-etube">arrow_drop_up</i> 
                     <i class="material-icons arrow-right-etube heightControl">arrow_drop_down</i> -->
                 <span><?php echo relative_time($this->library->datenormal($tube->data->createon)); ?> lalu - oleh <?= $tube->data->fullname; ?> - <?= $tube->data->tube_view; ?> kali diputar</span>
