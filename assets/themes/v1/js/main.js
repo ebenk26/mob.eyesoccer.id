@@ -625,8 +625,13 @@ function responseData(msg) {
     }
 
     if (msg.xHidden != undefined) {
-        $.each(msg.xData, function (v, n) {
-            $('.' + v).fadeOut('fast');
+        $.each(msg.xGone, function (v, n) {
+            if(n !== undefined && n === 'visible')
+            {
+                $('.' + v).css('visible', '1');;
+            } else {
+                $('.' + v).fadeOut('fast');
+            }
         })
     }
 
