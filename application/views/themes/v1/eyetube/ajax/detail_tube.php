@@ -1,3 +1,5 @@
+<script src="<?php echo SUBCDN."assets/js/video/jw.js" ?>"></script>
+<script src="<?php echo SUBCDN."assets/js/video/player.js" ?>"></script>
 <style>
     #st-1 .st-total > span.st-shares {
         all: inherit;
@@ -19,9 +21,13 @@
         $tube  = json_decode($tube);
 ?>	
 			<input id="eyetube_id" type="hidden" value="<?php echo $tube->data->id;?>">
-            <video autoplay controlsList="nodownload" width="100%" height="100%" controls="true" poster="<?= $tube->data->url_thumb; ?>/medium">
-                <source src="<?= $tube->data->url_video; ?>" type="video/mp4">
-            </video>
+            <div id="video-player"></div>
+
+            <script>
+                $(document).ready(function () {
+                    videoAction("<?= $tube->data->url_video; ?>", "<?= $tube->data->url_thumb.'/medium'; ?>");
+                });
+            </script>
             <div class="etube-v-title-mobile">
                 <h1><?= $tube->data->title; ?></h1> 
                     <!-- <i class="heightControl2 material-icons arrow-right-etube">arrow_drop_up</i> 
