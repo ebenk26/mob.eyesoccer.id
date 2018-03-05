@@ -10,6 +10,7 @@ body{
     margin: 0 auto;
     font-family: 'Montserrat', sans-serif;
     /* min-width: 375px; */
+    max-width: 768px;
 }
 *{
     -webkit-font-smoothing: antialiased;
@@ -68,6 +69,7 @@ nav{
 .m-top, .ev-box-content, .container, nav{
     float: left;
     width: 100%;
+    max-width: 768px;
 }
 .ep-box-content, .em-box-content, .m-reg, .x-c, .dot, .p-container, .rek-ber-c>img, .f-l{
     float: left;
