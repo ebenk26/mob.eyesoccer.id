@@ -79,6 +79,7 @@ class MemberMod extends CI_Model {
         $res = json_decode($res);
 
         $arr  = [];
+
         if($res AND is_array($res->data))
         {
             if($res->status == 'Error')
@@ -94,8 +95,10 @@ class MemberMod extends CI_Model {
                 }
             }
         }
+        else{
 
         $arr = array('xDirect'=> base_url(),'xCss'=> 'boxsuccess','xMsg'=> 'Silahkan Cek Email <br> Untuk aktifasi akun anda','xAlert'=> true);
+        }
 
         $this->tools->__flashMessage($arr);
 
