@@ -85,6 +85,17 @@ class EyemeMod extends CI_Model {
         $this->tools->__flashMessage($data);
         
     }
+    function __me(){
+        $find = $this->input->post('find');
+        $query = array('page' => '1','limit' => '10','search'=> $find);
+        $res = $this->excurl->remoteCall($this->__xurl().'me',$this->__xkey(),$query);
+        $data['res'] = $res;
+        $html = $this->load->view($this->__theme().'eyeme/ajax/me_a_search',$data,true);
+        $arr = array('xClass'=> 'searchid', 'xHtml' => $html);
+        $this->tools->__flashMessage($arr);
+
+        
+    }
     function __menotif(){
         $uname = $this->session->username;
         $query = array('page'=> '1','limit'=> '10','username'=>$uname);
