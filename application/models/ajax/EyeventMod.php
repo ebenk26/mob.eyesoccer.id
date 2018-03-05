@@ -142,4 +142,71 @@ class EyeventMod extends CI_Model {
         return $query;
     }
 
+    function __pick_match()
+    {
+        $tgl = $this->input->post('date');
+        $data['txt_tgl'] = $this->input->post('txtdate');
+
+        // $data['jdwl'] = $this->get_all_jadwal($tgl,null);
+
+        $query = array('page' => 1, 'limit' => 10, 'sortby' => 'mostview', 'startdate' => $tgl, 'enddate' => $tgl);
+        $data['jdwl'] = $this->excurl->remoteCall($this->__xurl().'event-match', $this->__xkey(), $query);
+        
+        $jdwl = json_decode($data['jdwl']);
+
+        if ($jdwl->data)
+        {
+            if ($this->input->post('page') == "hasil")
+            {
+                $body = $this->load->view($this->__theme().'eyevent/ajax/body-result', $data,TRUE); 
+            }
+            else
+            {
+                $body = $this->load->view($this->__theme().'eyevent/ajax/body-schedule', $data,TRUE); 
+            }
+                    
+        }
+        else
+        {
+            if ($this->input->post('page') == "hasil")
+            {
+                $body = "<table class='jadwalhasil'>
+                            <thead>
+                               <tr>
+                                   <th colspan='3'>".
+                                       $data["txt_tgl"]."
+                                   </th>
+                               </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <h2 align='center'>Tidak ada pertandingan pada tanggal ini</h2>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        ";
+            }
+            else
+            {
+                $body = "<div class='container bg-g'>
+                            <div class='t-tab'>
+                                <div id='ajax-tgl-jadwal'>
+                                    ".$data["txt_tgl"]."
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h2 align='center'>Tidak ada pertandingan pada tanggal ini</h2>
+                        </div>
+                        ";
+            }
+            
+        }
+
+        $data = array('xData' => true, 'xClass' => 'body-jp', 'xHtml' => $body);
+        $this->tools->__flashMessage($data);
+    }
+
 }

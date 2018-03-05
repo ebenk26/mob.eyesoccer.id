@@ -7,7 +7,15 @@
         <div class="modal-content">
             <div class="m-event-kalender">
                 <div id="z"></div>
-                <button id="btn-date" class="btn-white-g" type="button" style="margin-left: 8.75%;" data-dismiss="modal">Lihat</button>
+                <div id="pick-date">
+                    <input type="hidden" name="fn" value="pick_match" class="cinput">
+                    <input type="hidden" name="date" value="" id="picked-date" class="cinput">
+                    <input type="hidden" name="txtdate" value="" id="text-date" class="cinput">
+                    <input type="hidden" name="page" value="jadwal" class="cinput">
+                </div>
+                <button id="pick-date" class="btn-white-g form_post" type="button" style="margin-left: 8.75%;" data-dismiss="modal" action="eyevent"> 
+                    Lihat
+                </button>
                 <button class="btn-white-g btn-white-g-block" type="button" data-dismiss="modal">tutup</button>
             </div>
         </div>
@@ -32,20 +40,10 @@
     </select> -->
     <button type="button" class="lihat-jadwal" data-toggle="modal" data-target="#popupKalender">Pilih Tanggal Hasil Pertandingan Lainnya</button>
 
-    <div id="jp" style="display: none;">
-        <div class="container bg-g">
-            <div class="t-tab">
-                <div id='ajax-tgl-jadwal'>
-                    
-                </div>
-            </div>
-        </div>
-        <div id="body-jp">
-            
-        </div>
+    <div id="body-jp">
+                
     </div>
     
-
     <div class="container bg-g">
         <div class="t-tab">
             <div id='boxtab'>
@@ -174,53 +172,69 @@
         altField: '#d',
         onSelect: function() { 
                 tgl = $(this).datepicker('getDate');
-                
+                                
                 $('#hdn-date').val(tgl);
                 console.log(tgl);
+                var tanggal = tgl.getDate();
+                
+                var monthNames = ["January", "February", "March", "April", "May", "June",
+                  "July", "August", "September", "October", "November", "December"
+                ];
+                var bulan       = tgl.getMonth() + 1;
+                var nm_bulan    = monthNames[tgl.getMonth()];
+
+                var tahun = tgl.getFullYear();
+
+                var txt_tanggal     = tahun+"-"+bulan+"-"+tanggal;
+
+                console.log(txt_tanggal);
+
+                $('#picked-date').val(txt_tanggal);
+                $('#text-date').val(tanggal + " " + nm_bulan + " " + tahun);
             }
     });
 
-    $('#d').change(function(){
-        $('#z').datepicker('setDate', $(this).val());
-    });
+    // $('#d').change(function(){
+    //     $('#z').datepicker('setDate', $(this).val());
+    // });
     // $("#popupKalender").modal();
 
-    $(document).ready(function(){
-        $("#btn-date").on("click", function(){
+    // $(document).ready(function(){
+    //     $("#btn-date").on("click", function(){
 
-            var tanggal = tgl.getDate();
+    //         var tanggal = tgl.getDate();
             
-            var monthNames = ["January", "February", "March", "April", "May", "June",
-              "July", "August", "September", "October", "November", "December"
-            ];
-            var bulan       = tgl.getMonth() + 1;
-            var nm_bulan    = monthNames[tgl.getMonth()];
+    //         var monthNames = ["January", "February", "March", "April", "May", "June",
+    //           "July", "August", "September", "October", "November", "December"
+    //         ];
+    //         var bulan       = tgl.getMonth() + 1;
+    //         var nm_bulan    = monthNames[tgl.getMonth()];
 
-            var tahun = tgl.getFullYear();
+    //         var tahun = tgl.getFullYear();
 
-            var txt_tanggal     = tahun+"-"+bulan+"-"+tanggal;
+    //         var txt_tanggal     = tahun+"-"+bulan+"-"+tanggal;
 
-            $('#jp').attr('style', 'display:block');
-            $('#ajax-tgl-jadwal').html(tanggal + " " + nm_bulan + " " + tahun);
-            console.log(txt_tanggal);
+    //         $('#jp').attr('style', 'display:block');
+    //         $('#ajax-tgl-jadwal').html(tanggal + " " + nm_bulan + " " + tahun);
+    //         console.log(txt_tanggal);
 
-            var urlnya = "<?= base_url(); ?>Eyevent/get_jadwal/"+txt_tanggal;
-            var page = "jadwal";
+    //         var urlnya = "<?= base_url(); ?>Eyevent/get_jadwal/"+txt_tanggal;
+    //         var page = "jadwal";
             
-            $.ajax({
-                url: urlnya,
-                type: 'POST',
-                dataType: 'json',
-                data: {txt_tanggal: txt_tanggal,page: page},
-            })
-            .done(function(result) {
+    //         $.ajax({
+    //             url: urlnya,
+    //             type: 'POST',
+    //             dataType: 'json',
+    //             data: {txt_tanggal: txt_tanggal,page: page},
+    //         })
+    //         .done(function(result) {
 
-                // console.log(result.body);
-                $('#body-jp').html('');
-                $('#body-jp').append(result.body);
+    //             // console.log(result.body);
+    //             $('#body-jp').html('');
+    //             $('#body-jp').append(result.body);
                 
-            });
-        });
-    });
+    //         });
+    //     });
+    // });
 
 </script>
