@@ -1,9 +1,18 @@
-<!-- EYEME EXPLORE-->
+
 <div class="container" style="margin-top: 50px;" xhide="true">
-    <div class="emesearch">
-        <input type="search" name="" id="" placeholder="cari ...">
+    <div class="emesearch" id="styleku">
+        <form class="form_keyup" action="eyeme" id="ctt" loading="off">
+            <input type="search" name="find" id="find" placeholder="cari ..."  class="cinput">
+            <input type="hidden" name="fn" value="me" class="cinput">
+        </form>
         <img src="http://m.eyesoccer.id/assets/img/eyeme/menu/search.svg" alt="explore">
     </div>
+        <div style="background:#fff;height: auto;"?>
+            <div id="searchid">
+              
+            </div>
+        </div>
+    
     <div id="reqexplorelist" class='loadexplorelist' action="eyeme" loading="off" clean="clsexplorelist">
         <div class="content-explore">
             <div id='clsexplorelist'>

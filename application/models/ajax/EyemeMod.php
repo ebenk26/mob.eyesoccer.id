@@ -14,7 +14,7 @@ class EyemeMod extends CI_Model {
     
     function __melist()
     {
-    	$query = array('page'=> '1', 'limit'=> '5', 'sortby'=> 'last_online');
+    	$query = array('page'=> '1', 'limit'=> '6', 'sortby'=> 'last_online');
     	$data['eyeme'] = $this->excurl->remoteCall($this->__xurl().'me-images', $this->__xkey(), $query);
 	
     	$html = $this->load->view($this->__theme().'eyeme/ajax/me_a_list', $data, true);
@@ -83,6 +83,17 @@ class EyemeMod extends CI_Model {
         }
 
         $this->tools->__flashMessage($data);
+        
+    }
+    function __me(){
+        $find = $this->input->post('find');
+        $query = array('page' => '1','limit' => '10','search'=> $find);
+        $res = $this->excurl->remoteCall($this->__xurl().'me',$this->__xkey(),$query);
+        $data['res'] = $res;
+        $html = $this->load->view($this->__theme().'eyeme/ajax/me_a_search',$data,true);
+        $arr = array('xClass'=> 'searchid', 'xHtml' => $html);
+        $this->tools->__flashMessage($arr);
+
         
     }
     function __menotif(){

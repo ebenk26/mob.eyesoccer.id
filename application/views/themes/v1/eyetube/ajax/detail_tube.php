@@ -1,3 +1,5 @@
+<script src="<?php echo SUBCDN."assets/js/video/jw.js" ?>"></script>
+<script src="<?php echo SUBCDN."assets/js/video/player.js" ?>"></script>
 <style>
     #st-1 .st-total > span.st-shares {
         all: inherit;
@@ -17,18 +19,18 @@
     if ($tube)
     {
         $tube  = json_decode($tube);
+        $video = str_replace('http://static.eyesoccer.id/v1/cache/images/', 'https://www.eyesoccer.id/upload/eyetube_storage/ori_', $tube->data->url_video);
 ?>	
 			<input id="eyetube_id" type="hidden" value="<?php echo $tube->data->id;?>">
-			<video id="my-video" class="video-js" controls preload="auto" width="100%" height="100%"
-				poster="<?= $tube->data->url_thumb; ?>/medium" data-setup="{}">
-				<source src="<?= $tube->data->url_video; ?>" type='video/mp4'>
-				<p class="vjs-no-js">
-				To view this video please enable JavaScript, and consider upgrading to a web browser that
-				<a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-				</p>
-			</video>
+            <div id="video-player"></div>
+
+            <script>
+                $(document).ready(function () {
+                    videoAction("<?= $tube->data->title; ?>", "<?= $video; ?>", "<?= $tube->data->url_thumb.'/medium'; ?>");
+                });
+            </script>
             <div class="etube-v-title-mobile">
-                <h1><?= $tube->data->title; ?></h1> 
+                <h1><?= $tube->data->title; ?></h1>
                     <!-- <i class="heightControl2 material-icons arrow-right-etube">arrow_drop_up</i> 
                     <i class="material-icons arrow-right-etube heightControl">arrow_drop_down</i> -->
                 <span><?php echo relative_time($this->library->datenormal($tube->data->createon)); ?> lalu - oleh <?= $tube->data->fullname; ?> - <?= $tube->data->tube_view; ?> kali diputar</span>
