@@ -103,6 +103,19 @@ class MemberMod extends CI_Model {
         $this->tools->__flashMessage($arr);
 
     }
+    function __forgotact(){
+        $email = $this->input->post('email');
+        $query = array('email' => $email);
+        $res = $this->excurl->remoteCall($this->__xurl().'forget-password',$this->__xkey(),$query);
+        $res = json_decode($res);
+        if($res->status == 'Success'){
+            $arr = array('xCss'=> 'boxsuccess','xMsg'=> 'Berhasil Reset password silahkan cek email kamu','xAlert'=> true);
+        }
+        else{
+            $arr = array('xCss'=> 'boxfailed','xMsg'=> 'Email kamu  tidak ditemukan ','xAlert'=> true);
+        }
+        $this->tools->__flashMessage($arr);
+    }
 	
 	function __profile_upload(){
 		$param = array('username'=> $this->session->member['username']);
