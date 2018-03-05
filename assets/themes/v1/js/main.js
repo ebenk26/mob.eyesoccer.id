@@ -927,7 +927,6 @@ function isMobile() {
 }
 
 function videoAction(xtitle, xurl, ximage, xtag) {
-    console.log(xurl);
     xtag = (xtag) ? xtag : 'video-player';
     var video_url = xurl,
         poster_url = ximage,
@@ -946,7 +945,7 @@ function videoAction(xtitle, xurl, ximage, xtag) {
             file: video_url,
             primary: player_type,
             autostart: autoplay,
-            type: "mp4",
+            //type: "mp4",
             width: "100%",
             height: "220px", //window.innerHeight,
             startparam: "start",
