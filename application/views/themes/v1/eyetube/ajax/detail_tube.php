@@ -22,7 +22,6 @@
             
 			<video autoplay loop muted playsinline>
 				<source src="<?= $tube->data->url_video; ?>">
-				<img src="<?= $tube->data->url_thumb; ?>/medium">
 			</video>
             <div class="etube-v-title-mobile">
                 <h1><?= $tube->data->title; ?></h1> 
