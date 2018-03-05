@@ -19,10 +19,9 @@
         $tube  = json_decode($tube);
 ?>	
 			<input id="eyetube_id" type="hidden" value="<?php echo $tube->data->id;?>">
-            
-			<video autoplay loop muted playsinline>
-				<source src="<?= $tube->data->url_video; ?>">
-			</video>
+            <video autoplay controlsList="nodownload" width="100%" height="100%" controls="true" poster="<?= $tube->data->url_thumb; ?>/medium">
+                <source src="<?= $tube->data->url_video; ?>" type="video/mp4">
+            </video>
             <div class="etube-v-title-mobile">
                 <h1><?= $tube->data->title; ?></h1> 
                     <!-- <i class="heightControl2 material-icons arrow-right-etube">arrow_drop_up</i> 
