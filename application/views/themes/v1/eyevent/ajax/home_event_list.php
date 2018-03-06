@@ -10,7 +10,7 @@
                 {
         ?>
                     <a href="<?= base_url(); ?>eyevent/detail/<?= $value->slug; ?>">
-                        <div class="ev-box-content">
+                        <div class="ev-box-content" style="max-height: 185px;overflow: hidden;">
                             <img src="<?= $value->url_pic; ?>" alt="<?= $value->title; ?>">
                         </div>
                     </a>

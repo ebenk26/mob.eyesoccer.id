@@ -11,11 +11,11 @@
             {
                 ?>
                     <a href="<?php echo $this->library->urltomob($dt->share_url); ?>" title="<?php echo $dt->title; ?>">
-                        <div class="v-eyetube">
+                        <div class="v-eyetube"  style="height: 185px;">
                             <img src="<?php echo $dt->url_thumb.'/medium'; ?>" alt="<?php echo $dt->title; ?>">
                         </div>
                         <span><?php echo relative_time($this->library->datenormal($dt->createon)); ?> lalu</span>
-                        <h1><?php echo $dt->title; ?></h1>
+                        <h1 style="bottom: 50px;height: 2.2em;"><?php echo $dt->title; ?></h1>
                     </a>
                     
                     <div class="container" style="margin-top: -40px;background-color: #fafafa;">

@@ -9,12 +9,12 @@
 		{
 ?>
 			<a href="<?php echo base_url()."eyenews/detail/".$value->slug;?>">
-				<div class="container eyetube" style="height: 220px;">
-					<div class="v-eyetube">
+				<div class="container eyetube" style="height: 185px;">
+					<div class="v-eyetube" style="height: 185px;">
 						<img src="<?php echo $value->url_pic;?>" alt="">
 					</div>
 					<span><?php echo relative_time($this->library->datenormal($value->createon))." lalu"?></span>
-					<h1><?php echo $value->title;?></h1>
+					<h1  style="bottom: 50px;height: 2.3em;"><?php echo $value->title;?></h1>
 				</div>
 			</a>
 			<div class="container news-headline" style="margin-bottom: 10px;top: unset;">

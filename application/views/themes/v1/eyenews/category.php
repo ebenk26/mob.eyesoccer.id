@@ -14,6 +14,21 @@ echo set_breadcrumb("eyenews",$page);
 	</div>
 	<input type='hidden' name='fn' value='subcategorylist' class='cinput'>
     <input type='hidden' name='slug' value='<?php echo $slug; ?>' class='cinput'>
+    <select id="pilih-liga" class="lc">
+        <option>Semua Liga</option>
+        <option value="6">Liga Santri Nusantara 2017 - Seri Nasional</option>
+        <option value="16">English Premier League 2017/2018</option>
+        <option value="18">Italy - Seri A 2017/2018</option>
+        <option value="19">France - Ligue 1 2017/2018</option>
+        <option value="20">Spanish Primera Division - La Liga 2017/2018</option>
+        <option value="34">Bundesliga German 2017/2018</option>
+        <option value="57">UEFA Champions League 2017/2018</option>
+        <option value="58">UEFA Europa League 2017/2018</option>
+        <option value="74">COPPA ITALIA 2017/2018</option>
+        <option value="75">COPA DEL RAY 2017/2018</option>
+        <option value="89">Piala Dunia 2018 Rusia</option>
+        <option value="92">Piala Presiden 2018</option>
+    </select>
     <!-- <div class="container" style="margin-top:48px;">
         <div class="crumb" style="margin: unset;">
             <span><a href="<?php echo base_url().$slug.'/'.$subslug?>" style="display: unset">Liga Indonesia</a></span>

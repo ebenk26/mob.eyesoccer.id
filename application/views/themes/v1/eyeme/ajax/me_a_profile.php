@@ -8,7 +8,7 @@ $self = ($id == $res->id) ? TRUE : FALSE;
 
     <div class="container">
         <div class="eme-prof-pict">
-            <img src="<?php echo $res->url_pic?>" alt="<?php echo $res->username?>">
+            <img src="<?php echo $res->url_pic?>" alt="<?php echo $res->username?>" onerror="this.src='<?php echo DPIC?>'">
         </div>
         <div class="eme-prof-user">
             <a href="<?php echo MEPROFILE.$res->username?>"><?php echo $res->username?></a>

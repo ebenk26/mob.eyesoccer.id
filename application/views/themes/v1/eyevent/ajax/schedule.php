@@ -37,7 +37,9 @@
         ?>
         
     </select> -->
-    <button type="button" class="lihat-jadwal" data-toggle="modal" data-target="#popupKalender">Pilih Tanggal Hasil Pertandingan Lainnya</button>
+    <button type="button" class="lihat-jadwal" data-toggle="modal" data-target="#popupKalender" style="
+    margin-bottom: 20px;
+">Pilih Tanggal Jadwal Lainnya</button>
 
     <div id="body-jp">
                 

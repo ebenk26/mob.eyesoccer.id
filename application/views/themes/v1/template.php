@@ -76,7 +76,6 @@
     <!-- SWAlert -->
     <link href="<?php echo SUBCDN."assets/js/swalert/sweetalert.css" ?>" rel="stylesheet" />
     <script src="<?php echo SUBCDN."assets/js/swalert/sweetalert.min.js"; ?>"></script>
-
     
 </head>
 <body>

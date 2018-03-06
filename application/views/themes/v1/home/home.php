@@ -26,6 +26,11 @@
     </div>
 </div>
 <!-- EYEPROFILE -->
+<div class="SvLSD org">
+<img src="<?= base_url(); ?>assets/themes/v1/img/ic_eyeprofile@2x.png" alt="" style="float:  left;background-color: white;margin-bottom: -6px;padding-right: 5px;">
+    <h2>eyeProfile</h2>
+    <span>see all</span>
+</div>
 <div class="container over-x">
     <div class="carousel slide t-30">
         <div role="listbox" class="carousel-inner w-max">
@@ -89,6 +94,11 @@
     </div>
 </div>
 <!-- EYETUBE -->
+<div class="SvLSD rd">
+<img src="<?= base_url(); ?>assets/themes/v1/img/ic_eyetube@2x.png" alt="" style="float:  left;background-color: white;margin-bottom: -5px;padding-right: 5px;padding-top: 5px;">
+    <h2>eyeTube</h2>
+    <span>see all</span>
+</div>
 <div class="container eyetube">
     <div id="reqtube" class='loadtube' action="eyetube" loading="off" clean="clstube">
         <div id='clstube'>
@@ -145,6 +155,11 @@
     </div>
 </div>
 <!-- EYEME -->
+<div class="SvLSD bl">
+<img src="<?= base_url(); ?>assets/themes/v1/img/ic-eyeme@2x.png" alt="" style="float:  left;background-color: white;margin-bottom: -5px;padding-right: 5px;padding-top: 3px;">
+    <h2>eyeMe</h2>
+    <span>see all</span>
+</div>
 <div class="border-box over-no pd-l-4 m-b-20" style="padding-left: 1vw !important; width: 98vw;">
     <div id="reqme" class='loadme' action="eyeme" loading="off" clean="clsme">
         <div id='clsme'>
@@ -172,6 +187,11 @@
     </div>
 </div>
 <!-- EYENEWS -->
+<div class="SvLSD rd2">
+<img src="<?= base_url(); ?>assets/themes/v1/img/ic_eyenews@2x.png" alt="" style="float:  left;background-color: white;margin-bottom: -5px;padding-right: 5px;padding-top: 3px;">
+    <h2>eyeNews</h2>
+    <span>see all</span>
+</div>
 <div class="p-container tab2" style="padding-top: 0px;">
 	<div class="container eyetube">
 		<div id="reqhomenewslist" class='loadhomenewslist' action="eyenews" loading="off" clean="clshomenewslist">
@@ -295,6 +315,11 @@
     </div>
 </div>
 <!-- EYEMARKET -->
+<div class="SvLSD yl">
+<img src="<?= base_url(); ?>assets/themes/v1/img/ic_eyemarket@2x.png" alt="" style="float:  left;background-color: white;margin-bottom: -8px;padding-right: 5px;">
+    <h2>eyeMarket</h2>
+    <span>see all</span>
+</div>
 <div class="container over-x">
     <div id="emSlide" class="carousel slide t-30">
         <div role="listbox" class="carousel-inner w-max">
@@ -334,6 +359,11 @@
     </div>
 </div>
 <!-- EYEVENT -->
+<div class="SvLSD grn">
+<img src="<?= base_url(); ?>assets/themes/v1/img/ic_eyevent@2x.png" alt="" style="float:  left;background-color: white;margin-bottom: -8px;padding-right: 5px;">
+    <h2>eyeVent</h2>
+    <span>see all</span>
+</div>
 <div class="container over-x">
     <div id="evSlide" class="carousel slide t-30">
         <div id="reqevent" class='loadevent' action="eyevent" loading="off" clean="clsevent">

@@ -10,6 +10,7 @@ body{
     margin: 0 auto;
     font-family: 'Montserrat', sans-serif;
     /* min-width: 375px; */
+    max-width: 768px;
 }
 *{
     -webkit-font-smoothing: antialiased;
@@ -68,6 +69,7 @@ nav{
 .m-top, .ev-box-content, .container, nav{
     float: left;
     width: 100%;
+    max-width: 768px;
 }
 .ep-box-content, .em-box-content, .m-reg, .x-c, .dot, .p-container, .rek-ber-c>img, .f-l{
     float: left;
@@ -623,6 +625,7 @@ nav>.f-r:hover{
 }
 .menu>a{
     padding: 12px 15px;  
+    max-width: 700px;
 }
 .menu>a>img{
     padding-right: 10px;
@@ -636,10 +639,10 @@ nav>.f-r:hover{
 .m-log{
     /* text-align: right; */
     float: right;
-    margin: -5px 0;
+    /* margin: -5px 0; */
 }
 .m-reg {
-    margin: 10px 5px;
+    /* margin: 10px 5px; */
     display: inline;
 }
 .m-top img {
@@ -664,6 +667,10 @@ nav>.f-r:hover{
     font-weight: 600;
     text-transform: uppercase;
     padding-left: 15px;
+    display: block;
+    float: left;
+    width: 100%;
+    max-width: 700px;
 }
 .em-box-content {
     width: 150px;
@@ -1115,6 +1122,7 @@ nav>.f-r:hover{
     background-color: #fafafa;
     font-weight: 300;
     color: #4a4a4a;
+    box-sizing: border-box;
 }
 .menu-ketegori span{
     padding-top: 25px;
@@ -2978,7 +2986,7 @@ ul, li {
     margin-bottom: 0px;
 }
 .news-headline{
-    background-color: #d50000cf;
+    background-color: #EF5350;
     color: white;
     font-weight: 600;
     font-size: .8em;
@@ -3285,4 +3293,132 @@ tbody table{
 }
 .imguploademe button i{
     color: #03A9F4;
+}
+.org, .org *{
+    color: #ef8919;
+}
+.rd, .rd *{
+    color: #1961af;
+}
+.bl, .bl *{
+    color: #4baeea;
+}
+.rd2, .rd2 *{
+    color: #c9503c;
+}
+.yl, .yl *{
+    color: #f7c400;
+}
+.grn, .grn *{
+    color: #559238;
+}
+.SvLSD{
+    width: 95%;
+    float: left;
+    margin: 10px 2.5%;
+    border-bottom: 1px solid;
+    height: 19px;
+}
+.SvLSD img{
+    width: 24px;
+    margin: unset !important;
+    position: relative;
+    /* top: 3px; */
+}
+.SvLSD h2{
+    /* margin: 0 0 -5px 0; */
+    font-size: 1.1em;
+    font-weight: 400;
+    float: left;
+    padding: 0 8px 0 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    display: inline-block;
+    background-color: white;
+    position: relative;
+    top: -12px;
+}
+.SvLSD span{
+    float: right;
+    font-size: .7em;
+    position: relative;
+    top: 8px;
+    background-color: white;
+    font-weight: 500;
+    vertical-align: bottom;
+    padding: 0 0 0 8px;
+}
+.loadsearch .etube-content h1{
+    height: 37px;
+    overflow: hidden;
+}
+video{
+    width: 100% !important;
+    height: auto !important;
+}
+video::-internal-media-controls-download-button {
+    display:none;
+}
+video::-webkit-media-controls-enclosure {
+    overflow:hidden;
+}
+video::-webkit-media-controls-panel {
+    width: calc(100% + 30px); /* Adjust as needed */
+}
+.trending .x-c ul li a{
+    background-color: unset;
+    color: white;
+    font-weight: 700;
+    display: block;
+    padding: 2px;
+}
+.cat-x{
+    display: inline-block;
+    float: left;
+}
+.cat-x span, .cat-x a{
+    font-weight: 700;
+    display: block;
+    background-color: #8BC34A;
+    padding: 5px 15px;
+    margin-right: 10px;
+    color: #fdfffb;
+    font-size: 0.75em;
+    box-sizing: border-box;
+    margin: 3px;
+}
+.cat-x a{
+    background-color: unset;
+}
+.cat-x ul li ul{
+    display: none;
+}
+.cat-x ul li:hover ul, .cat-x ul li:active ul, .cat-x ul li:focus ul{
+    display: block;
+    width: max-content;
+}
+.cat-x ul li{
+    position: relative;
+}
+.cat-x ul li ul{
+    position: absolute;
+    width: max-content;
+    background-color: #8ec429;
+}
+.cat-x ul li ul li{
+    display: block;
+}
+.xc table, .xc tr, .xc td{
+    padding: 0px;
+}
+.xc table{
+    font-size: unset;
+}
+.trend a{
+    padding: 5px 10px;
+    border-radius: 13px;
+    text-decoration: none;
+    background-color: #FAFAFA;
+    color: #9CCC65;
+    font-size: .8em;
 }
