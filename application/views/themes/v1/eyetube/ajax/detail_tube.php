@@ -1,5 +1,3 @@
-<script src="<?php echo SUBCDN."assets/js/video/jw.js" ?>"></script>
-<script src="<?php echo SUBCDN."assets/js/video/player.js" ?>"></script>
 <style>
     #st-1 .st-total > span.st-shares {
         all: inherit;
@@ -22,13 +20,9 @@
         $video = str_replace('http://static.eyesoccer.id/v1/cache/images/', 'https://www.eyesoccer.id/upload/eyetube_storage/ori_', $tube->data->url_video);
 ?>	
 			<input id="eyetube_id" type="hidden" value="<?php echo $tube->data->id;?>">
-            <div id="video-player"></div>
-
-            <script>
-                $(document).ready(function () {
-                    videoAction("<?= $tube->data->title; ?>", "<?= $video; ?>", "<?= $tube->data->url_thumb.'/medium'; ?>");
-                });
-            </script>
+            <video width="100%" height="" controls poster="<?= $tube->data->url_thumb; ?>/medium">
+                <source src="<?= $video; ?>" type="video/mp4">
+            </video>
             <div class="etube-v-title-mobile">
                 <h1><?= $tube->data->title; ?></h1>
                     <!-- <i class="heightControl2 material-icons arrow-right-etube">arrow_drop_up</i> 
