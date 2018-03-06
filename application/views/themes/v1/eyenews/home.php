@@ -152,6 +152,18 @@
 			</div>
 		</div>
     </div>
+	<div class="container" style="margin-top: 0px !important; background-color: #fafafa;">
+		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<ins class="adsbygoogle"
+			 style="display:block; text-align:center;"
+			 data-ad-layout="in-article"
+			 data-ad-format="fluid"
+			 data-ad-client="ca-pub-7635854626605122"
+			 data-ad-slot="3624793128"></ins>
+		<script>
+			 (adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+	</div>
 	<!-- EYENEWS VIDEO -->
     <div class="container" style="margin-top: 0px !important; background-color: #fafafa;">
         <h3 class="h3-red">VIDEO</h3>

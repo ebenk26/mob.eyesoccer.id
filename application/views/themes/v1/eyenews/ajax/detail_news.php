@@ -104,6 +104,7 @@ if ($newsdetail){
 				</a>
 			</div>
 		</div>
+		<div class="container-94" style="background-color: white;padding: 10px 0px 20px;">
 		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 		<ins class="adsbygoogle"
 			 style="display:block; text-align:center;"
@@ -114,6 +115,7 @@ if ($newsdetail){
 		<script>
 			 (adsbygoogle = window.adsbygoogle || []).push({});
 		</script>
+		</div>
 	</div>
 	<script>
 		$(document).ready(function(){
