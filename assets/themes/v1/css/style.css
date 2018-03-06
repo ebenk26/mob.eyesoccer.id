@@ -3323,7 +3323,7 @@ tbody table{
     width: 24px;
 }
 .SvLSD h2{
-    margin: 0 0 -5px 0;
+    /* margin: 0 0 -5px 0; */
     font-size: 1.1em;
     font-weight: 400;
     float: left;
@@ -3332,6 +3332,8 @@ tbody table{
     font-family: sans-serif;
     display: inline-block;
     background-color: white;
+    position: relative;
+    top: -14px;
 }
 .SvLSD span{
     float: right;
