@@ -3422,3 +3422,10 @@ video::-webkit-media-controls-panel {
     color: #9CCC65;
     font-size: .8em;
 }
+.komen-tube{
+    float: right;
+    margin-right: 25px;
+    margin-top: 0px;
+    color: #8ec429;
+    font-size: 25px;
+}

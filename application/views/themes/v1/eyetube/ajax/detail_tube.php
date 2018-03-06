@@ -25,9 +25,11 @@ if ($tube) {
     </video>
     <div class="etube-v-title-mobile">
         <h1><?= $tube->data->title; ?></h1>
+        <i class="far fa-comment komen-tube"></i>
         <!-- <i class="heightControl2 material-icons arrow-right-etube">arrow_drop_up</i>
         <i class="material-icons arrow-right-etube heightControl">arrow_drop_down</i> -->
         <span><?php echo relative_time($this->library->datenormal($tube->data->createon)); ?> lalu - oleh <?= $tube->data->fullname; ?> - <?= $tube->data->tube_view; ?> kali diputar</span>
+        
 
         <div class="kolom-share">
             <div class="sharethis-inline-share-buttons" data-url="<?php echo $tube->data->share_url; ?>"></div>
@@ -37,6 +39,7 @@ if ($tube) {
         <div class="container deskripsi">
             <p><?= $tube->data->description; ?></p>
         </div>
+
 
         <!-- <div class="tx-c etube-share">
                     <i id='reqsetlike' class="fas fa-heart heart-first form_post" aria-hidden="true" action="ajax">
