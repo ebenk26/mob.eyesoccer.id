@@ -10,6 +10,7 @@
     </div>
     <input type='hidden' name='fn' value='match_schedule' class='cinput'>
     <input type='hidden' name='page' value='eyevent-schedule' class='cinput'>
+    <input type='hidden' name='slug' value='<?= $slug; ?>' class='cinput'>
     <div class="container" style="margin-top: 50px;">
         <!-- <div id="popupKalender" class="modal fade" role="dialog">
             <div class="m-event-kalender">

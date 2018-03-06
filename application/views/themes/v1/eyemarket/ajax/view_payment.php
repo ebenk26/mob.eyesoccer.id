@@ -12,16 +12,14 @@
             <div class="col-sm-6">
                 <div class="box payment-method" style="text-align: center;">
 
-
                     <p><?= $banknya['bank']; ?></p>
-                    <img style="height: 40px;" src="<?= base_url() ?>assets/eyemarket/<?= $banknya['logo']; ?>">
+                    <img style="height: 40px;" src="https://www.eyesoccer.id/assets/eyemarket/<?= $banknya['logo']; ?>">
                     <br>
                     <br>
                     <p><strong><?= $banknya['rekening']; ?></strong></p>
                     <p>a/n <?= $banknya['nama_pemilik']; ?></p>
 
                     <div class="box-footer text-center" style="margin: unset;">
-
                         <input type="radio" name="payment" value="<?= $banknya['id']; ?>">
                     </div>
                 </div>

@@ -15,6 +15,7 @@
 
     <div class="box">
 
+    
         <div class="table-responsive" style="width: 95%;">
             <table class="table">
                 <thead>
@@ -33,7 +34,7 @@
             ?>
                     <tr>
                         <td>
-                            <a href="#">
+                            <a href="<?= base_url(); ?>eyemarket/detail/<?= $cart['toko']; ?>/<?= $cart['title_slug']; ?>" target="_blank">
                                 <img src="<?= MARKETIMG."".$cart["image1"]; ?>" alt="<?= $cart['nama']; ?>">
                             </a>
                         </td>
