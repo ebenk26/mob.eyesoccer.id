@@ -92,7 +92,6 @@ window.onload = function(){
         $('.container-comment').fadeIn('fast');
     })
     $(document).on('click', '#close', function(){
-        $('.container-comment').html('');
         $('.container-comment').fadeOut('fast');
     })
     // openComment.onclick = function() {
