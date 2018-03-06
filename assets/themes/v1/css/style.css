@@ -3323,7 +3323,7 @@ tbody table{
     width: 24px;
     margin: unset !important;
     position: relative;
-    top: 3px;
+    /* top: 3px; */
 }
 .SvLSD h2{
     /* margin: 0 0 -5px 0; */
@@ -3336,7 +3336,7 @@ tbody table{
     display: inline-block;
     background-color: white;
     position: relative;
-    top: -14px;
+    top: -12px;
 }
 .SvLSD span{
     float: right;
