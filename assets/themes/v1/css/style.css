@@ -3321,7 +3321,7 @@ tbody table{
 }
 .SvLSD img{
     width: 24px;
-    margin: unset;
+    margin: unset !important;
     position: relative;
     top: 3px;
 }
