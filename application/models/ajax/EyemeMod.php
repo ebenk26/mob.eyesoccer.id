@@ -100,7 +100,14 @@ class EyemeMod extends CI_Model {
         $uname = $this->session->username;
         $query = array('page'=> '1','limit'=> '10','username'=>$uname);
         $res   = $this->excurl->remoteCall($this->__xurl().'me-notif',$this->__xkey(),$query);
-        $data['res'] = json_decode($res);
+        $res   = json_decode($res);
+
+        foreach($res->data as $k => $v){
+            if($v->username == $this->session->member['username']){
+                unset($res->data[$k]);#hapus notifikasi sendiri 
+            }
+        }
+        $data['res'] = $res;
         $html  = $this->load->view($this->__theme().'eyeme/ajax/me_a_notif',$data,true);
         $arr   = array('xClass'=> 'reqnotif','xHtml'=> $html);
         $this->tools->__flashMessage($arr);
