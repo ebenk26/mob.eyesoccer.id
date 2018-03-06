@@ -625,6 +625,7 @@ nav>.f-r:hover{
 }
 .menu>a{
     padding: 12px 15px;  
+    max-width: 700px;
 }
 .menu>a>img{
     padding-right: 10px;
@@ -666,6 +667,10 @@ nav>.f-r:hover{
     font-weight: 600;
     text-transform: uppercase;
     padding-left: 15px;
+    display: block;
+    float: left;
+    width: 100%;
+    max-width: 700px;
 }
 .em-box-content {
     width: 150px;
@@ -3312,6 +3317,10 @@ tbody table{
     float: left;
     margin: 10px 2.5%;
     border-bottom: 1px solid;
+    height: 19px;
+}
+.SvLSD img{
+    height: 24px;
 }
 .SvLSD h2{
     margin: 0 0 -5px 0;

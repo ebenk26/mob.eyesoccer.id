@@ -27,7 +27,7 @@
 </div>
 <!-- EYEPROFILE -->
 <div class="SvLSD org">
-<img src="<?= base_url(); ?>assets/themes/v1/img/ic_eyeprofile.png" alt="" style="float:  left;background-color: white;margin-bottom: -5px;padding-right: 5px;">
+<img src="<?= base_url(); ?>assets/themes/v1/img/ic_eyeprofile@2x.png" alt="" style="float:  left;background-color: white;margin-bottom: -6px;padding-right: 5px;">
     <h2>eyeProfile</h2>
     <span>see all</span>
 </div>
@@ -95,7 +95,7 @@
 </div>
 <!-- EYETUBE -->
 <div class="SvLSD rd">
-<img src="<?= base_url(); ?>assets/themes/v1/img/ic_eyetube.png" alt="" style="float:  left;background-color: white;margin-bottom: -5px;padding-right: 5px;padding-top: 5px;">
+<img src="<?= base_url(); ?>assets/themes/v1/img/ic_eyetube@2x.png" alt="" style="float:  left;background-color: white;margin-bottom: -5px;padding-right: 5px;padding-top: 5px;">
     <h2>eyeTube</h2>
     <span>see all</span>
 </div>
@@ -156,7 +156,7 @@
 </div>
 <!-- EYEME -->
 <div class="SvLSD bl">
-<img src="<?= base_url(); ?>assets/themes/v1/img/ic_eyetube.png" alt="" style="float:  left;background-color: white;margin-bottom: -5px;padding-right: 5px;padding-top: 3px;">
+<img src="<?= base_url(); ?>assets/themes/v1/img/ic-eyeme@2x.png" alt="" style="float:  left;background-color: white;margin-bottom: -5px;padding-right: 5px;padding-top: 3px;">
     <h2>eyeMe</h2>
     <span>see all</span>
 </div>
@@ -188,7 +188,7 @@
 </div>
 <!-- EYENEWS -->
 <div class="SvLSD rd2">
-<img src="<?= base_url(); ?>assets/themes/v1/img/ic_eyenews.png" alt="" style="float:  left;background-color: white;margin-bottom: -5px;padding-right: 5px;padding-top: 3px;">
+<img src="<?= base_url(); ?>assets/themes/v1/img/ic_eyenews@2x.png" alt="" style="float:  left;background-color: white;margin-bottom: -5px;padding-right: 5px;padding-top: 3px;">
     <h2>eyeNews</h2>
     <span>see all</span>
 </div>
@@ -316,7 +316,7 @@
 </div>
 <!-- EYEMARKET -->
 <div class="SvLSD yl">
-<img src="<?= base_url(); ?>assets/themes/v1/img/ic_eyemarket.png" alt="" style="float:  left;background-color: white;margin-bottom: -8px;padding-right: 5px;">
+<img src="<?= base_url(); ?>assets/themes/v1/img/ic_eyemarket@2x.png" alt="" style="float:  left;background-color: white;margin-bottom: -8px;padding-right: 5px;">
     <h2>eyeMarket</h2>
     <span>see all</span>
 </div>
@@ -360,7 +360,7 @@
 </div>
 <!-- EYEVENT -->
 <div class="SvLSD grn">
-<img src="<?= base_url(); ?>assets/themes/v1/img/ic_eyevent.png" alt="" style="float:  left;background-color: white;margin-bottom: -8px;padding-right: 5px;">
+<img src="<?= base_url(); ?>assets/themes/v1/img/ic_eyevent@2x.png" alt="" style="float:  left;background-color: white;margin-bottom: -8px;padding-right: 5px;">
     <h2>eyeVent</h2>
     <span>see all</span>
 </div>

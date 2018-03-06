@@ -38,7 +38,9 @@
         <option value="89">Piala Dunia 2018 Rusia</option>
         <option value="92">Piala Presiden 2018</option>
     </select> -->
-    <button type="button" class="lihat-jadwal" data-toggle="modal" data-target="#popupKalender">Pilih Tanggal Hasil Pertandingan Lainnya</button>
+    <button type="button" class="lihat-jadwal" data-toggle="modal" data-target="#popupKalender" style="
+    margin-bottom: 20px;
+">Pilih Tanggal Jadwal Lainnya</button>
 
     <div id="body-jp">
                 
