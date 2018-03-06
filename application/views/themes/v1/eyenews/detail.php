@@ -162,34 +162,7 @@
 							<h2>Lorem Ipsum Dolor Sit AmetLorem Ipsum Dolor Sit AmetLorem Ipsum Dolor Sit Amet</h2>
 							<span>2 jam lalu</span>
 						</div>
-					</a>
-					<a href="">
-						<div class="video-thumb">
-							<div class="v-thumb-img">
-								<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
-							</div>
-							<h2>Lorem Ipsum Dolor Sit Amet</h2>
-							<span>2 jam lalu</span>
-						</div>
-					</a>
-					<a href="">
-						<div class="video-thumb">
-							<div class="v-thumb-img">
-								<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
-							</div>
-							<h2>Lorem Ipsum Dolor Sit Amet</h2>
-							<span>2 jam lalu</span>
-						</div>
-					</a>
-					<a href="">
-						<div class="video-thumb">
-							<div class="v-thumb-img">
-								<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
-							</div>
-							<h2>Lorem Ipsum Dolor Sit Amet</h2>
-							<span>2 jam lalu</span>
-						</div>
-					</a>
+					</a>			
 				</div>
 			</div>
 		</div>
@@ -214,38 +187,7 @@
 			<span>30 menit lalu</span>
 			<span>2000 view - 100 suka</span>
 		</div>
-		<div class="etube-content etube-content-detail">
-			<div class="v-etube v-etube-detail">
-				<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
-			</div>
-			<h1>Lorem Ipsum Dolor Sit amet</h1>
-			<span>30 menit lalu</span>
-			<span>2000 view - 100 suka</span>
-		</div>
-		<div class="etube-content etube-content-detail">
-			<div class="v-etube v-etube-detail">
-				<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
-			</div>
-			<h1>Lorem Ipsum Dolor Sit amet</h1>
-			<span>30 menit lalu</span>
-			<span>2000 view - 100 suka</span>
-		</div>
-		<div class="etube-content etube-content-detail">
-			<div class="v-etube v-etube-detail">
-				<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
-			</div>
-			<h1>Lorem Ipsum Dolor Sit amet</h1>
-			<span>30 menit lalu</span>
-			<span>2000 view - 100 suka</span>
-		</div>
-		<div class="etube-content etube-content-detail">
-			<div class="v-etube v-etube-detail">
-				<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
-			</div>
-			<h1>Lorem Ipsum Dolor Sit amet</h1>
-			<span>30 menit lalu</span>
-			<span>2000 view - 100 suka</span>
-		</div>
+		
 	</div>
 </div>
 </div>

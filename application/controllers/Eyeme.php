@@ -71,5 +71,8 @@ class Eyeme extends CI_Controller {
         $this->load->view($this->__theme().'template',$data);
 
     }
+    function sess(){
+        p($this->session);
+    }
 
 }

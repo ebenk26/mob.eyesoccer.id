@@ -70,6 +70,7 @@ class EyenewsMod extends CI_Model {
     
 	function __detail_news()
     {
+    	$this->session->pagenews = 1;
 		$slug = $this->input->post("slug");
 		$query = array('related' => true);
 		$data['newsdetail'] = $this->excurl->remoteCall($this->__xurl().'news/'.$slug,$this->__xkey(),$query);
@@ -99,14 +100,22 @@ class EyenewsMod extends CI_Model {
 	
 	function __related_news()
     {
-		$page  = $this->input->post('pg');
+    	//$page = $this->session->pagenews = 1;
+    	$page = 1;
+		if($this->input->post('sess')){
+			$page = $this->session->pagenews + 1; 
+			$this->session->pagenews = $page;
+		}
+		else{
+			$page = $this->session->pagenews= 1;
+		}
         $cat = $this->input->post('cat');
 		$query = array('page' => $page,'limit' => 5, 'sortby' => 'newest','category' => $cat);
 		$data['newslist'] = $this->excurl->remoteCall($this->__xurl().'news',$this->__xkey(),$query);
 		
 		$html = $this->load->view($this->__theme().'eyenews/ajax/newslist', $data, true);
 		
-		$data = array('xClass' => 'reqterkait', 'xHtml' => $html, 'xAppend' => true);
+		$data = array('xClass' => 'reqterkait', 'xHtml' => $html, 'xAppend' => true,'test'=> $page);
 		$this->tools->__flashMessage($data);
     }
 

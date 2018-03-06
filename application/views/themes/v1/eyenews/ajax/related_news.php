@@ -21,21 +21,14 @@ if ($newsdetail){
 <img style="width: 40%; margin-left: 30%;" class="load-gif loadhide" src="<?php echo base_url();?>assets/img/loadingsoccer.gif" alt="Loading">
 <div  id="reqnewslist" class='loadnewslist' action="eyenews" loading="off" wait>
 	<input type="hidden" name="fn" value="related_news" class="cinput">
-	<input type="hidden" name="pg"  class="cinput" id="pg"> 
-	<input type="hidden" name="add" class="cinput" id="add">
+	<input type="hidden" name="sess"  class="cinput" id="pg" value="true"> 
 	<input type="hidden" name="cat" class="cinput" id="cat">
 </div>
 
 <script>
-	var pg = 1;
 	$(window).scroll(function() {
-		// console.log('1',$(window).scrollTop());
-		// console.log('2',$(window).height());
-		// console.log('3',$(document).height()/2 + $(document).height()/4);
 		if($(window).scrollTop() >= $(document).height()/2 + $(document).height()/4) {
-			pg = pg+1;
 			$('.loading').show();
-			$('#pg').val(pg);
 			$('#cat').val($("#catews").val());
 			ajaxOnLoad('loadnewslist');
 		}

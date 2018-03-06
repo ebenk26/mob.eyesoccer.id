@@ -42,15 +42,16 @@ class EyemeMod extends CI_Model {
         
         $query = array('page' => $page,'limit' => '18', 'sortby'=> 'last_online');
         $data['explore'] = $this->excurl->remoteCall($this->__xurl().'me-images',$this->__xkey(),$query);
+
         $html = $this->load->view($this->__theme().'eyeme/ajax/me_a_explore',$data,true);
         if(count(json_decode($data['explore'])->data ) > 0) {
             if($page == '1'){
                 $data  = array('xClass' => 'reqexplorelist','xHtml' => $html);     
             } else {
-                $data  = array('xAppend' => 'reqexplorelist','xHtml' => $html,'xClass' => 'reqexplorelist','test' => $page);
+                $data  = array('xAppend' => 'reqexplorelist','xHtml' => $html,'xClass' => 'reqexplorelist');
             }
         } else {
-            $data = array();
+            $data = ['xClass' => 'reqnewexp','xHtml' => ''];
         }
         $this->tools->__flashMessage($data);
     }

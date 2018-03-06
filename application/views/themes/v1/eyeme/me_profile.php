@@ -1,4 +1,4 @@
-<div class="container" style="margin-top: 50px;padding-top: 30px;">
+<div class="container" style="margin-top: 50px;padding-top: 30px;" xhide="true">
     <div id="all" class="loadall">
     <div id="reqprofile" class='loadprofile' action="eyeme" loading="off" clean="clsprofile">
           <div id='clsprofile'>

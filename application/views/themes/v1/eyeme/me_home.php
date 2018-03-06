@@ -1,5 +1,5 @@
 <!-- EYEME -->
-<div class="container" style="margin-top: 50px;margin-bottom: 50px;">
+<div class="container" style="margin-top: 50px;" xhide="true">
     <div id="reqimgfollowedlist" class='loadimgfollowedlist' action="eyeme" loading="off" clean="clsimgfollowedlist">
         <div id='clsimgfollowedlist'>
             <script>
@@ -69,5 +69,6 @@
 <div class="container-comment" id="idcom">
     
 
+</div>
 </div>
    
