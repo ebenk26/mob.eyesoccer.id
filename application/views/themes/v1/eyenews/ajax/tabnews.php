@@ -1,7 +1,7 @@
 <div id='boxtab'>
     <span id='tab-rekomendasi' onclick="tabmenu(this.id, 'span', 'div', 'orange-active')" class="orange-active" active="true">rekomendasi</span>
-    <span id='tab-populer' onclick="tabmenu(this.id, 'span', 'div', 'orange-active')">terpopuler</span>
     <span id='tab-usiamuda' onclick="tabmenu(this.id, 'span', 'div', 'orange-active')">usia muda</span>
+    <span id='tab-populer' onclick="tabmenu(this.id, 'span', 'div', 'orange-active')">terpopuler</span>
 </div>
 <hr>
 <div role="listbox" class="carousel-inner">
