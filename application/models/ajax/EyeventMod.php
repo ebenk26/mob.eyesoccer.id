@@ -15,6 +15,19 @@ class EyeventMod extends CI_Model {
     function __match_schedule()
     {
         $page = ($this->input->post('page') != NULL) ? $this->input->post('page') : "";
+        $slug = ($this->input->post('slug') != NULL) ? $this->input->post('slug') : "";
+        $data['all_liga'] = $this->get_all_liga();
+
+        $liga = "";
+        if ($slug != "")
+        {
+            $query = array('page' => 1, 'limit' => 6, 'related' => 'true');
+            $data['liga'] = $this->excurl->remoteCall($this->__xurl().'event/'.$slug, $this->__xkey(), $query);
+            $liga = json_decode($data['liga'])->data;
+            $liga = $liga->title;
+        }
+        
+
         $data["kemarin_lusa"] = get_date("-2");
     	$data["kemarin"] = get_date("-1");
     	$data["hari_ini"] = get_date("+0");
@@ -22,23 +35,23 @@ class EyeventMod extends CI_Model {
     	$data["lusa"] = get_date("+2");
 
         // ===== kemarin lusa
-        $query = array('page' => 1, 'limit' => 5, 'sortby' => 'mostview', 'startdate' => $data["kemarin_lusa"]["tanggalnya"], 'enddate' => $data["kemarin_lusa"]["tanggalnya"]);
+        $query = array('page' => 1, 'limit' => 100, 'sortby' => 'mostview', 'startdate' => $data["kemarin_lusa"]["tanggalnya"], 'enddate' => $data["kemarin_lusa"]["tanggalnya"], 'event' => $liga);
         $data['match_2yest'] = $this->excurl->remoteCall($this->__xurl().'event-match', $this->__xkey(), $query);
 
     	// ===== kemarin
-    	$query = array('page' => 1, 'limit' => 5, 'sortby' => 'mostview', 'startdate' => $data["kemarin"]["tanggalnya"], 'enddate' => $data["kemarin"]["tanggalnya"]);
+    	$query = array('page' => 1, 'limit' => 100, 'sortby' => 'mostview', 'startdate' => $data["kemarin"]["tanggalnya"], 'enddate' => $data["kemarin"]["tanggalnya"], 'event' => $liga);
     	$data['match_yest'] = $this->excurl->remoteCall($this->__xurl().'event-match', $this->__xkey(), $query);
 
     	// ===== hari ini
-    	$query = array('page' => 1, 'limit' => 5, 'sortby' => 'mostview', 'startdate' => $data["hari_ini"]["tanggalnya"], 'enddate' => $data["hari_ini"]["tanggalnya"]);
+    	$query = array('page' => 1, 'limit' => 100, 'sortby' => 'mostview', 'startdate' => $data["hari_ini"]["tanggalnya"], 'enddate' => $data["hari_ini"]["tanggalnya"], 'event' => $liga);
     	$data['match_today'] = $this->excurl->remoteCall($this->__xurl().'event-match', $this->__xkey(), $query);
 
     	// ===== besok
-        $query = array('page' => 1, 'limit' => 5, 'sortby' => 'mostview', 'startdate' => $data["besok"]["tanggalnya"], 'enddate' => $data["besok"]["tanggalnya"]);
+        $query = array('page' => 1, 'limit' => 100, 'sortby' => 'mostview', 'startdate' => $data["besok"]["tanggalnya"], 'enddate' => $data["besok"]["tanggalnya"], 'event' => $liga);
         $data['match_tomorrow'] = $this->excurl->remoteCall($this->__xurl().'event-match', $this->__xkey(), $query);
 
         // ===== lusa
-    	$query = array('page' => 1, 'limit' => 5, 'sortby' => 'mostview', 'startdate' => $data["lusa"]["tanggalnya"], 'enddate' => $data["lusa"]["tanggalnya"]);
+    	$query = array('page' => 1, 'limit' => 100, 'sortby' => 'mostview', 'startdate' => $data["lusa"]["tanggalnya"], 'enddate' => $data["lusa"]["tanggalnya"], 'event' => $liga);
     	$data['match_lusa'] = $this->excurl->remoteCall($this->__xurl().'event-match', $this->__xkey(), $query);
 
         if ($page == "eyevent-result") 
@@ -207,6 +220,28 @@ class EyeventMod extends CI_Model {
 
         $data = array('xData' => true, 'xClass' => 'body-jp', 'xHtml' => $body);
         $this->tools->__flashMessage($data);
+    }
+
+    public function get_all_liga()
+    {
+        $this->db->select('id_event,title');
+        $this->db->from('tbl_event');
+        $this->db->where('id_event', '6');
+        $this->db->or_where('id_event', '16');
+        $this->db->or_where('id_event', '18');
+        $this->db->or_where('id_event', '19');
+        $this->db->or_where('id_event', '20');
+        $this->db->or_where('id_event', '34');
+        $this->db->or_where('id_event', '57');
+        $this->db->or_where('id_event', '58');
+        $this->db->or_where('id_event', '74');
+        $this->db->or_where('id_event', '75');
+        $this->db->or_where('id_event', '89');
+        $this->db->or_where('id_event', '92');
+
+        $query = $this->db->get()->result_array();
+
+        return $query;
     }
 
 }

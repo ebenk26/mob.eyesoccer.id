@@ -1,7 +1,7 @@
 <div id='boxtab'>
     <span id='tab-rekomendasi' onclick="tabmenu(this.id, 'span', 'div', 'orange-active')" class="orange-active" active="true">rekomendasi</span>
-    <span id='tab-populer' onclick="tabmenu(this.id, 'span', 'div', 'orange-active')">terpopuler</span>
     <span id='tab-usiamuda' onclick="tabmenu(this.id, 'span', 'div', 'orange-active')">usia muda</span>
+    <span id='tab-populer' onclick="tabmenu(this.id, 'span', 'div', 'orange-active')">terpopuler</span>
 </div>
 <hr>
 <div role="listbox" class="carousel-inner">
@@ -36,7 +36,7 @@
                     foreach ($recommended->data as $dt) {
                         ?>
                         <a href="<?php echo $this->library->urltomob($dt->url); ?>" title="<?php echo $dt->title; ?>">
-                            <div class="rek-ber-c">
+                            <div class="rek-ber-c" style="height: 90px;">
                                 <div class="img-res-height">
                                     <img src="<?php echo $dt->url_pic . '/small'; ?>" alt="<?php echo $dt->title; ?>">
                                 </div>

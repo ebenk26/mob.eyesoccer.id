@@ -130,7 +130,8 @@ define('mMEMBERAREA',base_url().'member/home');
 define('FORGOTPASS',base_url().'member/forgot');
 define('DEFAULTIMG',base_url().'assets/home/img/eyeme-photo%20thumbnail.png');
 define('NEWSDETAIL',base_url().'eyenews/detail/');
-define('MARKETIMG','http://beta.eyesoccer.id/img/eyemarket/produk/');
+define('MARKETIMG','http://static.eyesoccer.id/v1/cache/images/');
+define('MARKETFOLDER','https://eyesoccer.id/public_html/upload/eyemarket');
 define('LOGINURL',base_url().'member');
 
 

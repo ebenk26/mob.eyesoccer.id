@@ -134,7 +134,7 @@
 	                    			    </tr>
 	                    			    <tr>
 	                    			        <td align="center">
-	                    			            <img style="height: 115px;" src="<?= base_url() ?>assets/eyemarket/<?= $model->logo; ?>" alt="logo_<?= $model->logo;?>">
+	                    			            <img style="height: 115px;" src="https://www.eyesoccer.id/assets/eyemarket/<?= $model->logo; ?>" alt="logo_<?= $model->logo;?>">
 	                    			        </td>
 	                    			    </tr>
 	                    			    <tr>

@@ -24,6 +24,7 @@
     <meta name="webcrawlers" content="all">
     <meta name="rating" content="general">
     <meta name="spiders" content="all">
+	<link rel="canonical" href="https://www.eyesoccer.id<?php echo $_SERVER['REQUEST_URI'];?>" />
     <link rel="shortcut icon" href="<?php echo SUBCDN."assets/$folder/img/fav.png" ?>" />
     
     <!-- Default -->
