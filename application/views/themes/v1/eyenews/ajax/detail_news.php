@@ -2,7 +2,8 @@
 <?php
 if ($newsdetail){
 	$dt = json_decode($newsdetail);
-	
+	$slug = $dt->data->slug;
+	$subslug = $dt->data->sub_news_type;
 ?>
 	<input id="catews" type="hidden" value="<?php echo $dt->data->news_type;?>">
 	<input id="eyenews_id" type="hidden" value="<?php echo $dt->data->id;?>">
@@ -129,6 +130,9 @@ if ($newsdetail){
 
 				});
 			})
+			
+			$( ".crumb" ).html( "" );
+			$( ".crumb" ).append( "<ul><li><a href='<?php echo base_url()?>' style='display: unset'>Home</a></li><li><a href='<?php echo base_url()?>eyenews' style='display: unset'>Eyenews</a></li><li><a href='<?php echo base_url()?>eyenews/kategori/<?php echo $dt->data->news_type?>' style='display: unset'><?php echo $dt->data->news_type?></a></li><li><a href='<?php echo base_url()?>eyenews/kategori/<?php echo $dt->data->news_type.'/'.$dt->data->sub_news_type?>' style='display: unset'><?php echo $dt->data->sub_news_type?></a></li>" );
 		});
 	</script>
 <?php

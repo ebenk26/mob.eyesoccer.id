@@ -24,21 +24,22 @@
 <div class="container">
     <h2 class="thjadwalhasil">JADWAL PERTANDINGAN</h2>
     <!-- <select id="pilih-liga" class="lc">
-        <option>Semua Liga</option>
-        <option value="6">Liga Santri Nusantara 2017 - Seri Nasional</option>
-        <option value="16">English Premier League 2017/2018</option>
-        <option value="18">Italy - Seri A 2017/2018</option>
-        <option value="19">France - Ligue 1 2017/2018</option>
-        <option value="20">Spanish Primera Division - La Liga 2017/2018</option>
-        <option value="34">Bundesliga German 2017/2018</option>
-        <option value="57">UEFA Champions League 2017/2018</option>
-        <option value="58">UEFA Europa League 2017/2018</option>
-        <option value="74">COPPA ITALIA 2017/2018</option>
-        <option value="75">COPA DEL RAY 2017/2018</option>
-        <option value="89">Piala Dunia 2018 Rusia</option>
-        <option value="92">Piala Presiden 2018</option>
+        <option>Semua Liga/Kompetisi</option>
+        <?php 
+            foreach ($all_liga as $value)
+            {
+        ?>
+                <option value="<?= $value['id_event']; ?>">
+                    <?= $value['title']; ?>
+                </option>
+        <?php
+            }
+        ?>
+        
     </select> -->
-    <button type="button" class="lihat-jadwal" data-toggle="modal" data-target="#popupKalender">Pilih Tanggal Hasil Pertandingan Lainnya</button>
+    <button type="button" class="lihat-jadwal" data-toggle="modal" data-target="#popupKalender" style="
+    margin-bottom: 20px;
+">Pilih Tanggal Jadwal Lainnya</button>
 
     <div id="body-jp">
                 
@@ -192,6 +193,11 @@
                 $('#picked-date').val(txt_tanggal);
                 $('#text-date').val(tanggal + " " + nm_bulan + " " + tahun);
             }
+    });
+
+    $('#pilih-liga').change(function(event) {
+        var liganya     = $(this).val();
+        window.location.replace("<?= base_url(); ?>eyevent/jadwal-pertandingan/"+liganya);
     });
 
     // $('#d').change(function(){

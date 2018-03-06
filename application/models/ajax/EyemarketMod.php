@@ -535,7 +535,7 @@ class EyemarketMod extends MarketQueryMod {
         $this->load->library('upload');
         
         //===== atur upload bukti
-        $config['upload_path'] = pathUrl()."img/eyemarket/bukti/";
+        $config['upload_path'] = ($_SERVER['SERVER_NAME'] == 'localhost') ? './img/eyemarket/bukti/' : MARKETFOLDER.'/produk';
         $config['allowed_types'] = '*';
         $config['max_size']  = '10000';
         $config['max_width']  = '0';
