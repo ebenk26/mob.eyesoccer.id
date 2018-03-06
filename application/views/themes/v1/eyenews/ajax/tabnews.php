@@ -36,7 +36,7 @@
                     foreach ($recommended->data as $dt) {
                         ?>
                         <a href="<?php echo $this->library->urltomob($dt->url); ?>" title="<?php echo $dt->title; ?>">
-                            <div class="rek-ber-c">
+                            <div class="rek-ber-c" style="height: 90px;">
                                 <div class="img-res-height">
                                     <img src="<?php echo $dt->url_pic . '/small'; ?>" alt="<?php echo $dt->title; ?>">
                                 </div>
