@@ -75,12 +75,6 @@
 					</tr>
 					<tr>
 						<td>
-							<h2>EyeEvent Division</h2>
-							<br>Maylani Sofyand
-						</td>
-					</tr>
-					<tr>
-						<td>
 							<h2>Motion Graphic Artist</h2>
 							<br>Pratama Ilmiawan
 						</td>
