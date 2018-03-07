@@ -17,7 +17,7 @@ if ($newsdetail){
 				</div>
 				<h3><?php echo $dt->data->fullname;?></h3>
 				<span><?php echo relative_time($this->library->datenormal($dt->data->publish_on)); ?> lalu - <?php echo $dt->data->news_like; ?> view</span>
-				<i class="far fa-comment openComment" aria-hidden="false" style="float: right;margin-top: -35px;margin-right: 15px;font-size: 30px;"><div class="openComment"></div></i>
+				<i class="far fa-comment openComment" aria-hidden="false" style="color: #8ec429;float: right;margin-top: -35px;margin-right: 15px;font-size: 30px;"><div class="openComment"></div></i>
 			</div>
 			<div class="container tx-c share">
 				<div class="sharethis-inline-share-buttons" data-url="<?php echo $dt->data->url;?>"></div>
@@ -103,6 +103,18 @@ if ($newsdetail){
 					<span>terkejut</span>
 				</a>
 			</div>
+		</div>
+		<div class="container-94" style="background-color: white;padding: 10px 0px 20px;">
+		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<ins class="adsbygoogle"
+			 style="display:block; text-align:center;"
+			 data-ad-layout="in-article"
+			 data-ad-format="fluid"
+			 data-ad-client="ca-pub-7635854626605122"
+			 data-ad-slot="3624793128"></ins>
+		<script>
+			 (adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
 		</div>
 	</div>
 	<script>
