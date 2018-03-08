@@ -310,6 +310,7 @@ nav img{
 }
 .rek-ber-c .img-res-height img{
     width: 100%;
+    margin: 0px !important;
 }
 .rek-ber-c .img-res-height img::before{
     content: '';
