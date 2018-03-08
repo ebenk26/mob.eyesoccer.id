@@ -1,7 +1,7 @@
     <!-- TRENDING --> 
     <!-- <div class="trending"> -->
-        <div id="reqtrend" class='loadtrend' action="eyenews" loading="off" clean="clstrend">
-			<div id='clstrend'>
+        <!--<div id="reqtrend" class='loadtrend' action="eyenews" loading="off" clean="clstrend">
+			<div id='clstrend'>-->
 				<!-- <script>
 					$(document).ready(function(){
 						$(window).on('load',function(){
@@ -9,8 +9,8 @@
 						});
 					});
 				</script> -->
-			</div>
-			<input type='hidden' name='fn' value='trending' class='cinput'>
+			<!--</div>
+			<input type='hidden' name='fn' value='trending' class='cinput'>-->
 			<!-- <span class="x-c fafa">
 				<span>Trending</span>
 				<x class="m-l-100"></x>
@@ -40,7 +40,7 @@
 					<a href="" class="gr">Persib</a>
 				</div>
 			</span> -->
-		</div>
+		<!--</div>-->
 	<!-- </div> -->
 	<div class="container xc" style="margin-top: 50px;">
 		<table>
@@ -88,10 +88,22 @@
 				</td>
 				<td class="container over-x" style="max-width: 90vw !important;height: max-content;margin-bottom: -23px;">
 					<div class="trend w-max" style="margin-top: 10px;">
-						<a href="">Choirul Huda</a>
-						<a href="">IndonesiaU-19</a>
-						<a href="">Egy Maulana Vikri</a>
-						<a href="">Persib</a>
+						<div id="reqtrend" class='loadtrend' action="eyenews" loading="off" clean="clstrend">
+							<div id='clstrend'>
+								<script>
+									$(document).ready(function(){
+										$(window).on('load',function(){
+											ajaxOnLoad('loadtrend');
+										});
+									});
+								</script>
+							</div>
+							<input type='hidden' name='fn' value='trending' class='cinput'>
+							<a href="">Choirul Huda</a>
+							<a href="">IndonesiaU-19</a>
+							<a href="">Egy Maulana Vikri</a>
+							<a href="">Persib</a>
+						</div>
 					</div>
 				</td>
 			</tr>
