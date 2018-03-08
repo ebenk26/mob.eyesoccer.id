@@ -3383,12 +3383,15 @@ video::-webkit-media-controls-panel {
     padding: 5px 15px;
     margin-right: 10px;
     color: #fdfffb;
-    font-size: 0.75em;
+    font-size: 15px !important;
     box-sizing: border-box;
     margin: 3px;
 }
 .cat-x a{
     background-color: unset;
+    font-size: .8em !important;
+    padding: 3px 10px;
+    font-weight: 500;
 }
 .cat-x ul li ul{
     display: none;
