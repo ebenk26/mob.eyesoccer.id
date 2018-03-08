@@ -172,34 +172,36 @@
             <div role="listbox" class="carousel-inner w-max">
                 <div class="box item active no-decoration">
 					<div id="" class='' action="" loading="" clean="">
-						<!-- <div id='clstube'>
-							<script>
-								$(document).ready(function(){
-									$(window).on('load',function(){
-										ajaxOnLoad('loadtube');
+						<div id="reqnewsyoung" class='loadnewsyoung' action="eyenews" loading="off" clean="clsnewsyoung">
+							<div id='clsnewsyoung'>
+								<script>
+									$(document).ready(function(){
+										$(window).on('load',function(){
+											ajaxOnLoad('loadnewsyoung');
+										});
 									});
-								});
-							</script>
-						</div> -->
-						<input type='hidden' name='fn' value='list_tube_eyenews' class='cinput'>
-						<a href="enews-detail.html">
-							<div class="video-thumb fafa">
-								<div class="v-thumb-img">
-									<img src="" alt="">
-								</div>
-								<h2>Lorem Ipsum Dolor Sit Amet</h2>
-								<span>2 jam lalu</span>
+								</script>
 							</div>
-						</a>
-						<a href="enews-detail.html">
-							<div class="video-thumb fafa">
-								<div class="v-thumb-img">
-									<img src="" alt="">
+							<input type='hidden' name='fn' value='newsyoung' class='cinput'>
+							<a href="enews-detail.html">
+								<div class="video-thumb fafa">
+									<div class="v-thumb-img">
+										<img src="" alt="">
+									</div>
+									<h2>Lorem Ipsum Dolor Sit Amet</h2>
+									<span>2 jam lalu</span>
 								</div>
-								<h2>Lorem Ipsum Dolor Sit AmetLorem Ipsum Dolor Sit AmetLorem Ipsum Dolor Sit Amet</h2>
-								<span>2 jam lalu</span>
-							</div>
-						</a>
+							</a>
+							<a href="enews-detail.html">
+								<div class="video-thumb fafa">
+									<div class="v-thumb-img">
+										<img src="" alt="">
+									</div>
+									<h2>Lorem Ipsum Dolor Sit AmetLorem Ipsum Dolor Sit AmetLorem Ipsum Dolor Sit Amet</h2>
+									<span>2 jam lalu</span>
+								</div>
+							</a>
+						</div>
 					</div>
                 </div>
             </div>
