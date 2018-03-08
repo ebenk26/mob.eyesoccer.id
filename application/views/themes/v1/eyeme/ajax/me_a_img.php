@@ -23,7 +23,7 @@ $hasLike = 0 ;
                 if($this->session->member['username'] == $v->username){
                     echo '<div class="rm-'.$v->id.'" id="'.$v->id.'" action="eyeme">';
                     echo '<input type="hidden" name="fn" value="delete_img" class="cinput">';
-                    echo '<input type="hidden" name="uid" value="'.$v->id.'" class="cinput">';
+                    echo '<input type="hidden" name="uid_com" value="'.$v->id.'" class="cinput">';
                     echo '<input type="hidden" name="refer" value="home" class="cinput">';
                     echo '<a style="float:right"  ref="form_post" id="rm-'.$v->id.'" action="eyeme" loading="off" onclick="deleteconfrm(this.id)"><i class="material-icons more display-box-notif" >delete</i></a>';
                     echo '</div>';
