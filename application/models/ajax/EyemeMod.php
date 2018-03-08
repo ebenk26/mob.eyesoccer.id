@@ -197,6 +197,24 @@ class EyemeMod extends CI_Model {
         $this->tools->__flashMessage($arr);
         
     }
+    function __delete_img(){
+        $username = $this->session->member['username'];
+        $id_images= $this->input->post('uid');
+        $refer    = ($this->input->post('refer') == 'home' ? MEURL : MEIMGUSR.$id_images);
+        $query = array('id'=> $id_images,'username'=> $username);
+        $res  = $this->excurl->remoteCall($this->__xurl().'delete-img',$this->__xkey(),$query);
+        $res  = json_decode($res);
+        if($res->status == 'Success'){
+            $arr = array('xCss'=> 'boxsuccess','xMsg'=> 'Foto kamu berhasil di hapus','xAlert' => true);
+            if($refer != '' ){
+                $arr['xDirect'] = MEURL;
+            }
+        }
+        else{
+            $arr = array('xCss' => 'boxfailed','xMsg' => $res->message,'xAlert'=> true);
+        }
+        $this->tools->__flashMessage($arr);
+    }
 
    
 }

@@ -19,7 +19,17 @@ $hasLike = 0 ;
                 </div>
                 <span><?php echo $v->username?></span>
             </a>
-            <i class="material-icons more display-box-notif">more_horiz</i>
+            <?php
+                if($this->session->member['username'] == $v->username){
+                    echo '<div class="rm-'.$v->id.'" id="'.$v->id.'" action="eyeme">';
+                    echo '<input type="hidden" name="fn" value="delete_img" class="cinput">';
+                    echo '<input type="hidden" name="uid" value="'.$v->id.'" class="cinput">';
+                    echo '<input type="hidden" name="refer" value="home" class="cinput">';
+                    echo '<a style="float:right"  ref="form_post" id="rm-'.$v->id.'" action="eyeme" loading="off" onclick="deleteconfrm(this.id)"><i class="material-icons more display-box-notif" >delete</i></a>';
+                    echo '</div>';
+                }
+            ?>
+           
         </div>
         <div class="eme-img-content">
            <img src="<?php echo $v->url_img?>" alt="<?php echo $v->img_caption?>">
@@ -87,8 +97,14 @@ $hasLike = 0 ;
 
 </div>
  <script>
+    function deleteconfrm(id){
+
+        var v = window.confirm('Kamu yakin ingin hapus');
+        if(v == true){
+            ajaxOnLoad(id);
+        }
+    }
     $('a.com').click(function(){
-        // console.log('test');
         var ref =  $(this).attr('ref');
         ajaxOnLoad(ref);
     });
