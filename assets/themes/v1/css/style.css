@@ -3516,3 +3516,27 @@ video::-webkit-media-controls-panel {
     margin-right: -50%;
     transform: translate(-50%, -50%);
 }
+.kontak td{
+    padding: 5px;
+}
+.kontak h2{
+    padding: 10px;
+    color: #FFB300 !important;
+    font-size: 1.6em;
+    font-weight: 500 !important;
+}
+.kontak2 h2{
+    font-size: 1.1em;
+    margin-bottom: 2px;
+    color: #FFB300;
+    padding-top: 10px;
+}
+.kontak2 span{
+    font-size: .8em;
+}
+.oren{
+    color: #FFB300;
+}
+.m-t-15{
+    margin-top: -15px;
+}
