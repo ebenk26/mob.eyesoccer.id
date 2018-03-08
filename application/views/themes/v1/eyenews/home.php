@@ -68,7 +68,7 @@
 						</ul>
 					</div>
 				</td>
-				<td class="container over-x" style="max-width: 90vw !important;height: max-content;margin-bottom: -20px;">
+				<td class="container over-x" style="max-width: 90vw !important;height: max-content;margin-bottom: -23px;">
 					<div class="trend w-max" style="margin-top: 10px;">
 						<a href="">Choirul Huda</a>
 						<a href="">IndonesiaU-19</a>

@@ -52,18 +52,26 @@ window.onload = function(){
     //    $('#regBtn').addClass('active');
     //    $('#logBtn').removeClass('active');
     // }
-    src.onclick = function() {
-        srcbox.style.display = "block";
+
+    if(src !== undefined && src !== null){
+        src.onclick = function() {
+            srcbox.style.display = "block";
+        }
     }
     // srcS.onclick = function() {
     //     srcbox.style.display = "none";
     // }
-    close.onclick = function() {
-        srcbox.style.display = "none";
+    if(srcbox !== undefined && srcbox !==  null){
+        close.onclick = function() {
+            srcbox.style.display = "none";
+        }
     }
-    menu.onclick = function() {
-        xMenu.style.display = "block";
+    if(menu !== undefined && menu !== null ){
+        menu.onclick = function() {
+            xMenu.style.display = "block";
+        }
     }
+    
     xClose.onclick = function() {
         xMenu.style.display = "none";
     }
