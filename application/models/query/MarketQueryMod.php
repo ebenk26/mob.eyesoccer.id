@@ -37,11 +37,11 @@ class MarketQueryMod extends CI_Model {
                                         eyemarket_product A
                                     LEFT JOIN 
                                         eyemarket_toko B on A.id_toko = B.id
-                                    INNER JOIN
+                                    LEFT JOIN
                                         eyemarket_category C on A.id_kategori = C.id
                                     LEFT JOIN
                                         eyemarket_images E on A.id_product =  E.id_product
-                                    INNER JOIN
+                                    LEFT JOIN
                                         eyemarket_parent_cat F on A.id_kategori = F.id
                                     WHERE
                                         status_publish = 1

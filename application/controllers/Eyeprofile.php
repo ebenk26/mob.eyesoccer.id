@@ -43,8 +43,9 @@ class Eyeprofile extends CI_Controller {
 		$data['slug'] = $slug;
 	    $data['kanal'] = 'eyeprofile';
 	    $data['content'] = 'eyeprofile/home';
+	    $data['slugliga'] = $this->session->userdata('pageliga');
 	    
-		$this->session->set_userdata(array('pageklub' => $page));
+		$this->session->set_userdata(array('pageklub' => $page, 'pageliga' => urldecode($slug)));
 		
 	    $data['title'] = $this->config->item('meta_title');
 	    $data['meta_desc'] = $this->config->item('meta_desc');
@@ -54,7 +55,7 @@ class Eyeprofile extends CI_Controller {
     }
 
     function official($slug = null, $page=1)
-    {
+    { 
     	$data['kanal'] = 'eyeprofile';
     	$data['content'] = 'eyeprofile/official';
 
@@ -77,7 +78,7 @@ class Eyeprofile extends CI_Controller {
     }
 
     function official_detail($slug)
-    {
+    { 
     	$data['slug'] = $slug;
     	$data['kanal'] = 'eyeprofile';
     	$data['content'] = 'eyeprofile/official_detail';
@@ -115,11 +116,12 @@ class Eyeprofile extends CI_Controller {
 	    $this->load->view($this->__theme().'template', $data);
     }
 	
-	function pemain($slug='Liga Indonesia 1', $page=1)
+	function pemain($slug, $page=1)
     {
 		$data['slug'] = $slug;
 	    $data['kanal'] = 'eyeprofile';
 	    $data['content'] = 'eyeprofile/pemain';
+	    $data['slugliga'] = $this->session->userdata('pageliga');
 	    
 		$this->session->set_userdata(array('pagepemain' => $page));
 		
