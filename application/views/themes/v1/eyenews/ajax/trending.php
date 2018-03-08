@@ -1,6 +1,3 @@
-<span class="x-c">
-    <span>Trending</span>
-    <x class="m-l-100"></x>
     <?php
         if($news)
         {
@@ -13,4 +10,3 @@
             }
         }
     ?>
-</span>
