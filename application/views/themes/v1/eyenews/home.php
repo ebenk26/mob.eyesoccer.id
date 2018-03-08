@@ -1,5 +1,5 @@
     <!-- TRENDING --> 
-    <!-- <div class="trending"> -->
+    <div class="trending">
         <div id="reqtrend" class='loadtrend' action="eyenews" loading="off" clean="clstrend">
 			<div id='clstrend'>
 				<!-- <script>
@@ -11,25 +11,25 @@
 				</script> -->
 			</div>
 			<input type='hidden' name='fn' value='trending' class='cinput'>
-			<!-- <span class="x-c fafa">
+			<span class="x-c fafa">
 				<span>Trending</span>
 				<x class="m-l-100"></x>
 				<a href="" class="gr">Choirul Huda</a>
 				<a href="" class="gr">IndonesiaU-19</a>
 				<a href="" class="gr">Egy Maulana Vikri</a>
 				<a href="" class="gr">Persib</a>
-			</span> -->
-			<!-- <span class="x-c">
-				<span>
+			</span>
+			<span class="x-c">
+				<span  class="fafa">
 					<ul>
 						<li>
-							<a href="">LIGA</a>
-							<ul>
+							<a href="" class="fafa">LIGA</a>
+							<!-- <ul>
 								<li><a href="">Di Pinggir Lapangan</a></li>
 								<li><a href="">Di Pinggir Lapangan</a></li>
 								<li><a href="">Di Pinggir Lapangan</a></li>
 								<li><a href="">Di Pinggir Lapangan</a></li>
-							</ul>
+							</ul> -->
 						</li>
 					</ul>
 				</span>
@@ -39,10 +39,10 @@
 					<a href="" class="gr">Egy Maulana Vikri</a>
 					<a href="" class="gr">Persib</a>
 				</div>
-			</span> -->
+			</span>
 		</div>
-	<!-- </div> -->
-	<div class="container xc" style="margin-top: 50px;">
+	</div>
+	<!-- <div class="container xc" style="margin-top: 50px;">
 		<table>
 			<tr>
 				<td>
@@ -78,7 +78,7 @@
 				</td>
 			</tr>
 		</table>
-	</div>
+	</div> -->
     <!-- EYENEWS -->
 	<div id="reqonelist" class='loadonelist' action="eyenews" loading="off" clean="clsonelist">
 		<div id='clsonelist'>
@@ -164,8 +164,50 @@
 			 (adsbygoogle = window.adsbygoogle || []).push({});
 		</script>
 	</div>
-	<!-- EYENEWS VIDEO -->
+
+	<!-- USIA MUDA -->
     <div class="container" style="margin-top: 0px !important; background-color: #fafafa;">
+        <h3 class="h3-red">USIA MUDA</h3>
+        <div class="carousel slide t-30 over-x">
+            <div role="listbox" class="carousel-inner w-max">
+                <div class="box item active no-decoration">
+					<div id="" class='' action="" loading="" clean="">
+						<!-- <div id='clstube'>
+							<script>
+								$(document).ready(function(){
+									$(window).on('load',function(){
+										ajaxOnLoad('loadtube');
+									});
+								});
+							</script>
+						</div> -->
+						<input type='hidden' name='fn' value='list_tube_eyenews' class='cinput'>
+						<a href="enews-detail.html">
+							<div class="video-thumb fafa">
+								<div class="v-thumb-img">
+									<img src="" alt="">
+								</div>
+								<h2>Lorem Ipsum Dolor Sit Amet</h2>
+								<span>2 jam lalu</span>
+							</div>
+						</a>
+						<a href="enews-detail.html">
+							<div class="video-thumb fafa">
+								<div class="v-thumb-img">
+									<img src="" alt="">
+								</div>
+								<h2>Lorem Ipsum Dolor Sit AmetLorem Ipsum Dolor Sit AmetLorem Ipsum Dolor Sit Amet</h2>
+								<span>2 jam lalu</span>
+							</div>
+						</a>
+					</div>
+                </div>
+            </div>
+        </div>
+	</div>
+	
+	<!-- EYENEWS VIDEO -->
+    <div class="container" style="margin-top: -30px !important; background-color: #fafafa;">
         <h3 class="h3-red">VIDEO</h3>
         <div class="carousel slide t-30 over-x">
             <div role="listbox" class="carousel-inner w-max">
@@ -204,3 +246,4 @@
             </div>
         </div>
     </div>
+	
