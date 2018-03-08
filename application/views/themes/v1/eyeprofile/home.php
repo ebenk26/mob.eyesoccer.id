@@ -51,10 +51,11 @@
 				</div>
             </div>
         </div>
+        
         <div class="container over-x">
             <div class="container sub-menu w-max">
                 <a href="<?php echo base_url();?>eyeprofile/klub" class="active">klub</a>
-                <a href="<?php echo base_url();?>eyeprofile/pemain">pemain</a>
+                <a href="<?php echo base_url();?>eyeprofile/pemain/<?= $slug; ?>">pemain</a>
                 <a href="<?php echo base_url();?>eyeprofile/official/<?= $slug; ?>">ofisial</a>
                 <a href="">perangkat pertandingan</a>
                 <a href="">supporter</a>

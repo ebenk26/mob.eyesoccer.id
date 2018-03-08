@@ -50,8 +50,8 @@
         </div>
         <div class="container over-x">
             <div class="container sub-menu w-max">
-                <a href="<?php echo base_url();?>eyeprofile/klub">klub</a>
-                <a href="<?php echo base_url();?>eyeprofile/pemain" class="active">pemain</a>
+                <a href="<?php echo base_url();?>eyeprofile/klub/<?= $slug; ?>">klub</a>
+                <a href="<?php echo base_url();?>eyeprofile/pemain/<?= $slug; ?>" class="active">pemain</a>
                 <a href="<?php echo base_url();?>eyeprofile/official/<?= $slug; ?>">ofisial</a>
                 <a href="">perangkat pertandingan</a>
                 <a href="">supporter</a>
