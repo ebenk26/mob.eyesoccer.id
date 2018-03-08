@@ -1,5 +1,5 @@
     <!-- TRENDING --> 
-    <div class="trending">
+    <!-- <div class="trending"> -->
         <div id="reqtrend" class='loadtrend' action="eyenews" loading="off" clean="clstrend">
 			<div id='clstrend'>
 				<!-- <script>
@@ -11,25 +11,25 @@
 				</script> -->
 			</div>
 			<input type='hidden' name='fn' value='trending' class='cinput'>
-			<span class="x-c fafa">
+			<!-- <span class="x-c fafa">
 				<span>Trending</span>
 				<x class="m-l-100"></x>
 				<a href="" class="gr">Choirul Huda</a>
 				<a href="" class="gr">IndonesiaU-19</a>
 				<a href="" class="gr">Egy Maulana Vikri</a>
 				<a href="" class="gr">Persib</a>
-			</span>
-			<span class="x-c">
+			</span> -->
+			<!-- <span class="x-c">
 				<span  class="fafa">
 					<ul>
 						<li>
 							<a href="" class="fafa">LIGA</a>
-							<!-- <ul>
+							<ul>
 								<li><a href="">Di Pinggir Lapangan</a></li>
 								<li><a href="">Di Pinggir Lapangan</a></li>
 								<li><a href="">Di Pinggir Lapangan</a></li>
 								<li><a href="">Di Pinggir Lapangan</a></li>
-							</ul> -->
+							</ul>
 						</li>
 					</ul>
 				</span>
@@ -39,10 +39,10 @@
 					<a href="" class="gr">Egy Maulana Vikri</a>
 					<a href="" class="gr">Persib</a>
 				</div>
-			</span>
+			</span> -->
 		</div>
-	</div>
-	<!-- <div class="container xc" style="margin-top: 50px;">
+	<!-- </div> -->
+	<div class="container xc" style="margin-top: 50px;">
 		<table>
 			<tr>
 				<td>
@@ -50,18 +50,36 @@
 						<ul>
 							<li>
 								<span>LIGA</span>
-								<ul>
+								<ul style="z-index:  1;height: 150px;overflow:  scroll;">
 									<li>
-										<a href="">Di Pinggir Lapangan</a>
+										<a href="http://m.eyesoccer.id/eyenews/kategori/Di Pinggir Lapangan">Di Pinggir Lapangan</a>
 									</li>
 									<li>
-										<a href="">Di Pinggir Lapangan</a>
+										<a href="http://m.eyesoccer.id/eyenews/kategori/Liga">Liga</a>
 									</li>
 									<li>
-										<a href="">Di Pinggir Lapangan</a>
+										<a href="http://m.eyesoccer.id/eyenews/kategori/Pembinaan">Pembinaan</a>
 									</li>
 									<li>
-										<a href="">Di Pinggir Lapangan</a>
+										<a href="http://m.eyesoccer.id/eyenews/kategori/Peristiwa">Peristiwa</a>
+									</li>
+									<li>
+										<a href="http://m.eyesoccer.id/eyenews/kategori/Prediksi">Prediksi</a>
+									</li>
+									<li>
+										<a href="http://m.eyesoccer.id/eyenews/kategori/Soccer Sains">Soccer Sains</a>
+									</li>
+									<li>
+										<a href="http://m.eyesoccer.id/eyenews/kategori/Soccer Seri">Soccer Seri</a>
+									</li>
+									<li>
+										<a href="http://m.eyesoccer.id/eyenews/kategori/Tulisan Kamu">Tulisan Kamu</a>
+									</li>
+									<li>
+										<a href="http://m.eyesoccer.id/eyenews/kategori/Ulas Tuntas">Ulas Tuntas</a>
+									</li>
+									<li>
+										<a href="http://m.eyesoccer.id/eyenews/kategori/Umpan Lambung">Umpan Lambung</a>
 									</li>
 								</ul>
 							</li>
@@ -78,7 +96,7 @@
 				</td>
 			</tr>
 		</table>
-	</div> -->
+	</div>
     <!-- EYENEWS -->
 	<div id="reqonelist" class='loadonelist' action="eyenews" loading="off" clean="clsonelist">
 		<div id='clsonelist'>

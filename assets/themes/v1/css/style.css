@@ -3389,6 +3389,9 @@ video::-webkit-media-controls-panel {
 }
 .cat-x a{
     background-color: unset;
+    font-size: .8em !important;
+    padding: 3px 10px;
+    font-weight: 500;
 }
 .cat-x ul li ul{
     display: none;
