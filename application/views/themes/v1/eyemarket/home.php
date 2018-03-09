@@ -1,7 +1,7 @@
 <div class="container" style="margin-top:50px;">
         <div class="emarket-content-home">
             <!-- kategori kaos -->
-            <div class="container br-market">
+            <div class="container br-market" style="display:none;">
                 <h2>Kaos</h2>
             </div>
             <div id="reqmarket" class='loadmarket' action="eyemarket" loading="off" clean="clsmarket">
@@ -62,10 +62,10 @@
             </div>
 
             <!-- kategori jersey -->
-            <div class="container br-market">
+            <div class="container br-market" style="display:none;">
                 <h2>Jersey</h2>
             </div>
-            <div id="" class='loadmarket' action="" loading="off" clean="clsmarket">
+            <div id="" class='loadmarket' action="" loading="off" clean="clsmarket" style="display:none;">
                 <div>
                     <div id="clsmarket">
                         <script>
@@ -123,10 +123,10 @@
             </div>
 
             <!-- kategori topi -->
-            <div class="container br-market">
+            <div class="container br-market" style="display:none;">
                 <h2>Topi</h2>
             </div>
-            <div id="" class='loadmarket' action="" loading="off" clean="clsmarket">
+            <div id="" class='loadmarket' action="" loading="off" clean="clsmarket" style="display:none;">
                 <div>
                     <div id="clsmarket">
                         <script>
@@ -184,10 +184,10 @@
             </div>
 
             <!-- kategori jaket -->
-            <div class="container br-market">
+            <div class="container br-market" style="display:none;">
                 <h2>Jaket</h2>
             </div>
-            <div id="" class='loadmarket' action="" loading="off" clean="clsmarket">
+            <div id="" class='loadmarket' action="" loading="off" clean="clsmarket" style="display:none;">
                 <div>
                     <div id="clsmarket">
                         <script>
@@ -245,10 +245,10 @@
             </div>
 
             <!-- kategori sepatu -->
-            <div class="container br-market">
+            <div class="container br-market" style="display:none;">
                 <h2>Sepatu</h2>
             </div>
-            <div id="" class='loadmarket' action="" loading="off" clean="clsmarket">
+            <div id="" class='loadmarket' action="" loading="off" clean="clsmarket" style="display:none;">
                 <div>
                     <div id="clsmarket">
                         <script>
@@ -306,10 +306,10 @@
             </div>
 
             <!-- kategori mug -->
-            <div class="container br-market">
+            <div class="container br-market" style="display:none;">
                 <h2>Mug</h2>
             </div>
-            <div id="" class='loadmarket' action="" loading="off" clean="clsmarket">
+            <div id="" class='loadmarket' action="" loading="off" clean="clsmarket" style="display:none;">
                 <div>
                     <div id="clsmarket">
                         <script>
@@ -367,10 +367,10 @@
             </div>
 
             <!-- kategori keychain -->
-            <div class="container br-market">
+            <div class="container br-market" style="display:none;">
                 <h2>Keychain</h2>
             </div>
-            <div id="" class='loadmarket' action="" loading="off" clean="clsmarket">
+            <div id="" class='loadmarket' action="" loading="off" clean="clsmarket" style="display:none;">
                 <div>
                     <div id="clsmarket">
                         <script>
@@ -428,10 +428,10 @@
             </div>
 
             <!-- kategori tas -->
-            <div class="container br-market">
+            <div class="container br-market" style="display:none;">
                 <h2>Tas</h2>
             </div>
-            <div id="" class='loadmarket' action="" loading="off" clean="clsmarket">
+            <div id="" class='loadmarket' action="" loading="off" clean="clsmarket" style="display:none;">
                 <div>
                     <div id="clsmarket">
                         <script>
@@ -489,10 +489,10 @@
             </div>
 
             <!-- kategori bola -->
-            <div class="container br-market">
+            <div class="container br-market" style="display:none;">
                 <h2>Bola</h2>
             </div>
-            <div id="" class='loadmarket' action="" loading="off" clean="clsmarket">
+            <div id="" class='loadmarket' action="" loading="off" clean="clsmarket" style="display:none;">
                 <div>
                     <div id="clsmarket">
                         <script>
@@ -550,10 +550,10 @@
             </div>
 
             <!-- kategori sleveless shirt -->
-            <div class="container br-market">
+            <div class="container br-market" style="display:none;">
                 <h2>Sleveless shirt</h2>
             </div>
-            <div id="" class='loadmarket' action="" loading="off" clean="clsmarket">
+            <div id="" class='loadmarket' action="" loading="off" clean="clsmarket" style="display:none;">
                 <div>
                     <div id="clsmarket">
                         <script>
