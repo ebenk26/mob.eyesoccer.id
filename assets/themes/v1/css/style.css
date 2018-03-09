@@ -643,7 +643,7 @@ nav>.f-r:hover{
     /* margin: -5px 0; */
 }
 .m-reg {
-    margin: 10px 5px 0px 0px;
+    /* margin: 10px 5px 0px 0px; */
     display: inline;
 }
 .m-top img {
@@ -3377,7 +3377,7 @@ video::-webkit-media-controls-panel {
     display: inline-block;
     float: left;
 }
-.cat-x span, .cat-x a{
+.cat-x span, .cat-x a, .cat-x button{
     font-weight: 700;
     display: block;
     background-color: #8BC34A;
@@ -3388,29 +3388,44 @@ video::-webkit-media-controls-panel {
     box-sizing: border-box;
     margin: 3px;
 }
+.cat-x button{
+    border: none;
+}
 .cat-x a{
     background-color: unset;
     font-size: .8em !important;
-    padding: 3px 10px;
+    padding: 6px 10px;
     font-weight: 500;
+    margin: unset;
 }
 .cat-x ul li ul{
     display: none;
+    z-index: 1;
+    height: 150px;
+    overflow: scroll;
+    top: 32px;
+    left: 3px;
+    position: absolute;
+    width: max-content;
+    background-color: transparent;
 }
-.cat-x ul li:hover ul, .cat-x ul li:active ul, .cat-x ul li:focus ul{
+/* .cat-x ul li:hover ul, .cat-x ul li:active ul, .cat-x ul li:focus ul{
     display: block;
     width: max-content;
+} */
+/* .cat-x ul li ul:hover, .cat-x ul li ul:active, .cat-x ul li ul:focus{
+    display: none;
 }
+.cat-x span:hover ul, .cat-x a:hover ul, .cat-x span:active ul, .cat-x a:active ul, .cat-x span:focus ul, .cat-x a:focus ul{
+    display: none;
+} */
 .cat-x ul li, .p-r{
     position: relative;
 }
-.cat-x ul li ul{
-    position: absolute;
-    width: max-content;
-    background-color: #8ec429;
-}
 .cat-x ul li ul li{
     display: block;
+    background-color: #8ec429;
+    box-sizing: border-box;
 }
 .xc table, .xc tr, .xc td{
     padding: 0px;
@@ -3424,7 +3439,7 @@ video::-webkit-media-controls-panel {
     text-decoration: none;
     background-color: #FAFAFA;
     color: #9CCC65;
-    font-size: .8em;
+    font-size: 12px;
 }
 .komen-tube{
     float: right;

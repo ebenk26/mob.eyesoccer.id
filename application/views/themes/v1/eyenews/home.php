@@ -49,8 +49,8 @@
 					<div class="cat-x">
 						<ul>
 							<li>
-								<span>LIGA</span>
-								<ul style="z-index:  1;height: 150px;overflow:  scroll;">
+								<button onclick="dd()">LIGA</button>
+								<ul id="ddcl">
 									<li>
 										<a href="http://m.eyesoccer.id/eyenews/kategori/Di Pinggir Lapangan">Di Pinggir Lapangan</a>
 									</li>
@@ -87,7 +87,7 @@
 					</div>
 				</td>
 				<td class="container over-x" style="max-width: 90vw !important;height: max-content;margin-bottom: -23px;">
-					<div class="trend w-max" style="margin-top: 10px;">
+					<div class="trend w-max" style="margin-top: 7px;">
 						<div id="reqtrend" class='loadtrend' action="eyenews" loading="off" clean="clstrend">
 							<div id='clstrend'>
 								<script>
@@ -197,7 +197,7 @@
 
 	<!-- USIA MUDA -->
     <div class="container" style="margin-top: 0px !important; background-color: #fafafa;">
-        <h3 class="h3-red">USIA MUDA</h3>
+        <h3 class="h3-red">PEMBINAAN</h3>
         <div class="carousel slide t-30 over-x">
             <div role="listbox" class="carousel-inner w-max">
                 <div class="box item active no-decoration">
@@ -239,7 +239,7 @@
 	</div>
 	
 	<!-- EYENEWS VIDEO -->
-    <div class="container" style="margin-top: -30px !important; background-color: #fafafa;">
+    <div class="container" style="background-color: #fafafa;">
         <h3 class="h3-red">VIDEO</h3>
         <div class="carousel slide t-30 over-x">
             <div role="listbox" class="carousel-inner w-max">
