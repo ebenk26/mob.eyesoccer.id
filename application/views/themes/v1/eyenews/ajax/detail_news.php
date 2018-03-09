@@ -111,7 +111,7 @@ if ($newsdetail){
 			 data-ad-layout="in-article"
 			 data-ad-format="fluid"
 			 data-ad-client="ca-pub-7635854626605122"
-			 data-ad-slot="3624793128"></ins>
+			 data-ad-slot="7962156598"></ins>
 		<script>
 			 (adsbygoogle = window.adsbygoogle || []).push({});
 		</script>

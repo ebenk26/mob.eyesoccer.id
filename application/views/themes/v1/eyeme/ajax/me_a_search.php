@@ -2,7 +2,7 @@
 $res = json_decode($res);
 if(count($res->data) > 0 ){
 
-	echo '<div style="height: 300px">';
+	echo '<div style="height: 500px">';
 	foreach($res->data as $k => $v){?>
 		<div class="pp">
 			<a href="<?php echo MEPROFILE.$v->username?>">

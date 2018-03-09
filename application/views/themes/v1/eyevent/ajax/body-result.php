@@ -9,7 +9,10 @@
     <tbody>
    
 <?php
-    foreach ($jdwl as $value) 
+    $jdwl = json_decode($jdwl);
+
+
+    foreach ($jdwl->data as $value) 
     {
 ?>
         <tr>
@@ -17,24 +20,24 @@
                 <table>
                     <tbody>
                         <tr>
-                            <td colspan="3" class="lgsd"><?= $value['kompetisi']; ?></td>
+                            <td colspan="3" class="lgsd"><?= $value->event; ?></td>
                         </tr>
                         <tr class="tl">
                             <td>
-                                <img src="http://static.eyesoccer.id/v1/cache/images/<?= $value['logo_a']; ?>/small" alt="">
+                                <img src="<?= $value->url_logo_a; ?>/small" alt="">
                             </td>
-                            <td><?= $value['club_a']; ?></td>
-                            <td><?= $value['score_a']; ?></td>
+                            <td><?= $value->team_a; ?></td>
+                            <td><?= $value->score_a; ?></td>
                         </tr>
                         <tr class="tl">
                             <td>
-                                <img src="http://static.eyesoccer.id/v1/cache/images/<?= $value['logo_b']; ?>/small" alt="">
+                                <img src="<?= $value->url_logo_b; ?>/small" alt="">
                             </td>
-                            <td><?= $value['club_b']; ?></td>
-                            <td><?= $value['score_b']; ?></td>
+                            <td><?= $value->team_b; ?></td>
+                            <td><?= $value->score_b; ?></td>
                         </tr>
                         <tr>
-                            <td colspan="3" class="lgsd"><?= $value['lokasi_pertandingan']; ?></td>
+                            <td colspan="3" class="lgsd"><?= $value->match_location; ?></td>
                         </tr>
                     </tbody>
                 </table>
