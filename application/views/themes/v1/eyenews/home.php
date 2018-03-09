@@ -1,7 +1,7 @@
     <!-- TRENDING --> 
     <!-- <div class="trending"> -->
-        <div id="reqtrend" class='loadtrend' action="eyenews" loading="off" clean="clstrend">
-			<div id='clstrend'>
+        <!--<div id="reqtrend" class='loadtrend' action="eyenews" loading="off" clean="clstrend">
+			<div id='clstrend'>-->
 				<!-- <script>
 					$(document).ready(function(){
 						$(window).on('load',function(){
@@ -9,8 +9,8 @@
 						});
 					});
 				</script> -->
-			</div>
-			<input type='hidden' name='fn' value='trending' class='cinput'>
+			<!--</div>
+			<input type='hidden' name='fn' value='trending' class='cinput'>-->
 			<!-- <span class="x-c fafa">
 				<span>Trending</span>
 				<x class="m-l-100"></x>
@@ -20,10 +20,10 @@
 				<a href="" class="gr">Persib</a>
 			</span> -->
 			<!-- <span class="x-c">
-				<span>
+				<span  class="fafa">
 					<ul>
 						<li>
-							<a href="">LIGA</a>
+							<a href="" class="fafa">LIGA</a>
 							<ul>
 								<li><a href="">Di Pinggir Lapangan</a></li>
 								<li><a href="">Di Pinggir Lapangan</a></li>
@@ -40,7 +40,7 @@
 					<a href="" class="gr">Persib</a>
 				</div>
 			</span> -->
-		</div>
+		<!--</div>-->
 	<!-- </div> -->
 	<div class="container xc" style="margin-top: 50px;">
 		<table>
@@ -49,19 +49,37 @@
 					<div class="cat-x">
 						<ul>
 							<li>
-								<span>LIGA</span>
-								<ul>
+								<button onclick="dd()">LIGA</button>
+								<ul id="ddcl">
 									<li>
-										<a href="">Di Pinggir Lapangan</a>
+										<a href="http://m.eyesoccer.id/eyenews/kategori/Di Pinggir Lapangan">Di Pinggir Lapangan</a>
 									</li>
 									<li>
-										<a href="">Di Pinggir Lapangan</a>
+										<a href="http://m.eyesoccer.id/eyenews/kategori/Liga">Liga</a>
 									</li>
 									<li>
-										<a href="">Di Pinggir Lapangan</a>
+										<a href="http://m.eyesoccer.id/eyenews/kategori/Pembinaan">Pembinaan</a>
 									</li>
 									<li>
-										<a href="">Di Pinggir Lapangan</a>
+										<a href="http://m.eyesoccer.id/eyenews/kategori/Peristiwa">Peristiwa</a>
+									</li>
+									<li>
+										<a href="http://m.eyesoccer.id/eyenews/kategori/Prediksi">Prediksi</a>
+									</li>
+									<li>
+										<a href="http://m.eyesoccer.id/eyenews/kategori/Soccer Sains">Soccer Sains</a>
+									</li>
+									<li>
+										<a href="http://m.eyesoccer.id/eyenews/kategori/Soccer Seri">Soccer Seri</a>
+									</li>
+									<li>
+										<a href="http://m.eyesoccer.id/eyenews/kategori/Tulisan Kamu">Tulisan Kamu</a>
+									</li>
+									<li>
+										<a href="http://m.eyesoccer.id/eyenews/kategori/Ulas Tuntas">Ulas Tuntas</a>
+									</li>
+									<li>
+										<a href="http://m.eyesoccer.id/eyenews/kategori/Umpan Lambung">Umpan Lambung</a>
 									</li>
 								</ul>
 							</li>
@@ -69,11 +87,23 @@
 					</div>
 				</td>
 				<td class="container over-x" style="max-width: 90vw !important;height: max-content;margin-bottom: -23px;">
-					<div class="trend w-max" style="margin-top: 10px;">
-						<a href="">Choirul Huda</a>
-						<a href="">IndonesiaU-19</a>
-						<a href="">Egy Maulana Vikri</a>
-						<a href="">Persib</a>
+					<div class="trend w-max" style="margin-top: 7px;">
+						<div id="reqtrend" class='loadtrend' action="eyenews" loading="off" clean="clstrend">
+							<div id='clstrend'>
+								<script>
+									$(document).ready(function(){
+										$(window).on('load',function(){
+											ajaxOnLoad('loadtrend');
+										});
+									});
+								</script>
+							</div>
+							<input type='hidden' name='fn' value='trending' class='cinput'>
+							<a href="">Choirul Huda</a>
+							<a href="">IndonesiaU-19</a>
+							<a href="">Egy Maulana Vikri</a>
+							<a href="">Persib</a>
+						</div>
 					</div>
 				</td>
 			</tr>
@@ -164,8 +194,52 @@
 			 (adsbygoogle = window.adsbygoogle || []).push({});
 		</script>
 	</div>
-	<!-- EYENEWS VIDEO -->
+
+	<!-- USIA MUDA -->
     <div class="container" style="margin-top: 0px !important; background-color: #fafafa;">
+        <h3 class="h3-red">PEMBINAAN</h3>
+        <div class="carousel slide t-30 over-x">
+            <div role="listbox" class="carousel-inner w-max">
+                <div class="box item active no-decoration">
+					<div id="" class='' action="" loading="" clean="">
+						<div id="reqnewsyoung" class='loadnewsyoung' action="eyenews" loading="off" clean="clsnewsyoung">
+							<div id='clsnewsyoung'>
+								<script>
+									$(document).ready(function(){
+										$(window).on('load',function(){
+											ajaxOnLoad('loadnewsyoung');
+										});
+									});
+								</script>
+							</div>
+							<input type='hidden' name='fn' value='newsyoung' class='cinput'>
+							<a href="enews-detail.html">
+								<div class="video-thumb fafa">
+									<div class="v-thumb-img">
+										<img src="" alt="">
+									</div>
+									<h2>Lorem Ipsum Dolor Sit Amet</h2>
+									<span>2 jam lalu</span>
+								</div>
+							</a>
+							<a href="enews-detail.html">
+								<div class="video-thumb fafa">
+									<div class="v-thumb-img">
+										<img src="" alt="">
+									</div>
+									<h2>Lorem Ipsum Dolor Sit AmetLorem Ipsum Dolor Sit AmetLorem Ipsum Dolor Sit Amet</h2>
+									<span>2 jam lalu</span>
+								</div>
+							</a>
+						</div>
+					</div>
+                </div>
+            </div>
+        </div>
+	</div>
+	
+	<!-- EYENEWS VIDEO -->
+    <div class="container" style="background-color: #fafafa;">
         <h3 class="h3-red">VIDEO</h3>
         <div class="carousel slide t-30 over-x">
             <div role="listbox" class="carousel-inner w-max">
@@ -204,3 +278,4 @@
             </div>
         </div>
     </div>
+	

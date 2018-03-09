@@ -12,7 +12,7 @@ if ($newsdetail){
 		<img src="<?php echo $dt->data->url_pic;?>" alt="<?php echo $dt->data->title;?>" width="100%">
 		<div class="container profile-writer b-b-1">
 			<div class="container">
-				<div class="img-radius">
+				<div class="img-radius img-pp p-r">
 					<img src="<?php echo imgEyesoccer();?>" alt="">
 				</div>
 				<h3><?php echo $dt->data->fullname;?></h3>

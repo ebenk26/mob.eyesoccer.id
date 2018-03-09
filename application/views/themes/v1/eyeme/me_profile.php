@@ -71,4 +71,80 @@
     </div>
 </div>
 </div>
-   
+
+<div class="container flw">
+    <div class="container bbg ftitle">
+        <h5>Pengikut</h5>
+        <!-- <h5>Diikuti</h5> -->
+    </div>
+    <div class="dftrflw">
+        <div class="list-flw">
+            <table>
+                <tr>
+                    <td>
+                        <div class="profimg">
+                            <a href=""><img src="<?php echo base_url()?>assets/img/eyeme/user-discover.png" alt="foto profil"></a>
+                        </div>
+                    </td>
+                    <td>
+                        <a href=""><span>username</span></a>
+                    </td>
+                    <td>
+                        <a href=""><button class="btn-fol2">Mengikuti</button></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="profimg">
+                            <a href=""><img src="<?php echo base_url()?>assets/img/eyeme/user-discover.png" alt="foto profil"></a>
+                        </div>
+                    </td>
+                    <td>
+                        <a href=""><span>username</span></a>
+                    </td>
+                    <td>
+                        <button class="btn-fol">Ikuti</button>
+                    </td>
+                </tr>               
+            </table>
+        </div>
+    </div>
+</div>
+<div class="container flw2">
+    <div class="container bbg ftitle">
+        <!-- <h5>Pengikut</h5> -->
+        <h5>Diikuti</h5>
+    </div>
+    <div class="dftrflw">
+        <div class="list-flw">
+            <table>
+                <tr>
+                    <td>
+                        <div class="profimg">
+                            <a href=""><img src="<?php echo base_url()?>assets/img/eyeme/user-discover.png" alt="foto profil"></a>
+                        </div>
+                    </td>
+                    <td>
+                        <a href=""><span>username</span></a>
+                    </td>
+                    <td>
+                        <a href=""><button class="btn-fol2">Mengikuti</button></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="profimg">
+                            <a href=""><img src="<?php echo base_url()?>assets/img/eyeme/user-discover.png" alt="foto profil"></a>
+                        </div>
+                    </td>
+                    <td>
+                        <a href=""><span>username</span></a>
+                    </td>
+                    <td>
+                        <button class="btn-fol">Ikuti</button>
+                    </td>
+                </tr>               
+            </table>
+        </div>
+    </div>
+</div>

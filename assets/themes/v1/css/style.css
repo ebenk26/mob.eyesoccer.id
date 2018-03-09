@@ -310,6 +310,7 @@ nav img{
 }
 .rek-ber-c .img-res-height img{
     width: 100%;
+    margin: 0px !important;
 }
 .rek-ber-c .img-res-height img::before{
     content: '';
@@ -642,7 +643,7 @@ nav>.f-r:hover{
     /* margin: -5px 0; */
 }
 .m-reg {
-    /* margin: 10px 5px; */
+    /* margin: 10px 5px 0px 0px; */
     display: inline;
 }
 .m-top img {
@@ -1344,7 +1345,7 @@ ul, li {
      margin-top: -90px !important;
  }
  .enews-detail>h1{
-    font-weight: 300;
+    font-weight: 500;
     padding: 0px 10px;
     margin-top: 0px;
  }
@@ -1384,12 +1385,12 @@ ul, li {
  }
  .profile-writer h3{
     font-weight: 400;
-    color: gray;
+    color: #404040;
     margin: 15px 0px 0px;
  }
  .profile-writer span{
     font-size: .8em;
-    color: #404040;
+    color: #909090;
     font-weight: 500;
     display: block;
  }
@@ -3376,37 +3377,55 @@ video::-webkit-media-controls-panel {
     display: inline-block;
     float: left;
 }
-.cat-x span, .cat-x a{
+.cat-x span, .cat-x a, .cat-x button{
     font-weight: 700;
     display: block;
     background-color: #8BC34A;
     padding: 5px 15px;
     margin-right: 10px;
     color: #fdfffb;
-    font-size: 0.75em;
+    font-size: 15px !important;
     box-sizing: border-box;
     margin: 3px;
 }
+.cat-x button{
+    border: none;
+}
 .cat-x a{
     background-color: unset;
+    font-size: .8em !important;
+    padding: 6px 10px;
+    font-weight: 500;
+    margin: unset;
 }
 .cat-x ul li ul{
     display: none;
-}
-.cat-x ul li:hover ul, .cat-x ul li:active ul, .cat-x ul li:focus ul{
-    display: block;
-    width: max-content;
-}
-.cat-x ul li{
-    position: relative;
-}
-.cat-x ul li ul{
+    z-index: 1;
+    height: 150px;
+    overflow: scroll;
+    top: 32px;
+    left: 3px;
     position: absolute;
     width: max-content;
-    background-color: #8ec429;
+    background-color: transparent;
+}
+/* .cat-x ul li:hover ul, .cat-x ul li:active ul, .cat-x ul li:focus ul{
+    display: block;
+    width: max-content;
+} */
+/* .cat-x ul li ul:hover, .cat-x ul li ul:active, .cat-x ul li ul:focus{
+    display: none;
+}
+.cat-x span:hover ul, .cat-x a:hover ul, .cat-x span:active ul, .cat-x a:active ul, .cat-x span:focus ul, .cat-x a:focus ul{
+    display: none;
+} */
+.cat-x ul li, .p-r{
+    position: relative;
 }
 .cat-x ul li ul li{
     display: block;
+    background-color: #8ec429;
+    box-sizing: border-box;
 }
 .xc table, .xc tr, .xc td{
     padding: 0px;
@@ -3420,7 +3439,7 @@ video::-webkit-media-controls-panel {
     text-decoration: none;
     background-color: #FAFAFA;
     color: #9CCC65;
-    font-size: .8em;
+    font-size: 12px;
 }
 .komen-tube{
     float: right;
@@ -3428,4 +3447,115 @@ video::-webkit-media-controls-panel {
     margin-top: 0px;
     color: #8ec429;
     font-size: 25px;
+}
+.bbg{
+    border-bottom: 1px solid gainsboro;
+}
+.flw, .flw2{
+    padding: 5px;
+    display: none;
+    position: absolute;
+    min-height: 300px;
+    margin-top: 40px;
+    background-color: white;
+}
+.flw h5, .flw2 h5{
+    margin: 10px 0;
+    padding-left: 10px;
+}
+.flw span, .flw2 span{
+    font-weight: 500;
+    font-size: 1.2em;
+    color: #3a3a3a;
+}
+.ftitle{
+    position: fixed;
+    z-index: 1;
+    background-color: white;
+}
+.dftrflw{
+    margin-top: 40px;
+    height: 100%;
+}
+.list-flw{
+    height: auto;
+}
+.list-flw td{
+    padding: 8px 8px 0px;
+}
+.list-flw td:nth-of-type(1){
+    width: 40px;
+}
+.list-flw td:nth-of-type(3){
+    width: 80px;
+}
+.profimg{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+}
+.profimg img{
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+.btn-fol{
+    float: right;
+    background-color: cornflowerblue;
+    border: 1px solid cornflowerblue;
+    color: white;
+    font-size: .9em;
+    border-radius: 3px;
+    padding: 3px;
+    width: 78px;
+}
+.btn-fol2{
+    float: right;
+    /* background-color: cornflowerblue; */
+    border: 1px solid cornflowerblue;
+    font-size: .9em;
+    border-radius: 3px;
+    padding: 3px;
+    width: 78px;
+}
+.img-pp{
+    border: 1px solid gainsboro;
+}
+.img-pp img{
+    width: unset !important;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+.kontak td{
+    padding: 5px;
+}
+.kontak h2{
+    padding: 10px;
+    color: #FFB300 !important;
+    font-size: 1.6em;
+    font-weight: 500 !important;
+}
+.kontak2 h2{
+    font-size: 1.1em;
+    margin-bottom: 2px;
+    color: #FFB300;
+    padding-top: 10px;
+}
+.kontak2 span{
+    font-size: .8em;
+}
+.oren{
+    color: #FFB300;
+}
+.m-t-15{
+    margin-top: -15px;
 }

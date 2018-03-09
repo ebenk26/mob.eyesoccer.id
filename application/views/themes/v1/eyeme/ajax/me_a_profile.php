@@ -12,18 +12,19 @@ $self = ($id == $res->id) ? TRUE : FALSE;
         </div>
         <div class="eme-prof-user">
             <a href="<?php echo MEPROFILE.$res->username?>"><?php echo $res->username?></a>
-            <div id="reqfol">
+            
                 <?php 
-                if(isset($res->hasfollow)){
+                if($this->session->member){
+                    echo '<div id="reqfol">';
                     echo btnFol($id,$res->hasfollow,array('onclick' => 'clickfol()'),'follow-button',$self);
-                }
+                    echo '</div>';
+                    echo '<div id="btn-fol" action="eyeme" class="btnfollow">
+                            <input type="hidden" name="fn" value="follow" class="cinput">
+                            <input type="hidden" name="unamefol" value="'.$res->username.'" class="cinput">
+                        </div>';
+                }      
                 ?>
-            </div>
-            <div id="btn-fol" action="eyeme" class="btn-fol">
-                <input type="hidden" name="fn" value="follow" class="cinput">
-                <input type="hidden" name="unamefol" value="<?php echo $res->username?>" class="cinput">
-            </div>
-           
+          
         </div>
         <p class="eme-prof-desc"><?php echo $res->about?></p>
         <table class="tx-c tr-1-bold">
@@ -41,7 +42,7 @@ $self = ($id == $res->id) ? TRUE : FALSE;
     </div>
 <script  type="text/javascript">
     function clickfol(){
-        ajaxOnLoad('btn-fol');
+        ajaxOnLoad('btnfollow');
     }
 </script>
 

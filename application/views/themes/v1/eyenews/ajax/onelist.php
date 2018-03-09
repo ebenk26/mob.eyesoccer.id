@@ -13,8 +13,8 @@
 					<div class="v-eyetube" style="height: 185px;">
 						<img src="<?php echo $value->url_pic;?>" alt="">
 					</div>
-					<span><?php echo relative_time($this->library->datenormal($value->createon))." lalu"?></span>
-					<h1  style="bottom: 50px;height: 2.3em;"><?php echo $value->title;?></h1>
+					<span style="bottom: 75px;"><?php echo relative_time($this->library->datenormal($value->createon))." lalu"?></span>
+					<h1  style="bottom: 70px;height: unset;"><?php echo $value->title;?></h1>
 				</div>
 			</a>
 			<div class="container news-headline" style="margin-bottom: 10px;top: unset;">
@@ -50,7 +50,7 @@
 									<img src="<?php echo $value->url_pic; ?>" alt="<?php echo $value->title; ?>">
 								</div>
 								<!-- <span style="position: unset;"><?php echo relative_time($this->library->datenormal($value->publish_on)); ?> lalu</span> -->
-								<h1 style="bottom: 0;padding: unset;text-shadow: unset;"><?php echo $value->title; ?></h1>
+								<h1 style="bottom: 0;padding: unset;text-shadow: unset;overflow:unset;"><?php echo $value->title; ?></h1>
 								<!-- <p><?php echo word_limiter(strip_tags($value->description), 10); ?></p> -->
 							</div>
 					</a>
