@@ -144,4 +144,15 @@ class EyenewsMod extends CI_Model {
 		$data = array('xClass' => 'reqsubcatlist', 'xHtml' => $html);
 		$this->tools->__flashMessage($data);
     }
+	
+	function __newsyoung()
+    {
+		$query = array('page' => 1, 'limit' => 10, 'youngage' => true, 'description' => true, 'sortby' => 'newest');
+		$data['newsyoung'] = $this->excurl->remoteCall($this->__xurl().'news', $this->__xkey(), $query);
+		
+		$html = $this->load->view($this->__theme().'eyenews/ajax/newsyoung', $data, true);
+		
+		$data = array('xClass' => 'reqnewsyoung', 'xHtml' => $html);
+		$this->tools->__flashMessage($data);
+    }
 }

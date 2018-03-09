@@ -1,3 +1,11 @@
+function dd() {
+    var ddcl = document.getElementById("ddcl");
+    if (ddcl.style.display === "block") {
+        ddcl.style.display = "none";
+    } else {
+        ddcl.style.display = "block";
+    }
+}
 $(document).ready(function(){
     // $("#evSlide").carousel();
     $(".left").click(function(){
@@ -71,7 +79,6 @@ window.onload = function(){
             xMenu.style.display = "block";
         }
     }
-    
     xClose.onclick = function() {
         xMenu.style.display = "none";
     }

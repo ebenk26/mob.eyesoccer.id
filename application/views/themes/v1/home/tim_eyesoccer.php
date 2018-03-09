@@ -143,6 +143,7 @@
 							<h2>Sales and Marketing</h2>
 							<br>Philips Gregory
 							<br>Owin Rodwin
+							<br>Fria Puspitasari
 						</td>
 					</tr>
 					<tr>
@@ -155,6 +156,12 @@
 						<td>
 							<h2>Eyesoccer Representative for Europe</h2>
 							<br>Jurgen Claessens
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<h2>Eyesoccer for Prof Lampung</h2>
+							<br>Faisal Yusuf
 						</td>
 					</tr>
 					<tr>
@@ -177,25 +184,18 @@
 					</tr>
 					<tr>
 						<td>
-							<h2>Back End</h2>
-							<br>Muhammad Robi
-							<br>Sofyan Walid
-							<br>Kharizuno
-						</td>
-					</tr>
-					<tr>
-						<td>
 							<h2>Back End Developer</h2>
 							<br>Muhammad Robi
 							<br>Kharizuno Hizbullah
 							<br>Sofyan Waldy
+							<br>Muhammad Arif
 						</td>
 					</tr>
 					<tr>
 						<td>
 							<h2>Front End Developer</h2>
 							<br>Fajar Ulin Nuha
-							<br>Faradilah Nurzahra Danopa
+							<br>Faradila Nurzahra Danopa
 						</td>
 					</tr>
 					<tr>
@@ -207,21 +207,14 @@
 					</tr>
 					<tr>
 						<td>
-							<h2>SEO Specialist</h2>
-							<br>Ardiatma
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<h2>Android Mobile Developer</h2>
-							<br>Fazil Muamar
-							<br>Naufal Syarifuddin
-						</td>
-					</tr>
-					<tr>
-						<td>
 							<h2>IT Infrastructure</h2>
 							<br>Jimmy Zakaria
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<h2>SEO Specialist</h2>
+							<br>Ardiatma
 						</td>
 					</tr>
 				</table>

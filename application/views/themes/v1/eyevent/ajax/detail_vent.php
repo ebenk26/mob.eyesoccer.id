@@ -8,8 +8,8 @@
             <img src="<?= $detail->url_pic; ?>" alt="<?= $detail->title; ?>" width="100%">
             <div class="container profile-writer b-b-1">
                 <div class="container">
-                    <div class="img-radius" style="background-color: #f2f2f2;">
-                        <img src="<?php echo imgEyesoccer()?>" alt="<?= $detail->fullname; ?>" style="margin-top: -4px;margin-left: -17px;">
+                    <div class="img-radius img-pp p-r" style="background-color: #f2f2f2;">
+                        <img src="<?php echo imgEyesoccer()?>" alt="<?= $detail->fullname; ?>">
                     </div>
                     <h3><?= $detail->fullname; ?></h3>
                     <span> 
