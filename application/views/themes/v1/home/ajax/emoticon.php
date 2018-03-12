@@ -7,7 +7,7 @@
 		// print_r ($dt);exit();
 		if($type == 'proud'){
 ?>
-			<a class="emoticon" href='javascript:void(0)' class='form_post' action='home' id="reqemot<?php echo $type?>">
+			<a href='javascript:void(0)' class='form_post' action='home' id="reqemot<?php echo $type?>">
 				<input type='hidden' name='fn' value='set_emot' class='cinput'>
 				<input type='hidden' name='channel' value='eyenews' class='cinput'>
 				<input type='hidden' name='type' value='proud' class='cinput'>
@@ -21,7 +21,7 @@
 <?php
 		}else if($type == 'inspired'){
 ?>
-			<a class="emoticon" href='javascript:void(0)' class='form_post' action='home' id="reqemot<?php echo $type?>">
+			<a href='javascript:void(0)' class='form_post' action='home' id="reqemot<?php echo $type?>">
 				<input type='hidden' name='fn' value='set_emot' class='cinput'>
 				<input type='hidden' name='channel' value='eyenews' class='cinput'>
 				<input type='hidden' name='type' value='inspired' class='cinput'>
@@ -35,7 +35,7 @@
 <?php
 		}else if($type == 'happy'){
 ?>
-			<a class="emoticon" href='javascript:void(0)' class='form_post' action='home' id="reqemot<?php echo $type?>">
+			<a href='javascript:void(0)' class='form_post' action='home' id="reqemot<?php echo $type?>">
 				<input type='hidden' name='fn' value='set_emot' class='cinput'>
 				<input type='hidden' name='channel' value='eyenews' class='cinput'>
 				<input type='hidden' name='type' value='happy' class='cinput'>
@@ -49,7 +49,7 @@
 <?php
 		}else if($type == 'sad'){
 ?>
-			<a class="emoticon" href='javascript:void(0)' class='form_post' action='home' id="reqemot<?php echo $type?>">
+			<a href='javascript:void(0)' class='form_post' action='home' id="reqemot<?php echo $type?>">
 				<input type='hidden' name='fn' value='set_emot' class='cinput'>
 				<input type='hidden' name='channel' value='eyenews' class='cinput'>
 				<input type='hidden' name='type' value='sad' class='cinput'>
@@ -63,7 +63,7 @@
 <?php
 		}else if($type == 'angry'){
 ?>
-			<a class="emoticon" href='javascript:void(0)' class='form_post' action='home' id="reqemot<?php echo $type?>">
+			<a href='javascript:void(0)' class='form_post' action='home' id="reqemot<?php echo $type?>">
 				<input type='hidden' name='fn' value='set_emot' class='cinput'>
 				<input type='hidden' name='channel' value='eyenews' class='cinput'>
 				<input type='hidden' name='type' value='angry' class='cinput'>
@@ -77,7 +77,7 @@
 <?php
 		}else if($type == 'fear'){
 ?>
-			<a class="emoticon" href='javascript:void(0)' class='form_post' action='home' id="reqemot<?php echo $type?>">
+			<a href='javascript:void(0)' class='form_post' action='home' id="reqemot<?php echo $type?>">
 				<input type='hidden' name='fn' value='set_emot' class='cinput'>
 				<input type='hidden' name='channel' value='eyenews' class='cinput'>
 				<input type='hidden' name='type' value='fear' class='cinput'>
@@ -91,7 +91,7 @@
 <?php
 		}else if($type == 'fun'){
 ?>
-			<a class="emoticon" href='javascript:void(0)' class='form_post' action='home' id="reqemot<?php echo $type?>">
+			<a href='javascript:void(0)' class='form_post' action='home' id="reqemot<?php echo $type?>">
 				<input type='hidden' name='fn' value='set_emot' class='cinput'>
 				<input type='hidden' name='channel' value='eyenews' class='cinput'>
 				<input type='hidden' name='type' value='fun' class='cinput'>
@@ -105,7 +105,7 @@
 <?php
 		}else if($type == 'shock'){
 ?>
-			<a class="emoticon" href='javascript:void(0)' class='form_post' action='home' id="reqemot<?php echo $type?>">
+			<a href='javascript:void(0)' class='form_post' action='home' id="reqemot<?php echo $type?>">
 				<input type='hidden' name='fn' value='set_emot' class='cinput'>
 				<input type='hidden' name='channel' value='eyenews' class='cinput'>
 				<input type='hidden' name='type' value='shock' class='cinput'>
