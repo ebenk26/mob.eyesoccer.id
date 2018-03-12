@@ -17,32 +17,32 @@
 		<input type='hidden' name='fn' value='detail_news' class='cinput'>
 		<input type='hidden' name='slug' value='<?php echo $slug; ?>' class='cinput'>
 <div class="container enews-detail">
-	<h1>Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet</h1>
-	<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="" width="100%">
+	<h1 class="gr">Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet</h1>
+	<img src="" alt="" width="100%" height="200px" class="fafa">
 	<div class="container profile-writer b-b-1">
 		<div class="container">
-			<div class="img-radius">
-				<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+			<div class="img-radius gr" style="border: 15px solid;border-color: white !important;box-sizing: content-box;margin: -5px 0 0 -15px;">
+				<img src="" alt="">
 			</div>
-			<h3>Aditya Gilang</h3>
-			<span>09 nov 2017, 21.40 WIB</span>                
+			<h3 class="gr">Aditya Gilang</h3>
+			<span class="gr">09 nov 2017, 21.40 WIB</span>                
 		</div>
-		<div class="container tx-c share">
+		<!-- <div class="container tx-c share">
 			<i class="fa fa-facebook" aria-hidden="true"></i>
 			<i class="fa fa-twitter" aria-hidden="true"></i>
 			<i class="fa fa-google-plus-official" aria-hidden="true"></i>
 			<i class="fa fa-envelope-o" aria-hidden="true"></i>
 			<i class="fa fa-comment openComment" aria-hidden="false"><div class="openComment">16</div></i>
-		</div>
+		</div> -->
 	</div>
 	<div class="container-94">
-		<p style="margin-bottom: 50px;font-size: .9em;">
+		<p style="margin-bottom: 50px;font-size: .9em;" class="gr">
 			Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet
 		</p>
 	</div>
 	</div>
 	<!-- EMOTICON -->
-	<div class="container-94" style="background-color: white;padding: 10px 0px 20px;">
+	<!-- <div class="container-94" style="background-color: white;padding: 10px 0px 20px;">
 		<div class="col-3 col-emoji">
 			<a href="">
 				<div class="img-box">
@@ -115,7 +115,7 @@
 				<span>terkejut</span>
 			</a>
 		</div>
-	</div>
+	</div> -->
 </div>
 	<!-- IKLAN -->
 	<div class="container">
@@ -146,18 +146,18 @@
 					</div>
 					<input type='hidden' name='fn' value='list_tube_eyenews' class='cinput'>
 					<a href="">
-						<div class="video-thumb">
+						<div class="video-thumb fafa gr">
 							<div class="v-thumb-img">
-								<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+								<img src="" alt="">
 							</div>
 							<h2>Lorem Ipsum Dolor Sit Amet</h2>
 							<span>2 jam lalu</span>
 						</div>
 					</a>
 					<a href="">
-						<div class="video-thumb">
+						<div class="video-thumb fafa gr">
 							<div class="v-thumb-img">
-								<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+								<img src="" alt="">
 							</div>
 							<h2>Lorem Ipsum Dolor Sit AmetLorem Ipsum Dolor Sit AmetLorem Ipsum Dolor Sit Amet</h2>
 							<span>2 jam lalu</span>
@@ -168,7 +168,7 @@
 		</div>
 	</div>
 </div>
-<div class="container-94 m-b-20 unset">
+<!-- <div class="container-94 m-b-20 unset">
 	<span class="up-next-etube" style="margin-top: 23px;">Berita Terkini</span>
 	<div id="reqterkait" class="reqterkait">
 		<div class="etube-content etube-content-detail pd-t-10">
@@ -189,7 +189,7 @@
 		</div>
 		
 	</div>
-</div>
+</div> -->
 </div>
 <!-- KOMENTAR -->
 <div class="container-comment">

@@ -203,6 +203,12 @@ nav img{
     float: left;
     width: 38%;
 }
+@media screen and (max-width: 321px) {
+    .v-etube, .v-etube-res{
+        width: 120px !important;
+        min-width: unset;
+    }
+}
 .v-etube img{
     width: 100%;
 }
@@ -2322,11 +2328,13 @@ ul, li {
     width: 90%;
     z-index: -3;
     overflow: hidden;
+    max-width: 690px;
 }
 .col-3{
     /* width: 12.5%; */
     width: 25%;
     float: left;
+    max-width: 90px;
 }
 .col-emoji{
     padding-bottom: 15px;
@@ -3044,7 +3052,7 @@ ul, li {
     position: relative;
     top: -11px;
     width: 15px;
-    height: 30px;
+    height: 18px;
 }
 .tab-popular-custom-home{
     color: #FF5722 !important;
@@ -3616,4 +3624,15 @@ video::-webkit-media-controls-panel {
     .v-eyetube{
         min-height: 435px;
     }
+    .etube-res{
+        height: 435px !important;
+    }
+}
+.img-gal{
+    width: 90vw;
+    float: left;
+    margin-right: 20px;
+}
+.img-gal img{
+    width: 100%;
 }

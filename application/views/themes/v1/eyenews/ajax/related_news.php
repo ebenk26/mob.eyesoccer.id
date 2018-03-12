@@ -6,7 +6,7 @@ if ($newsdetail){
 ?>
 	<a href="<?php echo $this->library->urltomob($dt->url);?>">
 		<div class="etube-content etube-content-detail pd-t-10">
-			<div class="v-etube v-etube-detail">
+			<div class="v-etube v-etube-detail v-etube-res">
 				<img src="<?php echo $dt->url_pic.'/small';?>" alt="">
 			</div>
 			<h1><?php echo $dt->title;?></h1>

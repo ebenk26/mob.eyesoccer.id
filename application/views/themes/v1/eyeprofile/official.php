@@ -104,7 +104,7 @@
                             <input type='hidden' name='slug' value='<?php echo $slug;?>' class='cinput'>
                             <input type='hidden' name='submenu' value='klub' class='cinput'>
                             <div class="table-scroll-x" style="border: unset;border-radius: unset;">
-                                <table class="table-stripe">
+                                <table class="table-stripe gr fafa">
                                     <tr>
                                         <th>#</th>
                                         <th>nama</th>
@@ -116,9 +116,9 @@
                                         <th>masa kontrak</th>
                                     </tr>
                                     <tr>
-                                        <td>1 <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt=""></td>
+                                        <td>1 <img src="" alt=""></td>
                                         <td>aji santoso</td>
-                                        <td><img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt=""></td>
+                                        <td><img src="" alt=""></td>
                                         <td>12 mar 1993 (24)</td>
                                         <td>manager</td>
                                         <td>indonesia</td>
@@ -126,9 +126,9 @@
                                         <td>31 des 2017</td>
                                     </tr>
                                     <tr>
-                                        <td>1 <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt=""></td>
+                                        <td>1 <img src="" alt=""></td>
                                         <td>aji santoso</td>
-                                        <td><img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt=""></td>
+                                        <td><img src="" alt=""></td>
                                         <td>12 mar 1993 (24)</td>
                                         <td>manager</td>
                                         <td>indonesia</td>

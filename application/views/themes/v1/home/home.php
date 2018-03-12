@@ -11,17 +11,17 @@
             </script>
         </div>
         <input type='hidden' name='fn' value='trending' class='cinput'>
-        <span class="x-c">
+        <span class="x-c fafa">
             <span>Trending</span>
             <x class="m-l-100"></x>
-            <a href="">Choirul Huda</a>
-            <a href="">IndonesiaU-19</a>
-            <a href="">Egy Maulana Vikri</a>
-            <a href="">Persib</a>
-            <a href="">Liga2</a>
-            <a href="">Liga Santri Nusantara</a>
-            <a href="">Liga Champion</a>
-            <a href="">Liga1</a>
+            <a href="" class="gr">Choirul Huda</a>
+            <a href="" class="gr">IndonesiaU-19</a>
+            <a href="" class="gr">Egy Maulana Vikri</a>
+            <a href="" class="gr">Persib</a>
+            <a href="" class="gr">Liga2</a>
+            <a href="" class="gr">Liga Santri Nusantara</a>
+            <a href="" class="gr">Liga Champion</a>
+            <a href="" class="gr">Liga1</a>
         </span>
     </div>
 </div>
@@ -51,10 +51,10 @@
                     <input type="hidden" name="page" value="<?php echo rand(1, 100) ?>" class="cinput">
                     <a href="">
                         <div class="ep-box-content">
-                            <div class="img">
-                                <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+                            <div class="img gr">
+                                <img src="" alt="">
                             </div>
-                            <div class="ep-detail">
+                            <div class="ep-detail fafa gr">
                                 <h1>Egy Maulana Vikry</h1>
                                 <p>Posisi: Sayap Kanan<br>
                                     Klub: -<br>
@@ -64,10 +64,10 @@
                     </a>
                     <a href="">
                         <div class="ep-box-content">
-                            <div class="img">
-                                <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+                            <div class="img gr">
+                                <img src="" alt="">
                             </div>
-                            <div class="ep-detail">
+                            <div class="ep-detail fafa gr">
                                 <h1>Egy Maulana Vikry</h1>
                                 <p>Posisi: Sayap Kanan<br>
                                     Klub: -<br>
@@ -77,10 +77,10 @@
                     </a>
                     <a href="">
                         <div class="ep-box-content">
-                            <div class="img">
-                                <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+                            <div class="img gr">
+                                <img src="" alt="">
                             </div>
-                            <div class="ep-detail">
+                            <div class="ep-detail fafa gr">
                                 <h1>Egy Maulana Vikry</h1>
                                 <p>Posisi: Sayap Kanan<br>
                                     Klub: -<br>
@@ -115,45 +115,45 @@
             </script>
         </div>
         <input type='hidden' name='fn' value='vidtube' class='cinput'>
-        <div class="v-eyetube">
-            <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+        <div class="v-eyetube gr">
+            <img src="" alt="">
         </div>
-        <span>30 menit lalu</span>
-        <h1>Lorrem Ipsum solor sit amet</h1>
+        <span style="display: none;">30 menit lalu</span>
+        <h1 style="display: none;">Lorrem Ipsum solor sit amet</h1>
         <div class="container" style="margin-top: -40px;background-color: #fafafa;">
             <div class="etube-content pd-t-10">
                 <div class="v-etube">
-                    <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+                    <img src="" alt="">
                     <div class="btn-play">
                         <img src="<?php echo SUBCDN . "assets/$folder"; ?>img/btn-play.png" alt="">
                     </div>
                 </div>
-                <h1>Lorem Ipsum Dolor Sit amet</h1>
-                <span>30 menit lalu</span>
-                <span>2000 view - 100 suka</span>
+                <h1  class="gr">Lorem Ipsum Dolor Sit amet</h1>
+                <span class="gr">30 menit lalu</span>
+                <span class="gr">2000 view - 100 suka</span>
             </div>
             <div class="etube-content">
                 <div class="v-etube">
-                    <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+                    <img src="" alt="">
                     <div class="btn-play">
                         <img src="<?php echo SUBCDN . "assets/$folder"; ?>img/btn-play.png" alt="">
                     </div>
                 </div>
-                <h1>Lorem Ipsum Dolor Sit amet</h1>
-                <span>30 menit lalu</span>
-                <span>2000 view - 100 suka</span>
+                <h1 class="gr">Lorem Ipsum Dolor Sit amet</h1>
+                <span class="gr">30 menit lalu</span>
+                <span class="gr">2000 view - 100 suka</span>
             </div>
 
             <div class="etube-content">
                 <div class="v-etube">
-                    <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+                    <img src="" alt="">
                     <div class="btn-play">
                         <img src="<?php echo SUBCDN . "assets/$folder"; ?>img/btn-play.png" alt="">
                     </div>
                 </div>
-                <h1>Lorem Ipsum Dolor Sit amet</h1>
-                <span>30 menit lalu</span>
-                <span>2000 view - 100 suka</span>
+                <h1 class="gr">Lorem Ipsum Dolor Sit amet</h1>
+                <span class="gr">30 menit lalu</span>
+                <span class="gr">2000 view - 100 suka</span>
             </div>
          </div>
     </div>
@@ -178,17 +178,17 @@
             </script>
         </div>
         <input type='hidden' name='fn' value='melist' class='cinput'>
-        <div class="eme-box">
-            <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+        <div class="eme-box gr">
+            <img src="" alt="">
         </div>
-        <div class="eme-box">
-            <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+        <div class="eme-box gr">
+            <img src="" alt="">
         </div>
-        <div class="eme-box">
-            <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+        <div class="eme-box gr">
+            <img src="" alt="">
         </div>
-        <div class="eme-box">
-            <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+        <div class="eme-box gr">
+            <img src="" alt="">
         </div>
     </div>
 </div>
@@ -216,8 +216,8 @@
 			<input type='hidden' name='limit' value='7' class='cinput'>
 			<input type='hidden' name='page' value='1' class='cinput'>
 			<input type='hidden' name='desc' value='true' class='cinput'>
-			<div class="v-eyetube">
-				<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+			<!-- <div class="v-eyetube">
+				<img src="" alt="">
 			</div>
 			<span style="padding-bottom: 0;margin-bottom: 0;">30 menit lalu</span>
 			<h1 style="padding-top: 0;margin-top: -5px;">Lorrem Ipsum solor sit amet</h1>
@@ -232,7 +232,7 @@
 					<p>JAKARTA - Kompetisi Liga 1 2017 memang sudah selesai. Dan,�
 					</p>
 				</div>
-			</a>
+			</a> -->
 		</div>
 	</div>
     <div id="reqtabnews" class='loadtabnews' action="eyenews" loading="off" clean="clstabnews">
@@ -246,7 +246,7 @@
             </script>
         </div>
         <input type='hidden' name='fn' value='tabnews' class='cinput'>
-        <div id='boxtab'>
+        <!-- <div id='boxtab'>
             <span id='tab-populer' onclick="tabmenu(this.id, 'orange-active')" class="orange-active" active="true">terpopuler</span>
             <span id='tab-rekomendasi' onclick="tabmenu(this.id, 'orange-active')">rekomendasi</span>
             <span id='tab-usiamuda' onclick="tabmenu(this.id, 'orange-active')">usia muda</span>
@@ -256,19 +256,19 @@
             <div id='tab-populer' class="box item active">
                 <div class="container rek-ber">
                     <div class="rek-ber-c">
-                        <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+                        <img src="" alt="">
                         <span>17 Okt 2017 - 12.451</span>
                         <h1>lorem ipsum dolor sit amet lorem ipsum dolor sit amet </h1>
                         <p>lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet </p>
                     </div>
                     <div class="rek-ber-c">
-                        <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+                        <img src="" alt="">
                         <span>17 Okt 2017 - 12.45</span>
                         <h1>lorem ipsum dolor sit amet lorem ipsum dolor sit amet </h1>
                         <p>lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet </p>
                     </div>
                     <div class="rek-ber-c">
-                        <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+                        <img src="" alt="">
                         <span>17 Okt 2017 - 12.45</span>
                         <h1>lorem ipsum dolor sit amet lorem ipsum dolor sit amet </h1>
                         <p>lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet </p>
@@ -278,19 +278,19 @@
             <div id='tab-rekomendasi' class="box item">
                 <div class="container rek-ber">
                     <div class="rek-ber-c">
-                        <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+                        <img src="" alt="">
                         <span>17 Okt 2017 - 12.452</span>
                         <h1>lorem ipsum dolor sit amet lorem ipsum dolor sit amet </h1>
                         <p>lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet </p>
                     </div>
                     <div class="rek-ber-c">
-                        <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+                        <img src="" alt="">
                         <span>17 Okt 2017 - 12.45</span>
                         <h1>lorem ipsum dolor sit amet lorem ipsum dolor sit amet </h1>
                         <p>lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet </p>
                     </div>
                     <div class="rek-ber-c">
-                        <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+                        <img src="" alt="">
                         <span>17 Okt 2017 - 12.45</span>
                         <h1>lorem ipsum dolor sit amet lorem ipsum dolor sit amet </h1>
                         <p>lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet </p>
@@ -300,26 +300,26 @@
             <div id='tab-usiamuda' class="box item">
                 <div class="container rek-ber">
                     <div class="rek-ber-c">
-                        <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+                        <img src="" alt="">
                         <span>17 Okt 2017 - 12.453</span>
                         <h1>lorem ipsum dolor sit amet lorem ipsum dolor sit amet </h1>
                         <p>lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet </p>
                     </div>
                     <div class="rek-ber-c">
-                        <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+                        <img src="" alt="">
                         <span>17 Okt 2017 - 12.45</span>
                         <h1>lorem ipsum dolor sit amet lorem ipsum dolor sit amet </h1>
                         <p>lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet </p>
                     </div>
                     <div class="rek-ber-c">
-                        <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+                        <img src="" alt="">
                         <span>17 Okt 2017 - 12.45</span>
                         <h1>lorem ipsum dolor sit amet lorem ipsum dolor sit amet </h1>
                         <p>lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet </p>
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
 </div>
 <!-- EYEMARKET -->
@@ -344,12 +344,12 @@
                     </script>
                 </div>
                 <input type='hidden' name='fn' value='market' class='cinput'>
-                <div class="box item active">
+                <!-- <div class="box item active">
 
 
                     <a href="">
                         <div class="em-box-content">
-                            <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+                            <img src="" alt="">
                             <h1>lorem ipsum dolor sit</h1>
                             <p class="prices">Rp. 500.000</p>
                             <button type="text" class="beli">Beli</button>
@@ -357,13 +357,13 @@
                     </a>
                     <a href="">
                         <div class="em-box-content">
-                            <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
+                            <img src="" alt="">
                             <h1>lorem ipsum dolor sit</h1>
                             <p class="prices">Rp. 500.000</p>
                             <button type="text" class="beli">Beli</button>
                         </div>
                     </a>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -391,7 +391,7 @@
             <input type='hidden' name='fn' value='event_list' class='cinput'>
             <input type='hidden' name='page' value='home' class='cinput'>
             <input type='hidden' name='limit' value='3' class='cinput'>
-            <div role="listbox" class="carousel-inner w-max">
+            <!-- <div role="listbox" class="carousel-inner w-max">
                 <div class="box item active">
                     <div class="ev-box-content">
 
@@ -414,16 +414,16 @@
 
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 </div>
-<div class="container pd-t-10">
+<!-- <div class="container pd-t-10">
     <div class="bx-nav">
         <i class="material-icons left i-bx-l" href="#evSlide" role="button">keyboard_arrow_left</i>
         <i class="material-icons right i-bx-r" href="#evSlide" role="button">keyboard_arrow_right</i>
     </div>
-</div>
+</div> -->
 <!-- JADWAL PERTANDINGAN -->
 <div class="container tx-c">
     <span class="jp green">JADWAL PERTANDINGAN</span>
@@ -439,7 +439,7 @@
                 </script>
             </div>
             <input type='hidden' name='fn' value='match_schedule' class='cinput'>
-            <div class="container bg-g">
+            <!-- <div class="container bg-g">
                 <div class="t-tab">
                     <div class="day-choose">
                         <a href="">Senin
@@ -457,36 +457,36 @@
                         </a>
                     </div>
                 </div>
-            </div>
-            <table class="table border-b">
+            </div> -->
+            <!-- <table class="table border-b">
                 <tbody>
                 <tr>
-                    <td class="tx-r">Arsenal<span class="i-l"><img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt=""></span></td>
+                    <td class="tx-r">Arsenal<span class="i-l"><img src="" alt=""></span></td>
                     <td class="tx-c">01:45<span class="t-live"></span></td>
-                    <td class="tx-l"><span class="i-r"><img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt=""></span>Arsenal</td>
+                    <td class="tx-l"><span class="i-r"><img src="" alt=""></span>Arsenal</td>
                 </tr>
                 <tr>
-                    <td class="tx-r">Arsenal<span class="i-l"><img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt=""></span></td>
+                    <td class="tx-r">Arsenal<span class="i-l"><img src="" alt=""></span></td>
                     <td class="tx-c">01:45<span class="t-live">Live di SCTV</span></td>
-                    <td class="tx-l"><span class="i-r"><img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt=""></span>Arsenal</td>
+                    <td class="tx-l"><span class="i-r"><img src="" alt=""></span>Arsenal</td>
                 </tr>
                 <tr>
-                    <td class="tx-r">Arsenal<span class="i-l"><img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt=""></span></td>
+                    <td class="tx-r">Arsenal<span class="i-l"><img src="" alt=""></span></td>
                     <td class="tx-c">01:45<span class="t-live"></span></td>
-                    <td class="tx-l"><span class="i-r"><img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt=""></span>Arsenal</td>
+                    <td class="tx-l"><span class="i-r"><img src="" alt=""></span>Arsenal</td>
                 </tr>
                 <tr>
-                    <td class="tx-r">Arsenal<span class="i-l"><img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt=""></span></td>
+                    <td class="tx-r">Arsenal<span class="i-l"><img src="" alt=""></span></td>
                     <td class="tx-c">01:45<span class="t-live"></span></td>
-                    <td class="tx-l"><span class="i-r"><img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt=""></span>Arsenal</td>
+                    <td class="tx-l"><span class="i-r"><img src="" alt=""></span>Arsenal</td>
                 </tr>
                 <tr>
-                    <td class="tx-r">Arsenal<span class="i-l"><img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt=""></span></td>
+                    <td class="tx-r">Arsenal<span class="i-l"><img src="" alt=""></span></td>
                     <td class="tx-c">01:45<span class="t-live">Live di SCTV</span></td>
-                    <td class="tx-l"><span class="i-r"><img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt=""></span>Arsenal</td>
+                    <td class="tx-l"><span class="i-r"><img src="" alt=""></span>Arsenal</td>
                 </tr>
                 </tbody>
-            </table>
+            </table> -->
         </div>
         <div class="t-c-b">
             <a href="<?= base_url(); ?>eyevent/hasil-pertandingan">
@@ -514,7 +514,7 @@
     </div>
     <input type='hidden' name='fn' value='klasemen' class='cinput'>
 
-    <div class="border-box">
+    <!-- <div class="border-box">
         <span class="jp-k">KLASEMEN</span>
         <select id="list-liga" name="liganya" selected="true" class="slct-lg">
             <option value="">Liga 1 Indonesia</option>
@@ -649,5 +649,5 @@
                 </tbody>
             </table>
         </div>
-    </div>
+    </div> -->
 </div>
