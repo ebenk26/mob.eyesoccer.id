@@ -145,6 +145,18 @@ if ($tube) {
         </div>
     </div>
     <div class="container-94 m-b-20 unset">
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <ins class="adsbygoogle"
+            style="display:block; text-align:center;"
+            data-ad-layout="in-article"
+            data-ad-format="fluid"
+            data-ad-client="ca-pub-7635854626605122"
+            data-ad-slot="4685218579"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+    <div class="container-94 m-b-20 unset">
         <span class="up-next-etube">Video <?= $tube->data->category_name; ?> Lainnya</span>
         <?php
         foreach ($tube->data->related_tube as $value) {
