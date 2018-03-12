@@ -41,7 +41,7 @@ class Eyevent extends CI_Controller {
     function detail($slug = '')
     {
 		$data['slug'] = $slug;
-		$data['kanal'] = 'eyevent';
+		$data['kanal'] = 'eyeventt';
 	    $data['content'] = 'eyevent/detail';
 	    
 	    $data['title'] = $this->config->item('meta_title');
