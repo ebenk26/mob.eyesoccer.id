@@ -43,7 +43,7 @@
 				<div class="img-box">
 					<img src="<?php echo SUBCDN."assets/$folder/" ?>img/emoji/gembira.png" alt="">
 				</div>
-				<span class="replace_proud"><?php echo $dt->news_inspired;?></span>
+				<span class="replace_proud"><?php echo $dt->news_happy;?></span>
 				<span>gembira</span>
 			</a>
 <?php
