@@ -92,6 +92,13 @@ class MarketQueryMod extends CI_Model {
         return $query;
     }
 
+    function get_all_cat()
+    {
+        $query = $this->db->get('eyemarket_category')->result();
+
+        return $query;
+    }
+
     public function get_id_product($title_slug)
     {
         $this->db->select('id_product');

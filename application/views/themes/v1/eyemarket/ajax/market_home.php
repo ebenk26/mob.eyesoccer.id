@@ -1,5 +1,42 @@
 <div class="container" style="margin-top:20px;">
     <div class="emarket-content-home">
+    	<?php 
+    		foreach (array_keys($prod) as $ind)
+    		{
+    	
+				if ($prod[$ind])
+				{
+    	?>
+			    	<div class="container br-market">
+			    	    <h2><?= ucwords($ind); ?></h2>
+			    	</div>
+			    	<?php
+			    		foreach ($prod[$ind] as $prodnya)
+			    		{
+			    	?>
+							<div class="box item active">
+							    <a href="<?= base_url(); ?>eyemarket/detail/<?= $prodnya->toko; ?>/<?= $prodnya->title_slug; ?>">
+							        <div class="em-box-content">
+							            <div class="img-prod gr">
+							                <img src="<?= MARKETIMG."".$prodnya->image1; ?>" alt="<?= $prodnya->nama; ?>" style="width: 100%;">
+							            </div>
+							            <h1 class="gr"><?= $prodnya->nama; ?></h1>
+							            <p class="prices gr" style="visibility:hidden;"> HARGA</p>
+							            <button type="text" class="beli gr">Available Soon</button>
+							        </div>
+							    </a>
+						    </div>
+		<?php		
+				    	}	
+    			}
+    		}
+    	?>
+    </div>
+</div>
+
+<?php /* ?>
+<div class="container" style="margin-top:20px;">
+    <div class="emarket-content-home">
         <!-- kategori kaos -->
         <div class="container br-market">
             <h2>Kaos</h2>
@@ -297,3 +334,4 @@
 		?>
 	</div>
 </div>
+<?php */ ?>
