@@ -150,5 +150,17 @@
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
     </script>
+    <div class="container static-banner-ads">
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Eyesoccer 1#mobileHomeNavbarStaticBanner -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7635854626605122"
+     data-ad-slot="6050658173"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+    </div>
 </body>
 </html>
