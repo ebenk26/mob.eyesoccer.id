@@ -14,7 +14,7 @@
 				<div class="img-box">
 					<img src="<?php echo SUBCDN."assets/$folder/" ?>img/emoji/bangga.png" alt="">
 				</div>
-				<span class="replace_proud"><?php echo $dt->news_proud;?></span>
+				<span><?php echo $dt->news_proud;?></span>
 				<span>bangga</span>
 <?php
 		}else if($type == 'inspired'){
@@ -26,8 +26,8 @@
 				<div class="img-box">
 					<img src="<?php echo SUBCDN."assets/$folder/" ?>img/emoji/bingung.png" alt="">
 				</div>
-				<span class="replace_proud"><?php echo $dt->news_inspired;?></span>
-				<span>terinspirasirtrtrt</span>
+				<span><?php echo $dt->news_inspired;?></span>
+				<span>terinspirasi</span>
 <?php
 		}else if($type == 'happy'){
 ?>
@@ -38,7 +38,7 @@
 				<div class="img-box">
 					<img src="<?php echo SUBCDN."assets/$folder/" ?>img/emoji/gembira.png" alt="">
 				</div>
-				<span class="replace_proud"><?php echo $dt->news_happy;?></span>
+				<span><?php echo $dt->news_happy;?></span>
 				<span>gembira</span>
 <?php
 		}else if($type == 'sad'){
@@ -50,7 +50,7 @@
 				<div class="img-box">
 					<img src="<?php echo SUBCDN."assets/$folder/" ?>img/emoji/sedih.png" alt="">
 				</div>
-				<span class="replace_proud"><?php echo $dt->news_sad;?></span>
+				<span><?php echo $dt->news_sad;?></span>
 				<span>sedih</span>
 <?php
 		}else if($type == 'angry'){
@@ -62,7 +62,7 @@
 				<div class="img-box">
 					<img src="<?php echo SUBCDN."assets/$folder/" ?>img/emoji/suka.png" alt="">
 				</div>
-				<span class="replace_proud"><?php echo $dt->news_angry;?></span>
+				<span><?php echo $dt->news_angry;?></span>
 				<span>marah</span>
 <?php
 		}else if($type == 'fear'){
@@ -74,7 +74,7 @@
 				<div class="img-box">
 					<img src="<?php echo SUBCDN."assets/$folder/" ?>img/emoji/takut.png" alt="">
 				</div>
-				<span class="replace_proud"><?php echo $dt->news_fear;?></span>
+				<span><?php echo $dt->news_fear;?></span>
 				<span>takut</span>
 <?php
 		}else if($type == 'fun'){
@@ -86,7 +86,7 @@
 				<div class="img-box">
 					<img src="<?php echo SUBCDN."assets/$folder/" ?>img/emoji/terhibur.png" alt="">
 				</div>
-				<span class="replace_proud"><?php echo $dt->news_fun;?></span>
+				<span><?php echo $dt->news_fun;?></span>
 				<span>terhibur</span>
 <?php
 		}else if($type == 'shock'){
@@ -98,7 +98,7 @@
 				<div class="img-box">
 					<img src="<?php echo SUBCDN."assets/$folder/" ?>img/emoji/terkejut.png" alt="">
 				</div>
-				<span class="replace_proud"><?php echo $dt->news_shock;?></span>
+				<span><?php echo $dt->news_shock;?></span>
 				<span>terkejut</span>
 <?php
 		}

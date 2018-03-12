@@ -40,14 +40,14 @@ if ($newsdetail){
 					<div class="img-box">
 						<img src="<?php echo SUBCDN."assets/$folder/" ?>img/emoji/bangga.png" alt="">
 					</div>
-					<span class="replace_proud"><?php echo $dt->data->news_proud;?></span>
+					<span><?php echo $dt->data->news_proud;?></span>
 					<span>bangga</span>
 				</a>
 				<!--<a class="emoticon" type_emot="proud">
 					<div class="img-box">
 						<img src="<?php // echo SUBCDN."assets/$folder/" ?>img/emoji/bangga.png" alt="">
 					</div>
-					<span class="replace_proud"><?php // echo $dt->data->news_proud;?></span>
+					<span><?php // echo $dt->data->news_proud;?></span>
 					<span>bangga</span>
 				</a>-->
 			</div>
@@ -60,7 +60,7 @@ if ($newsdetail){
 					<div class="img-box">
 						<img src="<?php echo SUBCDN."assets/$folder/" ?>img/emoji/bingung.png" alt="">
 					</div>
-					<span class="replace_proud"><?php echo $dt->data->news_inspired;?></span>
+					<span><?php echo $dt->data->news_inspired;?></span>
 					<span>terinspirasi</span>
 				</a>
 				<!--<a class="emoticon" type_emot="inspired">
@@ -80,7 +80,7 @@ if ($newsdetail){
 					<div class="img-box">
 						<img src="<?php echo SUBCDN."assets/$folder/" ?>img/emoji/gembira.png" alt="">
 					</div>
-					<span class="replace_proud"><?php echo $dt->data->news_happy;?></span>
+					<span><?php echo $dt->data->news_happy;?></span>
 					<span>gembira</span>
 				</a>
 				<!--<a class="emoticon" type_emot="happy">
@@ -100,7 +100,7 @@ if ($newsdetail){
 					<div class="img-box">
 						<img src="<?php echo SUBCDN."assets/$folder/" ?>img/emoji/sedih.png" alt="">
 					</div>
-					<span class="replace_proud"><?php echo $dt->data->news_sad;?></span>
+					<span><?php echo $dt->data->news_sad;?></span>
 					<span>sedih</span>
 				</a>
 				<!--<a class="emoticon" type_emot="sad">
@@ -120,7 +120,7 @@ if ($newsdetail){
 					<div class="img-box">
 						<img src="<?php echo SUBCDN."assets/$folder/" ?>img/emoji/suka.png" alt="">
 					</div>
-					<span class="replace_proud"><?php echo $dt->data->news_angry;?></span>
+					<span><?php echo $dt->data->news_angry;?></span>
 					<span>marah</span>
 				</a>
 				<!--<a class="emoticon" type_emot="angry">
@@ -140,7 +140,7 @@ if ($newsdetail){
 					<div class="img-box">
 						<img src="<?php echo SUBCDN."assets/$folder/" ?>img/emoji/takut.png" alt="">
 					</div>
-					<span class="replace_proud"><?php echo $dt->data->news_fear;?></span>
+					<span><?php echo $dt->data->news_fear;?></span>
 					<span>takut</span>
 				</a>
 				<!--<a class="emoticon" type_emot="fear">
@@ -160,7 +160,7 @@ if ($newsdetail){
 					<div class="img-box">
 						<img src="<?php echo SUBCDN."assets/$folder/" ?>img/emoji/terhibur.png" alt="">
 					</div>
-					<span class="replace_proud"><?php echo $dt->data->news_fun;?></span>
+					<span><?php echo $dt->data->news_fun;?></span>
 					<span>terhibur</span>
 				</a>
 				<!--<a class="emoticon" type_emot="fun">
@@ -180,7 +180,7 @@ if ($newsdetail){
 					<div class="img-box">
 						<img src="<?php echo SUBCDN."assets/$folder/" ?>img/emoji/terkejut.png" alt="">
 					</div>
-					<span class="replace_proud"><?php echo $dt->data->news_shock;?></span>
+					<span><?php echo $dt->data->news_shock;?></span>
 					<span>terkejut</span>
 				</a>
 				<!--<a class="emoticon" type_emot="shock">
