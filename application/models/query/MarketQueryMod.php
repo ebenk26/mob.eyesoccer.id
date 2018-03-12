@@ -85,7 +85,7 @@ class MarketQueryMod extends CI_Model {
             $this->db->like('C.nama', $cat);
         }
 
-        $this->db->order_by('A.id_product', 'desc');
+        $this->db->order_by('A.nama', 'asc');
 
         $query = $this->db->get()->result();
 
