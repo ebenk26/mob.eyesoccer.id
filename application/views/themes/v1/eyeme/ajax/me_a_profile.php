@@ -6,7 +6,10 @@ $self = ($id == $res->id) ? TRUE : FALSE;
 
 ?>
 
-    <div class="container">
+    <div class="container" style="padding-top: 30px;position: relative;overflow:  hidden;margin-bottom: 10px;">
+        <div class="container" style="position: absolute;background-color: #fafafa;height:  100%;z-index:  -1;margin-top: -30px;">
+            <img src="" alt="" width="100%">
+        </div>
         <div class="eme-prof-pict">
             <img src="<?php echo $res->url_pic?>" alt="<?php echo $res->username?>" onerror="this.src='<?php echo DPIC?>'">
         </div>
