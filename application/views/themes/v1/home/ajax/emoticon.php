@@ -4,7 +4,7 @@
 	{
 		$emoticon = json_decode($emoticon);
 		$dt = $emoticon->data;
-		// print_r ($dt);exit();
+		// print_r ($dt);echo $type;exit();
 		if($type == 'proud'){
 ?>
 				<input type='hidden' name='fn' value='set_emot' class='cinput'>
@@ -27,7 +27,7 @@
 					<img src="<?php echo SUBCDN."assets/$folder/" ?>img/emoji/bingung.png" alt="">
 				</div>
 				<span class="replace_proud"><?php echo $dt->news_inspired;?></span>
-				<span>terinspirasi</span>
+				<span>terinspirasirtrtrt</span>
 <?php
 		}else if($type == 'happy'){
 ?>
