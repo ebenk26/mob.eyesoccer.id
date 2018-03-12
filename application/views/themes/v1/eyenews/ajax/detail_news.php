@@ -32,76 +32,164 @@ if ($newsdetail){
 		<!-- EMOTICON -->
 		<div class="container-94" style="background-color: white;padding: 10px 0px 20px;">
 			<div class="col-3 col-emoji">
-				<a class="emoticon" type_emot="proud">
+				<a href='javascript:void(0)' id='reqemotproud' class='form_post' action='home' loading="off">
+					<input type='hidden' name='fn' value='set_emot' class='cinput'>
+					<input type='hidden' name='channel' value='eyenews' class='cinput'>
+					<input type='hidden' name='type' value='proud' class='cinput'>
+					<input type='hidden' name='id' value='<?php echo $dt->data->id;?>' class='cinput'>
 					<div class="img-box">
 						<img src="<?php echo SUBCDN."assets/$folder/" ?>img/emoji/bangga.png" alt="">
 					</div>
 					<span class="replace_proud"><?php echo $dt->data->news_proud;?></span>
 					<span>bangga</span>
 				</a>
+				<!--<a class="emoticon" type_emot="proud">
+					<div class="img-box">
+						<img src="<?php // echo SUBCDN."assets/$folder/" ?>img/emoji/bangga.png" alt="">
+					</div>
+					<span class="replace_proud"><?php // echo $dt->data->news_proud;?></span>
+					<span>bangga</span>
+				</a>-->
 			</div>
 			<div class="col-3 col-emoji">
-				<a class="emoticon" type_emot="inspired">
+				<a href='javascript:void(0)' id='reqemotinspired' class='form_post' action='home' loading="off">
+					<input type='hidden' name='fn' value='set_emot' class='cinput'>
+					<input type='hidden' name='channel' value='eyenews' class='cinput'>
+					<input type='hidden' name='type' value='inspired' class='cinput'>
+					<input type='hidden' name='id' value='<?php echo $dt->data->id;?>' class='cinput'>
 					<div class="img-box">
-						<img style="margin-top:  -6px;" src="<?php echo SUBCDN."assets/$folder/" ?>img/emoji/bingung.png" alt="">
+						<img src="<?php echo SUBCDN."assets/$folder/" ?>img/emoji/bingung.png" alt="">
 					</div>
-					<span class="replace_inspired"><?php echo $dt->data->news_inspired;?></span>
+					<span class="replace_proud"><?php echo $dt->data->news_inspired;?></span>
 					<span>terinspirasi</span>
 				</a>
+				<!--<a class="emoticon" type_emot="inspired">
+					<div class="img-box">
+						<img style="margin-top:  -6px;" src="<?php // echo SUBCDN."assets/$folder/" ?>img/emoji/bingung.png" alt="">
+					</div>
+					<span class="replace_inspired"><?php // echo $dt->data->news_inspired;?></span>
+					<span>terinspirasi</span>
+				</a>-->
 			</div>
 			<div class="col-3 col-emoji">
-				<a class="emoticon" type_emot="happy">
-					<div class="img-box box-img-90">
+				<a href='javascript:void(0)' id='reqemothappy' class='form_post' action='home' loading="off">
+					<input type='hidden' name='fn' value='set_emot' class='cinput'>
+					<input type='hidden' name='channel' value='eyenews' class='cinput'>
+					<input type='hidden' name='type' value='happy' class='cinput'>
+					<input type='hidden' name='id' value='<?php echo $dt->data->id;?>' class='cinput'>
+					<div class="img-box">
 						<img src="<?php echo SUBCDN."assets/$folder/" ?>img/emoji/gembira.png" alt="">
 					</div>
-					<span class="replace_happy"><?php echo $dt->data->news_happy;?></span>
+					<span class="replace_proud"><?php echo $dt->data->news_happy;?></span>
 					<span>gembira</span>
 				</a>
+				<!--<a class="emoticon" type_emot="happy">
+					<div class="img-box box-img-90">
+						<img src="<?php // echo SUBCDN."assets/$folder/" ?>img/emoji/gembira.png" alt="">
+					</div>
+					<span class="replace_happy"><?php // echo $dt->data->news_happy;?></span>
+					<span>gembira</span>
+				</a>-->
 			</div>
 			<div class="col-3 col-emoji">
-				<a class="emoticon" type_emot="sad">
+				<a href='javascript:void(0)' id='reqemotsad' class='form_post' action='home' loading="off">
+					<input type='hidden' name='fn' value='set_emot' class='cinput'>
+					<input type='hidden' name='channel' value='eyenews' class='cinput'>
+					<input type='hidden' name='type' value='sad' class='cinput'>
+					<input type='hidden' name='id' value='<?php echo $dt->data->id;?>' class='cinput'>
 					<div class="img-box">
 						<img src="<?php echo SUBCDN."assets/$folder/" ?>img/emoji/sedih.png" alt="">
 					</div>
-					<span class="replace_sad"><?php echo $dt->data->news_inspired;?></span>
+					<span class="replace_proud"><?php echo $dt->data->news_sad;?></span>
 					<span>sedih</span>
 				</a>
+				<!--<a class="emoticon" type_emot="sad">
+					<div class="img-box">
+						<img src="<?php // echo SUBCDN."assets/$folder/" ?>img/emoji/sedih.png" alt="">
+					</div>
+					<span class="replace_sad"><?php // echo $dt->data->news_inspired;?></span>
+					<span>sedih</span>
+				</a>-->
 			</div>
 			<div class="col-3 col-emoji">
-				<a class="emoticon" type_emot="angry">
+				<a href='javascript:void(0)' id='reqemotangry' class='form_post' action='home' loading="off">
+					<input type='hidden' name='fn' value='set_emot' class='cinput'>
+					<input type='hidden' name='channel' value='eyenews' class='cinput'>
+					<input type='hidden' name='type' value='angry' class='cinput'>
+					<input type='hidden' name='id' value='<?php echo $dt->data->id;?>' class='cinput'>
 					<div class="img-box">
-						<img style="margin-top:  -6px;" src="<?php echo SUBCDN."assets/$folder/" ?>img/emoji/suka.png" alt="">
+						<img src="<?php echo SUBCDN."assets/$folder/" ?>img/emoji/suka.png" alt="">
 					</div>
-					<span class="replace_angry"><?php echo $dt->data->news_angry;?></span>
+					<span class="replace_proud"><?php echo $dt->data->news_angry;?></span>
 					<span>marah</span>
 				</a>
+				<!--<a class="emoticon" type_emot="angry">
+					<div class="img-box">
+						<img style="margin-top:  -6px;" src="<?php // echo SUBCDN."assets/$folder/" ?>img/emoji/suka.png" alt="">
+					</div>
+					<span class="replace_angry"><?php // echo $dt->data->news_angry;?></span>
+					<span>marah</span>
+				</a>-->
 			</div>
 			<div class="col-3 col-emoji">
-				<a class="emoticon" type_emot="fear">
+				<a href='javascript:void(0)' id='reqemotfear' class='form_post' action='home' loading="off">
+					<input type='hidden' name='fn' value='set_emot' class='cinput'>
+					<input type='hidden' name='channel' value='eyenews' class='cinput'>
+					<input type='hidden' name='type' value='fear' class='cinput'>
+					<input type='hidden' name='id' value='<?php echo $dt->data->id;?>' class='cinput'>
 					<div class="img-box">
 						<img src="<?php echo SUBCDN."assets/$folder/" ?>img/emoji/takut.png" alt="">
 					</div>
-					<span class="replace_fear"><?php echo $dt->data->news_fear;?></span>
+					<span class="replace_proud"><?php echo $dt->data->news_fear;?></span>
 					<span>takut</span>
 				</a>
+				<!--<a class="emoticon" type_emot="fear">
+					<div class="img-box">
+						<img src="<?php // echo SUBCDN."assets/$folder/" ?>img/emoji/takut.png" alt="">
+					</div>
+					<span class="replace_fear"><?php // echo $dt->data->news_fear;?></span>
+					<span>takut</span>
+				</a>-->
 			</div>
 			<div class="col-3 col-emoji">
-				<a class="emoticon" type_emot="fun">
+				<a href='javascript:void(0)' id='reqemotfun' class='form_post' action='home' loading="off">
+					<input type='hidden' name='fn' value='set_emot' class='cinput'>
+					<input type='hidden' name='channel' value='eyenews' class='cinput'>
+					<input type='hidden' name='type' value='fun' class='cinput'>
+					<input type='hidden' name='id' value='<?php echo $dt->data->id;?>' class='cinput'>
 					<div class="img-box">
 						<img src="<?php echo SUBCDN."assets/$folder/" ?>img/emoji/terhibur.png" alt="">
 					</div>
-					<span class="replace_fun"><?php echo $dt->data->news_fun;?></span>
+					<span class="replace_proud"><?php echo $dt->data->news_fun;?></span>
 					<span>terhibur</span>
 				</a>
+				<!--<a class="emoticon" type_emot="fun">
+					<div class="img-box">
+						<img src="<?php // echo SUBCDN."assets/$folder/" ?>img/emoji/terhibur.png" alt="">
+					</div>
+					<span class="replace_fun"><?php // echo $dt->data->news_fun;?></span>
+					<span>terhibur</span>
+				</a>-->
 			</div>
 			<div class="col-3 col-emoji">
-				<a class="emoticon" type_emot="shock">
+				<a href='javascript:void(0)' id='reqemotshock' class='form_post' action='home' loading="off">
+					<input type='hidden' name='fn' value='set_emot' class='cinput'>
+					<input type='hidden' name='channel' value='eyenews' class='cinput'>
+					<input type='hidden' name='type' value='shock' class='cinput'>
+					<input type='hidden' name='id' value='<?php echo $dt->data->id;?>' class='cinput'>
 					<div class="img-box">
 						<img src="<?php echo SUBCDN."assets/$folder/" ?>img/emoji/terkejut.png" alt="">
 					</div>
-					<span class="replace_shock"><?php echo $dt->data->news_shock;?></span>
+					<span class="replace_proud"><?php echo $dt->data->news_shock;?></span>
 					<span>terkejut</span>
 				</a>
+				<!--<a class="emoticon" type_emot="shock">
+					<div class="img-box">
+						<img src="<?php // echo SUBCDN."assets/$folder/" ?>img/emoji/terkejut.png" alt="">
+					</div>
+					<span class="replace_shock"><?php // echo $dt->data->news_shock;?></span>
+					<span>terkejut</span>
+				</a>-->
 			</div>
 		</div>
 		<div class="container-94" style="background-color: white;padding: 10px 0px 20px;">
@@ -120,28 +208,28 @@ if ($newsdetail){
 	<script>
 		$(document).ready(function(){
 			$(".fb-comments").attr("data-href","<?php echo $dt->data->url;?>");
-			$(".emoticon").click(function(){
-				console.log($(this).attr("type_emot"));
-				id = $("#eyenews_id").val();
-				tipe = $(this).attr("type_emot");
-				link = "eyenews";
-				tbl         = "tbl_eyenews";
-				kanal       = "eyenews";
-				sub_field   = "news_";
+			// $(".emoticon").click(function(){
+				// console.log($(this).attr("type_emot"));
+				// id = $("#eyenews_id").val();
+				// tipe = $(this).attr("type_emot");
+				// link = "eyenews";
+				// tbl         = "tbl_eyenews";
+				// kanal       = "eyenews";
+				// sub_field   = "news_";
 
-				$.ajax({
+				// $.ajax({
 
-				type: "POST",
-				data: { 'type': tipe, 'id': id, 'link': link, 'tbl': tbl, 'kanal': kanal, 'sub_field': sub_field, 'select_id': 'eyenews_id' },
-				url: "<?=base_url()?>home/set_emot/" + id,
-				dataType: "json",
+				// type: "POST",
+				// data: { 'type': tipe, 'id': id, 'link': link, 'tbl': tbl, 'kanal': kanal, 'sub_field': sub_field, 'select_id': 'eyenews_id' },
+				// url: "<?=base_url()?>home/set_emot/" + id,
+				// dataType: "json",
 
-				success: function (data) {
-					$(".replace_"+tipe).empty().html(data.html);
-				}
+				// success: function (data) {
+					// $(".replace_"+tipe).empty().html(data.html);
+				// }
 
-				});
-			})
+				// });
+			// })
 			
 			$( ".crumb" ).html( "" );
 			$( ".crumb" ).append( "<ul><li><a href='<?php echo base_url()?>' style='display: unset'>Home</a></li><li><a href='<?php echo base_url()?>eyenews' style='display: unset'>Eyenews</a></li><li><a href='<?php echo base_url()?>eyenews/kategori/<?php echo $dt->data->news_type?>' style='display: unset'><?php echo $dt->data->news_type?></a></li><li><a href='<?php echo base_url()?>eyenews/kategori/<?php echo $dt->data->news_type.'/'.$dt->data->sub_news_type?>' style='display: unset'><?php echo $dt->data->sub_news_type?></a></li>" );

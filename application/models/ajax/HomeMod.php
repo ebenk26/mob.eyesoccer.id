@@ -135,4 +135,16 @@ class HomeMod extends CI_Model
         $data = array('xClass' => 'reqsearch', 'xHtml' => $html);
         $this->tools->__flashMessage($data);
     }
+	
+	function __set_emot()
+	{
+		$query = array('channel' => $this->input->post('channel'), 'type' => $this->input->post('type'), 'id' => $this->input->post('id'));
+        $data['emoticon'] = $this->excurl->remoteCall($this->__xurl() . 'emoticon', $this->__xkey(), $query);
+        $data['type'] = $this->input->post('type');
+
+        $html = $this->load->view($this->__theme() . 'home/ajax/emoticon', $data, true);
+
+        $data = array('xClass' => 'reqemot'.$this->input->post('type'), 'xHtml' => $html);
+        $this->tools->__flashMessage($data);
+	}
 }
