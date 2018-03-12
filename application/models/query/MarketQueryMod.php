@@ -44,12 +44,52 @@ class MarketQueryMod extends CI_Model {
                                     LEFT JOIN
                                         eyemarket_parent_cat F on A.id_kategori = F.id
                                     WHERE
-                                        status_publish = 1
+                                        A.status_publish = 1
                                     ORDER BY 
                                         A.id_product DESC
                                     LIMIT $limit
                                         ")->result_array();
             return $query; 
+    }
+
+    function get_product_cat($limit,$cat)
+    {
+        $this->db->select(' A.id_product,
+                            A.id_kategori,
+                            A.id_toko,
+                            A.nama,
+                            A.title_slug,
+                            A.harga_sebelum,
+                            A.harga,
+                            A.diskon,
+                            A.status_publish,
+                            A.created_date,
+                            B.nama as toko,
+                            C.nama as kategori,
+                            E.id as id_image,
+                            E.image1,
+                            F.nama as nama_region
+                            ');
+
+        $this->db->from('eyemarket_product AS A');
+
+        $this->db->join('eyemarket_toko AS B', 'A.id_toko = B.id', 'LEFT');
+        $this->db->join('eyemarket_category AS C', 'A.id_kategori = C.id', 'LEFT');
+        $this->db->join('eyemarket_images AS E', 'A.id_product =  E.id_product', 'LEFT');
+        $this->db->join('eyemarket_parent_cat AS F', 'A.id_kategori = F.id', 'LEFT');
+
+        $this->db->where('A.status_publish = 1');
+        
+        if ($cat != null)
+        {
+            $this->db->like('C.nama', $cat);
+        }
+
+        $this->db->order_by('A.id_product', 'desc');
+
+        $query = $this->db->get()->result();
+
+        return $query;
     }
 
     public function get_id_product($title_slug)

@@ -32,7 +32,17 @@ class EyemarketMod extends MarketQueryMod {
 
     function __market_home(){
  
-        $data['prodlist'] = $this->get_all_product('40');
+        $data['kaos'] = $this->get_product_cat('40','kaos');
+        $data['jersey'] = $this->get_product_cat('40','jersey');
+        $data['topi'] = $this->get_product_cat('40','topi');
+        $data['jaket'] = $this->get_product_cat('40','jaket');
+        $data['sepatu'] = $this->get_product_cat('40','sepatu');
+        $data['mug'] = $this->get_product_cat('40','mug');
+        $data['keychain'] = $this->get_product_cat('40','keychain');
+        $data['tas'] = $this->get_product_cat('40','tas');
+        $data['bola'] = $this->get_product_cat('40','bola');
+        $data['ss'] = $this->get_product_cat('40','sleveless');
+
         $html = $this->load->view($this->__theme().'eyemarket/ajax/market_home',$data,true);
         $data = array('xClass'=> 'reqmarket','xHtml' => $html);
         $this->tools->__flashMessage($data);
