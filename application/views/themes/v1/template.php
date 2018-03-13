@@ -84,7 +84,7 @@
         var OneSignal = window.OneSignal || [];
         OneSignal.push(function() {
             OneSignal.init({
-                appId: "5a1c4630-6c28-4386-a5ef-751fc40e6b8c",
+                appId: "61b9c5b4-fe06-4991-baf0-8e8d3f0f78a5",
             });
         });
     </script>
