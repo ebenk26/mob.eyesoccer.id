@@ -4,6 +4,19 @@ if ($newsdetail){
 	$dt = json_decode($newsdetail);
 	$slug = $dt->data->slug;
 	$subslug = $dt->data->sub_news_type;
+	
+	$description    = explode("<p>",$dt->data->description);
+	$paragraf       = count($description);
+
+	$tengah         = "";
+	if ($paragraf%2 == 0)
+	{
+		$tengah     = $paragraf / 2;
+	}
+	else
+	{
+		$tengah     = ($paragraf - 1) / 2;
+	}
 ?>
 	<input id="catews" type="hidden" value="<?php echo $dt->data->news_type;?>">
 	<input id="eyenews_id" type="hidden" value="<?php echo $dt->data->id;?>">
@@ -11,6 +24,9 @@ if ($newsdetail){
 		<h1><?php echo $dt->data->title;?></h1>
 		<img src="<?php echo $dt->data->url_pic;?>" alt="<?php echo $dt->data->title;?>" width="100%">
 		<div class="container profile-writer b-b-1">
+			<span style="float: right;margin-right: 15px;font-size: 12px;">
+				Credit : <?php echo $dt->data->credit;?>
+			</span>
 			<div class="container">
 				<div class="img-radius img-pp p-r">
 					<img src="<?php echo imgEyesoccer();?>" alt="">
@@ -26,7 +42,44 @@ if ($newsdetail){
 		</div>
 		<div class="container-94">
 			<p style="margin-bottom: 50px;font-size: .9em;">
-				<?php echo $dt->data->description;?>
+				<?php // echo $dt->data->description;?>
+				<?php 
+                    for ($i = 0; $i < $paragraf; $i++)
+                    {
+                        if($i == $tengah)
+                        {
+                ?>
+                            <div class='col-lg-12 col-xs-12 bg-default thumbnail' style='line-height:1.2em;padding-left:10px;padding-right:10px;'>
+                                <span style="color:#45a7c4;font-size: 13px;margin:unset;padding:unset;">Baca Juga :</span>
+                                
+                <?php
+                            foreach ($dt->data->random_news as $judul)
+                            {
+                ?>
+                                <a href="<?= base_url(); ?>eyenews/detail/<?= $judul->slug ?>" id="a4" class="">
+                                    <p class='h6 text-bold' style='color:#45a7c4;font-size: 13px;margin:unset;padding:unset;'>
+                                        <strong><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> <?= $judul->title; ?></strong>
+                                    </p>      
+                                </a>
+                <?php
+                            }
+							foreach ($dt->data->random_video as $video)
+                            {
+                ?>
+                                <a href="<?= base_url(); ?>eyetube/detail/<?= $video->slug; ?>" id="a4" class="">
+                                    <p class='h6 text-bold' style='color:#45a7c4;font-size: 13px;margin:unset;padding:unset;'>
+                                        <strong><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> Eyetube | <?= $video->title; ?></strong>
+                                    </p>
+                                </a>
+                <?php
+							}
+				?>
+                            </div>
+                <?php
+                        }
+                        echo "<p class='text-justify'>".$description[$i];
+                    }
+                ?>
 			</p>
 		</div>
 		<!-- EMOTICON -->
