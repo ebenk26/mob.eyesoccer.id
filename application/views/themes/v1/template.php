@@ -77,7 +77,17 @@
     <!-- SWAlert -->
     <link href="<?php echo SUBCDN."assets/js/swalert/sweetalert.css" ?>" rel="stylesheet" />
     <script src="<?php echo SUBCDN."assets/js/swalert/sweetalert.min.js"; ?>"></script>
-    
+
+    <link rel="manifest" href="/manifest.json" />
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+    <script>
+        var OneSignal = window.OneSignal || [];
+        OneSignal.push(function() {
+            OneSignal.init({
+                appId: "5a1c4630-6c28-4386-a5ef-751fc40e6b8c",
+            });
+        });
+    </script>
 </head>
 <body>
 	<!-- Google Tag Manager (noscript) -->
