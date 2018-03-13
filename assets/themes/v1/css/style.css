@@ -3350,6 +3350,7 @@ tbody table{
     margin: 10px 2.5%;
     border-bottom: 1px solid;
     height: 19px;
+    margin-bottom: 20px;
 }
 .SvLSD img{
     width: 24px;
@@ -3642,4 +3643,5 @@ video::-webkit-media-controls-panel {
     bottom: 0px;
     background-color: #fafafa;
     z-index: 1;
+    display: none;
 }
