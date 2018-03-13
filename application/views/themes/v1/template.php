@@ -160,7 +160,7 @@
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
     </script>
-    <div class="container static-banner-ads">
+    <div class="container static-banner-ads" style="display:none;">
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- Eyesoccer 1#mobileHomeNavbarStaticBanner -->
 <ins class="adsbygoogle"
