@@ -9,7 +9,7 @@
 		{
 ?>
 			<a href="<?php echo base_url()."eyenews/detail/".$value->slug;?>">
-				<div class="container eyetube" style="height: 185px;">
+				<div class="container eyetube etube-res" style="height: 185px;">
 					<div class="v-eyetube" style="height: 185px;">
 						<img src="<?php echo $value->url_pic;?>" alt="">
 					</div>

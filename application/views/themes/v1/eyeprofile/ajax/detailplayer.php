@@ -212,21 +212,23 @@
 					</tr>
 				</table>
 			</div>
-			<h3 class="h3-orange">Foto galeri</h3>
-			<div class="container">
-				<?php foreach($dt->gallery as $gl)
-				{
-				?>
-					<div class="display-img">
-						<img class="container" src="<?php echo $gl->url_pic;?>" alt="<?php echo $dt->name;?>">
-					</div>
-				<?php 
-				}
-				?>
-				<div class="arrow">
-					<i class="material-icons">keyboard_arrow_left</i>
-					<i style="float: right;" class="material-icons">keyboard_arrow_right</i>
+			<h3 class="h3-orange" style="display: block;">Foto galeri</h3>
+			<div class="cotainer over-x" style="display: block;width:  100%;float:  left;">
+				<div class="w-max">
+					<?php foreach($dt->gallery as $gl)
+					{
+					?>
+						<div class="display-img img-gal">
+							<img class="container" src="<?php echo $gl->url_pic;?>" alt="<?php echo $dt->name;?>">
+						</div>
+					<?php 
+					}
+					?>
 				</div>
+			</div>
+			<div class="arrow" style="top:  -147px;">
+				<i class="material-icons">keyboard_arrow_left</i>
+				<i style="float: right;" class="material-icons">keyboard_arrow_right</i>
 			</div>
 		</div>
 		<script>

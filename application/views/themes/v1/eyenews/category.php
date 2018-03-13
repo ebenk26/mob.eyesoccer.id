@@ -14,7 +14,7 @@ echo set_breadcrumb("eyenews",$page);
 	</div>
 	<input type='hidden' name='fn' value='subcategorylist' class='cinput'>
     <input type='hidden' name='slug' value='<?php echo $slug; ?>' class='cinput'>
-    <select id="pilih-liga" class="lc">
+    <!-- <select id="pilih-liga" class="lc">
         <option>Semua Liga</option>
         <option value="6">Liga Santri Nusantara 2017 - Seri Nasional</option>
         <option value="16">English Premier League 2017/2018</option>
@@ -28,7 +28,7 @@ echo set_breadcrumb("eyenews",$page);
         <option value="75">COPA DEL RAY 2017/2018</option>
         <option value="89">Piala Dunia 2018 Rusia</option>
         <option value="92">Piala Presiden 2018</option>
-    </select>
+    </select> -->
     <!-- <div class="container" style="margin-top:48px;">
         <div class="crumb" style="margin: unset;">
             <span><a href="<?php echo base_url().$slug.'/'.$subslug?>" style="display: unset">Liga Indonesia</a></span>
@@ -52,73 +52,28 @@ echo set_breadcrumb("eyenews",$page);
         <input type='hidden' name='fn' value='categorylist' class='cinput'>
         <input type='hidden' name='slug' value='<?php echo $slug; ?>' class='cinput'>
         <input type='hidden' name='subslug' value='<?php echo $subslug; ?>' class='cinput'>
-        <a href="enews-detail.html">
-        <div class="etube-mobile-thumb">
-            <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
-            <div class="enews-title">
+        <a href="">
+        <div class="etube-mobile-thumb fafa gr" style="height:  200px;">
+            <img src="" alt="" height="200px">
+            <div class="enews-title gr">
                 <h2>title Video title Video title Video title Video title Video</h2>
                 <span>2 jam lalu - 123 view</span>                
             </div>
         </div>
         </a>
-        <a href="enews-detail.html">
-        <div class="etube-mobile-thumb">
-            <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
-            <div class="enews-title">
+        <a href="">
+        <div class="etube-mobile-thumb fafa gr" style="height:  200px;">
+            <img src="" alt="" height="200px">
+            <div class="enews-title gr">
                 <h2>title Video title Video title Video title Video title Video</h2>
                 <span>2 jam lalu - 123 view</span>                
             </div>
         </div>
         </a>
-        <a href="enews-detail.html">
-        <div class="etube-mobile-thumb">
-            <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
-            <div class="enews-title">
-                <h2>title Video title Video title Video title Video title Video</h2>
-                <span>2 jam lalu - 123 view</span>                
-            </div>
-        </div>
-        </a>
-        <a href="enews-detail.html">
-        <div class="etube-mobile-thumb">
-            <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
-            <div class="enews-title">
-                <h2>title Video title Video title Video title Video title Video</h2>
-                <span>2 jam lalu - 123 view</span>                
-            </div>
-        </div>
-        </a>
-        <a href="enews-detail.html">
-        <div class="etube-mobile-thumb">
-            <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
-            <div class="enews-title">
-                <h2>title Video title Video title Video title Video title Video</h2>
-                <span>2 jam lalu - 123 view</span>                
-            </div>
-        </div>
-        </a>
-        <a href="enews-detail.html">
-        <div class="etube-mobile-thumb">
-            <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
-            <div class="enews-title">
-                <h2>title Video title Video title Video title Video title Video</h2>
-                <span>2 jam lalu - 123 view</span>                
-            </div>
-        </div>
-        </a>
-        <a href="enews-detail.html">
-        <div class="etube-mobile-thumb">
-            <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
-            <div class="enews-title">
-                <h2>title Video title Video title Video title Video title Video</h2>
-                <span>2 jam lalu - 123 view</span>                
-            </div>
-        </div>
-        </a>
-        <a href="enews-detail.html">
-        <div class="etube-mobile-thumb">
-            <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
-            <div class="enews-title">
+        <a href="">
+        <div class="etube-mobile-thumb fafa gr" style="height:  200px;">
+            <img src="" alt="" height="200px">
+            <div class="enews-title gr">
                 <h2>title Video title Video title Video title Video title Video</h2>
                 <span>2 jam lalu - 123 view</span>                
             </div>
