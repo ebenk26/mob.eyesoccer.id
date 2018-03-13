@@ -78,14 +78,21 @@
     <link href="<?php echo SUBCDN."assets/js/swalert/sweetalert.css" ?>" rel="stylesheet" />
     <script src="<?php echo SUBCDN."assets/js/swalert/sweetalert.min.js"; ?>"></script>
 
-    <link rel="manifest" href="/manifest.json" />
+    <!--<link rel="manifest" href="/manifest.json" />
     <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
     <script>
         var OneSignal = window.OneSignal || [];
         OneSignal.push(function() {
             OneSignal.init({
-                appId: "5a1c4630-6c28-4386-a5ef-751fc40e6b8c",
+                appId: "61b9c5b4-fe06-4991-baf0-8e8d3f0f78a5",
             });
+        });
+    </script>-->
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-7635854626605122",
+            enable_page_level_ads: true
         });
     </script>
 </head>
