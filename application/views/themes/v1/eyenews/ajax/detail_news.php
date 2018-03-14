@@ -49,16 +49,16 @@ if ($newsdetail){
                         if($i == $tengah)
                         {
                 ?>
-                            <div class='col-lg-12 col-xs-12 bg-default thumbnail' style='line-height:1.2em;padding-left:10px;padding-right:10px;'>
-                                <span style="color:#45a7c4;font-size: 13px;margin:unset;padding:unset;">Baca Juga :</span>
+                            <div class='container box-bj'>
+                                <span class="bj">Baca Juga</span>
                                 
                 <?php
                             foreach ($dt->data->random_news as $judul)
                             {
                 ?>
                                 <a href="<?= base_url(); ?>eyenews/detail/<?= $judul->slug ?>" id="a4" class="">
-                                    <p class='h6 text-bold' style='color:#45a7c4;font-size: 13px;margin:unset;padding:unset;'>
-                                        <strong><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> <?= $judul->title; ?></strong>
+                                    <p class='bj-ttl'>
+                                        <strong></i> <?= $judul->title; ?></strong>
                                     </p>      
                                 </a>
                 <?php
@@ -67,8 +67,8 @@ if ($newsdetail){
                             {
                 ?>
                                 <a href="<?= base_url(); ?>eyetube/detail/<?= $video->slug; ?>" id="a4" class="">
-                                    <p class='h6 text-bold' style='color:#45a7c4;font-size: 13px;margin:unset;padding:unset;'>
-                                        <strong><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> Eyetube | <?= $video->title; ?></strong>
+                                    <p class='bj-ttl'>
+                                        <strong></i> Eyetube | <?= $video->title; ?></strong>
                                     </p>
                                 </a>
                 <?php
@@ -81,6 +81,28 @@ if ($newsdetail){
                     }
                 ?>
 			</p>
+		</div>
+
+		<!-- IKLAN -->
+		<div class="container">
+			<div class="box-flyad">
+				<div class="flyad">
+					<div class="m-0">
+						<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+						<!-- Eyesoccer 4#mobileNewsDetailBackGround -->
+						<ins class="adsbygoogle"
+							style="display:block"
+							data-ad-client="ca-pub-7635854626605122"
+							data-ad-slot="6050658173"
+							data-ad-format="auto"></ins>
+						<script>
+							(adsbygoogle = window.adsbygoogle || []).push({});
+						</script>
+						<!-- <span style="font-size: 7em;font-weight: 100;position: fixed;text-align: center;top: 20%;color: white;">ini iklan yaa</span> -->
+						<!-- <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt=""> -->
+					</div>
+				</div>
+			</div>
 		</div>
 		<!-- EMOTICON -->
 		<div class="container-94" style="background-color: white;padding: 10px 0px 20px;">

@@ -119,26 +119,26 @@
 	</div> -->
 </div>
 <!-- IKLAN -->
-<div class="container">
+<!-- <div class="container">
     <div class="box-flyad">
         <div class="flyad">
-            <div class="m-0">
-                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <div class="m-0"> -->
+                <!-- <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
                 <!-- Eyesoccer 4#mobileNewsDetailBackGround -->
-                <ins class="adsbygoogle"
+                <!-- <ins class="adsbygoogle"
                      style="display:block"
                      data-ad-client="ca-pub-7635854626605122"
                      data-ad-slot="6050658173"
                      data-ad-format="auto"></ins>
                 <script>
                     (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
+                </script> -->
                 <!-- <span style="font-size: 7em;font-weight: 100;position: fixed;text-align: center;top: 20%;color: white;">ini iklan yaa</span> -->
                 <!-- <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt=""> -->
-            </div>
+            <!-- </div>
         </div>
     </div>
-</div>
+</div> -->
 <div class="container enews-detail">
     <div class="container m-b-15" style="margin-top: -35px !important; background-color: #fafafa;">
         <h3 class="h3-red">VIDEO</h3>
