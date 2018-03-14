@@ -178,6 +178,13 @@
             enable_page_level_ads: true
         });
     </script>
+    <script>
+		var path = window.location.pathname;
+		var result = path.split('/');
+		if(result.indexOf("eyemarket") > -1 || result.indexOf("eyeme") > -1){
+			$('.static-banner-ads').css('display','none');
+		}
+	</script>
     </div>
 </body>
 </html>
