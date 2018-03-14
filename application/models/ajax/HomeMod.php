@@ -141,6 +141,8 @@ class HomeMod extends CI_Model
 		$query = array('channel' => $this->input->post('channel'), 'type' => $this->input->post('type'), 'id' => $this->input->post('id'));
         $data['emoticon'] = $this->excurl->remoteCall($this->__xurl() . 'emoticon', $this->__xkey(), $query);
         $data['type'] = $this->input->post('type');
+		$data['channel'] = $this->input->post('channel');
+		$data['catemo'] = substr($this->input->post('channel'),3);
 
         $html = $this->load->view($this->__theme() . 'home/ajax/emoticon', $data, true);
 
