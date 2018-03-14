@@ -88,13 +88,6 @@
             });
         });
     </script>-->
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <script>
-        (adsbygoogle = window.adsbygoogle || []).push({
-            google_ad_client: "ca-pub-7635854626605122",
-            enable_page_level_ads: true
-        });
-    </script>
 </head>
 <body>
 	<!-- Google Tag Manager (noscript) -->
@@ -167,17 +160,24 @@
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
     </script>
-    <div class="container static-banner-ads" style="display:none;">
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <div class="container static-banner-ads">
+    <!-- <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
 <!-- Eyesoccer 1#mobileHomeNavbarStaticBanner -->
-<ins class="adsbygoogle"
+<!-- <ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-7635854626605122"
      data-ad-slot="6050658173"
      data-ad-format="auto"></ins>
 <script>
 (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+</script> -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-7635854626605122",
+            enable_page_level_ads: true
+        });
+    </script>
     </div>
 </body>
 </html>

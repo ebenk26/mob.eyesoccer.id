@@ -74,6 +74,7 @@ class EyenewsMod extends CI_Model {
 		$slug = $this->input->post("slug");
 		$query = array('related' => true);
 		$data['newsdetail'] = $this->excurl->remoteCall($this->__xurl().'news/'.$slug,$this->__xkey(),$query);
+		$data['news_id'] = json_decode($data['newsdetail']);
 		
 		$html = $this->load->view($this->__theme().'eyenews/ajax/detail_news', $data, true);
 		$related = $this->load->view($this->__theme().'eyenews/ajax/related_news', $data, true);
