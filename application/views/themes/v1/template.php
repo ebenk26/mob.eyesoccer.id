@@ -78,16 +78,16 @@
     <link href="<?php echo SUBCDN."assets/js/swalert/sweetalert.css" ?>" rel="stylesheet" />
     <script src="<?php echo SUBCDN."assets/js/swalert/sweetalert.min.js"; ?>"></script>
 
-    <!--<link rel="manifest" href="/manifest.json" />
+    <link rel="manifest" href="/manifest.json" />
     <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
-    <script>
-        var OneSignal = window.OneSignal || [];
-        OneSignal.push(function() {
-            OneSignal.init({
-                appId: "61b9c5b4-fe06-4991-baf0-8e8d3f0f78a5",
-            });
-        });
-    </script>-->
+	<script>
+	  var OneSignal = window.OneSignal || [];
+	  OneSignal.push(function() {
+		OneSignal.init({
+		  appId: "41dbf805-a574-43cf-97e0-5da12c11fa95",
+		});
+	  });
+	</script>
 </head>
 <body>
 	<!-- Google Tag Manager (noscript) -->
