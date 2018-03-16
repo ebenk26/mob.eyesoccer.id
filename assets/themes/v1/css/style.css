@@ -631,6 +631,11 @@ nav>.f-r:hover{
     font-family: 'Roboto', sans-serif;
     font-size: .9em;
 }
+a.m-reg span{
+    position: relative;
+    top: 15px;
+    margin: unset;
+}
 .menu>a{
     padding: 12px 15px;  
     max-width: 700px;
@@ -663,7 +668,7 @@ nav>.f-r:hover{
     font-size: 28px;
     padding: 10px 15px;
     position: relative;
-    /* top: 5px; */
+    top: 5px;
     margin-bottom: 8px;
 }
 .m-top{
@@ -1086,10 +1091,15 @@ nav>.f-r:hover{
     height: 0px;
     overflow: hidden;
 }
-.etube-v-title-mobile .deskripsi p{
-    font-size: .8em;
+.etube-v-title-mobile .deskripsi1{
+    max-height: 60px;
+    overflow: hidden;
+    /* border-top: 1px solid whitesmoke; */
+}
+.etube-v-title-mobile .deskripsi p, .etube-v-title-mobile .deskripsi1 p{
+    font-size: .75em;
     padding: 0px 12px 10px 12px;
-    border-bottom: 1px solid gainsboro;
+    border-bottom: 1px solid whitesmoke;
     margin-bottom: 0px;
     height: max-content;
     overflow: hidden;
@@ -1761,9 +1771,15 @@ ul, li {
     display: inline-block;
     border: 2px solid white;
     margin: -2px;
+    position: relative;
 }
 .eprofile .img-radius img{
     height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
 }
 .h2-text-bottom{
     font-size: 1.5em;
@@ -3630,7 +3646,7 @@ video::-webkit-media-controls-panel {
     transform: translate(-50%, -50%);
 }
 .m-top a{
-    margin: 15px 5px;
+    margin: 0px 5px; 
 }
 @media screen and (min-width: 634px) {
     .v-eyetube{

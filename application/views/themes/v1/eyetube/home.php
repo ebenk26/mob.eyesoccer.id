@@ -13,42 +13,42 @@
     <div class="etube-home">
         <a href="etube-detail.html">
             <div class="etube-mobile-thumb">
-                <div class="img" style="background-color: #f2f2f2;">
+                <div class="img gr" style="background-color: #f2f2f2;">
                     <!-- <img src="http://modernartbuyer.com/wp-content/uploads/2014/10/Aqueous-II-278-web.jpg" alt="">                 -->
                 </div>
-                <span class="kategori" style="visibility: hidden;">Liga Indonesia</span>
-                <h2 style="visibility: hidden;">title Video title Video title Video title Video title Video</h2>
-                <span style="visibility: hidden;">2 jam lalu - 123 view</span>
+                <span class="kategori gr" style="visibility: hidden;">Liga Indonesia</span>
+                <h2 style="visibility: hidden;" class="gr">title Video title Video title Video title Video title Video</h2>
+                <span style="visibility: hidden;" class="gr">2 jam lalu - 123 view</span>
             </div>
         </a>
         <a href="etube-detail.html">
-            <div class="etube-mobile-thumb">
-                <div class="img" style="background-color: #f2f2f2;">
+            <div class="etube-mobile-thumb fafa">
+                <div class="img gr" style="background-color: #f2f2f2;">
                     <!-- <img src="http://modernartbuyer.com/wp-content/uploads/2014/10/Aqueous-II-278-web.jpg" alt="">                 -->
                 </div>
-                <span class="kategori" style="visibility: hidden;">Liga Indonesia</span>
-                <h2 style="visibility: hidden;">title Video title Video title Video title Video title Video</h2>
-                <span style="visibility: hidden;">2 jam lalu - 123 view</span>
+                <span class="kategori gr" style="visibility: hidden;">Liga Indonesia</span>
+                <h2 style="visibility: hidden;" class="gr">title Video title Video title Video title Video title Video</h2>
+                <span style="visibility: hidden;" class="gr">2 jam lalu - 123 view</span>
             </div>
         </a>
         <a href="etube-detail.html">
-            <div class="etube-mobile-thumb">
-                <div class="img" style="background-color: #f2f2f2;">
+            <div class="etube-mobile-thumb fafa">
+                <div class="img gr" style="background-color: #f2f2f2;">
                     <!-- <img src="http://modernartbuyer.com/wp-content/uploads/2014/10/Aqueous-II-278-web.jpg" alt="">                 -->
                 </div>
-                <span class="kategori" style="visibility: hidden;">Liga Indonesia</span>
-                <h2 style="visibility: hidden;">title Video title Video title Video title Video title Video</h2>
-                <span style="visibility: hidden;">2 jam lalu - 123 view</span>
+                <span class="kategori gr" style="visibility: hidden;">Liga Indonesia</span>
+                <h2 style="visibility: hidden;" class="gr">title Video title Video title Video title Video title Video</h2>
+                <span style="visibility: hidden;" class="gr">2 jam lalu - 123 view</span>
             </div>
         </a>
         <a href="etube-detail.html">
-            <div class="etube-mobile-thumb">
-                <div class="img" style="background-color: #f2f2f2;">
+            <div class="etube-mobile-thumb fafa">
+                <div class="img gr" style="background-color: #f2f2f2;">
                     <!-- <img src="http://modernartbuyer.com/wp-content/uploads/2014/10/Aqueous-II-278-web.jpg" alt="">                 -->
                 </div>
-                <span class="kategori" style="visibility: hidden;">Liga Indonesia</span>
-                <h2 style="visibility: hidden;">title Video title Video title Video title Video title Video</h2>
-                <span style="visibility: hidden;">2 jam lalu - 123 view</span>
+                <span class="kategori gr" style="visibility: hidden;">Liga Indonesia</span>
+                <h2 style="visibility: hidden;" class="gr">title Video title Video title Video title Video title Video</h2>
+                <span style="visibility: hidden;" class="gr">2 jam lalu - 123 view</span>
             </div>
         </a>
     </div>

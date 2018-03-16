@@ -10,7 +10,7 @@
     </div>
     <input type='hidden' name='fn' value='match_schedule' class='cinput'>
     <input type='hidden' name='page' value='eyevent-result' class='cinput'>
-    <div class="container" style="margin-top: 50px;">
+    <div class="container fafa" style="margin-top: 50px;">
         <!-- <div id="popupKalender" class="modal fade" role="dialog">
             <div class="m-event-kalender">
                 <div id="z"></div>
@@ -18,12 +18,12 @@
                 <button class="btn-white-g btn-white-g-block" type="button" data-dismiss="modal">tutup</button>
             </div>
         </div> -->
-        <div class="container">
-            <h2 class="thjadwalhasil">HASIL PERTANDINGAN</h2>
+        <div class="container fafa">
+            <h2 class="thjadwalhasil gr">HASIL PERTANDINGAN</h2>
             <!-- <select id="pilih-liga" class="lc">
                 <option>Semua Liga</option>
             </select> -->
-            <button type="button" class="lihat-jadwal" data-toggle="modal" data-target="#popupKalender">Pilih Tanggal Jadwal Lainnya</button>
+            <button type="button" class="lihat-jadwal gr" data-toggle="modal" data-target="#popupKalender">Pilih Tanggal Jadwal Lainnya</button>
         </div>
     </div>
 </div> 

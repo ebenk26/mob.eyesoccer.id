@@ -146,7 +146,7 @@ function loginBtn($hasLogin){
     
     if(is_array($hasLogin)){
         return '<img src="'.$hasLogin['url_pic'].'/small" style="width:30px;height:30px;">
-                <a class="m-reg" href="'.LOGINURL.'">Hai '.$hasLogin['username'].'</a>';
+                <a class="m-reg" href="'.LOGINURL.'"><span>Hai '.$hasLogin['username'].'</span></a>';
     } else {
         return '<a class="m-reg" href="'.LOGINURL.'"><i class="material-icons">input</i>Login</a>';
     }
