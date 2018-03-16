@@ -78,16 +78,16 @@
     <link href="<?php echo SUBCDN."assets/js/swalert/sweetalert.css" ?>" rel="stylesheet" />
     <script src="<?php echo SUBCDN."assets/js/swalert/sweetalert.min.js"; ?>"></script>
 
-    <!--<link rel="manifest" href="/manifest.json" />
+    <link rel="manifest" href="/manifest.json" />
     <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
-    <script>
-        var OneSignal = window.OneSignal || [];
-        OneSignal.push(function() {
-            OneSignal.init({
-                appId: "61b9c5b4-fe06-4991-baf0-8e8d3f0f78a5",
-            });
-        });
-    </script>-->
+	<script>
+	  var OneSignal = window.OneSignal || [];
+	  OneSignal.push(function() {
+		OneSignal.init({
+		  appId: "41dbf805-a574-43cf-97e0-5da12c11fa95",
+		});
+	  });
+	</script>
 </head>
 <body>
 	<!-- Google Tag Manager (noscript) -->
@@ -161,30 +161,16 @@
         }(document, 'script', 'facebook-jssdk'));
     </script>
     <div class="container static-banner-ads">
-    <!-- <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
-<!-- Eyesoccer 1#mobileHomeNavbarStaticBanner -->
-<!-- <ins class="adsbygoogle"
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- eyesoccer 1 #mobileOverlayBottom -->
+<ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-7635854626605122"
-     data-ad-slot="6050658173"
+     data-ad-slot="2853180005"
      data-ad-format="auto"></ins>
 <script>
 (adsbygoogle = window.adsbygoogle || []).push({});
-</script> -->
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <script>
-        (adsbygoogle = window.adsbygoogle || []).push({
-            google_ad_client: "ca-pub-7635854626605122",
-            enable_page_level_ads: true
-        });
-    </script>
-    <script>
-		var path = window.location.pathname;
-		var result = path.split('/');
-		if(result.indexOf("eyemarket") > -1 || result.indexOf("eyeme") > -1){
-			$('.static-banner-ads').css('display','none');
-		}
-	</script>
+</script>
     </div>
 </body>
 </html>

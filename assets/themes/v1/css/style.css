@@ -2330,21 +2330,32 @@ ul, li {
     background-color: white;
 }
 .box-flyad{
-    height: 250px;
     width: 90%;
-    position: relative;
-    z-index: -1;
+    height: 250px;
+    overflow: hidden;
     margin: 0 auto;
+    position: relative;
 }
 .flyad{
-    height: 90vh;
+    clip: rect(auto, auto, auto, auto);
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.content-flyad{
+    height: 100%;
     margin: 0 auto;
     position: fixed;
     top: 50px;
+    transform: translateZ(0px);
     width: 90%;
-    z-index: -3;
-    overflow: hidden;
-    max-width: 690px;
+    text-align: center;
+}
+.content-flyad *{
+    width: 100%;
+    max-width: 90vw;
 }
 .col-3{
     /* width: 12.5%; */
