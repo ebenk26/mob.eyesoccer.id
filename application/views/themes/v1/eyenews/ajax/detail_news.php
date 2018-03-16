@@ -87,7 +87,7 @@ if ($newsdetail){
 		<div class="container">
 			<div class="box-flyad">
 				<div class="flyad">
-					<div class="m-0">
+					<div class="content-flyad">
 						<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 						<!-- Eyesoccer 4#mobileNewsDetailBackGround -->
 						<ins class="adsbygoogle"
