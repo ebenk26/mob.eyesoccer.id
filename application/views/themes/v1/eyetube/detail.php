@@ -14,16 +14,16 @@
         <input type='hidden' name='fn' value='detail_tube' class='cinput'>
         <input type='hidden' name='slug' value='<?= $slug; ?>' class='cinput'>
         <video width="100%" height="" controls></video>
-        <div class="etube-v-title-mobile">
-            <h1 style="visibility: hidden;">Lorrem Ipsum solor sit amet</h1><i class="heightControl2 material-icons arrow-right-etube" style="visibility: hidden;">arrow_drop_up</i><i class="material-icons arrow-right-etube heightControl" style="visibility: hidden;">arrow_drop_down</i>
+        <div class="etube-v-title-mobile fafa">
+            <h1 style="visibility: hidden;"class="gr">Lorrem Ipsum solor sit amet</h1><i class="heightControl2 material-icons arrow-right-etube" style="visibility: hidden;">arrow_drop_up</i><i class="material-icons arrow-right-etube heightControl" style="visibility: hidden;">arrow_drop_down</i>
             <span style="visibility: hidden;">30 menit lalu - oleh Rendy - 300 kali diputar</span>
-            <div class="container deskripsi">
+            <div class="container deskripsi gr">
                 <p style="visibility: hidden;">Deskripsi Lorrem Ipsum solor sit amet Lorrem Ipsum solor sit amet Lorrem Ipsum solor sit amet</p>
             </div>
             <div class="container ">
                 
             </div>
-            <div class="tx-c etube-share">
+            <div class="tx-c etube-share fafa">
                 <!-- <i class="fa fa-heart-o heart-first" aria-hidden="true"> 23</i> -->
                 <i class="fas fa-heart heart-first" aria-hidden="true" style="visibility: hidden;"><span>3</span></i>
                 <i class="far fa-comment openComment" aria-hidden="true" style="visibility: hidden;"><span>333</span></i>
@@ -34,7 +34,7 @@
     
         <div class="container-94 m-b-20 unset">
             <span class="up-next-etube"></span>
-            <div class="etube-content etube-content-detail pd-t-10" style="background-color: #f2f2f2;">
+            <div class="etube-content etube-content-detail pd-t-10gaga" style="background-color: #f2f2f2;">
                 <div class="v-etube v-etube-detail">
                     <img src="" alt="">
                 </div>
@@ -42,7 +42,7 @@
                 <span style="visibility: hidden;">30 menit lalu</span>
                 <span style="visibility: hidden;">2000 view - 100 suka</span>
             </div>
-            <div class="etube-content etube-content-detail pd-t-10" style="background-color: #f2f2f2;">
+            <div class="etube-content etube-content-detail pd-t-10 fafa" style="background-color: #f2f2f2;">
                 <div class="v-etube v-etube-detail">
                     <img src="" alt="">
                 </div>
@@ -50,7 +50,7 @@
                 <span style="visibility: hidden;">30 menit lalu</span>
                 <span style="visibility: hidden;">2000 view - 100 suka</span>
             </div>
-            <div class="etube-content etube-content-detail pd-t-10" style="background-color: #f2f2f2;">
+            <div class="etube-content etube-content-detail pd-t-10 fafa" style="background-color: #f2f2f2;">
                 <div class="v-etube v-etube-detail">
                     <img src="" alt="">
                 </div>
