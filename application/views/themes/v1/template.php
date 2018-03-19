@@ -10,20 +10,60 @@
 	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 	})(window,document,'script','dataLayer','GTM-P7HQLCC');</script>
 	<!-- End Google Tag Manager -->
-    <title><?php echo $title; ?></title>
+    <!-- <title><?php // echo $title; ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Copyright" content="Eyesoccer Indonesia">
     <meta http-equiv="imagetoolbar" content="no">
     <meta name="robots" content="index, follow">
-    <meta name="description" content="<?php echo $meta_desc; ?>">
-    <meta name="keywords" content="<?php echo $meta_keyword; ?>">
+    <meta name="description" content="<?php // echo $meta_desc; ?>">
+    <meta name="keywords" content="<?php // echo $meta_keyword; ?>">
     <meta name="author" content="Eyesoccer Indonesia">
     <meta name="language" content="Indonesia">
     <meta name="revisit-after" content="7">
     <meta name="webcrawlers" content="all">
     <meta name="rating" content="general">
-    <meta name="spiders" content="all">
+    <meta name="spiders" content="all"> -->
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<!-- Begin of SEO Meta Tags -->
+	<meta name="title" content="Berita Sepak Bola Indonesia Terbaru | Jadwal Bola | Database Pemain Bola | Eyesoccer" />
+	<meta name="description" content="Portal Berita sepak bola indonesia terbaru, jadwal bola, database pemain bola, transfer pemain bola, klub bola, pelatih, manager, ofisial bola, supporter bola dan event sepak bola terlengkap di Indonesia" />
+	<meta name="news_keywords" content="jadwal bola, berita bola, sepak bola, jadwal siaran bola, jadwal sepak bola, berita bola terkini, berita bola terbaru, berita sepak bola, info bola, berita bola hari ini, bola hari ini">
+	<meta name="googlebot-news" content="index,follow" />
+	<meta name="googlebot" content="index,follow" />
+	<meta name="robots" content="index,follow, noodp, noydir" />
+	<meta name="author" content="EyeSoccer.id" />
+	<meta name="language" content="id" />
+	<meta name="geo.country" content="id" name="geo.country" />
+	<meta http-equiv="content-language" content="In-Id" />
+	<meta name="geo.placename"content="Indonesia" />
+	<link rel="publisher" href="https://plus.google.com/u/1/105520415591265268244" />
+	<meta name="google-site-verification" content="Ypg1XCrvdn4IyWbgoGHkEWqmK5c8tz6wnBQvOObVRJE" />
+	<!-- End of SEO Meta Tags-->
+	
+	<!-- Begin of Facebook Open graph data-->
+	<meta property="fb:app_id" content="140611863350583" />
+	<meta property="og:site_name" content="EyeSoccer" />
+	<meta property="og:url" content="https://www.eyesoccer.id" />
+	<meta property="og:type" content="Website" />
+	<meta property="og:title" content="Berita Sepak Bola Indonesia Terbaru | Jadwal Bola | Database Pemain Bola | Eyesoccer" />
+	<meta property="og:description" content="Portal Berita sepak bola indonesia terbaru, jadwal bola, database pemain bola, transfer pemain bola, klub bola, pelatih, manager, ofisial bola, supporter bola dan event sepak bola terlengkap di Indonesia" />
+	<meta property="og:locale" content="id_ID" />
+	<meta property="og:image" content="<?php echo SUBCDN."assets/$folder/img/fav.png" ?>" />
+	<!--End of Facebook open graph data-->
+	   
+	<!--begin of twitter card data-->
+	<meta name="twitter:card" content="summary" />    
+	<meta name="twitter:site" content="@eyesoccer_id" />
+	<meta name="twitter:creator" content="@eyesoccer_id" />
+	<meta name="twitter:domain" content="EyeSoccer"/>
+	<meta name="twitter:title" content="Berita Sepak Bola Indonesia Terbaru | Jadwal Bola | Database Pemain Bola | Eyesoccer" />
+	<meta name="twitter:description" content="Portal Berita sepak bola indonesia terbaru, jadwal bola, database pemain bola, transfer pemain bola, klub bola, pelatih, manager, ofisial bola, supporter bola dan event sepak bola terlengkap di Indonesia" />
+	<meta name="twitter:image" content="<?php echo SUBCDN."assets/$folder/img/fav.png" ?>" />
+	<!--end of twitter card data-->
+	
 	<link rel="canonical" href="https://www.eyesoccer.id<?php echo $_SERVER['REQUEST_URI'];?>" />
     <link rel="shortcut icon" href="<?php echo SUBCDN."assets/$folder/img/fav.png" ?>" />
     
