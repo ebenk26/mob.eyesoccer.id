@@ -1,5 +1,5 @@
     <!-- CATEGORY -->
-    <div class="container xc" style="margin-top: 50px;">
+    <!--<div class="container xc" style="margin-top: 50px;">
 		<table>
 			<tr>
 				<td>
@@ -65,7 +65,7 @@
 				</td>
 			</tr>
 		</table>
-    </div>
+    </div>-->
     
 <!-- EYETUBE -->
 <div id="reqtube" class='loadtube' action="eyetube" loading="off" clean="clstube">
