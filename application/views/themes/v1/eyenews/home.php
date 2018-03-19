@@ -49,37 +49,41 @@
 					<div class="cat-x">
 						<ul>
 							<li>
-								<button onclick="dd()">LIGA</button>
-								<ul id="ddcl">
+								<!--<button onclick="dd()">LIGA</button>-->
+								<button onclick="dd()" style="padding-right: 30px;">
+									Kategori
+									<i class="material-icons" style="position: absolute;top: 5px;right: 10px;">arrow_drop_down</i>
+								</button>
+								<ul id="ddcl" style="height: auto;">
 									<li>
-										<a href="http://m.eyesoccer.id/eyenews/kategori/Di Pinggir Lapangan">Di Pinggir Lapangan</a>
+										<a href="<?php echo base_url();?>eyenews/kategori/Di Pinggir Lapangan">Di Pinggir Lapangan</a>
 									</li>
 									<li>
-										<a href="http://m.eyesoccer.id/eyenews/kategori/Liga">Liga</a>
+										<a href="<?php echo base_url();?>eyenews/kategori/Liga">Liga</a>
 									</li>
 									<li>
-										<a href="http://m.eyesoccer.id/eyenews/kategori/Pembinaan">Pembinaan</a>
+										<a href="<?php echo base_url();?>eyenews/kategori/Pembinaan">Pembinaan</a>
 									</li>
 									<li>
-										<a href="http://m.eyesoccer.id/eyenews/kategori/Peristiwa">Peristiwa</a>
+										<a href="<?php echo base_url();?>eyenews/kategori/Peristiwa">Peristiwa</a>
 									</li>
 									<li>
-										<a href="http://m.eyesoccer.id/eyenews/kategori/Prediksi">Prediksi</a>
+										<a href="<?php echo base_url();?>eyenews/kategori/Prediksi">Prediksi</a>
 									</li>
 									<li>
-										<a href="http://m.eyesoccer.id/eyenews/kategori/Soccer Sains">Soccer Sains</a>
+										<a href="<?php echo base_url();?>eyenews/kategori/Soccer Sains">Soccer Sains</a>
 									</li>
 									<li>
-										<a href="http://m.eyesoccer.id/eyenews/kategori/Soccer Seri">Soccer Seri</a>
+										<a href="<?php echo base_url();?>eyenews/kategori/Soccer Seri">Soccer Seri</a>
 									</li>
 									<li>
-										<a href="http://m.eyesoccer.id/eyenews/kategori/Tulisan Kamu">Tulisan Kamu</a>
+										<a href="<?php echo base_url();?>eyenews/kategori/Tulisan Kamu">Tulisan Kamu</a>
 									</li>
 									<li>
-										<a href="http://m.eyesoccer.id/eyenews/kategori/Ulas Tuntas">Ulas Tuntas</a>
+										<a href="<?php echo base_url();?>eyenews/kategori/Ulas Tuntas">Ulas Tuntas</a>
 									</li>
 									<li>
-										<a href="http://m.eyesoccer.id/eyenews/kategori/Umpan Lambung">Umpan Lambung</a>
+										<a href="<?php echo base_url();?>eyenews/kategori/Umpan Lambung">Umpan Lambung</a>
 									</li>
 								</ul>
 							</li>
