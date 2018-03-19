@@ -16,7 +16,7 @@
 							<img src="<?php echo base_url();?>assets/themes/v1/img/btn-play.png" alt="">
 						</div>                    
 					</div>
-					<h1><?php echo $dt->title;?></h1>
+					<h1 style="height: unset;margin-bottom: unset;"><?php echo $dt->title;?></h1>
 					<span><?php echo relative_time($this->library->datenormal($dt->publish_on)); ?> lalu</span>
 					<span><?php echo $dt->news_view; ?> view</span>
 				</a>
@@ -42,7 +42,7 @@
 						</div>                    
 					</div>
 					<h1><?php echo $dt->title;?></h1>
-					<span><?php echo relative_time($this->library->datenormal($dt->publish_on)); ?> lalu</span>
+					<span><?php echo relative_time($this->library->datenormal($dt->createon)); ?> lalu</span>
 					<span><?php echo $dt->tube_view; ?> view</span>
 				</a>
 			</div>

@@ -145,7 +145,7 @@
         <div class="carousel slide t-30 over-x">
             <div role="listbox" class="carousel-inner w-max">
                 <div class="box item active no-decoration">
-                    <div id="reqtube" class='loadtube' action="eyetube" loading="on" clean="clstube">
+                    <div id="reqtube" class='loadtube' action="eyetube" loading="off" clean="clstube">
                         <div id='clstube'>
                             <script>
                                 $(document).ready(function () {
