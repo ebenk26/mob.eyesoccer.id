@@ -3709,3 +3709,20 @@ video::-webkit-media-controls-panel {
     float: left;
     margin-right: 10px;
 }
+.img-mng{
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    border-radius: 50%;
+    border: 1px solid gainsboro;
+    overflow: hidden;
+}
+.img-mng img{
+    width: 100%;
+}
+.tb-mng tr:nth-of-type(2) td{
+    font-weight: 600;
+}
+.tb-mng tr:nth-of-type(3) td, .tb-mng tr:nth-of-type(4) td{
+    padding: 0px;
+}
