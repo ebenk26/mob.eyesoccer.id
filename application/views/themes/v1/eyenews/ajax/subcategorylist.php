@@ -12,7 +12,7 @@
 								<li>
 									<button onclick="dd()" style="padding-right: 30px;">
 										<?php echo $slug?>
-										<i class="material-icons" style="position: absolute;top: 5px;right: 10px;">arrow_drop_down</i>
+										<?php if(!empty($subcatlist->data)){?><i class="material-icons" style="position: absolute;top: 5px;right: 10px;">arrow_drop_down</i><?php } ?>
 									</button>
 									<ul id="ddcl" style="height: auto;">
 		<?php
