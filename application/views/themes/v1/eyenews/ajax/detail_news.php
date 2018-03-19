@@ -87,16 +87,15 @@ if ($newsdetail){
 		<div class="container">
 			<div class="box-flyad">
 				<div class="flyad">
-					<div class="m-0">
+					<div class="content-flyad">
 						<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-						<!-- Eyesoccer 4#mobileNewsDetailBackGround -->
+						<!-- EyesoccerMobile 4b#NewsDetailBackGround -->
 						<ins class="adsbygoogle"
-							style="display:block"
+							style="display:inline-block;width:300px;height:600px"
 							data-ad-client="ca-pub-7635854626605122"
-							data-ad-slot="6050658173"
-							data-ad-format="auto"></ins>
+							data-ad-slot="5121030944"></ins>
 						<script>
-							(adsbygoogle = window.adsbygoogle || []).push({});
+						(adsbygoogle = window.adsbygoogle || []).push({});
 						</script>
 						<!-- <span style="font-size: 7em;font-weight: 100;position: fixed;text-align: center;top: 20%;color: white;">ini iklan yaa</span> -->
 						<!-- <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt=""> -->

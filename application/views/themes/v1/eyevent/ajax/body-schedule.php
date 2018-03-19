@@ -18,22 +18,22 @@
     		<table class="table border-b">
     		    <tbody>
                     <tr>
-                        <td class="tx-r"> 
+                        <td class="tx-r" style="width: 23%;"> 
                             <?= $value->team_a; ?>
                         </td>
-                        <td style="width: 25px;"> 
+                        <td style="width: 15.5%;"> 
                         	<img src="<?= $value->url_logo_a; ?>/small" alt="">
                         </td>
-                        <td class="tx-c">
+                        <td class="tx-c" style="width: 23%;">
                             <?= $value->match_location; ?>
                             <br>
                             <?= $value->match_schedule; ?>
                             <span class="t-live"><?= $value->match_live; ?></span>
                         </td>
-                        <td style="width: 25px;">
+                        <td style="width: 15.5%;">
                         	<img src="<?= $value->url_logo_b; ?>/small" alt=""> 
                         </td>
-                        <td class="tx-l">
+                        <td class="tx-l" style="width: 23%;">
                             <?= $value->team_b; ?>
                         </td>
                     </tr>
