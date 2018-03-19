@@ -28,6 +28,6 @@ if(count($res->data) > 0 ){
 }
 else{?>
 	
-	Pengguna Tidak Ditemukan 
+	<span class="srch-not-found">Pengguna Tidak Ditemukan</span>
 
 <?php }?>
