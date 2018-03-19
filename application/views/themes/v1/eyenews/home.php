@@ -103,10 +103,10 @@
 								</script>
 							</div>
 							<input type='hidden' name='fn' value='trending' class='cinput'>
-							<a href="">Choirul Huda</a>
-							<a href="">IndonesiaU-19</a>
-							<a href="">Egy Maulana Vikri</a>
-							<a href="">Persib</a>
+							<a class="gr" href="">Choirul Huda</a>
+							<a class="gr" href="">IndonesiaU-19</a>
+							<a class="gr" href="">Egy Maulana Vikri</a>
+							<a class="gr" href="">Persib</a>
 						</div>
 					</div>
 				</td>
