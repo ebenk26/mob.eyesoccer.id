@@ -152,8 +152,8 @@ nav img{
     min-height: 50vw;
 }
 .vid-etube>img, .v-eyetube>img{
-    width: 100%;
-    /* height: 100%; */
+    min-width: 100%;
+    height: 100%;
     position: relative;
     bottom: 100%;
     z-index: -1;
@@ -1217,7 +1217,7 @@ a.m-reg span{
     width: 100%;
     height: max-content;
     background-color: #fafafa;
-    padding-top: 47px;
+    /* padding-top: 47px; */
     float: left;
 }
 .etube-mobile-thumb{
@@ -3454,6 +3454,12 @@ video::-webkit-media-controls-panel {
 .cat-x button{
     border: none;
 }
+.cat-x button i{
+    display: inline;
+    padding-left: 10px;
+    position: relative;
+    top: -3px;
+}
 .cat-x a{
     background-color: unset;
     font-size: .8em !important;
@@ -3464,7 +3470,7 @@ video::-webkit-media-controls-panel {
 .cat-x ul li ul{
     display: none;
     z-index: 1;
-    height: 150px;
+    height: max-content;
     overflow: scroll;
     top: 32px;
     left: 3px;
@@ -3738,4 +3744,9 @@ video::-webkit-media-controls-panel {
 }
 .srch-me tr td:nth-of-type(1){
     width: 50px !important;
+}
+.srch-not-found{
+    font-style: italic;
+    font-size: .9em;
+    padding: 10px;
 }
