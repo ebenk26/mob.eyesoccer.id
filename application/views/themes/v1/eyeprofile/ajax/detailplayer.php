@@ -3,6 +3,30 @@
 	{
 		$detailplayer = json_decode($detailplayer);
 		$dt = $detailplayer->data;
+
+		
+
+		
+		if($dt->position_b==NULL)
+		{
+			$dt->display_p_b='style="display: none"';
+		}
+		else 
+		{
+			$dt->display_p_b='style="display: yes"';
+		}
+		if($dt->birth_date==NULL)
+		{
+			$dt->display_t_l='style="display: none"';
+		}
+		else 
+		{
+			$dt->display_t_l='style="display: yes"';
+		}
+
+
+
+
 ?>
 		<div class="head">
 			<div class="img-radius">
@@ -26,7 +50,7 @@
 					<td>Tempat Lahir</td>
 					<td><?php echo $dt->birth_place;?></td>
 				</tr>
-				<tr>
+				<tr <?php echo $dt->display_t_l; ?>>
 					<td>Tanggal Lahir</td>
 					<td><?php echo $dt->birth_date;?></td>
 				</tr>
@@ -58,7 +82,7 @@
 					<td>Posisi Utama</td>
 					<td><?php echo $dt->position_a;?></td>
 				</tr>
-				<tr>
+				<tr <?php echo $dt->display_p_b;?> >
 					<td>Posisi Lainnya</td>
 					<td><?php echo $dt->position_b;?></td>
 				</tr>
