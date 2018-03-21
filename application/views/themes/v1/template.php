@@ -200,14 +200,13 @@
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
     </script>
-    <div class="container static-banner-ads">
+    <div class="container static-banner-ads" style="background: unset;">
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- eyesoccer 1 #mobileOverlayBottom -->
+<!-- EyesoccerMobile 1 #OverlayBottom320x50 -->
 <ins class="adsbygoogle"
-     style="display:block"
+     style="display:inline-block;width:320px;height:50px"
      data-ad-client="ca-pub-7635854626605122"
-     data-ad-slot="2853180005"
-     data-ad-format="auto"></ins>
+     data-ad-slot="8858418799"></ins>
 <script>
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
