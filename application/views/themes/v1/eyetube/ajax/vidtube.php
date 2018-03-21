@@ -32,7 +32,7 @@
                             </div>
                             <h1><?php echo $dt->title; ?></h1>
                             <span><?php echo relative_time($this->library->datenormal($dt->createon)); ?></span>
-                            <span><?php echo $dt->tube_view; ?> view - <?php echo $dt->tube_like; ?> suka</span>
+                            <span><?php echo $dt->tube_view; ?> view </span>
                         </a>
                     </div>
                 <?php
