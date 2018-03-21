@@ -56,7 +56,19 @@ if ($newsdetail){
                             foreach ($dt->data->random_news as $judul)
                             {
                 ?>
-                                <a href="<?= base_url(); ?>eyenews/detail/<?= $judul->slug ?>" id="a4" class="">
+				<?php
+				$jt=$judul->id;
+				$jdt=$dt->data->id;
+				if($jt==$jdt)
+				{
+					$judul->display='style="display: none"';
+				}
+				else
+				{
+					$judul->display='style="display: yes"';
+				}
+				?>
+                                <a <?php echo $judul->display; ?> href="<?= base_url(); ?>eyenews/detail/<?= $judul->slug ?>" id="a4" class="">
                                     <p class='bj-ttl'>
                                         <strong></i> <?= $judul->title; ?></strong>
                                     </p>      
