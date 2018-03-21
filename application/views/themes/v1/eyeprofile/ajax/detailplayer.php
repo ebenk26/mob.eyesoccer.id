@@ -4,9 +4,6 @@
 		$detailplayer = json_decode($detailplayer);
 		$dt = $detailplayer->data;
 
-		
-
-		
 		if($dt->position_b==NULL)
 		{
 			$dt->display_p_b='style="display: none"';
@@ -23,8 +20,6 @@
 		{
 			$dt->display_t_l='style="display: yes"';
 		}
-
-
 
 
 ?>
