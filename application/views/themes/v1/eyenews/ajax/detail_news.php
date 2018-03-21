@@ -62,7 +62,7 @@ if ($newsdetail){
 				if($jt==$jdt)
 				{
 					$judul->display='style="display: none"';
-				}
+				} 
 				else
 				{
 					$judul->display='style="display: yes"';
