@@ -397,7 +397,7 @@ nav img{
 }
 .border-b>tbody>tr>td{
     border-bottom: 1px solid #E0E0E0;
-    padding: 20px 8px;
+    padding: 20px 5px;
     height: 27px;
 }
 .border-b .tx-c{
@@ -3749,4 +3749,7 @@ video::-webkit-media-controls-panel {
     font-style: italic;
     font-size: .9em;
     padding: 10px;
+}
+.td3 td{
+    padding: 20px 3px !important;
 }
