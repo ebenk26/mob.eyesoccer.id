@@ -3753,3 +3753,12 @@ video::-webkit-media-controls-panel {
 .td3 td{
     padding: 20px 3px !important;
 }
+.mySlides {
+    display: none;
+}
+.img-opac {
+    opacity: 0.5;
+}
+.active1, .img-opac:hover {
+    opacity: 1;
+}
