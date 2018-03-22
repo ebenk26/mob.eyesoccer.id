@@ -10,7 +10,8 @@
 		<div class="container">
 			<a href="<?php echo $this->library->urltomob($dt->url); ?>" title="<?php echo $dt->title; ?>">
 				<div class="container" style="margin-bottom: -20px;">
-					<div class="v-eyetube">
+					<div class="v-eyetube" style="position:  relative;">
+						<span class="hl">highlight</span>
 						<img src="<?php echo $dt->url_pic; ?>" alt="<?php echo $dt->title; ?>">
 					</div>
 					<span style="padding-bottom: 0;margin-bottom: 0;margin-top: 0px;bottom: 82px;font-size: .6em;"><?php echo relative_time($this->library->datenormal($dt->publish_on)); ?> lalu</span>

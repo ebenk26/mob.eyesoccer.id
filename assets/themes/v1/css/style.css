@@ -3762,3 +3762,15 @@ video::-webkit-media-controls-panel {
 .active1, .img-opac:hover {
     opacity: 1;
 }
+.hl{
+    all: unset !important;
+    position: absolute !important;
+    top: 10px !important;
+    left: 0px !important;
+    padding: 5px 5px 5px 10px !important;
+    background-color: white !important;
+    text-transform: uppercase !important;
+    font-size: .65em !important;
+    color: #eb554c !important;
+    font-weight: 500 !important;
+}
