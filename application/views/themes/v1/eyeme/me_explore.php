@@ -1,4 +1,4 @@
-
+<div class="baseurl" val="<?php echo base_url()?>"></div>
 <div class="container" style="margin-top: 50px;" xhide="true">
     <div class="emesearch" id="styleku">
         <form class="form_keyup" action="eyeme" id="ctt" loading="off">
