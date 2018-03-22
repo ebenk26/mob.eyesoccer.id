@@ -3774,3 +3774,8 @@ video::-webkit-media-controls-panel {
     color: #eb554c !important;
     font-weight: 500 !important;
 }
+.news-capt img{
+    all: unset !important;
+    width: 100% !important;
+    height: auto !important;
+}

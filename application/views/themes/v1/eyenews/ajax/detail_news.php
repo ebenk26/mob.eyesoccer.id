@@ -40,7 +40,7 @@ if ($newsdetail){
 				<script type="text/javascript" src="//platform-api.sharethis.com/js/sharethis.js#property=5a81408ae45fbb001342fedf&product=inline-share-buttons"></script>
 			</div>
 		</div>
-		<div class="container-94">
+		<div class="container-94 news-capt">
 			<p style="margin-bottom: 50px;font-size: .9em;">
 				<?php // echo $dt->data->description;?>
 				<?php 
