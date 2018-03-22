@@ -77,62 +77,75 @@ class EyeprofileMod extends CI_Model
 
     function __competition()
     {
-        $competition = $this->input->post('slug');
-        $data['submenu'] = $this->input->post('submenu');
+        if($this->input->post('slug')){
 
-        $query = array('page' => 1, 'limit' => 8);
-        $data['competitionlist'] = $this->excurl->remoteCall($this->__xurl() . 'competition', $this->__xkey(), $query);
+            $competition = $this->input->post('slug');
+            $data['submenu'] = $this->input->post('submenu');
 
-        $html = $this->load->view($this->__theme() . 'eyeprofile/ajax/competitionlist', $data, true);
+            $query = array('page' => 1, 'limit' => 8);
+            $data['competitionlist'] = $this->excurl->remoteCall($this->__xurl() . 'competition', $this->__xkey(), $query);
 
-        $data = array('xClass' => 'reqcompetition', 'xHtml' => $html);
-        $this->tools->__flashMessage($data);
+            $html = $this->load->view($this->__theme() . 'eyeprofile/ajax/competitionlist', $data, true);
+
+            $data = array('xClass' => 'reqcompetition', 'xHtml' => $html);
+            $this->tools->__flashMessage($data);
+
+        }
+        
     }
 
     function __matchlist()
     {
-        $competition = $this->input->post('slug');
-        $date = date('Y-m-d');
-        $newdate = strtotime('-5 month', strtotime($date));
-        $startdate = date('Y-m-d', $newdate);
+        if($this->input->post('slug')){
+            $competition = $this->input->post('slug');
+            $date = date('Y-m-d');
+            $newdate = strtotime('-5 month', strtotime($date));
+            $startdate = date('Y-m-d', $newdate);
 
-        $event = 'non liga';
-        if ($competition == 'Liga Indonesia 1') {
-            $event = 'Go-Jek Traveloka Liga 1 - 2017';
-        } else if ($competition == 'Liga Indonesia 2') {
-            $event = 'Liga 2 Go-Jek Traveloka - Play Off';
-        } else if ($competition == 'Liga Indonesia 3') {
-            $event = 'Liga Indonesia 3 Wilayah Jawa Barat';
+            $event = 'non liga';
+            if ($competition == 'Liga Indonesia 1') {
+                $event = 'Go-Jek Traveloka Liga 1 - 2017';
+            } else if ($competition == 'Liga Indonesia 2') {
+                $event = 'Liga 2 Go-Jek Traveloka - Play Off';
+            } else if ($competition == 'Liga Indonesia 3') {
+                $event = 'Liga Indonesia 3 Wilayah Jawa Barat';
+            }
+
+            $query = array('page' => 1, 'limit' => 2, 'sortby' => 'newest', 'event' => $event, 'startdate' => '', 'enddate' => '');
+            $data['matchlist'] = $this->excurl->remoteCall($this->__xurl() . 'event-match', $this->__xkey(), $query);
+
+            $html = $this->load->view($this->__theme() . 'eyeprofile/ajax/matchlist', $data, true);
+
+            $data = array('xClass' => 'reqmatchlist', 'xHtml' => $html);
+            $this->tools->__flashMessage($data);
+
+            $_SESSION['klublistpage'] = 1;
+
         }
-
-        $query = array('page' => 1, 'limit' => 2, 'sortby' => 'newest', 'event' => $event, 'startdate' => '', 'enddate' => '');
-        $data['matchlist'] = $this->excurl->remoteCall($this->__xurl() . 'event-match', $this->__xkey(), $query);
-
-        $html = $this->load->view($this->__theme() . 'eyeprofile/ajax/matchlist', $data, true);
-
-        $data = array('xClass' => 'reqmatchlist', 'xHtml' => $html);
-        $this->tools->__flashMessage($data);
-
-        $_SESSION['klublistpage'] = 1;
+        
     }
 
     function __desc_league()
     {
-        $competition = urldecode($this->input->post('slug'));
-        $data['submenu'] = urldecode($this->input->post('submenu'));
+        if($this->input->post('slug')){
+            $competition = urldecode($this->input->post('slug'));
+            $data['submenu'] = urldecode($this->input->post('submenu'));
 
-        if ($competition == 'Non Liga') {
-            $competition = 'SSB / Akademi Sepakbola';
+            if ($competition == 'Non Liga') {
+                $competition = 'SSB / Akademi Sepakbola';
+            }
+
+            $query = array('page' => 1, 'limit' => 9, 'league' => '', 'competition' => $competition, 'count' => true);
+            $data['klublist'] = $this->excurl->remoteCall($this->__xurl() . 'profile-club', $this->__xkey(), $query);
+            $data['playercount'] = $this->excurl->remoteCall($this->__xurl() . 'profile', $this->__xkey(), array_merge($query, ['playercount' => true]));
+
+            $html = $this->load->view($this->__theme() . 'eyeprofile/ajax/desc_league', $data, true);
+
+            $data = array('xClass' => 'reqdescleague', 'xHtml' => $html);
+            $this->tools->__flashMessage($data);
+
         }
-
-        $query = array('page' => 1, 'limit' => 9, 'league' => '', 'competition' => $competition, 'count' => true);
-        $data['klublist'] = $this->excurl->remoteCall($this->__xurl() . 'profile-club', $this->__xkey(), $query);
-        $data['playercount'] = $this->excurl->remoteCall($this->__xurl() . 'profile', $this->__xkey(), array_merge($query, ['playercount' => true]));
-
-        $html = $this->load->view($this->__theme() . 'eyeprofile/ajax/desc_league', $data, true);
-
-        $data = array('xClass' => 'reqdescleague', 'xHtml' => $html);
-        $this->tools->__flashMessage($data);
+        
     }
 
     function __officiallist()

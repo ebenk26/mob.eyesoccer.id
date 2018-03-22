@@ -1,5 +1,6 @@
 	<?php 
-		$slugnya = urldecode($slug);
+		if(isset($slug)){
+			$slugnya = urldecode($slug);
 	?>
 	<!-- CONTENT BODY -->
     <div class="crumb">
@@ -362,3 +363,8 @@
                 </div>
             </div>
     </div>
+    <?php }
+    else{
+    	redirect(EYEPROFILE.'klub');
+    }
+    ?>
