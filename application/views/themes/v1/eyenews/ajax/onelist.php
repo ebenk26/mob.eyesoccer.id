@@ -11,7 +11,7 @@
 			<a href="<?php echo base_url()."eyenews/detail/".$value->slug;?>">
 				<div class="container eyetube etube-res" style="height: 185px;">
 					<div class="v-eyetube" style="height: 185px; position: relative;">
-                        <span class="hl">highlight</span>
+                        <span class="hl">headline</span>
 						<img src="<?php echo $value->url_pic;?>" alt="">
 					</div>
 					<span style="bottom: 75px;"><?php echo relative_time($this->library->datenormal($value->createon))." lalu"?></span>
