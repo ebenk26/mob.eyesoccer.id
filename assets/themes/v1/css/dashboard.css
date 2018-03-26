@@ -54,6 +54,10 @@
     padding: 10px 10px 0;
     width: 100%;
     overflow-x: auto;
+    min-height: 30px;
+    position: fixed;
+    top: 54px;
+    z-index: 1;
 }
 .nav-dash{
     width: max-content;
@@ -66,6 +70,9 @@
 .stc{
     padding: 10px;
     background-color: rgb(62 62 62);
+    position: fixed;
+    top: 0px;
+    z-index: 1;
 }
 .img-pic{
     width: 30px;
@@ -302,6 +309,7 @@
     margin: 8px 15px;
     letter-spacing: .6px;
     height: 40px;
+    font-weight: 500;
 }
 .tube-eye span{
     margin: 15px;
@@ -322,4 +330,13 @@
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
+}
+@media screen and (max-width: 475px) {
+    .m-pd-t-100{
+        padding-top: 100px;
+    }
+    .body-responsive{
+        width: 100%;
+        max-width: 475px;
+    }
 }
