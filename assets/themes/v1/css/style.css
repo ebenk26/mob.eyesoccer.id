@@ -3682,6 +3682,7 @@ video::-webkit-media-controls-panel {
     bottom: 0px;
     background-color: #fafafa;
     z-index: 1;
+    text-align: center;
     /* display: none; */
 }
 .box-bj{

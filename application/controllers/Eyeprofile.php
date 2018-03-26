@@ -44,6 +44,12 @@ class Eyeprofile extends CI_Controller {
 	    $data['kanal'] = 'eyeprofile';
 	    $data['content'] = 'eyeprofile/home';
 	    $data['slugliga'] = $this->session->userdata('pageliga');
+
+	    $data['event'] = 'Liga Indonesia 1';
+	    if ($slug = 'Liga Indonesia 1')
+	    {
+	    	$data['event'] = 'LIGA 1 GOJEK TRAVELOKA 2018';
+	    }
 	    
 		$this->session->set_userdata(array('pageklub' => $page, 'pageliga' => urldecode($slug)));
 		
