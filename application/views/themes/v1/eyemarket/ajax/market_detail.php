@@ -3,23 +3,32 @@
     {
 ?>
         <div class="container" style="width: unset;">
-            <div id="mainImage" style="margin: 10px 0px;">
+            <div id="mainImage" class="mySlides" style="margin: 10px 0px;">
                 <img src="<?= MARKETIMG."".$data["image1"]; ?>" class="img-responsive">
             </div>
+            <div id="mainImage" class="mySlides" style="margin: 10px 0px;">
+                <img src="<?= MARKETIMG."".$data["image2"]; ?>" class="img-responsive">
+            </div>
+            <div id="mainImage" class="mySlides" style="margin: 10px 0px;">
+                <img src="<?= MARKETIMG."".$data["image3"]; ?>" class="img-responsive">
+            </div>
+            <div id="mainImage" class="mySlides" style="margin: 10px 0px;">
+                <img src="<?= MARKETIMG."".$data["image4"]; ?>" class="img-responsive">
+            </div>
+            <div id="mainImage" class="mySlides" style="margin: 10px 0px;">
+                <img src="<?= MARKETIMG."".$data["image5"]; ?>" class="img-responsive">
+            </div>
+
                 <div class="row" id="thumbs">
                     <div class="col-xs-2">
-                        <a href="<?= MARKETIMG."".$data["image1"]; ?>" class="thumb">
-                            <img src="<?= MARKETIMG."".$data["image1"]; ?>" alt="<?= $data['nama']; ?>" class="img-responsive">
-                        </a>
+                        <img src="<?= MARKETIMG."".$data["image1"]; ?>" alt="<?= $data['nama']; ?>" class="img-responsive img-opac" onclick="currentSlide(1)">
                     </div>
             <?php 
                 if (isset($data['image2']))
                 {
             ?>
                     <div class="col-xs-2">
-                        <a href="<?= MARKETIMG."".$data["image2"]; ?>" class="thumb">
-                            <img src="<?= MARKETIMG."".$data["image2"]; ?>" alt="<?= $data['nama']; ?>" class="img-responsive">
-                        </a>
+                        <img src="<?= MARKETIMG."".$data["image2"]; ?>" alt="<?= $data['nama']; ?>" class="img-responsive img-opac" onclick="currentSlide(2)">
                     </div>
             <?php        
                 }
@@ -29,9 +38,7 @@
                 {
             ?>
                     <div class="col-xs-2">
-                        <a href="<?= MARKETIMG."".$data["image3"]; ?>" class="thumb">
-                            <img src="<?= MARKETIMG."".$data["image3"]; ?>" alt="<?= $data['nama']; ?>" class="img-responsive">
-                        </a>
+                        <img src="<?= MARKETIMG."".$data["image3"]; ?>" alt="<?= $data['nama']; ?>" class="img-responsive img-opac" onclick="currentSlide(3)">
                     </div>
             <?php        
                 }
@@ -41,9 +48,7 @@
                 {
             ?>
                     <div class="col-xs-2">
-                        <a href="<?= MARKETIMG."".$data["image4"]; ?>" class="thumb">
-                            <img src="<?= MARKETIMG."".$data["image4"]; ?>" alt="<?= $data['nama']; ?>" class="img-responsive">
-                        </a>
+                        <img src="<?= MARKETIMG."".$data["image4"]; ?>" alt="<?= $data['nama']; ?>" class="img-responsive img-opac" onclick="currentSlide(4)">
                     </div>
             <?php        
                 }
@@ -53,9 +58,7 @@
                 {
             ?>
                     <div class="col-xs-2">
-                        <a href="<?= MARKETIMG."".$data["image5"]; ?>" class="thumb">
-                            <img src="<?= MARKETIMG."".$data["image5"]; ?>" alt="<?= $data['nama']; ?>" class="img-responsive">
-                        </a>
+                        <img src="<?= MARKETIMG."".$data["image5"]; ?>" alt="<?= $data['nama']; ?>" class="img-responsive img-opac" onclick="currentSlide(5)">
                     </div>
             <?php        
                 }
@@ -215,3 +218,30 @@
 <?php        
     }
 ?>
+
+<script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("img-opac");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active1", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active1";
+    }
+</script>

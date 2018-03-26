@@ -74,6 +74,7 @@ class EyenewsMod extends CI_Model {
 		$slug = $this->input->post("slug");
 		$query = array('related' => true);
 		$data['newsdetail'] = $this->excurl->remoteCall($this->__xurl().'news/'.$slug,$this->__xkey(),$query);
+		$data['news_id'] = json_decode($data['newsdetail']);
 		
 		$html = $this->load->view($this->__theme().'eyenews/ajax/detail_news', $data, true);
 		$related = $this->load->view($this->__theme().'eyenews/ajax/related_news', $data, true);
@@ -138,6 +139,9 @@ class EyenewsMod extends CI_Model {
 		$query = array('category' => $this->input->post('slug'));
 		$data['subcatlist'] = $this->excurl->remoteCall($this->__xurl().'news-category-sub', $this->__xkey(), $query);
 		$data['slug'] = $this->input->post('slug');
+		
+		$query2 = array('page' => 1, 'limit' => 6, 'recommended' => 'true', 'description' => 'false', 'category' => $data['slug'], 'sortby' => 'newest');
+		$data['newslistcat'] = $this->excurl->remoteCall($this->__xurl().'news', $this->__xkey(), $query2);
 		
 		$html = $this->load->view($this->__theme().'eyenews/ajax/subcategorylist', $data, true);
 		

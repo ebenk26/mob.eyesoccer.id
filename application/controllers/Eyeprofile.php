@@ -122,8 +122,9 @@ class Eyeprofile extends CI_Controller {
 	    $this->load->view($this->__theme().'template', $data);
     }
 	
-	function pemain($slug, $page=1)
+	function pemain($slug = 'Liga Indonesia 1', $page=1)
     {
+    	
 		$data['slug'] = $slug;
 	    $data['kanal'] = 'eyeprofile';
 	    $data['content'] = 'eyeprofile/pemain';

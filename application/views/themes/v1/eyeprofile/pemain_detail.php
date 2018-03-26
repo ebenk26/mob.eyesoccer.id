@@ -21,10 +21,10 @@
 			<input type='hidden' name='fn' value='detailplayer' class='cinput'>
 			<input type='hidden' name='slug' value='<?php echo $slug;?>' class='cinput'>
 			<div class="head">
-				<div class="img-radius">
-					<img src="http://static.eyesoccer.id/v1/cache/images/LOGO%20UNTUK%20APLIKASI.jpg/small" alt="">
+				<div class="img-radius gr">
+					<img src="" alt="">
 				</div>
-				<h2 class="h2-text-bottom">Nama Pemain</h2>
+				<h2 class="h2-text-bottom gr">Nama Pemain</h2>
 				<p style="display:none;">
 						ini bio pemain ini bio pemain ini bio pemain ini bio pemain ini bio pemain ini bio pemain ini bio pemain ini bio pemain ini bio pemain ini bio pemain ini bio pemain ini bio pemain ini bio pemain ini bio pemain ini bio pemain ini bio pemain 
 				</p>
@@ -68,7 +68,7 @@
 					</tr>
 				</table>
 			</div>
-			<div class="container table-blue">
+			<!-- <div class="container table-blue">
 				<h3 class="h3-orange">karir klub</h3>
 				<div class="table-scroll-x">
 				<table class="table-stripe">
@@ -180,8 +180,8 @@
 							<td>ipsum</td>
 						</tr>
 					</table>
-				</div>
-				<h3 class="h3-orange">Foto galeri</h3>
+				</div> -->
+				<!-- <h3 class="h3-orange">Foto galeri</h3>
 				<div class="container">
 					<div class="display-img">
 						<img class="container" src="https://images.performgroup.com/di/library/GOAL/db/72/emral-abus-persib-bandung_3q9saag8abcl1etjndmg3mncr.jpg" alt="">
@@ -190,7 +190,7 @@
 						<i class="material-icons">keyboard_arrow_left</i>
 						<i style="float: right;" class="material-icons">keyboard_arrow_right</i>
 					</div>
-				</div>
+				</div> -->
 			</div>
 		</div>
     </div>

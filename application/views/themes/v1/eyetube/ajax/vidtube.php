@@ -11,7 +11,8 @@
             {
                 ?>
                     <a href="<?php echo $this->library->urltomob($dt->share_url); ?>" title="<?php echo $dt->title; ?>">
-                        <div class="v-eyetube"  style="height: 185px;">
+                        <div class="v-eyetube"  style="height: 185px; position: relative;">
+                            <span class="hl">headline</span>
                             <img src="<?php echo $dt->url_thumb.'/medium'; ?>" alt="<?php echo $dt->title; ?>">
                         </div>
                         <span><?php echo relative_time($this->library->datenormal($dt->createon)); ?> lalu</span>
@@ -32,7 +33,7 @@
                             </div>
                             <h1><?php echo $dt->title; ?></h1>
                             <span><?php echo relative_time($this->library->datenormal($dt->createon)); ?></span>
-                            <span><?php echo $dt->tube_view; ?> view - <?php echo $dt->tube_like; ?> suka</span>
+                            <span><?php echo $dt->tube_view; ?> view </span>
                         </a>
                     </div>
                 <?php

@@ -119,24 +119,27 @@ class EyemeMod extends CI_Model {
         $query       = array('page' => '1','limit' => '10','id'=> $id_img);
         $res         = $this->excurl->remoteCall($this->__xurl().'me-comment',$this->__xkey(),$query);
         $data['res'] = json_decode($res);
+        #p($data['res']);
         $html        = $this->load->view($this->__theme().'eyeme/ajax/me_a_comment',$data,true);
         $arr         = array('xClass'=> 'idcom','xHtml'=> $html);
         $this->tools->__flashMessage($arr);
-
+#
     }
     function __pscomment(){
         $id_img      = $this->input->post('uid');
         $username    = $this->session->member['username'];
         $content     = $this->input->post('comment');
         $query       = array('id'=> $id_img, 'username' => $username,'comment'=> $content);
+
         $do          = $this->excurl->remoteCall($this->__xurl().'comment-me',$this->__xkey(),$query);
-        $queryCom    = array('page' => '1','limit' => '100','id'=> $id_img);
+        $queryCom    = array('page' => '1','limit' => '20','id'=> $id_img);
         $res         = $this->excurl->remoteCall($this->__xurl().'me-comment',$this->__xkey(),$queryCom);
-        $data['res'] = json_decode($res);
+        $data['res'] = array('username' => $username,'comment' => $content,'timeString' => 'beberapa detik yang lalu');
+
         $html        = $this->load->view($this->__theme().'eyeme/ajax/me_a_n_comment',$data,true);
         $xData       = array(
-            'ncom'=> $html,'countcomment' => count($data['res']->data),
-            'c'.$id_img => count($data['res']->data));
+                            'ncom'=> $html,
+                            'c'.$id_img => count(json_decode($res)->data));
         $arr         = array('xSplit'=> false, 'xData' => $xData);       
         $this->tools->__flashMessage($arr);
         

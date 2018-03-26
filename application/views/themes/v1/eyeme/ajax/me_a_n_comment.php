@@ -1,16 +1,15 @@
-<?php 
 
-foreach($res->data as $k => $v){?>
+
     
     <div class="item-komentar">
         <div class="img-radius">
-            <img src="<?php echo $v->url_pic.'/thumb'; ?>" alt="<?php echo $v->username?>" width="100%">
+            <img src="<?php echo $this->session->member['url_pic'].'/thumb'; ?>" alt="<?php echo $res['username']?>" width="100%">
         </div>
         <div class="text-komentar">
-            <p><?php echo $v->comment?></p>
-            <h3><?php echo $v->username?></h3>
-            <span><?php echo getTime(getDistance(NOW,$v->last_update))['timeString']?></span>
+                <h3><?php echo $res['username']?></h3>
+            <p><?php echo $res['comment']?></p>
+        
+            <span><?php echo $res['timeString']?></span>
         </div>
     </div>
 
-<?php }?>

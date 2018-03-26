@@ -66,9 +66,9 @@
 </div>
 
 <!-- KOMENTAR -->
-<div class="container-comment" id="idcom">
-    
+    <div class="container-comment" id="idcom">
+        
 
-</div>
+    </div>
 </div>
    

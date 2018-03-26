@@ -12,6 +12,12 @@
         display: block;
         padding: 0;
     }
+	.form_post span {
+		    position: unset;
+			color: unset;
+			margin-bottom: unset;
+			padding-left: unset;
+	}
 </style>
 <?php $folder = $this->config->item('themes'); ?>
 <?php
@@ -25,7 +31,7 @@ if ($tube) {
     </video>
     <div class="etube-v-title-mobile">
         <h1><?= $tube->data->title; ?></h1>
-        <i class="far fa-comment komen-tube openComment" aria-hidden="false"><div class="openComment"></div></i>
+        <i class="far fa-comment komen-tube openComment" aria-hidden="false" style="padding-top: 20px;"><div class="openComment"></div></i>
         <!-- <i class="heightControl2 material-icons arrow-right-etube">arrow_drop_up</i>
         <i class="material-icons arrow-right-etube heightControl">arrow_drop_down</i> -->
         <span><?php echo relative_time($this->library->datenormal($tube->data->createon)); ?> lalu - oleh <?= $tube->data->fullname; ?> - <?= $tube->data->tube_view; ?> kali diputar</span>
@@ -61,89 +67,111 @@ if ($tube) {
     </div>
     <!-- EMOTICON -->
     <div class="container-94" style="background-color: white;padding: 10px 0px 20px;">
-        <div class="col-3 col-emoji">
-            <a class="emoticon" type_emot="proud">
-                <div class="img-box">
-                    <img src="<?php echo SUBCDN . "assets/$folder/" ?>img/emoji/bangga.png" alt="">
-                </div>
-                <div style="text-align: center;" class="replace_proud"><?php echo $tube->data->tube_fun; ?></div>
-                <div style="text-align: center;">bangga</div>
-            </a>
-        </div>
-        <div class="col-3 col-emoji">
-            <a class="emoticon" type_emot="inspired">
-                <div class="img-box">
-                    <img style="margin-top:  -6px;" src="<?php echo SUBCDN . "assets/$folder/" ?>img/emoji/bingung.png" alt="">
-                </div>
-                <div style="text-align: center;" class="replace_inspired"><?php echo $tube->data->tube_inspired; ?></div>
-                <div style="text-align: center;">terinspirasi</div>
-            </a>
-        </div>
-        <div class="col-3 col-emoji">
-            <a class="emoticon" type_emot="happy">
-                <div class="img-box box-img-90">
-                    <img src="<?php echo SUBCDN . "assets/$folder/" ?>img/emoji/gembira.png" alt="">
-                </div>
-                <div style="text-align: center;" class="replace_happy"><?php echo $tube->data->tube_happy; ?></div>
-                <div style="text-align: center;">gembira
-                </div style="text-align: center
-                ;">
-            </a>
-        </div>
-        <div class="col-3 col-emoji">
-            <a class="emoticon" type_emot="sad">
-                <div class="img-box">
-                    <img src="<?php echo SUBCDN . "assets/$folder/" ?>img/emoji/sedih.png" alt="">
-                </div>
-                <div style="text-align: center;" class="replace_sad"><?php echo $tube->data->tube_inspired; ?></div>
-                <div style="text-align: center;">sedih
-                </div style="text-align: center
-                ;">
-            </a>
-        </div>
-        <div class="col-3 col-emoji">
-            <a class="emoticon" type_emot="angry">
-                <div class="img-box">
-                    <img style="margin-top:  -6px;" src="<?php echo SUBCDN . "assets/$folder/" ?>img/emoji/suka.png" alt="">
-                </div>
-                <div style="text-align: center;" class="replace_angry"><?php echo $tube->data->tube_angry; ?></div>
-                <div style="text-align: center;">marah
-                </div style="text-align: center
-                ;">
-            </a>
-        </div>
-        <div class="col-3 col-emoji">
-            <a class="emoticon" type_emot="fear">
-                <div class="img-box">
-                    <img src="<?php echo SUBCDN . "assets/$folder/" ?>img/emoji/takut.png" alt="">
-                </div>
-                <div style="text-align: center;" class="replace_fear"><?php echo $tube->data->tube_fear; ?></div>
-                <div style="text-align: center;">takut</div>
-            </a>
-        </div>
-        <div class="col-3 col-emoji">
-            <a class="emoticon" type_emot="fun">
-                <div class="img-box">
-                    <img src="<?php echo SUBCDN . "assets/$folder/" ?>img/emoji/terhibur.png" alt="">
-                </div>
-                <div style="text-align: center;" class="replace_fun"><?php echo $tube->data->tube_fun; ?></div>
-                <div style="text-align: center;">terhibur
-                </div style="text-align: center
-                ;">
-            </a>
-        </div>
-        <div class="col-3 col-emoji">
-            <a class="emoticon" type_emot="shock">
-                <div class="img-box">
-                    <img src="<?php echo SUBCDN . "assets/$folder/" ?>img/emoji/terkejut.png" alt="">
-                </div>
-                <div style="text-align: center;" class="replace_shock"><?php echo $tube->data->tube_shock; ?></div>
-                <div style="text-align: center;">terkejut
-                </div style="text-align: center
-                ;">
-            </a>
-        </div>
-    </div>
+			<div class="col-3 col-emoji">
+				<a href='javascript:void(0)' id='reqemotproud' class='form_post' action='home' loading="off">
+					<input type='hidden' name='fn' value='set_emot' class='cinput'>
+					<input type='hidden' name='channel' value='eyetube' class='cinput'>
+					<input type='hidden' name='type' value='proud' class='cinput'>
+					<input type='hidden' name='id' value='<?php echo $tube->data->id;?>' class='cinput'>
+					<div class="img-box">
+						<img src="<?php echo SUBCDN."assets/$folder/" ?>img/emoji/bangga.png" alt="">
+					</div>
+					<span><?php echo $tube->data->tube_proud;?></span>
+					<span>bangga</span>
+				</a>
+			</div>
+			<div class="col-3 col-emoji">
+				<a href='javascript:void(0)' id='reqemotinspired' class='form_post' action='home' loading="off">
+					<input type='hidden' name='fn' value='set_emot' class='cinput'>
+					<input type='hidden' name='channel' value='eyetube' class='cinput'>
+					<input type='hidden' name='type' value='inspired' class='cinput'>
+					<input type='hidden' name='id' value='<?php echo $tube->data->id;?>' class='cinput'>
+					<div class="img-box">
+						<img src="<?php echo SUBCDN."assets/$folder/" ?>img/emoji/bingung.png" alt="">
+					</div>
+					<span><?php echo $tube->data->tube_inspired;?></span>
+					<span>terinspirasi</span>
+				</a>
+			</div>
+			<div class="col-3 col-emoji">
+				<a href='javascript:void(0)' id='reqemothappy' class='form_post' action='home' loading="off">
+					<input type='hidden' name='fn' value='set_emot' class='cinput'>
+					<input type='hidden' name='channel' value='eyetube' class='cinput'>
+					<input type='hidden' name='type' value='happy' class='cinput'>
+					<input type='hidden' name='id' value='<?php echo $tube->data->id;?>' class='cinput'>
+					<div class="img-box">
+						<img src="<?php echo SUBCDN."assets/$folder/" ?>img/emoji/gembira.png" alt="">
+					</div>
+					<span><?php echo $tube->data->tube_happy;?></span>
+					<span>gembira</span>
+				</a>
+			</div>
+			<div class="col-3 col-emoji">
+				<a href='javascript:void(0)' id='reqemotsad' class='form_post' action='home' loading="off">
+					<input type='hidden' name='fn' value='set_emot' class='cinput'>
+					<input type='hidden' name='channel' value='eyetube' class='cinput'>
+					<input type='hidden' name='type' value='sad' class='cinput'>
+					<input type='hidden' name='id' value='<?php echo $tube->data->id;?>' class='cinput'>
+					<div class="img-box">
+						<img src="<?php echo SUBCDN."assets/$folder/" ?>img/emoji/sedih.png" alt="">
+					</div>
+					<span><?php echo $tube->data->tube_sad;?></span>
+					<span>sedih</span>
+				</a>
+			</div>
+			<div class="col-3 col-emoji">
+				<a href='javascript:void(0)' id='reqemotangry' class='form_post' action='home' loading="off">
+					<input type='hidden' name='fn' value='set_emot' class='cinput'>
+					<input type='hidden' name='channel' value='eyetube' class='cinput'>
+					<input type='hidden' name='type' value='angry' class='cinput'>
+					<input type='hidden' name='id' value='<?php echo $tube->data->id;?>' class='cinput'>
+					<div class="img-box">
+						<img src="<?php echo SUBCDN."assets/$folder/" ?>img/emoji/suka.png" alt="">
+					</div>
+					<span><?php echo $tube->data->tube_angry;?></span>
+					<span>marah</span>
+				</a>
+			</div>
+			<div class="col-3 col-emoji">
+				<a href='javascript:void(0)' id='reqemotfear' class='form_post' action='home' loading="off">
+					<input type='hidden' name='fn' value='set_emot' class='cinput'>
+					<input type='hidden' name='channel' value='eyetube' class='cinput'>
+					<input type='hidden' name='type' value='fear' class='cinput'>
+					<input type='hidden' name='id' value='<?php echo $tube->data->id;?>' class='cinput'>
+					<div class="img-box">
+						<img src="<?php echo SUBCDN."assets/$folder/" ?>img/emoji/takut.png" alt="">
+					</div>
+					<span><?php echo $tube->data->tube_fear;?></span>
+					<span>takut</span>
+				</a>
+			</div>
+			<div class="col-3 col-emoji">
+				<a href='javascript:void(0)' id='reqemotfun' class='form_post' action='home' loading="off">
+					<input type='hidden' name='fn' value='set_emot' class='cinput'>
+					<input type='hidden' name='channel' value='eyetube' class='cinput'>
+					<input type='hidden' name='type' value='fun' class='cinput'>
+					<input type='hidden' name='id' value='<?php echo $tube->data->id;?>' class='cinput'>
+					<div class="img-box">
+						<img src="<?php echo SUBCDN."assets/$folder/" ?>img/emoji/terhibur.png" alt="">
+					</div>
+					<span><?php echo $tube->data->tube_fun;?></span>
+					<span>terhibur</span>
+				</a>
+			</div>
+			<div class="col-3 col-emoji">
+				<a href='javascript:void(0)' id='reqemotshock' class='form_post' action='home' loading="off">
+					<input type='hidden' name='fn' value='set_emot' class='cinput'>
+					<input type='hidden' name='channel' value='eyetube' class='cinput'>
+					<input type='hidden' name='type' value='shock' class='cinput'>
+					<input type='hidden' name='id' value='<?php echo $tube->data->id;?>' class='cinput'>
+					<div class="img-box">
+						<img src="<?php echo SUBCDN."assets/$folder/" ?>img/emoji/terkejut.png" alt="">
+					</div>
+					<span><?php echo $tube->data->tube_shock;?></span>
+					<span>terkejut</span>
+				</a>
+			</div>
+		</div>
     <div class="container-94 m-b-20 unset">
         <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <ins class="adsbygoogle"

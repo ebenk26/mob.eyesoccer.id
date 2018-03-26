@@ -1,0 +1,325 @@
+.menu-dashboard{
+    background-color: rgb(243 243 243);
+    height: 100vh;
+}
+.login-ic{
+    float: right;
+    color: white;
+    font-size: 1.4em;
+    padding: 8px 20px 0 0;
+    display: none !important;
+}
+.wlc{
+    height: 170px;
+    width: 100%;
+    background-color: gainsboro;
+    position: relative;
+    overflow: hidden
+}
+.wlc img{
+    width: 100%;
+}
+.wlcm{
+    color: white;
+    width: max-content;
+    height: max-content;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+.wlcm span{
+    display: block;
+    letter-spacing: 1px;
+}
+.wlcm span:nth-of-type(1){
+    font-size: 1.1em;
+}
+.wlcm span:nth-of-type(2){
+    font-size: 1.33em;
+}
+.wlcm span:nth-of-type(3){
+    font-size: .64em;
+}
+.close-wlcm{
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    color: white;
+}
+.nav-dashboard{
+    background-color: rgb(255 226 78);
+    padding: 10px 10px 0;
+    width: 100%;
+    overflow-x: auto;
+}
+.nav-dash{
+    width: max-content;
+    padding-right: 20px;
+    font-size: .85em;
+}
+.nav-dash li{
+    padding-right: 11px;
+}
+.stc{
+    padding: 10px;
+    background-color: rgb(62 62 62);
+}
+.img-pic{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid rgb(62 62 62);
+    margin-right: 20px;
+    position: relative;
+}
+.img-pic img{
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+.daftar-pemain{
+    text-align: center;
+    display: block;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.daftar-pemain span{
+    display: block;
+    letter-spacing: .4pt;
+    color: rgb(62 62 62);
+    padding: 2px;
+}
+.daftar-pemain span:nth-of-type(1){
+    font-size: .8em;
+}
+.daftar-pemain span:nth-of-type(2){
+    font-size: 1.12em;
+}
+.fs68{
+    font-size: .68em !important;
+}
+.klik-dsn{
+    font-size: .75em;
+    color: white;
+    background-color: rgb(80 229 215);
+    padding: 10px 30px;
+    border: none;
+    border-radius: 20px;
+    margin: 5px;
+}
+.klik-dsn.red{
+    background-color: #d32f2f;
+}
+.m-bar{
+    width: max-content !important;
+    color:white;
+    font-size: 1.2em;
+    padding: 5px;
+}
+.m-bar i{
+    margin-right: 13px;
+}
+.m-bar span{
+    font-size: .4em;
+    background-color: rgb(200 0 0);
+    padding: 2px 5px;
+    border-radius: 8px;
+    position: absolute;
+    left: 45px;
+    top: 10px;
+    /* display: none; */
+}
+.l83{
+    left: 83px !important;
+}
+.form-daftar-pemain{
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 3px gainsboro;
+    display: block;
+    margin-bottom: 10px;
+}
+.bg-menu-pic{
+    padding: 30px 0px;
+}
+.menu-pic{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+}
+.menu-pic img{
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+.menu-dash a{
+    width: 100%;
+    display: block;
+    padding: 10px 25px 15px;
+    font-family: 'Roboto', sans-serif;
+}
+.menu-dash a.active{
+    background-color: rgb(238 238 238);
+}
+.menu-dash a img{
+    position: relative;
+    top: 6px;
+    margin-right: 10px;
+    width: 23px;
+}
+.form-profil-dash{
+    padding: 0 20px 1px;
+    box-sizing: border-box;
+    background-color: rgb(250 250 250);
+    width: 100%;
+}
+.menu-dashboard h5{
+    font-weight: 500;
+    color: rgb(62 62 62);
+    margin: 15px 0;
+    padding: 0 20px;
+}
+.form-profil-dash span, .form-profil-dash input{
+    width: 100%;
+    font-size: .8em;
+    color: rgb(62 62 62);
+}
+.form-profil-dash span{
+    display: block;
+    padding-top: 10px;
+}
+.form-profil-dash input{
+    border: none;
+    border-bottom: 2px solid rgb(243 243 243);
+    padding: 8px 0;
+}
+.simpan{
+    background-color: rgb(243 243 243);
+    padding: 20px 0;
+}
+.nav-dash li.active{
+    font-weight: 600;
+}
+.player-tabs{
+    width: 100%;
+    overflow-x: auto;
+}
+.player-tab{
+    width: max-content !important;
+}
+.player-tab span{
+    padding: 0 50px;
+}
+.player-tab span.active{
+    color: rgb(245 166 35);
+}
+.player-galeri{
+    width: 135px;
+    height: 80px;
+    border-radius: 7px;
+    padding: 1px;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    background-color: gainsboro;
+}
+.player-galeri input{
+    position: absolute;
+    z-index: 1;
+    width: max-content;
+}
+.player-galeri img{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+.pd20{
+    padding: 20px !important;
+}
+.up-foto{
+    border: 1.4px solid rgb(216 216 216);
+    border-radius: 7px;
+    width: 100px;
+    height: 60px;
+    text-align: center;
+    position: relative;
+    margin: 10px 0 20px;
+}
+.ed-foto{
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    position: relative;
+    background-color: rgb(216 216 216);
+}
+.ed-foto img{
+    width: 100%;
+}
+.up-foto i, .ed-foto img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    color: rgb(216 216 216);
+}
+.tulisankamu{
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: .8em;
+    color: rgb(62 62 62);
+}
+.tulisankamu input{
+    border: none;
+    border-bottom: 2px solid rgb(243 243 243);
+    padding: 8px 0;
+}
+.tube-eye{
+    color: rgb(62 62 62);
+    box-shadow: 0 2px 4px -1px #00000031;
+    margin: 10px;
+    border-radius: 7px;
+    background-color: rgb(250 250 250);
+    height: 220px;
+    overflow: hidden;
+}
+.tube-eye h4{
+    margin: 8px 15px;
+    letter-spacing: .6px;
+    height: 40px;
+}
+.tube-eye span{
+    margin: 15px;
+    font-size: .65em;
+    letter-spacing: .4px;
+    height: 13px;
+}
+.tube-eye-img{
+    width: 100%;
+    height: 130px;
+    position: relative;
+    overflow: hidden;
+}
+.tube-eye-img img{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}

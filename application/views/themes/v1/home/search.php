@@ -15,9 +15,9 @@
 			<input type='hidden' name='query' value='<?php echo $_GET['q'];?>' class='cinput'>
 			Eyenews
 			<div class="etube-content pd-t-10">
-				<a href="http://localhost/mob.eyesoccer.id/eyetube/detail/3-nama-yang-cocok-menggantikan-arsene-wenger-b57b86f" title="3 Nama yang Cocok Menggantikan Arsene Wenger">
+				<a href="#" title="3 Nama yang Cocok Menggantikan Arsene Wenger">
 					<div class="v-etube">
-						<img src="http://static.eyesoccer.id/v1/cache/images/thumbnail.jpg/small" alt="3 Nama yang Cocok Menggantikan Arsene Wenger">
+						<img src="http://static.eyesoccer.id/v1/cache/images/1519793206557_logo_login.png/small" alt="3 Nama yang Cocok Menggantikan Arsene Wenger">
 						<div class="btn-play">
 							<img src="http://localhost/mob.eyesoccer.id/assets/themes/v1/img/btn-play.png" alt="">
 						</div>                    

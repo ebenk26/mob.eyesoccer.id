@@ -71,12 +71,12 @@
 				<input type='hidden' name='fn' value='competition' class='cinput'>
 				<input type='hidden' name='submenu' value='pemain' class='cinput'>
 				<input type='hidden' name='slug' value='<?php echo $slug;?>' class='cinput'>
-				<select id="" name="" selected="true" class="slc-musim">
+				<!-- <select id="" name="" selected="true" class="slc-musim">
 					<option value>--Pilih Liga--</option>
 					<option value="">Liga 1 Indonesia</option>
 					<option value="">Liga 1 Indonesia</option>
 					<option value="">Liga 1 Indonesia</option>
-				</select>
+				</select> -->
 			</div>
         </div>
         <div class="eprofile-src" style="display:none;">
@@ -97,12 +97,12 @@
 				<input type='hidden' name='slug' value='<?php echo $slug;?>' class='cinput'>
 				<input type='hidden' name='submenu' value='klub' class='cinput'>
 				<div class="user-pemain">
-					<div class="pemain-img">
-						<img src="https://www.striker.id/wp-content/uploads/2017/11/2359488.jpg" alt="" srcset="">
+					<div class="pemain-img fafa gr" style="border-color: white !important;border: 20px solid white;box-sizing: content-box;margin: -20px;">
+						<img src="" alt="" srcset="">
 					</div>
-					<div class="pemain-data">
-						<h3>Nama Pemain</h3>
-						<span>Klub - posisi</span>
+					<div class="pemain-data gr">
+						<h3 class="gr">Nama Pemain</h3>
+						<span class="gr">Klub - posisi</span>
 					</div>
 				</div>
 			</div>
@@ -124,7 +124,7 @@
 					</div>
 					<input type='hidden' name='fn' value='matchlist' class='cinput'>
 					<input type='hidden' name='slug' value='<?php echo urldecode($slug);?>' class='cinput'>
-					<div class="jadwal-content">
+					<div class="jadwal-content fafa gr">
 						<table>
 								<tr>
 									<td>22 Okt</td>
@@ -140,10 +140,10 @@
 								</tr>
 						</table>
 					</div>
-					<div class="jadwal-content">
+					<div class="jadwal-content fafa gr">
 						<table>
 							<tr>
-								<td class="red">22 Okt</td>
+								<td>22 Okt</td>
 								<td>08:45</td>
 							</tr>
 							<tr>
@@ -291,7 +291,7 @@
 									</script>
 							 </div>
 							  <input type='hidden' name='fn' value='market' class='cinput'>
-							<div class="box item active">
+							<!-- <div class="box item active">
 								<a href="">
 									<div class="em-box-content">
 										<img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt="">
@@ -340,7 +340,7 @@
 										<button type="text" class="beli">Beli</button>
 									</div>
 								</a>
-							</div>
+							</div> -->
                         </div>
                     </div>
                 </div>

@@ -3,16 +3,22 @@
 		<div class="kebijakan">
 			<h1>Tim Eyesoccer</h1>
 			<h2>Board of Management</h2>
-			<table style="text-align: center;">
+			<table class="tb-mng" style="text-align: center;">
 					<tr>
 						<td>
-							<img src="../assets/img/eyeme/user-discover.png" alt="">
+							<div class="img-mng">
+								<img src="assets/img/cepi.jpg" alt="">
+							</div>
 						</td>
 						<td>
-							<img src="../assets/img/eyeme/user-discover.png" alt="">
+							<div class="img-mng">
+								<img src="assets/img/tommy.jpg" alt="">
+							</div>
 						</td>
 						<td>
-							<img src="../assets/img/eyeme/user-discover.png" alt="">
+							<div class="img-mng">
+								<img src="assets/img/yudi.jpg" alt="">
+							</div>
 						</td>
 					</tr>
 					<tr>
@@ -27,9 +33,14 @@
 						</td>
 					</tr>
 					<tr>
-						<td>CEO / Founder</td>
-						<td>CTO / Founder</td>
-						<td>CFO / Co - Founder</td>
+						<td>CEO</td>
+						<td>CTO</td>
+						<td>CFO</td>
+					</tr>
+					<tr>
+						<td>/ Founder</td>
+						<td>/ Founder</td>
+						<td>/ Co-Founder</td>
 					</tr>
 					<tr>
 						<td colspan="3">

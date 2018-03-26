@@ -43,31 +43,34 @@ $imglist = json_decode($imglist);
         <div class="container-eme-like">
             <ul>
                 <li>
-                     <a class="like" ref="<?php echo substr($v->id,0,3).'lk'?>"> 
-                      <span id="<?php echo substr($v->id,0,3).'clss'?>">
+                     <a class="like form_post" form="<?php echo 'lk'.$v->id?>" action="eyeme"> 
+                        <span id="<?php echo substr($v->id,0,3).'clss'?>">
                             <img src="<?php echo MEMENU.($hasLike == 1 ? 'love-active.svg' : 'love.svg') ?>">
                             <span class="adbo"><?php echo ($v->likecount == 0 ? '' : $v->likecount)?></span>
-                             
-                            <span id="<?php echo substr($v->id,0,3).'lk'?>" class="<?php echo substr($v->id,0,3).'lk'?>" action="eyeme" loading="off">
-                            <input type="hidden" class="cinput" name="fn" value="gtlike">
-                            <input type="hidden" class="cinput" name="uid" value="<?php echo $v->id?>">
-                            <input type="hidden" class="cinput" name="act" value="<?php echo $hasLike == 0 ? 'like' : 'unlike'?>">
-                            <input type="hidden" class="cinput" name="clss" value="<?php echo substr($v->id,0,3).'clss'?>">
+                <span id="<?php echo 'lk'.$v->id?>" action="eyeme" loading="off">
+                    <input type="hidden" class="cinput" name="fn" value="gtlike">
+                    <input type="hidden" class="cinput" name="uid" value="<?php echo $v->id?>">
+                    <input type="hidden" class="cinput" name="act" value="<?php echo $hasLike == 0 ? 'like' : 'unlike'?>">
+                    <input type="hidden" class="cinput" name="clss" value="<?php echo substr($v->id,0,3).'clss'?>">
 
-                             </span>
+                </span>
+                            
                         </span> 
                     </a>        
 
-                    <a  class="com" val="<?php echo $v->id?>">
+                    <a  class="form_post"  form="<?php echo 'ab'.$v->id?>" action="eyeme">   
                         <img class="openComment" src="<?php echo base_url()?>assets/img/menu/eyeme/comment.svg" alt="">
                         <span class="adbo c<?php echo $v->id?>"><?php echo ($v->commentcount == 0 ? '' : $v->commentcount)?></span>
-                    </a>
 
-                    <div id="<?php echo substr($v->id,0,3)?>" class="<?php echo $v->id?>" action="eyeme" loading="off">
-                        <input type="hidden" class="cinput" name="fn" value="gtcomment">
-                        <input type="hidden" class="cinput" name="uid" value="<?php echo $v->id?>">
+                    </a>
+                    
+                    <div id="<?php echo 'ab'.$v->id?>">
+                        <input type="hidden" name="fn" value="gtcomment" class="cinput">
+                        <input type="hidden" name="uid" value="<?php echo $v->id?>" class="cinput">
 
                     </div>
+
+               
                     <div id="<?php echo substr($v->id,0,3)?>" class="loadlike <?php echo substr($v->id,0,3)?>" action="eyeme" loading="off">
                         <input type="hidden" class="cinput" name="fn" value="gtlike">
                         <input type="hidden" class="cinput" name="uid" value="<?php echo $v->id?>">
@@ -96,19 +99,6 @@ $imglist = json_decode($imglist);
             ajaxOnLoad(id);
         }
     }
-    $('a.com').click(function(){
-        //var ref =  $(this).attr('ref');
-        var val =  $(this).attr('val');
-        $('#cominput').attr('val',val);
-        $('#cominput').attr('test');
-        ajaxOnLoad(val);
-    })
-
-     $('a.like').click(function(){
-
-        var ref = $(this).attr('ref');
-        ajaxOnLoad(ref);
-    });
     $('.form_keyup').keypress(function(event) {
         /* Act on the event */
         if(keyCode == 13){
