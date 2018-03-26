@@ -1217,7 +1217,7 @@ a.m-reg span{
     width: 100%;
     height: max-content;
     background-color: #fafafa;
-    /* padding-top: 47px; */
+    padding-top: 47px;
     float: left;
 }
 .etube-mobile-thumb{
