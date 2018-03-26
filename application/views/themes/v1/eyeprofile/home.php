@@ -124,7 +124,7 @@
 			</div>
         </div>
         <div class="container box-jadwal" style="position: relative;">
-            <h3 class="h3-orange">Jadwal pertandingan <?php echo urldecode($slug);?></h3>
+            <h3 class="h3-orange">Jadwal pertandingan <?php echo /*urldecode($slug)*/ $event;?></h3>
             <i class="material-icons">keyboard_arrow_left</i>
             <i class="material-icons">keyboard_arrow_right</i>
             <div class="jadwal">
