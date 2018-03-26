@@ -3780,3 +3780,13 @@ video::-webkit-media-controls-panel {
     width: 100% !important;
     height: auto !important;
 }
+.back-market{
+    padding-left: 15px;
+    color: #91c500;
+    font-weight: 500;
+    text-decoration: none;
+}
+.back-market i{
+    font-size: .9em;
+    padding-right: 5px;
+}
