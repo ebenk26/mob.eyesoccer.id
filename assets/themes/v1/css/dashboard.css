@@ -1,5 +1,17 @@
+.mt-45{
+    margin-top: -45px;
+}
+.bgw{
+    background-color: white !important;
+}
+.bg243{
+    background-color: rgb(243 243 243) !important;
+}
+.bg250{
+    background-color: rgb(250 250 250) !important;
+}
 .menu-dashboard{
-    background-color: rgb(243 243 243);
+    /* background-color: rgb(243 243 243); */
     height: 100vh;
 }
 .login-ic{
@@ -48,6 +60,9 @@
     top: 5px;
     right: 10px;
     color: white;
+}
+.close-wlcm i{
+    text-shadow: 0 2px 4px #0000006e;
 }
 .nav-dashboard{
     background-color: rgb(255 226 78);
@@ -151,6 +166,7 @@
     box-shadow: 0 0 3px gainsboro;
     display: block;
     margin-bottom: 10px;
+    background: rgb(253 253 253);
 }
 .bg-menu-pic{
     padding: 30px 0px;
@@ -189,14 +205,13 @@
 .form-profil-dash{
     padding: 0 20px 1px;
     box-sizing: border-box;
-    background-color: rgb(250 250 250);
     width: 100%;
 }
 .menu-dashboard h5{
     font-weight: 500;
     color: rgb(62 62 62);
-    margin: 15px 0;
-    padding: 0 20px;
+    margin: 0;
+    padding: 15px 20px;
 }
 .form-profil-dash span, .form-profil-dash input{
     width: 100%;
@@ -206,11 +221,13 @@
 .form-profil-dash span{
     display: block;
     padding-top: 10px;
+    margin-right: 5px;
 }
 .form-profil-dash input{
     border: none;
     border-bottom: 2px solid rgb(243 243 243);
     padding: 8px 0;
+    letter-spacing: .5px;
 }
 .simpan{
     background-color: rgb(243 243 243);
@@ -259,7 +276,7 @@
     padding: 20px !important;
 }
 .up-foto{
-    border: 1.4px solid rgb(216 216 216);
+    border: 1.5px solid rgb(234, 234, 234);
     border-radius: 7px;
     width: 100px;
     height: 60px;
@@ -267,12 +284,17 @@
     position: relative;
     margin: 10px 0 20px;
 }
+.up-foto i{
+    font-size: 1.5em;
+}
 .ed-foto{
     width: 50px;
     height: 50px;
-    border-radius: 50px;
+    border-radius: 50%;
     position: relative;
     background-color: rgb(216 216 216);
+    display: inline-block;
+    overflow: hidden;
 }
 .ed-foto img{
     width: 100%;
@@ -285,16 +307,43 @@
     transform: translate(-50%, -50%);
     color: rgb(216 216 216);
 }
+.edit-foto a{
+    position: relative;
+    top: -19px;
+    left: 10px;
+}
 .tulisankamu{
-    padding: 10px;
+    padding: 10px 15px;
     box-sizing: border-box;
     font-size: .8em;
+    font-weight: 500;
     color: rgb(62 62 62);
+    display: block;
+}
+.tulisankamu span{
+    margin-right: 5px;
 }
 .tulisankamu input{
     border: none;
     border-bottom: 2px solid rgb(243 243 243);
-    padding: 8px 0;
+    padding: 8px;
+    font: unset;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+}
+.tulisankamu textarea{
+    width: 100%;
+    height: 200px;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    border-radius: 7px;
+    border: none;
+    box-shadow: inset 0 0 2px rgb(181, 181, 181);
+    font: unset;
+    margin-top: 15px;
 }
 .tube-eye{
     color: rgb(62 62 62);
@@ -339,4 +388,74 @@
         width: 100%;
         max-width: 475px;
     }
+}
+.pp-eyeme {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+.pp-eyeme-img{
+    width: 80px;
+    height: 80px;
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: gainsboro;
+}
+.pp-eyeme-img img, .bg-eyeme img{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+.close-wlcm.pp{
+    z-index: 1;
+    right: 0px;
+}
+.bg-eyeme{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.menu-analytic{
+    border: 1px solid gray;
+    width: max-content;
+    border-radius: 7px;
+    margin: 0 auto;
+}
+.menu-analytic span{
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: .85em;
+}
+.menu-analytic span.active{
+    background-color: rgb(62 62 62);
+    color: white;
+}
+.graph{
+    padding: 15px;
+    box-sizing: border-box;
+}
+.graphic-anal{
+    padding: 10px;
+    border-radius: 7px;
+    background-color: white;
+}
+.d-w-m{
+    font-size: .6em;
+    padding: 5px 0;
+}
+.d-w-m span{
+    padding: 3px 5px;
+    border-radius: 3px;
+}
+.d-w-m span.active{
+    background-color: rgb(62 62 62);
+    color: white;
 }

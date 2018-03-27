@@ -14,15 +14,29 @@
 <body class="m-pd-t-100 body-responsive">
     <div class="container stc">
         <div class="container m-bar">
-            <i class="fas fa-bars"></i>
-            <i class="far fa-envelope"></i>
-            <span>1</span>
-            <i class="far fa-bell"></i>
-            <span class="l83">1</span>
+            <i class="fas fa-bars" onclick="myFunction()"></i>
+            <i class="far fa-envelope"></i> <span>1</span>
+            <i class="far fa-bell"></i>     <span class="l83">1</span>
         </div>
         <i class="fas fa-sign-in-alt login-ic"></i>
         <div class="fl-r img-pic">
             <img src="http://localhost/mob.eyesoccer.id/assets/img/eyeme/user-discover.png" alt="">
+        </div>
+    </div>
+    <div id="menuDashboard" class="menu-dashboard bg243" style="display:none;">
+        <div class="container bg-menu-pic">
+            <div class="menu-pic">
+                <img src="http://localhost/mob.eyesoccer.id/assets/themes/v1/img/d.jpg" alt="">
+            </div>
+        </div>
+        <div class="container menu-dash">
+            <a class="active" href="http://localhost/mob.eyesoccer.id/eyeprofile/klub"><img src="http://localhost/mob.eyesoccer.id/assets/themes/v1/img/ic_eyeprofile.png" alt="">Eye Profile</a>
+            <a href="http://localhost/mob.eyesoccer.id/eyetube"><img src="http://localhost/mob.eyesoccer.id/assets/themes/v1/img/ic_eyetube.png" alt="">Eye Tube</a>
+            <a href="http://localhost/mob.eyesoccer.id/eyenews"><img src="http://localhost/mob.eyesoccer.id/assets/themes/v1/img/ic_eyenews.png" alt="">Eye News</a>
+            <a href="http://localhost/mob.eyesoccer.id/eyeme"><img src="http://localhost/mob.eyesoccer.id/assets/themes/v1/img/ic-eyeme.png" alt="">Eye Me</a>
+            <a href="http://localhost/mob.eyesoccer.id/eyemarket"><img src="http://localhost/mob.eyesoccer.id/assets/themes/v1/img/ic_eyemarket.png" alt="">Eye Market</a>
+            <a href="http://localhost/mob.eyesoccer.id/eyevent"><img src="http://localhost/mob.eyesoccer.id/assets/themes/v1/img/ic_eyevent.png" alt="">EyeVent</a>
+    
         </div>
     </div>
     <div class="container nav-dashboard">
@@ -50,17 +64,29 @@
                 <input type="text">
                 <span>Dipublikasikan Oleh</span>
                 <input type="text">
-                <div class="ed-foto">
-                    <img src="http://localhost/mob.eyesoccer.id/assets/img/eyeme/user-discover.png" alt="">
+                <div class="edit-foto">
+                    <div class="ed-foto">
+                        <img src="http://localhost/mob.eyesoccer.id/assets/themes/v1/img/d.jpg" alt="">
+                    </div>
+                    <a href=""><span>Edit Foto Penulis</span></a>
                 </div>
-                <span>Edit Foto Penulis</span>
                 <textarea name="" id=""></textarea>
             </div>
-            <div class="container tx-c simpan">
+            <div class="container tx-c simpan" style="background-color: unset;">
                 <button class="klik-dsn">SUBMIT TO VERIFICATION</button>
             </div>
         </div>
     <!-- </div> -->
+    <script>
+        function myFunction() {
+            var x = document.getElementById("menuDashboard");
+            if (x.style.display == "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+    </script>
 </body>
 
 </html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="http://localhost/mob.eyesoccer.id/assets/themes/v1/css/dashboard.css">
     <link rel="stylesheet" href="http://localhost/mob.eyesoccer.id/assets/css/font-awesome/css/fontawesome-all.css">
 </head>
+
 <body class="m-pd-t-100 body-responsive">
     <div class="container stc">
         <div class="container m-bar">
@@ -45,33 +47,30 @@
                 <li>Eyeme</li>
                 <li>Eyetube</li>
                 <li>Tulisan Kamu</li>
-                <li>Analytics</li>
+                <li class="active">Analytics</li>
             </ul>
         </div>
     </div>
-    <div class="container wlc" id="welcome" style="display:block;">
-        <div>
-            <img src="http://localhost/mob.eyesoccer.id/assets/img/email/background.png" alt="">
+    <div class="menu-dashboard bg243">
+        <div class="container tx-c graph">
+            <div class="menu-analytic">
+                <span class="active">revenue</span>
+                <span>statistic</span>
+                <span>Activity</span>
+            </div>
         </div>
-        <div class="close-wlcm">
-            <i class="fas fa-times" onclick="closeFunction()"></i>
-        </div>
-        <div class="wlcm">
-            <span>SELAMAT DATANG</span>
-            <span>DI EYESOCCER</span>
-            <span>UPDATE DATA PRIBADI KAMU</span>
-        </div>        
-    </div>
-    <div class="container daftar-pemain">
-        <div class="form-daftar-pemain">
-            <span>JIKA KAMU PEMAIN SEPAKBOLA</span>
-            <span>DAFTARKAN DIRI KAMU</span>
-            <button class="klik-dsn">KLIK DISINI</button>
-        </div>
-        <div class="form-daftar-pemain">
-            <span class="fs68">JIKA KAMU SUPPORTER SEPAKBOLA</span>
-            <span>DAFTARKAN DIRI KAMU</span>
-            <button class="klik-dsn">KLIK DISINI</button>
+        <div class="container graph">
+            <div class="tx-c graphic-anal">
+                <div class="d-w-m">
+                    <span class="active">1D</span>
+                    <span>1W</span>
+                    <span>1M</span>
+                    <span>6M</span>
+                </div>
+                <div class="">
+        
+                </div>
+            </div>
         </div>
     </div>
     <script>
@@ -83,12 +82,7 @@
                 x.style.display = "none";
             }
         }
-        function closeFunction() {
-            var y = document.getElementById("welcome");
-            if (y.style.display == "block") {
-                y.style.display = "none";
-            }
-        }
     </script>
 </body>
+
 </html>

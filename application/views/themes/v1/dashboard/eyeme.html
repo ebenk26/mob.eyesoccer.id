@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="http://localhost/mob.eyesoccer.id/assets/themes/v1/css/dashboard.css">
     <link rel="stylesheet" href="http://localhost/mob.eyesoccer.id/assets/css/font-awesome/css/fontawesome-all.css">
 </head>
+
 <body class="m-pd-t-100 body-responsive">
     <div class="container stc">
         <div class="container m-bar">
@@ -42,36 +44,37 @@
             <ul>
                 <li>ALL</li>
                 <li>Player</li>
-                <li>Eyeme</li>
+                <li class="active">Eyeme</li>
                 <li>Eyetube</li>
                 <li>Tulisan Kamu</li>
                 <li>Analytics</li>
             </ul>
         </div>
     </div>
-    <div class="container wlc" id="welcome" style="display:block;">
-        <div>
-            <img src="http://localhost/mob.eyesoccer.id/assets/img/email/background.png" alt="">
-        </div>
-        <div class="close-wlcm">
-            <i class="fas fa-times" onclick="closeFunction()"></i>
-        </div>
-        <div class="wlcm">
-            <span>SELAMAT DATANG</span>
-            <span>DI EYESOCCER</span>
-            <span>UPDATE DATA PRIBADI KAMU</span>
-        </div>        
+    <div class="container wlc">
+        <div class="bg-eyeme">
+            <img src="http://localhost/mob.eyesoccer.id/assets/themes/v1/img/a.jpg" alt="Background Image">
+            <div class="close-wlcm">
+                <i class="fas fa-pencil-alt"></i>
+            </div>
+            <div class="pp-eyeme">
+                <div class="close-wlcm pp">
+                    <i class="fas fa-pencil-alt"></i>
+                </div>
+                <div class="pp-eyeme-img">
+                    <img src="http://localhost/mob.eyesoccer.id/assets/themes/v1/img/d.jpg" alt="Profil Picture">
+                </div>
+            </div>    
+        </div>       
     </div>
-    <div class="container daftar-pemain">
-        <div class="form-daftar-pemain">
-            <span>JIKA KAMU PEMAIN SEPAKBOLA</span>
-            <span>DAFTARKAN DIRI KAMU</span>
-            <button class="klik-dsn">KLIK DISINI</button>
-        </div>
-        <div class="form-daftar-pemain">
-            <span class="fs68">JIKA KAMU SUPPORTER SEPAKBOLA</span>
-            <span>DAFTARKAN DIRI KAMU</span>
-            <button class="klik-dsn">KLIK DISINI</button>
+    <div class="container">
+        <div class="form-profil-dash" id="form-player">
+            <span>Nama</span>
+            <input type="text" placeholder="data player">
+            <span>Username</span>
+            <input type="text" placeholder="data player">
+            <span>Status</span>
+            <input type="text" placeholder="data player">
         </div>
     </div>
     <script>
@@ -83,12 +86,7 @@
                 x.style.display = "none";
             }
         }
-        function closeFunction() {
-            var y = document.getElementById("welcome");
-            if (y.style.display == "block") {
-                y.style.display = "none";
-            }
-        }
     </script>
 </body>
+
 </html>
