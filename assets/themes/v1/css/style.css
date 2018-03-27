@@ -3791,3 +3791,55 @@ video::-webkit-media-controls-panel {
     font-size: .9em;
     padding-right: 5px;
 }
+.download-button{
+    text-align: center;
+    width: 230px;
+    background-color: #00BCD4;
+    margin: 0 auto;
+    box-sizing: border-box;
+    border-radius: 25px;
+    color: white;
+    height: 40px;
+    overflow: hidden;
+    box-shadow: 1px 1px 3px #42424287;
+    animation: shake 3.2s cubic-bezier(.36,.07,.19,.97) both infinite;
+    transform: translate3d(0, 0, 0);
+    animation-delay: 2s;
+    backface-visibility: hidden;
+    perspective: 1000px;
+    position: fixed;
+    bottom: 60px;
+    left: 0;
+    right: 0;
+    z-index: 11;
+}
+.download-button span{
+    font-size: 1em;
+    padding: 15px;
+    border-right: 1px solid #ffffff82;
+    line-height: 1em;
+    position: relative;
+    top: 6px;
+}
+.download-button i{
+    font-size: 1.2em;
+    position: relative;
+    top: 10px;
+}
+@keyframes shake {
+    2.5%, 20% {
+        transform: translate3d(-1px, 0, 0);
+    }
+    5%, 16.5% {
+        transform: translate3d(2px, 0, 0);
+    }
+    7.5%, 12%, 18% {
+        transform: translate3d(-4px, 0, 0);
+    }
+    10%, 15% {
+        transform: translate3d(4px, 0, 0);
+    }
+    22%{
+        transform: translate3d(0, 0, 0);
+    }
+}
