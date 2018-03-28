@@ -3875,3 +3875,82 @@ video::-webkit-media-controls-panel {
     font-weight: 600;
     color: white;
 }
+.pp-author{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    background-color: gainsboro;
+}
+.pp-author img{
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+.auth-line{
+    width: 100px;
+    border-top: 4px solid orange;
+}
+.mt20{
+    margin-top: 20px;
+}
+.author-details{
+    padding: 20px;
+    box-sizing: border-box;
+}
+.author-details>span{
+    letter-spacing: 1px;
+}
+.author-details td{
+    padding: 8px 0;
+    font-size: 1.1em;
+}
+.author-details td:nth-of-type(2){
+    text-align: right;
+}
+.bb1g{
+    border-bottom: 1px solid gainsboro;
+    padding: 5px 0;
+}
+.newnews{
+    width: 130px;
+    height: 75px;
+    overflow: hidden;
+    position: relative;
+}
+.newnews img{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+.auth-news-content{
+    width: 130px;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px #0000003b;
+    margin: 5px;
+}
+.auth-news-content span{
+    display: block;
+    font-size: .8em;
+    font-weight: 500;
+    color: #383838;
+    height: 32px;
+    overflow: hidden;
+    margin: 5px;
+}
+.auth-news-content span.time{
+    font-size: .5em;
+    color: gray;
+    height: 10px;
+}
+.cg{
+    color: #383838;
+}
