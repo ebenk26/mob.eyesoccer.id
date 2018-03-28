@@ -12,16 +12,16 @@
             </ul>
         </div>
     <div class="eprofile">
-		<div class="head">
+		<div class="head" style="border-radius: 8px 8px 0px 0px;margin-bottom: 25px;">
             <!-- <div class="img-radius" style="display:none;">
                 <img src=""
                     alt="">
             </div> -->
-            <h2 class="h2-text-bottom"><?php echo urldecode($slug);?></h2>
-            <div class="container tab-eprofile">
+            <h2 class="h2-text-bottom sdfkjs"><?php echo urldecode($slug);?></h2>
+            <!-- <div class="container tab-eprofile">
                 <a class="active" href="#content1">Info</a>
-            </div>
-            <div class="table-scroll">
+            </div> -->
+            <div class="table-scroll" style="height: unset;">
 				<div id="reqdescleague" class='loadclubcount' action="eyeprofile" loading="off" clean="clsclubcount">
 					<div id='clsclubcount'>
 						<script>
@@ -50,10 +50,17 @@
 						</tr>
 					</table>
 				</div>
-            </div>
+			</div>
+			<div class="container tab-sub-menu">
+					<a href="<?php echo base_url();?>eyeprofile/klub" class="active">info</a>
+					<a href="<?php echo base_url();?>eyeprofile/pemain/<?= $slug; ?>" style="border-left: 1px solid;border-right:  1px solid;border-color: white;">pemain</a>
+					<a href="<?php echo base_url();?>eyeprofile/official/<?= $slug; ?>">ofisial</a>
+					<!-- <a href="">perangkat pertandingan</a>
+					<a href="">supporter</a> -->
+				</div>
         </div>
         
-        <div class="container over-x">
+        <!-- <div class="container over-x">
             <div class="container sub-menu w-max">
                 <a href="<?php echo base_url();?>eyeprofile/klub" class="active">klub</a>
                 <a href="<?php echo base_url();?>eyeprofile/pemain/<?= $slug; ?>">pemain</a>
@@ -61,7 +68,7 @@
                 <a href="">perangkat pertandingan</a>
                 <a href="">supporter</a>
             </div>
-        </div>
+		</div> -->
         <div class="container" style="font-size: .8em;">
 			<div id="reqcompetition" class='loadcompetition' action="eyeprofile" loading="off" clean="clscompetition">
 				<div id='clscompetition'>

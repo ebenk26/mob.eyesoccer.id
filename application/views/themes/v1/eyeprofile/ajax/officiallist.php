@@ -4,17 +4,17 @@
         $offclist = json_decode($offclist)->data;
 
 ?>
-        <div class="table-scroll-x" style="border: unset;border-radius: unset;">
+        <div class="container" style="border: unset;border-radius: unset;">
             <table class="table-stripe">
                 <tr>
                     <th>#</th>
                     <th>nama</th>
                     <th>klub</th>
-                    <th>tgl lahir/umur</th>
-                    <th>posisi</th>
-                    <th>kewarganegaraan</th>
-                    <th>bergabung</th>
-                    <th>masa kontrak</th>
+                    <!-- <th>tgl lahir/umur</th> -->
+                    <!-- <th>posisi</th> -->
+                    <!-- <th>kewarganegaraan</th> -->
+                    <!-- <th>bergabung</th> -->
+                    <!-- <th>masa kontrak</th> -->
                 </tr>
 <?php
 
@@ -32,12 +32,12 @@
                             <?= $value->name; ?> 
                         </a> 
                     </td>
-                    <td><img src="<?= $value->url_logo; ?>/small" alt=""></td>
-                    <td><?= $value->birth_date; ?></td>
-                    <td><?= ($value->position) ? $value->position : '-'; ?></td>
-                    <td><?= $value->nationality; ?></td>
-                    <td>-</td>
-                    <td><?= $value->license; ?></td>
+                    <td><img src="<?= $value->url_logo; ?>/small" alt="" style="height: unset;"></td>
+                    <!-- <td><?= $value->birth_date; ?></td> -->
+                    <!-- <td><?= ($value->position) ? $value->position : '-'; ?></td> -->
+                    <!-- <td><?= $value->nationality; ?></td> -->
+                    <!-- <td>-</td> -->
+                    <!-- <td><?= $value->license; ?></td> -->
                 </tr>
 <?php
             }

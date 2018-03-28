@@ -1764,6 +1764,7 @@ ul, li {
     margin: -15px -6% 0px;
     padding: 15px;
     border-radius: 50px 0px 0px;
+    position: relative;
 }
 .eprofile .img-radius{
     height: 70px;
@@ -1787,6 +1788,14 @@ ul, li {
     display: inline-block;
     vertical-align: text-bottom;
     margin-left: 15px;
+}
+.h2-text-bottom.sdfkjs{
+    font-size: 1.5em;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 0px;
+    display: block;
+    margin: unset;
 }
 .tab-eprofile{
     height: 18px;
@@ -1983,6 +1992,7 @@ ul, li {
     margin-right: 20px;
     margin-left: 2px;
     overflow: hidden;
+    max-width: 698px;
 }
 .box-pertandingan table{
     text-align: center;
@@ -2015,7 +2025,9 @@ ul, li {
 }
 .box-pertandingan img{
     width: 100%;
-    max-width: 130px;
+    max-width: 100px;
+    max-height: 55px;
+    /* max-width: 130px; */
 }
 .box-pertandingan td:nth-of-type(3) i{
     right: 15px !important;
@@ -2328,6 +2340,7 @@ ul, li {
 }
 .enews-detail{
     background-color: white;
+    padding-top: 15px;
 }
 .box-flyad{
     width: 90%;
@@ -3842,4 +3855,23 @@ video::-webkit-media-controls-panel {
     22%{
         transform: translate3d(0, 0, 0);
     }
+}
+.tab-sub-menu{
+    text-align: center;
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    right: 0;
+}
+.tab-sub-menu a{
+    font-size: .8em;
+    text-transform: uppercase;
+    padding: 0 20px;
+    font-weight: 500;
+    color: #ffffffa3;
+    border-color: white;
+}
+.tab-sub-menu a:hover, .tab-sub-menu .active, .tab-sub-menu a:active{
+    font-weight: 600;
+    color: white;
 }
