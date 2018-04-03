@@ -12,17 +12,28 @@
 		{
 			if($dt->competition=='SSB / Akademi Sepakbola')
 			{
-				$comptition = 'Non Liga';
+				if($dt->competition==urldecode($slug)){
+					$comptition = 'Non Liga';
+					$echosl="";
+				}
 			} 
 			else
 			{
-				$comptition = $dt->competition;
+				if($dt->competition==urldecode($slug)){
+					$comptition = $dt->competition;
+					$echosl="selected";
+				}
+				else{
+					$comptition = $dt->competition;
+					$echosl="";
+				}
+				
 			}
 
 			if ($submenu == 'klub')
 			{
 ?>
-				<option value="<?php echo base_url()."eyeprofile/klub/".$comptition?>"> 
+				<option value="<?php echo base_url()."eyeprofile/klub/".$comptition?>" <?php echo $echosl; ?>> 
 					<?php echo $comptition;?> 
 				</option>
 <?php				
