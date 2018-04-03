@@ -102,7 +102,7 @@ class EyeprofileMod extends CI_Model
         $startdate = date("Y-m-d",strtotime("-1 day"));
         $lastdate = date("Y-m-d",strtotime("-6 day"));
 
-        $event = 'LIGA 1 GOJEK  2018';
+        $event = 'LIGA 1 GOJEK 2018';
         // if ($competition == 'Liga Indonesia 1')
         // {
         //     $event = 'LIGA 1 GOJEK TRAVELOKA 2018';

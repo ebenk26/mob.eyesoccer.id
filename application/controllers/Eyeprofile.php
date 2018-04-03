@@ -48,7 +48,7 @@ class Eyeprofile extends CI_Controller {
 	    $data['event'] = 'Liga Indonesia 1';
 	    if ($slug = 'Liga Indonesia 1')
 	    {
-	    	$data['event'] = 'LIGA 1 GOJEK TRAVELOKA 2018';
+	    	$data['event'] = 'LIGA 1 GOJEK 2018';
 	    }
 	    
 		$this->session->set_userdata(array('pageklub' => $page, 'pageliga' => urldecode($slug)));
