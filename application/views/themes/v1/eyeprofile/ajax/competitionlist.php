@@ -41,7 +41,7 @@
 			else if ($submenu == 'pemain')
 			{
 ?>
-				<option value="<?php echo base_url()."eyeprofile/pemain/".$comptition?>"> 
+				<option value="<?php echo base_url()."eyeprofile/pemain/".$comptition?>"<?php echo $echosl; ?>> 
 					<?php echo $comptition;?> 
 				</option>
 <?php				
@@ -49,7 +49,7 @@
 			else
 			{
 ?>
-				<option value="<?php echo base_url()."eyeprofile/official/".$comptition?>"> 
+				<option value="<?php echo base_url()."eyeprofile/official/".$comptition?>"<?php echo $echosl; ?>> 
 					<?php echo $comptition;?> 
 				</option>
 <?php
