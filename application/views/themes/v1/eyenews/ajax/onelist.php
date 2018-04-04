@@ -3,6 +3,7 @@
 	{
 		$list = json_decode($list);
 		$awal = json_decode($awal);
+		$eyenews_ads = json_decode($eyenews_ads);
 		$i = 1;
 
 		foreach ($awal->data as $value)
@@ -38,27 +39,53 @@
 <?php
 			break;
 		}
-
+?>
+		<div class="container rek-ber" style="padding: 1%;">
+<?php
 		foreach ($awal->data as $value)
 		{
 			if ($i != 1)
 			{
 ?>
-				<div>
 					<a href="<?php echo $this->library->urltomob($value->url); ?>" title="<?php echo $value->title; ?>">
-							<div class="rek-ber-c home-rek-ber-c">
-								<div class="img-res-height" style="margin-top: 0;">
-									<img src="<?php echo $value->url_pic; ?>" alt="<?php echo $value->title; ?>">
-								</div>
-								<!-- <span style="position: unset;"><?php echo relative_time($this->library->datenormal($value->publish_on)); ?> lalu</span> -->
-								<h1 style="bottom: 0;padding: unset;text-shadow: unset;overflow:unset;"><?php echo $value->title; ?></h1>
-								<!-- <p><?php echo word_limiter(strip_tags($value->description), 10); ?></p> -->
-							</div>
+							
+							<div class="rek-ber-c" style="height: 90px;margin: 15px 0px;">
+                                <div class="img-res-height" style="margin-top: 0;">
+                                    <img src="<?php echo $value->url_pic . '/small'; ?>" alt="<?php echo $value->title; ?>">
+                                </div>
+                                <span><?php echo date('d M Y H:i:s', strtotime($value->publish_on)); ?></span>
+                                <h1><?php echo $value->title; ?></h1>
+                                <?php echo word_limiter($value->description, 10); ?>
+                            </div>
 					</a>
-				</div>
 <?php				
 			}
 			$i++;	
 		}
+		
+		foreach ($eyenews_ads->data as $value)
+		{
+			if ($i != 1)
+			{
+?>
+					<a href="<?php echo $this->library->urltomob($value->url); ?>" title="<?php echo $value->title; ?>">
+							
+							<div class="rek-ber-c" style="height: 90px;margin: 15px 0px;">
+                                <div class="img-res-height" style="margin-top: 0;">
+                                    <img src="<?php echo $value->url_pic . '/small'; ?>" alt="<?php echo $value->title; ?>">
+                                </div>
+                                <span>Tulisan Kamu</span><br>
+                                <span><?php echo date('d M Y H:i:s', strtotime($value->publish_on)); ?></span>
+                                <h1><?php echo $value->title; ?></h1>
+                                <?php echo word_limiter($value->description, 4); ?>
+                            </div>
+					</a>
+<?php				
+			}
+			$i++;	
+		}
+?>
+		</div>
+<?php
 	}
 ?>

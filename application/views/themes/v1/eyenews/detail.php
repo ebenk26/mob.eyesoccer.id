@@ -180,7 +180,7 @@
         </div>
 
 <!-- NATIVE ADS -->
-<div class="container enews-detail">
+<div class="container enews-detail" style="display:none;">
     <div class="container m-b-15" style="margin-top: -35px !important; background-color: #fafafa;">
         <h3 class="h3-red">BACA JUGA</h3>
         <div class="carousel slide t-30 over-x">
@@ -207,7 +207,7 @@
 </div>
 <!-- NATIVE ADS 2 -->
 <!-- iklan tampil di sela konten "berita terkait", tapil setiap 5 konten yang ada di infiniti scroll (berita terkait) -->
-<div class="container-94 m-b-20 unset">
+<div class="container-94 m-b-20 unset" style="display:none;">
     <a href="">
         <div class="etube-content etube-content-detail pd-t-10">
             <div class="v-etube v-etube-detail v-etube-res">

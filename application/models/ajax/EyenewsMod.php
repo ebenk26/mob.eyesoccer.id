@@ -35,6 +35,9 @@ class EyenewsMod extends CI_Model {
 	$query = array('page' => 2, 'limit' => 3, 'sortby' => 'newest', 'description' => $desc);
 	$data['list'] = $this->excurl->remoteCall($this->__xurl().'news', $this->__xkey(), $query);
 	
+	$query = array('page' => 1, 'limit' => 2, 'sortby' => 'newest', 'description' => $desc, 'category' => 'Tulisan Kamu', 'ads' => 'true');
+	$data['eyenews_ads'] = $this->excurl->remoteCall($this->__xurl().'news', $this->__xkey(), $query);
+	
 	$html = $this->load->view($this->__theme().'eyenews/ajax/onelist', $data, true);
 	
 	$data = array('xClass' => 'reqonelist', 'xHtml' => $html);
