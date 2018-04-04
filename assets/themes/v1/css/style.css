@@ -3979,13 +3979,13 @@ video::-webkit-media-controls-panel {
     display: block;
 } */
 .emarket-kategori-box .container h2{
-    color: #FFC107;
+    color: #333;
     font-size: 1.1em;
     font-weight: 500;
     margin: 8px 2px;
 }
 .emarket-kategori-box .container span{
-    color: #FFC107;
+    color: #333;
     font-size: .7em;
     font-weight: 500;
     float: right;
