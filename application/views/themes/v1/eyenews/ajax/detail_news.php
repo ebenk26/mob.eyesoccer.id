@@ -70,7 +70,7 @@ if ($newsdetail){
 				?>
                                 <a <?php echo $judul->display; ?> href="<?= base_url(); ?>eyenews/detail/<?= $judul->slug ?>" id="a4" class="">
                                     <p class='bj-ttl'>
-                                        <strong></i> <?= $judul->title; ?></strong>
+                                        <strong><?= $judul->title; ?></strong>
                                     </p>      
                                 </a>
                 <?php
@@ -80,7 +80,7 @@ if ($newsdetail){
                 ?>
                                 <a href="<?= base_url(); ?>eyetube/detail/<?= $video->slug; ?>" id="a4" class="">
                                     <p class='bj-ttl'>
-                                        <strong></i> Eyetube | <?= $video->title; ?></strong>
+                                        <strong>Eyetube | <?= $video->title; ?></strong>
                                     </p>
                                 </a>
                 <?php
