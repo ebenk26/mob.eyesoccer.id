@@ -110,7 +110,7 @@ if ($newsdetail){
 						(adsbygoogle = window.adsbygoogle || []).push({});
 						</script>
 						<!-- <span style="font-size: 7em;font-weight: 100;position: fixed;text-align: center;top: 20%;color: white;">ini iklan yaa</span> -->
-						<!-- <img src="http://www.desktopimages.org/pictures/2014/0118/1/red-smoke-wallpaper-hd-5449.jpg" alt=""> -->
+						<img style="position: absolute;top: 0px;left:  0px;" src="<?= base_url(); ?>/assets/img/bwv.jpg" alt="">
 					</div>
 				</div>
 			</div>
