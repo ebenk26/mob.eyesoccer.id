@@ -14,7 +14,7 @@ class EyenewsMod extends CI_Model {
     
     function __trending()
     {
-	$query = array('page' => 1, 'limit' => 5, 'sortby' => 'newest');
+	$query = array('page' => 1, 'limit' => 5, 'sortby' => 'newest', 'ads' => 'false');
 	$data['news'] = $this->excurl->remoteCall($this->__xurl().'news', $this->__xkey(), $query);
 	
 	$html = $this->load->view($this->__theme().'eyenews/ajax/trending', $data, true);
@@ -29,10 +29,10 @@ class EyenewsMod extends CI_Model {
 	$limit = $this->input->post('limit');
 	$desc = $this->input->post('desc');
 
-	$query = array('page' => 1, 'limit' => 4, 'sortby' => 'newest', 'description' => $desc);
+	$query = array('page' => 1, 'limit' => 4, 'sortby' => 'newest', 'description' => $desc, 'ads' => 'false');
 	$data['awal'] = $this->excurl->remoteCall($this->__xurl().'news', $this->__xkey(), $query);
 
-	$query = array('page' => 2, 'limit' => 3, 'sortby' => 'newest', 'description' => $desc);
+	$query = array('page' => 2, 'limit' => 3, 'sortby' => 'newest', 'description' => $desc, 'ads' => 'false');
 	$data['list'] = $this->excurl->remoteCall($this->__xurl().'news', $this->__xkey(), $query);
 	
 	$query = array('page' => 1, 'limit' => 2, 'sortby' => 'newest', 'description' => $desc, 'category' => 'Tulisan Kamu', 'ads' => 'true');
@@ -46,13 +46,13 @@ class EyenewsMod extends CI_Model {
     
     function __tabnews()
     {
-	$query = array('page' => 1, 'limit' => 6, 'description' => 'true', 'sortby' => 'mostview');
+	$query = array('page' => 1, 'limit' => 6, 'description' => 'true', 'sortby' => 'mostview', 'ads' => 'false');
 	$data['popular'] = $this->excurl->remoteCall($this->__xurl().'news', $this->__xkey(), $query);
 	
-	$query = array('page' => 1, 'limit' => 6, 'description' => 'true', 'recommended' => true);
+	$query = array('page' => 1, 'limit' => 6, 'description' => 'true', 'recommended' => true, 'ads' => 'false');
 	$data['recommended'] = $this->excurl->remoteCall($this->__xurl().'news', $this->__xkey(), $query);
 	
-	$query = array('page' => 1, 'limit' => 6, 'description' => 'true', 'youngage' => true);
+	$query = array('page' => 1, 'limit' => 6, 'description' => 'true', 'youngage' => true, 'ads' => 'false');
 	$data['youngage'] = $this->excurl->remoteCall($this->__xurl().'news', $this->__xkey(), $query);
 	
 	$html = $this->load->view($this->__theme().'eyenews/ajax/tabnews', $data, true);
@@ -90,9 +90,9 @@ class EyenewsMod extends CI_Model {
     function __categorylist()
     {
 	if($this->input->post('subslug')){
-		$query = array('page' => 1, 'limit' => 12, 'categorysub' => $this->input->post('subslug'));
+		$query = array('page' => 1, 'limit' => 12, 'categorysub' => $this->input->post('subslug'), 'ads' => 'false');
 	}else{
-		$query = array('page' => 1, 'limit' => 12, 'category' => $this->input->post('slug'));
+		$query = array('page' => 1, 'limit' => 12, 'category' => $this->input->post('slug'), 'ads' => 'false');
 	}
 	$data['catlist'] = $this->excurl->remoteCall($this->__xurl().'news', $this->__xkey(), $query);
 	
@@ -114,7 +114,7 @@ class EyenewsMod extends CI_Model {
 			$page = $this->session->pagenews= 1;
 		}
         $cat = $this->input->post('cat');
-		$query = array('page' => $page,'limit' => 5, 'sortby' => 'newest','category' => $cat);
+		$query = array('page' => $page,'limit' => 5, 'sortby' => 'newest','category' => $cat, 'ads' => 'false');
 		$data['newslist'] = $this->excurl->remoteCall($this->__xurl().'news',$this->__xkey(),$query);
 		
 		$html = $this->load->view($this->__theme().'eyenews/ajax/newslist', $data, true);
@@ -128,7 +128,7 @@ class EyenewsMod extends CI_Model {
 		$page  = $this->input->post('page');
         $limit = $this->input->post('limit');
         $desc = $this->input->post('desc');
-		$query = array('page' => $page, 'limit' => $limit, 'sortby' => 'newest', 'description' => $desc);
+		$query = array('page' => $page, 'limit' => $limit, 'sortby' => 'newest', 'description' => $desc, 'ads' => 'false');
 		$data['homenewslist'] = $this->excurl->remoteCall($this->__xurl().'news', $this->__xkey(), $query);
 		
 		$html = $this->load->view($this->__theme().'eyenews/ajax/homenewslist', $data, true);
@@ -143,7 +143,7 @@ class EyenewsMod extends CI_Model {
 		$data['subcatlist'] = $this->excurl->remoteCall($this->__xurl().'news-category-sub', $this->__xkey(), $query);
 		$data['slug'] = $this->input->post('slug');
 		
-		$query2 = array('page' => 1, 'limit' => 6, 'recommended' => 'true', 'description' => 'false', 'category' => $data['slug'], 'sortby' => 'newest');
+		$query2 = array('page' => 1, 'limit' => 6, 'recommended' => 'true', 'description' => 'false', 'category' => $data['slug'], 'sortby' => 'newest', 'ads' => 'false');
 		$data['newslistcat'] = $this->excurl->remoteCall($this->__xurl().'news', $this->__xkey(), $query2);
 		
 		$html = $this->load->view($this->__theme().'eyenews/ajax/subcategorylist', $data, true);
@@ -154,7 +154,7 @@ class EyenewsMod extends CI_Model {
 	
 	function __newsyoung()
     {
-		$query = array('page' => 1, 'limit' => 10, 'youngage' => true, 'description' => true, 'sortby' => 'newest');
+		$query = array('page' => 1, 'limit' => 10, 'youngage' => true, 'description' => true, 'sortby' => 'newest', 'ads' => 'false');
 		$data['newsyoung'] = $this->excurl->remoteCall($this->__xurl().'news', $this->__xkey(), $query);
 		
 		$html = $this->load->view($this->__theme().'eyenews/ajax/newsyoung', $data, true);

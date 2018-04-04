@@ -74,10 +74,9 @@
                                 <div class="img-res-height" style="margin-top: 0;">
                                     <img src="<?php echo $value->url_pic . '/small'; ?>" alt="<?php echo $value->title; ?>">
                                 </div>
-                                <span>Tulisan Kamu</span><br>
                                 <span><?php echo date('d M Y H:i:s', strtotime($value->publish_on)); ?></span>
                                 <h1><?php echo $value->title; ?></h1>
-                                <?php echo word_limiter($value->description, 4); ?>
+								<span style="font-weight: 600;font-size: .7em;position: relative;top: 21px;">Tulisan Kamu</span>
                             </div>
 					</a>
 <?php				
