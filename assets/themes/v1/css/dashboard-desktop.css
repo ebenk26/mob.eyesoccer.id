@@ -538,3 +538,38 @@
 .col-xs-8 {
     width: 66.66666667%;
 }
+.form-verifikasi-pemain{
+    width: 90%;
+    float: left;
+    background-color: #f7f7f7;
+    position: absolute;
+    top: 110px;
+    z-index: 1;
+    box-sizing: border-box;
+    padding: 15px;
+    border-radius: 5px;
+    height: 150px;
+    /* height: 0px; */
+    overflow: scroll;
+    margin-bottom: 10px;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
+}
+.x-form-daftar-pemain:hover .form-verifikasi-pemain{
+    visibility: visible;
+    opacity: 1;
+}
+.form-verifikasi-pemain table{
+    width: 100%;
+    box-sizing: border-box;
+    height: max-content;
+}
+.form-verifikasi-pemain table input{
+    border-bottom: 2px solid gainsboro !important;
+    border: unset;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px 0px;
+    font-size: .8em;
+}
