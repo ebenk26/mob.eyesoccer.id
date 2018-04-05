@@ -13,8 +13,8 @@
     <div class="container stc">
         <div class="container m-bar">
             <i class="fas fa-bars" onclick="myFunction()"></i>
-            <i class="far fa-envelope" onclick="functionNotifInbox()"></i>  <span id="signNotifInbox">1</span>
-            <i class="far fa-bell" onclick="functionNotification()"></i>    <span id="signNotification" class="l83">1</span>
+            <i class="far fa-envelope" onclick="functionNotifInbox()"></i>  <span id="signNotifInbox">2</span>
+            <i class="far fa-bell" onclick="functionNotification"></i>      <span id="signNotification" class="l83">1</span>
         </div>
         <i class="fas fa-sign-in-alt login-ic"></i>
         <div class="fl-r img-pic">
@@ -50,35 +50,49 @@
             </ul>
         </div>
     </div>
-    <div class="container wlc" id="welcome" style="display:block;">
-        <div>
-            <img src="http://localhost/mob.eyesoccer.id/assets/img/email/background.png" alt="">
-        </div>
-        <div class="close-wlcm">
-            <i class="fas fa-times" onclick="closeFunction()"></i>
-        </div>
-        <div class="wlcm">
-            <span>SELAMAT DATANG</span>
-            <span>DI EYESOCCER</span>
-            <span>UPDATE DATA PRIBADI KAMU</span>
-        </div>        
-    </div>
-    <div class="container daftar-pemain">
-        <div class="form-daftar-pemain">
-            <span>JIKA KAMU PEMAIN SEPAKBOLA</span>
-            <span>DAFTARKAN KLUB KAMU</span>
-            <button class="klik-dsn">KLIK DISINI</button>
-        </div>
-        <div class="form-daftar-pemain">
-            <span class="fs68">JIKA KAMU SUPPORTER SEPAKBOLA</span>
-            <span>DAFTARKAN PEMAIN</span>
-            <button class="klik-dsn">KLIK DISINI</button>
+    <div class="container submenu">
+        <div class="submenus">
+            <ul>
+                <li>info klub</li>
+                <li>pemain</li>
+                <li>ofisial</li>
+                <li>galeri</li>
+                <li>verifikasi</li>
+                <li>daftar liga</li>
+            </ul>
         </div>
     </div>
+    <div class="container">
+        <div class="x-form-daftar-pemain row">
+            <i class="far fa-edit" style="float:right; font-size:.9em;"></i>
+            <div class="col-xs-4 edits">
+                <div class="img-round">
+                    <img src="http://localhost/mob.eyesoccer.id/assets/img/eyeme/user-discover.png" alt="">
+                </div>
+            </div>
+            <div class="col-xs-8 pd-t-19 edits dftr-pemain">
+                <span>Nama Lengkap</span>
+                <span>Posisi</span>
+                <span>Kewarga Negaraan</span>
+            </div>
+        </div>
+        <div class="x-form-daftar-pemain row">
+                <i class="far fa-edit" style="float:right; font-size:.9em;"></i>
+                <div class="col-xs-4 edits">
+                    <div class="img-round">
+                        <img src="http://localhost/mob.eyesoccer.id/assets/img/eyeme/user-discover.png" alt="">
+                    </div>
+                </div>
+                <div class="col-xs-8 pd-t-19 edits dftr-pemain">
+                    <span>Nama Lengkap</span>
+                    <span>Posisi</span>
+                    <span>Kewarga Negaraan</span>
+                </div>
+            </div>
     </div>
 
     
-    <!-- INBOX NOTIFICATION -->
+    <!-- NOTIFICATION -->
     <div class="container dash-notif" id="notifInbox" style="display: none;">
         <div class="panah-notif"></div>
         <div class="title-notif">
@@ -97,48 +111,6 @@
                 </div>
                 <div class="bb2g"></div>
             </a>
-            <!-- <a href="" class="container inbox-dashboard">
-                <div class="container img-inbox-dashboard">
-                    <img src="http://localhost/mob.eyesoccer.id/assets/img/eyeme/user-discover.png" alt="">
-                </div>
-                <div class="text-inbox">
-                    <span class="time">12:15</span>
-                    <span class="sender">eyesoccer</span>
-                    <span class="title">ayo update data kamu ...</span>
-                    <span class="preview">Hallo Dila, ayo update data kamu...</span>
-                </div>
-                <div class="bb2g"></div>
-            </a> -->
-        </div>
-    </div>
-
-    <!-- NOTIFICATION -->
-    <div class="container dash-notif" id="notifications" style="display: none;">
-        <div class="panah-notif2"></div>
-        <div class="title-notif">
-            <span class="container">Notifikasi</span>
-        </div>
-        <div class="notific">
-            <a href="" class="container inbox-dashboard">
-                <div class="container img-inbox-dashboard">
-                    <img src="http://localhost/mob.eyesoccer.id/assets/img/eyeme/user-discover.png" alt="">
-                </div>
-                <div class="text-inbox2">
-                    <span>Rika Aulia</span>
-                    <span>melihat profil kamu</span>
-                </div>
-                <div class="bb2g"></div>
-            </a>
-            <!-- <a href="" class="container inbox-dashboard">
-                <div class="container img-inbox-dashboard">
-                    <img src="http://localhost/mob.eyesoccer.id/assets/img/eyeme/user-discover.png" alt="">
-                </div>
-                <div class="text-inbox2">
-                    <span>Rika Aulia</span>
-                    <span>melihat profil kamu</span>
-                </div>
-                <div class="bb2g"></div>
-            </a> -->
         </div>
     </div>
 
@@ -164,23 +136,10 @@
             if (y.style.display == "none") {
                 y.style.display = "block";
                 q.style.display = "none";
-                p.style.filter = "blur(20px)";
+                p.style.filter = "blur(10px)";
             } else {
                 y.style.display = "none";
                 p.style.filter = "unset";
-            }
-        }
-        function functionNotification() {
-            var a = document.getElementById("notifications");
-            var b = document.getElementById("isiContent");
-            var c = document.getElementById("signNotification");
-            if (a.style.display == "none") {
-                a.style.display = "block";
-                c.style.display = "none";
-                b.style.filter = "blur(20px)";
-            } else {
-                a.style.display = "none";
-                b.style.filter = "unset";
             }
         }
     </script>
