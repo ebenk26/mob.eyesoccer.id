@@ -475,7 +475,7 @@
     position: relative;
     top: -63px;
 }
-.panah-notif{
+.panah-notif, .panah-notif2{
     width: 12px;
     height: 12px;
     transform: rotate(45deg);
@@ -484,6 +484,9 @@
     left: 53px;
     z-index: 2;
     background-color: rgb(230 229 224);
+}
+.panah-notif2{
+    left: 89.5px !important;
 }
 .title-notif{
     width: 100%;
@@ -546,4 +549,147 @@
 .bb2g{
     border-bottom: 2px solid rgb(224 224 224);
     margin-top: 10px;
+}
+.nav-dashboard2{
+    background-color: rgb(255 226 78);
+    padding: 4px 0;
+    width: 100%;
+    height: 40px;
+    position: fixed;
+    top: 54px;
+    z-index: 1;
+    box-sizing: border-box;
+}
+.nav-dash2{
+    text-align: center;
+    margin-top: 6px;
+}
+.nav-dash2 li{
+    margin-right: 20px;
+    font-size: .85em;
+}
+.nav-dash2 li:nth-last-of-type(1){
+    margin-right: 0px;
+}
+.submenu{
+    box-sizing: border-box;
+    margin-top: -6px;
+    font-size: .75em;
+    width: 100%;
+    min-height: 30px;
+    overflow-x: auto;
+}
+.submenus{
+    width: max-content;
+    padding: 12px 0;
+    background-color: rgb(224, 224, 224);
+}
+.submenu ul{
+    text-align: center;
+    text-transform: capitalize;
+}
+.submenu li{
+    padding: 0 10px;
+}
+/* fajar */
+.x-form-daftar-pemain{
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px gainsboro;
+    display: block;
+    margin: 0px 10px 10px !important;
+    background: rgb(253 253 253);
+    min-height: 90px;
+}
+.x-form-daftar-pemain span{
+    display: block;
+    padding-bottom: 4px;
+    width: max-content;
+}
+.x-form-daftar-pemain .img-round{
+    background-color: #fafafa;
+    border-radius: 50%;
+    overflow: hidden;
+    height: 85px;
+    width: 85px;
+    position: relative;
+}
+.x-form-daftar-pemain .img-round img{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+.pd-t-19{
+    padding-top: 19px;
+}
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.col-xs-4 {
+    width: 33.33333333%;
+}
+.col-xs-8 {
+    width: 66.66666667%;
+}
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12{
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    float: left;
+}
+.edits{
+        box-sizing: border-box;
+    padding-right: 0;
+    padding-left: 0;
+    padding-top: 0;
+}
+/*  */
+.dftr-pemain{
+    padding: 0 0 12px 12px;
+    font-size: .7em;
+    letter-spacing: .5px;
+}
+#isiContent{
+    margin-top: -3px;
+}
+.text-inbox2{
+    padding: 5px 0px 0px 40px;
+    min-height: 27px;
+}
+.text-inbox2 span{
+    display: inline;
+    font-size: .85em;
+}
+.text-inbox2 span:nth-of-type(1){
+    font-weight: 600;
+}
+.close-check{
+    position: absolute;
+    right: 20px;
+}
+.form-dp{
+    padding: 0 20px;
+    box-sizing: border-box;
+    position: relative;
+    top: -35px;
+    z-index: -1;
+}
+.form-daftarpemain{
+    background-color: gainsboro;
+    border-radius: 15px;
+    padding: 30px 8px 8px;
+}
+.form-daftarpemain td:nth-of-type(1){
+    width: 105px;
+}
+.form-daftarpemain input{
+    width: 100%;
+    background-color: gray;
+    /* border: 1px solid dimgray; */
 }
