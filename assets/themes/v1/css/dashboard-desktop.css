@@ -81,10 +81,11 @@
     width: 100%;
     overflow-x: auto;
     min-height: 30px;
-    position: fixed;
+    /* position: fixed;
     top: 54px;
-    z-index: 1;
+    z-index: 1; */
     box-sizing: border-box;
+    border-radius: 5px;
 }
 .nav-dash{
     width: max-content;
@@ -93,6 +94,23 @@
 }
 .nav-dash li{
     padding-right: 11px;
+}
+.sub-nav-dashboard{
+    background-color: #424242;
+    padding: 10px;
+    width: 98%;
+    overflow-x: auto;
+    height: 40px;
+    box-sizing: border-box;
+    color: white;
+    box-shadow: inset 0px 2px 2px -1px #000000;
+    margin: 0 auto;
+    border-radius: 0px 0px 5px 5px;
+}
+.sub-nav-dashboard ul li {
+    display: inline-block;
+    font-size: 1em;
+    padding: 5px 15px;
 }
 .stc{
     padding: 10px;
@@ -472,4 +490,51 @@
 .d-w-m span.active{
     background-color: rgb(62 62 62);
     color: white;
+}
+.x-form-daftar-pemain{
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 3px gainsboro;
+    display: block;
+    margin: 0px -10px 10px !important;
+    background: rgb(253 253 253);
+    position: relative;
+}
+.x-form-daftar-pemain i{
+    position: absolute;
+    top: 8px;
+    right: 5px;
+}
+.x-form-daftar-pemain span{
+    display: block;
+}
+.x-form-daftar-pemain .img-round{
+    background-color: #fafafa;
+    border-radius: 50%;
+    overflow: hidden;
+    height: 85px;
+    width: 85px;
+    position: relative;
+}
+.x-form-daftar-pemain .img-round img{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+.pd-t-15{
+    padding-top: 15px;
+}
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.col-xs-4 {
+    width: 33.33333333%;
+}
+.col-xs-8 {
+    width: 66.66666667%;
 }

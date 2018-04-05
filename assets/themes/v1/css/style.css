@@ -4046,3 +4046,16 @@ video::-webkit-media-controls-panel {
     font-size: 12px;
     padding-top: 8px;
 }
+.artklasl{
+    display:  block;
+    width:  100%;
+    text-align:  center;
+    font-size:  .9em;
+    font-weight:  600;
+    color: #9E9E9E;
+}
+.artklasl a{
+    padding: 8px 20px;
+    border-radius: 25px;
+    border:  1px solid;
+}
