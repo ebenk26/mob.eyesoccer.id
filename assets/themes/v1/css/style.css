@@ -3805,6 +3805,52 @@ video::-webkit-media-controls-panel {
     font-size: .9em;
     padding-right: 5px;
 }
+.cdownload-button{
+    text-align: center;
+    width: 350px;
+    background-color: #fafafa;
+    margin: 0 auto;
+    box-sizing: border-box;
+    border-radius: 5px;
+    height: 110px;
+    overflow: hidden;
+    box-shadow: 2px 3px 6px #f7d622;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+    position:fixed;
+    left: 0;
+    right: 0;
+    z-index: 11;
+    top: -120px;
+}
+.cdownloadhead{
+    color:#eb3535;
+    font-weight:bold;
+}
+.cdownloaddesc{
+    color:#333333;
+    display:inline-block;
+}
+.cdownloadconfirm{
+    position:relative;
+    right:-15px;
+    color:#e8e3e3;
+    background-color: #5aa5bb;
+    padding: 3px 5px 3px 5px;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+.dbcloser{
+    all: unset;
+    font-family: 'Material Icons';
+    font-size: 24px;
+    color: #c20028;
+    position:relative;
+    left:150px;
+    top:-80px;
+}
+
 .download-button{
     text-align: center;
     width: 230px;
@@ -4045,17 +4091,4 @@ video::-webkit-media-controls-panel {
     margin-right: 15px;
     font-size: 12px;
     padding-top: 8px;
-}
-.artklasl{
-    display:  block;
-    width:  100%;
-    text-align:  center;
-    font-size:  .9em;
-    font-weight:  600;
-    color: #9E9E9E;
-}
-.artklasl a{
-    padding: 8px 20px;
-    border-radius: 25px;
-    border:  1px solid;
 }
