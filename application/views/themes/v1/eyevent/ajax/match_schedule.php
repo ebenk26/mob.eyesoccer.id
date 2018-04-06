@@ -1,3 +1,20 @@
+<style>
+.listmatch:hover{
+background-color:#fdd79f38;
+}
+.clubname {
+    text-transform: uppercase;
+}
+.livechanel{
+            color:#d19595;
+			padding: 3px 0px;
+			border-radius: 15px;
+			background-color:#e6e6e652;
+}
+.livechanel:hover{
+    background-color: #dddddd;
+}
+</style>
 <div class="container bg-g">
     <div class="t-tab">
         <div id='boxtab'>
@@ -29,24 +46,47 @@
             $match_yest = json_decode($match_yest);
             foreach ($match_yest->data as $value) {
                 ?>
-                <tr>
-                    <td class="tx-r"><?= $value->team_a; ?>
-                        <!-- <a href="<?= $value->url_team_a; ?>"> -->
-                        <!-- </a> -->
-                    </td>
-                    <td style="width: 25px;"><img style="width: 100%" src="<?= $value->url_logo_a; ?>/small" alt="<?= $value->team_a; ?>"></td>
+                <tr class="listmatch">
+                    <?php      
+                            if(($value->liga_a=='Liga Lainnya') OR ($value->liga_a=='Liga International'))
+                            {
+                                echo "<td class='tx-r'><a href='#no_detail_club'>".$value->team_a."</a></td>";
+                            }
+                            else
+                            {   
+                                echo "<td class='tx-r'><a href=".$value->url_team_a.">".$value->team_a."</a></td>";
+                            }
+                    ?>
+                    <td style="width: 25px;"><img align="absmiddle"style="width: 100%" src="<?= $value->url_logo_a; ?>/small" alt="<?= $value->team_a; ?>"></td>
                     <td class="tx-c">
                         <?= $value->event; ?>
                         <br>
-                        <?= $value->match_schedule; ?>
-                        <span class="t-live"><?= $value->match_live; ?></span>
+                        <?= $value->match_schedule; ?><br><br>
+                        <span <?php
+                                if($value->match_live==NULL)
+                                {
+                                    $live='>';
+                                }
+                                else
+                                {
+                                    $live=' class="livechanel">'.$value->match_live;
+                                }
+
+                                echo $live;
+                                ?>
+                        </span>
                     </td>
                     <td style="width: 25px;"><img style="width: 100%" src="<?= $value->url_logo_b; ?>/small" alt="<?= $value->team_b; ?>"></td>
-                    <td class="tx-l">
-                        <!-- <a href="<?= $value->url_team_a; ?>"> -->
-                        <?= $value->team_b; ?>
-                        <!-- </a> -->
-                    </td>
+                    <?php      
+                            if(($value->liga_b=='Liga Lainnya') OR ($value->liga_b=='Liga International'))
+                            {
+                                echo "<td class='tx-l'><a href='#no_detail_club'_".$value->team_b.">".$value->team_b."</a></td>";
+                            }
+                            else
+                            {   
+                                echo "<td class='tx-l'><a href=".$value->url_team_b.">".$value->team_b."</a></td>";
+                            }
+                    ?>
                 </tr>
                 <?php
             }
@@ -61,24 +101,48 @@
             $match_today = json_decode($match_today);
             foreach ($match_today->data as $value) {
                 ?>
-                <tr>
-                    <td class="tx-r"><?= $value->team_a; ?>
-                        <!-- <a href="<?= $value->url_team_a; ?>"> -->
-                        <!-- </a> -->
-                    </td>
-                    <td style="width: 25px;"><img style="width: 100%" src="<?= $value->url_logo_a; ?>/small" alt="<?= $value->team_a; ?>"></td>
+                <tr class="listmatch">
+                <?php      
+                    
+                    if(($value->liga_a=='Liga Lainnya') OR ($value->liga_a=='Liga International'))
+                    {
+                        echo "<td class='tx-r'><a href='#no_detail_club'>".$value->team_a."</a></td>";
+                    }
+                    else
+                    {   
+                        echo "<td class='tx-r'><a href=".$value->url_team_a.">".$value->team_a."</a></td>";
+                    }
+                ?>
+                    <td style="width: 25px;"><img align="absmiddle"style="width: 100%" src="<?= $value->url_logo_a; ?>/small" alt="<?= $value->team_a; ?>"></td>
                     <td class="tx-c">
                         <?= $value->event; ?>
                         <br>
-                        <?= $value->match_schedule; ?>
-                        <span class="t-live"><?= $value->match_live; ?></span>
+                        <?= $value->match_schedule; ?><br><br>
+                        <span <?php
+                                if($value->match_live==NULL)
+                                {
+                                    $live='>';
+                                }
+                                else
+                                {
+                                    $live=' class="livechanel">'.$value->match_live;
+                                }
+
+                                echo $live;
+                                ?>
+                        </span>
                     </td>
                     <td style="width: 25px;"><img style="width: 100%" src="<?= $value->url_logo_b; ?>/small" alt="<?= $value->team_b; ?>"></td>
-                    <td class="tx-l">
-                        <!-- <a href="<?= $value->url_team_a; ?>"> -->
-                        <?= $value->team_b; ?>
-                        <!-- </a> -->
-                    </td>
+                    <?php      
+                            if(($value->liga_b=='Liga Lainnya') OR ($value->liga_b=='Liga International'))
+                            {
+                                echo "<td class='tx-l'><a href='#no_detail_club'_".$value->team_b.">".$value->team_b."</a></td>";
+                            }
+                            else
+                            {   
+                                echo "<td class='tx-l'><a href=".$value->url_team_b.">".$value->team_b."</a></td>";
+                            }
+                    ?>
                 </tr>
                 <?php
             }
@@ -93,24 +157,48 @@
             $match_tomorrow = json_decode($match_tomorrow);
             foreach ($match_tomorrow->data as $value) {
                 ?>
-                <tr>
-                    <td class="tx-r"><?= $value->team_a; ?>
-                        <!-- <a href="<?= $value->url_team_a; ?>"> -->
-                        <!-- </a> -->
-                    </td>
-                    <td style="width: 25px;"><img style="width: 100%" src="<?= $value->url_logo_a; ?>/small" alt="<?= $value->team_a; ?>"></td>
+                <tr class="listmatch">
+                <?php
+                    if(($value->liga_a=='Liga Lainnya') OR ($value->liga_a=='Liga International'))
+                    {
+                        echo "<td class='tx-r'><a href='#no_detail_club'>".$value->team_a."</a></td>";
+                    }
+                    else
+                    {   
+                        echo "<td class='tx-r'><a href=".$value->url_team_a.">".$value->team_a."</a></td>";
+                    }
+                ?>
+                <td style="width: 25px;"><img align="absmiddle"style="width: 100%" src="<?= $value->url_logo_a; ?>/small" alt="<?= $value->team_a; ?>"></td>
+                
                     <td class="tx-c">
                         <?= $value->event; ?>
                         <br>
-                        <?= $value->match_schedule; ?>
-                        <span class="t-live"><?= $value->match_live; ?></span>
+                        <?= $value->match_schedule; ?><br><br>
+                        <span <?php
+                                if($value->match_live==NULL)
+                                {
+                                    $live='>';
+                                }
+                                else
+                                {
+                                    $live=' class="livechanel">'.$value->match_live;
+                                }
+
+                                echo $live;
+                                ?>
+                        </span>
                     </td>
                     <td style="width: 25px;"><img style="width: 100%" src="<?= $value->url_logo_b; ?>/small" alt="<?= $value->team_b; ?>"></td>
-                    <td class="tx-l">
-                        <!-- <a href="<?= $value->url_team_a; ?>"> -->
-                        <?= $value->team_b; ?>
-                        <!-- </a> -->
-                    </td>
+                    <?php      
+                            if(($value->liga_b=='Liga Lainnya') OR ($value->liga_b=='Liga International'))
+                            {
+                                echo "<td class='tx-l'><a href='#no_detail_club'_".$value->team_b.">".$value->team_b."</a></td>";
+                            }
+                            else
+                            {   
+                                echo "<td class='tx-l'><a href=".$value->url_team_b.">".$value->team_b."</a></td>";
+                            }
+                    ?>
                 </tr>
                 <?php
             }

@@ -29,7 +29,7 @@
                     <span class='err msgpassword'></span>
                     <a href="<?php echo FORGOTPASS?>">lupa password?</a>
                     <button type="submit" class="">masuk</button>
-                    <div class="container atau-menggunakan">
+                    <!--  <div class="container atau-menggunakan">
                         <span>atau menggunakan</span>
                         <hr>
                     </div>
@@ -46,7 +46,7 @@
                                 <span>Google</span>
                             </div>
                         </a>
-                    </div>
+                    </div> -->
                 </form>
             </div>                
         </div>
