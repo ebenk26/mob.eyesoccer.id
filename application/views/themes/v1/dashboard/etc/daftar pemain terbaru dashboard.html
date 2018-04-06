@@ -62,23 +62,25 @@
             </ul>
         </div>
     </div>
-    <div class="container">
-        <div class="x-form-daftar-pemain row">
-            <div class="close-check" id="editDaftarPemain" style="display: none;">
-                <i class="far fa-check-circle"></i>
-                <i class="far fa-times-circle" onclick="functionCloseEdit()"></i>
-            </div>
-            <i class="far fa-edit" id="iconEdit" onclick="functionEdit()" style="float:right; font-size:.9em;"></i>
-            <div class="col-xs-4 edits">
-                <div class="img-round">
-                    <img src="http://localhost/mob.eyesoccer.id/assets/img/eyeme/user-discover.png" alt="">
+    <div class="responsif-add-100px">
+        <div class="container">
+            <div class="x-form-daftar-pemain row">
+                <div class="close-check" id="editDaftarPemain" style="display: none;">
+                    <i class="far fa-check-circle"></i>
+                    <i class="far fa-times-circle" onclick="functionCloseEdit()"></i>
                 </div>
-            </div>
-            <div class="col-xs-8 pd-t-19 edits dftr-pemain">
-                <span>Nama Lengkap</span>
-                <span>No. Punggung</span>
-                <span>Posisi</span>
-                <span>Kewarga Negaraan</span>
+                <i class="far fa-edit" id="iconEdit" onclick="functionEdit()" style="float:right; font-size:.9em;"></i>
+                <div class="col-xs-4 edits">
+                    <div class="img-round">
+                        <img src="http://localhost/mob.eyesoccer.id/assets/img/eyeme/user-discover.png" alt="">
+                    </div>
+                </div>
+                <div class="col-xs-8 pd-t-19 edits dftr-pemain">
+                    <span>Nama Lengkap</span>
+                    <span>No. Punggung</span>
+                    <span>Posisi</span>
+                    <span>Kewarganegaraan</span>
+                </div>
             </div>
         </div>
         <div class="container form-dp">
@@ -189,11 +191,13 @@
             }
         }
         function functionCloseEdit() {
+            var x1 = document.getElementById("editDaftarPemain");
             var y1 = document.getElementById("iconEdit");
             var z1 = document.getElementById("formDaftarPemain");
             if (z1.style.display == "block") {
                 z1.style.display = "none";
                 y1.style.display = "block";
+                x1.style.display = "none";
             }
         }
         function closeFunction() {

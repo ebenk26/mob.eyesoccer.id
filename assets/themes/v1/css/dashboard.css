@@ -1,3 +1,8 @@
+@media screen and (min-width: 445px){
+    .responsif-add-100px{
+        margin-top: 100px;
+    }
+}
 .mt-45{
     margin-top: -45px;
 }
@@ -68,6 +73,8 @@
     background-color: rgb(255 226 78);
     padding: 10px 10px 0;
     width: 100%;
+    max-width: 768px;
+    height: 43px;
     overflow-x: auto;
     min-height: 30px;
     position: fixed;
@@ -79,6 +86,8 @@
     width: max-content;
     padding-right: 20px;
     font-size: .85em;
+    text-align: center;
+    min-width: 100%;
 }
 .nav-dash li{
     padding-right: 11px;
@@ -99,7 +108,7 @@
     /* margin-right: 20px; */
     position: relative;
 }
-.img-pic img{
+.img-pic img, .pp-profil img{
     height: 100%;
     position: absolute;
     top: 50%;
@@ -576,13 +585,13 @@
     margin-top: -6px;
     font-size: .75em;
     width: 100%;
-    min-height: 30px;
+    height: 44px;
     overflow-x: auto;
+    background-color: rgb(224, 224, 224);
 }
 .submenus{
     width: max-content;
     padding: 12px 0;
-    background-color: rgb(224, 224, 224);
 }
 .submenu ul{
     text-align: center;
@@ -605,6 +614,8 @@
     display: block;
     padding-bottom: 4px;
     width: max-content;
+    max-height: 14px;
+    overflow: hidden;
 }
 .x-form-daftar-pemain .img-round{
     background-color: #fafafa;
@@ -654,10 +665,11 @@
     padding: 0 0 12px 12px;
     font-size: .7em;
     letter-spacing: .5px;
+    width: max-content;
 }
-#isiContent{
+/* #isiContent{
     margin-top: -3px;
-}
+} */
 .text-inbox2{
     padding: 5px 0px 0px 40px;
     min-height: 27px;
@@ -677,19 +689,49 @@
     padding: 0 20px;
     box-sizing: border-box;
     position: relative;
-    top: -35px;
-    z-index: -1;
+    top: -9px;
+    /* z-index: -1; */
 }
 .form-daftarpemain{
     background-color: whitesmoke;
-    border-radius: 15px;
-    padding: 30px 8px 8px;
+    /* border-radius: 15px; */
+    padding: 8px;
 }
 .form-daftarpemain td:nth-of-type(1){
     width: 105px;
 }
-.form-daftarpemain input{
+.form-daftarpemain input, .data-profil input{
     width: 100%;
     background-color: #fafafa;
     border-radius: 5px;
+    padding: 8px;
+    font-size: 1em;
+    letter-spacing: 0.5px;
+    border: none;
+    border-bottom: 2px solid #d8d8d8;
+    box-sizing: border-box;
+}
+.pp-profil{
+    margin: 0 auto;
+    position: relative;
+    width: 130px;
+    height: 130px;
+    border: 4px solid white;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: gainsboro;
+}
+.m-t-70{
+    margin-top: -70px;
+}
+.data-profil{
+    color: #505050;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+.data-profil h3{
+    margin: 0;
+}
+.data-profil td:nth-of-type(1){
+    width: 105px; 
 }
