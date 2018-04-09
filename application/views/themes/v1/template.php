@@ -85,6 +85,7 @@
     <link href="<?php echo SUBCDN."assets/$folder/css/bs.css" ?>" rel="stylesheet" type="text/css" />
     <link href="<?php echo SUBCDN."assets/$folder/css/dev.css" ?>" rel="stylesheet" type="text/css" />
     <link href="<?php echo SUBCDN."assets/$folder/css/style.css" ?>" rel="stylesheet" type="text/css" />
+    <link href="<?php echo SUBCDN."assets/$folder/css/dashboard.css" ?>" rel="stylesheet" type="text/css" />
     
     <!-- JQuery UI -->
     <!--<script src='<?php /*echo SUBCDN.'assets/js/jquery-2.0.2.min.js'; */?>'></script>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="http://localhost/mob.eyesoccer.id/assets/themes/v1/css/style.css">
+    <link rel="stylesheet" href="http://localhost/mob.eyesoccer.id/assets/themes/v1/css/dashboard.css">
+    <link rel="stylesheet" href="http://localhost/mob.eyesoccer.id/assets/css/font-awesome/css/fontawesome-all.css">
+</head>
+
+<body class="m-pd-t-100 body-responsive">
+    <div class="container stc">
+        <div class="container m-bar">
+            <i class="fas fa-bars" onclick="myFunction()"></i>
+            <i class="far fa-envelope"></i> <span>1</span>
+            <i class="far fa-bell"></i>     <span class="l83">1</span>
+        </div>
+        <i class="fas fa-sign-in-alt login-ic"></i>
+        <div class="fl-r img-pic">
+            <img src="http://localhost/mob.eyesoccer.id/assets/img/eyeme/user-discover.png" alt="">
+        </div>
+    </div>
+    <div id="menuDashboard" class="menu-dashboard bg243" style="display:none;">
+        <div class="container bg-menu-pic">
+            <div class="menu-pic">
+                <img src="http://localhost/mob.eyesoccer.id/assets/themes/v1/img/d.jpg" alt="">
+            </div>
+        </div>
+        <div class="container menu-dash">
+            <a class="active" href="http://localhost/mob.eyesoccer.id/eyeprofile/klub"><img src="http://localhost/mob.eyesoccer.id/assets/themes/v1/img/ic_eyeprofile.png" alt="">Eye Profile</a>
+            <a href="http://localhost/mob.eyesoccer.id/eyetube"><img src="http://localhost/mob.eyesoccer.id/assets/themes/v1/img/ic_eyetube.png" alt="">Eye Tube</a>
+            <a href="http://localhost/mob.eyesoccer.id/eyenews"><img src="http://localhost/mob.eyesoccer.id/assets/themes/v1/img/ic_eyenews.png" alt="">Eye News</a>
+            <a href="http://localhost/mob.eyesoccer.id/eyeme"><img src="http://localhost/mob.eyesoccer.id/assets/themes/v1/img/ic-eyeme.png" alt="">Eye Me</a>
+            <a href="http://localhost/mob.eyesoccer.id/eyemarket"><img src="http://localhost/mob.eyesoccer.id/assets/themes/v1/img/ic_eyemarket.png" alt="">Eye Market</a>
+            <a href="http://localhost/mob.eyesoccer.id/eyevent"><img src="http://localhost/mob.eyesoccer.id/assets/themes/v1/img/ic_eyevent.png" alt="">EyeVent</a>
+    
+        </div>
+    </div>
+    <div class="container nav-dashboard">
+        <div class="nav-dash">
+            <ul>
+                <li>ALL</li>
+                <li>Player</li>
+                <li class="active">Eyeme</li>
+                <li>Eyetube</li>
+                <li>Tulisan Kamu</li>
+                <li>Analytics</li>
+            </ul>
+        </div>
+    </div>
+    <div class="container wlc">
+        <div class="bg-eyeme">
+            <img src="http://localhost/mob.eyesoccer.id/assets/themes/v1/img/a.jpg" alt="Background Image">
+            <div class="close-wlcm">
+                <i class="fas fa-pencil-alt"></i>
+            </div>
+            <div class="pp-eyeme">
+                <div class="close-wlcm pp">
+                    <i class="fas fa-pencil-alt"></i>
+                </div>
+                <div class="pp-eyeme-img">
+                    <img src="http://localhost/mob.eyesoccer.id/assets/themes/v1/img/d.jpg" alt="Profil Picture">
+                </div>
+            </div>    
+        </div>       
+    </div>
+    <div class="container">
+        <div class="form-profil-dash" id="form-player">
+            <span>Nama</span>
+            <input type="text" placeholder="data player">
+            <span>Username</span>
+            <input type="text" placeholder="data player">
+            <span>Status</span>
+            <input type="text" placeholder="data player">
+        </div>
+    </div>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("menuDashboard");
+            if (x.style.display == "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>

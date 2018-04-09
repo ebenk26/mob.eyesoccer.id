@@ -178,6 +178,47 @@
                 </div>
             </div>
         </div>
+
+<!-- NATIVE ADS -->
+<div class="container enews-detail" style="display:none;">
+    <div class="container m-b-15" style="margin-top: -35px !important; background-color: #fafafa;">
+        <h3 class="h3-red">BACA JUGA</h3>
+        <div class="carousel slide t-30 over-x">
+            <div role="listbox" class="carousel-inner w-max">
+                <div class="box item active no-decoration">
+                    <a href="">
+                            <div class="video-thumb fafa">
+                                <div class="v-thumb-img">
+                                    <img src="" alt="">
+                                </div>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div class="video-thumb fafa">
+                                <div class="v-thumb-img">
+                                    <img src="" alt="">
+                                </div>
+                            </div>
+                        </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- NATIVE ADS 2 -->
+<!-- iklan tampil di sela konten "berita terkait", tapil setiap 5 konten yang ada di infiniti scroll (berita terkait) -->
+<div class="container-94 m-b-20 unset" style="display:none;">
+    <a href="">
+        <div class="etube-content etube-content-detail pd-t-10">
+            <div class="v-etube v-etube-detail v-etube-res">
+                <img src="http://static.eyesoccer.id/v1/cache/images/3772-Nanak.jpg/small" alt="">
+            </div>
+            <h1>Resmi! Bali United Lepas Ngurah Nanak ke Semen Padang</h1>
+            <span>45 menit  lalu</span>
+            <span>6 view</span>
+        </div>
+    </a>
+</div>
     </div>
     <div class="container-94 m-b-20 unset">
         <span class="up-next-etube" style="margin-top: 23px;">Berita Terkait</span>

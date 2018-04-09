@@ -59,6 +59,98 @@
                         </div>
                     </a>
                 </div>
+                <div class="box emarket-kategori-box">
+                    <div class="container">
+                        <h2>Kaos</h2>
+                        <span>lihat kaos lainnya</span>
+                    </div>
+                    <a href="">
+                        <div class="em-box-content">
+                            <div class="img-prod">
+                                <img src="http://static.eyesoccer.id/v1/cache/images/020420185707-good-day.jpg">
+                            </div>
+                            <!-- <h1 class="">NAMA PRODUK</h1> -->
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="em-box-content">
+                            <div class="img-prod">
+                                <img src="http://static.eyesoccer.id/v1/cache/images/020420185707-good-day.jpg">
+                            </div>
+                            <!-- <h1 class="">NAMA PRODUK</h1> -->
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="em-box-content">
+                            <div class="img-prod">
+                                <img src="http://static.eyesoccer.id/v1/cache/images/020420185707-good-day.jpg">
+                            </div>
+                            <!-- <h1 class="">NAMA PRODUK</h1> -->
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="em-box-content">
+                            <div class="img-prod">
+                                <img src="http://static.eyesoccer.id/v1/cache/images/020420185707-good-day.jpg">
+                            </div>
+                            <!-- <h1 class="">NAMA PRODUK</h1> -->
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="em-box-content">
+                            <div class="img-prod">
+                                <img src="http://static.eyesoccer.id/v1/cache/images/020420185707-good-day.jpg">
+                            </div>
+                            <!-- <h1 class="">NAMA PRODUK</h1> -->
+                        </div>
+                    </a>
+                </div>
+                <div class="box emarket-kategori-box">
+                    <div class="container">
+                        <h2>Kaos</h2>
+                        <span>lihat kaos lainnya</span>
+                    </div>
+                    <a href="">
+                        <div class="em-box-content">
+                            <div class="img-prod">
+                                <img src="http://static.eyesoccer.id/v1/cache/images/020420185707-good-day.jpg">
+                            </div>
+                            <!-- <h1 class="">NAMA PRODUK</h1> -->
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="em-box-content">
+                            <div class="img-prod">
+                                <img src="http://static.eyesoccer.id/v1/cache/images/020420185707-good-day.jpg">
+                            </div>
+                            <!-- <h1 class="">NAMA PRODUK</h1> -->
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="em-box-content">
+                            <div class="img-prod">
+                                <img src="http://static.eyesoccer.id/v1/cache/images/020420185707-good-day.jpg">
+                            </div>
+                            <!-- <h1 class="">NAMA PRODUK</h1> -->
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="em-box-content">
+                            <div class="img-prod">
+                                <img src="http://static.eyesoccer.id/v1/cache/images/020420185707-good-day.jpg">
+                            </div>
+                            <!-- <h1 class="">NAMA PRODUK</h1> -->
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="em-box-content">
+                            <div class="img-prod">
+                                <img src="http://static.eyesoccer.id/v1/cache/images/020420185707-good-day.jpg">
+                            </div>
+                            <!-- <h1 class="">NAMA PRODUK</h1> -->
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
 </div>

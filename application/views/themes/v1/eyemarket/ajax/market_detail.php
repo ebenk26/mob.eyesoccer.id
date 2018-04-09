@@ -1,3 +1,4 @@
+<a href="<?=base_url()?>eyemarket" class="back-market"><i class="fas fa-chevron-left"></i>Kembali</a>
 <?php
     foreach ($product as $data)
     {

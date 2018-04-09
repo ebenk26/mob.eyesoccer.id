@@ -29,7 +29,7 @@
 		<?php
 			if($i == 4){
 		?>
-				</ul>
+				</ul> 
 			</div>
 			<span id='tab-populer' class="orange-active tab-popular-custom-home" active="true" style="bottom: 0px;">Terkini</span>
 		</div>
@@ -38,13 +38,13 @@
 		}else{
 		?>
 			<a href="<?php echo $this->library->urltomob($dt->url); ?>" title="<?php echo $dt->title; ?>">
-				<div class="rek-ber-c home-rek-ber-c">
+				<div class="rek-ber-c" style="height: 90px;margin: 15px 0px;">
 					<div class="img-res-height" style="margin-top: 0;">
-						<img style="margin: 0px;" src="<?php echo $dt->url_pic; ?>" alt="<?php echo $dt->title; ?>">
+					<img style="margin: 0px;" src="<?php echo $dt->url_pic; ?>" alt="<?php echo $dt->title; ?>">
 					</div>
-					<!-- <span style="position: unset;"><?php echo relative_time($this->library->datenormal($dt->publish_on)); ?> lalu</span> -->
-					<h1 style="bottom: 0;padding: unset;text-shadow: unset;font-weight: 400;height: 60px;font-size: .9em;"><?php echo $dt->title; ?></h1>
-					<!-- <p><?php echo word_limiter(strip_tags($dt->description), 10); ?></p> -->
+					<label style="font-size: .65em;color: gray;font-weight: 500;margin: unset;display: block;"><?php echo relative_time($this->library->datenormal($dt->publish_on)); ?> lalu</label>
+					<label style="line-height: 1.4em;font-size: .7em;font-weight: 500;margin-top: 1px;height: 29px;overflow: hidden;color: #212121;display: block;"><?php echo $dt->title; ?></label>
+					<p style="float: left;"><?php echo word_limiter($dt->description,15); ?></p>
 				</div>
 			</a>
 		<?php

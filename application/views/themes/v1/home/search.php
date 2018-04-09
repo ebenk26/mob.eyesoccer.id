@@ -1,6 +1,15 @@
+<?php 
+if(isset($_GET['q']))
+{
+	$search=$_GET['q'];
+}else
+{
+	$search=" ";
+}
+?>
 <div class="container-full">
 	<div class="box-90">
-		<center>Hasil Pencarian "<?php echo $_GET['q'];?>"</center>
+		<center>Hasil Pencarian "<?php echo $search;?>"</center>
 		<div id="reqsearch" class='loadsearch' action="home" loading="off" clean="clssearch">
 			<div id='clsdetailclub'>
 				<script>
@@ -12,7 +21,7 @@
 				</script>
 			</div>
 			<input type='hidden' name='fn' value='search' class='cinput'>
-			<input type='hidden' name='query' value='<?php echo $_GET['q'];?>' class='cinput'>
+			<input type='hidden' name='query' value='<?php echo $search;?>' class='cinput'>
 			Eyenews
 			<div class="etube-content pd-t-10">
 				<a href="#" title="3 Nama yang Cocok Menggantikan Arsene Wenger">

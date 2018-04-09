@@ -80,11 +80,12 @@ class EyeprofileMod extends CI_Model
         if($this->input->post('slug')){
 
             $competition = $this->input->post('slug');
+            $data['slug'] = $this->input->post('slug');
             $data['submenu'] = $this->input->post('submenu');
 
             $query = array('page' => 1, 'limit' => 8);
             $data['competitionlist'] = $this->excurl->remoteCall($this->__xurl() . 'competition', $this->__xkey(), $query);
-
+            
             $html = $this->load->view($this->__theme() . 'eyeprofile/ajax/competitionlist', $data, true);
 
             $data = array('xClass' => 'reqcompetition', 'xHtml' => $html);
@@ -99,9 +100,10 @@ class EyeprofileMod extends CI_Model
         $competition = $this->input->post('slug');
         $date = date('Y-m-d');
         $newdate = strtotime('-5 month', strtotime($date));
-        $startdate = date('Y-m-d', $newdate);
+        $startdate = date("Y-m-d",strtotime("-1 day"));
+        $lastdate = date("Y-m-d",strtotime("-6 day"));
 
-        $event = 'LIGA 1 GOJEK TRAVELOKA 2018';
+        $event = 'LIGA 1 GOJEK 2018';
         // if ($competition == 'Liga Indonesia 1')
         // {
         //     $event = 'LIGA 1 GOJEK TRAVELOKA 2018';
@@ -115,7 +117,7 @@ class EyeprofileMod extends CI_Model
         //     $event = 'Liga Indonesia 3 Wilayah Jawa Barat';
         // }
 
-            $query = array('page' => 1, 'limit' => 2, 'sortby' => 'newest', 'event' => $event, 'startdate' => '', 'enddate' => '');
+            $query = array('page' => 1, 'limit' => 2, 'sortby' => 'newest', 'event' => $event, 'startdate' => $lastdate, 'enddate' => $startdate);
             $data['matchlist'] = $this->excurl->remoteCall($this->__xurl() . 'event-match', $this->__xkey(), $query);
 
             $html = $this->load->view($this->__theme() . 'eyeprofile/ajax/matchlist', $data, true);

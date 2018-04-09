@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="http://localhost/mob.eyesoccer.id/assets/themes/v1/css/style.css">
+    <link rel="stylesheet" href="http://localhost/mob.eyesoccer.id/assets/themes/v1/css/dashboard.css">
+    <link rel="stylesheet" href="http://localhost/mob.eyesoccer.id/assets/css/font-awesome/css/fontawesome-all.css">
+</head>
+<body class="m-pd-t-100 body-responsive">
+    <div class="container stc">
+        <div class="container m-bar">
+            <i class="fas fa-bars" onclick="myFunction()"></i>
+            <i class="far fa-envelope" onclick="functionNotifInbox()"></i>  <span id="signNotifInbox">2</span>
+            <i class="far fa-bell" onclick="functionNotification"></i>      <span id="signNotification" class="l83">1</span>
+        </div>
+        <i class="fas fa-sign-in-alt login-ic"></i>
+        <div class="fl-r img-pic">
+            <img src="http://localhost/mob.eyesoccer.id/assets/img/eyeme/user-discover.png" alt="">
+        </div>
+    </div>
+    <div id="menuDashboard" class="menu-dashboard bg243" style="display:none;">
+        <div class="container bg-menu-pic">
+            <div class="menu-pic">
+                <img src="http://localhost/mob.eyesoccer.id/assets/themes/v1/img/d.jpg" alt="">
+            </div>
+        </div>
+        <div class="container menu-dash">
+            <a class="active" href="http://localhost/mob.eyesoccer.id/eyeprofile/klub"><img src="http://localhost/mob.eyesoccer.id/assets/themes/v1/img/ic_eyeprofile.png" alt="">Eye Profile</a>
+            <a href="http://localhost/mob.eyesoccer.id/eyetube"><img src="http://localhost/mob.eyesoccer.id/assets/themes/v1/img/ic_eyetube.png" alt="">Eye Tube</a>
+            <a href="http://localhost/mob.eyesoccer.id/eyenews"><img src="http://localhost/mob.eyesoccer.id/assets/themes/v1/img/ic_eyenews.png" alt="">Eye News</a>
+            <a href="http://localhost/mob.eyesoccer.id/eyeme"><img src="http://localhost/mob.eyesoccer.id/assets/themes/v1/img/ic-eyeme.png" alt="">Eye Me</a>
+            <a href="http://localhost/mob.eyesoccer.id/eyemarket"><img src="http://localhost/mob.eyesoccer.id/assets/themes/v1/img/ic_eyemarket.png" alt="">Eye Market</a>
+            <a href="http://localhost/mob.eyesoccer.id/eyevent"><img src="http://localhost/mob.eyesoccer.id/assets/themes/v1/img/ic_eyevent.png" alt="">EyeVent</a>
+    
+        </div>
+    </div>
+    <div id="isiContent" style="filter:none;">
+    <div class="container nav-dashboard">
+        <div class="nav-dash">
+            <ul>
+                <li>ALL</li>
+                <li>Player</li>
+                <li>Eyeme</li>
+                <li>Eyetube</li>
+                <li>Tulisan Kamu</li>
+                <li>Analytics</li>
+            </ul>
+        </div>
+    </div>
+    <div class="container submenu">
+        <div class="submenus">
+            <ul>
+                <li>info klub</li>
+                <li>pemain</li>
+                <li>ofisial</li>
+                <li>galeri</li>
+                <li>verifikasi</li>
+                <li>daftar liga</li>
+            </ul>
+        </div>
+    </div>
+    <div class="container">
+        <div class="x-form-daftar-pemain row">
+            <i class="far fa-edit" style="float:right; font-size:.9em;"></i>
+            <div class="col-xs-4 edits">
+                <div class="img-round">
+                    <img src="http://localhost/mob.eyesoccer.id/assets/img/eyeme/user-discover.png" alt="">
+                </div>
+            </div>
+            <div class="col-xs-8 pd-t-19 edits dftr-pemain">
+                <span>Nama Lengkap</span>
+                <span>No. Punggung</span>
+                <span>Posisi</span>
+                <span>Kewarga Negaraan</span>
+            </div>
+        </div>
+        <div class="x-form-daftar-pemain row">
+                <i class="far fa-edit" style="float:right; font-size:.9em;"></i>
+                <div class="col-xs-4 edits">
+                    <div class="img-round">
+                        <img src="http://localhost/mob.eyesoccer.id/assets/img/eyeme/user-discover.png" alt="">
+                    </div>
+                </div>
+                <div class="col-xs-8 pd-t-19 edits dftr-pemain">
+                    <span>Nama Lengkap</span>
+                    <span>No. Punggung</span>
+                    <span>Posisi</span>
+                    <span>Kewarga Negaraan</span>
+                </div>
+            </div>
+    </div>
+
+    
+    <!-- NOTIFICATION -->
+    <div class="container dash-notif" id="notifInbox" style="display: none;">
+        <div class="panah-notif"></div>
+        <div class="title-notif">
+            <span class="container">Kotak Masuk</span>
+        </div>
+        <div class="notific">
+            <a href="" class="container inbox-dashboard">
+                <div class="container img-inbox-dashboard">
+                    <img src="http://localhost/mob.eyesoccer.id/assets/img/eyeme/user-discover.png" alt="">
+                </div>
+                <div class="text-inbox">
+                    <span class="time">12:15</span>
+                    <span class="sender">eyesoccer</span>
+                    <span class="title">ayo update data kamu ...</span>
+                    <span class="preview">Hallo Dila, ayo update data kamu...</span>
+                </div>
+                <div class="bb2g"></div>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("menuDashboard");
+            if (x.style.display == "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+        function closeFunction() {
+            var y = document.getElementById("welcome");
+            if (y.style.display == "block") {
+                y.style.display = "none";
+            }
+        }
+        function functionNotifInbox() {
+            var y = document.getElementById("notifInbox");
+            var p = document.getElementById("isiContent");
+            var q = document.getElementById("signNotifInbox");
+            if (y.style.display == "none") {
+                y.style.display = "block";
+                q.style.display = "none";
+                p.style.filter = "blur(10px)";
+            } else {
+                y.style.display = "none";
+                p.style.filter = "unset";
+            }
+        }
+    </script>
+</body>
+</html>

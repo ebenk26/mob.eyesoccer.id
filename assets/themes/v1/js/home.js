@@ -42,6 +42,8 @@ var heighControl2 = document.getElementsByClassName("heightControl2")[0];
 var xClose2 = document.getElementById("close");
 var containerComment = document.getElementsByClassName("container-comment")[0];
 var openComment = document.getElementsByClassName("openComment")[0];
+var iddbcls = document.getElementById("dbcls");
+var clsdbcls = document.getElementsByClassName("dbcls")[0];
 // var logBtn = document.getElementById('logBtn');
 // var regBtn = document.getElementById('regBtn');
 // var logBox = document.getElementsByClassName("login-box")[0];
@@ -81,6 +83,9 @@ window.onload = function(){
     }
     xClose.onclick = function() {
         xMenu.style.display = "none";
+    }
+    iddbcls.onclick = function() {
+        clsdbcls.style.display = "none";
     }
     //boxNotif.onclick = function() {
     //    displayNotif.style.display = "block";
