@@ -26,7 +26,7 @@
     </div>
 </div>
 <!-- EYEPROFILE -->
-<a href="http://m.eyesoccer.id/eyeprofile/klub/Liga%20Indonesia%201/1">
+<a href="https://m.eyesoccer.id/eyeprofile/klub/Liga%20Indonesia%201/1">
 <div class="SvLSD org">
 <img src="<?= base_url(); ?>assets/themes/v1/img/ic_eyeprofile@2x.png" alt="" style="float:  left;background-color: white;margin-bottom: -6px;padding-right: 5px;">
     <h2>eyeProfile</h2>
@@ -96,7 +96,7 @@
     </div>
 </div>
 <!-- EYETUBE -->
-<a href="http://m.eyesoccer.id/eyetube">
+<a href="https://m.eyesoccer.id/eyetube">
 <div class="SvLSD rd">
 <img src="<?= base_url(); ?>assets/themes/v1/img/ic_eyetube@2x.png" alt="" style="float:  left;background-color: white;margin-bottom: -5px;padding-right: 5px;padding-top: 5px;">
     <h2>eyeTube</h2>
@@ -159,7 +159,7 @@
     </div>
 </div>
 <!-- EYEME -->
-<a href="http://m.eyesoccer.id/eyeme">
+<a href="https://m.eyesoccer.id/eyeme">
 <div class="SvLSD bl">
 <img src="<?= base_url(); ?>assets/themes/v1/img/ic-eyeme@2x.png" alt="" style="float:  left;background-color: white;margin-bottom: -5px;padding-right: 5px;padding-top: 3px;">
     <h2>eyeMe</h2>
@@ -193,7 +193,7 @@
     </div>
 </div>
 <!-- EYENEWS -->
-<a href="http://m.eyesoccer.id/eyenews">
+<a href="https://m.eyesoccer.id/eyenews">
 <div class="SvLSD rd2">
 <img src="<?= base_url(); ?>assets/themes/v1/img/ic_eyenews@2x.png" alt="" style="float:  left;background-color: white;margin-bottom: -5px;padding-right: 5px;padding-top: 3px;">
     <h2>eyeNews</h2>
@@ -222,10 +222,10 @@
 			<span style="padding-bottom: 0;margin-bottom: 0;">30 menit lalu</span>
 			<h1 style="padding-top: 0;margin-top: -5px;">Lorrem Ipsum solor sit amet</h1>
 			<span id='tab-populer' class="orange-active" active="true" style="bottom: 0;color: #FF5722;">Terkini</span>
-			<a href="http://localhost/mob.eyesoccer.id/eyenews/detail/di-website-fifa-bali-united-yang-jadi-juara-liga-1-2017" title="Di Website FIFA Bali United yang Jadi Juara Liga 1 2017">
+			<a href="https://localhost/mob.eyesoccer.id/eyenews/detail/di-website-fifa-bali-united-yang-jadi-juara-liga-1-2017" title="Di Website FIFA Bali United yang Jadi Juara Liga 1 2017">
 				<div class="rek-ber-c">
 					<div class="img-res-height" style="margin-top: 0;">
-						<img src="http://static.eyesoccer.id/v1/cache/images/2359-FIFAlagi.jpg/small" alt="Di Website FIFA Bali United yang Jadi Juara Liga 1 2017">
+						<img src="https://static.eyesoccer.id/v1/cache/images/2359-FIFAlagi.jpg/small" alt="Di Website FIFA Bali United yang Jadi Juara Liga 1 2017">
 					</div>
 					<span style="position: unset;">12 Nov 2017 22:19:06</span>
 					<h1 style="bottom: 0;padding: unset;">Di Website FIFA Bali United yang Jadi Juara Liga 1 2017</h1>
@@ -323,7 +323,7 @@
     </div>
 </div>
 <!-- EYEMARKET -->
-<a href="http://m.eyesoccer.id/eyemarket">
+<a href="https://m.eyesoccer.id/eyemarket">
 <div class="SvLSD yl">
 <img src="<?= base_url(); ?>assets/themes/v1/img/ic_eyemarket@2x.png" alt="" style="float:  left;background-color: white;margin-bottom: -8px;padding-right: 5px;">
     <h2>eyeMarket</h2>
@@ -369,7 +369,7 @@
     </div>
 </div>
 <!-- EYEVENT -->
-<a href="http://m.eyesoccer.id/eyevent">
+<a href="https://m.eyesoccer.id/eyevent">
 <div class="SvLSD grn">
 <img src="<?= base_url(); ?>assets/themes/v1/img/ic_eyevent@2x.png" alt="" style="float:  left;background-color: white;margin-bottom: -8px;padding-right: 5px;">
     <h2>eyeVent</h2>
@@ -498,7 +498,7 @@
 <!-- BANNER -->
 <div class="border-box">
     <div class="banner-150">
-        <img src="https://eyesoccer.id/assets/img/BANNER-MOBILE.jpg" alt="">
+        <img src="httpss://eyesoccer.id/assets/img/BANNER-MOBILE.jpg" alt="">
     </div>
 </div>
 <!-- KLASEMEN -->
