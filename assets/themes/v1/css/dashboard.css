@@ -147,7 +147,13 @@
     margin: 5px;
 }
 .klik-dsn.red{
-    background-color: #d32f2f;
+    background-color: #d32f2f !important;
+}
+.klik-dsn.gray{
+    background-color: gray !important;
+}
+.klik-dsn:focus{
+    box-shadow: 0 0 7px #0288d16b;
 }
 .m-bar{
     width: max-content !important;
@@ -736,6 +742,16 @@
 .data-profil td:nth-of-type(1){
     width: 105px; 
 }
+.data-profil.liga td:nth-of-type(1){
+    width: 105px; 
+    display: inline-block;
+}
+.data-profil.liga input{
+    margin-top: 5px;
+    padding-left: 11px;
+    display: inline;
+    width: 80%;
+}
 .scroll-x-outer{
     width: 100%;
     overflow-x: auto;
@@ -759,7 +775,7 @@
 .data-oficial td:nth-last-of-type(1) {
     padding-right: 35px;
 }
-.data-oficial select{
+.data-oficial select, .data-profil select{
     background-color: #fafafa;
     border-radius: 5px;
     padding: 7px;
@@ -767,6 +783,17 @@
     border: none;
     border-bottom: 2px solid #d8d8d8;
 }
+.data-profil select{
+    width: 100%;
+}
 .data-oficial input{
     width: 100%;
+}
+.close-check1{
+    display: inline-block;
+    position: relative;
+    left: 6%;
+}
+.close-check1 i{
+    padding: 0px 1px;
 }

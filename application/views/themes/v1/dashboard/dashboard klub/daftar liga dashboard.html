@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="http://localhost/mob.eyesoccer.id/assets/themes/v1/css/style.css">
+    <link rel="stylesheet" href="http://localhost/mob.eyesoccer.id/assets/themes/v1/css/dashboard.css">
+    <link rel="stylesheet" href="http://localhost/mob.eyesoccer.id/assets/css/font-awesome/css/fontawesome-all.css">
+</head>
+
+<body class="m-pd-t-100 body-responsive">
+    <div class="container stc">
+        <div class="container m-bar">
+            <i class="fas fa-bars" onclick="myFunction()"></i>
+            <i class="far fa-envelope" onclick="functionNotifInbox()"></i>  <span id="signNotifInbox">1</span>
+            <i class="far fa-bell" onclick="functionNotification()"></i>    <span id="signNotification" class="l83">1</span>
+        </div>
+        <i class="fas fa-sign-in-alt login-ic"></i>
+        <div class="fl-r img-pic">
+            <img src="http://localhost/mob.eyesoccer.id/assets/img/eyeme/user-discover.png" alt="">
+        </div>
+    </div>
+    <div id="menuDashboard" class="menu-dashboard bg243" style="display:none;">
+        <div class="container bg-menu-pic">
+            <div class="menu-pic">
+                <img src="http://localhost/mob.eyesoccer.id/assets/themes/v1/img/d.jpg" alt="">
+            </div>
+        </div>
+        <div class="container menu-dash">
+            <a class="active" href="http://localhost/mob.eyesoccer.id/eyeprofile/klub">
+                <img src="http://localhost/mob.eyesoccer.id/assets/themes/v1/img/ic_eyeprofile.png" alt="">Eye Profile</a>
+            <a href="http://localhost/mob.eyesoccer.id/eyetube">
+                <img src="http://localhost/mob.eyesoccer.id/assets/themes/v1/img/ic_eyetube.png" alt="">Eye Tube</a>
+            <a href="http://localhost/mob.eyesoccer.id/eyenews">
+                <img src="http://localhost/mob.eyesoccer.id/assets/themes/v1/img/ic_eyenews.png" alt="">Eye News</a>
+            <a href="http://localhost/mob.eyesoccer.id/eyeme">
+                <img src="http://localhost/mob.eyesoccer.id/assets/themes/v1/img/ic-eyeme.png" alt="">Eye Me</a>
+            <a href="http://localhost/mob.eyesoccer.id/eyemarket">
+                <img src="http://localhost/mob.eyesoccer.id/assets/themes/v1/img/ic_eyemarket.png" alt="">Eye Market</a>
+            <a href="http://localhost/mob.eyesoccer.id/eyevent">
+                <img src="http://localhost/mob.eyesoccer.id/assets/themes/v1/img/ic_eyevent.png" alt="">EyeVent</a>
+
+        </div>
+    </div>
+    <div id="isiContent" style="filter:none;">
+        <div class="container nav-dashboard">
+                <div class="nav-dash">
+                    <ul>
+                        <li>ALL</li>
+                        <li>Player</li>
+                        <li>Eyeme</li>
+                        <li>Eyetube</li>
+                        <li>Tulisan Kamu</li>
+                        <li>Analytics</li>
+                    </ul>
+                </div>
+        </div>
+        <div class="responsif-add-100px">
+            <div class="container mt20 tx-r" style="padding:0 15px; box-sizing:border-box;">
+                <button class="klik-dsn gray" style="font-size:.9em;">Daftarkan</button>
+            </div>
+            <div class="container data-profil liga mt20">
+                <table>
+                    <tr>
+                        <td>Pilih Liga</td>
+                        <td>
+                            <select name="" id="">
+                                <option value="">Liga Eyesoccer</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Nama Yang Didaftarkan di Liga</td>
+                        <td>
+                            <select name="" id="">
+                                <option value="">Eyesoccer A</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Pilih Pemain yang Akan Bertanding</td>
+                        <td>
+                            <select name="" id="">
+                                <option value="">Bambang Pamungkas</option>
+                                <option value="">Evan Dimas</option>
+                                <option value="">Irfan Bachdim</option>
+                            </select>
+                            <div id="pemain1">
+                                <input type="text" disabled placeholder="Bambang pamungkas">
+                                <div class="close-check1">
+                                    <i class="far fa-check-circle"></i>
+                                    <i class="far fa-times-circle" onclick="functCloseEdit()"></i>
+                                </div>
+                            </div>
+                            <div id="pemain2">
+                                <input type="text" disabled placeholder="Evan Dimas">
+                                <div class="close-check1">
+                                    <i class="far fa-check-circle"></i>
+                                    <i class="far fa-times-circle" onclick="functCloseEdit()"></i>
+                                </div>
+                            </div>
+                            <div id="pemain3">
+                                <input type="text" disabled placeholder="Irfan Bachdim">
+                                <div class="close-check1">
+                                    <i class="far fa-check-circle"></i>
+                                    <i class="far fa-times-circle" onclick="functCloseEdit()"></i>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
