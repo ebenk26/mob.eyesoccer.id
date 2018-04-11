@@ -3952,6 +3952,19 @@ video::-webkit-media-controls-panel {
 }
 .author-details>span{
     letter-spacing: 1px;
+    margin-right: 10px;
+}
+.author-details>span::after{
+    content: '|';
+    margin-left: 10px;
+    color: gray;
+}
+.author-details>span:nth-last-of-type(1){
+    margin-right: 0px;
+}
+.author-details>span.active{
+    color: orange;
+    font-weight: 600;
 }
 .author-details td{
     padding: 8px 0;

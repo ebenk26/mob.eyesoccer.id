@@ -170,6 +170,9 @@
 .klik-dsn.red{
     background-color: #d32f2f;
 }
+.klik-dsn:focus{
+    box-shadow: 0 0 7px #0288d16b;
+}
 .m-bar{
     width: max-content !important;
     color:white;
@@ -199,6 +202,13 @@
     display: block;
     margin-bottom: 10px;
     background: rgb(253 253 253);
+    text-align: center;
+}
+.form-daftar-pemain span{
+    display: block;
+}
+.form-daftar-pemain span:nth-of-type(2){
+    font-size: 1.3em;
 }
 .bg-menu-pic{
     padding: 30px 0px;
