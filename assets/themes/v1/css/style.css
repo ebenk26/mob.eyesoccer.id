@@ -530,6 +530,7 @@ footer{
     font-family: 'Roboto', sans-serif;
     text-align: center;
     /* margin-top: 50px; */
+    padding-bottom: 50px;
 }
 footer::before{
     content: '';
@@ -3491,7 +3492,7 @@ video::-webkit-media-controls-panel {
     left: 3px;
     position: absolute;
     width: max-content;
-    background-color: transparent;
+    background-color: #8ec429;
 }
 .cat-x ul li, .p-r{
     position: relative;

@@ -782,6 +782,9 @@
     font-size: 1em;
     border: none;
     border-bottom: 2px solid #d8d8d8;
+    appearance: unset;
+    -moz-appearance: unset;
+    -webkit-appearance: unset;
 }
 .data-profil select{
     width: 100%;
