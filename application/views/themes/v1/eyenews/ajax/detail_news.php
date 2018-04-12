@@ -53,7 +53,7 @@ if ($newsdetail){
 				<h3>
 					<?php
 						$ads=$dt->data->ads_author;
-						if($ads==NULL OR $ads==0){
+						if(empty($ads)){
 							echo $dt->data->fullname;
 						}
 						else{
@@ -128,7 +128,7 @@ if ($newsdetail){
 		$ads_link=$dt->data->ads_link;
 		if($ads_link!=NULL OR $ads_link!=0){
 			echo "<span class='ads_selengkapnya'>
-			<a class='link_ads_selengkapnya' 
+			<a target='_blank' class='link_ads_selengkapnya' 
 			href='".$dt->data->ads_link."'>lihat artikel asli &gt;&gt;&gt;</a>
 			</span>";
 		}
