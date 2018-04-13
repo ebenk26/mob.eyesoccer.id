@@ -18,6 +18,25 @@ if ($newsdetail){
 		$tengah     = ($paragraf - 1) / 2;
 	}
 ?>
+<style>
+		.ads_selengkapnya{
+		display:  block;
+		width:  100%;
+		text-align:  center;
+		font-size:  .9em;
+		font-weight:  600;
+		color: #d8d8d8;}
+		.link_ads_selengkapnya{
+		padding: 8px 20px;
+		border-radius: 20px;
+		background-color:#eb9508;}
+		.ads_selengkapnya:hover{
+		color: #ffffff;}
+		.link_ads_selengkapnya:hover{
+		padding: 8px 20px;
+		border-radius: 20px;
+		background-color:#ebbc08;}
+</style>
 	<input id="catews" type="hidden" value="<?php echo $dt->data->news_type;?>">
 	<input id="eyenews_id" type="hidden" value="<?php echo $dt->data->id;?>">
 	<div class="container enews-detail">
@@ -31,7 +50,17 @@ if ($newsdetail){
 				<div class="img-radius img-pp p-r">
 					<img src="<?php echo imgEyesoccer();?>" alt="">
 				</div>
-				<h3><?php echo $dt->data->fullname;?></h3>
+				<h3>
+					<?php
+						$ads=$dt->data->ads_author;
+						if(empty($ads)){
+							echo $dt->data->fullname;
+						}
+						else{
+							echo "<a href='".$dt->data->ads_link."'>".$dt->data->ads_author."</a>";
+						}
+					?>
+				</h3>
 				<span><?php echo relative_time($this->library->datenormal($dt->data->publish_on)); ?> lalu - <?php echo $dt->data->news_like; ?> view</span>
 				<i class="far fa-comment openComment" aria-hidden="false" style="color: #8ec429;float: right;margin-top: -35px;margin-right: 15px;font-size: 30px;"><div class="openComment"></div></i>
 			</div>
@@ -94,7 +123,21 @@ if ($newsdetail){
                 ?>
 			</p>
 		</div>
+		
+		<?php
+		$ads_link=$dt->data->ads_link;
+		if($ads_link!=NULL OR $ads_link!=0){
+			echo "<span class='ads_selengkapnya'>
+			<a target='_blank' class='link_ads_selengkapnya' 
+			href='".$dt->data->ads_link."'>lihat artikel asli &gt;&gt;&gt;</a>
+			</span>";
+		}
+		else{
+			echo "";
+		}
+		?>
 
+				<p></p>
 		<!-- IKLAN -->
 		<div class="container">
 			<div class="box-flyad">
