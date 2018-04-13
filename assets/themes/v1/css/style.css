@@ -4106,3 +4106,29 @@ video::-webkit-media-controls-panel {
     font-size: 12px;
     padding-top: 8px;
 }
+.top-menu-ketegori{
+    height: 30px;
+    box-sizing: border-box;
+}
+.top-menu-ketegori::-webkit-scrollbar, .top-menu-ketegori::-webkit-scrollbar-button{
+    height: 0px;
+}
+.top-menu-ketegori a{
+    line-height: .8em;
+    font-size: .8em;
+    margin: 0px 10px;
+    display: block;
+    float: left;
+    font-weight: 600;
+    color: #BDBDBD;
+    padding-bottom: 8px;
+    padding-top: 5px;
+    text-transform: capitalize;
+    font-family: 'Roboto', sans-serif;
+}
+.top-menu-ketegori a .active, .top-menu-ketegori a:active, .top-menu-ketegori a:hover{
+    color: #F44336;
+    font-weight: 600;
+    padding-bottom: 5px;
+    border-bottom: 3px solid;
+}
