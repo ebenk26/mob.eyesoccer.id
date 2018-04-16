@@ -6,8 +6,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * API Credential
  *
  */
-$config['xurl'] = 'http://api.eyesoccer.id:8080/v1/';
+
+if($_SERVER['SERVER_NAME'] == 'localhost') {
+    $xurl = 'http://localhost:3000/v1/';
+    $xurlback = 'http://localhost:3000/v1/';
+} else {
+    $xurl = 'http://api.eyesoccer.id:8080/v1/';
+    $xurlback = 'http://api.eyesoccer.id:3000/v1/';
+}
+
+$config['xurl'] = $xurl;
 $config['xkey'] = 'eyeapp:super4ppm1nd3d';
+
+$config['xurlback'] = $xurl;
+$config['xkeyback'] = 'eyeback:superb4cksm4rt3r';
 
 /*
  *
