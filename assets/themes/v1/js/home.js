@@ -68,6 +68,12 @@ window.onload = function(){
             srcbox.style.display = "block";
         }
     }
+    if (clsdbcls.style.display !== "none") {
+        document.body.style.marginTop = "70px";
+        srcbox.style.top = "115px";
+    } else {
+        document.body.style.marginTop = "0px";
+    }
     // srcS.onclick = function() {
     //     srcbox.style.display = "none";
     // }
@@ -86,6 +92,7 @@ window.onload = function(){
     }
     iddbcls.onclick = function() {
         clsdbcls.style.display = "none";
+        document.body.style.marginTop = "0px";
     }
     //boxNotif.onclick = function() {
     //    displayNotif.style.display = "block";

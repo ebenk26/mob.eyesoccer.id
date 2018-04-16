@@ -26,16 +26,18 @@
 <!-- Link download berikut dibuat kondisi, jika device yg open iphone maka link nya ke apple store jika yg open device android
 maka link ke playstore, selain dua device tersebut maka button display none. dan dibuat cache jika button di close maka tetap
 tidak tampil walaupun di refresh agar tidak terlalu mengganggu -->
-<a href="#" class="dbcls">
-	<div class="cdownload-button">
-		<div>
-			<img source="http://static.eyesoccer.id/v1/cache/images/4033LOGO%20UNTUK%20APLIKASI.jpg" width=10% >
+<div class="dbcls">
+	<div class="dbcls-box">
+		<a href="">
+		<div class="db-section">
+			<div class="db-img-box">
+				<img src="http://static.eyesoccer.id/v1/cache/images/4033LOGO%20UNTUK%20APLIKASI.jpg" alt="">
+			</div>
 		</div>
-		<div>
-		<span align="center" class="cdownloadhead">Eyesoccer.ID Apps</span>
-		<span align="center" class="cdownloaddesc">Download aplikasinya untuk menikmati berita sepakbola nasional dan mancanegara terlengkap...</span>
-		<span align="center" class="cdownloadconfirm">Ok</span>
-		<i id="dbcloser" class="dbcloser">clear</i>
+		<div class="db-section">
+			<span>Dapatkan Info Terbaru dari kami. yuk download Eyesoccer Apps</span>
 		</div>
+		</a>
+		<i id="dbcls" class="material-icons">clear</i>
 	</div>
-</a>
+</div>

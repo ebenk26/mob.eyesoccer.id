@@ -13,7 +13,7 @@
         <input type='hidden' name='fn' value='trending' class='cinput'>
         <span class="x-c fafa">
             <span>Trending</span>
-            <x class="m-l-100"></x>
+            <!-- <x class="m-l-100"></x> -->
             <a href="" class="gr">Choirul Huda</a>
             <a href="" class="gr">IndonesiaU-19</a>
             <a href="" class="gr">Egy Maulana Vikri</a>
