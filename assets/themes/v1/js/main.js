@@ -7,11 +7,11 @@ $(document).ready(function () {
 
 	console.log('Your OS: '+OSName);
 	if(OSName == "Linux"){
-		$(".dbcls").attr("href","https://play.google.com/store/apps/details?id=com.eyesoccer.eyesoccer&hl=in");
-		$(".dbcls").attr("target","_blank");
+		$(".linkdbcls").attr("href","https://play.google.com/store/apps/details?id=com.eyesoccer.eyesoccer&hl=in");
+		$(".linkdbcls").attr("target","_blank");
 	}else if(OSName == "MacOS"){
-		$(".dbcls").attr('href','#');
-		$(".dbcls").hide();
+		$(".linkdbcls").attr('href','https://itunes.apple.com/us/app/eyesoccer-apps/id1345440798?ls=1&mt=8');
+		$(".linkdbcls").attr("target","_blank");
 	}else{
 		$(".dbcls").attr('href','#');
 		$(".dbcls").hide();

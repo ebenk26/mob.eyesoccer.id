@@ -28,7 +28,7 @@ maka link ke playstore, selain dua device tersebut maka button display none. dan
 tidak tampil walaupun di refresh agar tidak terlalu mengganggu -->
 <div class="dbcls">
 	<div class="dbcls-box">
-		<a href="">
+		<a class="linkdbcls" href="">
 		<div class="db-section">
 			<div class="db-img-box">
 				<img src="http://static.eyesoccer.id/v1/cache/images/4033LOGO%20UNTUK%20APLIKASI.jpg" alt="">
