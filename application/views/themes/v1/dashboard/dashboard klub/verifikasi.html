@@ -21,20 +21,27 @@
             <img src="http://localhost/mob.eyesoccer.id/assets/img/eyeme/user-discover.png" alt="">
         </div>
     </div>
-    <div id="menuDashboard" class="menu-dashboard bg243" style="display:none;">
-        <div class="container bg-menu-pic">
-            <div class="menu-pic">
-                <img src="http://localhost/mob.eyesoccer.id/assets/themes/v1/img/d.jpg" alt="">
+    <div class="responsif-add-100px">
+        <div id="menuDashboard" class="menu-dashboard bg243" style="display:none;">
+            <div class="container bg-menu-pic">
+                <div class="menu-pic">
+                    <img src="http://localhost/mob.eyesoccer.id/assets/themes/v1/img/d.jpg" alt="">
+                </div>
             </div>
-        </div>
-        <div class="container menu-dash">
-            <a class="active" href="http://localhost/mob.eyesoccer.id/eyeprofile/klub"><img src="http://localhost/mob.eyesoccer.id/assets/themes/v1/img/ic_eyeprofile.png" alt="">Eye Profile</a>
-            <a href="http://localhost/mob.eyesoccer.id/eyetube"><img src="http://localhost/mob.eyesoccer.id/assets/themes/v1/img/ic_eyetube.png" alt="">Eye Tube</a>
-            <a href="http://localhost/mob.eyesoccer.id/eyenews"><img src="http://localhost/mob.eyesoccer.id/assets/themes/v1/img/ic_eyenews.png" alt="">Eye News</a>
-            <a href="http://localhost/mob.eyesoccer.id/eyeme"><img src="http://localhost/mob.eyesoccer.id/assets/themes/v1/img/ic-eyeme.png" alt="">Eye Me</a>
-            <a href="http://localhost/mob.eyesoccer.id/eyemarket"><img src="http://localhost/mob.eyesoccer.id/assets/themes/v1/img/ic_eyemarket.png" alt="">Eye Market</a>
-            <a href="http://localhost/mob.eyesoccer.id/eyevent"><img src="http://localhost/mob.eyesoccer.id/assets/themes/v1/img/ic_eyevent.png" alt="">EyeVent</a>
-    
+            <div class="container menu-dash">
+                <a class="active" href="http://localhost/mob.eyesoccer.id/eyeprofile/klub">
+                    <img src="http://localhost/mob.eyesoccer.id/assets/themes/v1/img/ic_eyeprofile.png" alt="">Eye Profile</a>
+                <a href="http://localhost/mob.eyesoccer.id/eyetube">
+                    <img src="http://localhost/mob.eyesoccer.id/assets/themes/v1/img/ic_eyetube.png" alt="">Eye Tube</a>
+                <a href="http://localhost/mob.eyesoccer.id/eyenews">
+                    <img src="http://localhost/mob.eyesoccer.id/assets/themes/v1/img/ic_eyenews.png" alt="">Eye News</a>
+                <a href="http://localhost/mob.eyesoccer.id/eyeme">
+                    <img src="http://localhost/mob.eyesoccer.id/assets/themes/v1/img/ic-eyeme.png" alt="">Eye Me</a>
+                <a href="http://localhost/mob.eyesoccer.id/eyemarket">
+                    <img src="http://localhost/mob.eyesoccer.id/assets/themes/v1/img/ic_eyemarket.png" alt="">Eye Market</a>
+                <a href="http://localhost/mob.eyesoccer.id/eyevent">
+                    <img src="http://localhost/mob.eyesoccer.id/assets/themes/v1/img/ic_eyevent.png" alt="">EyeVent</a>
+            </div>
         </div>
     </div>
     <div id="isiContent" style="filter:none;">
@@ -42,7 +49,7 @@
         <div class="nav-dash">
             <ul>
                 <li>ALL</li>
-                <li>Player</li>
+                <LI>Klub</li>
                 <li>Eyeme</li>
                 <li>Eyetube</li>
                 <li>Tulisan Kamu</li>
@@ -65,11 +72,13 @@
     <div class="responsif-add-100px">
         <div class="container">
             <div class="x-form-daftar-pemain row">
-                <div class="close-check" id="editDaftarPemain" style="display: none;">
+                <div class="close-check">
                     <i class="far fa-check-circle"></i>
                     <i class="far fa-times-circle" onclick="functionCloseEdit()"></i>
+                    <i class="far fa-eye-slash" id="eyeSlash" onclick="functionTutupDetails()" style="display:none;"></i>
+                    <i class="fas fa-eye" id="eye" onclick="functionLihatDetails()"></i>
                 </div>
-                <i class="far fa-edit" id="iconEdit" onclick="functionEdit()" style="float:right; font-size:.9em;"></i>
+                <!-- <i class="far fa-edit" id="iconEdit" onclick="functionEdit()" style="float:right; font-size:.9em;"></i> -->
                 <div class="col-xs-4 edits">
                     <div class="img-round">
                         <img src="http://localhost/mob.eyesoccer.id/assets/img/eyeme/user-discover.png" alt="">
@@ -88,60 +97,55 @@
                 <table>
                     <tr>
                         <td>Nama</td>
-                        <td><input type="text"></td>
+                        <td><input type="text" disabled></td>
                     </tr>
                     <tr>
                         <td>Nama Lengkap</td>
-                        <td><input type="text"></td>
+                        <td><input type="text" disabled></td>
                     </tr>
                     <tr>
                         <td>Deskripsi</td>
-                        <td><input type="text"></td>
+                        <td><input type="text" disabled></td>
                     </tr>
                     <tr>
                         <td>Tempat Lahir</td>
-                        <td><input type="text"></td>
+                        <td><input type="text" disabled></td>
                     </tr>
                     <tr>
                         <td>Tanggal Lahir</td>
-                        <td><input type="text"></td>
+                        <td><input type="text" disabled></td>
                     </tr>
                     <tr>
                         <td>No. HP</td>
-                        <td><input type="text"></td>
+                        <td><input type="text" disabled></td>
                     </tr>
                     <tr>
                         <td>Email</td>
-                        <td><input type="text"></td>
+                        <td><input type="text" disabled></td>
                     </tr>
                     <tr>
                         <td>Tinggi</td>
-                        <td><input type="text"></td>
+                        <td><input type="text" disabled></td>
                     </tr>
                     <tr>
                         <td>Berat</td>
-                        <td><input type="text"></td>
+                        <td><input type="text" disabled></td>
                     </tr>
                     <tr>
                         <td>Kewarganegaraan</td>
-                        <td><input type="text"></td>
+                        <td><input type="text" disabled></td>
                     </tr>
                     <tr>
                         <td>Posisi</td>
-                        <td><input type="text"></td>
+                        <td><input type="text" disabled></td>
                     </tr>
                     <tr>
                         <td>No. Punggung</td>
-                        <td><input type="text"></td>
+                        <td><input type="text" disabled></td>
                     </tr>
                     <tr>
                         <td>Kemampuan Kaki</td>
-                        <td><input type="text"></td>
-                    </tr>
-                    <tr>
-                        <td colspan="2" class="tx-c">
-                            <button class="klik-dsn">Simpan</button>
-                        </td>
+                        <td><input type="text" disabled></td>
                     </tr>
                 </table>
             </div>
@@ -149,7 +153,7 @@
     </div>
 
     
-    <!-- NOTIFICATION -->
+    <!-- INBOX NOTIFICATION -->
     <div class="container dash-notif" id="notifInbox" style="display: none;">
         <div class="panah-notif"></div>
         <div class="title-notif">
@@ -168,6 +172,48 @@
                 </div>
                 <div class="bb2g"></div>
             </a>
+            <!-- <a href="" class="container inbox-dashboard">
+                <div class="container img-inbox-dashboard">
+                    <img src="http://localhost/mob.eyesoccer.id/assets/img/eyeme/user-discover.png" alt="">
+                </div>
+                <div class="text-inbox">
+                    <span class="time">12:15</span>
+                    <span class="sender">eyesoccer</span>
+                    <span class="title">ayo update data kamu ...</span>
+                    <span class="preview">Hallo Dila, ayo update data kamu...</span>
+                </div>
+                <div class="bb2g"></div>
+            </a> -->
+        </div>
+    </div>
+
+    <!-- NOTIFICATION -->
+    <div class="container dash-notif" id="notifications" style="display: none;">
+        <div class="panah-notif2"></div>
+        <div class="title-notif">
+            <span class="container">Notifikasi</span>
+        </div>
+        <div class="notific">
+            <a href="" class="container inbox-dashboard">
+                <div class="container img-inbox-dashboard">
+                    <img src="http://localhost/mob.eyesoccer.id/assets/img/eyeme/user-discover.png" alt="">
+                </div>
+                <div class="text-inbox2">
+                    <span>Rika Aulia</span>
+                    <span>melihat profil kamu</span>
+                </div>
+                <div class="bb2g"></div>
+            </a>
+            <!-- <a href="" class="container inbox-dashboard">
+                <div class="container img-inbox-dashboard">
+                    <img src="http://localhost/mob.eyesoccer.id/assets/img/eyeme/user-discover.png" alt="">
+                </div>
+                <div class="text-inbox2">
+                    <span>Rika Aulia</span>
+                    <span>melihat profil kamu</span>
+                </div>
+                <div class="bb2g"></div>
+            </a> -->
         </div>
     </div>
 
@@ -180,26 +226,6 @@
                 x.style.display = "none";
             }
         }
-        function functionEdit() {
-            var x = document.getElementById("editDaftarPemain");
-            var y = document.getElementById("iconEdit");
-            var z = document.getElementById("formDaftarPemain");
-            if (x.style.display == "none") {
-                x.style.display = "block";
-                y.style.display = "none";
-                z.style.display = "block";
-            }
-        }
-        function functionCloseEdit() {
-            var x1 = document.getElementById("editDaftarPemain");
-            var y1 = document.getElementById("iconEdit");
-            var z1 = document.getElementById("formDaftarPemain");
-            if (z1.style.display == "block") {
-                z1.style.display = "none";
-                y1.style.display = "block";
-                x1.style.display = "none";
-            }
-        }
         function closeFunction() {
             var y = document.getElementById("welcome");
             if (y.style.display == "block") {
@@ -210,13 +236,31 @@
             var y = document.getElementById("notifInbox");
             var p = document.getElementById("isiContent");
             var q = document.getElementById("signNotifInbox");
+            var a = document.getElementById("notifications");
             if (y.style.display == "none") {
                 y.style.display = "block";
                 q.style.display = "none";
-                p.style.filter = "blur(10px)";
+                p.style.filter = "blur(20px)";
+                a.style.display = "none";
+                
             } else {
                 y.style.display = "none";
                 p.style.filter = "unset";
+            }
+        }
+        function functionNotification() {
+            var a = document.getElementById("notifications");
+            var b = document.getElementById("isiContent");
+            var c = document.getElementById("signNotification");
+            var y = document.getElementById("notifInbox");
+            if (a.style.display == "none") {
+                a.style.display = "block";
+                c.style.display = "none";
+                b.style.filter = "blur(20px)";
+                y.style.display = "none";
+            } else {
+                a.style.display = "none";
+                b.style.filter = "unset";
             }
         }
     </script>
