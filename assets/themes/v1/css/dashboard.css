@@ -71,7 +71,7 @@
 }
 .nav-dashboard{
     background-color: rgb(255 226 78);
-    padding: 10px 10px 0;
+    padding: 10px 0;
     width: 100%;
     max-width: 768px;
     height: 43px;
@@ -84,13 +84,12 @@
 }
 .nav-dash{
     width: max-content;
-    padding-right: 20px;
     font-size: .85em;
     text-align: center;
     min-width: 100%;
 }
 .nav-dash li{
-    padding-right: 11px;
+    padding: 0px 11px;
 }
 .stc{
     padding: 10px;
@@ -479,6 +478,7 @@
 .dash-notif{
     position: fixed;
     z-index: 1;
+    top: 100px;
     /* display: none; */
 }
 .notific{
@@ -598,6 +598,7 @@
 .submenus{
     width: max-content;
     padding: 12px 0;
+    margin: 0 auto;
 }
 .submenu ul{
     text-align: center;
@@ -690,6 +691,11 @@
 .close-check{
     position: absolute;
     right: 20px;
+    z-index: 1;
+    background-color: white;
+}
+.close-check i{
+    padding-left: 3px;
 }
 .form-dp{
     padding: 0 20px;
@@ -786,8 +792,6 @@
     border: none;
     border-bottom: 2px solid #d8d8d8;
     appearance: unset;
-    -moz-appearance: unset;
-    -webkit-appearance: unset;
 }
 .data-profil select{
     width: max-content;
@@ -802,4 +806,8 @@
 }
 .close-check1 i{
     padding: 0px 1px;
+}
+select{
+    -webkit-appearance: menulist !important;
+    -moz-appearance: menulist !important;
 }

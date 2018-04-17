@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="http://localhost/mob.eyesoccer.id/assets/themes/v1/css/dashboard.css">
     <link rel="stylesheet" href="http://localhost/mob.eyesoccer.id/assets/css/font-awesome/css/fontawesome-all.css">
 </head>
+
 <body class="m-pd-t-100 body-responsive">
     <div class="container stc">
         <div class="container m-bar">
@@ -21,63 +23,72 @@
             <img src="http://localhost/mob.eyesoccer.id/assets/img/eyeme/user-discover.png" alt="">
         </div>
     </div>
-    <div id="menuDashboard" class="menu-dashboard bg243" style="display:none;">
-        <div class="container bg-menu-pic">
-            <div class="menu-pic">
-                <img src="http://localhost/mob.eyesoccer.id/assets/themes/v1/img/d.jpg" alt="">
+    <div class="responsif-add-100px">
+        <div id="menuDashboard" class="menu-dashboard bg243" style="display:none;">
+            <div class="container bg-menu-pic">
+                <div class="menu-pic">
+                    <img src="http://localhost/mob.eyesoccer.id/assets/themes/v1/img/d.jpg" alt="">
+                </div>
             </div>
-        </div>
-        <div class="container menu-dash">
-            <a class="active" href="http://localhost/mob.eyesoccer.id/eyeprofile/klub"><img src="http://localhost/mob.eyesoccer.id/assets/themes/v1/img/ic_eyeprofile.png" alt="">Eye Profile</a>
-            <a href="http://localhost/mob.eyesoccer.id/eyetube"><img src="http://localhost/mob.eyesoccer.id/assets/themes/v1/img/ic_eyetube.png" alt="">Eye Tube</a>
-            <a href="http://localhost/mob.eyesoccer.id/eyenews"><img src="http://localhost/mob.eyesoccer.id/assets/themes/v1/img/ic_eyenews.png" alt="">Eye News</a>
-            <a href="http://localhost/mob.eyesoccer.id/eyeme"><img src="http://localhost/mob.eyesoccer.id/assets/themes/v1/img/ic-eyeme.png" alt="">Eye Me</a>
-            <a href="http://localhost/mob.eyesoccer.id/eyemarket"><img src="http://localhost/mob.eyesoccer.id/assets/themes/v1/img/ic_eyemarket.png" alt="">Eye Market</a>
-            <a href="http://localhost/mob.eyesoccer.id/eyevent"><img src="http://localhost/mob.eyesoccer.id/assets/themes/v1/img/ic_eyevent.png" alt="">EyeVent</a>
-    
+            <div class="container menu-dash">
+                <a class="active" href="http://localhost/mob.eyesoccer.id/eyeprofile/klub">
+                    <img src="http://localhost/mob.eyesoccer.id/assets/themes/v1/img/ic_eyeprofile.png" alt="">Eye Profile</a>
+                <a href="http://localhost/mob.eyesoccer.id/eyetube">
+                    <img src="http://localhost/mob.eyesoccer.id/assets/themes/v1/img/ic_eyetube.png" alt="">Eye Tube</a>
+                <a href="http://localhost/mob.eyesoccer.id/eyenews">
+                    <img src="http://localhost/mob.eyesoccer.id/assets/themes/v1/img/ic_eyenews.png" alt="">Eye News</a>
+                <a href="http://localhost/mob.eyesoccer.id/eyeme">
+                    <img src="http://localhost/mob.eyesoccer.id/assets/themes/v1/img/ic-eyeme.png" alt="">Eye Me</a>
+                <a href="http://localhost/mob.eyesoccer.id/eyemarket">
+                    <img src="http://localhost/mob.eyesoccer.id/assets/themes/v1/img/ic_eyemarket.png" alt="">Eye Market</a>
+                <a href="http://localhost/mob.eyesoccer.id/eyevent">
+                    <img src="http://localhost/mob.eyesoccer.id/assets/themes/v1/img/ic_eyevent.png" alt="">EyeVent</a>
+            </div>
         </div>
     </div>
     <div id="isiContent" style="filter:none;">
-    <div class="container nav-dashboard">
-        <div class="nav-dash">
-            <ul>
-                <li>ALL</li>
-                <li>Player</li>
-                <li>Eyeme</li>
-                <li>Eyetube</li>
-                <li>Tulisan Kamu</li>
-                <li>Analytics</li>
-            </ul>
+        <div class="container nav-dashboard">
+            <div class="nav-dash">
+                <ul>
+                    <li>ALL</li>
+                    <LI>Klub</li>
+                    <li>Eyeme</li>
+                    <li>Eyetube</li>
+                    <li>Tulisan Kamu</li>
+                    <li>Analytics</li>
+                </ul>
+            </div>
         </div>
-    </div>
-    <div class="container wlc" id="welcome" style="display:block;">
-        <div>
-            <img src="http://localhost/mob.eyesoccer.id/assets/img/email/background.png" alt="">
+        <div class="responsif-add-100px">
+            <div class="container wlc" id="welcome" style="display:block;">
+                <div>
+                    <img src="http://localhost/mob.eyesoccer.id/assets/img/email/background.png" alt="">
+                </div>
+                <div class="close-wlcm">
+                    <i class="fas fa-times" onclick="closeFunction()"></i>
+                </div>
+                <div class="wlcm">
+                    <span>SELAMAT DATANG</span>
+                    <span>DI EYESOCCER</span>
+                    <span>UPDATE DATA PRIBADI KAMU</span>
+                </div>
+            </div>
+            <div class="container daftar-pemain">
+                <div class="form-daftar-pemain">
+                    <span>JIKA KAMU PEMAIN SEPAKBOLA</span>
+                    <span>DAFTARKAN KLUB KAMU</span>
+                    <button class="klik-dsn">KLIK DISINI</button>
+                </div>
+                <div class="form-daftar-pemain">
+                    <span class="fs68">JIKA KAMU SUPPORTER SEPAKBOLA</span>
+                    <span>DAFTARKAN PEMAIN</span>
+                    <button class="klik-dsn">KLIK DISINI</button>
+                </div>
+            </div>
         </div>
-        <div class="close-wlcm">
-            <i class="fas fa-times" onclick="closeFunction()"></i>
-        </div>
-        <div class="wlcm">
-            <span>SELAMAT DATANG</span>
-            <span>DI EYESOCCER</span>
-            <span>UPDATE DATA PRIBADI KAMU</span>
-        </div>        
-    </div>
-    <div class="container daftar-pemain">
-        <div class="form-daftar-pemain">
-            <span>JIKA KAMU PEMAIN SEPAKBOLA</span>
-            <span>DAFTARKAN KLUB KAMU</span>
-            <button class="klik-dsn">KLIK DISINI</button>
-        </div>
-        <div class="form-daftar-pemain">
-            <span class="fs68">JIKA KAMU SUPPORTER SEPAKBOLA</span>
-            <span>DAFTARKAN PEMAIN</span>
-            <button class="klik-dsn">KLIK DISINI</button>
-        </div>
-    </div>
     </div>
 
-    
+
     <!-- INBOX NOTIFICATION -->
     <div class="container dash-notif" id="notifInbox" style="display: none;">
         <div class="panah-notif"></div>
@@ -161,10 +172,13 @@
             var y = document.getElementById("notifInbox");
             var p = document.getElementById("isiContent");
             var q = document.getElementById("signNotifInbox");
+            var a = document.getElementById("notifications");
             if (y.style.display == "none") {
                 y.style.display = "block";
                 q.style.display = "none";
                 p.style.filter = "blur(20px)";
+                a.style.display = "none";
+                
             } else {
                 y.style.display = "none";
                 p.style.filter = "unset";
@@ -174,10 +188,12 @@
             var a = document.getElementById("notifications");
             var b = document.getElementById("isiContent");
             var c = document.getElementById("signNotification");
+            var y = document.getElementById("notifInbox");
             if (a.style.display == "none") {
                 a.style.display = "block";
                 c.style.display = "none";
                 b.style.filter = "blur(20px)";
+                y.style.display = "none";
             } else {
                 a.style.display = "none";
                 b.style.filter = "unset";
@@ -185,4 +201,5 @@
         }
     </script>
 </body>
+
 </html>

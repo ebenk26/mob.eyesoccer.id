@@ -258,3 +258,57 @@
 			<?php
 	}
 ?>
+<div class="pemain-detailll">
+	<div class="container table-span1" active="false" id="pemainDetail">
+		<span>1</span>
+		<i class="fas fa-angle-double-down"></i>
+		<table>
+			<tr>
+				<td>Tahun</td>
+				<td>2018</td>
+			</tr>
+			<tr>
+				<td>Klub</td>
+				<td>Arema</td>
+			</tr>
+		</table>
+	</div>
+	<div class="table-span2 pemainDetail" style="display:none;">
+		<table>
+			<tr>
+				<td>Turnamen / Kompetisi</td>
+				<td>Liga Indonesia 1</td>
+			</tr>
+			<tr>
+				<td>Jumlah Main</td>
+				<td>10</td>
+			</tr>
+			<tr>
+				<td>Nomor Punggung</td>
+				<td>10</td>
+			</tr>
+			<tr>
+				<td>Pelatih</td>
+				<td>Santiago</td>
+			</tr>
+		</table>
+	</div>
+</div>
+<script>
+$(document).ready(function(){
+	$(document).on('click','.table-span1',function(){
+		var id = $(this).attr('id');
+		$('.pemain-detailll .table-span1').each(function(){
+			if($(this).attr('active')){
+				$(this).removeAttr('active');
+				var idx = $(this).attr('id');
+				$('.'+idx).hide();
+				$(this).removeClass('active');
+			}
+		})
+		$('.'+id).fadeIn('fast');
+		$('#'+id).attr('active', true);
+		$('#'+id).addClass('active');
+	})
+});
+</script>
