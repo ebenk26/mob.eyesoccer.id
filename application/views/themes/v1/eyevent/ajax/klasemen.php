@@ -50,8 +50,8 @@
 		padding: 20px 20px 20px 20px;
 		margin: 20px 20px 20px 20px;
 		position:relative;
-		top:-132px;
-		left:255px;
+        top: -100px;
+        left: -40px;
 	}
 	.detailkontinental1{
 		background-color:#c4d8c7;
