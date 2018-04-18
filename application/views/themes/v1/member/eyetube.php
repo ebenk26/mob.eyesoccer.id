@@ -1,15 +1,7 @@
-<div class="container nav-dashboard">
-        <div class="nav-dash">
-            <ul>
-                <a href="<?php echo base_url()?>member"><li>ALL</li></a>
-                <a href="<?php echo base_url()?>member/player"><li>Player</li></a>
-                <a href="<?php echo base_url()?>member/eyeme"><li>Eyeme</li></a>
-                <a href="<?php echo base_url()?>member/eyetube"><li class="active">Eyetube</li></a>
-                <a href="<?php echo base_url()?>member/tulisan_kamu"><li>Tulisan Kamu</li></a>
-                <a href="<?php echo base_url()?>member/analytics"><li>Analytics</li></a>
-            </ul>
-        </div>
-    </div>
+	<?php
+        $data['active'] = 'eyetube';
+        $this->load->view($folder.'widget/header_member', $data);
+	?>
     <div class="container">
         <div class="tube-eye">
             <a href="">
