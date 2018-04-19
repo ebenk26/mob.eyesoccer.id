@@ -1,78 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="http://localhost/mob.eyesoccer.id/assets/themes/v1/css/style.css">
-    <link rel="stylesheet" href="http://localhost/mob.eyesoccer.id/assets/themes/v1/css/dashboard.css">
-    <link rel="stylesheet" href="http://localhost/mob.eyesoccer.id/assets/css/font-awesome/css/fontawesome-all.css">
-</head>
-
-<body class="m-pd-t-100 body-responsive">
-    <div class="container stc">
-        <div class="container m-bar">
-            <i class="fas fa-bars" onclick="myFunction()"></i>
-            <i class="far fa-envelope" onclick="functionNotifInbox()"></i>  <span id="signNotifInbox">1</span>
-            <i class="far fa-bell" onclick="functionNotification()"></i>    <span id="signNotification" class="l83">1</span>
-        </div>
-        <i class="fas fa-sign-in-alt login-ic"></i>
-        <div class="fl-r img-pic">
-            <img src="http://localhost/mob.eyesoccer.id/assets/img/eyeme/user-discover.png" alt="">
-        </div>
-    </div>
+    <?php
+        $data['active'] = 'home';
+        $this->load->view($folder.'widget/header_member', $data);
+	?>
     <div class="responsif-add-100px">
-        <div id="menuDashboard" class="menu-dashboard bg243" style="display:none;">
-            <div class="container bg-menu-pic">
-                <div class="menu-pic">
-                    <img src="http://localhost/mob.eyesoccer.id/assets/themes/v1/img/d.jpg" alt="">
-                </div>
-            </div>
-            <div class="container menu-dash">
-                <a class="active" href="http://localhost/mob.eyesoccer.id/eyeprofile/klub">
-                    <img src="http://localhost/mob.eyesoccer.id/assets/themes/v1/img/ic_eyeprofile.png" alt="">Eye Profile</a>
-                <a href="http://localhost/mob.eyesoccer.id/eyetube">
-                    <img src="http://localhost/mob.eyesoccer.id/assets/themes/v1/img/ic_eyetube.png" alt="">Eye Tube</a>
-                <a href="http://localhost/mob.eyesoccer.id/eyenews">
-                    <img src="http://localhost/mob.eyesoccer.id/assets/themes/v1/img/ic_eyenews.png" alt="">Eye News</a>
-                <a href="http://localhost/mob.eyesoccer.id/eyeme">
-                    <img src="http://localhost/mob.eyesoccer.id/assets/themes/v1/img/ic-eyeme.png" alt="">Eye Me</a>
-                <a href="http://localhost/mob.eyesoccer.id/eyemarket">
-                    <img src="http://localhost/mob.eyesoccer.id/assets/themes/v1/img/ic_eyemarket.png" alt="">Eye Market</a>
-                <a href="http://localhost/mob.eyesoccer.id/eyevent">
-                    <img src="http://localhost/mob.eyesoccer.id/assets/themes/v1/img/ic_eyevent.png" alt="">EyeVent</a>
-            </div>
-        </div>
-    </div>
-    <div id="isiContent" style="filter:none;">
-        <div class="container nav-dashboard">
-                <div class="nav-dash">
-                    <ul>
-                        <li>ALL</li>
-                        <LI>Klub</li>
-                        <li>Eyeme</li>
-                        <li>Eyetube</li>
-                        <li>Tulisan Kamu</li>
-                        <li>Analytics</li>
-                    </ul>
-                </div>
-        </div>
-        <div class="responsif-add-100px">
-            <div class="container submenu">
-                <div class="submenus">
-                    <ul>
-                        <li>info klub</li>
-                        <li>pemain</li>
-                        <li>ofisial</li>
-                        <li>galeri</li>
-                        <li>verifikasi</li>
-                        <li>daftar liga</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="container mt20">
+		<div class="container submenu">
+			<div class="submenus">
+				<ul>
+					<li>info klub</li>
+					<li>pemain</li>
+					<li>ofisial</li>
+					<li>galeri</li>
+					<li>verifikasi</li>
+					<li>daftar liga</li>
+				</ul>
+			</div>
+		</div>
+		<div class="container mt20">
                 <div class="pp-profil">
                     <img src="http://localhost/mob.eyesoccer.id/assets/themes/v1/img/d.jpg" alt="Logo Klub">
                 </div>
@@ -80,19 +23,7 @@
             <div class="container data-profil mt20">
                 <table>
                     <tr>
-                        <td>Nama</td>
-                        <td>
-                            <input type="text">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Nama Panggilan</td>
-                        <td>
-                            <input type="text">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Deskripsi</td>
+                        <td>Nama Lengkap</td>
                         <td>
                             <input type="text">
                         </td>
@@ -110,7 +41,43 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>No. HP</td>
+                        <td>Jenis kelamin</td>
+                        <td>
+                            <input type="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>No.Identitas / KTP / Passport</td>
+                        <td>
+                            <input type="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Warga Negara</td>
+                        <td>
+                            <input type="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Klub / SSB Saat Ini</td>
+                        <td>
+                            <input type="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Jabatan</td>
+                        <td>
+                            <input type="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Lisensi Pelatih</td>
+                        <td>
+                            <input type="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>No. Telepon</td>
                         <td>
                             <input type="text">
                         </td>
@@ -122,110 +89,63 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>Tinggi</td>
+                        <td>Kisaran Kontrak</td>
                         <td>
                             <input type="text">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Berat</td>
-                        <td>
-                            <input type="text">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Kewarganegaraan</td>
-                        <td>
-                            <input type="text">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Posisi</td>
-                        <td>
-                            <input type="text">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>No Punggung</td>
-                        <td>
-                            <input type="text">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Kemampuan Kaki</td>
-                        <td>
-                            <input type="text">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Klub Favorit</td>
-                        <td>
-                            <input type="text">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Pemain Favorit</td>
-                        <td>
-                            <input type="text">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Pelatih Favorit</td>
-                        <td>
-                            <input type="text">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Nama Ayah</td>
-                        <td>
-                            <input type="text">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Nama Ibu</td>
-                        <td>
-                            <input type="text">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Karir Klub</td>
-                        <td>
-                            <input type="text">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Karir Timnas</td>
-                        <td>
-                            <input type="text">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Prestasi</td>
-                        <td>
-                            <input type="text">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Lampiran
-                        </td>
-                        <td>
-                            <div class="up-foto">
-                                <i class="fas fa-plus-circle"></i>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="2" class="tx-c">
-                            <button class="klik-dsn">Simpan</button>
                         </td>
                     </tr>
                 </table>
+                <div class="container data-oficial">
+                    <h3>KARIR DAN PRESTASI OFFICIAL</h3>
+                    <div class="scroll-x-outer">
+                        <table class="scroll-x-inner">
+                            <tr>
+                                <td>Bulan</td>
+                                <td>Tahun</td>
+                                <td>Klub</td>
+                                <td>Turnamen / Kompetisi</td>
+                                <td>Peringkat Lisensi Penghargaan</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <select name="" id="">
+                                        <!-- <option value="">Pilih Bulan</option> -->
+                                        <option value="">Jan</option>
+                                        <option value="">Feb</option>
+                                        <option value="">Mar</option>
+                                        <option value="">Apr</option>
+                                        <option value="">Mei</option>
+                                        <option value="">Jun</option>
+                                        <option value="">Jul</option>
+                                        <option value="">Agus</option>
+                                        <option value="">Sept</option>
+                                        <option value="">Okt</option>
+                                        <option value="">Nov</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <select name="" id="">
+                                        <!-- <option value="">Pilih Tahun</option> -->
+                                        <option value="">2018</option>
+                                        <option value="">2017</option>
+                                        <option value="">2016</option>
+                                        <option value="">2015</option>
+                                        <option value="">2014</option>
+                                        <option value="">2013</option>
+                                    </select>
+                                </td>
+                                <td><input type="text"></td>
+                                <td><input type="text"></td>
+                                <td><input type="text"></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-
-
+            <div class="tx-c">
+                <button class="klik-dsn" style="font-size:.85em;">Simpan</button>
+            </div>
+	</div>
     <!-- INBOX NOTIFICATION -->
     <div class="container dash-notif" id="notifInbox" style="display: none;">
         <div class="panah-notif"></div>
@@ -337,6 +257,3 @@
             }
         }
     </script>
-</body>
-
-</html>

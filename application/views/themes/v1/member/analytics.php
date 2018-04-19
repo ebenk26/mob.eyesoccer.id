@@ -1,15 +1,7 @@
-<div class="container nav-dashboard">
-        <div class="nav-dash">
-            <ul>
-                <a href="<?php echo base_url()?>member"><li>ALL</li></a>
-                <a href="<?php echo base_url()?>member/player"><li>Player</li></a>
-                <a href="<?php echo base_url()?>member/eyeme"><li>Eyeme</li></a>
-                <a href="<?php echo base_url()?>member/eyetube"><li>Eyetube</li></a>
-                <a href="<?php echo base_url()?>member/tulisan_kamu"><li>Tulisan Kamu</li></a>
-                <a href="<?php echo base_url()?>member/analytics"><li class="active">Analytics</li></a>
-            </ul>
-        </div>
-    </div>
+	<?php
+        $data['active'] = 'analytics';
+        $this->load->view($folder.'widget/header_member', $data);
+	?>
     <div class="menu-dashboard bg243">
         <div class="container tx-c graph">
             <div class="menu-analytic">

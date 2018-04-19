@@ -29,8 +29,11 @@ class Member extends CI_Controller {
 		$this->MemberMod->$fn();
 	    }
 	} else {
-
-		$content = ($this->session->member ? 'member/home': 'member/login');
+		if($_SERVER['SERVER_NAME'] == 'localhost'){
+			$content = ($this->session->member ? 'member/home_new': 'member/login');
+		}else{
+			$content = ($this->session->member ? 'member/home': 'member/login');
+		}
 		if($this->session->member){
 			$data['id']  	= $this->HomeMod->get_id('id_member', 'tbl_member', $this->session->member['id']);
 			$data['detail'] = $this->MemberMod->member_detail($data['id']);
@@ -79,4 +82,86 @@ class Member extends CI_Controller {
 		$this->MemberMod->submit_data_member($_POST);
     }
 
+	function player(){
+    	$content = 'member/player';
+    	$data['content'] = $content;
+    	$data['title']   = $this->config->item('meta_title');
+    	$data['kanal']   = 'member';
+    	$data['meta_desc'] = $this->config->item('meta_desc');
+	    $data['meta_keyword'] = $this->config->item('meta_keyword');
+	    
+	    $this->load->view($this->__theme().'template', $data);
+
+    }
+	
+	function eyeme(){
+    	$content = 'member/eyeme';
+    	$data['content'] = $content;
+    	$data['title']   = $this->config->item('meta_title');
+    	$data['kanal']   = 'member';
+    	$data['meta_desc'] = $this->config->item('meta_desc');
+	    $data['meta_keyword'] = $this->config->item('meta_keyword');
+	    
+	    $this->load->view($this->__theme().'template', $data);
+
+    }
+	
+	function eyetube(){
+    	$content = 'member/eyetube';
+    	$data['content'] = $content;
+    	$data['title']   = $this->config->item('meta_title');
+    	$data['kanal']   = 'member';
+    	$data['meta_desc'] = $this->config->item('meta_desc');
+	    $data['meta_keyword'] = $this->config->item('meta_keyword');
+	    
+	    $this->load->view($this->__theme().'template', $data);
+
+    }
+	
+	function tulisan_kamu(){
+    	$content = 'member/tulisan_kamu';
+    	$data['content'] = $content;
+    	$data['title']   = $this->config->item('meta_title');
+    	$data['kanal']   = 'member';
+    	$data['meta_desc'] = $this->config->item('meta_desc');
+	    $data['meta_keyword'] = $this->config->item('meta_keyword');
+	    
+	    $this->load->view($this->__theme().'template', $data);
+
+    }
+	function analytics(){
+    	$content = 'member/analytics';
+    	$data['content'] = $content;
+    	$data['title']   = $this->config->item('meta_title');
+    	$data['kanal']   = 'member';
+    	$data['meta_desc'] = $this->config->item('meta_desc');
+	    $data['meta_keyword'] = $this->config->item('meta_keyword');
+	    
+	    $this->load->view($this->__theme().'template', $data);
+
+    }
+	
+	function info_klub(){
+    	$content = 'member/info_klub';
+    	$data['content'] = $content;
+    	$data['title']   = $this->config->item('meta_title');
+    	$data['kanal']   = 'member';
+    	$data['meta_desc'] = $this->config->item('meta_desc');
+	    $data['meta_keyword'] = $this->config->item('meta_keyword');
+	    
+	    $this->load->view($this->__theme().'template', $data);
+
+    }
+	
+	function regis_klub(){
+    	$content = 'member/regis_klub';
+    	$data['content'] = $content;
+    	$data['title']   = $this->config->item('meta_title');
+    	$data['kanal']   = 'member';
+    	$data['meta_desc'] = $this->config->item('meta_desc');
+	    $data['meta_keyword'] = $this->config->item('meta_keyword');
+	    
+	    $this->load->view($this->__theme().'template', $data);
+
+    }
 }

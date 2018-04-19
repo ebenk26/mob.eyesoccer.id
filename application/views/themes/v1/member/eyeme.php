@@ -1,15 +1,7 @@
- <div class="container nav-dashboard">
-        <div class="nav-dash">
-            <ul>
-                <a href="<?php echo base_url()?>member"><li>ALL</li></a>
-                <a href="<?php echo base_url()?>member/player"><li>Player</li></a>
-                <a href="<?php echo base_url()?>member/eyeme"><li class="active">Eyeme</li></a>
-                <a href="<?php echo base_url()?>member/eyetube"><li>Eyetube</li></a>
-                <a href="<?php echo base_url()?>member/tulisan_kamu"><li>Tulisan Kamu</li></a>
-                <a href="<?php echo base_url()?>member/analytics"><li>Analytics</li></a>
-            </ul>
-        </div>
-    </div>
+	<?php
+        $data['active'] = 'eyeme';
+        $this->load->view($folder.'widget/header_member', $data);
+	?>
     <div class="container wlc">
         <div class="bg-eyeme">
             <img src="http://localhost/mob.eyesoccer.id/assets/themes/v1/img/a.jpg" alt="Background Image">
