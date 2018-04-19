@@ -4184,3 +4184,66 @@ video::-webkit-media-controls-panel {
 .table-span2 tr{
     background-color: whitesmoke;
 }
+select{
+    -webkit-appearance: none;
+    appearance: none;
+    padding: 8px 20px 8px 8px;
+    background-color: transparent;
+    border: 1px solid gray;
+    position: relative;
+}
+select::after, select:after{
+    position: absolute;
+    content: "";
+    top: 5px;
+    right: 5px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #333 transparent transparent transparent;
+}
+.section-box-popup{
+    position: fixed;
+    background-color: #4e4e4e63;
+    width: 100%;
+    overflow-y: auto;
+    height: 100vh;
+    top: 0px;
+    z-index: 999;
+    max-width: 768px;
+}
+.box-popup{
+    position: relative;
+    width: 95%;
+    height: max-content;
+    background-color: white;
+    /* z-index: 15; */
+    /* left: 2.5%; */
+    box-shadow: 0 0 10px -4px #0000005e;
+    border-radius: 6px;
+    margin: 10px 2.5%;    /* top: 10px; */
+    float: unset;
+    padding: 10px 0px 25px;
+}
+.sbpclose{
+    position:  absolute;right:  5px;top:  5px;font-size:  1em;
+}
+.to-open{
+    display: none;
+}
+.sbpbtn{
+    position: fixed;
+    top: 120px;
+    left: 0px;
+    right: 0px;
+    background-color: #2196F3;
+    width: 200px;
+    text-align: center;
+    margin: 0 auto;
+    color: white;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 25px;
+    font-size: .9em;
+    font-weight: 600;
+}
