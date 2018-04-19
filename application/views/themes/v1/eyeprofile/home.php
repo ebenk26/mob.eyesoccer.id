@@ -13,6 +13,7 @@
         </div>
     <div class="eprofile">
 		<div class="head" style="border-radius: 8px 8px 0px 0px;margin-bottom: 25px;height: 80px;min-height:  unset;">
+        <span class="button-open sbpbtn">Daftarkan SSB Kamu</span>
             <!-- <div class="img-radius" style="display:none;">
                 <img src=""
                     alt="">
@@ -29,7 +30,7 @@
 					<a href="">supporter</a> -->
 				</div>
 		</div>
-		<div class="table-scroll" style="height: unset;margin: 0px 0px 15px;">
+		<div class="table-scroll" style="height: unset;margin: 20px 0px 15px;">
 				<div id="reqdescleague" class='loadclubcount' action="eyeprofile" loading="off" clean="clsclubcount">
 					<div id='clsclubcount'>
 						<script>
@@ -370,7 +371,6 @@
                 </div>
             </div>
     </div>
-    <span class="button-open sbpbtn">Daftarkan SSB Kamu</span>
 	<div class="section-box-popup to-open">
 	<div class="box-popup">
     <i class="material-icons sbpclose to-close">clear</i>

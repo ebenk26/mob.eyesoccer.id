@@ -47,7 +47,7 @@ var clsdbcls = document.getElementsByClassName("dbcls")[0];
 var toOpen = document.getElementsByClassName("to-open")[0];
 var toClose = document.getElementsByClassName("to-close")[0];
 var buttonOpen = document.getElementsByClassName("button-open")[0];
-var sbpbtn = document.getElementsByClassName("sbpbtn")[0];
+var sectionBoxPopup = document.getElementsByClassName("section-box-popup")[0];
 // var logBtn = document.getElementById('logBtn');
 // var regBtn = document.getElementById('regBtn');
 // var logBox = document.getElementsByClassName("login-box")[0];
@@ -67,6 +67,9 @@ window.onload = function(){
     //    $('#logBtn').removeClass('active');
     // }
 
+    buttonOpen.style.width = "200px";
+    buttonOpen.style.height = "unset";
+    buttonOpen.style.padding = "10px";
     if(src !== undefined && src !== null){
         src.onclick = function() {
             srcbox.style.display = "block";
@@ -99,7 +102,6 @@ window.onload = function(){
         clsdbcls.style.display = "none";
         document.body.style.paddingTop = "0px";
         srcbox.style.top = "45px";
-        sbpbtn.style.top = "50px";
     }
     //boxNotif.onclick = function() {
     //    displayNotif.style.display = "block";
@@ -121,10 +123,14 @@ window.onload = function(){
     //}
 
     toClose.onclick = function() {
-        toOpen.style.display = "none";
+        // toOpen.style.display = "none";
+        sectionBoxPopup.style.width = "0px";
+        sectionBoxPopup.style.height = "0px";
     }
     buttonOpen.onclick = function() {
-        toOpen.style.display = "block";
+        // toOpen.style.display = "block";
+        sectionBoxPopup.style.width = "100%";
+        sectionBoxPopup.style.height = "100vh";
     }
     $(document).on('click', '.display-box-notif', function(){
         $('.box-notif').fadeIn('fast');

@@ -87,7 +87,7 @@
         <option value="italia">Liga Italia</option>
     </select>
     <div class="border-box pd-l-0">
-        <div id="liga_indonesia">
+        <div id="liga_indonesia" style="width:  100%;box-sizing:  border-box;">
             <table class="border-box radius"  cellspacing="0" cellpadding="0">
                 <thead>
                     <tr>
