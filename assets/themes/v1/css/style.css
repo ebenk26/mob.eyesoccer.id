@@ -4216,8 +4216,10 @@ select::after, select:after{
     z-index: 999;
     max-width: 768px;
     margin: 0 auto;
-    -webkit-transition: width .7s, height .7s; /* For Safari 3.1 to 6.0 */
-    transition: width .7s, height .7s;
+    -webkit-transition: width .5s, height .5s; /* For Safari 3.1 to 6.0 */
+    transition: width .5s, height .5s;
+    transition-timing-function: cubic-bezier(0.88, 0.13, 0.04, 1.01);
+    -webkit-transition-timing-function: cubic-bezier(0.88, 0.13, 0.04, 1.01);
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -4265,6 +4267,9 @@ select::after, select:after{
     box-shadow: 0 0 10px -3px #03A9F4;
     -webkit-transition: width .7s, height .7s; /* For Safari 3.1 to 6.0 */
     transition: width .7s, height .7s;
-    animation-delay: 2s;
-    -webkit-animation-delay: 2s;
+    animation-delay: 3s;
+    -webkit-animation-delay: 3s;
+    transition-timing-function: cubic-bezier(0.88, 0.13, 0.04, 1.01);
+    -webkit-transition-timing-function: cubic-bezier(0.88, 0.13, 0.04, 1.01);
+
 }
