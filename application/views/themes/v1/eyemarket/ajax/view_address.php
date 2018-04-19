@@ -17,7 +17,6 @@
                     <?php
                         }
                     ?>
-                            
                             <select name="pilih_alamat" id="pilih-alamat" class="form-control" required="required">
                                 <option value="">Pilih Alamat Anda</option>
                 <?php
@@ -38,9 +37,9 @@
                     }
                 ?>    
                             </select>
+                </div>
                         </div>
                     </div>
-                </div>
             
         <?php
             foreach ($address as $key => $alamat)
@@ -133,6 +132,7 @@
                         </div>
                         <div class="col-sm-12 col-md-4">
                             <div class="form-group">
+                            <div class="custom-select" style="width:200px;">
                                 <select id="provinsi" name="provinsi" class="form-control form_change" action="eyemarket" fn="get_kota" loading="off" dest="opt-kota">
                                     <option value="">Pilih Provinsi</option>
                                     <?php
@@ -146,6 +146,7 @@
                                         }
                                     ?>
                                 </select>
+                                    </div>
                             </div>
                         </div>
                         <div class="col-sm-12 col-md-4">

@@ -149,14 +149,14 @@
                     </div>
                 </div>
                 <div id="musimSelect" class="container" style="display: none;">
-                    <span style="font-size:.8em;">Pilih Musim</span>
+					<span style="font-size:.8em;">Pilih Musim</span>
                     <select id="" name="" selected="true" class="slc-musim">
                         <option value="">2017</option>
                         <option value="">2017</option>
                         <option value="">2017</option>
                         <option value="">2017</option>
-                    </select>
-                </div>
+					</select>
+						</div>
                 <div class="container table-blue" style="overflow: scroll;height: 250px;">
                     <div class="w-max">
                         <div id="transfer" class="box-pertandingan pencetak-gol transfer-pemain">

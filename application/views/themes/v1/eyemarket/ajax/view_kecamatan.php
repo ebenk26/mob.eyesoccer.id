@@ -1,4 +1,3 @@
-
 <select id="kecamatan" name="kecamatan" class="form-control">
 			<option value="">Pilih Kecamatan</option>
 	<?php 

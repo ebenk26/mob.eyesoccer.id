@@ -1,4 +1,3 @@
-
 <select id="kota" name="kota" class="form-control form_change" action="eyemarket" fn="get_kecamatan" loading="off" dest="opt-kecamatan">
 			<option value="">Pilih Kota</option>
 	<?php 

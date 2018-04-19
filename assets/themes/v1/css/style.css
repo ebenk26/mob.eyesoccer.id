@@ -578,6 +578,8 @@ nav>.f-r:hover{
     animation-name: fade;
     animation-duration: .8s; */
     z-index: 2;
+    max-width: 768px;
+    box-sizing: border-box;
 }
 @-webkit-keyframes fade {
     0% {opacity: 0;}
@@ -597,7 +599,7 @@ nav>.f-r:hover{
     margin-left: -90px;
 }
 .searchbox>input{
-    width: 89%;
+    width: 100%;
     border: 1px solid #3790ff;
     border-radius: 25px;
     background-color: white;
@@ -3821,7 +3823,7 @@ video::-webkit-media-controls-panel {
     top: 0px;
     width: 100%;
     background-color: #fafafa;
-    z-index: 1;
+    z-index: 10;
     padding: 5px 0px;
     max-width: 768px;
 }
@@ -3867,7 +3869,7 @@ video::-webkit-media-controls-panel {
     display: block;
     float: left;
     text-align: center;
-    font-size: .85em;
+    font-size: .8em;
     font-family: 'Roboto', sans-serif;
     font-weight: 600;
     color: #616161;
@@ -4150,10 +4152,10 @@ video::-webkit-media-controls-panel {
     font-family: 'Roboto', sans-serif;
 }
 .top-menu-ketegori a .active, .top-menu-ketegori a:active, .top-menu-ketegori a:hover{
-    color: #F44336;
+    color: #FF5252;
     font-weight: 600;
     padding-bottom: 5px;
-    border-bottom: 3px solid;
+    border-bottom: 2px solid;
 }
 .table-span1{
     background-color: white;

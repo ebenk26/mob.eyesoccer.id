@@ -3,7 +3,7 @@
 	$subcatlist = json_decode($subcatlist);
 	$newslistcat = json_decode($newslistcat);
 ?>	
-		<div class="container xc">
+		<!-- <div class="container xc">
 			<table>
 				<tr>
 					<td>
@@ -44,7 +44,21 @@
 					</td>
 				</tr>
 			</table>
-		</div>
+		</div> -->
+		<div class="container top-menu-ketegori over-x" style="margin-top: 10px;">
+        <div class="w-max">
+			<a href="<?php echo base_url();?>eyenews/kategori/Di Pinggir Lapangan">Di Pinggir Lapangan</a>
+			<a href="<?php echo base_url();?>eyenews/kategori/Liga">LIGA</a>
+			<a href="<?php echo base_url();?>eyenews/kategori/Pembinaan">Pembinaan</a>
+			<a href="<?php echo base_url();?>eyenews/kategori/Peristiwa">Peristiwa</a>
+			<a href="<?php echo base_url();?>eyenews/kategori/Prediksi">Prediksi</a>
+			<a href="<?php echo base_url();?>eyenews/kategori/Soccer Sains">Soccer Sains</a>
+			<a href="<?php echo base_url();?>eyenews/kategori/Soccer Seri">Soccer Seri</a>
+			<a href="<?php echo base_url();?>eyenews/kategori/Tulisan Kamu">Tulisan Kamu</a>
+			<a href="<?php echo base_url();?>eyenews/kategori/Ulas Tuntas">Ulas Tuntas</a>
+			<a href="<?php echo base_url();?>eyenews/kategori/Umpan Lambung">Umpan Lambung</a>
+        </div>
+    </div>
 <?php
 	}
 ?>
