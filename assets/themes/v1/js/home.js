@@ -67,9 +67,11 @@ window.onload = function(){
     //    $('#logBtn').removeClass('active');
     // }
 
-    buttonOpen.style.width = "200px";
-    buttonOpen.style.height = "unset";
-    buttonOpen.style.padding = "10px";
+    if(buttonOpen !== undefined){
+        buttonOpen.style.width = "200px";
+        buttonOpen.style.height = "unset";
+        buttonOpen.style.padding = "10px";
+    }
     if(src !== undefined && src !== null){
         src.onclick = function() {
             srcbox.style.display = "block";
@@ -121,17 +123,22 @@ window.onload = function(){
     //    heighControl.style.display = "block";
     //    heighControl2.style.display = "none";
     //}
-
-    toClose.onclick = function() {
+    if(toClose !== undefined) {
+         toClose.onclick = function() {
         // toOpen.style.display = "none";
         sectionBoxPopup.style.width = "0px";
         sectionBoxPopup.style.height = "0px";
+         }
     }
-    buttonOpen.onclick = function() {
-        // toOpen.style.display = "block";
-        sectionBoxPopup.style.width = "100%";
-        sectionBoxPopup.style.height = "100vh";
+    if(buttonOpen !== undefined){
+        buttonOpen.onclick = function() {
+            // toOpen.style.display = "block";
+            sectionBoxPopup.style.width = "100%";
+            sectionBoxPopup.style.height = "100vh";
+        }
+
     }
+   
     $(document).on('click', '.display-box-notif', function(){
         $('.box-notif').fadeIn('fast');
     })
